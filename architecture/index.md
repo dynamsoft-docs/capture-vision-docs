@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Capture Vision Architecture  - Main Page
+title: Dynamsoft Capture Vision Architecture
 description: This is the main page of Dynamsoft Capture Vision Architecture. 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
