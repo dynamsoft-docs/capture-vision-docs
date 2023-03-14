@@ -9,7 +9,7 @@ breadcrumbText:
 
 # Location
 
-`Location` Determines how the location(s) of ROI(s) are defined. You can either define the vertices coordinates of the ROI on the original image or define how to localize the ROI(s) by referencing a previously captured atomic result.
+`Location` determines how the location of a target ROI is defined. You can either define the vertices coordinates of the ROI on the original image or define how to localize the target ROI by referencing a previously captured atomic result.
 
 ```json
 {
