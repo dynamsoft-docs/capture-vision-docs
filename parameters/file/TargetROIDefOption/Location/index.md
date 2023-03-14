@@ -49,9 +49,13 @@ breadcrumbText:
 
 Defines the filter conditions of the reference objects. You can filter the reference objects by the `TargetROIDefName`, the type of the atomic results and even the further details of the atomic results. There might exist multiple objects that fit the filter conditions. As a result, the more appropriate the filter conditions are, the more accurate ROI locations you receive.
 
+View more details about how to configure the [ReferenceObjectFilter](ReferenceObjectFilter.md)
+
 ### Offset
 
 Defines the offset of the ROI from the reference object. The origin of the offset is the top-left vertex of the reference object. If there is no reference object defined, the origin will be set to the top-left vertex of the original image.
+
+View more details about how to configure the [Offset](Offset.md)
 
 ## How to Use
 
