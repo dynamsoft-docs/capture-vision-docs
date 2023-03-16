@@ -34,6 +34,13 @@ Set filter conditions for the reference objects. If `ReferenceObjectFilter` is n
 }
 ```
 
+What is reference object.
+When to use this parameter
+
+When it is hard to localize your target object but there are some other recognizable objects that can support your
+
+How to use this Parameter
+
 ## ReferenceTargetROIDefNameArray
 
 ["TR_0", "TR_1"]
