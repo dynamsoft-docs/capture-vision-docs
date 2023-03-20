@@ -23,12 +23,12 @@ This section begins with an image from image source Adapter (ISA). Then there ar
 Table 1 – Configurable Parameters in Section 1
 
 | **Parameter Name** | **Functionality** | **Status** |
-| ------------------ | ---------------------------- | ---------- |
+| --- | --- | --- |
+| `ScaleDownThreshold` | To speed up when the input image size is large. | Available | 
+| `ColourConversionModes` | To set the conversion from colour to grayscale, which keeps or enhances the features of the region of interest. | Available, Extensible | 
+| `GrayscaleTransformationModes` | To emphasize the features of regions of interest with processing of the grayscale image. | Available, Extensible | 
+| `RegionPredetectionModes` | To limit the subsequent process sections in certain areas up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible | 
 
-| [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html) | To speed up when the input image size is large. | Available |
-| [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) | To set the conversion from colour to grayscale, which keeps or enhances the features of the region of interest. | Available, Extensible |
-| [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes) | To emphasize the features of regions of interest with processing of the grayscale image. | Available, Extensible |
-| [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) | To limit the subsequent process sections in certain areas up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible |
 
 As mentioned above, the focus of this section is to reduce the time cost by scaling down or finding out ROIs. It is not essential for most scenarios but would be helpful for some extreme cases.
 
@@ -40,13 +40,12 @@ images and a set/sets of coordinates representing the ROI results.
 ## Intermediate Results in Region Predetection
 
 | **Name** | **Datatype** | **Notes** | **Status** |
-| ------------------ | ---------------------------- | ---------- |
-
-| [`Colour Image unit`]({{ site.parameters_reference }}) | image | The original input image | Available |
-| [`Down-scaled colour image unit`]({{ site.parameters_reference }}scale-down-threshold.html#scaledownthreshold) | image | . | Available |
-| [`Grayscale image unit`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes) | image | . | Available |
-| [`Transformed grayscale image unit`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) | image | . | Available |
-| [`Predetected regions unit`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) | coordinates of quadrilateral(s) | . | Available |
+| --- | --- | --- | --- |
+| `Colour Image unit` | image | The original input image... | Available |
+| `Down-scaled colour image unit` | image | . | Available |
+| `Grayscale image unit` | image | . | Available |
+| `Transformed grayscale image unit` | image | . | Available |
+| `Predetected regions unit` | coordinates of quadrilateral(s) | . | Available |
 
 
 As mentioned above, the focus of this section is to reduce the time cost by scaling down or finding out ROIs. It is not essential for follow-up tasks but would be helpful for some extreme cases.
