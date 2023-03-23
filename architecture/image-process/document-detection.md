@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Document Detection
-description: This is the document detection page of Dynamsoft Capture Vision documents.
+description: This page describes how document detection is architected in Dynamsoft Capture Vision.
 keywords: document detetion
 needAutoGenerateSidebar: true
 breadcrumbText: Document Detection
@@ -9,7 +9,7 @@ breadcrumbText: Document Detection
 
 # Section 2.2 - Document Detection
 
-Document detection is one of the key feature of Dynamsoft Document Normalizer (DDN). If DDN tasks are arranged in the settings, the library will try detecting document boundaries from the image and output the location of the detectedd boundaries.
+**Document detection** is one of the key features of Dynamsoft Document Normalizer (DDN). If DDN tasks are arranged in the settings, the library will try detecting document boundaries from the image and output the location of the detectedd boundaries.
 
 Preprocessing setting are available for DDN module. As a result, the preprocessing intermediate results can be inherited when performing the document detection algorithm.
 
@@ -22,19 +22,46 @@ Based on the binary image output by section 2.1, DDN module performs boundary de
    <p></p>
 </div>
 
-## Available Intermediate Results
+## Available Parameter Settings
 
-### Document Detection Intermediate Results
+**LineExtractionModes**
 
-| Name | Description |
-| ---- | ----------- |
-| [`ContoursUnit`] | The detected contours on the image. |
-| [`LineSegmentsUnit`] | The line segments extracted from the contours. |
-| [`LongLinesUnit`] | Merged from the line segments. |
-| [`CornersUnit`] | Formed by intersected long lines. Corners participate in assembling quadrilaterals. |
-| [`CandidateQuadEdgesUnit`] | The assembled quadrilaterals. |
+Defines how to extract lines from the image.
 
-### Shared Preprocessing Intermediate Results
+**InteriorAngleRangeArray**
+
+Define the range of corner.
+
+**ContentType**
+
+Specify whether the targeting content is document page or tables.
+
+## Result Output
+
+The result of **Document Detection** section is output as `DetectedQuadsResult` which is generally received from the `CaptureResultReceiver` (CRR).
+
+During the process of **Document Detection**, a series of intermediate results are produced.
+
+**Document Detection Result**
+
+| Name | Description | Related Parameter(s) |
+| ---- | ----------- | -------------------- |
+| [`DetectedQuadsResult`] | The detected quadrilaterals output by the library. | N/A |
+
+> Notes: The result of document detection is output as one of the `CapturedResult` when its target ROI is specified in the `ImageROIProcessingArray`.
+
+**Document Detection Intermediate Results**
+
+| Name | Description | Related Parameter(s) |
+| ---- | ----------- | -------------------- |
+| [`ContoursUnit`] | The detected contours on the image. | N/A |
+| [`LineSegmentsUnit`] | The line segments extracted from the contours. | N/A |
+| [`LongLinesUnit`] | Merged from the line segments. | N/A |
+| [`CornersUnit`] | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `InteriorAngleRangeArray` |
+| [`CandidateQuadEdgesUnit`] | The edges that candidate the quadrilateral assembling. | N/A |
+| [`DetectedQuadsUnit`] | The assembled quadrilaterals. | N/A |
+
+**Shared Preprocessing Intermediate Results**
 
 | Name | Description | Related Parameter(s) |
 | ---- | ----------- | -------------------- |
