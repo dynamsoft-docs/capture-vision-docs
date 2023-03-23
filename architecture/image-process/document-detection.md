@@ -28,7 +28,7 @@ Based on the binary image output by section 2.1, DDN module performs boundary de
 
 Defines how to extract lines from the image.
 
-**InteriorAngleRangeArray**
+**CornerAngleRangeArray**
 
 Define the range of corner.
 
@@ -57,7 +57,7 @@ During the process of **Document Detection**, a series of intermediate results a
 | [`ContoursUnit`] | The detected contours on the image. | N/A |
 | [`LineSegmentsUnit`] | The line segments extracted from the contours. | N/A |
 | [`LongLinesUnit`] | Merged from the line segments. | N/A |
-| [`CornersUnit`] | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `InteriorAngleRangeArray` |
+| [`CornersUnit`] | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `CornerAngleRangeArray` |
 | [`CandidateQuadEdgesUnit`] | The edges that candidate the quadrilateral assembling. | N/A |
 | [`DetectedQuadsUnit`] | The assembled quadrilaterals. | N/A |
 
