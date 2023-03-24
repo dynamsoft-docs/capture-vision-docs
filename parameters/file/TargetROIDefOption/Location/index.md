@@ -49,7 +49,7 @@ breadcrumbText:
 
 Defines the filter conditions of the reference objects. You can filter the reference objects by the `TargetROIDefName`, the type of the atomic results and even the further details of the atomic results. There might exist multiple objects that fit the filter conditions. As a result, the more appropriate the filter conditions are, the more accurate ROI locations you receive.
 
-View more details about how to configure the [`ReferenceObjectFilter`](ReferenceObjectFilter.md)
+View more details about how to configure the [`ReferenceObjectFilter`](ReferenceObjectFilter.md) parameters.
 
 ### Offset
 
@@ -58,6 +58,8 @@ Defines the offset of the ROI from the reference object. The origin of the offse
 View more details about how to configure the [`Offset`](Offset.md)
 
 ## How to Use
+
+The key 
 
 ### Define a Target ROI Based on the Original Image
 
