@@ -63,23 +63,51 @@ View more details about how to configure the [`Offset`](Offset.md)
 
 Even if you don't hava any reference object, you can still set a offset based on the original image to localize the ROI. The following code snippet shows how to defines a ROI on the top-right corner of the image.
 
+For example, you are going to decode barcode from the original image.
+
+* Step 1: Define a `TargetROI`
+  * Step 1.1: Name your `TargetROI` "ROI_0".
+  * Step 1.2: Define the location of the "ROI_0" leave the `ReferenceObjectFilter` empty.
+  * Step 1.3: Define the Offset.
+* Step 2: Define a barcode decoding task in `BarcodeReaderTaskSettingOptions`. Name the task "BR_0".
+* Step 3: Add "ROI_0" to the `ImageROIProcessingNameArray` so that the results captured from the "ROI_0" are output.
+
 ```json
 {
-    //...
-    "Location": 
-    {
-        "Offset" :
+    "CaptureVisionTemplates": 
+    [
         {
-            "ReferenceObjectOriginIndex": 0,
-            "ReferenceObjectSizeType": "default",
-            "MeasuredInPercentage" : 1,
-            "FirstPoint" : [ 0, 0 ],
-            "SecondPoint" : [ 100, 0 ],
-            "ThirdPoint" : [ 100, 100 ],
-            "FourthPoint" : [ 0, 100 ]
+            "Name" : "CV_0",
+            "ImageSourceName": "CameraEnhancer_0",
+            "ImageROIProcessingNameArray": ["ROI_0"]     
         }
-    },
-    //...
+    ],
+    "TargetROIDefOptions": 
+    [
+        {
+            "Name": "ROI_0",
+            "TaskSettingNameArray": ["BR_0"],
+            "Location": 
+            {
+                "Offset":
+                {
+                    "ReferenceObjectOriginIndex": 0,
+                    "ReferenceObjectSizeType": "default",
+                    "MeasuredInPercentage": 1,
+                    "FirstPoint": [ 0, 0 ],
+                    "SecondPoint": [ 100, 0 ],
+                    "ThirdPoint": [ 100, 100 ],
+                    "FourthPoint": [ 0, 100 ]
+                }
+            },
+        }
+    ],
+    "BarcodeReaderTaskSettingOptions":
+    [
+        {
+            // Your barcode decoding settings
+        }
+    ]
 }
 ```
 

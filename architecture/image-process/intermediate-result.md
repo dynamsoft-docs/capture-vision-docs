@@ -9,7 +9,7 @@ breadcrumbText: Intermediate Result
 
 # Intermediate Result
 
-Intermediate result is one of the basic concept of Dynamsoft Capture Vision.
+`IntermediateResult` record a series of data that produced by the image processing algorithm. It can be either a image (processed image or even the original image) or significant information extracted from the source image.
 
 * Share the image processing results that required by different tasks that have the same input and parameter settings.
 * Receive data from different sections for further analysis.
@@ -17,7 +17,7 @@ Intermediate result is one of the basic concept of Dynamsoft Capture Vision.
 
 ## Produce
 
-Intermediate results are produced by different stages of the algorithm. The output of a intermediate result stands for the completion of the corresponding algorithm stage.
+Intermediate results are produced by different **stages** of the algorithm. The output of a intermediate result stands for the completion of the corresponding algorithm **stage**.
 
 **Intermediate result produced by different sections:**
 
@@ -87,6 +87,11 @@ All the available ntermediate results are designed to be mutable. You can update
 
 ## Captured Result VS Intermediate Result
 
-The output of a **Capture Result** stands for the finalize of a algorithm **task** while the output of an **Intermediate Result** stands for the finalize of an algorithm **stage**.
+* An `IntermediateResult` is produced by a finalized `algorithm stage`.
+* A `CapturedResult` is produced by a finalized `algorithm task`.
 
-If an algorithm **stage** is the last stage of an algorithm **task**. The **Capture Result** will be a subset of the **Intermediate Result** due to some filter conditions.
+* An `algorithm stage` definitely produce an `IntermediateResult`.
+* An `algorithm task` might not produce a `CapturedResult`. It whether it is defined in a `TargetROI` that listed in `OutputTargetROINameArray` and whether it is able to produce a `CapturedResult`.
+
+* `IntermediateResult` is produced anyway during the process of algorithm.
+* `CapturedResult` must be defined in the template so that it is generated and output.
