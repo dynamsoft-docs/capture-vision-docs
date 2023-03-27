@@ -46,7 +46,7 @@ During the process of **Document Detection**, a series of intermediate results a
 
 | Name | Description | Related Parameter(s) |
 | ---- | ----------- | -------------------- |
-| [`DetectedQuadsResult`] | The detected quadrilaterals output by the library. | N/A |
+| `DetectedQuadsResult` | The detected quadrilaterals output by the library. | N/A |
 
 > Notes: The result of document detection is output as one of the `CapturedResult` when its target ROI is specified in the `ImageROIProcessingArray`.
 
@@ -54,12 +54,12 @@ During the process of **Document Detection**, a series of intermediate results a
 
 | Name | Description | Related Parameter(s) |
 | ---- | ----------- | -------------------- |
-| [`ContoursUnit`] | The detected contours on the image. | N/A |
-| [`LineSegmentsUnit`] | The line segments extracted from the contours. | N/A |
-| [`LongLinesUnit`] | Merged from the line segments. | N/A |
-| [`CornersUnit`] | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `CornerAngleRangeArray` |
-| [`CandidateQuadEdgesUnit`] | The edges that candidate the quadrilateral assembling. | N/A |
-| [`DetectedQuadsUnit`] | The assembled quadrilaterals. | N/A |
+| `ContoursUnit` | The detected contours on the image. | N/A |
+| `LineSegmentsUnit` | The line segments extracted from the contours. | N/A |
+| `LongLinesUnit` | Merged from the line segments. | N/A |
+| `CornersUnit` | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `CornerAngleRangeArray` |
+| `CandidateQuadEdgesUnit` | The edges that candidate the quadrilateral assembling. | N/A |
+| `DetectedQuadsUnit` | The assembled quadrilaterals. | N/A |
 
 **Shared Preprocessing Intermediate Results**
 

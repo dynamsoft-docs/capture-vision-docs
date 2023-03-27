@@ -30,32 +30,32 @@ During the process of **Document Normalization**, a series of intermediate resul
 
 | Name | Description | Related Parameter(s) |
 | ---- | ----------- | -------------------- |
-| [`NormalizedImagesResult`]() | The normalized images output by the library. | N/A |
+| `NormalizedImagesResult` | The normalized images output by the library. | N/A |
 
 If you did a normalize task only:
 
 | Name | Description | Related Parameter(s) |
 | ---- | ----------- | -------------------- |
-| [`NormalizedImageUnit`]() | The normalized image. | `Brightness`, `Contrast`, `ColourMode`, `DeskewMode` |
+| `NormalizedImageUnit` | The normalized image. | `Brightness`, `Contrast`, `ColourMode`, `DeskewMode` |
 
 If you implement document detection and document normalization continuously, the following intermediate result are available as well.
 
 | Name | Description | Related Parameter(s) |
 | ---- | ----------- | -------------------- |
-| [`ContoursUnit`]() | The detected contours on the image. | N/A |
-| [`LineSegmentsUnit`]() | The line segments extracted from the contours. | N/A |
-| [`LongLinesUnit`]() | Merged from the line segments. | N/A |
-| [`CornersUnit`]() | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `InteriorAngleRangeArray` |
-| [`CandidateQuadEdgesUnit`]() | The edges that candidate the quadrilateral assembling. | N/A |
-| [`DetectedQuadsUnit`]() | The assembled quadrilaterals. The DetectedQuadResult is the  | N/A |
-| [`ColourImageUnit`]() | The colour images. Generally, they are the original images. | N/A |
-| [`ScaledDownColourImageUnit`]() | The scaled down colour images. | `ScaleDownThreshold` |
-| [`GrayscaleImageUnit`]() | The gray scale images. | `ColourConversionModes` |
-| [`TransformedGrayscaleImageUnit`]() | The colour inverted gray scale images. | `GrayscaleTransformationModes` |
-| [`PredetectedRegionsUnit`]() | The coordinates of predetected regions quadrilateral(s) | `RegionPredetectionModes` |
-| [`EnhancedGrayscaleImageUnit`]() | The enhanced gray scale images. | `ImagePreprocessingModes` |
-| [`BinaryImageUnit`]() | The binary images. | `BinarizationModes` |
-| [`TextureDetectionResultUnit`]() | The detected texture. | `TextureDetectionModes` |
-| [`TextureRemovedGrayscaleImageUnit`]() | The gray scale images that have been removed texture. | `TextureDetectionModes` |
-| [`TextureRemovedBinaryImageUnit`]() | The binary images that have been removed texture. | `TextureDetectionModes` |
-| [`TextRemovedBinaryImageUnit`]() | The gray scale images that have been removed text. | `TextFilterModes` |
+| `ContoursUnit` | The detected contours on the image. | N/A |
+| `LineSegmentsUnit` | The line segments extracted from the contours. | N/A |
+| `LongLinesUnit` | Merged from the line segments. | N/A |
+| `CornersUnit` | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `InteriorAngleRangeArray` |
+| `CandidateQuadEdgesUnit` | The edges that candidate the quadrilateral assembling. | N/A |
+| `DetectedQuadsUnit` | The assembled quadrilaterals. The DetectedQuadResult is the  | N/A |
+| `ColourImageUnit` | The colour images. Generally, they are the original images. | N/A |
+| `ScaledDownColourImageUnit` | The scaled down colour images. | `ScaleDownThreshold` |
+| `GrayscaleImageUnit` | The gray scale images. | `ColourConversionModes` |
+| `TransformedGrayscaleImageUnit` | The colour inverted gray scale images. | `GrayscaleTransformationModes` |
+| `PredetectedRegionsUnit` | The coordinates of predetected regions quadrilateral(s) | `RegionPredetectionModes` |
+| `EnhancedGrayscaleImageUnit` | The enhanced gray scale images. | `ImagePreprocessingModes` |
+| `BinaryImageUnit` | The binary images. | `BinarizationModes` |
+| `TextureDetectionResultUnit` | The detected texture. | `TextureDetectionModes` |
+| `TextureRemovedGrayscaleImageUnit` | The gray scale images that have been removed texture. | `TextureDetectionModes` |
+| `TextureRemovedBinaryImageUnit` | The binary images that have been removed texture. | `TextureDetectionModes` |
+| `TextRemovedBinaryImageUnit` | The gray scale images that have been removed text. | `TextFilterModes` |
