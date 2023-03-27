@@ -31,39 +31,20 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DCVDoc ] && rm -rf DCVDoc
-          [ -d code-parser-docs ] && rm -rf code-parser-docs
+          [ -d capture-vision-docs ] && rm -rf capture-vision-docs
           [ ! -d DCVDoc ] && mkdir -p DCVDoc
-          [ ! -d code-parser-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/code-parser-docs.git
-          cd code-parser-docs && git pull && cd .. && cp -rfp ./code-parser-docs/* ./DCVDoc/
+          [ ! -d capture-vision-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/capture-vision-docs.git
+          cd capture-vision-docs && git pull && cd .. && cp -rfp ./capture-vision-docs/* ./DCVDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDoc/
           cd DCVDoc && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DCVDoc/_site/ ./www.dynamsoft.com/code-parser/docs/ prod
 
-  Build-Preview:
-    if: ${{ github.ref == 'refs/heads/preview' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site
-        run: |
-          cd /home/ubuntu
-          [ ! -d code-parser-docs-prev ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/code-parser-docs.git code-parser-docs-prev
-          [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
-          cd code-parser-docs-prev && git pull && cd .. && cp -rfp ./code-parser-docs-prev/* ./DCVDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDocPreview/
-          sed -i -e "1,3s/blob\/main$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocPreview/_config.yml
-          cd DCVDocPreview && bundle exec jekyll build --incremental
-
-      - name: Sync files
+      - name: Sync files to Test Env
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_TEST_SITE_SERVER }}
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DCVDocPreview/_site/
-          server-dir: /www.dynamsoft.com/code-parser/docs/          
+          local-dir: /home/ubuntu/DCVDoc/_site/
+          server-dir: /www.dynamsoft.com/capture-vision2/docs/
+
