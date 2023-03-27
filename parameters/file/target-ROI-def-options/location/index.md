@@ -9,7 +9,7 @@ breadcrumbText:
 
 # Location
 
-`Location` determines how the location of a target ROI is defined. You can either define the vertices coordinates of the ROI on the original image or define how to localize the target ROI by referencing a previously captured atomic result.
+Parameter `Location` defines where the `TargetROI` is. It consists the definition of `ReferenceObject` and the `Offset` attribute of the `TargetROI` base on the `ReferenceObject`. Of course, you can skip the definition of `ReferenceObject` to directly set the `Offset` attribute based on the original image.
 
 ```json
 {
@@ -18,8 +18,8 @@ breadcrumbText:
     {
         "ReferenceObjectFilter" :
         {  
-            "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"], 
-            "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME","ART_TABLE_CELL"], 
+            "ReferenceTargetROIDefNameArray": ["TR_0"], 
+            "AtomicResultTypeArray" : ["ART_BARCODE"], 
             "BarcodeFilteringCondition": {},
             "FrameFilteringCondition": {},
             "TableCellFilteringCondition": {},
@@ -47,7 +47,7 @@ breadcrumbText:
 
 ### ReferenceObjectFilter
 
-Defines the filter conditions of the reference objects. You can filter the reference objects by the `TargetROIDefName`, the type of the atomic results and even the further details of the atomic results. There might exist multiple objects that fit the filter conditions. As a result, the more appropriate the filter conditions are, the more accurate ROI locations you receive.
+Defines the filter conditions of the `ReferenceObjects`. You can filter the reference objects by the `TargetROIDefName`, the type of the atomic results and even the further details of the atomic results. There might exist multiple objects that fit the filter conditions. As a result, the more appropriate the filter conditions are, the more accurate ROI locations you receive.
 
 View more details about how to configure the [`ReferenceObjectFilter`](ReferenceObjectFilter.md) parameters.
 
@@ -55,11 +55,12 @@ View more details about how to configure the [`ReferenceObjectFilter`](Reference
 
 Defines the offset of the ROI from the reference object. The origin of the offset is the top-left vertex of the reference object. If there is no reference object defined, the origin will be set to the top-left vertex of the original image.
 
-View more details about how to configure the [`Offset`](Offset.md)
+<div align="center">
+   <p><img src="../../assets/location-offset.png" alt="Top level objects of DCV template file" width="50%" /></p>
+   <p>Figure 1 – How to set Offset</p>
+</div>
 
 ## How to Use
-
-The key 
 
 ### Define a Target ROI Based on the Original Image
 
@@ -119,7 +120,10 @@ If the there exists significant objects that can help you localizing the targeti
 
 The following example shows how to define the `ReferenceObjectFilter` to use the barcode location information to extract the certain text line information:
 
-![Example - Define a Target ROI Based on a Reference Object](example-reference-obj-filter.jpg)
+<div align="center">
+   <p><img src="../../assets/define-location-with-reference-object.png" alt="set-reference-object" width="50%" /></p>
+   <p>Figure 2 – How to define a <b>TargetROI</b> based on a <b>ReferenceObject</b></p>
+</div>
 
 ```json
 {
@@ -128,25 +132,24 @@ The following example shows how to define the `ReferenceObjectFilter` to use the
     {
         "ReferenceObjectFilter" :
         {  
-            "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"], 
-            "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME","ART_TABLE_CELL"], 
-            "BarcodeFilteringCondition": {},
-            "FrameFilteringCondition": {},
-            "TableCellFilteringCondition": {},
-            "TextLineFilteringCondition": {},
-            "ColourRegionFilteringCondition": {},
-            "CornerFilteringCondition": {},
-            "GeometryLineFilteringCondition": {}
+            "ReferenceTargetROIDefNameArray": ["TR_0"], // The ROI that you decoded the barcodes.
+            "AtomicResultTypeArray" : ["ART_BARCODE"], // Set the AtomicResult type to barcode.
+            // Set BarcodeFilteringCondition. Otherwise, all the barcodes will become ReferenceObject.
+            "BarcodeFilteringCondition": 
+            {
+                "BarcodeFormatIds": ["BF_CODE_128"], // Use Code 128 only.
+                "BarcodeTextRegExPattern": "/ReferenceObject/" // Find the Code 128 whose text has "ReferenceObject"
+            }
         },
         "Offset" :
         {
             "ReferenceObjectOriginIndex": 0,
             "ReferenceObjectSizeType": "default",
-            "MeasuredInPercentage" : 1,
-            "FirstPoint" : [ 0, 0 ],
-            "SecondPoint" : [ 100, 0 ],
-            "ThirdPoint" : [ 100, 100 ],
-            "FourthPoint" : [ 0, 100 ]
+            "MeasuredInPercentage" : 0, // Here we set it 0 to use the pixel.
+            "FirstPoint" : [ 20, 140 ],
+            "SecondPoint" : [ 210, 140 ],
+            "ThirdPoint" : [ 210, 170 ],
+            "FourthPoint" : [ 20, 170 ]
         }
     },
     //...
