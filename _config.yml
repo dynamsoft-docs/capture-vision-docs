@@ -1,5 +1,5 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/main
-repository: Dynamsoft/capture-vision-docs
+repository: dynamsoft-docs/capture-vision-docs
 docFullPath: https://www.dynamsoft.com/capture-vision2/docs/
 firstLevelUrl: /capture-vision2/docs/
 docHomePage: /capture-vision2/docs/introduction/
@@ -10,8 +10,13 @@ parameter: /capture-vision2/docs/parameters/
 parameterFile: /capture-vision2/docs/parameters/file/
 parameterReference: /capture-vision2/docs/parameters/reference/
 
-assets: /capture-vision2/docs/assets/
-edit_icon: /capture-vision2/docs/assets/img-icon/edit-icon.png
+assets: /capture-vision2/docs/core/assets/
+edit_icon: /capture-vision2/docs/core/assets/img-icon/edit-icon.png
+smile_icon: /capture-vision2/docs/core/assets/img-icon/icon-smile.png
+sad_icon: /capture-vision2/docs/core/assets/img-icon/icon-sad.png
+dbr_icon: /capture-vision2/docs/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /capture-vision2/docs/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /capture-vision2/docs/core/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
 
