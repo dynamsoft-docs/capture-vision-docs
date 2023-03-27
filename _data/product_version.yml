@@ -1,7 +1,2 @@
-useGroupedVersion: true
-
-version_info_list_algorithm:
-  - value: latest version
-  - value: 2.x
-    child:
-      - 2.0.0
+version_info_list:
+  - latest version
