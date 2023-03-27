@@ -8,7 +8,7 @@ noTitleIndex: true
 permalink: /architecture/std-output.html
 ---
 
-# Standard Output In the Dynamsoft Capture Vision (DCV) Architecture
+# Standard Output
 
 As the last piece of the DCV architecture, the standard output component is responsible for transporting the image processing results to the objects whose logic rely on them.
 
@@ -78,36 +78,28 @@ interface CapturedResultReceiver {
     onParsedResultsReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
 }
 ```
->
-```java
+>```java
 
 ```
->
-```objc
+>```objc
 
 ```
->
-```swift
+>```swift
 
 ```
->
-```python
+>```python
 
 ```
->
-```java
+>```java
 
 ```
->
-```csharp
+>```csharp
 
 ```
->
-```c++
+>```c++
 
 ```
->
-```c
+>```c
 
 ```
 
