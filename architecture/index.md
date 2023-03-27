@@ -4,7 +4,7 @@ title: Dynamsoft Capture Vision Architecture
 description: This is the main page of Dynamsoft Capture Vision Architecture. 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+noTitleIndex: false
 permalink: /architecture/index.html
 ---
 
@@ -19,6 +19,8 @@ This article presents the DCV architecture, which explains why it has the follow
 1. Low barriers to entry for image processing
 2. Flexible expansion of its functionality
 3. Agile capability for fine-grained process control
+
+**Table of Contents**
 
 - [Concise Structure](#concise-structure)
 - [Independent Modules](#independent-modules)
