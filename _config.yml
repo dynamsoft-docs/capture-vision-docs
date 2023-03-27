@@ -1,21 +1,21 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/main
 repository: Dynamsoft/capture-vision-docs
-docFullPath: https://www.dynamsoft.com/capture-vision/docs/
-firstLevelUrl: /capture-vision/docs/
-docHomePage: /capture-vision/docs/introduction/
+docFullPath: https://www.dynamsoft.com/capture-vision2/docs/
+firstLevelUrl: /capture-vision2/docs/
+docHomePage: /capture-vision2/docs/introduction/
 
-introduction: /capture-vision/docs/introduction/
-architecture: /capture-vision/docs/architecture/
-parameter: /capture-vision/docs/parameters/
-parameterFile: /capture-vision/docs/parameters/file/
-parameterReference: /capture-vision/docs/parameters/reference/
+introduction: /capture-vision2/docs/introduction/
+architecture: /capture-vision2/docs/architecture/
+parameter: /capture-vision2/docs/parameters/
+parameterFile: /capture-vision2/docs/parameters/file/
+parameterReference: /capture-vision2/docs/parameters/reference/
 
-assets: /capture-vision/docs/assets/
-edit_icon: /capture-vision/docs/assets/img-icon/edit-icon.png
+assets: /capture-vision2/docs/assets/
+edit_icon: /capture-vision2/docs/assets/img-icon/edit-icon.png
 
 useVersionTree: true
 
-baseurl: "/capture-vision/docs"
+baseurl: "/capture-vision2/docs"
 plugins:
   - jemoji
 
