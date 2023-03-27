@@ -10,6 +10,7 @@ noTitleIndex: true
 # The Overall Structure of DCV Parameters
 
 Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products, which cover object capturing, content understanding, result parsing, and interactive viewing. To achieve high scalability and flexibility in DCV, a highly flexible and configurable parameter system has been designed to drive different behavior logic within the SDK.
+
 This article provides an overview of the structure of parameters in Dynamsoft Capture Vision. In order to eliminate ambiguity, we first define a few conceptual nouns:
 
 1. **Parameter**
@@ -47,6 +48,7 @@ As shown in the figure above, the organizational structure of a parameter templa
 
 With the exception of GlobalParameter, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` are an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` are an array of `TargetROIDef` objects. 
 Furthermore, to reuse the same parameter definitions, reduce the size of the parameter template file, and simplify the parameter configuration hierarchy, a reference system based on the name was adopted in the parameter template file design. For example, the value of the `ImageSource` parameter for the first element in `CaptureVisionTemplates` is `ISA_0`, which refers to the first element in `ImageSourceOptions`.
+
 Therefore, a parameter template starts with an element in `CaptureVisionTemplates` and recursively searches for the objects that are directly or indirectly referenced by it, and then combines them to form a specific set of parameters. Then, the parameter template may be applied to DCV to control its internal execution logic.
 Next, we will focus on introducing some main objects and their relationships in a parameter template.
 
@@ -87,8 +89,8 @@ For more details, please refer to this link.
 
 The `TargetROIDef` object is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image. It includes:
 
-`Location`: Defines the spatial definition of the ROI based on the offset of the reference object area.
-`TaskSettingNameArray`: Specifies one or more recognition task configurations (including text, barcode, table, etc.) by providing an array of unique names of task setting objects, such as `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting`, and `DocumentNormalizerTaskSetting`.
+- `Location`: Defines the spatial definition of the ROI based on the offset of the reference object area.
+- `TaskSettingNameArray`: Specifies one or more recognition task configurations (including text, barcode, table, etc.) by providing an array of unique names of task setting objects, such as `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting`, and `DocumentNormalizerTaskSetting`.
 
 For more details, please refer to this link.
 
