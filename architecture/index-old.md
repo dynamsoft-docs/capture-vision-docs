@@ -5,59 +5,70 @@ description: This is the main page of Dynamsoft Capture Vision Architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/index.html
+permalink: /architecture/index-old.html
 ---
 
 # Architecture of Dynamsoft Capture Vision
 
-## Architecture Diagram
+Dynamsoft Capture Vision (DCV) is a powerful SDK framework used to implement the functionality to derive meaningful information from images in all kinds of applications. 
 
-In the [introduction](../introduction/index.md), we have introduced the following [functional products](../introduction/index.md#functional-products):
+The framework is designed to adapt to a variety of different image processing scenarios. The structure easily accommodates both entry-level needs and sophisticated business logic, enabling customers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks based on the same code.
 
-- Dynamsoft Barcode Reader (DBR)
-- Dynamsoft Label Recognizer (DLR)
-- Dynamsoft Document Normalizer (DDN)
-- Dynamsoft Code Parser (DCP)
-- Dynamsoft Camera Enhancer (DCE)
+This article presents the DCV architecture, which explains why it has the following advantages:
 
-The diagram below shows the architecture of Dynamsoft Capture Vision (DCV) and how these functional products fit into it:
+1. Low barriers to entry for image processing
+2. Flexible expansion of its functionality
+3. Agile capability for fine-grained process control
 
-> There are a few other functional products in the diagram but we can ignore them for now.
+**Table of Contents**
 
-![DCV Architecture](assets/dcv-architecture.png)
+- [Concise Structure](#concise-structure)
+- [Independent Modules](#independent-modules)
+  - [Capture Vision Router](#capture-vision-router)
+  - [Dynamsoft License](#dynamsoft-license)
+  - [Dynamsoft Utility](#dynamsoft-utility)
+- [Customizable Workflow](#customizable-workflow)
+  - [Task Types](#task-types)
+  - [Target Region Of Interest](#target-region-of-interest)
+  - [Semantic Processing Options](#semantic-processing-options)
+- [Divisible Task](#divisible-task)
+  - [Incomplete Task](#incomplete-task)
+- [Divisible Section](#divisible-section)
 
-As shown in the diagram, all functional products are passive in the architecture. In other words, they are either told to perform a task or given the result of another task, both of which are done by the active part of the architecture known as Capture Vision Router (CVR).
+## Concise Structure
 
-## Capture Vision Router
+At the top level, the DCV architecture consists of three components:
 
-Capture Vision Router (CVR) is the most important part of the DCV architecture. As its names suggests, CVR works as a router or a coordinator. Its major tasks include:
+1. Image Source  
+   An image source acquires and supplies images to DCV to process. In the DCV architecture, an image source is an object that has implemented the [Image Source Adapter (ISA) interface](std-input.md#image-source-adapter).
+2. Image Processing Unit  
+   The image processing unit is the most important part in the DCV architecture. It processes each image from the image source according to a predefined settings and outputs the results to each information output object.
+   Semantic processing is an auxiliary and optional step that helps parse instant text results from the image into human-readable data tables.
+3. Information Output Target  
+   An information output target receives the information DCV has derived from the images. In the DCV architecture, such an object is one that has implemented either the [Captured Result Receiver (CRR) interface](std-output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver).
 
-### Get Images from the Image Source  
+![An image depicting the 3 components]()
 
-In the DCV architecture, an image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](std-input.md#image-source-adapter) such as Dynamsoft Camera Enhancer (DCE).
+## Independent Modules
 
-At runtime, CVR accepts an image source and tries to get images from it for the functional products to process. Usually, this is a continuous process which ends when the image source is exhausted.
+To create a solution under the DCV structure, we need to combine a few functional modules. The following shows the modules that support the DCV structure:
 
-### Coordinate Image-Processing Tasks
 
-CVR accepts and maintains a list of image-processing settings known as ["CaptureVisionTemplates"](../parameters/file/capture-vision-template.md). Each template defines the tasks to be performed against an image. These tasks may be configured to run in parallel or one after another.
+| Module Name                   | Abbreviation | Description                                                                     | Role in the Structure                   |
+| :---------------------------- | :----------: | :------------------------------------------------------------------------------ | :-------------------------------------- |
+| Dynamsoft License             |    **DL**    | Provides license control.                                                       | Auxiliary                               |
+| Dynamsoft Core                |    **DC**    | Provides basic data structures and intermediate result structures.              | Image Processing Unit                   |
+| Capture Vision Router         |   **CVR**    | Connects components and coordinates the complete workflow.                      | Manager, Coordinator                    |
+| Dynamsoft Camera Enhancer     |   **DCE**    | Provides camera control and basic user interface.                               | Image Source, Information Output Target |
+| Dynamsoft Barcode Reader      |   **DBR**    | Provides barcode reading capabilities.                                          | Image Processing Unit                   |
+| Dynamsoft Document Normalizer |   **DDN**    | Provides structure analysis, document detection and normalization capabilities. | Image Processing Unit                   |
+| Dynamsoft Label Recognizer    |   **DLR**    | Provides simple text recognition capabilities.                                  | Image Processing Unit                   |
+| Dynamsoft Code Parser         |   **DCP**    | Provides the ability to parse codes of certain standards.                       | Image Processing Unit                   |
+| Dynamsoft Utility             |    **DU**    | Provides official utilities.                                                    | Image Source, Auxiliary                 |
 
-At runtime, CVR selects a CaptureVisionTemplate and analyzes it to build a task workflow, which it then runs for all images acquired from the image source.
+As shown in the table, these modules don't belong to any of the three components: Dynamsoft License, Capture Vision Router and Dynamsoft Utility. We will talk about them first.
 
-- For tasks that can run in parallel, CVR will start to process the next image as long as it has an extra working thread to create a functional product instance.
-- For tasks that must run in a sequence, CVR makes sure of the running order.
-
-> There are two type of tasks. Read more about [Image-Processing Tasks](image-processing/index.md) and [Semantic-Processing Tasks](semantic-processing.md).
-
-### Dispatch Results to Listening Objects
-
-In the DCV architecture, a listening object refers to an object that has implemented either the [Captured Result Receiver (CRR) interface](std-output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver).
-
-Results are produced throughout the processing workflow of images. We categorize these results in two types:
-
-1. Final results: these are the results of completed tasks.
-2. Intermediate results: these are results produced on multiple check-points of a task.
-   1. These check points are called 
+### Capture Vision Router
 
 Of all the modules, Capture Vision Router (CVR) is the central piece in the DCV architecutre. It has the following jobs:
 
