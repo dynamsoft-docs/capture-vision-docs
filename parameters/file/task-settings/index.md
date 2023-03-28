@@ -1,5 +1,22 @@
 供参考
 
+
+### Task Types
+
+There are five types of tasks and they belong to two categories: image processing tasks and semantic processing tasks.
+
+> NOTE
+> 
+> 1. All tasks are optional.
+> 2. A semantic-processing task always happens after another image-processing task.
+
+| Task Type            | Performed By | Category            | Result Type          |
+| :------------------- | :----------- | :------------------ | :------------------- |
+| Read Barcodes        | DBR          | Image Processing    | Decoded Barcodes     |
+| Recognize Text Lines | DLR          | Image Processing    | Recognized TextLines |
+| Normalize a Document | DDN          | Image Processing    | Normalized Image     |
+| Parse Text
+
 ## Divisible Task
 
 An image-processing task can be further devided into three section.

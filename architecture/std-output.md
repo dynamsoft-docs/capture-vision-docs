@@ -18,7 +18,11 @@ There are two interfaces for the standard output: Captured Result Receiver and I
 
 ## Captured Result Receiver
 
-Captured Result Receiver (CRR) is an interface for the output of final results. Final results refer to the following 6 types of results:
+Captured Result Receiver (CRR) is an interface for the output of final results. 
+
+### Final results
+
+Final results refer to the following 6 types of results:
 
 1. The original image
 2. Barcode text found on the image
