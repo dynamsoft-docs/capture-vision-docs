@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TextLineSpecification Object
 
-A `TextLineSpecification` object is used to specify a certain line of text line in the `TargetROI` and configure its processing parameters. `TextLineSpecification` is an auxiliary setting that supports the `LabelRecognizerTaskSettings`
+Set the `CharacterModel`, `ImageProcessing` parameters and other configurations for the specified text lines. This is the parameter that defines how the algorithm extract characters from each text lines of a `LabelRecognizer` task. You can leave this area empty to use the default character recognizing settings.
 
 ```json
 {
@@ -30,10 +30,11 @@ A `TextLineSpecification` object is used to specify a certain line of text line 
 }
 ```
 
+<!--
 <div align="center">
    <p><img src="../assets/text-line-specification.png" alt="text-line-specification" width="30%" /></p>
    <p></p>
-</div>
+</div>-->
 
 ## Why Use this Parameter
 <!--Draft-->
@@ -41,17 +42,15 @@ A `TextLineSpecification` object is used to specify a certain line of text line 
 - Each text line have different styles.
 - There exists some recognizable charaters in the lines but they are not the targeting content.
 
-## Definition
-
-### Select the Character Model
+## Select Character Model
 
 The default model is "NumberLetter" which recognize all general number and letter characters.
 
-### Configure ImageProcessing Modes
+## Configure ImageProcessing Modes
 
 `GrayscaleEnhancementModes`, `BinarizationModes` and `CharacterNormalizationModes`
 
-### Specify the Target Text Lines
+## Specify the Target Text Lines
 
 - Where the text lines are located in the TargetROI.
 - Which text line use the settings.
@@ -62,8 +61,4 @@ Use `BaseTextLineSpecificationName` to make minor changes on a existing `TextLin
 
 ## As a LabelRecognizerTaskSetting Parameter
 
-`TextLineSpecificationNameArray` is a parameter of the `LabelRecognizerTaskSetting` object.
-
-- Without TextLineSpecificationNameArray:
-- Not all the text lines are covered by `TextLineSpecificationNameArray`:
-- All the text lines are covered by `TextLineSpecificationNameArray`:
+You can either apply the default settings to all text lines or specify one or multiple

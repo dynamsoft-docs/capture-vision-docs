@@ -9,8 +9,7 @@ noTitleIndex: true
 
 # CharacterModel
 
-Character models are required when implementing text line recognition.
-`CharacterModel` objects are defined under `CharacterModelOptions`.
+A `CharacterModel` object defines how the library find Convolutional Neural Networks (CNN) models files that support the character recognition.
 
 ```json
 {
@@ -20,10 +19,10 @@ Character models are required when implementing text line recognition.
 }
 ```
 
-`CharacterModels` are the model files that stores the specially trained algorithm for character recognizing. The character model files consist of
+The character model files consist of
 
-- Model files (Required): The files that stores the major character recognition models.
-- Assist model files (Optional): Support the recognition when the result output by the major model doesn't match the RegEx.
+- Primary model files (Required): The files that stores the major character recognition models.
+- Auxiliary model files (Optional): Support the recognition when the result output by the major model doesn't match the RegEx.
 - Filter files (Optional): Set which characters are included or excluded from the text line recognition.
 
 <div align="center">
@@ -31,10 +30,14 @@ Character models are required when implementing text line recognition.
    <p>Example of CharacterModel files</p>
 </div>
 
+The data you input via the CharacterModel is to tell the library how it can find the character model files.
+
+## General Usage
+
 In the `CharacterModel` object, what you have to specify are:
 
-- The folder where you save the models.
-- The name of the model that you want to use.
+- `Name`: Find the model files by the name of the model.
+- `DirectoryPath`: Where the model files are located.
 
 ```json
 {
@@ -45,11 +48,9 @@ In the `CharacterModel` object, what you have to specify are:
 
 The library will be able to find all the related files that match the name you input including both the major models and the assist models.
 
-> Note: The specified models will be read in memory before the process of character recognition. If assist models are not found in the folder, the xxx will be implemented instead when the result doesn't match the RegEx.
+## Include Filter File
 
 If you have requirements to exclude any characters, you can configure a filter file and add the file path to your `CharacterModel` object.
-
-## How to Use Filter File
 
 Example of a exclude filter file.
 
@@ -85,15 +86,6 @@ You can define a same filter file for different `CharacterModel` objects.
 
 ## As a Parameter of TextLineSpecification Object
 
-You can specify a `CharacterModel` name for your `TextLineSpecification` parameter mode.
-
-```json
-{
-    "Name":"",
-    "CharacterModelName" : "NumberLetter",
-    //...
-}
-```
-
-- If the `TextLineSpecification.CharacterModelName` is not specified:
-- If the file path of CharacterModel
+- In each `TargetROI`, you can allocate multiple `LabelRecognizer` tasks.
+- In each `LabelRecognizer` task, you can add multiple `TextLineSpecification` settings.
+- In each `TextLineSpecification` task, you can specify only one `CharacterModel` setting.
