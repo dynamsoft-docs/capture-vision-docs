@@ -10,7 +10,7 @@ permalink: /architecture/index.html
 
 # Architecture of Dynamsoft Capture Vision
 
-As a powerful SDK framework used for implementing the functionality to derive meaningful information from images, Dynamsoft Capture Vision (DCV) is designed to adapt to a variety of different image processing scenarios. The structure easily accommodates both entry-level needs and sophisticated business logic, enabling customers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks based on the same code. In this article, we'll take a deep dive into the DCV architecture that makes this possible.
+As a powerful SDK framework used for implementing the functionality to derive meaningful information from images, Dynamsoft Capture Vision (DCV) is designed to adapt to a variety of different image processing scenarios. The architecture easily accommodates both entry-level needs and sophisticated business logic, enabling customers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks based on the same code. In this article, we'll take a deep dive into the DCV architecture that makes this possible.
 
 ## Architecture Diagram
 
