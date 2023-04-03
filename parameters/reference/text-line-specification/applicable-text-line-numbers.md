@@ -10,3 +10,21 @@ noTitleIndex: true
 # ApplicableTextLineNumbers
 
 Specify which lines in the ROI will apply the `TextLineSpecification` settings.
+
+```json
+{
+    "ApplicableTextLineNumbers": "1-3, 5, 7-10"
+}
+```
+
+Parameter Value
+
+String
+
+As JSON Parameter
+
+|ApplicableTextLineNumbers||
+|-|-|
+| Type | *String* |
+| Range | A string consists int values or  |
+| Default Value | "" |

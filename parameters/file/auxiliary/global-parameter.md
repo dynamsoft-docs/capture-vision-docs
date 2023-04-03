@@ -1,10 +1,10 @@
 ---
 layout: default-layout
-title:  TextLineSpecification Object Introduction
-description: Introduced the define of TextLineSpecification objects for Dynamsoft Capture Vision.
-keywords: Text line specification
+Title: GlobalParameters - Dynamsoft Capture Vision Parameter File
+Description: The GlobalParameters object in the Dynamsoft Capture Vision Parameter File is XXX.
+Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# GlobalParameter
+# GlobalParameters

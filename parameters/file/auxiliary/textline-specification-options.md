@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title:  TextLineSpecification Object Introduction
-description: Introduced the define of TextLineSpecification objects for Dynamsoft Capture Vision.
-keywords: Text line specification
+Title: TextLineSpecification - Dynamsoft Capture Vision Parameter File
+Description: The TextLineSpecification object in the Dynamsoft Capture Vision Parameter File defines how text lines will be processed.
+Keywords: Text line specification, binarization, grayscale enhancement, character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
