@@ -6,3 +6,5 @@ keywords: Text line specification
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
+
+# GlobalParameter
