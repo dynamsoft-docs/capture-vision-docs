@@ -8,6 +8,8 @@ noTitleIndex: false
 permalink: /architecture/std-input.html
 ---
 
+> *Go back to [DCV Architecture](index.md)*
+
 # Standard Input
 
 In the Dynamsoft Vision Capture (DCV) architecture, the standard input is what supplies the images to be processed, and we usually call it "the image source".
