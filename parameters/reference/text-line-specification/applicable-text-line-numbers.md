@@ -17,14 +17,12 @@ Specify which lines in the ROI will apply the `TextLineSpecification` settings.
 }
 ```
 
-Parameter Value
-
-String
-
-As JSON Parameter
-
-|ApplicableTextLineNumbers||
-|-|-|
+| Json Parameter Name | ApplicableTextLineNumbers|
+| ------------------- | ------------------------ |
 | Type | *String* |
-| Range | A string consists int values or  |
+| Range | A string of one or more of the following data,separated by commas:<br>1. One int value which represents a specified line index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified line index range; |
 | Default Value | "" |
+
+| Json Parameter Name | Value Type | Value Range | Default Value |
+| ------------------- | ---------- | ----------- | ------------- |
+| ApplicableTextLineNumbers | *string* | A string of one or more of the following data,separated by commas:<br>1. One int value which represents a specified line index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified line index range; | "" |
