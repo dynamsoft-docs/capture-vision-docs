@@ -30,11 +30,7 @@ Set the `CharacterModel`, `ImageProcessing` parameters and other configurations 
 }
 ```
 
-<!--
-<div align="center">
-   <p><img src="../assets/text-line-specification.png" alt="text-line-specification" width="30%" /></p>
-   <p></p>
-</div>-->
+If the number **first** text line is not in the area, only the **third** and **fifth** text lines are processed.
 
 ## Usage Instructions
 
@@ -44,12 +40,33 @@ Set the `CharacterModel`, `ImageProcessing` parameters and other configurations 
 
 Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](character-model-array.md) page for how to configure the models.
 
-**Set Applicable Text Lines**
+**Set Targeting Text Lines**
 
 Parameter `ApplicableTextLineNumbers` defines which text lines shall apply the settings of this `TextLineSpecification` object.
 
 - If `ApplicableTextLineNumbers` is null, all the text lines will use the default settings.
 - If `ApplicableTextLineNumbers` is not applied to all the text lines, the remaining text lines will use the default settings.
+
+You can also specify the location of the targeting text lines with 4 point coordinates. The targeting text line is filtered based on the combination of `ApplicableTextLineNumbers` and area definition. For example:
+
+<div align="center">
+   <p><img src="../assets/example-text-line-specification.png" alt="text-line-specification" width="60%" /></p>
+   <p></p>
+</div>
+
+You can use the following parameters to process the above image:
+
+```json
+{
+    "ApplicableTextLineNumbers" : "7,8",
+    "FirstPoint" : [ 0, 60 ],
+    "SecondPoint" : [ 70, 60 ],
+    "ThirdPoint" : [ 70, 100 ],
+    "FourthPoint" : [ 0, 100 ]
+}
+```
+
+If your set the `ApplicableTextLineNumbers` as "1-8", the text line from 1 to 6 are not recognized because they are not in the specified area.
 
 **Configure ImageProcessing Modes**
 

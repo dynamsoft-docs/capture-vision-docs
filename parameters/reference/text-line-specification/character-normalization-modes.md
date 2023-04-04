@@ -1,10 +1,15 @@
+---
+layout: default-layout
+Title: CharacterNormalizationModes - Dynamsoft Label Recognizer Parameters
+Description: The parameter CharacterNormalizationModes of Dynamsoft Label Recognizer defines how to normalize the characters.
+Keywords: Character normalization
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
+
 # CharacterNormalizationModes
 
-Define how the characters will be normalized in the specified text line.
-
-The quality of characters are not enough for recognition.
-
-CharacterNormalizationModes is a parameter for setting the mode for character normalization. It consisits of one or more CharacterNormalizationMode items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+An array of `CharacterNormalizationMode` object that defines which mode to implement. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 ```json
 {
@@ -14,7 +19,17 @@ CharacterNormalizationModes is a parameter for setting the mode for character no
             "Mode": "CNM_MORPH",
             "MorphOperation": "Close",
             "MorphArgument": "3",
+        },
+        {
+            "Mode": "CNM_SKIP"
         }
     ]
 }
 ```
+
+|  |  |
+| :------------------- | :------------------------ |
+| Parameter Name | CharacterNormalizationModes |
+| Type | *String* |
+| Range | A object that defines with "CNM_MORPH", "CNM_AUTO" or "CNM_SKIP" |
+| Default Value | "NumberLetter" |
