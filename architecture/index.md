@@ -44,7 +44,7 @@ At runtime, CVR accepts an image source and acts as an image input for the the f
 
 ### Coordinate Image-Processing Tasks
 
-CVR accepts and maintains a list of image-processing settings known as ["CaptureVisionTemplates"](../parameters/file/capture-vision-template.md). Each template defines the tasks to be performed on an image. These tasks may be configured to run in parallel or one after the other.
+CVR accepts and maintains a list of image-processing settings known as [CaptureVisionTemplates](../parameters/file/capture-vision-template.md). Each template defines the tasks to be performed on an image. These tasks may be configured to run in parallel or one after the other.
 
 At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to build a task workflow, which then runs for all images acquired from the image source.
 
@@ -57,11 +57,11 @@ At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to build a tas
 
 In the DCV architecture, a listening object refers to an object that has implemented either the [Captured Result Receiver (CRR) interface](std-output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver). There is no limit to the number of listening objects that CVR can configure.
 
-As images are getting processed by CVR, different types of results can be produced. We categorize these results in two types:
+As images are getting processed by CVR, different types of results can be produced. We categorize these results into two main categories:
 
-1. Final results: also known as *Captured Results*. These are the results of a completed task.
-   > There are only 6 types of final results. Read more about them [here](std-output.md#final-results).
-2. Intermediate results: these are results produced *during* the process of completing a task. They can be produced at multiple check-points of a task.
+1. *Final results*: also known as *Captured Results*. These are the results of a completed task.
+   > There are 6 types of final results. Read more about them [here](std-output.md#final-results).
+2. *Intermediate results*: these are results produced during the process of completing a task. They can be produced at multiple check-points of a task.
    > These check points are called *Stages*, and there are 27 stages at present. Read more on what a [divisible task](../parameters/file/task-settings/index.md#divisible-task) is.
 
 The following diagram is a simple demostration of the CVR workflow:
@@ -94,7 +94,7 @@ DCV was built with scalability at the forefront of the architectural design thro
 
 In the DCV architecure, flexibility is achieved through task coordination.
 
-Task coordination is a process in which CVR establishes a workflow connecting different tasks, and then calls upon corresponding functional products to perform these tasks on each image.
+Task coordination is a process in which CVR establishes a workflow connecting different tasks, and then calls upon the required functional products to perform these tasks on each image.
 
 Let's take the following sample image as an example
 
@@ -116,7 +116,7 @@ Here is a simple demonstration of the coordination:
 
 ### High Performance with Shared Computations
 
-With multiple functional products working together in the DCV architecture guided by CVR, it is possible to the optimum performance for each product and thus the application. The reason lies in the ideas of *Intermediate Results Sharing* and *Parallel Image Processing*.
+The interconnectivity of the different functional products in the DCV architecture allows the framework to optimize the performance of each product and thus the overall application. How this is achieved is through two core concepts of the CVR: *Intermediate Results Sharing* and *Parallel Image Processing*.
 
 #### **Intermediate Results Sharing**
 
@@ -130,7 +130,7 @@ The following diagram is a simple demonstration of the idea:
 
 ***Diagram 4: Intermediate Results Sharing***
 
-In the diagram, the assumptions are that all three tasks share stage 1 while *DDN* & *DBR* also share stage 2. When the workflow starts running, the following may happen:
+The diagram above shows that all three tasks share stage 1 while *DDN* & *DBR* share stage 2. When the workflow starts running, the following may happen:
 
 1. The DDN task performs operations for all 3 stages;
 2. The DBR task directly uses results from the DDN task for stages 1 & 2 and only needs to perform an operation for stage 3;
@@ -142,7 +142,7 @@ In the diagram, the assumptions are that all three tasks share stage 1 while *DD
 
 #### **Parallel Image Processing**
 
-As shown above in diagram 3, CVR maintains a pool of instances containing functional product instances that can be invoked immediately for certain tasks. At runtime, CVR will continuously try to get images from the image source and will try to start processing a new image as long as there is at least one idle functional product instance to use.
+As shown in diagram 3 above, CVR maintains a pool of instances consisting of functional product instances that can be invoked immediately for certain tasks. At runtime, CVR will continuously get images from the image source and starts processing a new image as long as there is at least one idle functional product instance to use.
 
 > An instance in the pool can belong to any one of the functional products (DBR/DDN/DLR/DCP) at any given time. This is determined and maintained by CVR at runtime.
 
@@ -164,7 +164,7 @@ In order to derive meaningful information from images, interaction between diffe
 
 #### **Timely dispatch of intermediate results**
 
-Each image-processing task consists of multiple stages. Each stage by itself is a substantial operation. For example, one stage may convert a colour image to grayscale and the next stage binarizes the grayscale image. Some of these results may not be very useful. 
+Each image-processing task consists of multiple stages. Each stage by itself is a substantial operation. For example, one stage may convert a colour image to grayscale and the next stage binarizes the grayscale image. Some of these results may not be very useful.
 
 However, let's consider the barcode reading process. One stage may find the exact location of a barcode and another will decode the barcode to get the text. In some cases, a barcode may be localized but fail the decoding stage and we want the user to notice the difference. To do this, we add a listening object compatible with the [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver) and listen for localized barcodes and decoded barcodes, then highlight these barcodes with different colours or with some other flag.
 
