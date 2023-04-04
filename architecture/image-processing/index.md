@@ -8,6 +8,8 @@ noTitleIndex: false
 permalink: /architecture/image-processing/index.html
 ---
 
+> *Go back to [DCV Architecture](../index.md)*
+
 # Image-Processing Tasks
 
 There are multiple types of tasks when processing images in the Dynamsoft Capture Vision (DCV) architecture.

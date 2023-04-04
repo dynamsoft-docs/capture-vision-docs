@@ -1,10 +1,11 @@
 ---   
 layout: default-layout
-title: Structure of Dynamsoft Capture Vision Parameters
-description: Introduce the parameter definitions, organization structure involved in Dynamsoft Capture Vision.
-keywords: Parameter, Definition, Hierarchy
+title: Overview of Dynamsoft Capture Vision Parameters
+description: Introduce the overview parameters design of Dynamsoft Capture Vision.
+keywords: Parameter, Parameter Template, Parameter Template File
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 ---
 
 # Overview of DCV parameters
@@ -141,6 +142,8 @@ The following table list the main objects type and description of a complete par
 |  CodeParserTaskSetting         |  It is used to configure code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
 |  ImageParameter                |  It provides various image processing features to adjust and enhance the input image for better recognition results.|
 
+For more details, please refer to [introduction of the capture vision template](capture-vision-template.md)
+
 ## How to Apply DCV Parameters
 
 Dynamsoft Capture Vision (DCV) provides two methods to apply parameters:
@@ -149,13 +152,20 @@ Dynamsoft Capture Vision (DCV) provides two methods to apply parameters:
 
    1. Call the `GetSimplifiedSettings` API to get the `SimplifiedCaptureVisionSettings` object named `dcv_settings` associated with the Dynamsoft Capture Vision Router instance.
    2. Modify the attributes of `dcv_settings`.
-   3. Call the UpdateSettings API to apply the modified `dcv_settings`.
+   3. Call the `UpdateSettings` API to apply the modified `dcv_settings`.
 
 - `JSON parameter template file/string` - It supports all DCV parameters. The related parameter setting APIs are:
 
    1. `InitSettings/InitSettingsFromFile` - after calling this interface, each parameter template in the file/string will be converted into a single parameter template object. They will replace the previously associated parameter template objects on the Capture Vision Router instance.
 
    2. `ResetSettings` - after calling this API, the internal associated parameter template objects are reset to the factory state.
+
+For more details, please refer to the following APIs:
+- [GetSimplifiedSettings]()
+- [UpdateSettings]()
+- [InitSettings]()
+- [InitSettingsFromFile]()
+- [ResetSettings]()
 
 ## Special Rules for DCV Parameter Configuration
 

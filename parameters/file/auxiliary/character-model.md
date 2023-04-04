@@ -39,6 +39,8 @@ In the `CharacterModel` object, what you have to specify are:
 - `Name`: Find the model files by the name of the model.
 - `DirectoryPath`: Where the model files are located.
 
+**Exapmle 1: Define a character model**
+
 ```json
 {
     "Name": "NumberLetter",
@@ -50,26 +52,24 @@ The library will be able to find all the related files that match the name you i
 
 ## Include Filter File
 
-If you have requirements to exclude any characters, you can configure a filter file and add the file path to your `CharacterModel` object.
-
-Example of a exclude filter file.
+If you have requirements to exclude any characters, you can configure a filter file and add the file path to your `CharacterModel` object. An example of a exclude filter file is shown as follow:
 
 ```txt
 exclude
 I Q O
 ```
 
-You can define the filter file in the same folder with the model files. For example:
+**Example 2: Add a filter file to your character model**
 
 ```json
 {
     "Name" : "NumberUppercase",
     "DirectoryPath" : "D:\\CharacterModel\\",
-    "FilterFilePath" : "D:\\CharacterModel\\Exclude.txt"
+    "FilterFilePath" : "D:\\CharacterModel\\Exclude.txt" // You can define the filter file in the same folder with the model files.
 }
 ```
 
-You can define a same filter file for different `CharacterModel` objects.
+**Example 3: Define multiple character models**
 
 ```json
 {
@@ -80,7 +80,7 @@ You can define a same filter file for different `CharacterModel` objects.
 {
     "Name" : "MRZModel",
     "DirectoryPath" : "D:\\MRZ\\",
-    "FilterFilePath" : "D:\\VIN\\Exclude.txt"
+    "FilterFilePath" : "D:\\VIN\\Exclude.txt" // You can define a same filter file for different `CharacterModel` objects.
 }
 ```
 
