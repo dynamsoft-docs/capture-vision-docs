@@ -27,9 +27,98 @@ An array of `CharacterNormalizationMode` object that defines which mode to imple
 }
 ```
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | CharacterNormalizationModes |
-| **Type** | *String* |
-| Range | A object that defines with "CNM_MORPH", "CNM_AUTO" or "CNM_SKIP" |
-| Default Value | "NumberLetter" |
+Candidate Mode List
+
+- CNM_MORPH
+- CNM_AUTO
+- CNM_SKIP
+
+<table style = "text-align:left">
+    <tr>
+        <th>Child Parameter Name</th>
+        <th>Child Parameter Details</th>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td><b>Description</b><br>
+            Specifies a mode for character normalization.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br>
+            String
+        </td>
+    </tr>
+    <tr>
+        <td><b>Candidate Mode List</b><br>
+            <ul>
+                <li>CNM_MORPH</li>
+                <li>CNM_AUTO</li>
+                <li>CNM_SKIP</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>
+            ["CNM_SKIP"]
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">MorphOperation<br>(Optional)</td>
+        <td><b>Description</b><br>
+            Sets the morph operation.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br>
+            String
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>
+            [0,2]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>
+            0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>
+            Only available for "DM_PERSPECTIVE_CORRECTION".<br>
+            0: Direction unknown.<br>
+            1: Vertical direction.<br>
+            2: Horizontal direction.
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">MorphArgument<br>(Optional)</td>
+        <td><b>Description</b><br>
+            Sets the Argument ContentDirection.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br>
+            int
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>
+            [0,2]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>
+            0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>
+            Only available for "DM_PERSPECTIVE_CORRECTION".<br>
+            0: Direction unknown.<br>
+            1: Vertical direction.<br>
+            2: Horizontal direction.
+        </td>
+    </tr>
+</table>

@@ -15,8 +15,8 @@ noTitleIndex: true
 }
 ```
 
-| Parameter Name | PageSize |
-| :------------- | :------- |
-| **Type** |  |
-| Range |  |
-| Default Value |  |
+| PageSize Parameter Details |
+| :--------------- |
+| **Type**<br> |
+| **Range**<br> |
+| **Default Value**<br> |

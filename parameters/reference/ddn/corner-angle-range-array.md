@@ -14,7 +14,7 @@ Set a group of range to filter the corners by their angles when corners are asse
 }
 ```
 
-| Key Name | Description | Default Value | Value Range |
+| Key Name | Description | **Default Value** | Value Range |
 | -------- | ----------- | ------------- | ----------- |
 | MaxValue | Set the upper limit of the corner angle. | 110 | [0,180] |
 | MinValue | Set the lower limit of the corner angle. | 70 | [0,180] |

@@ -17,9 +17,8 @@ noTitleIndex: true
 }
 ```
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | CharacterModelName |
-| **Type** | *String* |
-| Range | One of the name that defined in `CharacterModel` |
-| Default Value | "NumberLetter" |
+| CharacterModelName Parameter Details |
+| :----------------------------------- |
+| **Type**<br>*String* |
+| **Range**<br>The name of a `CharacterModel` object that defined in `CharacterModelOptions`. |
+| **Default Value**<br>"NumberLetter" |

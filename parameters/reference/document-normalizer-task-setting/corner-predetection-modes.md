@@ -15,9 +15,8 @@ noTitleIndex: true
 }
 ```
 
-| CornerPredetectionModes |  |
-| :------------- | :---------------------- |
-| **Parent Object** | DocumentNormalizerTaskSetting |
-| **Type** | *String* |
-| **Range** |  |
-| **Default Value** | "" |
+| CornerPredetectionModes Parameter Details |
+| :---------------------------- |
+| **Type**<br>*String* |
+| **Range**<br> |
+| **Default Value**<br>"" |

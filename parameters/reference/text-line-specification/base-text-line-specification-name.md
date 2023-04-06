@@ -17,9 +17,8 @@ Specify a `TextLineSpecification` object name. The current object will inherit t
 }
 ```
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | BaseTextLineSpecificationName|
-| **Type** | *String* |
-| Range | One of the existing `TextLineSpecification` object name. |
-| Default Value | "" |
+| BaseTextLineSpecificationName Parameter Details |
+| :----------------------------------------- |
+| **Type**<br>*String* |
+| **Range**<br>One of the existing `TextLineSpecification` object name. |
+| **Default Value**<br>"" |

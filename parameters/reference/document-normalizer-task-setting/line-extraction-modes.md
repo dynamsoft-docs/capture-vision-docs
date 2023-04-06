@@ -15,8 +15,8 @@ noTitleIndex: true
 }
 ```
 
-| Parameter Name | LineExtractionModes |
-| :------------- | :------------------ |
-| **Type** |  |
-| Range |  |
-| Default Value |  |
+| LineExtractionModes Parameter Details |
+| :----------------------- |
+| **Type**<br> |
+| **Range**<br> |
+| **Default Value**<br> |

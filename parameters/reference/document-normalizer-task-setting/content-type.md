@@ -9,10 +9,7 @@ noTitleIndex: true
 
 # ContentType
 
-Parameter `ContentType` defines which contents are the targeting objects. Currently, the supported contents are:
-
-- Document pages
-- Table
+Parameter `ContentType` defines which contents are the targeting objects.
 
 ```json
 {
@@ -20,9 +17,14 @@ Parameter `ContentType` defines which contents are the targeting objects. Curren
 }
 ```
 
-| Parent Object | DocumentNormalizerTaskSetting |
-| :------------ | :---------------------------- |
-| Parameter Name | ContentType |
-| **Type** | *String* |
-| Range | "CT_DOCUMENT", "CT_TABLE" or "CT_UNKNOWN". |
-| Default Value | "CT_DOCUMENT" |
+Candidate Content Type List
+
+- CT_DOCUMENT
+- CT_TABLE
+- CT_UNKNOWN
+
+| ContentType Parameter Details |
+| :---------------------------- |
+| **Type**<br>*String* |
+| **Range**<br>One of the candidate content type as a string. |
+| **Default Value**<br>"CT_DOCUMENT" |

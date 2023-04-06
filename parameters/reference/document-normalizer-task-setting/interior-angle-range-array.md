@@ -15,8 +15,8 @@ noTitleIndex: true
 }
 ```
 
-| Parameter Name | InteriorAngleRangeArray |
-| :------------- | :---------------------- |
-| **Type** |  |
-| Range |  |
-| Default Value |  |
+| InteriorAngleRangeArray Parameter Details |
+| :------------------------- |
+| **Type**<br> |
+| **Range**<br> |
+| **Default Value**<br> |

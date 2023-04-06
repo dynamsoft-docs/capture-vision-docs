@@ -24,9 +24,8 @@ noTitleIndex: true
 }
 ```
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | CharHeightRange|
-| **Type** | *String* |
-| Range |  |
-| Default Value | "" |
+| CharHeightRange Parameter Details |
+| :-------------------------------- |
+| **Type**<br>*int Array* |
+| **Range**<br> |
+| **Default Value**<br>"" |

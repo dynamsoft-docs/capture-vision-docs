@@ -51,7 +51,7 @@ You can also specify the location of the targeting text lines with 4 point coord
 
 <div align="center">
    <p><img src="../assets/example-text-line-specification.png" alt="text-line-specification" width="60%" /></p>
-   <p></p>
+   Example Text Line Specification
 </div>
 
 You can use the following parameters to process the above image:

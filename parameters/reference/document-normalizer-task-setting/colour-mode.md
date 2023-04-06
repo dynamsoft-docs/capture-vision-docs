@@ -17,8 +17,14 @@ Parameter `ColourMode` defines the output colour mode of the normalized image. I
 }
 ```
 
+Colour Mode List
+
+- ICM_BINARY
+- ICM_GRAYSCALE
+- ICM_COLOUR
+
 | ColourMode Parameter Details |
 | :--------------------------- |
 | **Type**<br>*String* |
-| Range<br>"ICM_BINARY", "ICM_GRAYSCALE" or "ICM_COLOUR". |
-| Default Value<br>`"ICM_BINARY"` |
+| **Range**<br>One of the colour mode as a string. |
+| **Default Value**<br>"ICM_BINARY" |

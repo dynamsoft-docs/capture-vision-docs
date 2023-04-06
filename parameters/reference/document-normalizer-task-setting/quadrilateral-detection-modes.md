@@ -15,8 +15,8 @@ noTitleIndex: true
 }
 ```
 
-| Parameter Name | QuadrilateralDetectionModes |
-| :------------- | :-------------------------- |
-| **Type** |  |
-| Range |  |
-| Default Value |  |
+| QuadrilateralDetectionModes Parameter Details |
+| :------------------------------------- |
+| **Type**<br> |
+| **Range**<br> |
+| **Default Value**<br> |
