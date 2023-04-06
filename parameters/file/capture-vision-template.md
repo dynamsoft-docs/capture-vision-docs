@@ -28,7 +28,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
    <p>Example 1 – Parameters of CaptureVisionTemplate</p>
 </div>
 
-As shown in the example above, the parameters in this object are as follows:
+## Summary of CaptureVisionTemplate top-level parameters
 
 | Parameter Name | Description |
 | -------------- | ----------- |
