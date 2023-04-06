@@ -1,5 +1,7 @@
 # Location
 
+Define the location of the TargetROI with `reference objects` filter conditions and `offset` parameters.
+
 ## ReferenceObjectFilter
 
 Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring out the `reference objects`.
@@ -184,7 +186,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectOriginIndex<br></td>
-        <td><b>Description</b><br>Defines which point of the reference onject will be set as the origin of the coordinate system.
+        <td><b>Description</b><br>Define which point of the reference onject will be set as the origin of the coordinate system.
         </td>
     </tr>
     <tr>
@@ -202,7 +204,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectSizeType<br></td>
-        <td><b>Description</b><br>Defines which coordinate system to use when configuring offset parameters basd on the reference objects.
+        <td><b>Description</b><br>Define which coordinate system to use when configuring offset parameters basd on the reference objects.
         </td>
     </tr>
     <tr>
@@ -224,7 +226,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MeasuredInPercentage<br></td>
-        <td><b>Description</b><br>Sets whether or not to use percentage to measure the points' coordinates.
+        <td><b>Description</b><br>Set whether or not to use percentage to measure the points' coordinates.
         </td>
     </tr>
     <tr>

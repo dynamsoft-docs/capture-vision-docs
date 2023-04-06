@@ -21,16 +21,6 @@ DeskewMode specifies the method in which the deskew process way used to apply th
 }
 ```
 
-## Candidate Mode List
-
-- [DM_PERSPECTIVE_CORRECTION](#dm_perspective_correction)
-
-### DM_PERSPECTIVE_CORRECTION
-
-Deskew the document by applying perspective correction process. This mode has the following arguments for further customizing.
-
-## Definition Details
-
 DeskewMode is defined with a object that contains two child parameters, `Mode` and `ContentDirection`.
 
 <table style = "text-align:left">
@@ -50,8 +40,7 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>
-            Anyone in Candidate Mode List as a string.
+        <td><b>Candidate Mode List</b><br><li><a href = "#dmperspectivecorrection">DM_PERSPECTIVE_CORRECTION</a>
         </td>
     </tr>
     <tr>
@@ -89,3 +78,9 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
         </td>
     </tr>
 </table>
+
+## Mode Explanation
+
+### DM_PERSPECTIVE_CORRECTION
+
+Deskew the document by applying perspective correction process. This mode has the following arguments for further customizing.

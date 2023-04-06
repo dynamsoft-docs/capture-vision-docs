@@ -17,14 +17,8 @@ Parameter `ContentType` defines which contents are the targeting objects.
 }
 ```
 
-Candidate Content Type List
-
-- CT_DOCUMENT
-- CT_TABLE
-- CT_UNKNOWN
-
 | ContentType Parameter Details |
 | :---------------------------- |
 | **Type**<br>*String* |
-| **Range**<br>One of the candidate content type as a string. |
+| **Available Content Type**<br><li>CT_DOCUMENT<li>CT_TABLE<li>CT_UNKNOWN |
 | **Default Value**<br>"CT_DOCUMENT" |
