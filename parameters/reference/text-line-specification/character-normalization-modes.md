@@ -30,6 +30,6 @@ An array of `CharacterNormalizationMode` object that defines which mode to imple
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | CharacterNormalizationModes |
-| Type | *String* |
+| **Type** | *String* |
 | Range | A object that defines with "CNM_MORPH", "CNM_AUTO" or "CNM_SKIP" |
 | Default Value | "NumberLetter" |

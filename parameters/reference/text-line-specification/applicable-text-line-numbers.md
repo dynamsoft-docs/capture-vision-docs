@@ -19,7 +19,7 @@ The line numers of the targeting lines which are specified by the `TextLineSpeci
 
 | Parameter Name | ApplicableTextLineNumbers|
 | ------------------- | ------------------------ |
-| Type | *String* |
+| **Type** | *String* |
 | Range | A string of one or more of the following data,separated by commas:<br>1. One int value which represents a specified line index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified line index range. |
 | Default Value | "" |
 

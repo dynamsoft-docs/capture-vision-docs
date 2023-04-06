@@ -19,7 +19,7 @@ Specify a `TextLineSpecification` object name. The current object will inherit t
 
 |  |  |
 | :------------------- | :------------------------ |
-| Parameter Name | ApplicableTextLineNumbers|
-| Type | *String* |
+| Parameter Name | BaseTextLineSpecificationName|
+| **Type** | *String* |
 | Range | One of the existing `TextLineSpecification` object name. |
 | Default Value | "" |

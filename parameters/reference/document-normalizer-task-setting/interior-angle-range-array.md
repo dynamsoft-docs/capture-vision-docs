@@ -1,8 +1,22 @@
 ---
 layout: default-layout
-Title: {PARAMETER NAME} - {PRODUCT NAME} Parameters
-Description: The parameter {PARAMETER NAME} of {PRODUCT NAME} is XXX.
+Title: InteriorAngleRangeArray - Dynamsoft Document Normalizer Parameters
+Description: The parameter InteriorAngleRangeArray of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
+
+# InteriorAngleRangeArray
+
+```json
+{
+    "": ""
+}
+```
+
+| Parameter Name | InteriorAngleRangeArray |
+| :------------- | :---------------------- |
+| **Type** |  |
+| Range |  |
+| Default Value |  |

@@ -1,8 +1,22 @@
 ---
 layout: default-layout
-Title: {PARAMETER NAME} - {PRODUCT NAME} Parameters
-Description: The parameter {PARAMETER NAME} of {PRODUCT NAME} is XXX.
+Title: LineExtractionModes - Dynamsoft Document Normalizer Parameters
+Description: The parameter LineExtractionModes of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
+
+# LineExtractionModes
+
+```json
+{
+    "": ""
+}
+```
+
+| Parameter Name | LineExtractionModes |
+| :------------- | :------------------ |
+| **Type** |  |
+| Range |  |
+| Default Value |  |

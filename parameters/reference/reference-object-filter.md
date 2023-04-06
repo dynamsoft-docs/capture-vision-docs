@@ -40,10 +40,27 @@ Set a series of filter conditions for the reference objects. A reference object 
 | [`TextLineFilteringCondition`](#textlinefilteringcondition) | Set text line conditions that can be used as reference objects | *Object* |  | null |
 | [`ColourRegionFilteringCondition`](#colourregionfilteringcondition) | Set colour region conditions that can be used as reference *objects* | *Object* |  | null |
 
+&nbsp;
+
 | BarcodeFilteringCondition Parameters | Description | Default Value |
 | ------------------------------------ | ----------- | ------------- |
 | [`BarcodeFormatIds`](#barcodeformatids) | Specify a group of `BarcodeFormatIds` with a string array as the filter condition. | ["BF_ALL"] |
 | [`BarcodeTextRegExPattern`](#barcodetextregexpattern) | Find qualified barcode reference objects by settings a RegEx string for the barcode text. | null |
+
+&nbsp;
+
+**BarcodeFilteringCondition Parameters**
+
+| Parameter Name | Details  |
+| :------------- | :------- |
+| BarcodeFormatIds | **Description**<br>Specify a group of `BarcodeFormatIds` with a string array as the filter condition. |
+|  | **Type**<br>*String* |
+|  | **Default Value**<br>["BF_ALL"] |
+| BarcodeTextRegExPattern | **Description**<br>Find qualified barcode reference objects by settings a RegEx string for the barcode text. |
+|  | **Type**<br>*String* |
+|  | **Default Value**<br>null |
+
+&nbsp;
 
 | FrameFilteringCondition Parameters | Description | Default Value |
 | ---------------------------------- | ----------- | ------------- |

@@ -20,6 +20,6 @@ noTitleIndex: true
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | CharacterModelName |
-| Type | *String* |
+| **Type** | *String* |
 | Range | One of the name that defined in `CharacterModel` |
 | Default Value | "NumberLetter" |

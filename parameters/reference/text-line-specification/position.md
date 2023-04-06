@@ -29,7 +29,7 @@ The top-left vertex coordinate of the the text line. The coordinate is measured 
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | FirstPoint |
-| Type | *int Array* |
+| **Type** | *int Array* |
 | Range | Each member of the array should be a int value between 0 to 100. |
 | Default Value | *null* |
 
@@ -40,7 +40,7 @@ The top-right vertex coordinate of the the text line. The coordinate is measured
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | SecondPoint |
-| Type | *int Array* |
+| **Type** | *int Array* |
 | Range | Each member of the array should be a int value between 0 to 100. |
 | Default Value | *null* |
 
@@ -51,7 +51,7 @@ The bottom-right vertex coordinate of the the text line. The coordinate is measu
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | ThirdPoint |
-| Type | *int Array* |
+| **Type** | *int Array* |
 | Range | Each member of the array should be a int value between 0 to 100. |
 | Default Value | *null* |
 
@@ -62,6 +62,6 @@ The bottom-left vertex coordinate of the the text line. The coordinate is measur
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | FourthPoint |
-| Type | *int Array* |
+| **Type** | *int Array* |
 | Range | Each member of the array should be a int value between 0 to 100. |
 | Default Value | *null* |

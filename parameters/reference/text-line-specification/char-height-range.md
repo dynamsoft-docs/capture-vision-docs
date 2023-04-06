@@ -27,6 +27,6 @@ noTitleIndex: true
 |  |  |
 | :------------------- | :------------------------ |
 | Parameter Name | CharHeightRange|
-| Type | *String* |
+| **Type** | *String* |
 | Range |  |
 | Default Value | "" |
