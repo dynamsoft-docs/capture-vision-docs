@@ -30,13 +30,11 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
-        <td><b>Description</b><br>
-            Specifies a mode for deskewing.
+        <td><b>Description</b><br>Specifies a mode for deskewing.
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br>
-            String
+        <td><b>Type</b><br><i>String</i>
         </td>
     </tr>
     <tr>
@@ -44,37 +42,31 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>
-            ["DM_PERSPECTIVE_CORRECTION"]
+        <td><b>Default Value</b><br>["DM_PERSPECTIVE_CORRECTION"]
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">ContentDirection<br>(Optional)</td>
-        <td><b>Description</b><br>
-            Sets the Argument ContentDirection.
+        <td><b>Description</b><br>Sets the Argument ContentDirection.
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br>
-            int
+        <td><b>Type</b><br><i>int</i>
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>
-            [0,2]
+        <td><b>Range</b><br>[0,2]
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>
-            0
+        <td><b>Default Value</b><br>0
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>
-            Only available for "DM_PERSPECTIVE_CORRECTION".<br>
-            0: Direction unknown.<br>
-            1: Vertical direction.<br>
-            2: Horizontal direction.
+        <td><b>Remarks</b><br>Only available for "DM_PERSPECTIVE_CORRECTION".
+            <li>0: Direction unknown.
+            <li>1: Vertical direction.
+            <li>2: Horizontal direction.
         </td>
     </tr>
 </table>
