@@ -160,7 +160,7 @@ Job 1 and 3 serve as "input" and "output" and are straightforward. In different 
 
 ### Bidirectional Interactivity with Intermediate Results
 
-In order to derive meaningful information from images, interaction between different functioning components is usually required. With the help of intermediate results, the DCV architecture facilitates the interconnectivity of these components in the following ways:
+In order to derive meaningful information from images, interaction is usually required. With the help of intermediate results, the DCV architecture facilitates the interaction in the following ways:
 
 #### **Timely dispatch of intermediate results**
 
