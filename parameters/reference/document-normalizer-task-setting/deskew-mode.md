@@ -26,7 +26,7 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
-        <th>Child Parameter Details</th>
+        <th>Child Parameter Summary</th>
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>

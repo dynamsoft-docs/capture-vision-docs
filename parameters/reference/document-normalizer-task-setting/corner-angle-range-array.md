@@ -28,7 +28,7 @@ noTitleIndex: true
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
-        <th>Child Parameter Details</th>
+        <th>Child Parameter Summary</th>
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MinValue</td>

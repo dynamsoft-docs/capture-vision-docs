@@ -33,7 +33,7 @@ One of the filter conditions. Filter the reference objects with the decoded barc
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
-        <th>Child Parameter Details</th>
+        <th>Child Parameter Summary</th>
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">BarcodeFormatIds</td>
@@ -74,7 +74,7 @@ One of the filter conditions. Filter the reference objects with the frame inform
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
-        <th>Child Parameter Details</th>
+        <th>Child Parameter Summary</th>
     </tr>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">ImageDimensionRange</td>
@@ -137,7 +137,7 @@ One of the filter conditions. Filter the reference objects with the text line co
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
-        <th>Child Parameter Details</th>
+        <th>Child Parameter Summary</th>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">LineNumbers</td>
@@ -182,7 +182,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
-        <th>Child Parameter Details</th>
+        <th>Child Parameter Summary</th>
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectOriginIndex<br></td>
