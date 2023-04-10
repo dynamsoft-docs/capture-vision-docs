@@ -20,27 +20,27 @@ An image source refers to an object that has implemented the [Image Source Adapt
 
 "Image Source Adapter" (ISA) is the interface that plugs an image source into a DCV application. The interface is designed to have the following features:
 
-1. Return an image when requested by [Capture Vision Router (CVR)](index.md#capture-vision-router);
-2. Maintain an image buffer to allow instant access of images (save the time it takes to open image files);
+1. Return an image when requested by [Capture Vision Router (CVR)](index.md#capture-vision-router)
+2. Maintain an image buffer to allow instant access of images (save the time it takes to open image files)
 
 ### Return an image when reuqested
 
 This is the design purpose for an image source. To make it easy to use, ISA requires the following methods:
 
-1. A method to return how many images are available. For example, `getImageCount()`.
-2. A method to check whether a specific image is available. For example, `hasImage()`.
-3. A method to set the order in which images are returned. For example, `setNextImageToReturn()`.
-4. A method to actually return an image. For example, `getImage()`.
+1. A method to return how many images are available. For example, `getImageCount()`
+2. A method to check whether a specific image is available. For example, `hasImage()`
+3. A method to set the order in which images are returned. For example, `setNextImageToReturn()`
+4. A method to actually return an image. For example, `getImage()`
 
 ### Maintain an image buffer
 
 This is to facilitate the returning of images by building up a buffer area. ISA requires the following methods to achieve it:
 
-1. A method to add images. For example, `addImageToBuffer()`.
-2. Methods to control the buffer size. For example, `setMaxImageCount()` and `getMaxImageCount()`.
-3. Methods to control when to build the buffer. For example, `startFetching()` and `stopFetching()`.
-4. Methods to handle buffer overflow. For example, `setBufferOverflowProtectionMode()` and `getBufferOverflowProtectionMode()`.
-5. Other utility methods like `isBufferEmpty()` and `hasNextImageToFetch()`.
+1. A method to add images. For example, `addImageToBuffer()`
+2. Methods to control the buffer size. For example, `setMaxImageCount()` and `getMaxImageCount()`
+3. Methods to control when to build the buffer. For example, `startFetching()` and `stopFetching()`
+4. Methods to handle buffer overflow. For example, `setBufferOverflowProtectionMode()` and `getBufferOverflowProtectionMode()`
+5. Other utility methods like `isBufferEmpty()` and `hasNextImageToFetch()`
 
 ## ISA Implementation
 
@@ -51,7 +51,7 @@ An image source is usually required when creating a DCV application. In most cas
 Dynamsoft Camera Enhancer (DCE) is available on Web and Mobile platforms. It enables the users to do the following:
 
 1. Control cameras
-2. Acqurie image frames from live video stream
+2. Acquire image frames from live video stream
 3. Provide basic user interaction
 
 As it has implemented the ISA interface, we can directly use it as an image source. For example:
