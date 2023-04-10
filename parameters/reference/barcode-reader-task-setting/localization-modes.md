@@ -229,7 +229,7 @@ The default settings of LocalizationModes is:
 ]
 ```
 
-## Candidate Modes Introductions
+## Candidate Modes Introduction
 
 ### LM_CONNECTED_BLOCKS
 
