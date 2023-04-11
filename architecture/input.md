@@ -10,9 +10,9 @@ permalink: /architecture/input.html
 
 > *Go back to [DCV Architecture](index.md)*
 
-# Standard Input
+# Input
 
-In the Dynamsoft Vision Capture (DCV) architecture, the standard input is what supplies the images to be processed, and we usually call it "the image source".
+In the Dynamsoft Capture Vision (DCV) architecture, "input" is what supplies the images to be processed, and we usually call it "the image source".
 
 An image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter).
 
@@ -23,7 +23,7 @@ An image source refers to an object that has implemented the [Image Source Adapt
 1. Return an image when requested by [Capture Vision Router (CVR)](index.md#capture-vision-router)
 2. Maintain an image buffer to allow instant access of images (save the time it takes to open image files)
 
-### Return an image when reuqested
+### Return an image when requested
 
 This is the design purpose for an image source. To make it easy to use, ISA requires the following methods:
 
@@ -44,14 +44,14 @@ This is to facilitate the returning of images by building up a buffer area. ISA 
 
 ## ISA Implementation
 
-An image source is usually required when creating a DCV application. In most cases, developers can directly use one of the following ready-made implemenations in their application:
+An image source is usually required when creating a DCV application. In most cases, developers can directly use one of the following ready-made implementations in their application:
 
 ### Dynamsoft Camera Enhancer
 
 Dynamsoft Camera Enhancer (DCE) is available on Web and Mobile platforms. It enables the users to do the following:
 
 1. Control cameras
-2. Acquire image frames from live video stream
+2. Acquire image frames from a live video stream
 3. Provide basic user interaction
 
 As it has implemented the ISA interface, we can directly use it as an image source. For example:
@@ -69,16 +69,13 @@ let cameraEnhancer = Dynamsoft.DCE.CameraEnhancer.createInstance();
 captureVisionRouter.setInput(cameraEnhancer);
 //...
 ```
->
-```java
+>```java
 
 ```
->
-```objc
+>```objc
 
 ```
->
-```swift
+>```swift
 
 ```
 
