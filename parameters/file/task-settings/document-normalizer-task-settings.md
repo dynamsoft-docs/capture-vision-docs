@@ -5,7 +5,7 @@ description: The DocumentNormalizerTaskSetting object in the Dynamsoft Capture V
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /parameters/file/task-settings/document-normalizer-task-setting.html
+permalink: /parameters/file/task-settings/document-normalizer-task-settings.html
 ---
 
 # DocumentNormalizerTaskSetting Object

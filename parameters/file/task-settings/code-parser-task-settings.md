@@ -5,7 +5,7 @@ description: The CodeParserTaskSetting object in the Dynamsoft Capture Vision Pa
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /parameters/file/task-settings/code-parser-task-setting.html
+permalink: /parameters/file/task-settings/code-parser-task-settings.html
 ---
 
 # CodeParserTaskSetting Object
