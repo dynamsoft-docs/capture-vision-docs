@@ -38,7 +38,7 @@ Capture Vision Router (CVR) is the most important part of the DCV architecture. 
 
 ### Retrieve Images from the Image Source  
 
-In the DCV architecture, an image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](std-input.md#image-source-adapter). For example, Dynamsoft Camera Enhancer (DCE) is often used as an image source in applications that use Dynamsoft software.
+In the DCV architecture, an image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter). For example, Dynamsoft Camera Enhancer (DCE) is often used as an image source in applications that use Dynamsoft software.
 
 At runtime, CVR accepts an image source and acts as an image input for the the functional products. Usually, this is a continuous process which ends when the image source is exhausted.
 
@@ -55,12 +55,12 @@ At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to build a tas
 
 ### Dispatch Results to Listening Objects
 
-In the DCV architecture, a listening object refers to an object that has implemented either the [Captured Result Receiver (CRR) interface](std-output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver). There is no limit to the number of listening objects that CVR can configure.
+In the DCV architecture, a listening object refers to an object that has implemented either the [Captured Result Receiver (CRR) interface](output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](output.md#intermediate-result-receiver). There is no limit to the number of listening objects that CVR can configure.
 
 As images are getting processed by CVR, different types of results can be produced. We categorize these results into two main categories:
 
 1. *Final results*: also known as *Captured Results*. These are the results of a completed task.
-   > There are 6 types of final results. Read more about them [here](std-output.md#final-results).
+   > There are 6 types of final results. Read more about them [here](output.md#final-results).
 2. *Intermediate results*: these are results produced during the process of completing a task. They can be produced at multiple check-points of a task.
    > These check points are called *Stages*, and there are 27 stages at present. Read more on what a [divisible task](../parameters/file/task-settings/index.md#divisible-task) is.
 
@@ -80,7 +80,7 @@ With the help of CVR, the DCV architecture has the following advantages (which w
 
 DCV was built with scalability at the forefront of the architectural design through the use of pluggable components. Here are the following *components* that play a part in demonstrating this scalability:
 
-1. The "source" that supplies images to be processed can be any object that is compliant with the [Image Source Adapter (ISA) interface](std-input.md#image-source-adapter).
+1. The "source" that supplies images to be processed can be any object that is compliant with the [Image Source Adapter (ISA) interface](input.md#image-source-adapter).
   > ISA is an open interface, and Dynamsoft provides a skeleton implementation based on which customers can build their own image sources. For example, an image source that supplies images from the cloud.
   > 
   > Customers can also choose to use the following options:
@@ -166,7 +166,7 @@ In order to derive meaningful information from images, interaction is usually re
 
 Each image-processing task consists of multiple stages. Each stage by itself is a substantial operation. For example, one stage may convert a colour image to grayscale and the next stage binarizes the grayscale image. Some of these results may not be very useful.
 
-However, let's consider the barcode reading process. One stage may find the exact location of a barcode and another will decode the barcode to get the text. In some cases, a barcode may be localized but fail the decoding stage and we want the user to notice the difference. To do this, we add a listening object compatible with the [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver) and listen for localized barcodes and decoded barcodes, then highlight these barcodes with different colours or with some other flag.
+However, let's consider the barcode reading process. One stage may find the exact location of a barcode and another will decode the barcode to get the text. In some cases, a barcode may be localized but fail the decoding stage and we want the user to notice the difference. To do this, we add a listening object compatible with the [Intermediate Result Receiver (IRR) interface](output.md#intermediate-result-receiver) and listen for localized barcodes and decoded barcodes, then highlight these barcodes with different colours or with some other flag.
 
 Intermediate results are generated throughout the execution of a task and CVR makes sure that these results are immediately dispatched to all registered listeners. The following diagram is a simple demostration of this.
 

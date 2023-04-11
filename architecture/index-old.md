@@ -40,12 +40,12 @@ This article presents the DCV architecture, which explains why it has the follow
 At the top level, the DCV architecture consists of three components:
 
 1. Image Source  
-   An image source acquires and supplies images to DCV to process. In the DCV architecture, an image source is an object that has implemented the [Image Source Adapter (ISA) interface](std-input.md#image-source-adapter).
+   An image source acquires and supplies images to DCV to process. In the DCV architecture, an image source is an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter).
 2. Image Processing Unit  
    The image processing unit is the most important part in the DCV architecture. It processes each image from the image source according to a predefined settings and outputs the results to each information output object.
    Semantic processing is an auxiliary and optional step that helps parse instant text results from the image into human-readable data tables.
 3. Information Output Target  
-   An information output target receives the information DCV has derived from the images. In the DCV architecture, such an object is one that has implemented either the [Captured Result Receiver (CRR) interface](std-output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](std-output.md#intermediate-result-receiver).
+   An information output target receives the information DCV has derived from the images. In the DCV architecture, such an object is one that has implemented either the [Captured Result Receiver (CRR) interface](output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](output.md#intermediate-result-receiver).
 
 ![An image depicting the 3 components]()
 
@@ -259,5 +259,5 @@ In total, there are 27 unique stages:
 - IRUT_RECOGNIZED_TEXT_LINES
 - IRUT_NORMALIZED_IMAGE
 
-These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](image-process/intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](std-output.md#intermediate-result-receiver).
+These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](image-process/intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver).
 

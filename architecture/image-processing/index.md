@@ -26,29 +26,29 @@ The following are the image-processing tasks supported:
 
 ## Divisible Task
 
-An image-processing task can be further devided into three sections.
+An image-processing task can be further divided into three sections.
 
 | Task Type            | Sections                                                         |
 | :------------------- | :--------------------------------------------------------------- |
-| Read Barcodes        | Region Predetection, Barcode Localization, Barcode Decoding      |
-| Recognize Text Lines | Region Predetection, Textline Localization, Textline Recognition |
-| Normalize a Document | Region Predetection, Document Detection, Document Normalization  |
+| Read Barcodes        | Region Pre-detection, Barcode Localization, Barcode Decoding      |
+| Recognize Text Lines | Region Pre-detection, Text-line Localization, Text-line Recognition |
+| Normalize a Document | Region Pre-detection, Document Detection, Document Normalization  |
 
 In total, there are 7 unique image-processing sections, which belong to one of three steps of a task:
 
 - Step one: initial image processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
-  - [Region Predetection](region-predetection.md)
+  - [Region Pre-detection](region-predetection.md)
   > 1. If no specific region is found, the entire image is the output.
   > 2. There can be multiple regions found which result in multiple regional images as the output.
-- Step two: detecting the precise location, called "zones" of the final results (a barcode, a textline or a document) on the regional images from step one. Then these zones are cropped to produce zonal images as the final output of step two. This step is one of the following three sections:
+- Step two: detecting the precise location, called "zones" of the final results (a barcode, a text-line or a document) on the regional images from step one. Then these zones are cropped to produce zonal images as the final output of step two. This step is one of the following three sections:
   - [Barcode Localization](barcode-localization.md)
-  - [Textline Localization](textline-localization.md)
+  - [Text-line Localization](textline-localization.md)
   - [Document Detection](document-detection.md) (a document refers to an object with a quadrilateral boundary)
   > 1. As seen on the table above, one task will have only one of these sections.
   > 2. As mentioned in [divisible section](#divisible-section), each section is further divided into stages. These three sections in step two starts with the same few stages. Read more on [Shared Detection](shared-detection.md).
 - Step three: producing the final results based on the zonal images. This step is one of the following three sections:
   - [Barcode Decoding](barcode-decoding.md)
-  - [Textline Recognition](textline-recognition.md)
+  - [Text-line Recognition](textline-recognition.md)
   - [Document Normalization](document-normalization.md)
   > As seen on the table above, one task will have only one of these sections.
 
@@ -61,9 +61,9 @@ Usually, a task is complete which means it consists of three consecutive section
 
 ## Divisible Section
 
-Each of the 7 sections mentioned in [Divisible Task](#divisible-section) can be further devided into many stages as shown below:
+Each of the 7 sections mentioned in [Divisible Task](#divisible-section) can be further divided into many stages as shown below:
 
-> Stages shared by Barcode Localization, Textline Localization and Document Detection are put together for the pseudo type "Shared Partial Section". Read more on [Shared Detection](shared-detection.md)
+> Stages shared by Barcode Localization, Text-line Localization and Document Detection are put together for the pseudo type "Shared Partial Section". Read more on [Shared Detection](shared-detection.md)
 
 | Section Type             | Stages                                                                                                                                                                                                                                                                                                                                   |
 | :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,4 +106,4 @@ In total, there are 27 unique stages:
 - IRUT_RECOGNIZED_TEXT_LINES
 - IRUT_NORMALIZED_IMAGE
 
-These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](std-output.md#intermediate-result-receiver).
+These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver).

@@ -5,7 +5,7 @@ description: This article is about the standard input in the Dynamsoft Capture V
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/std-input.html
+permalink: /architecture/input.html
 ---
 
 > *Go back to [DCV Architecture](index.md)*
@@ -14,7 +14,7 @@ permalink: /architecture/std-input.html
 
 In the Dynamsoft Vision Capture (DCV) architecture, the standard input is what supplies the images to be processed, and we usually call it "the image source".
 
-An image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](std-input.md#image-source-adapter).
+An image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter).
 
 ## Image Source Adapter
 

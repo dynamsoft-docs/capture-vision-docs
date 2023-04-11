@@ -46,7 +46,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 
 ## Input Source Configuration
 
-In the parameter template, the `ImageSourceName` parameter refers to the `ImageSource` object, which defines the image input source of DCV. When DCV starts capturing, it will parse the `ImageSource` parameter, convert it into an [Image Source Adapter (ISA)](../../architecture/std-input.md#image-source-adapter) object, and then continuously obtain images from it.
+In the parameter template, the `ImageSourceName` parameter refers to the `ImageSource` object, which defines the image input source of DCV. When DCV starts capturing, it will parse the `ImageSource` parameter, convert it into an [Image Source Adapter (ISA)](../../architecture/input.md#image-source-adapter) object, and then continuously obtain images from it.
 
 ## Captured Output Configuration
 

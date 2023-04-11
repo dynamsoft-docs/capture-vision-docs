@@ -108,5 +108,5 @@ In total, there are 27 unique stages:
 - IRUT_RECOGNIZED_TEXT_LINES
 - IRUT_NORMALIZED_IMAGE
 
-These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](image-process/intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](std-output.md#intermediate-result-receiver).
+These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](image-process/intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver).
 

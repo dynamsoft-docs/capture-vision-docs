@@ -4,7 +4,7 @@
 <li>
         <a href="{{ site.architecture }}" class="otherLinkColour">Architecture</a>
         <ul>
-                <li><a href="{{ site.architecture }}std-input.html" class="otherLinkColour">Input</a></li>
+                <li><a href="{{ site.architecture }}input.html" class="otherLinkColour">Input</a></li>
                 <li><a href="{{ site.architecture }}image-processing/index.html" class="otherLinkColour">Image
                                 Processing</a>
                         <ul>
@@ -19,82 +19,105 @@
                                                 class="otherLinkColour">Barcode
                                                 Decoding</a></li>
                                 <li><a href="{{ site.architecture }}image-processing/textline-localization.html"
-                                                class="otherLinkColour">Textline Localization</a></li>
+                                                class="otherLinkColour">Text-line Localization</a></li>
                                 <li><a href="{{ site.architecture }}image-processing/textline-recognition.html"
-                                                class="otherLinkColour">Textline Recognition</a></li>
+                                                class="otherLinkColour">Text-line Recognition</a></li>
                                 <li><a href="{{ site.architecture }}image-processing/document-detection.html"
                                                 class="otherLinkColour">Document Detection</a></li>
                                 <li><a href="{{ site.architecture }}image-processing/document-normalization.html"
                                                 class="otherLinkColour">Document Normalization</a></li>
+                                <li><a href="{{ site.architecture }}image-processing/intermediate-result.html"
+                                                class="otherLinkColour">Intermediate Result</a></li>
                         </ul>
                 </li>
                 <li><a href="{{ site.architecture }}semantic-processing.html" class="otherLinkColour">Semantic
                                 Processing</a>
                 </li>
-                <li><a href="{{ site.architecture }}std-output.html" class="otherLinkColour">Output</a></li>
+                <li><a href="{{ site.architecture }}output.html" class="otherLinkColour">Output</a></li>
         </ul>
 </li>
 <li>
         <a href="{{ site.parameter }}" class="otherLinkColour">Parameters</a>
         <ul>
-                <li><a href="{{ site.parameterFile }}" class="otherLinkColour">Parameter Organization</a>
+                <li><a href="{{ site.parameter }}file/index.html" class="otherLinkColour">Parameter Organization</a>
                         <ul>
-                                <li><a href="{{ site.parameterFile }}capture-vision-template.html"
+                                <li><a href="{{ site.parameter }}file/capture-vision-template.html"
                                                 class="otherLinkColour">CaptureVisionTemplate Object</a></li>
-                                <li><a href="{{ site.parameterFile }}image-source-options.html"
+                                <li><a href="{{ site.parameter }}file/image-source.html"
                                                 class="otherLinkColour">ImageSource Object</a></li>
-                                <li><a href="{{ site.parameterFile }}target-ROI-def-options/"
-                                                class="otherLinkColour">TargetROIDefi Object</a></li>
-                                <li><a href="{{ site.parameterFile }}semantic-processing-options/"
-                                                class="otherLinkColour">SemanticProcessing Object</a>
-                                </li>
-                                <li><a href="{{ site.parameterFile }}task-settings/" class="otherLinkColour">Task
-                                                Settings</a>
+                                <li><a href="{{ site.parameter }}file/target-roi-definition/index.html"
+                                                class="otherLinkColour">TargetROIDef Object</a>
                                         <ul>
-                                                <li><a href="{{ site.parameterFile }}task-settings/barcode-reader-task-setting-options.html"
-                                                                class="otherLinkColour">BarcodeReaderTaskSetting
-                                                                Object</a></li>
-                                                <li><a href="{{ site.parameterFile }}task-settings/label-recognizer-task-setting-options.html"
-                                                                class="otherLinkColour">LabelRecognizerTaskSetting
-                                                                Object</a></li>
-                                                <li><a href="{{ site.parameterFile }}task-settings/document-normalizer-task-setting-options.html"
-                                                                class="otherLinkColour">DocumentNormalizerTaskSetting
-                                                                Object</a></li>
-                                                <li><a href="{{ site.parameterFile }}task-settings/code-parser-task-setting-options.html"
-                                                                class="otherLinkColour">CodeParserTaskSetting Object</a>
+                                                <li><a href="{{ site.parameter }}file/target-roi-definition/location/index.html"
+                                                                class="otherLinkColour">Location</a>
+                                                </li>
+                                                <li><a href="{{ site.parameter }}file/target-roi-definition/location/reference-object-filter.html"
+                                                                class="otherLinkColour">Reference Object Filter</a>
                                                 </li>
                                         </ul>
                                 </li>
-                                <li><a href="{{ site.parameterFile }}image-parameter-array.html"
-                                                class="otherLinkColour">ImagePapameter Object</a></li>
-                                <li><a href="{{ site.parameterFile }}auxiliary/" class="otherLinkColour">Auxiliary
+                                <li><a href="{{ site.parameter }}file/semantic-processing/index.html"
+                                                class="otherLinkColour">SemanticProcessing Object</a>
+                                        <ul>
+                                                <li><a href="{{ site.parameter }}file/semantic-processing/reference-object-filter.html"
+                                                                class="otherLinkColour">Reference Object Filter</a>
+                                                </li>
+                                        </ul>
+                                </li>
+                                <li><a href="{{ site.parameter }}file/task-settings/index.html"
+                                                class="otherLinkColour">Task
                                                 Settings</a>
                                         <ul>
-                                                <li><a href="{{ site.parameterFile }}auxiliary/barcode-format-specification-options.html"
-                                                                class="otherLinkColour">BarcodeFormatSpecification
-                                                                Object</a></li>
-                                                <li><a href="{{ site.parameterFile }}auxiliary/textline-specification-options.html"
-                                                                class="otherLinkColour">TextLineSpecification
-                                                                Object</a></li>
-                                                <li><a href="{{ site.parameterFile }}auxiliary/character-model-array.html"
-                                                                class="otherLinkColour">CharacterModel Object</a>
+                                                <li><a href="{{ site.parameter }}file/task-settings/barcode-reader-task-settings.html"
+                                                                class="otherLinkColour">BarcodeReader Task Settings</a>
                                                 </li>
-                                                <li><a href="{{ site.parameterFile }}auxiliary/global-parameter.html"
-                                                                class="otherLinkColour">GlobalParameter Object</a></li>
+                                                <li><a href="{{ site.parameter }}file/task-settings/label-recognizer-task-settings.html"
+                                                                class="otherLinkColour">LabelRecognizer Task
+                                                                Settings</a></li>
+                                                <li><a href="{{ site.parameter }}file/task-settings/document-normalizer-task-settings.html"
+                                                                class="otherLinkColour">DocumentNormalizer Task
+                                                                Settings</a></li>
+                                                <li><a href="{{ site.parameter }}file/task-settings/code-parser-task-settings.html"
+                                                                class="otherLinkColour">CodeParser Task Settings</a>
+                                                </li>
+                                        </ul>
+                                </li>
+                                <li><a href="{{ site.parameter }}file/image-parameter.html"
+                                                class="otherLinkColour">Image Parameter Object</a></li>
+                                <li><a href="{{ site.parameter }}file/auxiliary/index.mhtml"
+                                                class="otherLinkColour">Auxiliary
+                                                Settings</a>
+                                        <ul>
+                                                <li><a href="{{ site.parameter }}file/auxiliary/barcode-format-specification.html"
+                                                                class="otherLinkColour">Barcode Format Specification</a>
+                                                </li>
+                                                <li><a href="{{ site.parameter }}file/auxiliary/textline-specification.html"
+                                                                class="otherLinkColour">Text Line Specification</a></li>
+                                                <li><a href="{{ site.parameter }}file/auxiliary/character-model.html"
+                                                                class="otherLinkColour">Character Model</a>
+                                                </li>
+                                                <li><a href="{{ site.parameter }}file/auxiliary/global-parameter.html"
+                                                                class="otherLinkColour">Global Parameter</a></li>
                                         </ul>
                                 </li>
                         </ul>
                 </li>
-                <li><a href="{{ site.parameterReference }}" class="otherLinkColour">Parameter References</a>
+                <li><a href="{{ site.parameter }}reference/index.html" class="otherLinkColour">Parameter Reference</a>
                         <ul>
-                                <li><a href="{{ site.parameterReference }}barcode-format-ids.html"
+                                <li><a href="{{ site.parameter }}reference/barcode-format-ids.html"
                                                 class="otherLinkColour">BarcodeFormatIds</a></li>
-                                <li><a href="{{ site.parameterReference }}barcode-reader-task-setting/localization-modes.html" class="otherLinkColour">LocalizationModes</a></li>
-                                <li><a href="{{ site.parameterReference }}" class="otherLinkColour">Parameter 3</a></li>
-                                <li><a href="{{ site.parameterReference }}" class="otherLinkColour">Parameter 4</a></li>
-                                <li><a href="{{ site.parameterReference }}" class="otherLinkColour">Parameter 5</a></li>
-                                <li><a href="{{ site.parameterReference }}" class="otherLinkColour">Parameter 6</a></li>
-                                <li><a href="{{ site.parameterReference }}" class="otherLinkColour">Parameter 7</a></li>
+                                <li><a href="{{ site.parameter }}reference/barcode-reader-task-setting/localization-modes.html"
+                                                class="otherLinkColour">LocalizationModes</a></li>
+                                <li><a href="{{ site.parameter }}reference/" class="otherLinkColour">Parameter 3</a>
+                                </li>
+                                <li><a href="{{ site.parameter }}reference/" class="otherLinkColour">Parameter 4</a>
+                                </li>
+                                <li><a href="{{ site.parameter }}reference/" class="otherLinkColour">Parameter 5</a>
+                                </li>
+                                <li><a href="{{ site.parameter }}reference/" class="otherLinkColour">Parameter 6</a>
+                                </li>
+                                <li><a href="{{ site.parameter }}reference/" class="otherLinkColour">Parameter 7</a>
+                                </li>
                         </ul>
                 </li>
         </ul>

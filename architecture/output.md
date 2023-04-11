@@ -5,7 +5,7 @@ description: This article is about the standard output in the Dynamsoft Capture 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/std-output.html
+permalink: /architecture/output.html
 ---
 
 > *Go back to [DCV Architecture](index.md)*
