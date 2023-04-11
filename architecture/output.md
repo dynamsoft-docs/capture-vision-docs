@@ -12,6 +12,8 @@ permalink: /architecture/output.html
 
 # Standard Output
 
+![DCV Architecture](assets/dcv-architecture-output.png)
+
 As the last piece of the Dynamsoft Capture Vision (DCV) architecture, the standard output is responsible for transporting the image processing results to objects that logically depend on them.
 
 A standard output target is an object that has implemented either the [Captured Result Receiver (CRR) interface](#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](#intermediate-result-receiver). The two interfaces both consist of multiple callback functions, therefore, a standard output target is usually referred to as a **listening object**.
