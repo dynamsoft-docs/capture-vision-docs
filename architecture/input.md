@@ -63,11 +63,6 @@ As it has implemented the ISA interface, we can directly use it as an image sour
    >- Android
    >- Objective-C
    >- Swift
-   >- Python
-   >- Java
-   >- C#
-   >- C++
-   >- C
    >
 >
 ```javascript
@@ -113,79 +108,12 @@ settings?.region.regionMeasuredByPercentage = 1
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
->
-```python
-# Obtain current runtime settings of `reader` instance.
-settings = reader.get_runtime_settings()
-settings.region.region_top = 10
-settings.region.region_bottom = 90
-settings.region.region_left = 10
-settings.region.region_right = 90
-settings.region.region_measured_by_percentage = 1
-# Update the settings.
-reader.update_runtime_settings(settings)
-```
->
-```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
-// Update the settings.
-reader.updateRuntimeSettings(settings);
-```
->
-```c#
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.Region.RegionTop = 10;
-settings.Region.RegionBottom = 90;
-settings.Region.RegionLeft = 10;
-settings.Region.RegionRight = 90;
-settings.Region.RegionMeasuredByPercentage = 1;
-// Update the settings.
-reader.UpdateRuntimeSettings(settings);
-```
->
-```c++
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-reader.GetRuntimeSettings(&settings);
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
-```
->
-```c
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-DBR_GetRuntimeSettings(reader, &settings);
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
-```
 
 ### Directory Fetcher
 
-Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enables users to do simulate an directory containing images as an image source. For example:
-
+Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enables users to simulate a directory containing images as an image source. For example:
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
@@ -195,12 +123,6 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
    >- C++
    >- C
    >
->
-```javascript
-let captureVisionRouter = Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let cameraEnhancer = Dynamsoft.DCE.CameraEnhancer.createInstance();
-captureVisionRouter.setInput(cameraEnhancer);
-```
 >
 ```java
 // Obtain current runtime settings of `reader` instance.
@@ -307,8 +229,7 @@ DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 
 ### Custom Implementation
 
-An ISA implementation requires more than ten methods, which is not easy to do. Therefore Dynamsoft provides a base class to help developers build their own:
-
+An ISA implementation requires more than ten methods, which is not easy to do. Therefore, Dynamsoft provides a base class to help developers build their own. Check out the definition of the class for more information:
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
