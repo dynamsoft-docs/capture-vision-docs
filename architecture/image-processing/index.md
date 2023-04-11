@@ -24,7 +24,7 @@ The following are the image-processing tasks supported:
 | Recognize Text Lines | DLR          | Image Processing | Recognized TextLines |
 | Normalize a Document | DDN          | Image Processing | Normalized Image     |
 
-## Divisible Task
+## Divide Task into Sections
 
 An image-processing task can be further divided into three sections.
 
@@ -45,7 +45,7 @@ In total, there are 7 unique image-processing sections, which belong to one of t
   - [Text-line Localization](textline-localization.md)
   - [Document Detection](document-detection.md) (a document refers to an object with a quadrilateral boundary)
   > 1. As seen on the table above, one task will have only one of these sections.
-  > 2. As mentioned in [divisible section](#divisible-section), each section is further divided into stages. These three sections in step two starts with the same few stages. Read more on [Shared Detection](shared-detection.md).
+  > 2. As mentioned in [divide section into stages](#divide-section-into-stages), each section is further divided into stages. These three sections in step two starts with the same few stages. Read more on [Shared Detection](shared-detection.md).
 - Step three: producing the final results based on the zonal images. This step is one of the following three sections:
   - [Barcode Decoding](barcode-decoding.md)
   - [Text-line Recognition](textline-recognition.md)
@@ -59,9 +59,9 @@ Usually, a task is complete which means it consists of three consecutive section
 1. An incomplete task can be a halfway task which means it starts from step two or even step three and consists of only two or even just one section. Read more about [StartSection](../../parameters/reference/start-section.md).
 2. An incomplete task can be a premature task which means it ends early and doesn't produce the final results. Unlike a halfway task which must start at the beginning of a section, a premature task can end at any stage of a section. Read more about [TerminateSetting](../../parameters/reference/terminate-settings.md).
 
-## Divisible Section
+## Divide Section into Stages
 
-Each of the 7 sections mentioned in [Divisible Task](#divisible-section) can be further divided into many stages as shown below:
+Each of the 7 sections mentioned in ["Divide Task into Sections"](#divide-task-into-sections) can be further divided into many stages as shown below:
 
 > Stages shared by Barcode Localization, Text-line Localization and Document Detection are put together for the pseudo type "Shared Partial Section". Read more on [Shared Detection](shared-detection.md)
 

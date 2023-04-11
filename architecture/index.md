@@ -49,7 +49,7 @@ CVR accepts and maintains a list of image-processing settings known as [CaptureV
 At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to build a task workflow, which then runs for all images acquired from the image source.
 
 - For tasks that can run in parallel, CVR will start to process the next image as long as it has an extra working thread to create a functional product instance. Read more on [Parallel Image Processing](#parallel-image-processing).
-- For tasks that must run in a sequence, CVR makes sure that each task follows the correctt order of operations.
+- For tasks that must run in a sequence, CVR makes sure that each task follows the correct order of operations.
 
 > There are two type of tasks. Read more about [Image-Processing Tasks](image-processing/index.md) and [Semantic-Processing Tasks](semantic-processing.md).
 
@@ -62,9 +62,9 @@ As images are getting processed by CVR, different types of results can be produc
 1. *Final results*: also known as *Captured Results*. These are the results of a completed task.
    > There are 6 types of final results. Read more about them [here](output.md#final-results).
 2. *Intermediate results*: these are results produced during the process of completing a task. They can be produced at multiple check-points of a task.
-   > These check points are called *Stages*, and there are 27 stages at present. Read more on what a [divisible task](../parameters/file/task-settings/index.md#divisible-task) is.
+   > These check points are called *stages*, and there are 27 stages at present. These stages are further divided into 7 groups called *image processing sections*. Read more on [Image-Processing Tasks](../parameters/file/task-settings/index.md).
 
-The following diagram is a simple demostration of the CVR workflow:
+The following diagram is a simple demonstration of the CVR workflow:
 
 ![CVR Tasks](assets/CVR-Tasks.png)
 
@@ -92,7 +92,7 @@ DCV was built with scalability at the forefront of the architectural design thro
 
 ### Flexibility with Customizable Workflows
 
-In the DCV architecure, flexibility is achieved through task coordination.
+In the DCV architecture, flexibility is achieved through task coordination.
 
 Task coordination is a process in which CVR establishes a workflow connecting different tasks, and then calls upon the required functional products to perform these tasks on each image.
 
@@ -122,7 +122,9 @@ The interconnectivity of the different functional products in the DCV architectu
 
 We talked about how CVR [dispatches results to listening objects](#dispatch-results-to-listening-objects), where we introduced intermediate results which are produced at multiple check-points, known as stages, of a task. Another responsibility of CVR that we touched upon is [coordinating image-processing tasks](#coordinate-image-processing-tasks), where we learned that multiple tasks can be configured in a single workflow.
 
-Take the sample image in Figure 1 as an example. The image is first processed by *DDN*, then by *DBR*, and lastly by *DLR*. All three tasks analyze the pixels of an image to find results, and they share similar analysis "stages". Under certain conditions, they can share the results from these analysis stages so that one product (let's say *DBR*) can use the intermediate results produced by another functional product (let's say *DDN*), saving time and resources.
+Suppose a workflow defines three parallel tasks, namely *DDN*, *DBR* and *DLR* tasks, which execute on the same image or the same area on the image (known as [target region of interest](../parameters/file/target-roi-definition/location/index.md). All these three tasks analyze the pixels of the image to find results, and they share similar analysis "stages". Under certain conditions, they can share the results from these analysis stages so that one functional product (let's say *DBR*) can use the intermediate results produced by another functional product (let's say *DDN*), saving time and resources.
+
+> Read more on [*image-processing stages*](image-processing/index.md#divide-section-into-stages).
 
 The following diagram is a simple demonstration of the idea:
 
@@ -153,7 +155,7 @@ Another benefit of the DCV Architecture is that the outward interface is very si
 | Index | Description                            | Corresponding API of CVR                                                                                                               |
 | :-------- | :------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
 | Job 1     | Get Images from the Image Source.      | `SetInput()` accepts an image source.                                                                                                  |
-| Job 2     | Coordinate Image-Processing Tasks.     | `InitSettings()` accepts a parameter file which defines one or multiple worflows and `StartCapturing()` specifies one workflow to use. |
+| Job 2     | Coordinate Image-Processing Tasks.     | `InitSettings()` accepts a parameter file which defines one or multiple workflows and `StartCapturing()` specifies one workflow to use. |
 | Job 3     | Dispatch Results to Listening Objects. | `AddResultReceiver()` accepts one or multiple listening objects.                                                                       |
 
 Job 1 and 3 serve as "input" and "output" and are straightforward. In different applications, the real difference will be in job 2 where different arrangements of tasks mean applications may do completely different things. For some usage scenarios, the workflows are usually consistent, which allows settings to be predefined as ["CaptureVisionTemplates"](../parameters/file/capture-vision-template.md). We call these scenarios **packable scenarios**. Customers can specify one of these templates to use in their applications, simplifying the development work needed.
@@ -168,7 +170,7 @@ Each image-processing task consists of multiple stages. Each stage by itself is 
 
 However, let's consider the barcode reading process. One stage may find the exact location of a barcode and another will decode the barcode to get the text. In some cases, a barcode may be localized but fail the decoding stage and we want the user to notice the difference. To do this, we add a listening object compatible with the [Intermediate Result Receiver (IRR) interface](output.md#intermediate-result-receiver) and listen for localized barcodes and decoded barcodes, then highlight these barcodes with different colours or with some other flag.
 
-Intermediate results are generated throughout the execution of a task and CVR makes sure that these results are immediately dispatched to all registered listeners. The following diagram is a simple demostration of this.
+Intermediate results are generated throughout the execution of a task and CVR makes sure that these results are immediately dispatched to all registered listeners. The following diagram is a simple demonstration of this.
 
 ![Intermediate-Result-Dispatch](assets/Intermediate-Result-Dispatch.png)
 
@@ -184,7 +186,7 @@ The DCV architecture allows external programs to intervene in image processing. 
 4. The code examines the result, makes some changes, and sends it back to CVR;
 5. CVR injects the updated data back and resumes image processing.
   
-The following diagram is a simple demostration of this process
+The following diagram is a simple demonstration of this process
 
 ![Intermediate-Result-Intervention](assets/Intermediate-Result-Intervention.png)
 
