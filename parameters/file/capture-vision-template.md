@@ -35,7 +35,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 | `Name` | Represents the name of the parameter template, which serves as its unique identifier. |
 | `ImageSourceName` | Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV. |
 | `ImageROIProcessingNameArray` | Represents the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. It is used to define recognition tasks performed on ROIs of an image, including reading barcodes, recognizing labels, or detecting document quadrilaterals. |
-| `SemanticProcessingNameArray`| Represents the collection of semantic processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
+| `SemanticProcessingNameArray`| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
 | `OutputRawImage` | Indicates whether DCV finally outputs the original input image. |
 | `MaxParallelTasks` | Indicates the maximum number of parallel tasks for the DCV runtime. |
 | `Timeout` | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|

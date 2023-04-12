@@ -5,23 +5,28 @@ description: This is page about the first section in the Dynamsoft Capture Visio
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/image-process/region-predetection.html
+permalink: /architecture/image-processing/region-predetection.html
 ---
-We can roughly divide the algorithmic processing flow of a task into three sections:
+
+# Section One - Region Pre-Detection
+
+The following shows how sections connect to each other to form tasks:
+
 ```mermaid
 flowchart LR;
-     A[1.Region Predetection]-->B[2.Shared Detection]
+     A[1.Region Pre-Detection]-->B[2.1.Shared Detection]
      B-->C{Specific Tasks}
-     C---D[3.DLR]
-     C---E[3.DDN]
-     C---F[3.DBR]
+     C---D[2.2.Barcode Localization]
+     C---E[2.2.Text-line Localization]
+     C---F[2.2.Document Detection]
+     C---D[3.Barcode Decoding]
+     C---E[3.Text-line Recognition]
+     C---F[3.Document Normalization]
      style A fill:#f96,stroke:#333,stroke-width:4px
 ```
-* section1.Predetect region(s) for better performance;
-* section2.Necessary image pre-processing for enhancing image features.
-* section3.Algorithmic processing related to specific tasks..
 
-Each section may contain several more detailed algorithmic stages, and in this article we discuss Section1 - Region Predetection.
+In this article, we'll discuss the first section of a task - **Region Pre-Detection**:
+
 ## Section 1 - Region Predetection
 
 There is a fixed and most complete set of workflow in Section1, which ensures that the results of Section1 can be successfully produced.

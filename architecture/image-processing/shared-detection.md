@@ -5,8 +5,9 @@ description: This is page about the second section in the Dynamsoft Capture Visi
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/image-process/shared-detection.html
+permalink: /architecture/image-processing/shared-detection.html
 ---
+
 We can roughly divide the algorithmic processing flow of a task into three sections:
 ```mermaid
 flowchart LR;
@@ -36,7 +37,7 @@ Table 1 – Configurable Parameters in Section 2
 | [`ScaleDownThreshold`]() | To speed up when the input image size is large. | Available |
 | [`ColourConversionModes`]() | To set the conversion from colour to grayscale, which keeps or enhances the features of the region of interest. | Available, Extensible |
 | [`GrayscaleTransformationModes`]() | To emphasize the features of ROI with processing of the grayscale image. | Available, Extensible |
-| [`ImagePreprocessingModes`]() | To emphasize the features of ROI with image processing techniques on grayscale image. | Available, Extensible |
+| [`ImagePreprocessingModes`]() | To emphasize the features of ROI with image-processing techniques on grayscale image. | Available, Extensible |
 | [`BinarizationModes`]() | To enhance/keep features of barcode zones by applying different binarization methods and arguments. | Available, Extensible |
 | [`TextureDetectionModes`]() | To exclude texture from images to reduce interference. | Available, Extensible |
 | [`TextFilterModes`]() | To exclude text from images to reduce interference. | Available, Extensible |
@@ -63,4 +64,4 @@ The processing of this section may produce some intermediate results, and the fu
 | `TextZone` | vector(Quadrilateral) | The gray scale images that have been removed text. | `TextFilterModes` |
 | `TextRemovedBinaryImageUnit` | image | The gray scale images that have been removed text. | `TextFilterModes` |
  
-As mentioned above, The focus of this section is to use some optional image processing techniques to enhance image features for next sections. It is not essential for most common scenarios but would be helpful for some special cases.
+As mentioned above, The focus of this section is to use some optional image-processing techniques to enhance image features for next sections. It is not essential for most common scenarios but would be helpful for some special cases.

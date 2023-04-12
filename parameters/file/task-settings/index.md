@@ -10,7 +10,7 @@ permalink: /parameters/file/task-settings/index.html
 
 ### Task Types
 
-There are five types of tasks and they belong to two categories: image processing tasks and semantic processing tasks.
+There are five types of tasks and they belong to two categories: image-processing tasks and semantic-processing tasks.
 
 > NOTE
 > 
@@ -19,12 +19,12 @@ There are five types of tasks and they belong to two categories: image processin
 
 | Task Type            | Performed By | Category            | Result Type          |
 | :------------------- | :----------- | :------------------ | :------------------- |
-| Read Barcodes        | DBR          | Image Processing    | Decoded Barcodes     |
-| Recognize Text Lines | DLR          | Image Processing    | Recognized TextLines |
-| Normalize a Document | DDN          | Image Processing    | Normalized Image     |
+| Read Barcodes        | DBR          | Image-Processing    | Decoded Barcodes     |
+| Recognize Text Lines | DLR          | Image-Processing    | Recognized TextLines |
+| Normalize a Document | DDN          | Image-Processing    | Normalized Image     |
 | Parse Text
 
-## Divide Task into Sections
+## Divide Tasks into Sections
 
 An image-processing task can be further divided into three section.
 
@@ -38,7 +38,7 @@ An image-processing task can be further divided into three section.
 
 There are 7 different image-processing sections in total which belong to one of three steps of a task:
 
-- Step one: initial image processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
+- Step one: initial image-processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
   - [Region Pre-detection](image-process/region-Pre-detection.md)
   > 1. If no specific region is found, the entire image is the output.
   > 2. There can be multiple regions found which result in multiple regional images as the output.
@@ -47,7 +47,7 @@ There are 7 different image-processing sections in total which belong to one of 
   - [Text-line Localization](image-process/textline-localization.md)
   - [Document Detection](assets/document-detection.png) (a document refers to an object with a quadrilateral boundary)
   > 1. As seen on the table above, one task will have only one of these sections.
-  > 2. As mentioned in ["Divide Section into Stages"](#divide-section-into-stages), each section is further divided into stages. These three sections in step two starts with the same few stages. Read more on [Shared Detection](image-process/shared-detection.md).
+  > 2. As mentioned in ["Divide Section into Stages"](#divide-sections-into-stages), each section is further divided into stages. These three sections in step two starts with the same few stages. Read more on [Shared Detection](image-process/shared-detection.md).
 - Step three: producing the final results based on the zonal images. This step is one of the following three sections:
   - [Barcode Decoding](image-process/barcode-decoding.md)
   - [Text-line Recognition](image-process/textline-recognition.md)
@@ -69,13 +69,13 @@ Each of the 7 sections mentioned in ["Divide Task into Sections"](#d) can be fur
 
 | Section Type             | Stages                                                                                                                                                                                                                                                                                                                                   |
 | :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Region Pre-detection      | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSOFRMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
-| *Shared Partial Section* | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSOFRMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
+| Region Pre-detection      | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
+| *Shared Partial Section* | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
 | Barcode Localization     | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES                                                                                                                                                                                                                                          |
 | Text-line Localization    | IRUT_LOCALIZED_TEXT_LINES                                                                                                                                                                                                                                                                                                                |
 | Document Detection       | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS                                                                                                                                                                                                                  |
-| Barcode Decoding         | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSOFRMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES                                                                                                                   |
-| Text-line Recognition     | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSOFRMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
+| Barcode Decoding         | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES                                                                                                                   |
+| Text-line Recognition     | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
 | Document Normalization   | IRUT_NORMALIZED_IMAGE                                                                                                                                                                                                                                                                                                                    |
 
 In total, there are 27 unique stages:
@@ -83,7 +83,7 @@ In total, there are 27 unique stages:
 - IRUT_COLOUR_IMAGE
 - IRUT_SCALED_DOWN_COLOUR_IMAGE
 - IRUT_GRAYSCALE_IMAGE
-- IRUT_TRANSOFRMED_GRAYSCALE_IMAGE
+- IRUT_TRANSFORMED_GRAYSCALE_IMAGE
 - IRUT_ENHANCED_GRAYSCALE_IMAGE
 - IRUT_PREDETECTED_REGIONS
 - IRUT_BINARY_IMAGE

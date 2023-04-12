@@ -10,7 +10,7 @@ permalink: /architecture/index.html
 
 # Architecture of Dynamsoft Capture Vision
 
-Dynamsoft Capture Vision (DCV) is a powerful SDK framework designed to adapt to a variety of different image processing scenarios in order to derive and extract useful information from images. The structure easily accommodates both entry-level needs and sophisticated business logic. The design enables developers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks. In this article, we'll take a deep dive into the DCV architecture that makes it all possible.
+Dynamsoft Capture Vision (DCV) is a powerful SDK framework designed to adapt to a variety of different image-processing scenarios in order to derive and extract useful information from images. The structure easily accommodates both entry-level needs and sophisticated business logic. The design enables developers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks. In this article, we'll take a deep dive into the DCV architecture that makes it all possible.
 
 ## Architecture Diagram
 
@@ -48,7 +48,7 @@ CVR accepts and maintains a list of image-processing settings known as [CaptureV
 
 At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to build a task workflow, which then runs for all images acquired from the image source.
 
-- For tasks that can run in parallel, CVR will start to process the next image as long as it has an extra working thread to create a functional product instance. Read more on [Parallel Image Processing](#parallel-image-processing).
+- For tasks that can run in parallel, CVR will start to process the next image as long as it has an extra working thread to create a functional product instance. Read more on [Parallel Image-Processing](#parallel-image-processing).
 - For tasks that must run in a sequence, CVR makes sure that each task follows the correct order of operations.
 
 > There are two type of tasks. Read more about [Image-Processing Tasks](image-processing/index.md) and [Semantic-Processing Tasks](semantic-processing.md).
@@ -62,7 +62,7 @@ As images are getting processed by CVR, different types of results can be produc
 1. *Final results*: also known as *Captured Results*. These are the results of a completed task.
    > There are 6 types of final results. Read more about them [here](output.md#final-results).
 2. *Intermediate results*: these are results produced during the process of completing a task. They can be produced at multiple check-points of a task.
-   > These check points are called *stages*, and there are 27 stages at present. These stages are further divided into 7 groups called *image processing sections*. Read more on [Image-Processing Tasks](../parameters/file/task-settings/index.md).
+   > These check points are called *stages*, and there are 27 stages at present. These stages are further divided into 7 groups called *image-processing sections*. Read more on [Image-Processing Tasks](../parameters/file/task-settings/index.md).
 
 The following diagram is a simple demonstration of the CVR workflow:
 
@@ -116,7 +116,7 @@ Here is a simple demonstration of the coordination:
 
 ### High Performance with Shared Computations
 
-The interconnectivity of the different functional products in the DCV architecture allows the framework to optimize the performance of each product and thus the overall application. How this is achieved is through two core concepts of the CVR: *Intermediate Results Sharing* and *Parallel Image Processing*.
+The interconnectivity of the different functional products in the DCV architecture allows the framework to optimize the performance of each product and thus the overall application. How this is achieved is through two core concepts of the CVR: *Intermediate Results Sharing* and *Parallel Image-Processing*.
 
 #### **Intermediate Results Sharing**
 
@@ -124,7 +124,7 @@ We talked about how CVR [dispatches results to listening objects](#dispatch-resu
 
 Suppose a workflow defines three parallel tasks, namely *DDN*, *DBR* and *DLR* tasks, which execute on the same image or the same area on the image (known as [target region of interest](../parameters/file/target-roi-definition/location/index.md). All these three tasks analyze the pixels of the image to find results, and they share similar analysis "stages". Under certain conditions, they can share the results from these analysis stages so that one functional product (let's say *DBR*) can use the intermediate results produced by another functional product (let's say *DDN*), saving time and resources.
 
-> Read more on [*image-processing stages*](image-processing/index.md#divide-section-into-stages).
+> Read more on [*image-processing stages*](image-processing/index.md#divide-sections-into-stages).
 
 The following diagram is a simple demonstration of the idea:
 
@@ -142,7 +142,7 @@ The diagram above shows that all three tasks share stage 1 while *DDN* & *DBR* s
 > 1. Usually there are far more than 3 stages per task.
 > 2. In real time, it is also likely for an early task to use the intermediate result of a later task.
 
-#### **Parallel Image Processing**
+#### **Parallel Image-Processing**
 
 As shown in diagram 3 above, CVR maintains a pool of instances consisting of functional product instances that can be invoked immediately for certain tasks. At runtime, CVR will continuously get images from the image source and starts processing a new image as long as there is at least one idle functional product instance to use.
 
@@ -178,13 +178,13 @@ Intermediate results are generated throughout the execution of a task and CVR ma
 
 #### **Elective intervention of the processing workflow**
 
-The DCV architecture allows external programs to intervene in image processing. The steps are
+The DCV architecture allows external programs to intervene in image-processing. The steps are
 
 1. A specific type of intermediate result is generated;
-2. CVR dispatches the result to a registered listener A and pauses image processing;
+2. CVR dispatches the result to a registered listener A and pauses image-processing;
 3. Customer's code in the callback function for listener A receives the result;
 4. The code examines the result, makes some changes, and sends it back to CVR;
-5. CVR injects the updated data back and resumes image processing.
+5. CVR injects the updated data back and resumes image-processing.
   
 The following diagram is a simple demonstration of this process
 

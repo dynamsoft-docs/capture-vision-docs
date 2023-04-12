@@ -18,7 +18,7 @@ A `SemanticProcessing` object is defined as below:
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
 | ReferenceObjectFilter | JSON object | Optional | Sets the value for parameter [ReferenceObjectFilter]({{site.parameterReference}}reference-object-filter.html) to define the filter conditions |
-| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameterReference}}task-setting-name-array.html) to define a group of semantic processing tasks. |
+| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameterReference}}task-setting-name-array.html) to define a group of semantic-processing tasks. |
 
 Here is a sample:
 
@@ -56,4 +56,4 @@ This is the main part of the workflow where the actual tasks are defined. `TaskS
 
 ## Results Reporting
 
-Currently, semantic processing supports code parsing tasks, so the result is returned with callback [`OnParsedResultsReceived`]().
+Currently, semantic-processing supports code parsing tasks, so the result is returned with callback [`OnParsedResultsReceived`]().

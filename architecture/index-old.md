@@ -12,11 +12,11 @@ permalink: /architecture/index-old.html
 
 Dynamsoft Capture Vision (DCV) is a powerful SDK framework used to implement the functionality to derive meaningful information from images in all kinds of applications. 
 
-The framework is designed to adapt to a variety of different image processing scenarios. The structure easily accommodates both entry-level needs and sophisticated business logic, enabling customers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks based on the same code.
+The framework is designed to adapt to a variety of different image-processing scenarios. The structure easily accommodates both entry-level needs and sophisticated business logic, enabling customers to effortlessly build conceptual prototypes within hours, while leaving the door open for complex customizations for more demanding tasks based on the same code.
 
 This article presents the DCV architecture, which explains why it has the following advantages:
 
-1. Low barriers to entry for image processing
+1. Low barriers to entry for image-processing
 2. Flexible expansion of its functionality
 3. Agile capability for fine-grained process control
 
@@ -30,7 +30,7 @@ This article presents the DCV architecture, which explains why it has the follow
 - [Customizable Workflow](#customizable-workflow)
   - [Task Types](#task-types)
   - [Target Region Of Interest](#target-region-of-interest)
-  - [Semantic Processing Options](#semantic-processing-options)
+  - [Semantic-Processing Options](#semantic-processing-options)
 
 ## Concise Structure
 
@@ -38,8 +38,8 @@ At the top level, the DCV architecture consists of three components:
 
 1. Image Source  
    An image source acquires and supplies images to DCV to process. In the DCV architecture, an image source is an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter).
-2. Image Processing Unit  
-   The image processing unit is the most important part in the DCV architecture. It processes each image from the image source according to a predefined settings and outputs the results to each information output object.
+2. Image-Processing Unit  
+   The image-processing unit is the most important part in the DCV architecture. It processes each image from the image source according to a predefined settings and outputs the results to each information output object.
    Semantic processing is an auxiliary and optional step that helps parse instant text results from the image into human-readable data tables.
 3. Information Output Target  
    An information output target receives the information DCV has derived from the images. In the DCV architecture, such an object is one that has implemented either the [Captured Result Receiver (CRR) interface](output.md#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](output.md#intermediate-result-receiver).
@@ -54,13 +54,13 @@ To create a solution under the DCV structure, we need to combine a few functiona
 | Module Name                   | Abbreviation | Description                                                                     | Role in the Structure                   |
 | :---------------------------- | :----------: | :------------------------------------------------------------------------------ | :-------------------------------------- |
 | Dynamsoft License             |    **DL**    | Provides license control.                                                       | Auxiliary                               |
-| Dynamsoft Core                |    **DC**    | Provides basic data structures and intermediate result structures.              | Image Processing Unit                   |
+| Dynamsoft Core                |    **DC**    | Provides basic data structures and intermediate result structures.              | Image-Processing Unit                   |
 | Capture Vision Router         |   **CVR**    | Connects components and coordinates the complete workflow.                      | Manager, Coordinator                    |
 | Dynamsoft Camera Enhancer     |   **DCE**    | Provides camera control and basic user interface.                               | Image Source, Information Output Target |
-| Dynamsoft Barcode Reader      |   **DBR**    | Provides barcode reading capabilities.                                          | Image Processing Unit                   |
-| Dynamsoft Document Normalizer |   **DDN**    | Provides structure analysis, document detection and normalization capabilities. | Image Processing Unit                   |
-| Dynamsoft Label Recognizer    |   **DLR**    | Provides simple text recognition capabilities.                                  | Image Processing Unit                   |
-| Dynamsoft Code Parser         |   **DCP**    | Provides the ability to parse codes of certain standards.                       | Image Processing Unit                   |
+| Dynamsoft Barcode Reader      |   **DBR**    | Provides barcode reading capabilities.                                          | Image-Processing Unit                   |
+| Dynamsoft Document Normalizer |   **DDN**    | Provides structure analysis, document detection and normalization capabilities. | Image-Processing Unit                   |
+| Dynamsoft Label Recognizer    |   **DLR**    | Provides simple text recognition capabilities.                                  | Image-Processing Unit                   |
+| Dynamsoft Code Parser         |   **DCP**    | Provides the ability to parse codes of certain standards.                       | Image-Processing Unit                   |
 | Dynamsoft Utility             |    **DU**    | Provides official utilities.                                                    | Image Source, Auxiliary                 |
 
 As shown in the table, these modules don't belong to any of the three components: Dynamsoft License, Capture Vision Router and Dynamsoft Utility. We will talk about them first.
@@ -70,22 +70,22 @@ As shown in the table, these modules don't belong to any of the three components
 Of all the modules, Capture Vision Router (CVR) is the central piece in the DCV architecutre. It has the following jobs:
 
 1. Connect the Components  
-   The three components "Image Source", "Image Processing Unit" and "Information Output Target" are connected by CVR like this
-   - CVR accepts an object as the "Image Source", from which it proactively requests images at runtime for the "Image Processing Unit" to process
-   - CVR accepts and maintains a list of image-processing workflow settings known as ["CaptureVisionTemplates"](../parameters/file/CaptureVisionTemplate.md). CVR usually use only one of the settings to set up the "Image Processing Unit" for processing the images from the "Image Source"
-   - CVR accepts one or more objects as the "Information Output Target" to receive results produced by the "Image Processing Unit"
+   The three components "Image Source", "Image-Processing Unit" and "Information Output Target" are connected by CVR like this
+   - CVR accepts an object as the "Image Source", from which it proactively requests images at runtime for the "Image-Processing Unit" to process
+   - CVR accepts and maintains a list of image-processing workflow settings known as ["CaptureVisionTemplates"](../parameters/file/CaptureVisionTemplate.md). CVR usually use only one of the settings to set up the "Image-Processing Unit" for processing the images from the "Image Source"
+   - CVR accepts one or more objects as the "Information Output Target" to receive results produced by the "Image-Processing Unit"
 2. Manage the Process  
    After connecting the three components, CVR is also the one that drives the entire process forward. Its jobs include
    - Starting the process. This means a few things
-     - CVR determines which funtional modules are required by analyzing the selected "CaptureVisionTemplate" and gets them loaded
+     - CVR determines which functional modules are required by analyzing the selected "CaptureVisionTemplate" and gets them loaded
      - CVR signals the "Image Source" to start acquiring images into its buffer if it hasn't started yet
-     - CVR requests images from the "Image Source" one by one and passes them to the "Image Processing Unit"
+     - CVR requests images from the "Image Source" one by one and passes them to the "Image-Processing Unit"
    - Coordinating tasks. This indicates
      - CVR analyzes the selected "CaptureVisionTemplate" and establishes a list of tasks which must be performed on every image
      - CVR processes each image according to the established list of tasks
      - For a multi-thread application, as soon as a thread becomes idle, CVR assigns it a new image to process
    - Triggering result listeners
-     - Each "Information Output Target" will register one or several result listeners with CVR. Whenever an "image processing unit" produces a result of a certain type, the CVR triggers all listeners of that type to pass the result out
+     - Each "Information Output Target" will register one or several result listeners with CVR. Whenever an "image-processing unit" produces a result of a certain type, the CVR triggers all listeners of that type to pass the result out
 
 ### Dynamsoft License
 
@@ -103,7 +103,7 @@ A workflow may contain multiple tasks of different types that can be configured 
 
 ### Task Types
 
-There are five types of tasks and they belong to two categories: image processing tasks and semantic processing tasks.
+There are five types of tasks and they belong to two categories: image-processing tasks and semantic-processing tasks.
 
 > NOTE
 > 
@@ -112,10 +112,10 @@ There are five types of tasks and they belong to two categories: image processin
 
 | Task Type            | Performed By | Category            | Result Type          |
 | :------------------- | :----------- | :------------------ | :------------------- |
-| Read Barcodes        | DBR          | Image Processing    | Decoded Barcodes     |
-| Recognize Text Lines | DLR          | Image Processing    | Recognized TextLines |
-| Normalize a Document | DDN          | Image Processing    | Normalized Image     |
-| Parse Text           | DCP          | Semantic Processing | Parse Result Object  |
+| Read Barcodes        | DBR          | Image-Processing    | Decoded Barcodes     |
+| Recognize Text Lines | DLR          | Image-Processing    | Recognized TextLines |
+| Normalize a Document | DDN          | Image-Processing    | Normalized Image     |
+| Parse Text           | DCP          | Semantic-Processing | Parse Result Object  |
 
 ### Target Region Of Interest
 
@@ -135,7 +135,7 @@ As shown above, a definition consists of three integral aspects:
 
 1. "Name" is a unique string to identify the TargetROI
 2. "Location" defines which part of the image is processed
-3. "TaskSettingNameArray" specifies what tasks are to be performed by referring to their names. These tasks are limited to the "Image Processing" category. Check [Task Types](#task-types) above for more information.
+3. "TaskSettingNameArray" specifies what tasks are to be performed by referring to their names. These tasks are limited to the "Image-Processing" category. Check [Task Types](#task-types) above for more information.
 
 "Name" and "TaskSettingNameArray" are very easy to understand. "Location", on the other hand, is much more complicated. The following shows how "Location" is defined:
 
@@ -152,9 +152,9 @@ In order to be valid, reference objects usually provide their own coordinates in
 
 > "ReferenceObjectFilter" may contain multiple objects, which in turn can specify multiple parts of the image on which all tasks specified by "TaskSettingNameArray" are performed.
 
-### Semantic Processing Options
+### Semantic-Processing Options
 
-Semantic processing usually works on a string and is most likely the last step in a workflow. It is linked to other TargetROI definitions by specifying which TargetROI generates the string(s) for it to process. Semantic processing operations are defined as Semantic Processing Options and each option is defined like this:
+Semantic processing usually works on a string and is most likely the last step in a workflow. It is linked to other TargetROI definitions by specifying which TargetROI generates the string(s) for it to process. Semantic-processing operations are defined as Semantic-Processing Options and each option is defined like this:
 
 ```json
 {
@@ -170,4 +170,4 @@ Semantic processing usually works on a string and is most likely the last step i
 
 Read more about [semantic processing](semantic-process.md).
 
-With TargetROI definitions and semantic processing options, a CaptureVisionTemplate is able to establish a customized workflow with organzied tasks to process images and obtain different types of results.
+With TargetROI definitions and semantic-processing options, a CaptureVisionTemplate is able to establish a customized workflow with organized tasks to process images and obtain different types of results.
