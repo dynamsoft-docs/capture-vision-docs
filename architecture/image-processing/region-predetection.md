@@ -24,7 +24,7 @@ flowchart LR;
 
 In this article, we'll discuss the first section of a task - **Region Pre-Detection**:
 
-# Section One - Region Pre-Detection
+# Section 1 - Region Pre-Detection
 
 The purpose of this section is to reduce the time cost by scaling down or finding out regions of interest (ROIs). It is not indispensable for follow-up sections but would be helpful for some extreme cases.
 

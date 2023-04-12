@@ -19,7 +19,7 @@ flowchart LR;
      D---G[3.Barcode Decoding]
      E---H[3.Text-line Recognition]
      F---I[3.Document Normalization]
-     style G fill:#f96,stroke:#333,stroke-width:4px
+     style F fill:#f96,stroke:#333,stroke-width:4px
 ```
 
 In this article, we'll discuss the first section of a task - **Document Detection**:

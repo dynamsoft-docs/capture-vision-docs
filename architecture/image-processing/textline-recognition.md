@@ -22,9 +22,9 @@ flowchart LR;
      style H fill:#f96,stroke:#333,stroke-width:4px
 ```
 
-In this article, we'll discuss the first section of a task - **Region Pre-Detection**:
+In this article, we'll discuss the first section of a task - **Text-line Recognition**:
 
-# Section One - Region Pre-Detection
+# Section 3 - Text-line Recognition
 
 The purpose of this section is to reduce the time cost by scaling down or finding out regions of interest (ROIs). It is not indispensable for follow-up sections but would be helpful for some extreme cases.
 
