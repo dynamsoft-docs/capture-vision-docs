@@ -124,7 +124,7 @@ We talked about how CVR [dispatches results to listening objects](#dispatch-resu
 
 Suppose a workflow defines three parallel tasks, namely *DDN*, *DBR* and *DLR* tasks, which execute on the same image or the same area on the image (known as [target region of interest](../parameters/file/target-roi-definition/location/index.md). All these three tasks analyze the pixels of the image to find results, and they share similar analysis "stages". Under certain conditions, they can share the results from these analysis stages so that one functional product (let's say *DBR*) can use the intermediate results produced by another functional product (let's say *DDN*), saving time and resources.
 
-> Read more on [*image-processing stages*](image-processing/index.md#divide-section-into-stages).
+> Read more on [*image-processing stages*](image-processing/index.md#divide-sections-into-stages).
 
 The following diagram is a simple demonstration of the idea:
 

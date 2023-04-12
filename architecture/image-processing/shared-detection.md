@@ -5,8 +5,9 @@ description: This is page about the second section in the Dynamsoft Capture Visi
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/image-process/shared-detection.html
+permalink: /architecture/image-processing/shared-detection.html
 ---
+
 We can roughly divide the algorithmic processing flow of a task into three sections:
 ```mermaid
 flowchart LR;

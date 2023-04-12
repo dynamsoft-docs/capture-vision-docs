@@ -336,7 +336,7 @@ interface IntermediateResultReceiver {
         taskName: string,
         unit: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit) => void;
     /**
-     * This callback is triggered when
+     * This callback is triggered when the barcode zones are complemented for better decoding.
      */
     onComplementedBarcodeImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
