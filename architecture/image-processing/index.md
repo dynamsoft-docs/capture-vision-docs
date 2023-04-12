@@ -81,9 +81,9 @@ flowchart LR;
      C---D[2.2.Barcode Localization]
      C---E[2.2.Text-line Localization]
      C---F[2.2.Document Detection]
-     C---D[3.Barcode Decoding]
-     C---E[3.Text-line Recognition]
-     C---F[3.Document Normalization]
+     D---G[3.Barcode Decoding]
+     E---H[3.Text-line Recognition]
+     F---I[3.Document Normalization]
 ```
 
 ## Divide Sections into Stages

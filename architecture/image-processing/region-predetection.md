@@ -27,8 +27,6 @@ flowchart LR;
 
 In this article, we'll discuss the first section of a task - **Region Pre-Detection**:
 
-Each section may contain several more detailed algorithmic stages, and in this article we discuss Section1 - Region Predetection.
-
 ## Section 1 - Region Predetection
 
 There is a fixed and most complete set of workflow in Section1, which ensures that the results of Section1 can be successfully produced.
