@@ -9,9 +9,9 @@ breadcrumbText: Intermediate Result
 
 # Intermediate Result
 
-`IntermediateResult` record a series of data that produced by the image processing algorithm. It can be either a image (processed image or even the original image) or significant information extracted from the source image.
+`IntermediateResult` record a series of data that produced by the image-processing algorithm. It can be either a image (processed image or even the original image) or significant information extracted from the source image.
 
-* Share the image processing results that required by different tasks that have the same input and parameter settings.
+* Share the image-processing results that required by different tasks that have the same input and parameter settings.
 * Receive data from different sections for further analysis.
 * Get, modify and updated the intermediate result to receive better result.
 
@@ -68,14 +68,14 @@ Intermediate results are produced by different **stages** of the algorithm. The 
   * TransformedGrayscaleImageUnit
   * RecognizedTextLinesUnit
 
-For more details about the image processing algorithm sections and stages, please refer to the [complete process of algorithm](image-process/index.md).
+For more details about the image-processing algorithm sections and stages, please refer to the [complete process of algorithm](image-process/index.md).
 
 ## Inherit
 
 An algorithm task can inherit the intermediate result of another task when:
 
 * They have the same TargetROIDef.
-* The initial part of their image processing parameters is the same.
+* The initial part of their image-processing parameters is the same.
 
 ## Receive
 

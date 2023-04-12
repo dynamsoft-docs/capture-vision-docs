@@ -10,7 +10,7 @@ permalink: /parameters/index.html
 
 # Introduction to Dynamsoft Capture Vision Parameters
 
-[Dynamsoft Capture Vision Architecture](../architecture/index.md) is designed to accommodate both entry-level needs and sophisticated business logic. While [Capture Vision Router](../architecture/index.md#capture-vision-router) allows developers to get started with image processing in their applications within hours, the Dynamsoft Capture Vision (DCV) parameters are what make it possible for the applications to be able to handle all sorts of image processing scenarios without changing the code much.
+[Dynamsoft Capture Vision Architecture](../architecture/index.md) is designed to accommodate both entry-level needs and sophisticated business logic. While [Capture Vision Router](../architecture/index.md#capture-vision-router) allows developers to get started with image-processing in their applications within hours, the Dynamsoft Capture Vision (DCV) parameters are what make it possible for the applications to be able to handle all sorts of image-processing scenarios without changing the code much.
 
 Simply put, DCV parameters are used to configure how different functional products work in the Dynamsoft Capture Vision architecture.
 

@@ -20,9 +20,9 @@ The following are the image-processing tasks supported:
 
 | Task Type            | Performed By | Category         | Result Type          |
 | :------------------- | :----------- | :--------------- | :------------------- |
-| Read Barcodes        | DBR          | Image Processing | Decoded Barcodes     |
-| Recognize Text Lines | DLR          | Image Processing | Recognized TextLines |
-| Normalize a Document | DDN          | Image Processing | Normalized Image     |
+| Read Barcodes        | DBR          | Image-Processing | Decoded Barcodes     |
+| Recognize Text Lines | DLR          | Image-Processing | Recognized TextLines |
+| Normalize a Document | DDN          | Image-Processing | Normalized Image     |
 
 ## Divide Task into Sections
 
@@ -36,7 +36,7 @@ An image-processing task can be further divided into three sections.
 
 In total, there are 7 unique image-processing sections, which belong to one of three steps of a task:
 
-- Step one: initial image processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
+- Step one: initial image-processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
   - [Region Pre-detection](region-predetection.md)
   > 1. If no specific region is found, the entire image is the output.
   > 2. There can be multiple regions found which result in multiple regional images as the output.

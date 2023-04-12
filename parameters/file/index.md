@@ -140,7 +140,7 @@ The following table list the main objects type and description of a complete par
 |  LabelRecognizerTaskSetting    |  It is used to configure settings for label recognition tasks performed on images in DCV.|
 |  DocumentNormalizerTaskSetting |  It is used to configure the document detection or normalization process of an image in DCV. |
 |  CodeParserTaskSetting         |  It is used to configure code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
-|  ImageParameter                |  It provides various image processing features to adjust and enhance the input image for better recognition results.|
+|  ImageParameter                |  It provides various image-processing features to adjust and enhance the input image for better recognition results.|
 
 For more details, please refer to [introduction of the capture vision template](capture-vision-template.md)
 

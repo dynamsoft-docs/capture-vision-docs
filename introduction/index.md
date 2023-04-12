@@ -115,7 +115,7 @@ DCV's high performance is reflected in its ability to support parallel computing
 
 DCV comes with a built-in task queue and thread pool mechanism, which allows multiple tasks to be executed in parallel as long as there are no dependencies between the tasks and there are available idle threads to use. By leveraging this mechanism, DCV can ensure that tasks are executed efficiently and without any delays, while also ensuring that resources are used effectively.
 
-For applications that require simultaneous recognition of barcodes and text in images, most SDKs typically recognize barcodes and text independently. This means that image processing operations such as grayscale and binary conversion need to be performed twice, which can be time-consuming and inefficient. However, DCV takes a different approach by parsing templates and executing processing steps only once for same parameters. This significantly improves efficiency and performance, as the same processing steps can be shared between both barcode and text recognition.
+For applications that require simultaneous recognition of barcodes and text in images, most SDKs typically recognize barcodes and text independently. This means that image-processing operations such as grayscale and binary conversion need to be performed twice, which can be time-consuming and inefficient. However, DCV takes a different approach by parsing templates and executing processing steps only once for same parameters. This significantly improves efficiency and performance, as the same processing steps can be shared between both barcode and text recognition.
 
 ### Bidirectional Interactivity with Intermediate Results
 

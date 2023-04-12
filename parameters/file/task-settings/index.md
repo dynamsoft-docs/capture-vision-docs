@@ -10,7 +10,7 @@ permalink: /parameters/file/task-settings/index.html
 
 ### Task Types
 
-There are five types of tasks and they belong to two categories: image processing tasks and semantic processing tasks.
+There are five types of tasks and they belong to two categories: image-processing tasks and semantic-processing tasks.
 
 > NOTE
 > 
@@ -19,9 +19,9 @@ There are five types of tasks and they belong to two categories: image processin
 
 | Task Type            | Performed By | Category            | Result Type          |
 | :------------------- | :----------- | :------------------ | :------------------- |
-| Read Barcodes        | DBR          | Image Processing    | Decoded Barcodes     |
-| Recognize Text Lines | DLR          | Image Processing    | Recognized TextLines |
-| Normalize a Document | DDN          | Image Processing    | Normalized Image     |
+| Read Barcodes        | DBR          | Image-Processing    | Decoded Barcodes     |
+| Recognize Text Lines | DLR          | Image-Processing    | Recognized TextLines |
+| Normalize a Document | DDN          | Image-Processing    | Normalized Image     |
 | Parse Text
 
 ## Divide Task into Sections
@@ -38,7 +38,7 @@ An image-processing task can be further divided into three section.
 
 There are 7 different image-processing sections in total which belong to one of three steps of a task:
 
-- Step one: initial image processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
+- Step one: initial image-processing, trying to find parts of the image, called "regions" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
   - [Region Pre-detection](image-process/region-Pre-detection.md)
   > 1. If no specific region is found, the entire image is the output.
   > 2. There can be multiple regions found which result in multiple regional images as the output.

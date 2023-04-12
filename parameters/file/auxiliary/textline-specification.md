@@ -74,7 +74,7 @@ If your set the `ApplicableTextLineNumbers` as "1-8", the text line from 1 to 6 
 
 `BinarizationModes` configurations finally reflect in the quality of the binary image. It determines how the charaters are presented on the text areas before they recognized by the library. The higher quality of the binary image, the higher read rate and accuracy of the character recognition result.
 
-`CharacterNormalizationModes` are additional settings that further improve the quality of characters. Genarally, they are **morphological transformations**. You can view more about them from <a href="https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html" target="_blank">Image Processing in OpenCV - Morphological Transformations</a>.
+`CharacterNormalizationModes` are additional settings that further improve the quality of characters. Genarally, they are **morphological transformations**. You can view more about them from <a href="https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html" target="_blank">Image-Processing in OpenCV - Morphological Transformations</a>.
 
 ### Quick Settings
 

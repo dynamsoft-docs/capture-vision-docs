@@ -10,11 +10,11 @@ permalink: /architecture/output.html
 
 > *Go back to [DCV Architecture](index.md)*
 
-# Standard Output
+# Output
 
 ![DCV Architecture](assets/dcv-architecture-output.png)
 
-As the last piece of the Dynamsoft Capture Vision (DCV) architecture, the standard output is responsible for transporting the image processing results to objects that logically depend on them.
+As the last piece of the Dynamsoft Capture Vision (DCV) architecture, "output" is responsible for transporting the image-processing results to objects that logically depend on them.
 
 A standard output target is an object that has implemented either the [Captured Result Receiver (CRR) interface](#captured-result-receiver) or [Intermediate Result Receiver (IRR) interface](#intermediate-result-receiver). The two interfaces both consist of multiple callback functions, therefore, a standard output target is usually referred to as a **listening object**.
 
@@ -33,12 +33,12 @@ Final results refer to the following 6 types of results:
 5. Normalized image based on a detected document boundary
 6. Data tables parsed from barcode text or text line(s) found on the image
 
-These results are "final" because they are only returned after an image has finished processing. In other words, for each image, the CRR callback functions are only triggered once when it has finished processing. 
+These results are "final" because they are only returned after an image has finished processing. In other words, for each image, the CRR callback functions are only triggered once. 
 
 The CRR interface consists of 
 
 1. A callback function that returns all six types of results. This function is always triggered.
-2. Six callback functions for each of the six types of results. These functions are only triggered when their corresponding types of results exist.
+2. Six other callback functions for each of the six types of results. These functions are only triggered when their corresponding types of results exist.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -53,68 +53,72 @@ The CRR interface consists of
    >
 >
 ```javascript
-interface CapturedResultReceiver {
+export interface CapturedResultReceiver {
     /**
-     * The callback that contains all results.
+     * All results found on the image are returned through this callback.
+     * This callback is always triggered.
      */
     onCapturedResultReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
     /**
-     * The callback that contains only the original raw image.
+     * This callback is only triggered when the raw or original image is set to be returned.
      */
     onRawImageResultReceived?: (pResult: RawImageResultItem) => void;
     /**
-     * The callback that contains all barcode text found on the image.
+     * This callback is only triggered when barcodes are found on the image.
      */
-    onDecodedBarcodesReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
+    onDecodedBarcodesReceived?: (pResult: DBR.DecodedBarcodesResult) => void;
     /**
-     * The callback that contains all text lines found on the image.
+     * This callback is only triggered when text-lines are found on the image.
      */
-    onRecognizedTextLinesReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
+    onRecognizedTextLinesReceived?: (pResult: DLR.RecognizedTextLinesResult) => void;
     /**
-     * The callback that contains all document boundaries found on the image.
+     * This callback is only triggered when document boundary quads are detected on the image.
      */
-    onDetectedQuadsReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
+    onDetectedQuadsReceived?: (pResult: DDN.DetectedQuadsResult) => void;
     /**
-     * The callback that contains all normalized images.
+     * This callback is only triggered when the image has been normalized successfully.
      */
-    onNormalizedImagesReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
+    onNormalizedImagesReceived?: (pResult: DDN.NormalizedImageResult) => void;
     /**
-     * The callback that contains data tables parsed from barcode text or text line(s) on the image.
+     * This callback is only triggered when there are parsed results on the image.
      */
-    onParsedResultsReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
+    onParsedResultsReceived?: (pResult: DCP.ParsedResult) => void;
 }
 ```
->```java
-
+>
+```objc
+To-add
 ```
->```objc
-
+>
+```swift
+To-add
 ```
->```swift
-
+>
+```python
+To-add
 ```
->```python
-
+>
+```java
+To-add
 ```
->```java
-
+>
+```c#
+To-add
 ```
->```csharp
-
+>
+```c++
+To-add
 ```
->```c++
-
+>
+```c
+To-add
 ```
->```c
-
-```
-
 
 ## Intermediate Result Receiver
 
 Intermediate Result Receiver (IRR) is an interface for the output of intermediate results. Intermediate results refer to the following 27 types of results:
 
-1. Predetected regions unit
+1. Pre-detected regions unit
 2. Localized barcodes unit
 3. Decoded barcodes unit
 4. Localized text lines unit
@@ -144,10 +148,9 @@ Intermediate Result Receiver (IRR) is an interface for the output of intermediat
 
 These results are "intermediate" because they are generated while the image is getting processed for the "final" results. For each image, the IRR callback functions are triggered as soon as certain types of results are generated.
 
-> For the JavaScript Edition, these results are returned at the same time after the image has finished processing.
+> For the JavaScript Edition, due to technical restrictions, these results are returned after the image has finished processing.
 
 The IRR interface consists of 27 callback functions for each of the 27 types of results.
-
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
    >- Android
@@ -162,158 +165,209 @@ The IRR interface consists of 27 callback functions for each of the 27 types of 
 >
 ```javascript
 interface IntermediateResultReceiver {
+    /**
+     * This callback is triggered when regions of interest are pre-detected.
+     */
     onPredetectedRegionsReceived?: (targetROIDefName: string,
         taskName: string,
         unit: PredetectedRegionsUnit
     ) => void;
-
+    /**
+     * This callback is triggered when barcodes are localized.
+     */
     onLocalizedBarcodesReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DBR.IntermediateResult.LocalizedBarcodesUnit) => void;
-
+    /**
+     * This callback is triggered when barcodes are decoded.
+     */
     onDecodedBarcodesReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DBR.IntermediateResult.DecodedBarcodesUnit) => void;
-
+    /**
+     * This callback is triggered when text-lines are localized.
+     */
     onLocalizedTextLinesReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DLR.IntermediateResult.LocalizedTextLinesUnit) => void;
-
+    /**
+     * This callback is triggered when text-lines are recognized.
+     */
     onRecognizedTextLinesReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DLR.IntermediateResult.RecognizedTextLinesUnit) => void;
-
+    /**
+     * This callback is triggered when document boundary quads are detected.
+     */
     onDetectedQuadsReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DDN.IntermediateResult.DetectedQuadsUnit) => void;
-
+    /**
+     * This callback is triggered when the image is normalized.
+     */
     onNormalizedImagesReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DDN.IntermediateResult.NormalizedImageUnit) => void;
-
+    /**
+     * This callback is triggered when a coloured image is produced.
+     */
     onColourImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: ColourImageUnit) => void;
-
+    /**
+     * This callback is triggered when the coloured images is down-scaled.
+     */
     onScaledDownColourImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: ScaledDownColourImageUnit) => void;
-
+    /**
+     * This callback is triggered when the coloured images is converted to grayscale.
+     */
     onGrayscaleImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: GrayscaleImageUnit) => void;
-
+    /**
+     * This callback is triggered when the grayscale image is transformed (usually this means all the pixels have their colour inverted).
+     */
     onTransformedGrayscaleImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: TransformedGrayscaleImageUnit) => void;
-
+    /**
+     * This callback is triggered when the quality of the grayscale image is enhanced.
+     */
     onEnhancedGrayscaleImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: EnhancedGrayscaleImageUnit) => void;
-
+    /**
+     * This callback is triggered when the grayscale image is binarized.
+     */
     onBinaryImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: BinaryImageUnit) => void;
-
+    /**
+     * This callback is triggered when texture is detected on the image.
+     */
     onTextureDetectionResultUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: TextureDetectionResultUnit) => void;
-
+    /**
+     * This callback is triggered when texture is removed from the grayscale image.
+     */
     onTextureRemovedGrayscaleImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: TextureRemovedGrayscaleImageUnit) => void;
-
+    /**
+     * This callback is triggered when texture is removed from the binary image.
+     */
     onTextureRemovedBinaryImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: TextureRemovedBinaryImageUnit) => void;
-
+    /**
+     * This callback is triggered when contours are found on the image.
+     */
     onContoursUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: ContoursUnit) => void;
-
+    /**
+     * This callback is triggered when line segments are found on the image.
+     */
     onLineSegmentsUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: LineSegmentsUnit) => void;
-
+    /**
+     * This callback is triggered when text zones are found on the image.
+     */
     onTextZonesUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: TextZonesUnit) => void;
-
+    /**
+     * This callback is triggered when an image without text is produced.
+     */
     onTextRemovedBinaryImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         sectionType: EnumSectionType,
         unit: TextRemovedBinaryImageUnit) => void;
-
+    /**
+     * This callback is triggered when long lines are found on the image.
+     */
     onLongLinesUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DDN.IntermediateResult.LongLinesUnit) => void;
-
+    /**
+     * This callback is triggered when corners are found on the image.
+     */
     onCornersUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DDN.IntermediateResult.CornersUnit) => void;
-
+    /**
+     * This callback is triggered when candidate quad edges are found on the image.
+     */
     onCandidateQuadEdgesUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DDN.IntermediateResult.CandidateQuadEdgesUnit) => void;
-
+    /**
+     * This callback is triggered when candidate barcode zones are found on the image.
+     */
     onCandidateBarcodeZonesUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DBR.IntermediateResult.CandidateBarcodeZonesUnit) => void;
-
+    /**
+     * This callback is triggered when the barcode zones are up-scaled for better decoding.
+     */
     onScaledUpBarcodeImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DBR.IntermediateResult.ScaledUpBarcodeImageUnit) => void;
-
+    /**
+     * This callback is triggered when deformation of the barcode zones is corrected.
+     */
     onDeformationResistedBarcodeImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit) => void;
-
+    /**
+     * This callback is triggered when
+     */
     onComplementedBarcodeImageUnitReceived?: (targetROIDefName: string,
         taskName: string,
         unit: DBR.IntermediateResult.ComplementedBarcodeImageUnit) => void;
 }
 ```
 >
-```java
-
-```
->
 ```objc
-
+To-add
 ```
 >
 ```swift
-
+To-add
 ```
 >
 ```python
-
+To-add
 ```
 >
 ```java
-
+To-add
 ```
 >
-```csharp
-
+```c#
+To-add
 ```
 >
 ```c++
-
+To-add
 ```
 >
 ```c
-
+To-add
 ```

@@ -9,7 +9,7 @@ breadcrumbText: Document Normalization
 
 # Section 3 - Document Normalization
 
-Document Normalization is one of the key features of Dynamsoft Document Normalizer (DDN). In this section, the library performs a series of image processing on the target ROI to convert the irregular shaped image into a standard rectangular image.
+Document Normalization is one of the key features of Dynamsoft Document Normalizer (DDN). In this section, the library performs a series of image-processing on the target ROI to convert the irregular shaped image into a standard rectangular image.
 
 ## Main Features
 
