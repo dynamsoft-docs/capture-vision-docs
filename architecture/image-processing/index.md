@@ -76,8 +76,7 @@ The following is a simple demonstration of the sections:
 
 ```mermaid
 flowchart LR;
-     A[1.Region Pre-Detection]-->B[2.1.Shared Detection]
-     B-->C{Specific Tasks}
+     A[1.Region Pre-Detection]-->C[2.1.Shared Detection]
      C---D[2.2.Barcode Localization]
      C---E[2.2.Text-line Localization]
      C---F[2.2.Document Detection]
