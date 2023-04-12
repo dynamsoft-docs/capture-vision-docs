@@ -1,12 +1,30 @@
 ---
 layout: default-layout
-title: Shared Detection Section
-description: This is page about the second section in the Dynamsoft Capture Vision (DCV) Algorithm work flow. 
+title: Shared Detection - Dynamsoft Capture Vision Architecture
+description: This article introduces Shared Detection in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 permalink: /architecture/image-processing/shared-detection.html
 ---
+
+The following diagram shows how sections connect to each other to form tasks:
+
+```mermaid
+flowchart LR;
+     A[1.Region Pre-Detection]-->C[2.1.Shared Detection]
+     C---D[2.2.Barcode Localization]
+     C---E[2.2.Text-line Localization]
+     C---F[2.2.Document Detection]
+     D---G[3.Barcode Decoding]
+     E---H[3.Text-line Recognition]
+     F---I[3.Document Normalization]
+     style C fill:#f96,stroke:#333,stroke-width:4px
+```
+
+In this article, we'll discuss the first section of a task - **Shared Detection**:
+
+# Section 2.1 - Shared Detection
 
 We can roughly divide the algorithmic processing flow of a task into three sections:
 ```mermaid

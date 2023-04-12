@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Intermediate Result
-description: This page introduce how intermediate result is designed in Dynamsoft Capture Vision.
-keywords: document detetion
+title: Intermediate Result - Dynamsoft Capture Vision Architecture
+description: This article introduces Intermediate Result in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
-breadcrumbText: Intermediate Result
+needGenerateH3Content: true
+noTitleIndex: true
+permalink: /architecture/image-processing/intermediate-result.html
 ---
 
 # Intermediate Result

@@ -1,64 +1,51 @@
 ---
 layout: default-layout
-title: Region Predetection Section
-description: This is page about the first section in the Dynamsoft Capture Vision (DCV) Algorithm work flow. 
+title: Region-Predetection Section - Dynamsoft Capture Vision Architecture
+description: This article introduces Region-Predetection Section in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 permalink: /architecture/image-processing/region-predetection.html
 ---
 
-# Section One - Region Pre-Detection
-
-The following shows how sections connect to each other to form tasks:
+The following diagram shows how sections connect to each other to form tasks:
 
 ```mermaid
 flowchart LR;
-     A[1.Region Pre-Detection]-->B[2.1.Shared Detection]
-     B-->C{Specific Tasks}
+     A[1.Region Pre-Detection]-->C[2.1.Shared Detection]
      C---D[2.2.Barcode Localization]
      C---E[2.2.Text-line Localization]
      C---F[2.2.Document Detection]
-     C---D[3.Barcode Decoding]
-     C---E[3.Text-line Recognition]
-     C---F[3.Document Normalization]
+     D---G[3.Barcode Decoding]
+     E---H[3.Text-line Recognition]
+     F---I[3.Document Normalization]
      style A fill:#f96,stroke:#333,stroke-width:4px
 ```
 
 In this article, we'll discuss the first section of a task - **Region Pre-Detection**:
 
-## Section 1 - Region Predetection
+# Section One - Region Pre-Detection
 
-There is a fixed and most complete set of workflow in Section1, which ensures that the results of Section1 can be successfully produced.
+The purpose of this section is to reduce the time cost by scaling down or finding out regions of interest (ROIs). It is not indispensable for follow-up sections but would be helpful for some extreme cases.
 
-This section begins with an image from [image source Adapter (ISA)](). Then there are some optional stages to convert the original image to a grayscale image. Whether and how these is all determined by the specific parameter configuration of the Dynamsoft Capture Vision (DCV) template. Table 1 lists these parameters and their respective design intents.
+## Constituting Stages
 
-Table 1 – Configurable Parameters in Section 1
+This section consists of multiple stages which forms a fixed and relatively complete set of workflow:
 
-| **Parameter Name** | **Functionality** | **Status** |
-| ------------------ | ---------------------------- | ---------- |
-| [`ScaleDownThreshold`]() | To speed up when the input image size is large. | Available |
-| [`ColourConversionModes`]() | To set the conversion from colour to grayscale, which keeps or enhances the features of the region of interest. | Available, Extensible |
-| [`GrayscaleTransformationModes`]() | To emphasize the features of regions of interest with processing of the grayscale image. | Available, Extensible |
-| [`RegionPredetectionModes`]() | To limit the subsequent process sections in certain areas up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible |
+1. Cropping: to crop out the original ROI *specified* by the user. If not specified, return the original image as a whole.
+2. Down-scaling: to down-scale a massive image.
+3. Grayscaling: to convert a colour image to grayscale.
+4. Transforming: to transform a grayscale image.
+5. Pre-Detecting: to pre-detect the regions exhibit specific features.
 
+## Output and Parameters
 
+Each of the five stages has its own output (known as an intermediate result) and a specific parameter that can regulate the operation:
 
-## Input and Output in Region Predetection
-
-images and a set/sets of coordinates representing the ROIs results.
-
-
-## Intermediate Results in Region Predetection
-The processing of this section may produce some intermediate results, and the full set of these intermediate results is listed below.
-| **Name** | **Data Type** | **Notes** | **Related Parameter** |
-| ------------------ | ---------------------------- | ---------- | --- |
-| [`Colour Image unit`]() | image | The original input images. | N/A |
-| [`Down-scaled colour image unit`]() | image | The scaled down colour images. | `ScaleDownThreshold` |
-| [`Grayscale image unit`]() | image | The gray scale images. | `ColourConversionModes` |
-| [`Transformed grayscale image unit`]() | image | The colour inverted gray scale images. | `GrayscaleTransformationModes` |
-| [`Predetected regions unit`]() | coordinates of quadrilateral(s) | The coordinates of detected ROIs | `RegionPredetectionModes` |
-
-
-As mentioned above, the focus of this section is to reduce the time cost by scaling down or finding out ROIs. It is not essential for follow-up sections but would be helpful for some extreme cases.
- 
+| Stage Name    | Intermediate Result Type           | Related Parameter                                                                                               |
+| ------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Cropping      | `IRUT_COLOUR_IMAGE`                | [`Location`](../../parameters/reference/target-roi-def/location.md)                                             |
+| Down-scaling  | `IRUT_SCALED_DOWN_COLOUR_IMAGE`    | [`ScaleDownThreshold`](../../parameters/reference/image-parameter/scale-down-threshold.md)                      |
+| Grayscaling   | `IRUT_GRAYSCALE_IMAGE`             | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                |
+| Transforming  | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE` | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/gray-scale-transformation-modes.md) |
+| Pre-Detecting | `IRUT_PREDETECTED_REGIONS`         | [`RegionPredetectionModes`](../../parameters/reference/image-parameter/region-predetection-modes.md)            |
