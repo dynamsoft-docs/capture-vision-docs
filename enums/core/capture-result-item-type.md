@@ -6,6 +6,7 @@ Keywords: Captured result types
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+breadcrumbText: CapturedResultItemType
 ---
 
 # Enumeration CapturedResultItemType

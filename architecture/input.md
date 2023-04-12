@@ -85,28 +85,29 @@ reader.updateRuntimeSettings(settings);
 ```
 >
 ```objc
-NSError* err = nil;
-// Obtain current runtime settings of `reader` instance.
-iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-[reader updateRuntimeSettings:settings error:&err];
+@property(nonatomic, strong) DSCaptureVisionRouter *cvr;
+@property(nonatomic, strong) DSCameraEnhancer *dce;
+@property(nonatomic, strong) DSCameraView *dceView;
+-(void)configurationDCV{
+   _dceView = [DSCameraView cameraWithFrame:self.view.bounds];
+   [self.view addSubview:_dceView];
+   _dce = [[DSCameraEnhancer alloc] initWithView:_dceView];
+   _cvr = [[DSCaptureVisionRouter alloc] init];
+   [_cvr setInput:_dce];
+}
 ```
 >
 ```swift
-// Obtain current runtime settings of `barcodeReader` instance.
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.region.regionTop = 10
-settings?.region.regionBottom = 90
-settings?.region.regionLeft = 10
-settings?.region.regionRight = 90
-settings?.region.regionMeasuredByPercentage = 1
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
+var dce:CameraEnhancer!
+var dceView:CameraView!
+var cvr:CaptureVisionRouter!
+func configurationDCV(){
+   dceView = CameraView.init(frame: self.view.bounds)
+   self.view.addSubview(dceView)
+   dce = CameraEnhancer.init(view: dceView)
+   cvr = CaptureVisionRouter.init()
+   cvr.setInput(dce)
+}
 ```
 
 ### Directory Fetcher
@@ -125,41 +126,12 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
    >
 >
 ```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
-// Update the settings.
-reader.updateRuntimeSettings(settings);
 ```
 >
 ```objc
-NSError* err = nil;
-// Obtain current runtime settings of `reader` instance.
-iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-[reader updateRuntimeSettings:settings error:&err];
 ```
 >
 ```swift
-// Obtain current runtime settings of `barcodeReader` instance.
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.region.regionTop = 10
-settings?.region.regionBottom = 90
-settings?.region.regionLeft = 10
-settings?.region.regionRight = 90
-settings?.region.regionMeasuredByPercentage = 1
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 >
 ```python
@@ -294,31 +266,105 @@ abstract class ImageSourceAdapter {
      * Determines whether the buffer is empty.
      */
     isBufferEmpty: () => boolean;
+}
 ```
 >
 ```objc
-NSError* err = nil;
-// Obtain current runtime settings of `reader` instance.
-iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-[reader updateRuntimeSettings:settings error:&err];
+@interface DSImageSourceAdapter
+/** Defines whether there remains image from the source. If hasNextImageToFetch is false. */
+@property (nonatomic, assign) BOOL hasNextImageToFetch;
+/** Start fetching images from the source to the VideoBuffer of ImageSourceAdapter. */
+- (void) startFetching;
+/** Stop fetching images from the source to the VideoBuffer of ImageSourceAdapter. */
+- (void) stopFetching;
+/**
+ * Get an image from the VideoBuffer. Dynamsoft Capture Vision will trigger this method to obtain new image.
+ * 
+ * @param [in] removeFromBuffer Whether to remove the image from the VideoBuffer.
+ * @return An object of DSImageData.
+ *     If an image is set as the "next image" by method setNextImageToReturn, return that image.
+ *     If no image is set as the "next image", return the latest image.
+ */
+- (DSImageData *_Nullable)getImage:(BOOL)removeFromBuffer;
+/** The property defines the maximum capability of the VideoBuffer an image from the VideoBuffer. */
+@property (nonatomic, assign) NSUInteger maxImageCount;
+/** The property overflow protection mode of the VideoBuffer. You can either block the VideoBuffer or push out the oldest image and append a new one. */
+@property (nonatomic, assign) DSBufferOverflowProtectionMode bufferOverflowProtectionMode;
+/**
+ * Specify the next image that is returned by method getImage.
+ * 
+ * @param [in] imageId The imageId of image you want to set as the "next image".
+ * @param [in] keepInBuffer Set this value to true so that the "next image" is protected from being pushed out before is it returned by method getImage.
+ * @return A BOOL value that indicates whether the specified image is successfully set as the "next image".
+ */
+- (BOOL) setNextImageToReturn(NSInteger)imageId keepInBuffer(BOOL)keepInBuffer;
+/**
+ * Check the availability of the specified image.
+ * 
+ * @param [in] imageId The imageId of image you want to check the availability.
+ * @return A BOOL value that indicates whether the specified image is found in the video buffer.
+ */
+- (BOOL) hasImage(NSInteger)imageId;
+/** The property defines current image count in the VideoBuffer. */
+@property (nonatomic, assign) NSUInteger imageCount;
+/** The read only property defines whether the VideoBuffer is empty. */
+@property (nonatomic, assign, readonly, getter=isBufferEmpty) BOOL bufferEmpty;//
+/**
+ * Append an image to the buffer.
+ * 
+ * @param [in] image An DSImageData object.
+ */
+- (void) addImageToBuffer:(DSImageData*)image;
+@end
 ```
 >
 ```swift
-// Obtain current runtime settings of `barcodeReader` instance.
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.region.regionTop = 10
-settings?.region.regionBottom = 90
-settings?.region.regionLeft = 10
-settings?.region.regionRight = 90
-settings?.region.regionMeasuredByPercentage = 1
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
+class ImageSourceAdapter: NSObject{
+   /** Defines whether there remains image from the source. If hasNextImageToFetch is false. */
+   var hasNextImageToFetch: Bool {get set}
+   /** Start fetching images from the source to the VideoBuffer of ImageSourceAdapter. */
+   func startFetching()
+   /** Stop fetching images from the source to the VideoBuffer of ImageSourceAdapter. */
+   func stopFetching()
+   /**
+    * Get an image from the VideoBuffer. Dynamsoft Capture Vision will trigger this method to obtain new image.
+    *
+    * @param [in] removeFromBuffer Whether to remove the image from the VideoBuffer.
+    * @return An object of DSImageData.
+    *     If an image is set as the "next image" by method setNextImageToReturn, return that image.
+    *     If no image is set as the "next image", return the latest image.
+    */
+   func getImage(_ removeFromBuffer: Bool) -> ImageData
+   /** The property defines the maximum capability of the VideoBuffer an image from the VideoBuffer. */
+   var maxImageCount: Int { get set }
+   /** The property overflow protection mode of the VideoBuffer. You can either block the VideoBuffer or push out the oldest image and append a new one. */
+   var bufferOverflowProtectionMode: BufferOverflowProtectionMode { get set }
+   /**
+    * Specify the next image that is returned by method getImage.
+    *
+    * @param [in] imageId The imageId of image you want to set as the "next image".
+    * @param [in] keepInBuffer Set this value to true so that the "next image" is protected from being pushed out before is it returned by method getImage.
+    * @return A BOOL value that indicates whether the specified image is successfully set as the "next image".
+    */
+   func setNextImageToReturn(_ imageId: Int, keepInBuffer: Bool) -> Bool
+   /**
+    * Check the availability of the specified image.
+    *
+    * @param [in] imageId The imageId of image you want to check the availability.
+    * @return A BOOL value that indicates whether the specified image is found in the video buffer.
+    */
+   func hasImage(_ imageId: Int) -> Bool
+   /** The property defines current image count in the VideoBuffer. */
+   var imageCount: Int { get set }
+   /** The read only property defines whether the VideoBuffer is empty. */
+   var bufferEmpty: Bool { get(isBufferEmpty) set }
+   /**
+    * Append an image to the buffer.
+    *
+    * @param [in] image An DSImageData object.
+    */
+   func addImageToBuffer(_ image: ImageData)
+}
 ```
 >
 ```python

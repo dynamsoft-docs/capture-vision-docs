@@ -85,13 +85,60 @@ interface CapturedResultReceiver {
 }
 ```
 >```java
-
+public interface CapturedResultReceiver {
+   /* The callback that contains all results. */
+   default void onCapturedResultReceived(CapturedResult result);
+   /* The callback that contains only the original raw image. */
+   default void onRawImageResultReceived(RawImageResultItem result);
+   /* The callback that contains all barcode text found on the image. */
+   default void onDecodedBarcodesReceived(DecodedBarcodesResult result);
+   /* The callback that contains all text lines found on the image. */
+   default void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
+   /* The callback that contains all document boundaries found on the image. */
+   default void onDetectedQuadsReceived(DetectedQuadsResult result);
+   /* The callback that contains all normalized images. */
+   default void onNormalizedImagesReceived(NormalizedImagesResult result);
+   /* The callback that contains data tables parsed from barcode text or text line(s) on the image. */
+   default void onParsedResultsReceived(ParsedResult result);
+}
 ```
 >```objc
-
+@protocol DSCapturedResultReceiver <NSObject>
+@required
+/* The callback that contains all results. */
+- (void)onCapturedResultReceived:(DSCapturedResult*)result;
+@optional
+/* The callback that contains only the original raw image. */
+- (void)onRawImageResultReceived:(DSRawImageResultItem*)result;
+/* The callback that contains all barcode text found on the image. */
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult*)result;
+/* The callback that contains all text lines found on the image. */
+- (void)onRecognizedTextLinesReceived:(DSRecognizedTextLinesResult*)result;
+/* The callback that contains all document boundaries found on the image. */
+- (void)onDetectedQuadsReceived:(DSDetectedQuadsResult*)result;
+/* The callback that contains all normalized images. */
+- (void)onNormalizedImagesReceived:(DSNormalizedImagesResult*)result;
+/* The callback that contains data tables parsed from barcode text or text line(s) on the image. */
+- (void)onParsedResultsReceived:(DSParsedResult*)result;
+@end
 ```
 >```swift
-
+protocol IntermediateResultReceiver{
+   /* The callback that contains all results. */
+   func onCapturedResultReceived(_ result: CapturedResult)
+   /* The callback that contains only the original raw image. */
+   func onRawImageResultReceived(_ result: RawImageResultItem)
+   /* The callback that contains all barcode text found on the image. */
+   func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
+   /* The callback that contains all text lines found on the image. */
+   func onRecognizedTextLinesReceived(_ result: RecognizedTextLinesResult)
+   /* The callback that contains all document boundaries found on the image. */
+   func onDetectedQuadsReceived(_ result: DetectedQuadsResult)
+   /* The callback that contains all normalized images. */
+   func onNormalizedImagesReceived(_ result: NormalizedImagesResult)
+   /* The callback that contains data tables parsed from barcode text or text line(s) on the image. */
+   func onParsedResultsReceived(_ result: ParsedResult)
+}
 ```
 >```python
 
@@ -287,15 +334,288 @@ interface IntermediateResultReceiver {
 ```
 >
 ```java
-
+public interface IntermediateResultReceiver {
+    default void onPredetectedRegionsReceived(String targetROIDefName, 
+    String taskName, 
+    PredetectedRegionsUnit unit);
+    default void onLocalizedBarcodesReceived(String targetROIDefName, 
+    String taskName, 
+    LocalizedBarcodesUnit unit);
+    default void onDecodedBarcodesReceived(String targetROIDefName, 
+    String taskName, 
+    DecodedBarcodesUnit unit);
+    default void onLocalizedTextLinesReceived(String targetROIDefName, 
+    String taskName, 
+    LocalizedBarcodesUnit unit);
+    default void onRecognizedTextLinesReceived(String targetROIDefName, 
+    String taskName, 
+    RecognizedTextLinesUnit unit);
+    default void onDetectedQuadsReceived(String targetROIDefName, 
+    String taskName, 
+    DetectedQuadsUnit unit);
+    default void onNormalizedImagesReceived(String targetROIDefName, 
+    String taskName, 
+    NormalizedImageUnit unit);
+    default void onColourImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    ColourImageUnit unit);
+    default void onScaledDownColourImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    ScaledDownColourImageUnit unit);
+    default void onGrayscaleImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    GrayscaleImageUnit unit);
+    default void onTransformedGrayscaleImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    TransformedGrayscaleImageUnit unit);
+    default void onEnhancedGrayscaleImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    EnhancedGrayscaleImageUnit unit);
+    default void onBinaryImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    BinaryImageUnit unit);
+    default void onTextureDetectionResultUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    TextureDetectionResultUnit unit);
+    default void onTextureRemovedGrayscaleImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    TextureRemovedGrayscaleImageUnit unit);
+    default void onTextureRemovedBinaryImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    TextureRemovedBinaryImageUnit unit);
+    default void onContoursUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    ContoursUnit unit);
+    default void onLineSegmentsUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    LineSegmentsUnit unit);
+    default void onTextZonesUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType, 
+    TextZonesUnit unit);
+    default void onTextRemovedBinaryImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    SectionType sectionType,
+    TextRemovedBinaryImageUnit unit);
+    default void onLongLinesUnitReceived(String targetROIDefName, 
+    String taskName, 
+    LongLinesUnit unit);
+    default void onCornersUnitReceived(String targetROIDefName, 
+    String taskName, 
+    CornersUnit unit);
+    default void onCandidateQuadEdgesUnitReceived(String targetROIDefName, 
+    String taskName, 
+    CandidateQuadEdgesUnit unit);
+    default void onCandidateBarcodeZonesUnitReceived(String targetROIDefName, 
+    String taskName, 
+    CandidateBarcodeZonesUnit unit);
+    default void onScaledUpBarcodeImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    ScaledUpBarcodeImageUnit unit);
+    default void onDeformationResistedBarcodeImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    DeformationResistedBarcodeImageUnit unit);
+    default void onComplementedBarcodeImageUnitReceived(String targetROIDefName, 
+    String taskName, 
+    ComplementedBarcodeImageUnit unit);
+}
 ```
 >
 ```objc
-
+@protocol DSIntermediateResultReceiver <NSObject>
+@optional
+/** Receive colour images when they are output by the library. */
+- (void)onColourImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSColourImageUnit*) unit;
+/** Receive scaled down colour images when they are output by the library. */
+- (void)onScaledDownColourImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSScaledDownColourImageUnit*) unit;
+/** Receive grayscale image when they are output by the library. */
+- (void)onGrayscaleImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSGrayscaleImageUnit*) unit;
+/** Receive transformed grayscale (colour inverted) image when they are output by the library. */
+- (void)onTransformedGrayscaleImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSTransformedGrayscaleImageUnit*) unit;
+/** Receive predetected region when they are output by the library. */
+- (void)onPredetectedRegionsReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSPredetectedRegionsUnit*) unit;
+/** Receive enhanced grayscale image when they are output by the library. */
+- (void)onEnhancedGrayscaleImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSEnhancedGrayscaleImageUnit*) unit;
+/** Receive binary image when they are output by the library. */
+- (void)onBinaryImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSBinaryImageUnit*) unit;
+/** Receive texture detection result when they are output by the library. */
+- (void)onTextureDetectionResultUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSTextureDetectionResultUnit*) unit;
+/** Receive grayscale image without texture when they are output by the library. */
+- (void)onTextureRemovedGrayscaleImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSTextureRemovedGrayscaleImageUnit*) unit;
+/** Receive binary image without texture when they are output by the library. */
+- (void)onTextureRemovedBinaryImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSTextureRemovedBinaryImageUnit*) unit;
+/** Receive binary image without text when they are output by the library. */
+- (void)onTextRemovedBinaryImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType
+    unit:(DSTextRemovedBinaryImageUnit*) unit;
+/** Receive contours when they are detected by the library. */
+- (void)onContoursUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSContoursUnit*) unit;
+/** Receive line segments when they are detected by the library. */
+- (void)onLineSegmentsUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSLineSegmentsUnit*) unit;
+/** Receive the quadrilaterals of canditate barcode zones when they are detected by the library. */
+- (void)onCandidateBarcodeZonesUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName
+    unit:(DSCandidateBarcodeZonesUnit *) unit;
+/** Receive the localization results of the barcodes when they are detected by the library. */
+- (void)onLocalizedBarcodesReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSLocalizedBarcodesUnit *) unit;
+/** Receive scaled up images of the barcodes when barcode zones are scaled up. */
+- (void)onScaledUpBarcodeImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSScaledUpBarcodeImageUnit *) unit;
+/** Receive images of the barcodes when deformed barcode zones are resisted. */
+- (void)onDeformationResistedBarcodeImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSDeformationResistedBarcodeImageUnit *) unit;
+/** Receive images of the barcodes when incompleted barcode zones are completed. */
+- (void)onComplementedBarcodeImageUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSComplementedBarcodeImageUnit *) unit;
+/** Receive DSDecodedBarcodesUnit when barcodes are decoded. */
+- (void)onDecodedBarcodesReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSDecodedBarcodesUnit *) unit;
+/** Receive text zones info when they are located. */
+- (void)onTextZonesUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    sectiontype:(DSSectionType) sectionType 
+    unit:(DSTextZonesUnit*) unit;
+/** Receive text lines info when they are located. */
+- (void)onLocalizedTextLinesReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSLocalizedTextLinesUnit *) unit;
+/** Receive text line info when they are recognized. */
+- (void)onRecognizedTextLinesReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSRecognizedTextLinesUnit *) unit;
+/** Receive long line units when they are detected. Based on the long lines, the library can find the corners of the quadrilateral. */
+- (void)onLongLinesUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSLongLinesUnit *) unit;
+/** Receive corners unit when they are detected. Based on the corners, the library can find the edges of the quadrilateral. */
+- (void)onCornersUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSCornersUnit *) unit;
+/** Receive quad edges unit when they are detected. Based on the edges, the library can finally confirm the vertex coordinates of the quadrilateral. */
+- (void)onCandidateQuadEdgesUnitReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSCandidateQuadEdgesUnit *) unit;
+/** Receive detected quadrilaterals when they are detected. */
+- (void)onDetectedQuadsReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSDetectedQuadsUnit *) unit;
+/** Receive normalized images when they are output. */
+- (void)onNormalizedImagesReceived:(NSString*) targetROIDefName 
+    taskName:(NSString*) taskName 
+    unit:(DSNormalizedImageUnit *) unit;
+@end
 ```
 >
 ```swift
-
+protocol IntermediateResultReceiver{
+   /** Receive colour images when they are output by the library. */
+   func onColourImageUnitReceived(_ targetROIDefName: String, taskName:string,    sectionType: SectionType, unit: ColourImageUnit)
+   /** Receive scaled down colour images when they are output by the library. */
+   func onScaledDownColourImageUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: ScaledDownColourImageUnit)
+   /** Receive grayscale image when they are output by the library. */
+   func onGrayscaleImageUnitReceived(_ targetROIDefName: String, taskName:string,    sectionType: SectionType, unit: GrayscaleImageUnit)
+   /** Receive transformed grayscale (colour inverted) image when they are output by    the library. */
+   func onTransformedGrayscaleImageUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: TransformedGrayscaleImageUnit)
+   /** Receive predetected region when they are output by the library. */
+   func onPredetectedRegionsReceived(_ targetROIDefName: String, taskName:string, unit:    PredetectedRegionsUnit)
+   /** Receive enhanced grayscale image when they are output by the library. */
+   func onEnhancedGrayscaleImageUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: EnhancedGrayscaleImageUnit)
+   /** Receive binary image when they are output by the library. */
+   func onBinaryImageUnitReceived(_ targetROIDefName: String, taskName:string,    sectionType: SectionType, unit: BinaryImageUnit)
+   /** Receive texture detection result when they are output by the library. */
+   func onTextureDetectionResultUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: TextureDetectionResultUnit)
+   /** Receive grayscale image without texture when they are output by the library. */
+   func onTextureRemovedGrayscaleImageUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: TextureRemovedGrayscaleImageUnit)
+   /** Receive binary image without texture when they are output by the library. */
+   func onTextureRemovedBinaryImageUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: TextureRemovedBinaryImageUnit)
+   /** Receive binary image without text when they are output by the library. */
+   func onTextRemovedBinaryImageUnitReceived(_ targetROIDefName: String,    taskName:string, sectionType: SectionType, unit: TextRemovedBinaryImageUnit)
+   /** Receive contours when they are detected by the library. */
+   func onContoursUnitReceived(_ targetROIDefName: String, taskName:string,    sectionType: SectionType, unit: ContoursUnit)
+   /** Receive line segments when they are detected by the library. */
+   func onLineSegmentsUnitReceived(_ targetROIDefName: String, taskName:string,    sectionType: SectionType, unit: LineSegmentsUnit)
+   /** Receive the quadrilaterals of canditate barcode zones when they are detected by    the library. */
+   func onCandidateBarcodeZonesUnitReceived(_ targetROIDefName: String,    taskName:string, unit: CandidateBarcodeZonesUnit)
+   /** Receive the localization results of the barcodes when they are detected by the    library. */
+   func onLocalizedBarcodesReceived(_ targetROIDefName: String, taskName:string, unit:    LocalizedBarcodesUnit)
+   /** Receive scaled up images of the barcodes when barcode zones are scaled up. */
+   func onScaledUpBarcodeImageUnitReceived(_ targetROIDefName: String, taskName:string,    unit: ScaledUpBarcodeImageUnit)
+   /** Receive images of the barcodes when deformed barcode zones are resisted. */
+   func onDeformationResistedBarcodeImageUnitReceived(_ targetROIDefName: String,    taskName:string, unit: DeformationResistedBarcodeImageUnit)
+   /** Receive images of the barcodes when incompleted barcode zones are completed. */
+   func onComplementedBarcodeImageUnitReceived(_ targetROIDefName: String,    taskName:string, unit: ComplementedBarcodeImageUnit)
+   /** Receive DSDecodedBarcodesUnit when barcodes are decoded. */
+   func onDecodedBarcodesReceived(_ targetROIDefName: String, taskName:string, unit:    DecodedBarcodesUnit)
+   /** Receive text zones info when they are located. */
+   func onTextZonesUnitReceived(_ targetROIDefName: String, taskName:string,    sectionType: SectionType, unit: TextZonesUnit)
+   /** Receive text lines info when they are located. */
+   func onLocalizedTextLinesReceived(_ targetROIDefName: String, taskName:string, unit:    LocalizedTextLinesUnit)
+   /** Receive text line info when they are recognized. */
+   func onRecognizedTextLinesReceived(_ targetROIDefName: String, taskName:string,    unit: RecognizedTextLinesUnit)
+   /** Receive long line units when they are detected. Based on the long lines, the    library can find the corners of the quadrilateral. */
+   func onLongLinesUnitReceived(_ targetROIDefName: String, taskName:string, unit:    LongLinesUnit)
+   /** Receive corners unit when they are detected. Based on the corners, the library    can find the edges of the quadrilateral. */
+   func onCornersUnitReceived(_ targetROIDefName: String, taskName:string, unit:    CornersUnit)
+   /** Receive quad edges unit when they are detected. Based on the edges, the library    can finally confirm the vertex coordinates of the quadrilateral. */
+   func onCandidateQuadEdgesUnitReceived(_ targetROIDefName: String, taskName:string,    unit: CandidateQuadEdgesUnit)
+   /** Receive detected quadrilaterals when they are detected. */
+   func onDetectedQuadsReceived(_ targetROIDefName: String, taskName:string, unit:    DetectedQuadsUnit)
+   /** Receive normalized images when they are output. */
+   func onNormalizedImagesReceived(_ targetROIDefName: String, taskName:string, unit: NormalizedImageUnit)
+}
 ```
 >
 ```python

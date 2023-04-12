@@ -2,10 +2,11 @@
 layout: default-layout
 Title: ErrorCode - Dynamsoft Core Enumerations
 Description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
-Keywords: Captured result types
+Keywords: Error code
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+breadcrumbText: ErrorCode
 ---
 
 # Enumeration ErrorCode
