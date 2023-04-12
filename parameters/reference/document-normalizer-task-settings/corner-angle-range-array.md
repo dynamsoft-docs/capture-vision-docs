@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-Title: CornerAngleRangeArray - Dynamsoft Document Normalizer Parameters
-Description: The parameter CornerAngleRangeArray of Dynamsoft Document Normalizer is XXX.
+Title: ConrnerAngleRangeArray - Dynamsoft Document Normalizer Parameters
+Description: The parameter ConrnerAngleRangeArray of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# CornerAngleRangeArray
+# ConrnerAngleRangeArray
 
-`CornerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
+`ConrnerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
 
 ```json
 {
-    "CornerAngleRangeArray":
+    "ConrnerAngleRangeArray":
     [
         {
             "MinValue": 70,
@@ -23,7 +23,7 @@ noTitleIndex: true
 }
 ```
 
-`CornerAngleRangeArray` consist one or more angle range objects. Each object contains a maximum and a minimum value of the angle.
+`ConrnerAngleRangeArray` consist one or more angle range objects. Each object contains a maximum and a minimum value of the angle.
 
 <table style = "text-align:left">
     <tr>

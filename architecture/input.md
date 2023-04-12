@@ -12,9 +12,11 @@ permalink: /architecture/input.html
 
 # Input
 
+![DCV Architecture](assets/dcv-architecture-input.png)
+
 In the Dynamsoft Capture Vision (DCV) architecture, "input" is what supplies the images to be processed, and we usually call it "the image source".
 
-An image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter).
+An image source refers to an object that has implemented the [Image Source Adapter (ISA)](input.md#image-source-adapter) interface.
 
 ## Image Source Adapter
 
@@ -67,22 +69,49 @@ As it has implemented the ISA interface, we can directly use it as an image sour
 let captureVisionRouter = Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let cameraEnhancer = Dynamsoft.DCE.CameraEnhancer.createInstance();
 captureVisionRouter.setInput(cameraEnhancer);
-//...
 ```
->```java
-
+>
+```java
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
 ```
->```objc
-
+>
+```objc
+NSError* err = nil;
+// Obtain current runtime settings of `reader` instance.
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+[reader updateRuntimeSettings:settings error:&err];
 ```
->```swift
-
+>
+```swift
+// Obtain current runtime settings of `barcodeReader` instance.
+let settings = try? barcodeReader.getRuntimeSettings()
+settings?.region.regionTop = 10
+settings?.region.regionBottom = 90
+settings?.region.regionLeft = 10
+settings?.region.regionRight = 90
+settings?.region.regionMeasuredByPercentage = 1
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 ### Directory Fetcher
 
-Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enables users to do simulate an directory containing images as an image source. For example:
-
+Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enables users to simulate a directory containing images as an image source. For example:
 
 <div class="sample-code-prefix template2"></div>
    >- Android
@@ -96,39 +125,111 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
    >
 >
 ```java
-
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
 ```
 >
 ```objc
-
+NSError* err = nil;
+// Obtain current runtime settings of `reader` instance.
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+[reader updateRuntimeSettings:settings error:&err];
 ```
 >
 ```swift
-
+// Obtain current runtime settings of `barcodeReader` instance.
+let settings = try? barcodeReader.getRuntimeSettings()
+settings?.region.regionTop = 10
+settings?.region.regionBottom = 90
+settings?.region.regionLeft = 10
+settings?.region.regionRight = 90
+settings?.region.regionMeasuredByPercentage = 1
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
->```python
-
+>
+```python
+# Obtain current runtime settings of `reader` instance.
+settings = reader.get_runtime_settings()
+settings.region.region_top = 10
+settings.region.region_bottom = 90
+settings.region.region_left = 10
+settings.region.region_right = 90
+settings.region.region_measured_by_percentage = 1
+# Update the settings.
+reader.update_runtime_settings(settings)
 ```
 >
 ```java
-
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
 ```
 >
-```csharp
-
+```c#
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+settings.Region.RegionTop = 10;
+settings.Region.RegionBottom = 90;
+settings.Region.RegionLeft = 10;
+settings.Region.RegionRight = 90;
+settings.Region.RegionMeasuredByPercentage = 1;
+// Update the settings.
+reader.UpdateRuntimeSettings(settings);
 ```
 >
 ```c++
-
+PublicRuntimeSettings settings;
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `reader` instance.
+reader.GetRuntimeSettings(&settings);
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 ```
 >
 ```c
-
+PublicRuntimeSettings settings;
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `reader` instance.
+DBR_GetRuntimeSettings(reader, &settings);
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
 
 ### Custom Implementation
 
-An ISA implementation requires more than ten methods, which is not easy to do. Therefore Dynamsoft provides a base class to help developers build their own:
+An ISA implementation requires more than ten methods, which is not easy to do. Therefore, Dynamsoft provides a base class to help developers build their own. Check out the definition of the class for more information:
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -147,14 +248,13 @@ abstract class ImageSourceAdapter {
     constructor() { };
     /**
      * User has to implement this method themselves.
-     * The default behavior may have a useless return?
      */
     abstract hasNextImageToFetch: () => boolean;
     /**
      * Add images (of the type DSImageData) to the buffer.
      * This method will check if _isfetchingStarted is true. If not, it will refuse to add the image to buffer
      */
-    addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void; // The image data should be stored in a format that the algorithm can use directly, say in mat
+    addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
     /**
      * Returns a buffered image.
      * @param removeFromBuffer Whether ISA should remove the image from Buffer after it is returned. `true` by default
@@ -194,30 +294,94 @@ abstract class ImageSourceAdapter {
      * Determines whether the buffer is empty.
      */
     isBufferEmpty: () => boolean;
-}
 ```
->```java
-
+>
+```objc
+NSError* err = nil;
+// Obtain current runtime settings of `reader` instance.
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+[reader updateRuntimeSettings:settings error:&err];
 ```
->```objc
-
+>
+```swift
+// Obtain current runtime settings of `barcodeReader` instance.
+let settings = try? barcodeReader.getRuntimeSettings()
+settings?.region.regionTop = 10
+settings?.region.regionBottom = 90
+settings?.region.regionLeft = 10
+settings?.region.regionRight = 90
+settings?.region.regionMeasuredByPercentage = 1
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
->```swift
-
+>
+```python
+# Obtain current runtime settings of `reader` instance.
+settings = reader.get_runtime_settings()
+settings.region.region_top = 10
+settings.region.region_bottom = 90
+settings.region.region_left = 10
+settings.region.region_right = 90
+settings.region.region_measured_by_percentage = 1
+# Update the settings.
+reader.update_runtime_settings(settings)
 ```
->```python
-
+>
+```java
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
 ```
->```java
-
+>
+```c#
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+settings.Region.RegionTop = 10;
+settings.Region.RegionBottom = 90;
+settings.Region.RegionLeft = 10;
+settings.Region.RegionRight = 90;
+settings.Region.RegionMeasuredByPercentage = 1;
+// Update the settings.
+reader.UpdateRuntimeSettings(settings);
 ```
->```csharp
-
+>
+```c++
+PublicRuntimeSettings settings;
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `reader` instance.
+reader.GetRuntimeSettings(&settings);
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 ```
->```c++
-
+>
+```c
+PublicRuntimeSettings settings;
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `reader` instance.
+DBR_GetRuntimeSettings(reader, &settings);
+settings.region.regionTop = 10;
+settings.region.regionBottom = 90;
+settings.region.regionLeft = 10;
+settings.region.regionRight = 90;
+settings.region.regionMeasuredByPercentage = 1;
+// Update the settings.
+DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
->```c
-
-```
-
