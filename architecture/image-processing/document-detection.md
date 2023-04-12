@@ -1,11 +1,28 @@
 ---
 layout: default-layout
-title: Document Detection
-description: This page describes how document detection is architected in Dynamsoft Capture Vision.
-keywords: document detetion
+title: Document Detection Section - Dynamsoft Capture Vision Architecture
+description: This article introduces Document Detection Section in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
-breadcrumbText: Document Detection
+needGenerateH3Content: true
+noTitleIndex: true
+permalink: /architecture/image-processing/document-detection.html
 ---
+
+The following diagram shows how sections connect to each other to form tasks:
+
+```mermaid
+flowchart LR;
+     A[1.Region Pre-Detection]-->C[2.1.Shared Detection]
+     C---D[2.2.Barcode Localization]
+     C---E[2.2.Text-line Localization]
+     C---F[2.2.Document Detection]
+     D---G[3.Barcode Decoding]
+     E---H[3.Text-line Recognition]
+     F---I[3.Document Normalization]
+     style G fill:#f96,stroke:#333,stroke-width:4px
+```
+
+In this article, we'll discuss the first section of a task - **Document Detection**:
 
 # Section 2.2 - Document Detection
 

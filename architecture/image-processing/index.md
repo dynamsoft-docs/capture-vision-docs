@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Image-Processing Tasks - Dynamsoft Capture Vision
+title: Image-Processing Tasks - Dynamsoft Capture Vision Architecture
 description: This article introduces all image-processing tasks in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
