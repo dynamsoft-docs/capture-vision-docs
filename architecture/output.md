@@ -45,11 +45,7 @@ The CRR interface consists of
    >- Android
    >- Objective-C
    >- Swift
-   >- Python
-   >- Java
-   >- C#
    >- C++
-   >- C
    >
 >
 ```javascript
@@ -142,25 +138,45 @@ protocol IntermediateResultReceiver{
 }
 ```
 >
-```python
-To-add
->>>>>>> de3e7ed6ee42b6ef071ce725bd057d1f88e9bb46
-```
->
-```java
-To-add
-```
->
-```c#
-To-add
-```
->
 ```c++
-To-add
-```
->
-```c
-To-add
+class CVR_API CCapturedResultReceiver
+{
+protected:
+    unsigned int observedResultItemTypes;
+public:
+    CCapturedResultReceiver();
+    virtual ~CCapturedResultReceiver();
+    unsigned int GetObservedResultItemTypes();
+    /**
+     * All results found on the image are returned through this callback.
+     * This callback is always triggered.
+     */
+    virtual void OnCapturedResultReceived(const CCapturedResult* pResult);
+    /**
+     * This callback is only triggered when the raw or original image is set to be returned.
+     */
+    virtual void OnRawImageResultReceived(const CRawImageResultItem* pResult);
+    /**
+     * This callback is only triggered when barcodes are found on the image.
+     */
+    virtual void OnDecodedBarcodesReceived(const dbr::CDecodedBarcodesResult* pResult);
+    /**
+     * This callback is only triggered when text-lines are found on the image.
+     */
+    virtual void OnRecognizedTextLinesReceived(const dlr::CRecognizedTextLinesResult* pResult);
+    /**
+     * This callback is only triggered when document boundary quads are detected on the image.
+     */
+    virtual void OnDetectedQuadsReceived(const ddn::CDetectedQuadsResult* pResult);
+    /**
+     * This callback is only triggered when the image has been normalized successfully.
+     */
+    virtual void OnNormalizedImagesReceived(const ddn::CNormalizedImagesResult* pResult);
+    /**
+     * This callback is only triggered when there are parsed results on the image.
+     */
+    virtual void OnParsedResultsReceived(const dcp::CParsedResult* pResult);
+};
 ```
 
 ## Intermediate Result Receiver
@@ -205,11 +221,7 @@ The IRR interface consists of 27 callback functions for each of the 27 types of 
    >- Android
    >- Objective-C
    >- Swift
-   >- Python
-   >- Java
-   >- C#
    >- C++
-   >- C
    >
 >
 ```javascript
@@ -612,22 +624,111 @@ protocol IntermediateResultReceiver{
 }
 ```
 >
-```python
-To-add
-```
->
-```java
-To-add
-```
->
-```c#
-To-add
-```
->
 ```c++
-To-add
-```
->
-```c
-To-add
+        class CIntermediateResultReceiver
+        {
+        protected:
+            unsigned long long observedResultUnitTypes;
+            int priorityLevel;
+        public:
+            CIntermediateResultReceiver();
+            CIntermediateResultReceiver(int _level);
+            virtual ~CIntermediateResultReceiver(){};
+            unsigned long long GetObservedResultUnitTypes();
+            int GetPriorityLevel();
+            virtual void OnPredetectedRegionsReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const CPredetectedRegionsUnit *pResult);
+            virtual void OnLocalizedBarcodesReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dbr::intermediate_results::CLocalizedBarcodesUnit *pResult);
+            virtual void OnDecodedBarcodesReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dbr::intermediate_results::CDecodedBarcodesUnit *pResult);
+            virtual void OnLocalizedTextLinesReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dlr::intermediate_results::CLocalizedTextLinesUnit *pResult);
+            virtual void OnRecognizedTextLinesReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dlr::intermediate_results::CRecognizedTextLinesUnit *pResult);
+            virtual void OnDetectedQuadsReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const ddn::intermediate_results::CDetectedQuadsUnit *pResult);
+            virtual void OnNormalizedImagesReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const ddn::intermediate_results::CNormalizedImageUnit *pResult);
+            virtual void OnColourImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CColourImageUnit *pResult);
+            virtual void OnScaledDownColourImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CScaledDownColourImageUnit *pResult);
+            virtual void OnGrayscaleImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CGrayscaleImageUnit *pResult);
+            virtual void OnTransformedGrayscaleImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CTransformedGrayscaleImageUnit *pResult);
+            virtual void OnEnhancedGrayscaleImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CEnhancedGrayscaleImageUnit *pResult);
+            virtual void OnBinaryImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CBinaryImageUnit *pResult);
+            virtual void OnTextureDetectionResultUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CTextureDetectionResultUnit *pResult);
+            virtual void OnTextureRemovedGrayscaleImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CTextureRemovedGrayscaleImageUnit *pResult);
+            virtual void OnTextureRemovedBinaryImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CTextureRemovedBinaryImageUnit *pResult);
+            virtual void OnContoursUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CContoursUnit *pResult);
+            virtual void OnLineSegmentsUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CLineSegmentsUnit *pResult);
+            virtual void OnTextZonesUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType, 
+                                                    const CTextZonesUnit *pResult);
+            virtual void OnTextRemovedBinaryImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    SectionType sectionType,
+                                                    const CTextRemovedBinaryImageUnit *pResult);
+            virtual void OnLongLinesUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const ddn::intermediate_results::CLongLinesUnit *pResult);
+            virtual void OnCornersUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const ddn::intermediate_results::CCornersUnit *pResult);
+            virtual void OnCandidateQuadEdgesUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const ddn::intermediate_results::CCandidateQuadEdgesUnit *pResult);
+            virtual void OnCandidateBarcodeZonesUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dbr::intermediate_results::CCandidateBarcodeZonesUnit *pResult);
+            virtual void OnScaledUpBarcodeImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dbr::intermediate_results::CScaledUpBarcodeImageUnit *pResult);
+            virtual void OnDeformationResistedBarcodeImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dbr::intermediate_results::CDeformationResistedBarcodeImageUnit *pResult);
+            virtual void OnComplementedBarcodeImageUnitReceived(const char* targetROIDefName, 
+                                                    const char* taskName, 
+                                                    const dbr::intermediate_results::CComplementedBarcodeImageUnit *pResult);
+        };
 ```
