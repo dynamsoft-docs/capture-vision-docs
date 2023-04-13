@@ -11,7 +11,7 @@ breadcrumbText: DeblurMode
 
 # Enumeration DeblurMode
 
-`DeblurMode` is implemented in the final stage of barcode decoding algorithm. It desides which image processing algorithms to perform on the localized barcode zones to extract the barcode information.
+`DeblurMode` is implemented in the final stage of barcode decoding algorithm. It decides which image processing algorithms to perform on the localized barcode zones to extract the barcode information.
 
 ```cpp
 typedef enum DeblurMode

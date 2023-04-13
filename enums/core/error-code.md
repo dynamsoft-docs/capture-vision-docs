@@ -77,6 +77,8 @@ typedef enum ErrorCode
     EC_DOMAIN_NOT_MATCH = -10039,
     /** The reserved info does not match the reserved info bound in the current product key. */
     EC_RESERVED_INFO_NOT_MATCH = -10040,
+    /** The License DLL is missing. */
+    EC_LICENSE_DLL_MISSING = -10042;
     /** The license key does not match the license content. */
     EC_LICENSE_KEY_NOT_MATCH = -10043,
     /** Failed to request the license content. */
@@ -101,10 +103,12 @@ typedef enum ErrorCode
     EC_STAGE_TYPE_INVALID = -10059,
     /** The image orientation is invalid. */
     EC_IMAGE_ORIENTATION_INVALID = -10060,
-    /** Failed to convert complex tempalte to simplified settings. */
+    /** Complex tempalte can't be converted to simplified settings. */
     EC_CONVERT_COMPLEX_TEMPLATE_ERROR = -10061,
+    /** Can't update settings at runtime. */
+    EC_UPDATE_SETTINGS_AT_RUNTIME_FAILED = -10062,
     /** -20000~-29999: DLS license error code. */
-    /**No license. */
+    /** No license. */
     EC_NO_LICENSE = -20000,
     /** The Handshake Code is invalid. */
     EC_HANDSHAKE_CODE_INVALID = -20001,
@@ -172,6 +176,10 @@ typedef enum ErrorCode
     /*The quardrilateral is invalid. */
     EC_QUADRILATERAL_INVALID = -50057,
     /** -60000~-69999: DCE error code. */
+    /**-60000~-69999: DCE error code*/
+    EC_CAMERA_MODULE_NOT_EXIST = -60003;
+    EC_CAMERA_ID_NOT_EXIST = -60006;
+    EC_NO_SENSOR = -60045;
     /**-70000~-79999: Panorama error code. */
     /**The panorama license is invalid. */
     EC_PANORAMA_LICENSE_INVALID = -70060,

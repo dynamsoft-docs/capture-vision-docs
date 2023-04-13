@@ -138,7 +138,7 @@ protocol IntermediateResultReceiver{
 }
 ```
 >
-```c++
+```cpp
 class CVR_API CCapturedResultReceiver
 {
 protected:
@@ -624,7 +624,7 @@ protocol IntermediateResultReceiver{
 }
 ```
 >
-```c++
+```cpp
         class CIntermediateResultReceiver
         {
         protected:

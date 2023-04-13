@@ -130,7 +130,7 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
 ```swift
 ```
 >
-```c++
+```cpp
 // Create a new instance of CCaptureVisionRouter
 CCaptureVisionRouter router;
 // Create a new instance of CDirectoryFetcher
@@ -308,7 +308,7 @@ class ImageSourceAdapter: NSObject{
 }
 ```
 >
-```c++
+```cpp
 class DS_API CImageSourceAdapter
 {
 protected:
