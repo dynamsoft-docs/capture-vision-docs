@@ -11,7 +11,7 @@ breadcrumbText: TargetType
 
 # Enumeration TargetType
 
-Describes the target types.
+`TargetType` describes the target types.
 
 ```cpp
 typedef enum TargetType

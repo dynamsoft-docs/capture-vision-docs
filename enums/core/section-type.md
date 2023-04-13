@@ -11,7 +11,7 @@ breadcrumbText: SectionType
 
 # Enumeration SectionType
 
-Describes the section of the algorithm. In the `IntermediateResultReceiver`, the `SectionType` indicate the algorithm section that produced the `IntermediateResult`.
+`SectionType` describes the section of the algorithm. In the `IntermediateResultReceiver`, the `SectionType` indicate the algorithm section that produced the `IntermediateResult`.
 
 ```cpp
 typedef enum SectionType

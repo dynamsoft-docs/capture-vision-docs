@@ -11,7 +11,7 @@ breadcrumbText: PDFReadingMode
 
 # Enumeration PDFReadingMode
 
-Describes the PDF reading modes.
+`PDFReadingMode` describes the PDF reading modes.
 
 ```cpp
 typedef enum PDFReadingMode

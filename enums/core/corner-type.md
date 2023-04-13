@@ -11,7 +11,7 @@ breadcrumbText: CornerType
 
 # Enumeration CornerType
 
-Describes how the corner is formed by its sides.
+`CornerType` describes how the corner is formed by its sides.
 
 ```cpp
 typedef enum CornerType

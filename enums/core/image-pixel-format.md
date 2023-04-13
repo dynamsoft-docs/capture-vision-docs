@@ -11,6 +11,8 @@ breadcrumbText: ImagePixelFormat
 
 # Enumeration ImagePixelFormat
 
+`ImagePixelFormat` describes all the supported image pixel formats.
+
 ```cpp
 typedef enum ImagePixelFormat
 {

@@ -11,7 +11,7 @@ breadcrumbText: GrayscaleTransformationMode
 
 # Enumeration GrayscaleTransformationMode
 
-Describes the grayscale transformation mode.
+`GrayscaleTransformationMode` describes the grayscale transformation mode.
 
 ```cpp
 typedef enum GrayscaleTransformationMode

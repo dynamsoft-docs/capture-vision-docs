@@ -2,7 +2,7 @@
 layout: default-layout
 Title: LocalizationMode - Dynamsoft Barcode Reader Enumerations
 Description: The enumeration LocalizationMode of Dynamsoft Barcode Reader describes the localization modes of the barcodes.
-Keywords: Barcode formats
+Keywords: Localization mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

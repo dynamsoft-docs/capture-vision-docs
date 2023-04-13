@@ -11,9 +11,11 @@ breadcrumbText: ErrorCode
 
 # Enumeration ErrorCode
 
-```cpp
-typedef enum ErrorCode {
+`ErrorCode` describes the error code that can be output by the library.
 
+```cpp
+typedef enum ErrorCode 
+{
     /** Successful. */
     EC_OK = 0,
     /** -10000~-19999: Common error code. */

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: CapturedResultItemType - Dynamsoft Core Enumerations
-Description: The enumeration CapturedResultItemType of Dynamsoft Core describes all captured result item types.
+Description: The enumeration CapturedResultItemType of Dynamsoft Core describes all types of captured result item.
 Keywords: Captured result types
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,6 +10,8 @@ breadcrumbText: CapturedResultItemType
 ---
 
 # Enumeration CapturedResultItemType
+
+`CapturedResultItemType` describes all types of captured result item.
 
 ```cpp
 typedef enum CapturedResultItemType

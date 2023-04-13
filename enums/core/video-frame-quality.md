@@ -11,7 +11,7 @@ breadcrumbText: VideoFrameQuality
 
 # Enumeration VideoFrameQuality
 
-Describes the quality of video frames.
+`VideoFrameQuality` describes the quality of video frames.
 
 ```cpp
 typedef enum VideoFrameQuality {

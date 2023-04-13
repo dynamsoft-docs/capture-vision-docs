@@ -11,7 +11,7 @@ breadcrumbText: IntermediateResultUnitType
 
 # Enumeration IntermediateResultUnitType
 
-Describes the type of the intermediate result unit. Enumeration `IntermediateResultUnitType` is used in each subclass of `IntermediateResult` to indicate the type of the result. It is also used to declare which kinds `IntermediateResult` should be output by the library.
+Enumeration `IntermediateResultUnitType` is used in each subclass of `IntermediateResult` to indicate the type of the result. It is also used to declare which kinds `IntermediateResult` should be output by the library.
 
 ```cpp
 enum IntermediateResultUnitType : unsigned long long

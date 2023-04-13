@@ -11,7 +11,7 @@ breadcrumbText: BufferOverflowProtectionMode
 
 # Enumeration BufferOverflowProtectionMode
 
-Describes the protection modes when the buffer of `ImageSourceAdapter` is overflow.
+`BufferOverflowProtectionMode` describes the protection modes when the buffer of `ImageSourceAdapter` is overflow.
 
 ```cpp
 typedef enum BufferOverflowProtectionMode

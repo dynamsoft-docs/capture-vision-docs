@@ -11,7 +11,7 @@ breadcrumbText: ImageTagType
 
 # Enumeration ImageTagType
 
-Describes the type of the image tag, which is used to distinguish video frame and file images.
+`ImageTagType` describes the type of the image tag, which is used to distinguish video frame and file images.
 
 ```cpp
 typedef enum ImageTagType
