@@ -629,13 +629,13 @@ protocol IntermediateResultReceiver{
         {
         protected:
             unsigned long long observedResultUnitTypes;
-            int priorityLevel;
+            int resultLevel;
         public:
             CIntermediateResultReceiver();
             CIntermediateResultReceiver(int _level);
             virtual ~CIntermediateResultReceiver(){};
             unsigned long long GetObservedResultUnitTypes();
-            int GetPriorityLevel();
+            int GetResultLevel();
             virtual void OnPredetectedRegionsReceived(const char* targetROIDefName, 
                                                     const char* taskName, 
                                                     const CPredetectedRegionsUnit *pResult);
