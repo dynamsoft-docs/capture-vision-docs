@@ -7,7 +7,8 @@ docHomePage: /capture-vision2/docs/introduction/
 introduction: /capture-vision2/docs/introduction/
 architecture: /capture-vision2/docs/architecture/
 parameter: /capture-vision2/docs/parameters/
-parameter: /capture-vision2/docs/enums/
+parameters_reference: /capture-vision2/docs/parameters/reference/
+enums: /capture-vision2/docs/enums/
 
 assets: /capture-vision2/docs/assets/
 edit_icon: /capture-vision2/docs/assets/img-icon/edit-icon.png
