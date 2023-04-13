@@ -14,10 +14,14 @@ breadcrumbText: Resolution
 Enumeration `Resolution` describes the resolution.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+```
 >
 ```java
 public enum EnumResolution {

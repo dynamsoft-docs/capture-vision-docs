@@ -14,10 +14,14 @@ breadcrumbText: CameraState
 Enumeration `CameraState` describes the camera state.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+```
 >
 ```java
 public enum EnumCameraState {

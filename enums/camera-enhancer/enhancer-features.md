@@ -21,10 +21,14 @@ Enumeration `EnhancerFeatures` indicates the advanced features of Dynamsoft Came
 - `Smart Torch`: Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+```
 >
 ```java
 public class EnumEnhancerFeatures {

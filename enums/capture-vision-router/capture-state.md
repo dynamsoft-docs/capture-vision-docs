@@ -13,12 +13,39 @@ breadcrumbText: CaptureState
 
 `CaptureState` describes the state of data capturing.
 
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>
+```javascript
+```
+>
+```java
+```
+>
+```objc
+```
+>
+```swift
+```
+>
+```c
+```
+>
 ```cpp
 typedef enum CaptureState
 {
-    /** The data capturing is started. */
-    CS_STARTED,
-    /** The data capturing is stopped. */
-    CS_STOPPED
+   /** The data capturing is started. */
+   CS_STARTED,
+   /** The data capturing is stopped. */
+   CS_STOPPED
 } CaptureState;
 ```

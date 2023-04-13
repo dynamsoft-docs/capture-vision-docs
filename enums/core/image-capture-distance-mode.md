@@ -13,12 +13,48 @@ breadcrumbText: ImageCaptureDistanceMode
 
 `ImageCaptureDistanceMode` describes the shooting mode of the image. It is used in the `overlap` mode of `Panorama`.
 
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>
+```javascript
+```
+>
+```java
+```
+>
+```objc
+```
+>
+```swift
+```
+>
+```c
+```
+>
 ```cpp
 typedef enum ImageCaptureDistanceMode 
 {
-    /** The image is taken by close-up shot camera. */
-    ICDM_NEAR,    
-    /** The image is taken by long shot camera. */
-    ICDM_FAR
+   /** The image is taken by close-up shot camera. */
+   ICDM_NEAR,   
+   /** The image is taken by long shot camera. */
+   ICDM_FAR
 } CaptureDistanceMode;
+```
+>
+```csharp
+```
+>
+```java
+```
+>
+```python
 ```
