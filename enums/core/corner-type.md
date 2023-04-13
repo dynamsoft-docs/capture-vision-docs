@@ -16,13 +16,13 @@ Describes how the corner is formed by its sides.
 ```cpp
 typedef enum CornerType
 {
-    /* The sides of the corner is normally intersected.*/
+    /* The sides of the corner is normally intersected. */
     CT_NORMAL_INTERSECTED = 0,
-    /* The sides of the corner is T-intersected.*/
+    /* The sides of the corner is T-intersected. */
     CT_T_INTERSECTED = 1,
-    /* The sides of the corner is cross-intersected.*/
-    CT_CROSS_INTERSECTED = 2,
-    /* The sides are not intersected but they definitly make up a corner.*/
+    /* The sides of the corner is cross-intersected. */
+    CT_CROSS_INTERSECTED = 2,    
+    /* The sides are not intersected but they definitly make up a corner. */
     CT_NOT_INTERSECTED = 3,
 } CornerType;
 ```

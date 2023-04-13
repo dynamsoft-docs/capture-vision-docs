@@ -15,11 +15,11 @@ Describes the quality of video frames.
 
 ```cpp
 typedef enum VideoFrameQuality {
-    /* The frame quality is recognized to be high.*/
+    /** The frame quality is recognized to be high. */
     VFQ_HIGH,
-    /* The frame quality is recognized to be low.*/
+    /** The frame quality is recognized to be low. */
     VFQ_LOW,
-    /* The frame quality is unknown.*/
+    /** The frame quality is unknown. */
     VFQ_UNKNOWN
 } VideoFrameQuality;
 ```

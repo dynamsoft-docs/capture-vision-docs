@@ -16,9 +16,9 @@ Describes the state of `ImageSourceAdapter`.
 ```cpp
 typedef enum ImageSourceState
 {
-    /* The buffer of ImageSourceAdapter is temporarily empty. */
+    /** The buffer of ImageSourceAdapter is temporarily empty. */
     ISS_BUFFER_EMPTY,
-    /* The source of ImageSourceAdapter is empty. */
+    /** The source of ImageSourceAdapter is empty. */
     ISS_EXHAUSTED
 } ImageSourceState;
 ```

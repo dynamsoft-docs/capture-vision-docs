@@ -16,9 +16,9 @@ Describes the target types.
 ```cpp
 typedef enum TargetType
 {
-    /* The target type of the PDF file is "page". Only available for PDFReadingMode PDFRM_RASTER.*/
+    /** The target type of the PDF file is "page". Only available for PDFReadingMode PDFRM_RASTER. */
     TT_PAGE,
-    /* The target type of the PDF file is "image". */
+    /** The target type of the PDF file is "image". */
     TT_IMAGE
 } TargetType;
 ```

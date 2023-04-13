@@ -16,9 +16,9 @@ Describes the type of the image tag, which is used to distinguish video frame an
 ```cpp
 typedef enum ImageTagType
 {
-    /* The image is a file image. */
+    /** The image is a file image. */
     ITT_FILE_IMAGE,
-    /* The image is a video frame. */
+    /** The image is a video frame. */
     ITT_VIDEO_FRAME
 } ImageTagType;
 ```
