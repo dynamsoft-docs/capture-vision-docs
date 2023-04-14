@@ -38,7 +38,8 @@ jobs:
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs/* ./DCVDocPreview/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocPreview/
-          cd DCVDocPreview && bundle exec jekyll build --incremental
+        # cd DCVDocPreview && bundle exec jekyll build --incremental
+          cd DCVDocPreview && bundle exec jekyll build
 
       - name: Sync files to Test Env
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
