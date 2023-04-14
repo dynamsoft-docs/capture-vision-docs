@@ -13,16 +13,52 @@ breadcrumbText: QRCodeErrorCorrectionLevel
 
 `QRCodeErrorCorrectionLevel` describes the error correction level when processing the QR code.
 
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>
+```javascript
+```
+>
+```java
+```
+>
+```objc
+```
+>
+```swift
+```
+>
+```c
+```
+>
 ```cpp
 typedef enum QRCodeErrorCorrectionLevel
 {
-    /**Error Correction Level H (high) */
-    QRECL_ERROR_CORRECTION_H,
-    /**Error Correction Level L (low) */
-    QRECL_ERROR_CORRECTION_L,
-    /**Error Correction Level M (medium-low) */
-    QRECL_ERROR_CORRECTION_M,
-    /**Error Correction Level Q (medium-high) */
-    QRECL_ERROR_CORRECTION_Q
+   /**Error Correction Level H (high) */
+   QRECL_ERROR_CORRECTION_H,
+   /**Error Correction Level L (low) */
+   QRECL_ERROR_CORRECTION_L,
+   /**Error Correction Level M (medium-low) */
+   QRECL_ERROR_CORRECTION_M,
+   /**Error Correction Level Q (medium-high) */
+   QRECL_ERROR_CORRECTION_Q
 }QRCodeErrorCorrectionLevel;
+```
+>
+```csharp
+```
+>
+```java
+```
+>
+```python
 ```

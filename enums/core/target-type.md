@@ -11,14 +11,50 @@ breadcrumbText: TargetType
 
 # Enumeration TargetType
 
-Describes the target types.
+`TargetType` describes the target types.
 
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>
+```javascript
+```
+>
+```java
+```
+>
+```objc
+```
+>
+```swift
+```
+>
+```c
+```
+>
 ```cpp
 typedef enum TargetType
 {
-    /** The target type of the PDF file is "page". Only available for PDFReadingMode PDFRM_RASTER. */
-    TT_PAGE,
-    /** The target type of the PDF file is "image". */
-    TT_IMAGE
+   /** The target type of the PDF file is "page". Only available for PDFReadingMode PDFRM_RASTER. */
+   TT_PAGE,
+   /** The target type of the PDF file is "image". */
+   TT_IMAGE
 } TargetType;
+```
+>
+```csharp
+```
+>
+```java
+```
+>
+```python
 ```

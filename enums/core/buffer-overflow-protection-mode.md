@@ -11,14 +11,50 @@ breadcrumbText: BufferOverflowProtectionMode
 
 # Enumeration BufferOverflowProtectionMode
 
-Describes the protection modes when the buffer of `ImageSourceAdapter` is overflow.
+`BufferOverflowProtectionMode` describes the protection modes when the buffer of `ImageSourceAdapter` is overflow.
 
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>
+```javascript
+```
+>
+```java
+```
+>
+```objc
+```
+>
+```swift
+```
+>
+```c
+```
+>
 ```cpp
 typedef enum BufferOverflowProtectionMode
 {
-    /** New images are blocked when the buffer is full. */
-    BOPM_BLOCK = 0,
-    /** New images are appended at the end, and oldest images are pushed out from the beginning if the buffer is full. */
-    BOPM_APPEND = 1
+   /** New images are blocked when the buffer is full. */
+   BOPM_BLOCK = 0,
+   /** New images are appended at the end, and oldest images are pushed out from the beginning if the buffer is full. */
+   BOPM_APPEND = 1
 } BufferOverflowProtectionMode;
+```
+>
+```csharp
+```
+>
+```java
+```
+>
+```python
 ```

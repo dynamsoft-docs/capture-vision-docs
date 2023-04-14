@@ -118,11 +118,7 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
    >- Android
    >- Objective-C
    >- Swift
-   >- Python
-   >- Java
-   >- C#
    >- C++
-   >- C
    >
 >
 ```java
@@ -134,69 +130,18 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
 ```swift
 ```
 >
-```python
-# Obtain current runtime settings of `reader` instance.
-settings = reader.get_runtime_settings()
-settings.region.region_top = 10
-settings.region.region_bottom = 90
-settings.region.region_left = 10
-settings.region.region_right = 90
-settings.region.region_measured_by_percentage = 1
-# Update the settings.
-reader.update_runtime_settings(settings)
-```
->
-```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
-// Update the settings.
-reader.updateRuntimeSettings(settings);
-```
->
-```c#
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.Region.RegionTop = 10;
-settings.Region.RegionBottom = 90;
-settings.Region.RegionLeft = 10;
-settings.Region.RegionRight = 90;
-settings.Region.RegionMeasuredByPercentage = 1;
-// Update the settings.
-reader.UpdateRuntimeSettings(settings);
-```
->
-```c++
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-reader.GetRuntimeSettings(&settings);
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
-```
->
-```c
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-DBR_GetRuntimeSettings(reader, &settings);
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
+```cpp
+// Create a new instance of CCaptureVisionRouter
+CCaptureVisionRouter router;
+// Create a new instance of CDirectoryFetcher
+CDirectoryFetcher fetcher;
+// Config the fetcher
+fetcher.SetImageFetchInterval(1000);
+fetcher.SetDirectory("/PATH/TO/DIRECTORY", "*.JPG", true);
+// Set the fetcher as the input source
+router.SetInput(&fetcher);
+// Start the image capture process
+// ...
 ```
 
 ### Custom Implementation
@@ -208,11 +153,7 @@ An ISA implementation requires more than ten methods, which is not easy to do. T
    >- Android
    >- Objective-C
    >- Swift
-   >- Python
-   >- Java
-   >- C#
    >- C++
-   >- C
    >
 >
 ```javascript
@@ -367,67 +308,48 @@ class ImageSourceAdapter: NSObject{
 }
 ```
 >
-```python
-# Obtain current runtime settings of `reader` instance.
-settings = reader.get_runtime_settings()
-settings.region.region_top = 10
-settings.region.region_bottom = 90
-settings.region.region_left = 10
-settings.region.region_right = 90
-settings.region.region_measured_by_percentage = 1
-# Update the settings.
-reader.update_runtime_settings(settings)
-```
->
-```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
-// Update the settings.
-reader.updateRuntimeSettings(settings);
-```
->
-```c#
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.Region.RegionTop = 10;
-settings.Region.RegionBottom = 90;
-settings.Region.RegionLeft = 10;
-settings.Region.RegionRight = 90;
-settings.Region.RegionMeasuredByPercentage = 1;
-// Update the settings.
-reader.UpdateRuntimeSettings(settings);
-```
->
-```c++
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-reader.GetRuntimeSettings(&settings);
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
-```
->
-```c
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-DBR_GetRuntimeSettings(reader, &settings);
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
+```cpp
+class DS_API CImageSourceAdapter
+{
+protected:
+    CImageSourceAdapter();
+    /**
+     * Add images (of the type CImageData) to the buffer.
+     * This method will check if the internal flag indicating whether the fetching is started is true. If not, it will refuse to add the image to buffer
+     */
+    void AddImageToBuffer(const CImageData* img, bool bClone = true);
+public:
+    virtual ~CImageSourceAdapter();
+    /** Determines whether there are more images left to fetch.*/
+    virtual bool HasNextImageToFetch() const = 0;
+    /**
+     * Maintains the internal flag indicating whether the fetching is started
+     */
+    virtual void StartFetching();
+    virtual void StopFetching();
+    /**
+     * Returns a buffered image.
+     * @param removeFromBuffer Whether ISA should remove the image from Buffer after it is returned.
+     */
+    virtual CImageData* GetImage(bool removeFromBuffer = true);
+    /* Gets or Sets how many images are allowed to be buffered.
+     * @recommendation A class that implements the interface
+     * should try to keep the buffer full if at all possible.*/
+    void SetMaxImageCount(int count);
+    int GetMaxImageCount() const ;
+    /* Gets or Sets a mode that determines the action to take when there
+     * is a new incoming image and the buffer is full.
+     * Allowed methods are defined in BufferOverflowProtectionMode.*/
+    void SetBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
+    BufferOverflowProtectionMode GetBufferOverflowProtectionMode() const;
+    /* Determines whether the image is in the buffer or not. */
+    bool HasImage(int imageId) const;
+    /* Sets the Next Image To Return. */
+    bool SetNextImageToReturn(int imageId, bool keepInBuffer = true);
+    /* Returns the actual count of buffered images. */
+    int GetImageCount() const;
+    /* Determines whether the buffer is empty.*/
+    bool IsBufferEmpty() const;
+    // static int FreeImageData(CImageData *imageData);
+};
 ```
