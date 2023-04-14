@@ -39,7 +39,7 @@ In the **Document Normalization** section, the content of the targeting area is 
 
 ## Result Output
 
-The result of **Document Normalization** section is output as `NormalizedImagesResult` which is generally received from the `CaptureResultReceiver` (CRR).
+The result of **Document Normalization** section is output as `NormalizedImagesResult` which is generally received from the `CapturedResultReceiver` (CRR).
 
 During the process of **Document Normalization**, a series of intermediate results are produced.
 
