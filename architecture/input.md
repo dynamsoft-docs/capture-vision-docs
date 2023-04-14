@@ -16,7 +16,7 @@ permalink: /architecture/input.html
 
 In the Dynamsoft Capture Vision (DCV) architecture, "input" is what supplies the images to be processed, and we usually call it "the image source".
 
-An image source refers to an object that has implemented the [Image Source Adapter (ISA)](input.md#image-source-adapter) interface.
+An image source refers to an object that has implemented the [Image Source Adapter (ISA)](#image-source-adapter) interface.
 
 ## Image Source Adapter
 

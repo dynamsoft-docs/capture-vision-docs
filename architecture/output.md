@@ -167,6 +167,8 @@ To-add
 
 Intermediate Result Receiver (IRR) is an interface for the output of intermediate results. Intermediate results refer to the following 27 types of results:
 
+### Intermediate results
+
 1. Pre-detected regions unit
 2. Localized barcodes unit
 3. Decoded barcodes unit
