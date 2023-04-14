@@ -108,10 +108,9 @@ In other words, settings in `BarcodeFormatSpecification` have a higher priority 
 
 <div align="center">
    <p><img src="../assets/example-barcode-format-specification.png" alt="barcode-format-specification" width="60%" /></p>
-   Example barcode Format Specification
 </div>
 
-Sometimes the image and the real scene happen to be mirror images of each other. For 2D barcodes, mirroring may cause the decoding to fail. In this case, all barcodes are normal except QRcode, we could configure the MirrorMode to correct the situation:
+Sometimes the image and the real scene happen to be mirror images of each other. For 2D barcodes, mirroring may cause the decoding to fail. In this case, all barcodes are normal except QR code, we could configure the MirrorMode to correct the situation:
 
 ```json
 {
@@ -139,7 +138,7 @@ Based on a existing `BarcodeFormatSpecification` object, you can use `BaseBarcod
 },
 {
     "Name":"BFS_1",    
-    "BaseBarcodeFormatSpecificationName" : "BFS_0", // Use the same settings with BR_0 but add some changes.
+    "BaseBarcodeFormatSpecificationName" : "BFS_0", // Use the same settings with BFS_0 but add little changes.
     "MinResultConfidence" : 20
 }
 ```
