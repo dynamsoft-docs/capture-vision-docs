@@ -5,10 +5,10 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push events but only for the main branch
-  #push:
-   # branches: 
+  push:
+    branches: 
     #- main 
-    #- preview 
+    - preview 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,7 +17,7 @@ on:
 jobs:
   # This workflow contains jobs called "Build-main" and "Build-Preview"
   Build-main:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -30,14 +30,15 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
-          [ -d DCVDoc ] && rm -rf DCVDoc
-          [ -d capture-vision-docs ] && rm -rf capture-vision-docs
-          [ ! -d DCVDoc ] && mkdir -p DCVDoc
-          [ ! -d capture-vision-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/capture-vision-docs.git
-          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cd capture-vision-docs && git pull && cd .. && cp -rfp ./capture-vision-docs/* ./DCVDoc/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDoc/
-          cd DCVDoc && bundle exec jekyll build --incremental
+          [ -d DCVDocPreview ] && rm -rf DCVDocPreview
+          [ -d capture-vision-docs-preview ] && rm -rf capture-vision-docs-preview
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
+          [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
+          git clone --depth 1 --branch preview https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/capture-vision-docs.git capture-vision-docs-preview
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cp -rfp ./capture-vision-docs/* ./DCVDocPreview/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocPreview/
+          cd DCVDocPreview && bundle exec jekyll build --incremental
 
       - name: Sync files to Test Env
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -46,6 +47,6 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DCVDoc/_site/
+          local-dir: /home/ubuntu/DCVDocPreview/_site/
           server-dir: /www.dynamsoft.com/capture-vision2/docs/
 
