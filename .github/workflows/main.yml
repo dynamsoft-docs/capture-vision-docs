@@ -49,5 +49,5 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DCVDocPreview/_site/
-          server-dir: /www.dynamsoft.com/capture-vision2/docs/core/
+          server-dir: /www.dynamsoft.com/capture-vision/docs/core/
 
