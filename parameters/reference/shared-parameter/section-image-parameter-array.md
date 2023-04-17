@@ -1,6 +1,8 @@
 
 ## SectionImageParameterArray
 
+`SectionImageParameterArray` is the parameter for you to set the image processing algorithms that implemented in the task. Each member of the array defines an algorithm section as well as its image processing parameters.
+
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
@@ -16,7 +18,7 @@
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>One of the <a href="">SectionType</a> that available for the task.
+        <td><b>Range</b><br>One of the <a href="#">SectionType</a> that available for the task.
         </td>
     </tr>
     <tr>
@@ -29,3 +31,7 @@
         </td>
     </tr>
 </table>
+
+BarcodeReaderTaskSetting
+LabelRecognizerTaskSetting
+DocumentNormalizerTaskSetting
