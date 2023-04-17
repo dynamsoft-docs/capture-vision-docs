@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-Title: DirectoryPath - Shared Parameters
-Description: The parameter DirectoryPath defines directory path.
-Keywords:
+Title: DirectoryPath - Dynamsoft Capture Vision Shared Parameters
+Description: The parameter DirectoryPath defines a path when the library have to read files.
+Keywords: Directory path
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
 # DirectoryPath
 
-Parameter `DirectoryPath` defines the file paths that support the data capturing.
+Parameter `DirectoryPath` defines a path when the library have to read files.
 
 ```json
 {
@@ -19,7 +19,7 @@ Parameter `DirectoryPath` defines the file paths that support the data capturing
 
 | DirectoryPath Parameter Details|
 | :------------- |
-| **Type**<br>*int* |
+| **Type**<br>*int[2]* |
 | **Range**<br>[-100, 100] |
 | **Default Value**<br>0 |
 
