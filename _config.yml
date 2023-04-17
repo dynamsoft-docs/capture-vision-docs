@@ -8,6 +8,7 @@ introduction: /capture-vision/docs/core/introduction/
 architecture: /capture-vision/docs/core/architecture/
 parameter: /capture-vision/docs/core/parameters/
 enums: /capture-vision/docs/core/enums/
+parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 assets: /capture-vision/docs/core/assets/
 edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png

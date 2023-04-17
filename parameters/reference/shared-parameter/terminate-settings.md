@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-Title: StartSection - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter StartSection defines the terminate stages of the task.
+Title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
+Description: The parameter TerminateSetting defines the terminate stages of the task.
 Keywords: Max threads
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TerminateSetting
 
-Parameter `StartSection` defines the terminate stages of the task. For each sections in an alogrithm task, you can define only one terminate stage.
+Parameter `TerminateSetting` defines the terminate stages of the task. For each sections in an alogrithm task, you can define only one terminate stage.
 
 ```json
 "TerminateSetting":
