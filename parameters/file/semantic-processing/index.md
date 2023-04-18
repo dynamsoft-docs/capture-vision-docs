@@ -17,7 +17,7 @@ A `SemanticProcessing` object is defined as below:
 | Key Name | Value Type | Required or Optional | Description |
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
-| ReferenceObjectFilter | JSON object | Optional | Sets the value for parameter [ReferenceObjectFilter]({{site.parameterReference}}reference-object-filter.html) to define the filter conditions |
+| ReferenceObjectFilter | JSON object | Optional | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions |
 | TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameterReference}}task-setting-name-array.html) to define a group of semantic-processing tasks. |
 
 Here is a sample:
@@ -31,6 +31,39 @@ Here is a sample:
         ],
     }, 
     "TaskSettingNameArray": ["CPT1_PARSE_VIN"] 
+}
+```
+
+### ReferenceObjectFilter
+
+A `ReferenceObjectFilter` object is defined as below:
+
+| Key Name | Value Type | Required or Optional | Description |
+|---|---|---|---|
+| ReferenceTargetROIDefNameArray | string array | Optional | A string array while each element is a string that represents the name of a `TargetROIDef` object. |
+| AtomicResultTypeArray | string array | Optional | A string array while each element is a string that represents a type of atomic result that needs to be filtered |
+| TextLineFilteringCondition | string array | Optional | An object used to specify the conditions for filtering text lines. |
+| BarcodeFilteringCondition | string array | Optional | An object used to specify the conditions for filtering barcodes. |
+
+Here is a sample:
+
+```JSON
+{
+    "ReferenceObjectFilter" :
+    {  
+        "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"], 
+        "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE"], 
+        "BarcodeFilteringCondition": 
+        {
+            "BarcodeFormatIds": ["BF_CODE39"], 
+            "BarcodeTextRegExPattern": ".*b.*b.*b.*"
+        },
+        "TextLineFilteringCondition":
+        {
+            "LineNumbers": "1,3-5",  
+            "LineStringRegExPattern": "P<CAN[A-Z<]{39}"
+        }
+    }
 }
 ```
 

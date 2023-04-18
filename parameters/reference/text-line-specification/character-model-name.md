@@ -17,7 +17,7 @@ noTitleIndex: true
 }
 ```
 
-| CharacterModelName Parameter Details |
+| CharacterModelName Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>The name of a `CharacterModel` object that defined in `CharacterModelOptions`. |

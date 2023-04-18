@@ -55,7 +55,7 @@ Specify whether the targeting content is document page or tables.
 
 ## Result Output
 
-The result of **Document Detection** section is output as `DetectedQuadsResult` which is generally received from the `CaptureResultReceiver` (CRR).
+The result of **Document Detection** section is output as `DetectedQuadsResult` which is generally received from the `CapturedResultReceiver` (CRR).
 
 During the process of **Document Detection**, a series of intermediate results are produced.
 

@@ -17,7 +17,7 @@ Parameter `Brightness` defines the brightness of the normalized image.
 }
 ```
 
-| Brightness Parameter Details|
+| Brightness Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>[-100, 100] |

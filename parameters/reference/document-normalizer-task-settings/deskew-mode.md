@@ -24,10 +24,12 @@ DeskewMode specifies the method in which the deskew process way used to apply th
 DeskewMode is defined with a object that contains two child parameters, `Mode` and `ContentDirection`.
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode for deskewing.
@@ -38,7 +40,7 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br><li><a href = "#dmperspectivecorrection">DM_PERSPECTIVE_CORRECTION</a>
+        <td><b>Candidate Mode List</b><br><br><a href = "#dmperspectivecorrection">DM_PERSPECTIVE_CORRECTION</a>
         </td>
     </tr>
     <tr>
@@ -64,9 +66,9 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
     </tr>
     <tr>
         <td><b>Remarks</b><br>Only available for "DM_PERSPECTIVE_CORRECTION".
-            <li>0: Direction unknown.
-            <li>1: Vertical direction.
-            <li>2: Horizontal direction.
+            <br>0: Direction unknown.
+            <br>1: Vertical direction.
+            <br>2: Horizontal direction.
         </td>
     </tr>
 </table>

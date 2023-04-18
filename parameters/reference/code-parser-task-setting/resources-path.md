@@ -18,7 +18,7 @@ permalink: /parameters/reference/resources-path.html
 }
 ```
 
-| Brightness Parameter Details|
+| Brightness Parameter Summary |
 | :------------- |
 | **Type**<br>*string* |
 | **Range**<br>any valid string |

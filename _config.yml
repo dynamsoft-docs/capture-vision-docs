@@ -1,25 +1,26 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/main
 repository: dynamsoft-docs/capture-vision-docs
-docFullPath: https://www.dynamsoft.com/capture-vision2/docs/
-firstLevelUrl: /capture-vision2/docs/
-docHomePage: /capture-vision2/docs/introduction/
+docFullPath: https://www.dynamsoft.com/capture-vision/docs/
+firstLevelUrl: /capture-vision/docs/core/
+docHomePage: /capture-vision/docs/core/introduction/
 
-introduction: /capture-vision2/docs/introduction/
-architecture: /capture-vision2/docs/architecture/
-parameter: /capture-vision2/docs/parameters/
-enums: /capture-vision2/docs/enums/
+introduction: /capture-vision/docs/core/introduction/
+architecture: /capture-vision/docs/core/architecture/
+parameter: /capture-vision/docs/core/parameters/
+enums: /capture-vision/docs/core/enums/
+parameters_reference: /capture-vision/docs/core/parameters/reference/
 
-assets: /capture-vision2/docs/assets/
-edit_icon: /capture-vision2/docs/assets/img-icon/edit-icon.png
-smile_icon: /capture-vision2/docs/assets/img-icon/icon-smile.png
-sad_icon: /capture-vision2/docs/assets/img-icon/icon-sad.png
-dbr_icon: /capture-vision2/docs/assets/img-icon/icon-dbr.svg
-dwt_icon: /capture-vision2/docs/assets/img-icon/icon-dwt.svg
-dnt_icon: /capture-vision2/docs/assets/img-icon/icon-dnt.svg
+assets: /capture-vision/docs/core/assets/
+edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
+smile_icon: /capture-vision/docs/core/assets/img-icon/icon-smile.png
+sad_icon: /capture-vision/docs/core/assets/img-icon/icon-sad.png
+dbr_icon: /capture-vision/docs/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /capture-vision/docs/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /capture-vision/docs/core/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
 
-baseurl: "/capture-vision2/docs"
+baseurl: "/capture-vision/docs/core"
 plugins:
   - jemoji
 

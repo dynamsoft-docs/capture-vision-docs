@@ -41,10 +41,12 @@ GrayscaleEnhancementModes provides some image processing methods to enhance the 
 Parameter GrayscaleEnhancementModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
@@ -55,11 +57,10 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>GEM_GENERAL</li>
-            <li>GEM_GRAY_EQUALIZE</li>
-            <li>GEM_GRAY_SMOOTH</li>
-            <li>GEM_SHARPEN_SMOOTH</li>
+        <td><b>Candidate Mode List</b><br>GEM_GENERAL
+            <br>GEM_GRAY_EQUALIZE
+            <br>GEM_GRAY_SMOOTH
+            <br>GEM_SHARPEN_SMOOTH
         </td>
     </tr>
     <tr>
@@ -84,8 +85,7 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>GEM_GRAY_EQUALIZE</li>
+        <td><b>Valid For</b><br>GEM_GRAY_EQUALIZE
         </td>
     </tr>
     <tr>
@@ -106,9 +106,8 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>GEM_GRAY_SMOOTH</li>
-            <li>GEM_SHARPEN_SMOOTH</li>
+        <td><b>Valid For</b><br>GEM_GRAY_SMOOTH
+            <br>GEM_SHARPEN_SMOOTH
         </td>
     </tr>
     <tr>
@@ -129,9 +128,8 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>GEM_GRAY_SMOOTH</li>
-            <li>GEM_SHARPEN_SMOOTH</li>
+        <td><b>Valid For</b><br>GEM_GRAY_SMOOTH
+            <br>GEM_SHARPEN_SMOOTH
         </td>
     </tr>
     <tr>
@@ -152,8 +150,7 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>GEM_SHARPEN_SMOOTH</li>
+        <td><b>Valid For</b><br>GEM_SHARPEN_SMOOTH
         </td>
     </tr>
     <tr>
@@ -174,8 +171,7 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>GEM_SHARPEN_SMOOTH</li>
+        <td><b>Valid For</b><br>GEM_SHARPEN_SMOOTH
         </td>
     </tr>
     <tr>

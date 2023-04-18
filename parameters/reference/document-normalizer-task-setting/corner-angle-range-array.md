@@ -26,10 +26,12 @@ noTitleIndex: true
 `CornerAngleRangeArray` consist one or more angle range objects. Each object contains a maximum and a minimum value of the angle.
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MinValue</td>
         <td><b>Description</b><br>Sets the minimum interior angle.

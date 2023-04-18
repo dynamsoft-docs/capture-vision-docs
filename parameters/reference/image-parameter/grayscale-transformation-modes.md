@@ -39,10 +39,9 @@ Parameter GrayscaleTransformationModes consists of one or more of the following 
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>GTM_ORIGINAL</li>
-            <li>GTM_INVERTED</li>
-            <li>GTM_AUTO</li>
+        <td><b>Candidate Mode List</b><br>GTM_ORIGINAL
+            <br>GTM_INVERTED
+            <br>GTM_AUTO
         </td>
     </tr>
     <tr>

@@ -39,7 +39,7 @@ breadcrumbText: Enumerations index
 ## Core Enumerations
 
 - [BufferOverflowProtectionMode](core/buffer-overflow-protection-mode.md)
-- [CaptureResultItemType](core/capture-result-item-type.md)
+- [CapturedResultItemType](core/captured-result-item-type.md)
 - [CornerType](core/corner-type.md)
 - [ErrorCode](core/error-code.md)
 - [GrayscaleTransformationMode](core/gray-scale-transformation-mode.md)

@@ -29,10 +29,12 @@ ColourConversionModes is a parameter for setting the mode for converting a colou
 Parameter ColourConversionModes consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
@@ -43,10 +45,9 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>CICM_HSV</li>
-            <li>CICM_GENERAL</li>
-            <li>CICM_SKIP</li>
+        <td><b>Candidate Mode List</b><br>CICM_HSV
+            <br>CICM_GENERAL
+            <br>CICM_SKIP
         </td>
     </tr>
     <tr>
@@ -71,8 +72,7 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>CICM_GENERAL</li>
+        <td><b>Valid For</b><br>CICM_GENERAL
         </td>
     </tr>
     <tr>
@@ -93,8 +93,7 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>CICM_GENERAL</li>
+        <td><b>Valid For</b><br>CICM_GENERAL
         </td>
     </tr>
     <tr>
@@ -115,8 +114,7 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>CICM_GENERAL</li>
+        <td><b>Valid For</b><br>CICM_GENERAL
         </td>
     </tr>
     <tr>
@@ -137,8 +135,7 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>CICM_HSV</li>
+        <td><b>Valid For</b><br>CICM_HSV
         </td>
     </tr>
     <tr>

@@ -2,10 +2,12 @@
 ## BarcodeColourModes
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a target barcode colour mode.
@@ -16,14 +18,13 @@
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>BICM_DARK_ON_LIGHT</li>
-            <li>BICM_LIGHT_ON_DARK</li>
-            <li>BICM_DARK_ON_DARK</li>
-            <li>BICM_LIGHT_ON_LIGHT</li>
-            <li>BICM_DARK_LIGHT_MIXED</li>
-            <li>BICM_DARK_ON_LIGHT_DARK_SURROUNDING</li>
-            <li>BICM_SKIP</li>
+        <td><b>Candidate Mode List</b><br>BICM_DARK_ON_LIGHT
+            <br>BICM_LIGHT_ON_DARK
+            <br>BICM_DARK_ON_DARK
+            <br>BICM_LIGHT_ON_LIGHT
+            <br>BICM_DARK_LIGHT_MIXED
+            <br>BICM_DARK_ON_LIGHT_DARK_SURROUNDING
+            <br>BICM_SKIP
         </td>
     </tr>
     <tr>
@@ -48,9 +49,8 @@
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>
-            <li>0: no light reflection.</li>
-            <li>1: has light reflection.</li>
+        <td><b>Remarks</b><br>0: no light reflection.
+            <br>1: has light reflection.
         </td>
     </tr>
     <tr>

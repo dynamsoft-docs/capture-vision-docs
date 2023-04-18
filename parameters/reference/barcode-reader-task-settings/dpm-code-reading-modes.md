@@ -2,10 +2,12 @@
 ## DPMCodeReadingModes
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode to read DPM barcode.
@@ -16,10 +18,9 @@
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>DPMCRM_GENERAL</li>
-            <li>DPMCRM_AUTO</li>
-            <li>DPMCRM_SKIP</li>
+        <td><b>Candidate Mode List</b><br>DPMCRM_GENERAL
+            <br>DPMCRM_AUTO
+            <br>DPMCRM_SKIP
         </td>
     </tr>
     <tr>
