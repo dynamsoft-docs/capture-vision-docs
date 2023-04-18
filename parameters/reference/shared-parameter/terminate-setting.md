@@ -22,39 +22,41 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
 ## As a BarcodeReaderTaskSetting Parameter
 
 <table style = "text-align:left">
-    <thread>
+    <thead>
         <tr>
             <th>Child Parameter Name</th>
             <th>Child Parameter Summary</th>
         </tr>
-    </thread>
-    <tr>
-        <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
-        <td><b>Description</b><br>Specifies a mode for ordering.</td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i></td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>One of the following <b>SectionType</b> as a string.
-            <ul>
-                <li>ST_REGION_PREDETECTION</li>
-                <li>ST_BARCODE_LOCALIZATION</li>
-                <li>ST_BARCODE_DECODING</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "3" style="vertical-align:text-top">Stage<br></td>
-        <td><b>Description</b><br>Specifies a mode for ordering.</td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i></td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>One of the <b>IntermediateResultUnitType</b> as a string. The available stage type is different for each sections. View the <a href="#appendix---available-stage-for-sections">appendix</a> for more details.
-        </td>
-    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
+            <td><b>Description</b><br>Specifies a mode for ordering.</td>
+        </tr>
+        <tr>
+            <td><b>Type</b><br><i>String</i></td>
+        </tr>
+        <tr>
+            <td><b>Range</b><br>One of the following <b>SectionType</b> as a string.
+                <ul>
+                    <li>ST_REGION_PREDETECTION</li>
+                    <li>ST_BARCODE_LOCALIZATION</li>
+                    <li>ST_BARCODE_DECODING</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan = "3" style="vertical-align:text-top">Stage<br></td>
+            <td><b>Description</b><br>Specifies a mode for ordering.</td>
+        </tr>
+        <tr>
+            <td><b>Type</b><br><i>String</i></td>
+        </tr>
+        <tr>
+            <td><b>Range</b><br>One of the <b>IntermediateResultUnitType</b> as a string. The available stage type is different for each sections. View the <a href="#appendix---available-stage-for-sections">appendix</a> for more details.
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 ## As a DocumentNormalizerTaskSetting Parameter
