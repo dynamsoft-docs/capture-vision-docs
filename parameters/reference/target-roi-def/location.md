@@ -1,3 +1,12 @@
+---
+layout: default-layout
+Title: Location - Dynamsoft Capture Vision Parameters
+Description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+Keywords: Location
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
+
 # Location
 
 Define the location of the TargetROI with `reference objects` filter conditions and `offset` parameters.

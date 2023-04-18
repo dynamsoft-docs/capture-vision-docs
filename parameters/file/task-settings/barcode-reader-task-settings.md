@@ -1,9 +1,9 @@
 ---
+layout: default-layout
 title: Barcode Reader Task Setting - Dynamsoft Capture Vision Parameter File
 description: Barcode Reader Task Setting object in the Dynamsoft Capture Vision Parameter File is an object for configuring and organizing the process of barcode reading task.
 keywords: barcode reader,task, setting
 needAutoGenerateSidebar: false
-permalink: 
 ---
 
 # Barcode Reader Task Setting
