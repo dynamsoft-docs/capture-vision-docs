@@ -2,7 +2,7 @@
 layout: default-layout
 Title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
 Description: The parameter TerminateSetting defines the terminate stages of the task.
-Keywords: Max threads
+Keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
@@ -22,10 +22,12 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
 ## As a BarcodeReaderTaskSetting Parameter
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thread>
+        <tr>
+            <th>Child Parameter Name</th>
+            <th>Child Parameter Summary</th>
+        </tr>
+    </thread>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
         <td><b>Description</b><br>Specifies a mode for ordering.</td>
