@@ -10,7 +10,7 @@ Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring o
 
 Filter the reference object by specifying `TargetROI` names.
 
-| ReferenceTargetROIDefNameArray Parameter Details |
+| ReferenceTargetROIDefNameArray Parameter Summary |
 | :------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each member should be a name of `TargetROI` that defined in `TargetROIDefOptions`. |
@@ -20,7 +20,7 @@ Filter the reference object by specifying `TargetROI` names.
 
 Filter the reference object by specifying the type of atomic results. In the `TargetROIs` algorithm task can produce atomic results that can support the localization of the other `TargetROIs`.
 
-| AtomicResultTypeArray Parameter Details |
+| AtomicResultTypeArray Parameter Summary |
 | :------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE` and `ART_FRAME` |
@@ -221,10 +221,8 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </tr>
     <tr>
         <td><b>Range</b><br>"default" or "wholeimage"
-            <ul>
                 <br>"default": Create the offset coordinate system based on the reference object.
                 <br>"wholeimage": Create the offset coordinate system based on the original image.
-            </ul>
         </td>
     </tr>
     <tr>

@@ -17,7 +17,7 @@ Parameter `ContentType` defines which contents are the targeting objects.
 }
 ```
 
-| ContentType Parameter Details |
+| ContentType Parameter Summary |
 | :---------------------------- |
 | **Type**<br>*String* |
 | **Available Content Type**<br><br>CT_DOCUMENT<br>CT_TABLE<br>CT_UNKNOWN |

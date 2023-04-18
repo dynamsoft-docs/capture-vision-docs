@@ -18,7 +18,7 @@ permalink: /parameters/reference/code-specifications.html
 }
 ```
 
-| Brightness Parameter Details|
+| Brightness Parameter Summary |
 | :------------- |
 | **Type**<br>*string array* |
 | **Range**<br>any valid string |

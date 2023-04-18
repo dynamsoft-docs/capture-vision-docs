@@ -21,7 +21,7 @@ Parameter `StartSection` defines the start section of the algorithm task.
 
 ## As a BarcodeReaderTaskSetting Parameter
 
-| StartSection Parameter Details|
+| StartSection Parameter Summary |
 | :---------------------------- |
 | **Type**<br>*string* |
 | **Range**<br>ST_REGION_PREDETECTION<br>ST_BARCODE_LOCALIZATION<br>ST_BARCODE_DECODING |
@@ -29,7 +29,7 @@ Parameter `StartSection` defines the start section of the algorithm task.
 
 ## As a DocumentNormalizerTaskSetting Parameter
 
-| StartSection Parameter Details|
+| StartSection Parameter Summary |
 | :---------------------------- |
 | **Type**<br>*string* |
 | **Range**<br>ST_REGION_PREDETECTION<br>ST_DOCUMENT_DETECTION<br>ST_DOCUMENT_NORMALIZATION |
@@ -37,7 +37,7 @@ Parameter `StartSection` defines the start section of the algorithm task.
 
 ## As a LabelRecognizerTaskSetting Parameter
 
-| StartSection Parameter Details|
+| StartSection Parameter Summary |
 | :---------------------------- |
 | **Type**<br>*string* |
 | **Range**<br>ST_REGION_PREDETECTION<br>ST_TEXT_LINE_LOCALIZATION<br>ST_TEXT_LINE_RECOGNITION |

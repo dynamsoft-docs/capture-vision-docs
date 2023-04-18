@@ -17,7 +17,7 @@ Parameter `DirectoryPath` defines a path when the library have to read files.
 }
 ```
 
-| DirectoryPath Parameter Details|
+| DirectoryPath Parameter Summary |
 | :------------- |
 | **Type**<br>*int[2]* |
 | **Range**<br>[-100, 100] |

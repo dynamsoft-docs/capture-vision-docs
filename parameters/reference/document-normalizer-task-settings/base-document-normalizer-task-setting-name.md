@@ -17,7 +17,7 @@ Specify a `DocumentNormalizerTaskSetting` object name. The current object will i
 }
 ```
 
-| BaseDocumentNormalizerTaskSettingName Parameter Details|
+| BaseDocumentNormalizerTaskSettingName Parameter Summary |
 | :------------------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>One of the existing `DocumentNormalizerTaskSetting` object name. |

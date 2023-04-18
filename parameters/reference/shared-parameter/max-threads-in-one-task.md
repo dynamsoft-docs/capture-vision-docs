@@ -17,7 +17,7 @@ Parameter `MaxThreadsInOneTask` defines the maximum threads that can be consumed
 }
 ```
 
-| MaxThreadsInOneTask Parameter Details|
+| MaxThreadsInOneTask Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 4] |

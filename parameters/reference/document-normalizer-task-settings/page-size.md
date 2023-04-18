@@ -17,7 +17,7 @@ Sets the page size (width by height in pixels) of the normalized image.
 }
 ```
 
-| PageSize Parameter Details |
+| PageSize Parameter Summary |
 | :--------------- |
 | **Type**<br><i>int[2]</i> |
 | **Range**<br>Each member should be a int value betweem [-1,0x7fffffff]. |

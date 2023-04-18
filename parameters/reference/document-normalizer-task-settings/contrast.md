@@ -17,7 +17,7 @@ Parameter `Contrast` specifies the contrast of the normalized image.
 }
 ```
 
-| Contrast Parameter Details |
+| Contrast Parameter Summary |
 | :------------------------ |
 | **Type**<br>*int* |
 | **Range**<br>[-100,100] |
