@@ -40,5 +40,5 @@ Parameter `StartSection` defines the start section of the algorithm task.
 | StartSection Parameter Details|
 | :---------------------------- |
 | **Type**<br>*string* |
-| **Range**<ul><li>ST_REGION_PREDETECTION</li><li>ST_TEXT_LINE_LOCALIZATION</li><li>ST_TEXT_LINE_RECOGNITION</li></ul> |
+| **Range**<br>- ST_REGION_PREDETECTION<br>- ST_TEXT_LINE_LOCALIZATION<br>- ST_TEXT_LINE_RECOGNITION |
 | **Default Value**<br>ST_REGION_PREDETECTION |
