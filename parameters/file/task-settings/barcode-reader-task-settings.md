@@ -4,6 +4,7 @@ title: Barcode Reader Task Setting - Dynamsoft Capture Vision Parameter File
 description: Barcode Reader Task Setting object in the Dynamsoft Capture Vision Parameter File is an object for configuring and organizing the process of barcode reading task.
 keywords: barcode reader,task, setting
 needAutoGenerateSidebar: false
+permalink: /parameters/file/task-settings/barcode-reader-task-settings.html
 ---
 
 # Barcode Reader Task Setting
@@ -24,22 +25,20 @@ All available parameters related to barcode decoding are listed here, along with
 
  | Parameter Name | Description |
  | -------------- | ----------- |
- | [`ExpectedBarcodesCount`]() |  |
- | [`BarcodeFormatIds`]() |  |
- | [`DeblurLevel`]() |  |
- | [`DeblurModes`]() |  |
- 
- | [`LocalizationModes`]() |  |
- | [`DPMCodeReadingModes`]() |  |
- | [`BarcodeColourModes`]() |  |
- | [`BarcodeComplementModes`]() |  |
- | [`DeformationResistingModes`]() |  |
- | [`ResultCoordinateType`]() |  |
- | [`ReturnBarcodeZoneClarity`]() |  |
- | [`TextResultOrderModes`]() |  |
- | [`BaseBarcodeReaderTaskSettingName`]() |  |
+ | [`ExpectedBarcodesCount`]() | Sets the number of barcodes expected to be detected for each image. |
+ | [`BarcodeFormatIds`]() | Sets which barcode format the current FormatSpecification configuration is applied to. |
+ | [`DeblurModes`]() | Sets the mode and priority for deblurring. |
+ | [`LocalizationModes`]() | Sets the mode and priority for barcode localization algorithms. |
+ | [`DPMCodeReadingModes`]() | Sets the mode and priority for DPM code reading. |
+ | [`BarcodeColourModes`]() | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
+ | [`BarcodeComplementModes`]() | Sets the mode and priority to complement the missing parts in the barcode. |
+ | [`DeformationResistingModes`]() | Sets the mode and priority for deformation resisting. |
+ | [`ResultCoordinateType`]() | Specifies the format for the coordinates returned |
+ | [`ReturnBarcodeZoneClarity`]() | Sets whether or not to return the clarity of the barcode zone. |
+ | [`TextResultOrderModes`]() | Sets the mode and priority for the order of the text results returned. |
+ | [`BaseBarcodeReaderTaskSettingName`]() | Sets the name of a BarcodeReaderTaskSetting object to be Inheritanced.|
 
-When DCV executes tasks related to barcode reading, it will process them according to the settings in the `BarcodeReaderTaskSetting`. For example, if you set BarcodeFormatIds = oneD, this Barcode reading task will not recognize barcode formats other than oneD.
+When DCV executes tasks related to barcode reading, it will process them according to the settings in the `BarcodeReaderTaskSetting`. Here is a sample:
 
 ## Barcode Reader Task Setting Example
 
