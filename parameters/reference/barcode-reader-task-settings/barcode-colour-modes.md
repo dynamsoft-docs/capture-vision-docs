@@ -1,5 +1,26 @@
 
-## BarcodeColourModes
+# BarcodeColourModes
+
+Parameter `BarcodeColourModes` defines the barcode colour modes. It consists of one or more modes, with each representing a different colour environment.
+
+## Example
+
+```json
+"BarcodeColourModes" : [
+    {
+        "LightReflection" : 1,
+        "Mode" : "BICM_DARK_ON_LIGHT"
+    }
+]
+```
+
+## Parameter Summary
+
+Parameter `BarcodeColourModes` consist of a group of barcode colour mode objects. Each barcode colour mode object includes a candidate mode and a series of auxiliary parameters.
+
+### Child Parameters
+
+The child parameters of the localization mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
@@ -96,3 +117,58 @@
         </td>
     </tr>
 </table>
+
+### Default Setting
+
+The default settings of BarcodeColourModes is:
+
+```json
+{
+    "BarcodeColourModes" : [
+        {
+            "LibraryFileName" : "",
+            "LibraryParameters" : "",
+            "LightReflection" : 1,
+            "Mode" : "BICM_DARK_ON_LIGHT"
+        }
+    ],
+}
+```
+
+## Candidate Modes Introduction
+
+### BICM_DARK_ON_LIGHT
+
+The target barcode is a dark item on a light background. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- LightReflection
+- LibraryFileName
+- LibraryParameters
+
+### BICM_DARK_ON_LIGHT_DARK_SURROUNDING
+
+The target barcode is a dark item on a light background surrounded by dark. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- LightReflection
+- LibraryFileName
+- LibraryParameters
+
+### BICM_LIGHT_ON_DARK
+
+The target barcode is a light item on a dark background. Not supported yet.
+
+### BICM_DARK_ON_DARK
+
+The target barcode is a dark item on a dark background. Not supported yet.
+
+### BICM_LIGHT_ON_LIGHT
+
+The target barcode is a light item on a light background. Not supported yet.
+
+### BICM_DARK_LIGHT_MIXED
+
+The target barcode is on background which is mixed by dark and light. Not supported yet
