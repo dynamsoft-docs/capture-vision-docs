@@ -33,10 +33,12 @@ noTitleIndex: true
 ## As a BarcodeReaderTaskSetting Parameter
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
         <td><b>Description</b><br>Specifies an algorithm section.</td>
@@ -45,12 +47,9 @@ noTitleIndex: true
         <td><b>Type</b><br><i>String</i></td>
     </tr>
     <tr>
-        <td><b>Range</b><br>One of the following <b>SectionType</b> as a string.
-            <ul>
-                <li>ST_REGION_PREDETECTION</li>
-                <li>ST_BARCODE_LOCALIZATION</li>
-                <li>ST_BARCODE_DECODING</li>
-            </ul>
+        <td><b>Range</b><br>One of the following <b>SectionType</b> as a string.<br>ST_REGION_PREDETECTION
+        <br>ST_BARCODE_LOCALIZATION
+        <br>ST_BARCODE_DECODING
         </td>
     </tr>
     <tr>
@@ -65,10 +64,12 @@ noTitleIndex: true
 ## As a DocumentNormalizerTaskSetting Parameter
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
         <td><b>Description</b><br>Specifies an algorithm section.</td>
@@ -78,11 +79,9 @@ noTitleIndex: true
     </tr>
     <tr>
         <td><b>Range</b><br>One of the following <b>SectionType</b> as a string.
-            <ul>
-                <li>ST_REGION_PREDETECTION</li>
-                <li>ST_DOCUMENT_DETECTION</li>
-                <li>ST_DOCUMENT_NORMALIZATION</li>
-            </ul>
+                <br>ST_REGION_PREDETECTION
+                <br>ST_DOCUMENT_DETECTION
+                <br>ST_DOCUMENT_NORMALIZATION
         </td>
     </tr>
     <tr>
@@ -97,10 +96,12 @@ noTitleIndex: true
 ## As a LabelRecognizerTaskSetting Parameter
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
         <td><b>Description</b><br>Specifies an algorithm section.</td>
@@ -110,11 +111,9 @@ noTitleIndex: true
     </tr>
     <tr>
         <td><b>Range</b><br>One of the following <b>SectionType</b> as a string.
-            <ul>
-                <li>ST_REGION_PREDETECTION</li>
-                <li>ST_TEXT_LINE_LOCALIZATION</li>
-                <li>ST_TEXT_LINE_RECOGNITION</li>
-            </ul>
+                <br>ST_REGION_PREDETECTION
+                <br>ST_TEXT_LINE_LOCALIZATION
+                <br>ST_TEXT_LINE_RECOGNITION
         </td>
     </tr>
     <tr>

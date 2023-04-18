@@ -2,10 +2,12 @@
 ## DeformationResistingModes
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode for deformation resisting.
@@ -16,13 +18,12 @@
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>DRM_GENERAL</li>
-            <li>DRM_BROAD_WARP</li>
-            <li>DRM_LOCAL_REFERENCE</li>
-            <li>DRM_DEWRINKLE</li>
-            <li>DRM_AUTO</li>
-            <li>DRM_SKIP</li>
+        <td><b>Candidate Mode List</b><br>DRM_GENERAL
+            <br>DRM_BROAD_WARP
+            <br>DRM_LOCAL_REFERENCE
+            <br>DRM_DEWRINKLE
+            <br>DRM_AUTO
+            <br>DRM_SKIP
         </td>
     </tr>
     <tr>

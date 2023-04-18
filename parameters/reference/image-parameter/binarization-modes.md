@@ -39,10 +39,12 @@ This parameter helps control the process of binarization, i.e., converting a gra
 Parameter BinarizationModes consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
@@ -53,9 +55,8 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>BM_THRESHOLD</li>
-            <li>BM_LOCAL_BLOCK</li>
+        <td><b>Candidate Mode List</b><br>BM_THRESHOLD
+            <br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
@@ -80,8 +81,7 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>BM_LOCAL_BLOCK</li>
+        <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
@@ -102,8 +102,7 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>BM_LOCAL_BLOCK</li>
+        <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
@@ -124,8 +123,7 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>BM_LOCAL_BLOCK</li>
+        <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
@@ -146,8 +144,7 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>BM_LOCAL_BLOCK</li>
+        <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
@@ -168,8 +165,7 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>BM_THRESHOLD</li>
+        <td><b>Valid For</b><br>BM_THRESHOLD
         </td>
     </tr>
     <tr>

@@ -31,10 +31,12 @@ Filter the reference object by specifying the type of atomic results. In the `Ta
 One of the filter conditions. Filter the reference objects with the decoded barcode information. The parameter `BarcodeFilteringCondition` includes the following child parameters:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">BarcodeFormatIds</td>
         <td><b>Description</b><br>Filter the reference objects by the barcode formats.
@@ -72,10 +74,12 @@ One of the filter conditions. Filter the reference objects with the decoded barc
 One of the filter conditions. Filter the reference objects with the frame information. The parameter `FrameFilteringCondition` includes the following child parameters:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">ImageDimensionRange</td>
         <td><b>Description</b><br>Filter the reference objects by the dimension of their original images.
@@ -135,10 +139,12 @@ One of the filter conditions. Filter the reference objects with the frame inform
 One of the filter conditions. Filter the reference objects with the text line content. The parameter `TextLineFilteringCondition` includes the following child parameters:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">LineNumbers</td>
         <td><b>Description</b><br>Filter the reference objects by the line numbers.
@@ -180,10 +186,12 @@ One of the filter conditions. Filter the reference objects with the text line co
 Parameter `Offset` is an object that defines how the location is offset from the `reference object` or the original image.
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectOriginIndex<br></td>
         <td><b>Description</b><br>Define which point of the reference onject will be set as the origin of the coordinate system.
@@ -214,8 +222,8 @@ Parameter `Offset` is an object that defines how the location is offset from the
     <tr>
         <td><b>Range</b><br>"default" or "wholeimage"
             <ul>
-                <li>"default": Create the offset coordinate system based on the reference object.</li>
-                <li>"wholeimage": Create the offset coordinate system based on the original image.</li>
+                <br>"default": Create the offset coordinate system based on the reference object.
+                <br>"wholeimage": Create the offset coordinate system based on the original image.
             </ul>
         </td>
     </tr>
@@ -257,10 +265,8 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </tr>
     <tr>
         <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
-        <ul>
-            <li>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.</li>
-            <li>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.</li>
-        </ul>
+            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
     </tr>
     <!---->
     <tr>
@@ -278,10 +284,8 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </tr>
     <tr>
         <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
-        <ul>
-            <li>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.</li>
-            <li>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.</li>
-        </ul>
+            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
     </tr>
     <!---->
     <tr>
@@ -299,10 +303,8 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </tr>
     <tr>
         <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
-        <ul>
-            <li>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.</li>
-            <li>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.</li>
-        </ul>
+            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
     </tr>
     <!---->
     <tr>
@@ -320,9 +322,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </tr>
     <tr>
         <td><b>Remarks</b><br>When MeasureInPercentage = 1:
-        <ul>
-            <li>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.</li>
-            <li>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.</li>
-        </ul>
+            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
     </tr>
 </table>

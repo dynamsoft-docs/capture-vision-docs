@@ -34,10 +34,12 @@ Candidate Mode List
 - CNM_SKIP
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>
@@ -50,12 +52,10 @@ Candidate Mode List
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <ul>
-                <li>CNM_MORPH</li>
-                <li>CNM_AUTO</li>
-                <li>CNM_SKIP</li>
-            </ul>
+        <td><b>Candidate Mode List</b>
+                <br>CNM_MORPH
+                <br>CNM_AUTO
+                <br>CNM_SKIP
         </td>
     </tr>
     <tr>

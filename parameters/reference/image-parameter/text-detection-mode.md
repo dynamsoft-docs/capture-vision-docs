@@ -29,10 +29,12 @@ TextDetectionMode determines how to detect the text area. For tasks like barcode
 Parameter TextDetectionMode consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
@@ -43,10 +45,9 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>TDM_WORD</li>
-            <li>TDM_LINE</li>
-            <li>TDM_LAYOUT</li>
+        <td><b>Candidate Mode List</b><br>TDM_WORD
+            <br>TDM_LINE
+            <br>TDM_LAYOUT
         </td>
     </tr>
     <tr>
@@ -77,9 +78,9 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">CharHeightRange<br>(Optional)</td>
         <td><b>Description</b><br>Sets the range of letter height in pixel or a percentage.
-        <li>Format: [MinHeight, MaxHeight, ByThousandth].</li>
-        <li>if ByThousandth=1, the allowed values for MinHeight/MaxHeight=[1, 1000]</li>
-        <li>if ByThousandth=0, the allowed values for MinHeight/MaxHeight=[1, 0x7fffffff]</li>
+        <br>Format: [MinHeight, MaxHeight, ByThousandth].
+        <br>if ByThousandth=1, the allowed values for MinHeight/MaxHeight=[1, 1000]
+        <br>if ByThousandth=0, the allowed values for MinHeight/MaxHeight=[1, 0x7fffffff]
         </td>
     </tr>
     <tr>
@@ -116,8 +117,7 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>
-            <li>TDM_LINE</li>
+        <td><b>Valid For</b><br>TDM_LINE
         </td>
     </tr>
     <tr>

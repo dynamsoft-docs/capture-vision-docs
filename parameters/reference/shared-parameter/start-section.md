@@ -24,7 +24,7 @@ Parameter `StartSection` defines the start section of the algorithm task.
 | StartSection Parameter Details|
 | :---------------------------- |
 | **Type**<br>*string* |
-| **Range**<ul><li>ST_REGION_PREDETECTION</li><li>ST_BARCODE_LOCALIZATION</li><li>ST_BARCODE_DECODING</li></ul> |
+| **Range**<br>ST_REGION_PREDETECTION<br>ST_BARCODE_LOCALIZATION<br>ST_BARCODE_DECODING |
 | **Default Value**<br>ST_REGION_PREDETECTION |
 
 ## As a DocumentNormalizerTaskSetting Parameter
@@ -32,7 +32,7 @@ Parameter `StartSection` defines the start section of the algorithm task.
 | StartSection Parameter Details|
 | :---------------------------- |
 | **Type**<br>*string* |
-| **Range**<ul><li>ST_REGION_PREDETECTION</li><li>ST_DOCUMENT_DETECTION</li><li>ST_DOCUMENT_NORMALIZATION</li></ul> |
+| **Range**<br>ST_REGION_PREDETECTION<br>ST_DOCUMENT_DETECTION<br>ST_DOCUMENT_NORMALIZATION |
 | **Default Value**<br>ST_REGION_PREDETECTION |
 
 ## As a LabelRecognizerTaskSetting Parameter
@@ -40,5 +40,5 @@ Parameter `StartSection` defines the start section of the algorithm task.
 | StartSection Parameter Details|
 | :---------------------------- |
 | **Type**<br>*string* |
-| **Range**<br>- ST_REGION_PREDETECTION<br>- ST_TEXT_LINE_LOCALIZATION<br>- ST_TEXT_LINE_RECOGNITION |
+| **Range**<br>ST_REGION_PREDETECTION<br>ST_TEXT_LINE_LOCALIZATION<br>ST_TEXT_LINE_RECOGNITION |
 | **Default Value**<br>ST_REGION_PREDETECTION |

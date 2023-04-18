@@ -28,10 +28,12 @@ noTitleIndex: true
 `LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode for line extraction.
@@ -42,9 +44,8 @@ noTitleIndex: true
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li><a href = "#lemgeneral">LEM_GENERAL</a>
-            <li><a href = "#lemmarginbased">LEM_MARGIN_BASED</a>
+        <td><b>Candidate Mode List</b><br><a href = "#lemgeneral">LEM_GENERAL</a>
+            <br><a href = "#lemmarginbased">LEM_MARGIN_BASED</a>
         </td>
     </tr>
     <tr>

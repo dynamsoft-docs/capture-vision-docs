@@ -2,10 +2,12 @@
 ## BarcodeComplementModes
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a barcode complement mode.
@@ -16,10 +18,9 @@
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>BCM_GENERAL</li>
-            <li>BCM_AUTO</li>
-            <li>BCM_SKIP</li>
+        <td><b>Candidate Mode List</b><br>BCM_GENERAL
+            <br>BCM_AUTO
+            <br>BCM_SKIP
         </td>
     </tr>
     <tr>

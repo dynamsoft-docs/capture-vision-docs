@@ -40,10 +40,12 @@ ScaleUpModes is for controlling the scale-up process when targets in the image a
 Parameter ScaleUpModes consists of one or more of the following modes, each mode representing a different scale up algorithm:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
@@ -54,23 +56,22 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>
-            <li>SUM_LINEAR_INTERPOLATION</li>
-            <li>SUM_NEAREST_NEIGHBOUR_INTERPOLATION</li>
-            <li>SUM_AUTO</li>
-            <li>SUM_SKIP</li>
+        <td><b>Candidate Mode List</b><br>SUM_LINEAR_INTERPOLATION
+            <br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION
+            <br>SUM_AUTO
+            <br>SUM_SKIP
         </td>
     </tr>
     <tr>
         <td><b>Default Value</b><br>
-        <li>SUM_AUTO</li>
+        <br>SUM_AUTO
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">AcuteAngleWithXThreshold<br>(Optional)</td>
         <td><b>Description</b><br>Sets the acute angle threshold for barcode scale-up.
-        <li>-1: means automatically set by the library.</li>
-        <li>If the module size of the barcode is smaller than the ModuleSizeThreshold and the acute angle with X of the barcode is larger than the AcuteAngleWithXThreshold, the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= TargetModuleSize.</li>
+        <br>-1: means automatically set by the library.
+        <br>If the module size of the barcode is smaller than the ModuleSizeThreshold and the acute angle with X of the barcode is larger than the AcuteAngleWithXThreshold, the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= TargetModuleSize.
         </td>
     </tr>
     <tr>
@@ -87,15 +88,15 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-        <li>SUM_LINEAR_INTERPOLATION</li>
-        <li>SUM_NEAREST_NEIGHBOUR_INTERPOLATION</li>
+        <br>SUM_LINEAR_INTERPOLATION
+        <br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">ModuleSizeThreshold<br>(Optional)</td>
         <td><b>Description</b><br>Sets the module size threshold for barcode scale-up.
-        <li>0: means automatically set by the library.</li>
-        <li>If the module size of the barcode is smaller than the ModuleSizeThreshold and the acute angle with X of the barcode is larger than the AcuteAngleWithXThreshold, the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= TargetModuleSize.</li>
+        <br>0: means automatically set by the library.
+        <br>If the module size of the barcode is smaller than the ModuleSizeThreshold and the acute angle with X of the barcode is larger than the AcuteAngleWithXThreshold, the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= TargetModuleSize.
         </td>
     </tr>
     <tr>
@@ -112,15 +113,15 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-        <li>SUM_LINEAR_INTERPOLATION</li>
-        <li>SUM_NEAREST_NEIGHBOUR_INTERPOLATION</li>
+        <br>SUM_LINEAR_INTERPOLATION
+        <br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">TargetModuleSize<br>(Optional)</td>
         <td><b>Description</b><br>Sets the module size threshold for barcode scale-up.
-        <li>0: means automatically set by the library.</li>
-        <li>If the module size of the barcode is smaller than the ModuleSizeThreshold and the acute angle with X of the barcode is larger than the AcuteAngleWithXThreshold, the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= TargetModuleSize.</li>
+        <br>0: means automatically set by the library.
+        <br>If the module size of the barcode is smaller than the ModuleSizeThreshold and the acute angle with X of the barcode is larger than the AcuteAngleWithXThreshold, the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= TargetModuleSize.
         </td>
     </tr>
     <tr>
@@ -137,14 +138,14 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-        <li>SUM_LINEAR_INTERPOLATION</li>
-        <li>SUM_NEAREST_NEIGHBOUR_INTERPOLATION</li>
+        <br>SUM_LINEAR_INTERPOLATION
+        <br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">LetterHeightThreshold<br>(Optional)</td>
         <td><b>Description</b><br>Sets the letter height threshold for character scale-up.
-        <li>0 : means automatically set by the library. If the average letter height of a text line is smaller than the LetterHeightThreshold, the image will be enlarged to N times (N=2,4,8…) till N * LetterHeight >= TargetLetterHeight.</li>
+        <br>0 : means automatically set by the library. If the average letter height of a text line is smaller than the LetterHeightThreshold, the image will be enlarged to N times (N=2,4,8…) till N * LetterHeight >= TargetLetterHeight.
         </td>
     </tr>
     <tr>
@@ -161,14 +162,14 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-        <li>SUM_LINEAR_INTERPOLATION</li>
-        <li>SUM_NEAREST_NEIGHBOUR_INTERPOLATION</li>
+        <br>SUM_LINEAR_INTERPOLATION
+        <br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">TargetLetterHeight<br>(Optional)</td>
         <td><b>Description</b><br>Sets the target letter height for character scale-up.
-        <li>0 : means automatically set by the library.</li>
+        <br>0 : means automatically set by the library.
         </td>
     </tr>
     <tr>
@@ -185,8 +186,8 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-        <li>SUM_LINEAR_INTERPOLATION</li>
-        <li>SUM_NEAREST_NEIGHBOUR_INTERPOLATION</li>
+        <br>SUM_LINEAR_INTERPOLATION
+        <br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION
         </td>
     </tr>
     <tr>

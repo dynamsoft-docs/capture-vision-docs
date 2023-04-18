@@ -24,10 +24,12 @@ noTitleIndex: true
 `QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
 
 <table style = "text-align:left">
-    <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode for quadrilateral detection.
@@ -38,7 +40,7 @@ noTitleIndex: true
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br><li><a href = "#dmperspectivecorrection">QDM_GENERAL</a>
+        <td><b>Candidate Mode List</b><br><br><a href = "#dmperspectivecorrection">QDM_GENERAL</a>
         </td>
     </tr>
     <tr>
