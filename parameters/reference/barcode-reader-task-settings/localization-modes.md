@@ -12,6 +12,8 @@ noTitleIndex: true
 
 LocalizationModes determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
 
+## Example
+
 ```json
 "LocalizationModes" :
 [
@@ -30,6 +32,8 @@ LocalizationModes determines how to localize barcodes. It consists of one or mor
 
 Parameter `LocalizationModes` consist of a group of localizaion mode objects. Each localization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
 
+### Child Parameters
+
 <table style = "text-align:left">
     <tr>
         <th>Child Parameter Name</th>
@@ -46,15 +50,15 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Candidate Mode List</b><br>
-            <li>LM_CONNECTED_BLOCKS</li>
-            <li>LM_STATISTICS</li>
-            <li>LM_LINES</li>
-            <li>LM_SCAN_DIRECTLY</li>
-            <li>LM_STATISTICS_MARKS</li>
-            <li>LM_STATISTICS_POSTAL_CODE</li>
-            <li>LM_CENTRE</li>
-            <li>LM_ONED_FAST_SCAN</li>
-            <li>LM_SKIP</li>
+            LM_CONNECTED_BLOCKS<br>
+            LM_STATISTICS<br>
+            LM_LINES<br>
+            LM_SCAN_DIRECTLY<br>
+            LM_STATISTICS_MARKS<br>
+            LM_STATISTICS_POSTAL_CODE<br>
+            LM_CENTRE<br>
+            LM_ONED_FAST_SCAN<br>
+            LM_SKIP<br>
         </td>
     </tr>
     <tr>
@@ -80,8 +84,8 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>LM_SCAN_DIRECTLY</li>
-            <li>LM_ONED_FAST_SCAN</li>
+            LM_SCAN_DIRECTLY<br>
+            LM_ONED_FAST_SCAN<br>
         </td>
     </tr>
     <tr>
@@ -103,8 +107,8 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>LM_SCAN_DIRECTLY</li>
-            <li>LM_ONED_FAST_SCAN</li>
+            LM_SCAN_DIRECTLY<br>
+            LM_ONED_FAST_SCAN<br>
         </td>
     </tr>
     <tr>
@@ -126,7 +130,7 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>LM_ONED_FAST_SCAN</li>
+            LM_ONED_FAST_SCAN<br>
         </td>
     </tr>
     <tr>
@@ -148,7 +152,7 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>LM_SCAN_DIRECTLY</li>
+            LM_SCAN_DIRECTLY<br>
         </td>
     </tr>
     <tr>
@@ -169,7 +173,7 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>All candidate modes.
         </td>
     </tr>
     <tr>
@@ -190,10 +194,12 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>All candidate modes.
         </td>
     </tr>
 </table>
+
+### Default Settings
 
 The default settings of LocalizationModes is:
 
