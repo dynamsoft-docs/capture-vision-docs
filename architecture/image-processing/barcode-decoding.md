@@ -44,7 +44,7 @@ This section consists of the following stages:
 
 Each of these stages has its own output (known as an intermediate result) and usually a specific parameter that can regulate the operation:
 
-| Stage Name            | Intermediate Result Type                  | Related Parameter                                                                                                     |
+| Stage                 | Intermediate Result Type                  | Related Parameter                                                                                                     |
 | --------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Cropping              | `IRUT_COLOUR_IMAGE`                       | N/A                                                                                                                   |
 | Grayscaling           | `IRUT_GRAYSCALE_IMAGE`                    | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                      |

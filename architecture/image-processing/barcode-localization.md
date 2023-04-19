@@ -43,7 +43,7 @@ This section consists of multiple stages which forms a fixed and relatively comp
 
 Each of these stages has its own output (known as an intermediate result) and usually a specific parameter that can regulate the operation:
 
-| Stage Name          | Intermediate Result Type       | Related Parameter                                                                                                                                                                                                |
+| Stage               | Intermediate Result Type       | Related Parameter                                                                                                                                                                                                |
 | ------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contour-locating    | `IRUT_CONTOURS`                | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) <br/>[`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/barcode-format-ids.md)   |
 | Line-locating       | `IRUT_LINE_SEGMENTS`           | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) <br/>[`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/barcode-format-ids.md)   |

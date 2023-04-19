@@ -56,7 +56,7 @@ The algorithm first finds the contour of the target item and extracts line segme
 
 Each of these stages has its own output (known as an intermediate result) and usually a specific parameter that can regulate the operation:
 
-| Stage Name                   | Intermediate Result Type    | Related Parameter                                                                                                   |
+| Stage                        | Intermediate Result Type    | Related Parameter                                                                                                   |
 | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Contour-locating             | `IRUT_CONTOURS`             | N/A                                                                                                                 |
 | Line-locating                | `IRUT_LINE_SEGMENTS`        | [`LineExtractionModes`](../../parameters/reference/document-normalizer-task-settings/line-extraction-modes.md)      |

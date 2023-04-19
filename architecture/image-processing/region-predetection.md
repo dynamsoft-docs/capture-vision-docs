@@ -42,7 +42,7 @@ This section consists of multiple stages:
 
 Each of the five stages has its own output (known as an intermediate result) and a specific parameter that can regulate the operation:
 
-| Stage Name    | Intermediate Result Type           | Related Parameter                                                                                               |
+| Stage         | Intermediate Result Type           | Related Parameter                                                                                               |
 | ------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Cropping      | `IRUT_COLOUR_IMAGE`                | [`Location`](../../parameters/reference/target-roi-def/location.md)                                             |
 | Down-scaling  | `IRUT_SCALED_DOWN_COLOUR_IMAGE`    | [`ScaleDownThreshold`](../../parameters/reference/image-parameter/scale-down-threshold.md)                      |

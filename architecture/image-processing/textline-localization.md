@@ -38,6 +38,6 @@ This section consists of only one stage:
 
 ## Output and Parameters
 
-| Stage Name         | Intermediate Result Type    | Related Parameter |
+| Stage              | Intermediate Result Type    | Related Parameter |
 | ------------------ | --------------------------- | ----------------- |
 | Text-line-locating | `IRUT_LOCALIZED_TEXT_LINES` | N/A               |
