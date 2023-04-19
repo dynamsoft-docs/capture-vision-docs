@@ -5,7 +5,7 @@ description: This article introduces Semantic Processing Section in the Dynamsof
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/image-processing/semantic-processing.html
+permalink: /architecture/semantic-processing.html
 ---
 
 # Semantic Processing
