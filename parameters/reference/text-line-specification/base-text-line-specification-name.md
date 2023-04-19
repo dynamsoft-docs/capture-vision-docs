@@ -22,3 +22,4 @@ Specify a `TextLineSpecification` object name. The current object will inherit t
 | **Type**<br>*String* |
 | **Range**<br>One of the existing `TextLineSpecification` object name. |
 | **Default Value**<br>"" |
+| **Remarks**<br>The default value "" means this object don't inherit the settings of another object. |
