@@ -1,5 +1,36 @@
+---
+layout: default-layout
+Title: BarcodeComplementModes - Dynamsoft Barcode Reader Parameters
+Description: The parameter BarcodeComplementModes of Dynamsoft Barcode Reader defines the barcode colour modes.
+Keywords: Barcode complement modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
 
 ## BarcodeComplementModes
+
+Parameter `BarcodeComplementModes` defines how to complement the missing parts of a barcode.
+
+## Example
+
+```json
+{
+    "BarcodeComplementModes": [
+        {
+            "Mode": "BCM_GENERAL" 
+        }
+    ]
+}
+```
+
+## Parameter Summary
+
+Parameter `BarcodeComplementModes` consist of a group of barcode complement mode objects. Each barcode complement mode object includes a candidate mode and a series of auxiliary parameters.
+
+### Child Parameters
+
+The child parameters of the barcode complement mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
@@ -70,3 +101,20 @@
         </td>
     </tr>
 </table>
+
+### Default Settings
+
+## Candidate Modes Introduction
+
+### BCM_GENERAL
+
+Complements the barcode using the general algorithm. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- LibraryFileName
+- LibraryParameters
+
+### BCM_AUTO
+
+Lets the library choose a mode automatically. Not supported yet

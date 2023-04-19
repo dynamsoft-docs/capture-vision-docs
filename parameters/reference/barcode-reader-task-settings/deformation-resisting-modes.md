@@ -1,5 +1,37 @@
+---
+layout: default-layout
+Title: DeformationResistingModes - Dynamsoft Barcode Reader Parameters
+Description: The parameter DeformationResistingModes of Dynamsoft Barcode Reader defines how to handle distorted and deformed barcodes.
+Keywords: Deblur modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
 
-## DeformationResistingModes
+# DeformationResistingModes
+
+Parameter `DeformationResistingModes` defines how to handle distorted and deformed barcodes.
+
+## Example
+
+```json
+{
+    "DeformationResistingModes" :
+    [
+        {
+            "Mode" : "DRM_SKIP"
+        }
+    ]
+}
+```
+
+## Parameter Summary
+
+Parameter `DeformationResistingModes` consist of a group of deformation resisting mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary parameters.
+
+### Child Parameters
+
+The child parameters of the deformation resisting mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
@@ -116,3 +148,48 @@
         </td>
     </tr>
 </table>
+
+### Default Settings
+
+## Candidate Modes Introduction
+
+### DRM_GENERAL
+
+Resists deformation using the general algorithm. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- Level
+- LibraryFileName
+- LibraryParameters
+
+### DRM_BROAD_WARP
+
+Resists deformation when the barcode is warped gently. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- BinarizationMode
+- GrayscaleEnhancementMode
+
+### DRM_LOCAL_REFERENCE
+
+Resists deformation for barcodes with minor deformation in local modules. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- BinarizationMode
+- GrayscaleEnhancementMode
+
+### DRM_DEWRINKLE
+
+Resists deformation for barcodes on a wrinkled surface. This mode has the following arguments for further customizing.
+
+**Available auxiliary parameters:**
+
+- BinarizationMode
+- GrayscaleEnhancementMode
+
+### DRM_AUTO
+
+Lets the library choose a mode automatically.

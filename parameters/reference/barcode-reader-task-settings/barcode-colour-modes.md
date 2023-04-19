@@ -1,3 +1,12 @@
+---
+layout: default-layout
+Title: BarcodeColourModes - Dynamsoft Barcode Reader Parameters
+Description: The parameter BarcodeColourModes of Dynamsoft Barcode Reader defines the barcode colour modes.
+Keywords: Barcode colour modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
 
 # BarcodeColourModes
 
@@ -6,7 +15,8 @@ Parameter `BarcodeColourModes` defines the barcode colour modes. It consists of 
 ## Example
 
 ```json
-"BarcodeColourModes" : [
+"BarcodeColourModes" : 
+[
     {
         "LightReflection" : 1,
         "Mode" : "BICM_DARK_ON_LIGHT"
@@ -20,7 +30,7 @@ Parameter `BarcodeColourModes` consist of a group of barcode colour mode objects
 
 ### Child Parameters
 
-The child parameters of the localization mode object are shown as follow:
+The child parameters of the barcode colour mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
