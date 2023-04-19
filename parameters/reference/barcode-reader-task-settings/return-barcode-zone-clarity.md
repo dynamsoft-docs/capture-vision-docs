@@ -6,6 +6,7 @@ Keywords: Barcode zone clarity
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/return-barcode-zone-clarity.html
 ---
 
 # ReturnBarcodeZoneClarity

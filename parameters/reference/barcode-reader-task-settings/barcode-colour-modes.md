@@ -6,6 +6,7 @@ Keywords: Barcode colour modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/barcode-colour-modes.html
 ---
 
 # BarcodeColourModes

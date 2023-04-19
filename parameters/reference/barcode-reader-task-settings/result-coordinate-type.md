@@ -6,6 +6,7 @@ Keywords: ResultCoordinateType
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/result-coordinate-type.html
 ---
 
 # ResultCoordinateType

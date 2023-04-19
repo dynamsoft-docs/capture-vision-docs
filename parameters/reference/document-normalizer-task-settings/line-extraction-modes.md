@@ -5,6 +5,7 @@ Description: The parameter LineExtractionModes of Dynamsoft Document Normalizer 
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/line-extraction-modes.html
 ---
 
 # LineExtractionModes

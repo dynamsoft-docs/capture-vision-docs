@@ -5,6 +5,7 @@ Description: The parameter DeskewMode of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/deskew-mode.html
 ---
 
 # DeskewMode

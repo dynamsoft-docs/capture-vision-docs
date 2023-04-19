@@ -5,6 +5,7 @@ Description: The parameter Brightness of Dynamsoft Document Normalizer defines t
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/brightness.html
 ---
 
 # Brightness

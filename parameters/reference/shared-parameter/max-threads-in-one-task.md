@@ -5,6 +5,7 @@ Description: The parameter MaxThreadsInOneTask defines the maximum threads that 
 Keywords: Max threads
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/shared-parameter/max-threads-in-one-task.html
 ---
 
 # MaxThreadsInOneTask

@@ -5,6 +5,7 @@ Description: The parameter BaseDocumentNormalizerTaskSettingName of Dynamsoft Do
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/base-document-normalizer-task-setting-name.html
 ---
 
 # BaseDocumentNormalizerTaskSettingName

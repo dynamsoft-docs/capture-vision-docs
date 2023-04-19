@@ -5,6 +5,7 @@ Description: The parameter StartSection defines the start section of the algorit
 Keywords: Start section
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/shared-parameter/start-section.html
 ---
 
 # StartSection

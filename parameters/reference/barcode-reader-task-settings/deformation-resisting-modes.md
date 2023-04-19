@@ -6,6 +6,7 @@ Keywords: Deblur modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/deformation-resisting-modes.html
 ---
 
 # DeformationResistingModes

@@ -5,6 +5,7 @@ Description: The parameter PageSize of Dynamsoft Document Normalizer is XXX.
 Keywords: Page size
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/page-size.html
 ---
 
 # PageSize

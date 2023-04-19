@@ -6,6 +6,7 @@ Keywords: Barcode format IDs
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/barcode-format-ids.html
 ---
 
 # BarcodeFormatIds

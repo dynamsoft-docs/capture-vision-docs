@@ -5,6 +5,7 @@ Description: The parameter Contrast of Dynamsoft Document Normalizer specifies t
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/contrast.html
 ---
 
 # Contrast

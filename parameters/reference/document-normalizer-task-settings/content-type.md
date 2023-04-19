@@ -5,6 +5,7 @@ Description: The parameter ContentType of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/content-type.html
 ---
 
 # ContentType

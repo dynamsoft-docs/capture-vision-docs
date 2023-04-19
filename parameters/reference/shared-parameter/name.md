@@ -5,6 +5,7 @@ Description: The parameter Name of Dynamsoft Capture Vision defines the unique i
 Keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/shared-parameter/name.html
 ---
 
 # Name

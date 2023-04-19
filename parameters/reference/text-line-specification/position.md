@@ -5,6 +5,7 @@ Description: The parameter {} of Dynamsoft Label Recognizer defines how to norma
 Keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/text-line-specification/position.html
 ---
 
 # Text Line Area Points

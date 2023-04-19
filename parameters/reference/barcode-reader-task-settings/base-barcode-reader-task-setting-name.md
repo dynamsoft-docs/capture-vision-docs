@@ -6,6 +6,7 @@ Keywords: Base barcode reader task setting name
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/base-barcode-reader-task-setting-name.html
 ---
 
 #  BaseBarcodeReaderTaskSettingName

@@ -5,6 +5,7 @@ Description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Nor
 Keywords: Quadrilateral detection
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral-detection-modes.html
 ---
 
 # QuadrilateralDetectionModes

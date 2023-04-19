@@ -6,6 +6,7 @@ Keywords: Text result order modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/text-result-order-modes.html
 ---
 
 # TextResultOrderModes
@@ -16,7 +17,8 @@ Parameter `TextResultOrderModes` defines the order of the returned text results.
 
 ```json
 {
-    "TextResultOrderModes" : [
+    "TextResultOrderModes" :
+    [
         {
             "Mode" : "TROM_CONFIDENCE"
         },

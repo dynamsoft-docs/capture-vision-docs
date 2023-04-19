@@ -6,6 +6,7 @@ Keywords: Localization modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/localization-modes.html
 ---
 
 # LocalizationModes

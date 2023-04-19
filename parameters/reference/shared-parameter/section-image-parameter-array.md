@@ -5,6 +5,7 @@ Description: The parameter SectionImageParameterArray defines the image processi
 Keywords: Section image parameter
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/shared-parameter/section-image-parameter-array.html
 ---
 
 # SectionImageParameterArray

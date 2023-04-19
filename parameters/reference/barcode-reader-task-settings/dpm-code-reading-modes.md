@@ -6,6 +6,7 @@ Keywords: DPM code reading modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/dpm-code-reading-modes.html
 ---
 
 # DPMCodeReadingModes

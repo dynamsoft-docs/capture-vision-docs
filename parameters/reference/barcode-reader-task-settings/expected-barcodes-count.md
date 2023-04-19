@@ -6,6 +6,7 @@ Keywords: Expected barcodes count
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/expected-barcodes-count.html
 ---
 
 # ExpectedBarcodesCount
