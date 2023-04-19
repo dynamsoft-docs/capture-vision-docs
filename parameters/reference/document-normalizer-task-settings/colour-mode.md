@@ -12,11 +12,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/colour-mode.h
 
 Parameter `ColourMode` defines the output colour mode of the normalized image. It influence the normalized image that output by both `CapturedResult` and `IntermediateResult`.
 
+## Example
+
 ```json
 {
     "ColourMode": "ICM_GRAYSCALE"
 }
 ```
+
+## Parameter Summary
 
 | ColourMode Parameter Summary |
 | :--------------------------- |

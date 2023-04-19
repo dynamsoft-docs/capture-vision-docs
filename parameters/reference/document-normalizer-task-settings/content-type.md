@@ -12,11 +12,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/content-type.
 
 Parameter `ContentType` defines which contents are the targeting objects.
 
+## Example
+
 ```json
 {
     "ContentType": "CT_TABLE"
 }
 ```
+
+## Parameter Summary
 
 | ContentType Parameter Summary |
 | :---------------------------- |

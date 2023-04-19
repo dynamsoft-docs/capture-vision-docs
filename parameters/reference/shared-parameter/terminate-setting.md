@@ -20,7 +20,11 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
 }
 ```
 
-## As a BarcodeReaderTaskSetting Parameter
+## Parameter Summary
+
+Parameter `TerminateSetting` is available for  `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting` and `DocumentNormalizerTaskSetting`. It has different parameter range and default value under different parent object.
+
+### As a BarcodeReaderTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -58,7 +62,7 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
     </tbody>
 </table>
 
-## As a DocumentNormalizerTaskSetting Parameter
+### As a DocumentNormalizerTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -94,7 +98,7 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
     </tr>
 </table>
 
-## As a LabelRecognizerTaskSetting Parameter
+### As a LabelRecognizerTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>

@@ -12,11 +12,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/brightness.ht
 
 Parameter `Brightness` defines the brightness of the normalized image.
 
+## Example
+
 ```json
 {
     "Brightness": 0
 }
 ```
+
+## Parameter Summary
 
 | Brightness Parameter Summary |
 | :------------- |

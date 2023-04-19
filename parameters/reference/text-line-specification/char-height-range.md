@@ -12,21 +12,18 @@ permalink: /parameters/reference/text-line-specification/char-height-range.html
 
 `CharHeightRange` defines the range of the character height.
 
+## Example
+
 ```json
 {
     "CharHeightRange": [ 800, 1000, 1 ]
 }
-{
-    "CharHeightRange": {
-        "Minimum": 800,
-        "Maximum": 1000,
-        "MeasureInThousandth": 1
-    }
-}
 ```
+
+## Parameter Summary
 
 | CharHeightRange Parameter Summary |
 | :-------------------------------- |
 | **Type**<br>*int Array* |
-| **Range**<br> |
+| **Range**<br>The first 2 members should be int values between 1 to 1000. The third member should be 0 or 1. |
 | **Default Value**<br>"" |

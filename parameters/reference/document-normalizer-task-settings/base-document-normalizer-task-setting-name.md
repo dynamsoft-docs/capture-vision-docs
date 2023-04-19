@@ -12,11 +12,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/base-document
 
 Specify a `DocumentNormalizerTaskSetting` object name. The current object will inherit the parameter settings of the specified object.
 
+## Example
+
 ```json
 {
     "BaseDocumentNormalizerTaskSettingName": "DD_0"
 }
 ```
+
+## Parameter Summary
 
 | BaseDocumentNormalizerTaskSettingName Parameter Summary |
 | :------------------------------------------- |

@@ -12,11 +12,15 @@ permalink: /parameters/reference/shared-parameter/name.html
 
 Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier.
 
+## Example
+
 ```json
 {
     "Name" : "cv_0"
 }
 ```
+
+## Parameter Summary
 
 | Parameter Details |
 | :----------------------------------- |

@@ -12,6 +12,8 @@ permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-
 
 `ConrnerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
 
+## Example
+
 ```json
 {
     "ConrnerAngleRangeArray":
@@ -24,7 +26,11 @@ permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-
 }
 ```
 
+## Parameter Summary
+
 `ConrnerAngleRangeArray` consist one or more angle range objects. Each object contains a maximum and a minimum value of the angle.
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>

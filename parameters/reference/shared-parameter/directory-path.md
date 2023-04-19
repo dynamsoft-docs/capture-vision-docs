@@ -12,17 +12,18 @@ permalink: /parameters/reference/shared-parameter/directory-path.html
 
 Parameter `DirectoryPath` defines a path when the library have to read files.
 
+## Example
+
 ```json
 {
     "DirectoryPath" : "D:\\CharacterModel\\"
 }
 ```
 
+## Parameter Summary
+
 | DirectoryPath Parameter Summary |
 | :------------- |
-| **Type**<br>*int[2]* |
-| **Range**<br>[-100, 100] |
-| **Default Value**<br>0 |
+| **Type**<br>*string* |
 
-- CharacterModel
-- ImageSourceOptions
+> Note: Parameter `DirectoryPath` is available for  `CharacterModel`, `ImageSourceOptions`. It has the same parameter type under different parent object.

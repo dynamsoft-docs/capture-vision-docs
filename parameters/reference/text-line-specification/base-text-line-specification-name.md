@@ -12,11 +12,15 @@ permalink: /parameters/reference/text-line-specification/base-text-line-specific
 
 Specify a `TextLineSpecification` object name. The current object will inherit the parameter settings of the specified object.
 
+## Example
+
 ```json
 {
     "BaseTextLineSpecificationName": "LS_0"
 }
 ```
+
+## Parameter Summary
 
 | BaseTextLineSpecificationName Parameter Summary |
 | :----------------------------------------- |

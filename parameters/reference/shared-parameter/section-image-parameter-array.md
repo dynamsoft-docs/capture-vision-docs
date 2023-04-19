@@ -12,6 +12,8 @@ permalink: /parameters/reference/shared-parameter/section-image-parameter-array.
 
 `SectionImageParameterArray` is the parameter for you to set the image processing algorithms that implemented in the task. Each member of the array defines an algorithm section as well as its image processing parameters.
 
+## Example
+
 ```json
 {
     "SectionImageParameterArray":
@@ -29,9 +31,11 @@ permalink: /parameters/reference/shared-parameter/section-image-parameter-array.
 }
 ```
 
-> Note: Parameter `SectionImageParameterArray` is available for  `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting` and `DocumentNormalizerTaskSetting`. They have different parameter range and default value.
+## Parameter Summary
 
-## As a BarcodeReaderTaskSetting Parameter
+Note: Parameter `SectionImageParameterArray` is available for  `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting` and `DocumentNormalizerTaskSetting`. It has different parameter range and default value under different parent object.
+
+### As a BarcodeReaderTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -62,7 +66,7 @@ permalink: /parameters/reference/shared-parameter/section-image-parameter-array.
     </tr>
 </table>
 
-## As a DocumentNormalizerTaskSetting Parameter
+### As a DocumentNormalizerTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -94,7 +98,7 @@ permalink: /parameters/reference/shared-parameter/section-image-parameter-array.
     </tr>
 </table>
 
-## As a LabelRecognizerTaskSetting Parameter
+### As a LabelRecognizerTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>

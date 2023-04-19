@@ -12,6 +12,8 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
 
 `LineExtractionModes` specifies the algorithm used to extract lines. It currently consist of `LEM_GENERAL` and `LEM_MARGIN_BASED`. Each mode representing a different way to extract lines.
 
+## Example
+
 ```json
 {
     "LineExtractionModes":
@@ -25,6 +27,8 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
     ]
 }
 ```
+
+## Parameter Summary
 
 `LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
 
@@ -55,7 +59,9 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
     </tr>
 </table>
 
-## Candidate Modes Paraphrase
+### Default Setting
+
+## Candidate Modes Introduction
 
 ### LEM_GENERAL
 

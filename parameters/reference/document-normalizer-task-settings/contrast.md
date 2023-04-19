@@ -12,11 +12,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/contrast.html
 
 Parameter `Contrast` specifies the contrast of the normalized image.
 
+## Example
+
 ```json
 {
     "Contrast": 0
 }
 ```
+
+## Parameter Summary
 
 | Contrast Parameter Summary |
 | :------------------------ |

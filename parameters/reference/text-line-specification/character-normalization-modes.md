@@ -12,6 +12,8 @@ permalink: /parameters/reference/text-line-specification/character-model-name.ht
 
 An array of `CharacterNormalizationMode` object that defines which mode to implement. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
+## Example
+
 ```json
 {
     "CharacterNormalizationModes": 
@@ -28,11 +30,11 @@ An array of `CharacterNormalizationMode` object that defines which mode to imple
 }
 ```
 
-Candidate Mode List
+## Parameter Summary
 
-- CNM_MORPH
-- CNM_AUTO
-- CNM_SKIP
+Parameter `CharacterNormalizationModes` consist of a group of character normalization mode objects. Each character normalization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the character normalization mode object is shown as follow:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -76,21 +78,20 @@ Candidate Mode List
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>
-            [0,2]
+        <td><b>Range</b><br>"Erode", "Dilate", "Open" or "Close"
         </td>
     </tr>
     <tr>
         <td><b>Default Value</b><br>
-            0
+            "Close"
         </td>
     </tr>
     <tr>
         <td><b>Remarks</b><br>
-            Only available for "DM_PERSPECTIVE_CORRECTION".<br>
-            0: Direction unknown.<br>
-            1: Vertical direction.<br>
-            2: Horizontal direction.
+            "Erode": Perform erosion process.<br>
+            "Dilate": Perform dilation process.<br>
+            "Open": Perform erosion first, then perform dilation.<br>
+            "Close": Perform dilation first, then perform erosion.
         </td>
     </tr>
     <tr>
@@ -123,3 +124,15 @@ Candidate Mode List
         </td>
     </tr>
 </table>
+
+### Default Setting
+
+## Candidate Modes Introduction
+
+### CNM_MORPH
+
+Implement morphological transformations to normalize the characters.
+
+### CNM_AUTO
+
+Lets the library choose a mode automatically.

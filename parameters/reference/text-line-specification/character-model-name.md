@@ -12,11 +12,15 @@ permalink: /parameters/reference/text-line-specification/character-model-name.ht
 
 `CharacterModelName` defines the range of the character height.
 
+## Example
+
 ```json
 {
     "CharacterModelName": "NumberLetter"
 }
 ```
+
+## Parameter Summary
 
 | CharacterModelName Parameter Summary |
 | :----------------------------------- |

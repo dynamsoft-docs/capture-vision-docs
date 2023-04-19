@@ -12,11 +12,15 @@ permalink: /parameters/reference/shared-parameter/max-threads-in-one-task.html
 
 Parameter `MaxThreadsInOneTask` defines the maximum threads that can be consumed in one task.
 
+## Example
+
 ```json
 {
     "MaxThreadsInOneTask":4
 }
 ```
+
+## Parameter Summary
 
 | MaxThreadsInOneTask Parameter Summary |
 | :------------- |

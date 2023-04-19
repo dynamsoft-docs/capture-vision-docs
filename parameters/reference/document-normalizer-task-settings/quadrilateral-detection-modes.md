@@ -12,6 +12,8 @@ permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral
 
 `QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
 
+## Example
+
 ```json
 {
     "QuadrilateralDetectionModes": [
@@ -22,7 +24,11 @@ permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral
 }
 ```
 
+## Parameter Summary
+
 `QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -50,7 +56,9 @@ permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral
     </tr>
 </table>
 
-## Modes Paraphrase
+### Default Setting
+
+## Candidate Modes Introduction
 
 ### QDM_GENERAL
 
