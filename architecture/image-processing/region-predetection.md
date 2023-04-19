@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Region-Predetection Section - Dynamsoft Capture Vision Architecture
-description: This article introduces Region-Predetection Section in the Dynamsoft Capture Vision architecture.
+title: Region-Pre-detection Section - Dynamsoft Capture Vision Architecture
+description: This article introduces Region-Pre-detection Section in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -26,11 +26,11 @@ In this article, we'll discuss the first section of a task - **Region Pre-Detect
 
 # Section 1 - Region Pre-Detection
 
-The purpose of this section is to reduce the time cost by scaling down or finding out regions of interest (ROIs). It is not indispensable for follow-up sections but would be helpful for some extreme cases.
+The purpose of this section is to reduce the overall time cost of the task by finding regions of interest (ROIs) and thus ignoring other parts of the image during subsequent processing. It is not required for the task and can be skipped in many cases.
 
 ## Constituting Stages
 
-This section consists of multiple stages which forms a fixed and relatively complete set of workflow:
+This section consists of multiple stages:
 
 1. Cropping: to crop out the original ROI *specified* by the user. If not specified, return the original image as a whole.
 2. Down-scaling: to down-scale a massive image.

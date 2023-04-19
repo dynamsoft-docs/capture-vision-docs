@@ -89,22 +89,22 @@ flowchart LR;
 
 Each of the 7 sections mentioned in ["Divide Tasks into Sections"](#divide-tasks-into-sections) can be further divided into many stages as shown below:
 
-> Stages shared by "Barcode Localization", "Text-line Localization" and "Document Detection" are put together for the pseudo type "Shared Partial Section". Read more on [Shared Detection](shared-detection.md)
+> Stages shared by "Barcode Localization", "Text-line Localization" and "Document Detection" are put together for the pseudo type "Shared Detection Section". Read more on [Shared Detection](shared-detection.md)
 
 | Section Type             | Stages                                                                                                                                                                                                                                                                                                                                   |
 | :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Region Pre-detection      | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
-| *Shared Partial Section* | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
+| Region Pre-detection     | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
+| *Shared Detection Section* | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
 | Barcode Localization     | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES                                                                                                                                                                                                                                          |
-| Text-line Localization    | IRUT_LOCALIZED_TEXT_LINES                                                                                                                                                                                                                                                                                                                |
+| Text-line Localization   | IRUT_LOCALIZED_TEXT_LINES                                                                                                                                                                                                                                                                                                                |
 | Document Detection       | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS                                                                                                                                                                                                                  |
 | Barcode Decoding         | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES                                                                                                                   |
-| Text-line Recognition     | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
+| Text-line Recognition    | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
 | Document Normalization   | IRUT_NORMALIZED_IMAGE                                                                                                                                                                                                                                                                                                                    |
 
 ***Table 3: Sections and Stages***
 
-In total, there are 27 unique stages:
+In total, there are 27 unique stages which are identified by the types of results they generate:
 
 - IRUT_COLOUR_IMAGE
 - IRUT_SCALED_DOWN_COLOUR_IMAGE
@@ -134,7 +134,7 @@ In total, there are 27 unique stages:
 - IRUT_RECOGNIZED_TEXT_LINES
 - IRUT_NORMALIZED_IMAGE
 
-These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
+These stages are the minimal processing units that can be manipulated and these results are called intermediate results. For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
 
 ## Incomplete Task
 

@@ -22,30 +22,22 @@ flowchart LR;
      style E fill:#f96,stroke:#333,stroke-width:4px
 ```
 
-In this article, we'll discuss the first section of a task - **Text-line Localization**:
+In this article, we'll discuss the section **Text-line Localization** which is the product-specific part of the 2nd section of a "Recognize-Text-Lines" task.
+
+> The 2nd section of a "Recognize-Text-Lines" task consists of [**Shared Detection**](shared-detection.md) and **Text-line Localization**.
 
 # Section 2.2 - Text-line Localization
 
-The purpose of this section is to reduce the time cost by scaling down or finding out regions of interest (ROIs). It is not indispensable for follow-up sections but would be helpful for some extreme cases.
+The purpose of this section is to detect the exact locations of text-lines.
 
 ## Constituting Stages
 
-This section consists of multiple stages which forms a fixed and relatively complete set of workflow:
+This section consists of only one stage:
 
-1. Cropping: to crop out the original ROI *specified* by the user. If not specified, return the original image as a whole.
-2. Down-scaling: to down-scale a massive image.
-3. Grayscaling: to convert a colour image to grayscale.
-4. Transforming: to transform a grayscale image.
-5. Pre-Detecting: to pre-detect the regions exhibit specific features.
+- Text-line-locating: to find the exact locations of the text-lines.
 
 ## Output and Parameters
 
-Each of the five stages has its own output (known as an intermediate result) and a specific parameter that can regulate the operation:
-
-| Stage Name    | Intermediate Result Type           | Related Parameter                                                                                               |
-| ------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Cropping      | `IRUT_COLOUR_IMAGE`                | [`Location`](../../parameters/reference/target-roi-def/location.md)                                             |
-| Down-scaling  | `IRUT_SCALED_DOWN_COLOUR_IMAGE`    | [`ScaleDownThreshold`](../../parameters/reference/image-parameter/scale-down-threshold.md)                      |
-| Grayscaling   | `IRUT_GRAYSCALE_IMAGE`             | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                |
-| Transforming  | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE` | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/gray-scale-transformation-modes.md) |
-| Pre-Detecting | `IRUT_PREDETECTED_REGIONS`         | [`RegionPredetectionModes`](../../parameters/reference/image-parameter/region-predetection-modes.md)            |
+| Stage Name         | Intermediate Result Type    | Related Parameter |
+| ------------------ | --------------------------- | ----------------- |
+| Text-line-locating | `IRUT_LOCALIZED_TEXT_LINES` | N/A               |

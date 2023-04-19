@@ -22,30 +22,34 @@ flowchart LR;
      style G fill:#f96,stroke:#333,stroke-width:4px
 ```
 
-In this article, we'll discuss the first section of a task - **Barcode Decoding**:
+In this article, we'll discuss the section **Barcode Decoding** which is usually the 3rd section of a "Read-Barcodes" task.
 
 # Section 3 - Barcode Decoding
 
-The purpose of this section is to reduce the time cost by scaling down or finding out regions of interest (ROIs). It is not indispensable for follow-up sections but would be helpful for some extreme cases.
+The purpose of this section is to optimize the quality of the "barcode zones" found by the previous section "Barcode Localization" before decoding the barcode to get the encoded text.
 
 ## Constituting Stages
 
-This section consists of multiple stages which forms a fixed and relatively complete set of workflow:
+This section consists of the following stages:
 
-1. Cropping: to crop out the original ROI *specified* by the user. If not specified, return the original image as a whole.
-2. Down-scaling: to down-scale a massive image.
-3. Grayscaling: to convert a colour image to grayscale.
-4. Transforming: to transform a grayscale image.
-5. Pre-Detecting: to pre-detect the regions exhibit specific features.
+1. Cropping: to cut out the barcode zones based on barcode localization results. This results in one or multiple colour images.
+2. Grayscaling: to convert the colour image(s) to grayscale.
+3. Transforming: to transform the grayscale image(s).
+4. Deformation-reducing: to reduce the deformation of the image(s).
+5. Barcode-complementing: to complement incomplete barcode(s).
+6. Up-scaling: to up-scale the barcode(s) to make it easier to decode.
+7. Barcode-decoding: to decode the barcode and get the encoded text.
 
 ## Output and Parameters
 
-Each of the five stages has its own output (known as an intermediate result) and a specific parameter that can regulate the operation:
+Each of these stages has its own output (known as an intermediate result) and usually a specific parameter that can regulate the operation:
 
-| Stage Name    | Intermediate Result Type           | Related Parameter                                                                                               |
-| ------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Cropping      | `IRUT_COLOUR_IMAGE`                | [`Location`](../../parameters/reference/target-roi-def/location.md)                                             |
-| Down-scaling  | `IRUT_SCALED_DOWN_COLOUR_IMAGE`    | [`ScaleDownThreshold`](../../parameters/reference/image-parameter/scale-down-threshold.md)                      |
-| Grayscaling   | `IRUT_GRAYSCALE_IMAGE`             | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                |
-| Transforming  | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE` | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/gray-scale-transformation-modes.md) |
-| Pre-Detecting | `IRUT_PREDETECTED_REGIONS`         | [`RegionPredetectionModes`](../../parameters/reference/image-parameter/Barcode Decoding-modes.md)            |
+| Stage Name            | Intermediate Result Type                  | Related Parameter                                                                                                     |
+| --------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Cropping              | `IRUT_COLOUR_IMAGE`                       | N/A                                                                                                                   |
+| Grayscaling           | `IRUT_GRAYSCALE_IMAGE`                    | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                      |
+| Transforming          | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE`        | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/grayscale-transformation-modes.md)        |
+| Deformation-reducing  | `IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE` | [`DeformationResistingModes`](../../parameters/reference/barcode-reader-task-settings/deformation-resisting-modes.md) |
+| Barcode-complementing | `IRUT_COMPLEMENTED_BARCODE_IMAGE`         | [`BarcodeComplementModes`](../../parameters/reference/barcode-reader-task-settings/barcode-complement-modes.md)       |
+| Up-scaling            | `IRUT_SCALED_UP_BARCODE_IMAGE`            | N/A                                                                                                                   |
+| Barcode-decoding      | `IRUT_DECODED_BARCODES`                   | N/A                                                                                                                   |

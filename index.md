@@ -20,7 +20,6 @@ needAutoGenerateSidebar: true
     - [TextLine Recognition]({{site.architecture}}image-processing/textline-recogntion.html)
     - [Document Detection]({{site.architecture}}image-processing/document-detection.html)
     - [Document Normalization]({{site.architecture}}image-processing/document-normalization.html)
-    - [Intermediate Result]({{site.architecture}}image-processing/intermediate-result.html)
   - [Semantic Processing]({{site.architecture}}semantic-processing.html)
   - [Output]({{site.architecture}}output.html)
 - [Parameters]({{site.parameter}})

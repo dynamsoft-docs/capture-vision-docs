@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Standard Input - Dynamsoft Capture Vision
+title: Standard Input - Dynamsoft Capture Vision Architecture
 description: This article is about the standard input in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

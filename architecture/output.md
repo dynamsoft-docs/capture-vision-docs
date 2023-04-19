@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Standard Output - Dynamsoft Capture Vision
+title: Standard Output - Dynamsoft Capture Vision Architecture
 description: This article is about the standard output in the Dynamsoft Capture Vision architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
