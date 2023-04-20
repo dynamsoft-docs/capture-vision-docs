@@ -5,11 +5,14 @@ Description: The parameter ImageROIProcessingNameArray of Dynamsoft Capture Visi
 Keywords: image ROI processing, TargetROIDef, CaptureVisionTemplate
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/capture-vision-template/image-roi-processing-name-array.html
 ---
 
 # ImageROIProcessingNameArray
 
 Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Defines the collection of image ROI processing object names, used to refer to th
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| ImageROIProcessingNameArray Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each element is the name of a `TargetROIDef` object. |

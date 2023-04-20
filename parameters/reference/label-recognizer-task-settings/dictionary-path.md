@@ -5,11 +5,14 @@ Description: The parameter DictionaryPath of Dynamsoft Label Recognizer defines 
 Keywords: user dictionary, text correction
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/label-recognizer-task-settings/dictionary-path.html
 ---
 
 # DictionaryPath
 
 Sets the path of the dictionary file.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Sets the path of the dictionary file.
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| DictionaryPath Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>The absolute file path.|

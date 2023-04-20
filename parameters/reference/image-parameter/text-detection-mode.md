@@ -164,7 +164,9 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
     </tr>
 </table>
 
-The default settings of TextDetectionMode is:
+### Default Setting
+
+#### Under BarcodeReaderTaskSetting
 
 ```json
 {
@@ -172,6 +174,9 @@ The default settings of TextDetectionMode is:
 }
 ```
 
+#### Under LabelRecognizerTaskSetting
+
+#### Under DocumentNormalizerTaskSetting
 
 ## Candidate Modes Introduction
 

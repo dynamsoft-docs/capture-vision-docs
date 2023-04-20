@@ -5,11 +5,14 @@ Description: The parameter TaskSettingNameArray of Dynamsoft Capture Vision defi
 Keywords: task settings, TargetROIDef
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/target-roi-def/task-setting-name-array.html
 ---
 
 # TaskSettingNameArray
 
 Represents the collection of task setting object names, used to refer to the [`BarcodeReaderTaskSetting`](../../file/task-settings/barcode-reader-task-settings.md),[`LabelRecognizerTaskSetting`](../../file/task-settings/label-recognizer-task-settings.md),[`DocumentNormalizerTaskSetting`](../../file/task-settings/document-normalizer-task-settings.md) objects. It is used to define recognition tasks such as reading barcodes, recognizing labels, or detecting document quads.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Represents the collection of task setting object names, used to refer to the [`B
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| TaskSettingNameArray Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each element represents the name of a `BarcodeReaderTaskSetting` object, `LabelRecognizerTaskSetting` object, or `DocumentNormalizerTaskSetting` object. |

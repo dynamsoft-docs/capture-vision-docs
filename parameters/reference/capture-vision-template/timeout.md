@@ -5,11 +5,14 @@ Description: The parameter Timeout defines the maximum amount of time (in millis
 Keywords: timeout, CaptureVisionTemplate
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/capture-vision-template/timeout.html
 ---
 
 # Timeout
 
 Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. It does not include the time taken to load/decode an image from disk into memory.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Defines the maximum amount of time (in milliseconds) that should be spent proces
 }
 ```
 
-| Parameter Details|
+## Parameter Summary
+
+| Timeout Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 0x7fffffff] |

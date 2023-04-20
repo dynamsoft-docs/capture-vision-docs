@@ -5,11 +5,14 @@ Description: The parameter StringLengthRange of Dynamsoft Label Recognizer defin
 Keywords: text lines, concatenated strings length
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/label-recognizer-task-settings/string-length-range.html
 ---
 
 # StringLengthRange
 
 Sets the range of string lengths for concatenated strings of recognized text lines.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Sets the range of string lengths for concatenated strings of recognized text lin
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| StringLengthRange Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*int[]* |
 | **Range**<br>The array contains only two elements, corresponding to the lower and upper bounds of the Range, respectively. The value range is [0, 0x7fffffff].|

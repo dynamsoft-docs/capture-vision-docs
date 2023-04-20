@@ -77,3 +77,5 @@ permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-
         </td>
     </tr>
 </table>
+
+### Default Setting

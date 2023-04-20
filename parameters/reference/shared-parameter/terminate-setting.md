@@ -12,6 +12,8 @@ permalink: /parameters/reference/shared-parameter/terminate-setting.html
 
 Parameter `TerminateSetting` defines the terminate stages of the task. For each sections in an alogrithm task, you can define only one terminate stage.
 
+## Example
+
 ```json
 "TerminateSetting":
 {

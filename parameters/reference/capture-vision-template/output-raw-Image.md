@@ -5,11 +5,14 @@ Description: The parameter OutputRawImage indicates whether DCV finally outputs 
 Keywords: raw image, captured results, CaptureVisionTemplate
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/capture-vision-template/output-raw-Image.html
 ---
 
 # OutputRawImage
 
 Indicates whether DCV finally outputs the original input image.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Indicates whether DCV finally outputs the original input image.
 }
 ```
 
-| Parameter Details|
+## Parameter Summary
+
+| OutputRawImage Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>0,1 |

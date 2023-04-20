@@ -5,11 +5,14 @@ Description: The parameter MaxParallelTasks defines the maximum number of parall
 Keywords: Max parallel tasks, CaptureVisionTemplate
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/capture-vision-template/max-parallel-tasks.html
 ---
 
 # MaxParallelTasks
 
 Parameter `MaxParallelTasks` defines the maximum number of parallel tasks for the DCV runtime.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Parameter `MaxParallelTasks` defines the maximum number of parallel tasks for th
 }
 ```
 
-| Parameter Details|
+## Parameter Summary
+
+| MaxParallelTasks Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>[1, 256] |

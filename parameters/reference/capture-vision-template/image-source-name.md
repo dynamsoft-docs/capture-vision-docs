@@ -5,11 +5,14 @@ Description: The parameter ImageSourceName of Dynamsoft Capture Vision defines t
 Keywords: image source, CaptureVisionTemplate
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/capture-vision-template/image-source-name.html
 ---
 
 # ImageSourceName
 
 Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Indicates the input source name, used to refer to the `ImageSource` object. It i
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| ImageSourceName Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>The name of the `ImageSource` object. |

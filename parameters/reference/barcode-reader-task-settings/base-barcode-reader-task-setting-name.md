@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/base-barcode-reade
 
 #  BaseBarcodeReaderTaskSettingName
 
-Specify a `BarcodeReaderTaskSetting` object name. The current object will inherit the parameter settings of the specified object.
+Represents the name of another `BarcodeReaderTaskSetting` object. It is used to inherit the parameters defined in its parent `BarcodeReaderTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
 ## Example
 

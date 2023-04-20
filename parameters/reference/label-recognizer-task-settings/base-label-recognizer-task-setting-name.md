@@ -5,11 +5,14 @@ Description: The parameter BaseLabelRecognizerTaskSettingName of Dynamsoft Label
 Keywords: inheritance, LabelRecognizerTaskSetting
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/label-recognizer-task-settings/base-label-recognizer-task-setting-name.html
 ---
 
 # BaseLabelRecognizerTaskSettingName
 
 Represents the name of another `LabelRecognizerTaskSetting` object. It is used to inherit the parameters defined in its parent `LabelRecognizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Represents the name of another `LabelRecognizerTaskSetting` object. It is used t
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| BaseLabelRecognizerTaskSettingName Parameter Details |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>The name of the inherited `LabelRecognizerTaskSetting` object. |

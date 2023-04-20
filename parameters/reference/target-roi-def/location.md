@@ -5,17 +5,70 @@ Description: The parameter Location of Dynamsoft Capture Vision defines the loca
 Keywords: Location
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/target-roi-def/location.html
 ---
 
 # Location
 
 Define the location of the TargetROI with `reference objects` filter conditions and `offset` parameters.
 
-## ReferenceObjectFilter
+## Example
+
+```json
+{
+    "Location": 
+    {
+        "ReferenceObjectFilter" :
+        {
+            "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"],
+            "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME","ART_TABLE_CELL"],
+            "BarcodeFilteringCondition": 
+            {
+                "BarcodeFormatIds": ["BF_CODE39"], 
+                "BarcodeTextRegExPattern": ".*b.*b.*b.*", 
+                "RegionState": "default", 
+            },
+            "FrameFilteringCondition": 
+            {
+                "ImageDimensionRange": [16384,0x7fffffff],
+                "AspectRatioRange": [1, 10000],
+                "WidthRange": [1, 0x7fffffff],
+                "HeightRange": [1, 0x7fffffff],
+                "RegionState": "default",
+            },
+            "TableCellFilteringCondition":
+            {
+                "RowNumbers": "1,3,5", 
+                "ColNumbers": "1", 
+                "RegionState": "default", 
+            },
+            "TextLineFilteringCondition":
+            {
+                "LineNumbers": "1,3-5",
+                "LineStringRegExPattern": "Sodium[(\w| )]*",
+                "RegionState": "default", 
+            }
+        },
+        "Offset": {
+            "ReferenceObjectOriginIndex": 0,
+            "ReferenceObjectSizeType": "default",
+            "MeasuredByPercentage" : 1,
+            "FirstPoint" : [ 0, 0 ],
+            "SecondPoint" : [ 100, 0 ],
+            "ThirdPoint" : [ 100, 100 ],
+            "FourthPoint" : [ 0, 100 ],
+        }
+    }
+}
+```
+
+## Parameter Summary
+
+### ReferenceObjectFilter
 
 Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring out the `reference objects`.
 
-### ReferenceTargetROIDefNameArray
+#### ReferenceTargetROIDefNameArray
 
 Filter the reference object by specifying `TargetROI` names.
 
@@ -25,7 +78,7 @@ Filter the reference object by specifying `TargetROI` names.
 | **Range**<br>Each member should be a name of `TargetROI` that defined in `TargetROIDefOptions`. |
 | **Default Value**<br>null |
 
-### AtomicResultTypeArray
+#### AtomicResultTypeArray
 
 Filter the reference object by specifying the type of atomic results. In the `TargetROIs` algorithm task can produce atomic results that can support the localization of the other `TargetROIs`.
 
@@ -35,7 +88,7 @@ Filter the reference object by specifying the type of atomic results. In the `Ta
 | **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE` and `ART_FRAME` |
 | **Default Value**<br>["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"] |
 
-### BarcodeFilteringCondition
+#### BarcodeFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the decoded barcode information. The parameter `BarcodeFilteringCondition` includes the following child parameters:
 
@@ -78,7 +131,7 @@ One of the filter conditions. Filter the reference objects with the decoded barc
     </tr>
 </table>
 
-### FrameFilteringCondition
+#### FrameFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the frame information. The parameter `FrameFilteringCondition` includes the following child parameters:
 
@@ -143,7 +196,7 @@ One of the filter conditions. Filter the reference objects with the frame inform
     </tr>
 </table>
 
-### TextLineFilteringCondition
+#### TextLineFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the text line content. The parameter `TextLineFilteringCondition` includes the following child parameters:
 
@@ -190,7 +243,7 @@ One of the filter conditions. Filter the reference objects with the text line co
     </tr>
 </table>
 
-## Offset
+### Offset
 
 Parameter `Offset` is an object that defines how the location is offset from the `reference object` or the original image.
 

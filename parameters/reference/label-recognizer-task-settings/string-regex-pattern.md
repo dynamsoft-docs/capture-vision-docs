@@ -5,11 +5,14 @@ Description: The parameter StringRegExPattern of Dynamsoft Label Recognizer defi
 Keywords: text lines, concatenated strings, regular expression
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/label-recognizer-task-settings/string-regex-pattern.html
 ---
 
 # StringRegExPattern
 
 Specifies the regular expression pattern for concatenated strings of recognized text lines.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Specifies the regular expression pattern for concatenated strings of recognized 
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| StringRegExPattern Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>All standard regular expressions.|

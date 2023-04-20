@@ -5,11 +5,14 @@ Description: The parameter BaseTargetROIDefName of Dynamsoft Capture Vision defi
 Keywords: inheritance, TargetROIDef
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/target-roi-def/base-target-roidef-name.html
 ---
 
 # BaseTargetROIDefName
 
 Represents the name of another `TargetROIDef` object. It is used to inherit the parameters defined in its parent `TargetROIDef` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+
+## Example
 
 ```json
 {
@@ -17,7 +20,9 @@ Represents the name of another `TargetROIDef` object. It is used to inherit the 
 }
 ```
 
-| Parameter Details |
+## Parameter Summary
+
+| BaseTargetROIDefName Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>The name of the inherited `TargetROIDef` object. |
