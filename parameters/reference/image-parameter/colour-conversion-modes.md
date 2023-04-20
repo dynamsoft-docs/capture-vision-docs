@@ -5,7 +5,7 @@ description: The parameter ColourConversionModes of Dynamsoft Capture Vision is 
 keywords: ColourConversionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/colour-conversion-modes.html
+permalink: /parameters/reference/image-parameter/colour-conversion-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/colour-conversion-modes.html
 
 ColourConversionModes is a parameter for setting the mode for converting a colour image to a grayscale image. It consists of one or more ColourConversionMode items and each item has its own arguments.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "ColourConversionModes": [
@@ -24,9 +25,11 @@ ColourConversionModes is a parameter for setting the mode for converting a colou
 }
 ```
 
-
 ## Parameter Summary
+
 Parameter ColourConversionModes consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -181,6 +184,8 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
 </table>
+
+### Default Setting
 
 The default settings of ColourConversionModes is:
 

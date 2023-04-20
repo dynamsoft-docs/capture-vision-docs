@@ -204,39 +204,45 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
 
 ### Default Settings
 
-The default settings of LocalizationModes is:
+If the `LocalizationModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
-"LocalizationModes" : [
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_CONNECTED_BLOCKS"
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_SCAN_DIRECTLY",
-        "ScanDirection" : 0,
-        "ScanStride" : 0
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_STATISTICS"
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_LINES"
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_STATISTICS_MARKS"
-    }
-]
+{
+    "LocalizationModes" : 
+    [
+        {
+            "ConfidenceThreshold" : 60,
+            "IsOneDStacked" : 0,
+            "Mode" : "LM_CONNECTED_BLOCKS",
+            "ScanDirection" : 0,
+            "ScanStride" : 0
+        },
+        {
+            "ConfidenceThreshold" : 60,
+            "IsOneDStacked" : 0,
+            "Mode" : "LM_SCAN_DIRECTLY",
+            "ScanDirection" : 0,
+            "ScanStride" : 0
+        },
+        {
+            "ConfidenceThreshold" : 60,
+            "IsOneDStacked" : 0,
+            "Mode" : "LM_STATISTICS",
+            "ScanDirection" : 0,
+            "ScanStride" : 0
+        },
+        {
+            "ConfidenceThreshold" : 60,
+            "IsOneDStacked" : 0,
+            "Mode" : "LM_LINES",
+            "ScanDirection" : 0,
+            "ScanStride" : 0
+        }
+    ]
+}
 ```
+
+If you specified an localization mode object with child parameter "Mode" only, the default values of the other child parameters will used.
 
 ## Candidate Modes Introduction
 

@@ -58,6 +58,19 @@ permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral
 
 ### Default Setting
 
+If the `QuadrilateralDetectionModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "QuadrilateralDetectionModes" : 
+    [
+        {
+            "Mode" : "QDM_GENERAL"
+        }
+    ]
+}
+```
+
 ## Candidate Modes Introduction
 
 ### QDM_GENERAL

@@ -131,18 +131,11 @@ The child parameters of the barcode colour mode object are shown as follow:
 
 ### Default Setting
 
-The default settings of BarcodeColourModes is:
+If the `BarcodeColourModes` is not configured in your template file, the following setting will be used as the default setting.
 
 ```json
 {
-    "BarcodeColourModes" : [
-        {
-            "LibraryFileName" : "",
-            "LibraryParameters" : "",
-            "LightReflection" : 1,
-            "Mode" : "BICM_DARK_ON_LIGHT"
-        }
-    ],
+    "BarcodeColourModes" : null
 }
 ```
 

@@ -5,7 +5,7 @@ description: The parameter BaseImageParameterName of Dynamsoft Capture Vision is
 keywords: BaseImageParameterName, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/base-image-parameter-name.html
+permalink: /parameters/reference/image-parameter/base-image-parameter-name.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/base-image-parameter-name.html
 
 Parameter BaseImageParameterName specifies the object to be inherited.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "BaseImageParameterName": "IP_0"
@@ -21,7 +22,10 @@ Parameter BaseImageParameterName specifies the object to be inherited.
 ```
 
 ## Parameter Summary
-Parameter BaseImageParameterName only specifies object of the same type. 
+
+Parameter BaseImageParameterName only specifies object of the same type.
+
+### Child Parameters
 
 <table style = "text-align:left">
     <tr>
@@ -43,8 +47,9 @@ Parameter BaseImageParameterName only specifies object of the same type.
         <td><b>Default Value</b><br>""
         </td>
     </tr>
-    
 </table>
+
+### Default Setting
 
 The default settings of BaseImageParameterName is:
 

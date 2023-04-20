@@ -32,6 +32,8 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
 
 `LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
 
+### Child Parameters
+
 <table style = "text-align:left">
     <thead>
         <tr>
@@ -60,6 +62,19 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
 </table>
 
 ### Default Setting
+
+If the `LineExtractionModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "LineExtractionModes" : 
+    [
+        {
+            "Mode" : "LEM_GENERAL"
+        }
+    ]
+}
+```
 
 ## Candidate Modes Introduction
 

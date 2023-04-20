@@ -69,6 +69,25 @@ Parameter `TextResultOrderModes` consist of a group of text result order mode ob
 
 ### Default Setting
 
+If the `TextResultOrderModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "TextResultOrderModes" : 
+    [
+        {
+            "Mode" : "TROM_CONFIDENCE"
+        },
+        {
+            "Mode" : "TROM_POSITION"
+        },
+        {
+            "Mode" : "TROM_FORMAT"
+        }
+    ]
+}
+```
+
 ## Candidate Modes Introduction
 
 ### TROM_CONFIDENCE

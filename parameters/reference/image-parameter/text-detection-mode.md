@@ -5,7 +5,7 @@ description: The parameter TextDetectionMode of Dynamsoft Capture Vision is for 
 keywords: TextDetectionMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/text-detection-mode.html
+permalink: /parameters/reference/image-parameter/text-detection-mode.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/text-detection-mode.html
 
 TextDetectionMode determines how to detect the text area. For tasks like barcode reading or border detection, the text part is not important; while for the task of text recognition, the results of detected text zone are mandatory.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "TextDetectionMode":{
@@ -26,7 +27,10 @@ TextDetectionMode determines how to detect the text area. For tasks like barcode
 ```
 
 ## Parameter Summary
+
 Parameter TextDetectionMode consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>

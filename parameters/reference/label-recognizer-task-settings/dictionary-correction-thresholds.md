@@ -45,6 +45,8 @@ Sets the threshold of dictionary error correction.
 
 Parameter `DictionaryCorrectionThresholds` consist of a group of dictionary correction threshold objects. Each threshold object includes a series of child parameters.
 
+### Child Parameter Summary
+
 <table style = "text-align:left">
     <thead>
         <tr>
@@ -121,3 +123,22 @@ Parameter `DictionaryCorrectionThresholds` consist of a group of dictionary corr
         </td>
     </tr>
 </table>
+
+### Default Setting
+
+If the parameter `DictionaryCorrectionThresholds` is not included in your template file, the following setting will be used.
+
+```json
+{
+    "DictionaryCorrectionThresholds" : 
+    [
+        {
+            "MaxWordLength" : 256,
+            "MinWordLength" : 3,
+            "Threshold" : 1
+        }
+    ]
+}
+```
+
+If any of `MaxWordLength`, `MinWordLength` or `Threshold` is missing in your dictionary correction threshold object, the default values of the child parameters will be used.

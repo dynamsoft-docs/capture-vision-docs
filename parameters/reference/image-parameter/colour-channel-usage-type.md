@@ -5,7 +5,7 @@ description: The parameter ColourChannelUsageType of Dynamsoft Capture Vision is
 keywords: ColourChannelUsageType, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/colour-channel-usage-type.html
+permalink: /parameters/reference/image-parameter/colour-channel-usage-type.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/colour-channel-usage-type.html
 
 ColourChannelUsageType specifies how to use the colour channel from the source image buffer.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "ColourChannelUsageType": "CCUT_NV21_Y_CHANNEL_ONLY"
@@ -21,7 +22,10 @@ ColourChannelUsageType specifies how to use the colour channel from the source i
 ```
 
 ## Parameter Summary
+
 Parameter ColourChannelUsageType allows to use only the information of the specified color channel when loading the image:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <tr>
@@ -52,6 +56,8 @@ Parameter ColourChannelUsageType allows to use only the information of the speci
     </tr>
     
 </table>
+
+### Default Setting
 
 The default settings of ColourChannelUsageType is:
 

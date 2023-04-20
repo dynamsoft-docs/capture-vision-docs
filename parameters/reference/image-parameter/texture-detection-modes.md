@@ -5,7 +5,7 @@ description: The parameter TextureDetectionModes of Dynamsoft Capture Vision is 
 keywords: TextureDetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/texture-detection-modes.html
+permalink: /parameters/reference/image-parameter/texture-detection-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/texture-detection-modes.html
 
 Parameter TextureDetectionModes controls how to detect texture on an image.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "TextureDetectionModes": [
@@ -30,7 +31,10 @@ Parameter TextureDetectionModes controls how to detect texture on an image.
 ```
 
 ## Parameter Summary
+
 Parameter TextureDetectionModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -122,7 +126,9 @@ Parameter TextureDetectionModes consists of one or more of the following modes, 
     </tr>
 </table>
 
-The default settings of TextureDetectionModes is:
+### Default Setting
+
+If the `TextureDetectionModes` is not configured in your template file, the following setting will be used as the default setting.
 
 ```json
 {
@@ -135,10 +141,10 @@ The default settings of TextureDetectionModes is:
 }
 ```
 
-
 ## Candidate Modes Introduction
 
 ### TDM_GENERAL_WIDTH_CONCENTRATION
+
 Detects texture using the general algorithm. This mode has the following arguments for further customization.
 
 **Available auxiliary parameters:**

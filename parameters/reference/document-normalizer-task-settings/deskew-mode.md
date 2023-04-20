@@ -28,6 +28,8 @@ DeskewMode specifies the method in which the deskew process way used to apply th
 
 DeskewMode is defined with a object that contains two child parameters, `Mode` and `ContentDirection`.
 
+### Child Parameters
+
 <table style = "text-align:left">
     <thead>
         <tr>
@@ -79,6 +81,18 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
 </table>
 
 ### Default Setting
+
+If the `DeskewMode` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "DeskewMode" : 
+    {
+        "ContentDirection" : 0,
+        "Mode" : "DM_PERSPECTIVE_CORRECTION"
+    }
+}
+```
 
 ## Candidate Modes Introduction
 

@@ -106,6 +106,19 @@ The child parameters of the DPM code reading mode object are shown as follow:
 
 ### Default Settings
 
+If the `DPMCodeReadingModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "DPMCodeReadingModes" : 
+    [
+        {
+            "Mode" : "DPMCRM_SKIP"
+        }
+    ]
+}
+```
+
 ## Candidate Modes Introduction
 
 ### DPMCRM_GENERAL

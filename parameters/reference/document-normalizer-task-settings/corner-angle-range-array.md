@@ -79,3 +79,17 @@ permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-
 </table>
 
 ### Default Setting
+
+If the `CornerAngleRangeArray` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "CornerAngleRangeArray" : 
+    [
+        {
+            "MaxValue" : 110,
+            "MinValue" : 70
+        }
+    ]
+}
+```

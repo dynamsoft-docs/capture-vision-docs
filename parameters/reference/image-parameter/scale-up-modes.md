@@ -5,7 +5,7 @@ description: The parameter ScaleUpModes of Dynamsoft Capture Vision is for contr
 keywords: ScaleUpModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/scale-up-modes.html
+permalink: /parameters/reference/image-parameter/scale-up-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/scale-up-modes.html
 
 ScaleUpModes is for controlling the scale-up process when targets in the image are too small.
 
-**JSON Parameter Example**
+## Example
+
 ```json
 {
     "ScaleUpModes": [
@@ -37,7 +38,10 @@ ScaleUpModes is for controlling the scale-up process when targets in the image a
 ```
 
 ## Parameter Summary
+
 Parameter ScaleUpModes consists of one or more of the following modes, each mode representing a different scale up algorithm:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -234,18 +238,25 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
 </table>
 
-The default settings of ScaleUpModes is:
+### Default Setting
+
+If the `ScaleUpModes` is not configured in your template file, the following setting will be used as the default setting.
 
 ```json
 {
-    "ScaleUpModes" : [
-         {
-            "Mode" : "SUM_AUTO"
-         }
-      ]
+    "ScaleUpModes" : 
+    [
+        {
+            "AcuteAngleWithXThreshold" : -1,
+            "LetterHeightThreshold" : 0,
+            "Mode" : "SUM_AUTO",
+            "ModuleSizeThreshold" : 0,
+            "TargetLetterHeight" : 0,
+            "TargetModuleSize" : 0
+        }
+    ]
 }
 ```
-
 
 ## Candidate Modes Introduction
 

@@ -5,7 +5,7 @@ description: The parameter GrayscaleEnhancementModes of Dynamsoft Capture Vision
 keywords: GrayscaleEnhancementModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/grayscale-enhancement-modes.html
+permalink: /parameters/reference/image-parameter/grayscale-enhancement-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/grayscale-enhancement-modes.html
 
 GrayscaleEnhancementModes provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "GrayscaleEnhancementModes": [
@@ -38,7 +39,10 @@ GrayscaleEnhancementModes provides some image processing methods to enhance the 
 ```
 
 ## Parameter Summary
+
 Parameter GrayscaleEnhancementModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -218,6 +222,8 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
     </tr>
 </table>
 
+### Default Setting
+
 The default settings of GrayscaleEnhancementModes is:
 
 ```json
@@ -230,13 +236,11 @@ The default settings of GrayscaleEnhancementModes is:
 }
 ```
 
-
 ## Candidate Modes Introduction
 
 ### GEM_GENERAL
 
 Takes the un-preprocessed grayscale image for the next stage of operations.
-
 
 ### GEM_GRAY_EQUALIZE
 

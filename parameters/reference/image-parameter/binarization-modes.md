@@ -5,7 +5,7 @@ description: The parameter BinarizationModes of Dynamsoft Capture Vision is for 
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/binarization-modes.html
+permalink: /parameters/reference/image-parameter/binarization-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/binarization-modes.html
 
 This parameter helps control the process of binarization, i.e., converting a grayscale image to a binary image. A better binary image greatly helps the following processes. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. BinarizationModes consists of one or more modes, each mode representing a different binarization process.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "BinarizationModes": [
@@ -34,9 +35,11 @@ This parameter helps control the process of binarization, i.e., converting a gra
 }
 ```
 
-
 ## Parameter Summary
+
 Parameter BinarizationModes consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -211,6 +214,8 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
 </table>
+
+### Default Setting
 
 The default settings of BinarizationModes is:
 

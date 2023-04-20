@@ -110,7 +110,7 @@ The child parameters of the deblur mode object are shown as follow:
     </tr>
 </table>
 
-### Default Settings
+### Default Setting
 
 ## Candidate Modes Introduction
 

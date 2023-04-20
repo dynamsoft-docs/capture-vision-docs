@@ -8,3 +8,15 @@ noTitleIndex: true
 ---
 
 # GlobalParameters
+
+Currently, the `MaxTotalImageDimension` is the only parameter under `GlobalParameters`.
+
+## MaxTotalImageDimension
+
+Parameter [`MaxTotalImageDimension`](../../reference/global-parameter/max-total-image-dimension.md) defines the maximum total dimension of the images that read in the memory.
+
+```json
+{
+    "MaxTotalImageDimension":0
+}
+```

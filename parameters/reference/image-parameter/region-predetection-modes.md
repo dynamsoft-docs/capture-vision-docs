@@ -5,7 +5,7 @@ description: The parameter RegionPredetectionModes of Dynamsoft Capture Vision i
 keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/region-predetection-modes.html
+permalink: /parameters/reference/image-parameter/region-predetection-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/region-predetection-modes.html
 
 RegionPredetectionModes controls how to find a region of interest (ROI) within the image or frame.
 
-**JSON Parameter Example**
+## Example
+
 ```json
 {
     "RegionPredetectionModes": [
@@ -35,6 +36,9 @@ RegionPredetectionModes controls how to find a region of interest (ROI) within t
 ```
 
 ## Parameter Summary
+
+### Child Parameters
+
 Parameter RegionPredetectionModes consists of one or more of the following modes, each mode representing a different detection algorithm:
 
 <table style = "text-align:left">
@@ -340,6 +344,8 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
 </table>
+
+### Default Setting
 
 The default settings of RegionPredetectionModes is:
 

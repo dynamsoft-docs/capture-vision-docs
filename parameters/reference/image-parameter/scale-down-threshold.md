@@ -5,7 +5,7 @@ description: The parameter ScaleDownThreshold of Dynamsoft Capture Vision is for
 keywords: ScaleDownThreshold, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/scale-down-threshold.html
+permalink: /parameters/reference/image-parameter/scale-down-threshold.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/scale-down-threshold.html
 
 Parameter ScaleDownThreshold defines the threshold for image shrinking.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "ScaleDownThreshold": 1024
@@ -21,6 +22,9 @@ Parameter ScaleDownThreshold defines the threshold for image shrinking.
 ```
 
 ## Parameter Summary
+
+### Child Parameters
+
 When the input image is too large, this parameter ScaleDownThreshold can be used to reduce the size.
 
 <table style = "text-align:left">
@@ -43,16 +47,7 @@ When the input image is too large, this parameter ScaleDownThreshold can be used
         <td><b>Default Value</b><br>2300
         </td>
     </tr>
-    
 </table>
-
-The default settings of ScaleDownThreshold is:
-
-```json
-{
-    "ScaleDownThreshold": 2300
-}
-```
 
 ## See Also
 - [Capture Vision Template]()

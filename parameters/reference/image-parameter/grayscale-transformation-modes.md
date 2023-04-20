@@ -5,7 +5,7 @@ description: The parameter GrayscaleTransformationModes of Dynamsoft Capture Vis
 keywords: GrayscaleTransformationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/gray-scale-transformation-modes.html
+permalink: /parameters/reference/image-parameter/gray-scale-transformation-modes.html
 ---
 
 
@@ -13,7 +13,8 @@ permalink: /parameters/reference/gray-scale-transformation-modes.html
 
 Generally, we think of the lighter colors as the background and the darker colors as the target in a grayscale image. However in a few cases it is opposite. GrayscaleTransformationModes are used to control whether or not to invert the color of the grayscale image.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "GrayscaleTransformationModes": [
@@ -28,6 +29,9 @@ Generally, we think of the lighter colors as the background and the darker color
 ```
 
 ## Parameter Summary
+
+### Child Parameters
+
 Parameter GrayscaleTransformationModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
 
 <table style = "text-align:left">
@@ -48,8 +52,9 @@ Parameter GrayscaleTransformationModes consists of one or more of the following 
         <td><b>Default Value</b><br>GTM_ORIGINAL
         </td>
     </tr>
-    
 </table>
+
+### Default Setting
 
 The default settings of GrayscaleTransformationModes is:
 
@@ -62,7 +67,6 @@ The default settings of GrayscaleTransformationModes is:
     ]
 }
 ```
-
 
 ## Candidate Modes Introduction
 

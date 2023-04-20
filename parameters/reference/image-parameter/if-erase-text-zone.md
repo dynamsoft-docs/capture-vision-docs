@@ -5,7 +5,7 @@ description: The parameter IfEraseTextZone of Dynamsoft Capture Vision is for co
 keywords: IfEraseTextZone, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/if-erase-text-zone.html
+permalink: /parameters/reference/image-parameter/if-erase-text-zone.html
 ---
 
 
@@ -14,7 +14,8 @@ permalink: /parameters/reference/if-erase-text-zone.html
 Parameter IfEraseTextZone sets whether to erase the detected text zone. The detected text zone is the result of text detection process when enables TextDetectionMode.
 >- Do not erase text when a text recognition task is to be performed.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "IfEraseTextZone": 1
@@ -22,6 +23,9 @@ Parameter IfEraseTextZone sets whether to erase the detected text zone. The dete
 ```
 
 ## Parameter Summary
+
+### Child Parameters
+
 Parameter IfEraseTextZone determines whether to erase text:
 
 <table style = "text-align:left">
@@ -44,8 +48,9 @@ Parameter IfEraseTextZone determines whether to erase text:
         <td><b>Default Value</b><br>0
         </td>
     </tr>
-    
 </table>
+
+### Default Setting
 
 The default settings of IfEraseTextZone is:
 
