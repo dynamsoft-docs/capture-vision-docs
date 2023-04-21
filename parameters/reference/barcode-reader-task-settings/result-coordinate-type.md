@@ -25,7 +25,7 @@ Parameter `ResultCoordinateType` defines the returned coordinate type.
 
 | ResultCoordinateType Parameter Summary |
 | :--------------------------------- |
-| **Type**<br>*string* |
+| **Type**<br>*String* |
 | **Range**<br>One of the Candidate Modes as a string:<br>RCT_PIXEL<br>RCT_PERCENTAGE |
 | **Default Value**<br>RCT_PIXEL |
 

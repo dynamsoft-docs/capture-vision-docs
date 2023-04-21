@@ -11,13 +11,14 @@ permalink: /parameters/reference/image-parameter/scale-up-modes.html
 
 # ScaleUpModes
 
-ScaleUpModes is for controlling the scale-up process when targets in the image are too small.
+Parameter `ScaleUpModes` is for controlling the scale-up process when targets in the image are too small.
 
 ## Example
 
 ```json
 {
-    "ScaleUpModes": [
+    "ScaleUpModes": 
+    [
         {
             "Mode": "SUM_LINEAR_INTERPOLATION", 
             "ModuleSizeThreshold": 4,
@@ -39,15 +40,15 @@ ScaleUpModes is for controlling the scale-up process when targets in the image a
 
 ## Parameter Summary
 
-Parameter ScaleUpModes consists of one or more of the following modes, each mode representing a different scale up algorithm:
+Parameter `ScaleUpModes` consist of a group of scale up mode objects. Each scale up mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the scale up mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -261,6 +262,7 @@ If the `ScaleUpModes` is not configured in your template file, the following set
 ## Candidate Modes Introduction
 
 ### SUM_LINEAR_INTERPOLATION
+
 Scales up using the linear interpolation method. This mode has the following arguments for further customizing:
 
 - AcuteAngleWithXThreshold
@@ -271,8 +273,8 @@ Scales up using the linear interpolation method. This mode has the following arg
 - LibraryFileName
 - LibraryParameters
 
-
 ### SUM_NEAREST_NEIGHBOUR_INTERPOLATION
+
 Scales up using the nearest neighbour method. This mode has the following arguments for further customizing:
 
 - AcuteAngleWithXThreshold
@@ -283,12 +285,6 @@ Scales up using the nearest neighbour method. This mode has the following argume
 - LibraryFileName
 - LibraryParameters
 
-
 ### SUM_AUTO
+
 Lets the library choose a mode automatically.
-
-
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 

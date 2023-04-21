@@ -11,13 +11,14 @@ permalink: /parameters/reference/image-parameter/texture-detection-modes.html
 
 # TextureDetectionModes
 
-Parameter TextureDetectionModes controls how to detect texture on an image.
+Parameter `TextureDetectionModes` controls how to detect texture on an image.
 
 ## Example
 
 ```json
 {
-    "TextureDetectionModes": [
+    "TextureDetectionModes": 
+    [
         {
             "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
             "Sensitivity": 1
@@ -32,15 +33,15 @@ Parameter TextureDetectionModes controls how to detect texture on an image.
 
 ## Parameter Summary
 
-Parameter TextureDetectionModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+Parameter `TextureDetectionModes` consist of a group of texture detection mode objects. Each texture detection mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the texture detection mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -70,7 +71,7 @@ Parameter TextureDetectionModes consists of one or more of the following modes, 
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>	[1, 9]
+        <td><b>Range</b><br>[1, 9]
         </td>
     </tr>
     <tr>
@@ -132,7 +133,8 @@ If the `TextureDetectionModes` is not configured in your template file, the foll
 
 ```json
 {
-    "TextureDetectionModes":[
+    "TextureDetectionModes":
+    [
         {
             "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
             "Sensitivity": 5
@@ -149,8 +151,4 @@ Detects texture using the general algorithm. This mode has the following argumen
 
 **Available auxiliary parameters:**
 
-- [Sensitivity]()
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+- Sensitivity

@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-format-specification/all-module-deviati
 
 # AllModuleDeviation
 
-`AllModuleDeviation` specifies the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width.
+Parameter `AllModuleDeviation` specifies the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width.
 ## Example
 
 ```json
@@ -29,13 +29,3 @@ The unit defined in Parameter `AllModuleDeviation` is barcode module size. For e
 | **Type**<br>*int* |
 | **Range**<br>[0, 0x7fffffff] |
 | **Default Value**<br>0 |
-
-### Default Settings
-
-If the `AllModuleDeviation` is not configured in your template file, the following settings will be used as the default settings.
-
-```json
-{
-    "AllModuleDeviation": 0
-}
-```

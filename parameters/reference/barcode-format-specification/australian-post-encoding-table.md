@@ -26,16 +26,6 @@ The structure of the `AustralianPostEncodingTable` is shown as follow:
 
 | AustralianPostEncodingTable Parameter Summary |
 | :--------------------------------- |
-| **Type**<br>*string* |
-| **Range**<br>"C"<br>"N" |
+| **Type**<br>*String* |
+| **Range**<br>"C" or "N" |
 | **Default Value**<br>"C" |
-
-### Default Settings
-
-If the `AustralianPostEncodingTable` is not configured in your template file, the following settings will be used as the default settings.
-
-```json
-{
-    "AustralianPostEncodingTable": "C"
-}
-```

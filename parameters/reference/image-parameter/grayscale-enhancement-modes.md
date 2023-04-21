@@ -11,7 +11,7 @@ permalink: /parameters/reference/image-parameter/grayscale-enhancement-modes.htm
 
 # GrayscaleEnhancementModes
 
-GrayscaleEnhancementModes provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
+Parameter `GrayscaleEnhancementModes` provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
 
 ## Example
 
@@ -40,15 +40,15 @@ GrayscaleEnhancementModes provides some image processing methods to enhance the 
 
 ## Parameter Summary
 
-Parameter GrayscaleEnhancementModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancement mode objects. Each grayscale enhancement mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the grayscale enhancement mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -224,13 +224,19 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
 
 ### Default Setting
 
-The default settings of GrayscaleEnhancementModes is:
+If the `GrayscaleEnhancementModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
 {
-    "GrayscaleEnhancementModes": [
+    "GrayscaleEnhancementModes" : 
+    [
         {
-            "Mode": "GEM_GENERAL" 
+            "Mode" : "GEM_GENERAL",
+            "Sensitivity" : -1,
+            "SharpenBlockSizeX" : -1,
+            "SharpenBlockSizeY" : -1,
+            "SmoothBlockSizeX" : -1,
+            "SmoothBlockSizeY" : -1
         }
     ]
 }
@@ -248,7 +254,7 @@ Preprocesses the grayscale image using the gray equalization algorithm. This mod
 
 **Available auxiliary parameters:**
 
-- [Sensitivity]()
+* Sensitivity
 
 ### GEM_GRAY_SMOOTH
 
@@ -256,8 +262,8 @@ Preprocesses the grayscale image using the gray smoothing algorithm. This mode c
 
 **Available auxiliary parameters:**
 
-- [SmoothBlockSizeX]()
-- [SmoothBlockSizeY]()
+* SmoothBlockSizeX
+* SmoothBlockSizeY
 
 ### GEM_SHARPEN_SMOOTH
 
@@ -265,11 +271,7 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm. T
 
 **Available auxiliary parameters:**
 
-- [SmoothBlockSizeX]()
-- [SmoothBlockSizeY]()
-- [SharpenBlockSizeX]()
-- [SharpenBlockSizeY]()
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+* SmoothBlockSizeX
+* SmoothBlockSizeY
+* SharpenBlockSizeX
+* SharpenBlockSizeY

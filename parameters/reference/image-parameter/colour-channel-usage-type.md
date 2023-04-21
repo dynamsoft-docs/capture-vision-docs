@@ -11,7 +11,7 @@ permalink: /parameters/reference/image-parameter/colour-channel-usage-type.html
 
 # ColourChannelUsageType
 
-ColourChannelUsageType specifies how to use the colour channel from the source image buffer.
+Parameter `ColourChannelUsageType` specifies how to use the colour channel from the source image buffer.
 
 ## Example
 
@@ -23,50 +23,9 @@ ColourChannelUsageType specifies how to use the colour channel from the source i
 
 ## Parameter Summary
 
-Parameter ColourChannelUsageType allows to use only the information of the specified color channel when loading the image:
-
-### Child Parameters
-
-<table style = "text-align:left">
-    <tr>
-        <th>ColourChannelUsageType Parameter Details</th>
-    </tr>
-    <tr>
-        <td><b>Description</b><br>
-        There are many ways to represent color images, corresponding to many colour-information channels.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>string</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Value range</b>
-        <li>"CCUT_AUTO"</li>
-        <li>"CCUT_FULL_CHANNEL"</li>
-        <li>"CCUT_NV21_Y_CHANNEL_ONLY"</li>
-        <li>"CCUT_RGB_R_CHANNEL_ONLY"</li>
-        <li>"CCUT_RGB_G_CHANNEL_ONLY"</li>
-        <li>"CCUT_RGB_B_CHANNEL_ONLY"</li>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>“CCUT_AUTO”
-        </td>
-    </tr>
-    
-</table>
-
-### Default Setting
-
-The default settings of ColourChannelUsageType is:
-
-```json
-{
-    "ColourChannelUsageType": "CCUT_AUTO"
-}
-```
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+| ColourChannelUsageType Parameter Summary |
+| :--------------------------------------- |
+| **Description**</b><br>There are many ways to represent color images, corresponding to many colour-information channels. |
+| **Type**<br>*String* |
+| **Range** <br>CCUT_AUTO<br>CCUT_FULL_CHANNEL<br>CCUT_NV21_Y_CHANNEL_ONLY<br>CCUT_RGB_R_CHANNEL_ONLY<br>CCUT_RGB_G_CHANNEL_ONLY<br>CCUT_RGB_B_CHANNEL_ONLY |
+| **Default Value**<br>CCUT_AUTO |

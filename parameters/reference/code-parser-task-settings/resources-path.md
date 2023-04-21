@@ -24,7 +24,7 @@ permalink: /parameters/reference/code-parser-task-settings/resources-path.html
 
 | Brightness Parameter Summary |
 | :------------- |
-| **Type**<br>*string* |
+| **Type**<br>*String* |
 | **Range**<br>any valid string |
 | **Default Value**<br>"" |
 

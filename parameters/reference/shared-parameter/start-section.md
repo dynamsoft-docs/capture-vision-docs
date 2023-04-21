@@ -28,7 +28,7 @@ Parameter `StartSection` is available for  `BarcodeReaderTaskSetting`, `LabelRec
 
 | StartSection Parameter Summary |
 | :---------------------------- |
-| **Type**<br>*string* |
+| **Type**<br>*String* |
 | **Range**<br>ST_REGION_PREDETECTION<br>ST_BARCODE_LOCALIZATION<br>ST_BARCODE_DECODING |
 | **Default Value**<br>ST_REGION_PREDETECTION |
 
@@ -36,7 +36,7 @@ Parameter `StartSection` is available for  `BarcodeReaderTaskSetting`, `LabelRec
 
 | StartSection Parameter Summary |
 | :---------------------------- |
-| **Type**<br>*string* |
+| **Type**<br>*String* |
 | **Range**<br>ST_REGION_PREDETECTION<br>ST_DOCUMENT_DETECTION<br>ST_DOCUMENT_NORMALIZATION |
 | **Default Value**<br>ST_REGION_PREDETECTION |
 
@@ -44,6 +44,6 @@ Parameter `StartSection` is available for  `BarcodeReaderTaskSetting`, `LabelRec
 
 | StartSection Parameter Summary |
 | :---------------------------- |
-| **Type**<br>*string* |
+| **Type**<br>*String* |
 | **Range**<br>ST_REGION_PREDETECTION<br>ST_TEXT_LINE_LOCALIZATION<br>ST_TEXT_LINE_RECOGNITION |
 | **Default Value**<br>ST_REGION_PREDETECTION |

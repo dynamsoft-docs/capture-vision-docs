@@ -24,6 +24,6 @@ Parameter `DirectoryPath` defines a path when the library have to read files.
 
 | DirectoryPath Parameter Summary |
 | :------------- |
-| **Type**<br>*string* |
+| **Type**<br>*String* |
 
 > Note: Parameter `DirectoryPath` is available for  `CharacterModel`, `ImageSourceOptions`. It has the same parameter type under different parent object.

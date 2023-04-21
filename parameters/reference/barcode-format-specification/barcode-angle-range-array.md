@@ -9,18 +9,20 @@ noTitleIndex: true
 permalink: /parameters/reference/barcode-format-specification/barcode-angle-range-array.html
 ---
 
-# BarcodeAngleRangeArray 
+# BarcodeAngleRangeArray
 
-`BarcodeAngleRangeArray ` defines the range of angles (in degrees) for barcodes searching and result filtering.
+Parameter `BarcodeAngleRangeArray` defines the range of angles (in degrees) for barcodes searching and result filtering.
+
 ## Example
 
 ```json
 {
-    "BarcodeAngleRangeArray": [
-    {
-        "MinValue": 100,
-        "MaxValue": 200
-    }
+    "BarcodeAngleRangeArray": 
+    [
+        {
+            "MinValue": 100,
+            "MaxValue": 200
+        }
     ]
 }
 ```

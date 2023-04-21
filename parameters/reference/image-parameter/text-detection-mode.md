@@ -11,13 +11,14 @@ permalink: /parameters/reference/image-parameter/text-detection-mode.html
 
 # TextDetectionMode
 
-TextDetectionMode determines how to detect the text area. For tasks like barcode reading or border detection, the text part is not important; while for the task of text recognition, the results of detected text zone are mandatory.
+Parameter `TextDetectionMode` determines how to detect the text area. For tasks like barcode reading or border detection, the text part is not important; while for the task of text recognition, the results of detected text zone are mandatory.
 
 ## Example
 
 ```json
 {
-    "TextDetectionMode":{
+    "TextDetectionMode":
+    {
         "Mode": "TDM_WORD",
         "Direction": "HORIZONTAL",
         "CharHeightRange": [1,1000,1],
@@ -28,15 +29,15 @@ TextDetectionMode determines how to detect the text area. For tasks like barcode
 
 ## Parameter Summary
 
-Parameter TextDetectionMode consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+Parameter `TextDetectionMode` consist of a group of text detection mode objects. Each text detection mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the text detection mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -49,9 +50,9 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>TDM_WORD
-            <br>TDM_LINE
-            <br>TDM_LAYOUT
+        <td><b>Candidate Mode List</b><br>TTDM_WORD
+            <br>TTDM_LINE
+            <br>TTDM_LAYOUT
         </td>
     </tr>
     <tr>
@@ -121,7 +122,7 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>TDM_LINE
+        <td><b>Valid For</b><br>TTDM_LINE
         </td>
     </tr>
     <tr>
@@ -170,32 +171,73 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
 
 ### Default Setting
 
-#### Under BarcodeReaderTaskSetting
+#### For Barcode Decoding
 
 ```json
 {
-    
+    "TextDetectionMode" : 
+    {
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "MaxSpacingInALine" : -1,
+        "Mode" : "TTDM_SKIP"
+    }   
 }
 ```
 
-#### Under LabelRecognizerTaskSetting
+#### For Label Recognizing
 
-#### Under DocumentNormalizerTaskSetting
+```json
+{
+    "TextDetectionMode" : 
+    {
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "MaxSpacingInALine" : -1,
+        "Mode" : "TTDM_LINE"
+    }
+}
+```
+
+#### For Document Scanning
+
+```json
+{
+    "TextDetectionMode" : 
+    {
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "MaxSpacingInALine" : -1,
+        "Mode" : "TTDM_WORD"
+    }
+}
+```
 
 ## Candidate Modes Introduction
 
-### TDM_WORD
+### TTDM_WORD
 
+Find the text area based on the "word" objects. It is the fastest text detection mode but has the lowest accuracy.
 
+### TTDM_LINE
 
-### TDM_LINE
+Find the text area based on the "text line" objects. This mode has higher accuracy than the `TTDM_WORD`. It is currently implemented as the default mode for text line recognizing.
 
+### TTDM_LAYOUT
 
-
-### TDM_LAYOUT
-
-
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+Find the text area based on the layout. A mode with even higher accuracy than the `TTDM_LINE`. Not supported yet.

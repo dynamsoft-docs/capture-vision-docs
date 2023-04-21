@@ -11,7 +11,7 @@ permalink: /parameters/reference/image-parameter/scale-down-threshold.html
 
 # ScaleDownThreshold
 
-Parameter ScaleDownThreshold defines the threshold for image shrinking.
+Parameter `ScaleDownThreshold` defines the threshold for image shrinking.
 
 ## Example
 
@@ -23,32 +23,11 @@ Parameter ScaleDownThreshold defines the threshold for image shrinking.
 
 ## Parameter Summary
 
-### Child Parameters
-
 When the input image is too large, this parameter ScaleDownThreshold can be used to reduce the size.
 
-<table style = "text-align:left">
-    <tr>
-        <th>ScaleDownThreshold Parameter Details</th>
-    </tr>
-    <tr>
-        <td><b>Description</b><br>If the shorter edge size is larger than the given value, the library will calculate the required height and width of the barcode image and shrink the image to that size before going to further processes. Otherwise, it will perform processes on the original image.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>int</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Value range</b><br>[512, 0x7fffffff]
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>2300
-        </td>
-    </tr>
-</table>
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+| ScaleDownThreshold Parameter Summary |
+| :---------------------------------- |
+| **Description**<br>If the shorter edge size is larger than the given value, the library will calculate the required height and width of the barcode image and shrink the image to that size before going to further processes. Otherwise, it will perform processes on the original image. |
+| **Type**<br>*int* |
+| **Value range**<br>[512, 0x7fffffff] |
+| **Default Value**<br>2300 |
