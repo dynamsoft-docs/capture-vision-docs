@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-Title: BarcodeAngleRangeArray  - Dynamsoft Barcode Reader Parameters
+Title: BarcodeAngleRangeArray - Dynamsoft Barcode Reader Parameters
 Description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray .
 Keywords: BarcodeAngleRangeArray , parameter reference, parameter
 needGenerateH3Content: true
@@ -41,8 +41,6 @@ If the `BarcodeAngleRangeArray ` is not configured in your template file, the fo
 
 ```json
 {
-    {
     "BarcodeAngleRangeArray": []
-}
 }
 ```

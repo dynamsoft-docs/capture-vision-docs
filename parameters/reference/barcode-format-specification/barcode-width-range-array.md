@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-Title: BarcodeWidthRangeArray   - Dynamsoft Barcode Reader Parameters
+Title: BarcodeWidthRangeArray - Dynamsoft Barcode Reader Parameters
 Description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeWidthRangeArray  .
 Keywords: BarcodeWidthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
@@ -41,8 +41,6 @@ If the `BarcodeWidthRangeArray  ` is not configured in your template file, the f
 
 ```json
 {
-    {
     "BarcodeWidthRangeArray ": []
-}
 }
 ```

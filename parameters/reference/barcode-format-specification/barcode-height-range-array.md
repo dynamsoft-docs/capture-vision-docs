@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-Title: BarcodeHeightRangeArray   - Dynamsoft Barcode Reader Parameters
+Title: BarcodeHeightRangeArray - Dynamsoft Barcode Reader Parameters
 Description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeHeightRangeArray  .
 Keywords: BarcodeHeightRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
@@ -41,8 +41,6 @@ If the `BarcodeHeightRangeArray  ` is not configured in your template file, the 
 
 ```json
 {
-    {
     "BarcodeHeightRangeArray ": []
-}
 }
 ```
