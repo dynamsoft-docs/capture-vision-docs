@@ -8,6 +8,8 @@ noTitleIndex: true
 permalink: /architecture/semantic-processing.html
 ---
 
+> *Go to [DCV Architecture](index.md)*
+
 # Semantic Processing
 
 A semantic processing operation usually follows [Text-line Recognition](image-processing/textline-recognition.md) or [Barcode Decoding](image-processing/barcode-decoding.md):
