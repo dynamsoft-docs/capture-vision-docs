@@ -105,6 +105,19 @@ The mode arguments of the barcode complement mode object are shown as follow:
 
 ### Default Settings
 
+Barcode complement mode is not implemented by default
+
+```json
+{
+    "BarcodeComplementModes" : 
+    [
+        {
+        "Mode" : "BCM_SKIP"
+        }
+   ]
+}
+```
+
 ## Candidate Modes Introduction
 
 ### BCM_GENERAL

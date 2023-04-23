@@ -5,6 +5,7 @@ Description: The parameter Location of Dynamsoft Capture Vision defines the loca
 Keywords: Location
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/target-roi-def/location.html
 ---
 

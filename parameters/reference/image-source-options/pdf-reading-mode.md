@@ -48,7 +48,7 @@ Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF 
         </td>
     </tr>
     <tr>
-        <td><b>One of the candidate mode as a string</b><br>PDFRM_VECTOR<br>PDFRM_RASTER
+        <td><b>Candidate Mode List</b><br>PDFRM_VECTOR<br>PDFRM_RASTER
         </td>
     </tr>
     <tr>
