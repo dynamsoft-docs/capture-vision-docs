@@ -8,7 +8,7 @@ noTitleIndex: false
 permalink: /architecture/input.html
 ---
 
-> *Go back to [DCV Architecture](index.md)*
+> *Go to [DCV Architecture](index.md)*
 
 # Input
 

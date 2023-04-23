@@ -8,6 +8,8 @@ noTitleIndex: true
 permalink: /architecture/image-processing/barcode-decoding.html
 ---
 
+> *Go to [DCV Architecture](../index.md)*
+
 The following diagram shows how sections connect to each other to form tasks:
 
 ```mermaid
