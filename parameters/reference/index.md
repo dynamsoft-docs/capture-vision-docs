@@ -151,10 +151,10 @@ permalink: /parameters/reference/index.html
 
 | Parameter Name | Description |
 | -------------------- | ----------- |
-| [`FileFilter`](image-source-options/file-filter.md) |  |
-| [`PDFReadingMode`](image-source-options/pdf-reading-mode.md) |  |
-| [`Recursive`](image-source-options/recursive.md) |  |
-| [`Type`](image-source-options/type.md) |  |
+| [`FileFilter`](image-source-options/file-filter.md) | Defines a file name filter string, which determines which files are fetched. |
+| [`PDFReadingMode`](image-source-options/pdf-reading-mode.md) | Defines how to handle PDF files. |
+| [`Recursive`](image-source-options/recursive.md) | Defines whether to fetch files recursively. |
+| [`Type`](image-source-options/type.md) | Defines the type of the ImageSource object, which helps CVR create the correct type of image source. |
 
 ## Global Parameter
 
