@@ -40,7 +40,7 @@ Parameter `ScaleUpModes` is for controlling the scale-up process when targets in
 
 ## Parameter Summary
 
-Parameter `ScaleUpModes` consist of a group of scale up mode objects. Each scale up mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the scale up mode object is shown as follow:
+Parameter `ScaleUpModes` consist of a group of scale up mode objects. Each scale up mode object includes a candidate mode and a series of mode arguments. The mode arguments of the scale up mode object is shown as follow:
 
 ### Mode Arguments
 

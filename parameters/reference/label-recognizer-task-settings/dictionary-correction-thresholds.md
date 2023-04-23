@@ -10,7 +10,7 @@ permalink: /parameters/reference/label-recognizer-task-settings/dictionary-corre
 
 # DictionaryCorrectionThresholds
 
-Sets the threshold of dictionary error correction.
+Parameter `DictionaryCorrectionThresholds` sets the threshold of dictionary error correction.
 
 ## Example
 

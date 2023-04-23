@@ -10,7 +10,7 @@ permalink: /parameters/reference/label-recognizer-task-settings/base-label-recog
 
 # BaseLabelRecognizerTaskSettingName
 
-Represents the name of another `LabelRecognizerTaskSetting` object. It is used to inherit the parameters defined in its parent `LabelRecognizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+Parameter `BaseLabelRecognizerTaskSettingName` represents the name of another `LabelRecognizerTaskSetting` object. It is used to inherit the parameters defined in its parent `LabelRecognizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
 ## Example
 

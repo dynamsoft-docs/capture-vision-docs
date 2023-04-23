@@ -10,7 +10,7 @@ permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral
 
 # QuadrilateralDetectionModes
 
-`QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
+Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
 
 ## Example
 
@@ -26,15 +26,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral
 
 ## Parameter Summary
 
-`QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
+`QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other mode arguments.
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>

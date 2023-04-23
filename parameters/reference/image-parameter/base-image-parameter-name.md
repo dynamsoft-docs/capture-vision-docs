@@ -10,7 +10,7 @@ permalink: /parameters/reference/image-parameter/base-image-parameter-name.html
 
 # BaseImageParameterName
 
-Parameter `BaseImageParameterName` specifies the object to be inherited.
+Parameter `BaseImageParameterName` represents the name of another `ImageParameter` object. It is used to inherit the parameters defined in its parent `ImageParameter` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
 ## Example
 

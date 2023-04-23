@@ -40,7 +40,7 @@ Parameter `GrayscaleEnhancementModes` provides some image processing methods to 
 
 ## Parameter Summary
 
-Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancement mode objects. Each grayscale enhancement mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the grayscale enhancement mode object is shown as follow:
+Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancement mode objects. Each grayscale enhancement mode object includes a candidate mode and a series of mode arguments. The mode arguments of the grayscale enhancement mode object is shown as follow:
 
 ### Mode Arguments
 
@@ -252,7 +252,7 @@ Takes the un-preprocessed grayscale image for the next stage of operations.
 
 Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast between content and background colour.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * Sensitivity
 
@@ -260,7 +260,7 @@ Preprocesses the grayscale image using the gray equalization algorithm. This mod
 
 Preprocesses the grayscale image using the gray smoothing algorithm. This mode can be used for for images with noise or texture.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * SmoothBlockSizeX
 * SmoothBlockSizeY
@@ -269,7 +269,7 @@ Preprocesses the grayscale image using the gray smoothing algorithm. This mode c
 
 Preprocesses the grayscale image using the sharpening and smoothing algorithm. This mode can be used for blurry images.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * SmoothBlockSizeX
 * SmoothBlockSizeY

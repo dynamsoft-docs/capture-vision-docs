@@ -10,7 +10,7 @@ permalink: /parameters/reference/text-line-specification/character-model-name.ht
 
 # CharacterNormalizationModes
 
-An array of `CharacterNormalizationMode` object that defines which mode to implement. The array index represents the priority of the item. The smaller index is, the higher priority is.
+Parameter `CharacterNormalizationMode` defines an array of character normalization mode to implement. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 ## Example
 
@@ -32,15 +32,15 @@ An array of `CharacterNormalizationMode` object that defines which mode to imple
 
 ## Parameter Summary
 
-Parameter `CharacterNormalizationModes` consist of a group of character normalization mode objects. Each character normalization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the character normalization mode object is shown as follow:
+Parameter `CharacterNormalizationModes` consist of a group of character normalization mode objects. Each character normalization mode object includes a candidate mode and a series of mode arguments. The mode arguments of the character normalization mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>

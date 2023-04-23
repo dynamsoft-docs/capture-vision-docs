@@ -10,7 +10,7 @@ permalink: /parameters/reference/label-recognizer-task-settings/string-regex-pat
 
 # StringRegExPattern
 
-Specifies the regular expression pattern for concatenated strings of recognized text lines.
+Parameter `StringRegExPattern` specifies the regular expression pattern for concatenated strings of recognized text lines.
 
 ## Example
 

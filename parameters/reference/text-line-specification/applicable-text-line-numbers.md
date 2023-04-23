@@ -10,7 +10,7 @@ permalink: /parameters/reference/text-line-specification/applicable-text-line-nu
 
 # ApplicableTextLineNumbers
 
-The line numers of the targeting lines which are specified by the `TextLineSpecification` object.
+Parameter `ApplicableTextLineNumbers` specifies the line numers of the targeting lines which are specified by the `TextLineSpecification` object.
 
 ## Example
 

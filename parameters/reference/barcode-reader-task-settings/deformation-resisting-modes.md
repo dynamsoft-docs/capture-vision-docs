@@ -28,17 +28,17 @@ Parameter `DeformationResistingModes` defines how to handle distorted and deform
 
 ## Parameter Summary
 
-Parameter `DeformationResistingModes` consist of a group of deformation resisting mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary parameters.
+Parameter `DeformationResistingModes` consist of a group of deformation resisting mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary mode arguments.
 
-### Child Parameters
+### Mode Arguments
 
-The child parameters of the deformation resisting mode object are shown as follow:
+The mode arguments of the deformation resisting mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -158,7 +158,7 @@ The child parameters of the deformation resisting mode object are shown as follo
 
 Resists deformation using the general algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - Level
 - LibraryFileName
@@ -168,7 +168,7 @@ Resists deformation using the general algorithm. This mode has the following arg
 
 Resists deformation when the barcode is warped gently. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - BinarizationMode
 - GrayscaleEnhancementMode
@@ -177,7 +177,7 @@ Resists deformation when the barcode is warped gently. This mode has the followi
 
 Resists deformation for barcodes with minor deformation in local modules. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - BinarizationMode
 - GrayscaleEnhancementMode
@@ -186,7 +186,7 @@ Resists deformation for barcodes with minor deformation in local modules. This m
 
 Resists deformation for barcodes on a wrinkled surface. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - BinarizationMode
 - GrayscaleEnhancementMode

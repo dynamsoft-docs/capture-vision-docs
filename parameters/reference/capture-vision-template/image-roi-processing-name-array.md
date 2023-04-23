@@ -10,7 +10,7 @@ permalink: /parameters/reference/capture-vision-template/image-roi-processing-na
 
 # ImageROIProcessingNameArray
 
-Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects
+Parameter `ImageROIProcessingNameArray` defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects
 
 ## Example
 

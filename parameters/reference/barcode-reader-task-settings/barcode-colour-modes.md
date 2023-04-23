@@ -27,17 +27,17 @@ Parameter `BarcodeColourModes` defines the barcode colour modes. It consists of 
 
 ## Parameter Summary
 
-Parameter `BarcodeColourModes` consist of a group of barcode colour mode objects. Each barcode colour mode object includes a candidate mode and a series of auxiliary parameters.
+Parameter `BarcodeColourModes` consist of a group of barcode colour mode objects. Each barcode colour mode object includes a candidate mode and a series of auxiliary mode arguments.
 
-### Child Parameters
+### Mode Arguments
 
-The child parameters of the barcode colour mode object are shown as follow:
+The mode arguments of the barcode colour mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -145,7 +145,7 @@ If the `BarcodeColourModes` is not configured in your template file, the followi
 
 The target barcode is a dark item on a light background. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LightReflection
 - LibraryFileName
@@ -155,7 +155,7 @@ The target barcode is a dark item on a light background. This mode has the follo
 
 The target barcode is a dark item on a light background surrounded by dark. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LightReflection
 - LibraryFileName

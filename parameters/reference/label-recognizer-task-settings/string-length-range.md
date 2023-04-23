@@ -10,7 +10,7 @@ permalink: /parameters/reference/label-recognizer-task-settings/string-length-ra
 
 # StringLengthRange
 
-Sets the range of string lengths for concatenated strings of recognized text lines.
+Parameter `StringLengthRange` sets the range of string lengths for concatenated strings of recognized text lines.
 
 ## Example
 

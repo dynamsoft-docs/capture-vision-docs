@@ -29,7 +29,7 @@ Parameter `TextDetectionMode` determines how to detect the text area. For tasks 
 
 ## Parameter Summary
 
-Parameter `TextDetectionMode` consist of a group of text detection mode objects. Each text detection mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the text detection mode object is shown as follow:
+Parameter `TextDetectionMode` consist of a group of text detection mode objects. Each text detection mode object includes a candidate mode and a series of mode arguments. The mode arguments of the text detection mode object is shown as follow:
 
 ### Mode Arguments
 

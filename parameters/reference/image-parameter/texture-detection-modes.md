@@ -33,7 +33,7 @@ Parameter `TextureDetectionModes` controls how to detect texture on an image.
 
 ## Parameter Summary
 
-Parameter `TextureDetectionModes` consist of a group of texture detection mode objects. Each texture detection mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the texture detection mode object is shown as follow:
+Parameter `TextureDetectionModes` consist of a group of texture detection mode objects. Each texture detection mode object includes a candidate mode and a series of mode arguments. The mode arguments of the texture detection mode object is shown as follow:
 
 ### Mode Arguments
 
@@ -149,6 +149,6 @@ If the `TextureDetectionModes` is not configured in your template file, the foll
 
 Detects texture using the general algorithm. This mode has the following arguments for further customization.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - Sensitivity

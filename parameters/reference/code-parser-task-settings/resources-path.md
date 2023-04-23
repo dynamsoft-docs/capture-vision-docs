@@ -10,7 +10,7 @@ permalink: /parameters/reference/code-parser-task-settings/resources-path.html
 
 # ResourcesPath
 
-`ResourcesPath` specifies the directory path that contains the resources needed for code parsing.
+Parameter `ResourcesPath` specifies the directory path that contains the resources needed for code parsing.
 
 ## Example
 

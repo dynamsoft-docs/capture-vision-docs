@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-Title: {} - Dynamsoft Label Recognizer Parameters
-Description: The parameter {} of Dynamsoft Label Recognizer defines how to normalize the characters.
+Title: Text Line Area Points - Dynamsoft Label Recognizer Parameters
+Description: The parameter Text Line Area Points of Dynamsoft Label Recognizer defines how to normalize the characters.
 Keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -10,7 +10,7 @@ permalink: /parameters/reference/text-line-specification/position.html
 
 # Text Line Area Points
 
-Set the position of the text lines with the vertice points. The point coordinates are measured in percentage based on the size of the `TargetROI`.
+Text line area points parameters defines the position of the text lines with the vertice points. The point coordinates are measured in percentage based on the size of the `TargetROI`.
 
 ## Example
 

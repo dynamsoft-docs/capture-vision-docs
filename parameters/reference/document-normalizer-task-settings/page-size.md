@@ -10,7 +10,7 @@ permalink: /parameters/reference/document-normalizer-task-settings/page-size.htm
 
 # PageSize
 
-Sets the page size (width by height in pixels) of the normalized image.
+Parameter `PageSize` sets the page size (width by height in pixels) of the normalized image.
 
 ## Example
 

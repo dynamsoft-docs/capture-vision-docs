@@ -10,7 +10,7 @@ permalink: /parameters/reference/text-line-specification/base-text-line-specific
 
 # BaseTextLineSpecificationName
 
-Represents the name of another `BaseTextLineSpecificationName` object. It is used to inherit the parameters defined in its parent `BaseTextLineSpecificationName` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+Parameter `BaseTextLineSpecificationName` represents the name of another `BaseTextLineSpecificationName` object. It is used to inherit the parameters defined in its parent `BaseTextLineSpecificationName` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
 ## Example
 

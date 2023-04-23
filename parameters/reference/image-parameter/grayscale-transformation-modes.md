@@ -32,7 +32,7 @@ Parameter `GrayscaleTransformationModes` are used to control whether or not to i
 
 ### Mode Arguments
 
-Parameter `GrayscaleTransformationModes` consist of a group of grayscale transformation mode objects. Each grayscale transformation mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the grayscale transformation mode object is shown as follow:
+Parameter `GrayscaleTransformationModes` consist of a group of grayscale transformation mode objects. Each grayscale transformation mode object includes a candidate mode and a series of mode arguments. The mode arguments of the grayscale transformation mode object is shown as follow:
 
 <table style = "text-align:left">
     <thead>

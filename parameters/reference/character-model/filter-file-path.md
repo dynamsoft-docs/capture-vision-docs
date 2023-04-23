@@ -28,7 +28,7 @@ Parameter `FilterFilePath` defines the full path of the filter file which specif
 
 ### Default Settings
 
-If the `FilterFilePath  ` is not configured in your template file, the following settings will be used as the default settings.
+If the `FilterFilePath` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
 {

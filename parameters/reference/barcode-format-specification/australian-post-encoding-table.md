@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: AustralianPostEncodingTable - Dynamsoft Barcode Reader Parameters
-Description: This page shows Dynamsoft Barcode Reader Parameter Reference for AustralianPostEncodingTable.
+Description: The parameter AustralianPostEncodingTable of Dynamsoft Barcode Reader helps specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode.
 Keywords: AustralianPostEncodingTable, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -11,7 +11,8 @@ permalink: /parameters/reference/barcode-format-specification/australian-post-en
 
 # AustralianPostEncodingTable
 
-`AustralianPostEncodingTable` helps specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode.
+Parameter `AustralianPostEncodingTable` helps specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode.
+
 ## Example
 
 ```json

@@ -10,7 +10,7 @@ permalink: /parameters/reference/document-normalizer-task-settings/deskew-mode.h
 
 # DeskewMode
 
-DeskewMode specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
+Parameter `DeskewMode` specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
 
 ## Example
 
@@ -26,15 +26,15 @@ DeskewMode specifies the method in which the deskew process way used to apply th
 
 ## Parameter Summary
 
-DeskewMode is defined with a object that contains two child parameters, `Mode` and `ContentDirection`.
+DeskewMode is defined with a object that contains two mode arguments, `Mode` and `ContentDirection`.
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: BarcodeBytesLengthRangeArray - Dynamsoft Barcode Reader Parameters
-Description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesLengthRangeArray  .
+Description: The parameter BarcodeBytesLengthRangeArray of Dynamsoft Barcode Reader defines the range of barcode bytes length for barcodes searching and result filtering.
 Keywords: BarcodeBytesLengthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -9,31 +9,58 @@ noTitleIndex: true
 permalink: /parameters/reference/barcode-format-specification/barcode-bytes-length-range-array.html
 ---
 
-# BarcodeBytesLengthRangeArray  
+# BarcodeBytesLengthRangeArray
 
-`BarcodeBytesLengthRangeArray` defines the range of barcode bytes length for barcodes searching and result filtering.
+Parameter `BarcodeBytesLengthRangeArray` defines the range of barcode bytes length for barcodes searching and result filtering.
+
 ## Example
 
 ```json
 {
-    "BarcodeBytesLengthRangeArray": [
-    {
-        "MinValue": 100,
-        "MaxValue": 200
-    }
+    "BarcodeBytesLengthRangeArray": 
+    [
+        {
+            "MinValue": 100,
+            "MaxValue": 200
+        }
     ]
 }
 ```
 
 ## Parameter Summary
 
-`BarcodeBytesLengthRangeArray ` is not set by default which means there is no limitation on the barcode bytes length. The structure of the `BarcodeBytesLengthRangeArray  ` is shown as follow:
+Parameter `BarcodeBytesLengthRangeArray` consist of a group of barcode bytes length range objects. Each barcode angle range object includes the maximum and minimum value of the barcode bytes length range.
 
-| BarcodeBytesLengthRangeArray  Parameter Summary |
-| :--------------------------------- |
-| **Type**<br>*A JSON Object array: <br>defines MinValue and MaxValue of the barcode bytes length.* |
-| **Range**<br>A number from [0, 0x7fffffff] |
-| **Default Value**<br> |
+<table style = "text-align:left">
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Summary</th>
+        </tr>
+    </thead>
+    <tr>
+        <td rowspan = "3" style="vertical-align:text-top">MinValue<br></td>
+        <td><b>Description</b><br>Defines the MinValue of the barcode byte length range.</td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i></td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[0,0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "3" style="vertical-align:text-top">MaxValue<br></td>
+        <td><b>Description</b><br>Defines the MaxValue of the barcode byte length range.</td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i></td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[0,0x7fffffff]
+        </td>
+    </tr>
+</table>
 
 ### Default Settings
 

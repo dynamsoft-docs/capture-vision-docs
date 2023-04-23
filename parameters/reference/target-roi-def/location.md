@@ -10,7 +10,7 @@ permalink: /parameters/reference/target-roi-def/location.html
 
 # Location
 
-Define the location of the TargetROI with `reference objects` filter conditions and `offset` parameters.
+Parameter `Location` defines the location of the TargetROI with `reference objects` filter conditions and `offset` parameters.
 
 ## Example
 

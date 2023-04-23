@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: EnableAddonCode - Dynamsoft Barcode Reader Parameters
-Description: This page shows Dynamsoft Barcode Reader Parameter Reference for EnableAddonCode.
+Description: The parameter Code128Subset of Dynamsoft Barcode Reader defines whether to identify addon code.
 Keywords: EnableAddonCode , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -9,11 +9,11 @@ noTitleIndex: true
 permalink: /parameters/reference/barcode-format-specification/enable-addon-code.html
 ---
 
-# EnableAddonCode  
+# EnableAddonCode
 
-`EnableAddonCode` defines whether to identify addon code.
+Parameter `EnableAddonCode` defines whether to identify addon code.
+
 ## Example
-
 
 ```json
 {
@@ -22,7 +22,8 @@ permalink: /parameters/reference/barcode-format-specification/enable-addon-code.
 ```
 
 ## Parameter Summary
-The structure of the`EnableAddonCode` is shown as follow:
+
+The structure of the `EnableAddonCode` is shown as follow:
 
 | EnableAddonCode  Parameter Summary |
 | :--------------------------------- |
@@ -31,16 +32,7 @@ The structure of the`EnableAddonCode` is shown as follow:
 | **Default Value**<br> 0|
 
 **Remarks**
+
 - 0: do not identify addon code.
 - 1: identify addon code.
 - This parameter is valid only for EAN8/EAN13/UPCA/UPCE code formats.
-
-### Default Settings
-
-If the `EnableAddonCode` is not configured in your template file, the following settings will be used as the default settings, which means not to identify addon code.
-
-```json
-{
-    "EnableAddonCode": 0
-}
-```

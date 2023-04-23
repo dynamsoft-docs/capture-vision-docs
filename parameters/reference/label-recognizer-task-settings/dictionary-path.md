@@ -10,7 +10,7 @@ permalink: /parameters/reference/label-recognizer-task-settings/dictionary-path.
 
 # DictionaryPath
 
-Sets the path of the dictionary file.
+Parameter `DictionaryPath` sets the path of the dictionary file.
 
 ## Example
 

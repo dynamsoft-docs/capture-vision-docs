@@ -10,7 +10,7 @@ permalink: /parameters/reference/document-normalizer-task-settings/base-document
 
 # BaseDocumentNormalizerTaskSettingName
 
-Specify a `DocumentNormalizerTaskSetting` object name. The current object will inherit the parameter settings of the specified object.
+Parameter `BaseDocumentNormalizerTaskSettingName` represents the name of another `DocumentNormalizerTaskSetting` object. It is used to inherit the parameters defined in its parent `DocumentNormalizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
 ## Example
 

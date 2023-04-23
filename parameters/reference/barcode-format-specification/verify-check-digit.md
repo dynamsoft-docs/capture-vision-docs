@@ -1,19 +1,19 @@
 ---
 layout: default-layout
 Title: VerifyCheckDigit - Dynamsoft Barcode Reader Parameters
-Description: This page shows Dynamsoft Barcode Reader Parameter Reference for VerifyCheckDigit.
-Keywords: VerifyCheckDigit , parameter reference, parameter
+Description: The parameter VerifyCheckDigit of Dynamsoft Barcode Reader specifies whether to verify the check digit in barcodes where this check digit is optional.
+Keywords: VerifyCheckDigit, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 permalink: /parameters/reference/barcode-format-specification/verify-check-digit.html
 ---
 
-# VerifyCheckDigit  
+# VerifyCheckDigit
 
-`VerifyCheckDigit` specifies whether to verify the check digit in barcodes where this check digit is optional.
+Parameter `VerifyCheckDigit` specifies whether to verify the check digit in barcodes where this check digit is optional.
+
 ## Example
-
 
 ```json
 {
@@ -22,25 +22,17 @@ permalink: /parameters/reference/barcode-format-specification/verify-check-digit
 ```
 
 ## Parameter Summary
-The structure of the`VerifyCheckDigit` is shown as follow:
+
+The structure of the `VerifyCheckDigit` is shown as follow:
 
 | VerifyCheckDigit  Parameter Summary |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |
-| **Default Value**<br> 0|
+| **Default Value**<br>0 |
 
 **Remarks**
+
 - It is valid only for Code 11.
 - 0: do not verify the check digit.
 - 1: verify the check digit and if it does not match, no result will be returned. Do not set this parameter to 1 for barcodes without an optional check digit.
-
-### Default Settings
-
-If the `VerifyCheckDigit` is not configured in your template file, the following settings will be used as the default settings.
-
-```json
-{
-    "VerifyCheckDigit": 0
-}
-```

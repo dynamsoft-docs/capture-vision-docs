@@ -10,7 +10,7 @@ permalink: /parameters/reference/text-line-specification/character-model-name.ht
 
 # CharacterModelName
 
-`CharacterModelName` defines the range of the character height.
+Parameter `CharacterModelName` defines the name of the character model.
 
 ## Example
 

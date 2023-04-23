@@ -10,7 +10,7 @@ permalink: /parameters/reference/text-line-specification/char-height-range.html
 
 # CharHeightRange
 
-`CharHeightRange` defines the range of the character height.
+Parameter `CharHeightRange` defines the range of the character height.
 
 ## Example
 

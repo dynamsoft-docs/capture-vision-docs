@@ -10,7 +10,7 @@ permalink: /parameters/reference/capture-vision-template/semantic-processing-nam
 
 # SemanticProcessingNameArray
 
-Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.
+Parameter `SemanticProcessingNameArray` represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.
 
 ## Example
 

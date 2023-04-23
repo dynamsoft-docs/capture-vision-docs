@@ -31,17 +31,17 @@ Parameter `DeblurModes` defines the mode and priority for deblurring.
 
 ## Parameter Summary
 
-Parameter `DeblurModes` consist of a group of deblur mode objects. Each deblur mode object includes a candidate mode and a series of auxiliary parameters.
+Parameter `DeblurModes` consist of a group of deblur mode objects. Each deblur mode object includes a candidate mode and a series of auxiliary mode arguments.
 
-### Child Parameters
+### Mode Arguments
 
-The child parameters of the deblur mode object are shown as follow:
+The mode arguments of the deblur mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -118,7 +118,7 @@ The child parameters of the deblur mode object are shown as follow:
 
 Performs deblur process using the binarization algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -127,7 +127,7 @@ Performs deblur process using the binarization algorithm. This mode has the foll
 
 Performs deblur process using the threshold binarization algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -136,7 +136,7 @@ Performs deblur process using the threshold binarization algorithm. This mode ha
 
 Performs deblur process using the gray equalization algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -145,7 +145,7 @@ Performs deblur process using the gray equalization algorithm. This mode has the
 
 Performs deblur process using the smoothing algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -154,7 +154,7 @@ Performs deblur process using the smoothing algorithm. This mode has the followi
 
 Performs deblur process using the morphing algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -163,7 +163,7 @@ Performs deblur process using the morphing algorithm. This mode has the followin
 
 Performs deblur process using the deep analysis algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -172,7 +172,7 @@ Performs deblur process using the deep analysis algorithm. This mode has the fol
 
 Performs deblur process using the sharpening algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -181,7 +181,7 @@ Performs deblur process using the sharpening algorithm. This mode has the follow
 
 Performs deblur process based on the binary image from the localization process. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -190,7 +190,7 @@ Performs deblur process based on the binary image from the localization process.
 
 Performs deblur process using the sharpening and smoothing algorithm. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters

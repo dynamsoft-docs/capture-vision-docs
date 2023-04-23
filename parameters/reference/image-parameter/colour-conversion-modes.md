@@ -27,7 +27,7 @@ Parameter `ColourConversionModes` is a parameter for setting the mode for conver
 
 ## Parameter Summary
 
-Parameter `ColourConversionModes` consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the colour conversion mode object is shown as follow:
+Parameter `ColourConversionModes` consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of mode arguments. The mode arguments of the colour conversion mode object is shown as follow:
 
 ### Mode Arguments
 
@@ -210,7 +210,7 @@ If the `ColourConversionModes` is not configured in your template file, the foll
 
 Converts a colour image to a grayscale image using the general RGB colour model.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * RedChannelWeight
 * BlueChannelWeight
@@ -222,7 +222,7 @@ Converts a colour image to a grayscale image using the general RGB colour model.
 
 Converts a colour image to a grayscale image using the HSV colour model.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * ReferChannel
 * LibraryFileName

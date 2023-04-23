@@ -37,7 +37,7 @@ Parameter `BinarizationModes` helps control the process of binarization, i.e., c
 
 ## Parameter Summary
 
-Parameter `BinarizationModes` consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The available **mode arguments** of the binarization mode object is shown as follow.
+Parameter `BinarizationModes` consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of mode arguments. The available mode arguments of the binarization mode object is shown as follow.
 
 ### Mode Arguments
 
@@ -363,7 +363,7 @@ Re-binarize the text line area to support the character segmentation.
 
 If an image has different lighting conditions in different areas, BM_LOCAL_BLOCK can help. In this case, our algorithm determines the threshold for a pixel based on a small region around it, which makes it more adaptive and gives better results.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * BlockSizeX
 * BlockSizeY
@@ -381,7 +381,7 @@ If an image has different lighting conditions in different areas, BM_LOCAL_BLOCK
 
 Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * BinarizationThreshold
 * LibraryFileName

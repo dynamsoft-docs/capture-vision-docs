@@ -10,7 +10,7 @@ permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-
 
 # ConrnerAngleRangeArray
 
-`ConrnerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
+Parameter `ConrnerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
 
 ## Example
 

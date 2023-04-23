@@ -10,7 +10,7 @@ permalink: /parameters/reference/code-parser-task-settings/code-specifications.h
 
 # CodeSpecifications
 
-`CodeSpecifications` specifies the names of CodeSpecification used for code parsing.
+Parameter `CodeSpecifications` specifies the names of CodeSpecification used for code parsing.
 
 ## Example
 

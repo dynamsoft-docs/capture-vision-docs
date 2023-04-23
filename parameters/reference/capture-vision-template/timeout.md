@@ -10,7 +10,7 @@ permalink: /parameters/reference/capture-vision-template/timeout.html
 
 # Timeout
 
-Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. It does not include the time taken to load/decode an image from disk into memory.
+Parameter `Timeout` defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. It does not include the time taken to load/decode an image from disk into memory.
 
 ## Example
 

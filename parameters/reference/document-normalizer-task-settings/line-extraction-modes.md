@@ -10,7 +10,7 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
 
 # LineExtractionModes
 
-`LineExtractionModes` specifies the algorithm used to extract lines. It currently consist of `LEM_GENERAL` and `LEM_MARGIN_BASED`. Each mode representing a different way to extract lines.
+Parameter `LineExtractionModes` specifies the algorithm used to extract lines. It currently consist of `LEM_GENERAL` and `LEM_MARGIN_BASED`. Each mode representing a different way to extract lines.
 
 ## Example
 
@@ -30,15 +30,15 @@ permalink: /parameters/reference/document-normalizer-task-settings/line-extracti
 
 ## Parameter Summary
 
-`LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
+`LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other mode arguments.
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>

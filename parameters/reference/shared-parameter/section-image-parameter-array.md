@@ -10,7 +10,7 @@ permalink: /parameters/reference/shared-parameter/section-image-parameter-array.
 
 # SectionImageParameterArray
 
-`SectionImageParameterArray` is the parameter for you to set the image processing algorithms that implemented in the task. Each member of the array defines an algorithm section as well as its image processing parameters.
+Parameter `SectionImageParameterArray` defines the image processing algorithms that implemented in the task. Each member of the array defines an algorithm section as well as its image processing parameters.
 
 ## Example
 

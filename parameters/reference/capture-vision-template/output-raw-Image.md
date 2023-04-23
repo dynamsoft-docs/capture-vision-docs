@@ -10,7 +10,7 @@ permalink: /parameters/reference/capture-vision-template/output-raw-Image.html
 
 # OutputRawImage
 
-Indicates whether DCV finally outputs the original input image.
+Parameter `OutputRawImage` indicates whether DCV finally outputs the original input image.
 
 ## Example
 

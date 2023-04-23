@@ -10,7 +10,7 @@ permalink: /parameters/reference/target-roi-def/task-setting-name-array.html
 
 # TaskSettingNameArray
 
-Represents the collection of task setting object names, used to refer to the [`BarcodeReaderTaskSetting`](../../file/task-settings/barcode-reader-task-settings.md),[`LabelRecognizerTaskSetting`](../../file/task-settings/label-recognizer-task-settings.md),[`DocumentNormalizerTaskSetting`](../../file/task-settings/document-normalizer-task-settings.md) objects. It is used to define recognition tasks such as reading barcodes, recognizing labels, or detecting document quads.
+Parameter `TaskSettingNameArray` represents the collection of task setting object names, used to refer to the [`BarcodeReaderTaskSetting`](../../file/task-settings/barcode-reader-task-settings.md),[`LabelRecognizerTaskSetting`](../../file/task-settings/label-recognizer-task-settings.md),[`DocumentNormalizerTaskSetting`](../../file/task-settings/document-normalizer-task-settings.md) objects. It is used to define recognition tasks such as reading barcodes, recognizing labels, or detecting document quads.
 
 ## Example
 

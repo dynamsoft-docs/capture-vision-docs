@@ -10,7 +10,7 @@ permalink: /parameters/reference/capture-vision-template/image-source-name.html
 
 # ImageSourceName
 
-Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV.
+Parameter `ImageSourceName` indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV.
 
 ## Example
 

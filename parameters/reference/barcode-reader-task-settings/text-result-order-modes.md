@@ -34,15 +34,15 @@ Parameter `TextResultOrderModes` defines the order of the returned text results.
 
 ## Parameter Summary
 
-Parameter `TextResultOrderModes` consist of a group of text result order mode objects. Each text result order mode object includes a candidate mode and a series of auxiliary parameters. The structure of the text result order mode object is shown as follow:
+Parameter `TextResultOrderModes` consist of a group of text result order mode objects. Each text result order mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the text result order mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>

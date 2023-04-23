@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: AllModuleDeviation - Dynamsoft Barcode Reader Parameters
-Description: This page shows Dynamsoft Barcode Reader Parameter Reference for AllModuleDeviation.
+Description: The parameter AllModuleDeviation of Dynamsoft Barcode Reader specifies the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width.
 Keywords: AllModuleDeviation, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -12,6 +12,7 @@ permalink: /parameters/reference/barcode-format-specification/all-module-deviati
 # AllModuleDeviation
 
 Parameter `AllModuleDeviation` specifies the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width.
+
 ## Example
 
 ```json

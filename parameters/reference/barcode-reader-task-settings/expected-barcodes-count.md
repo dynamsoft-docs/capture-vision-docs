@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/expected-barcodes-
 
 # ExpectedBarcodesCount
 
-The parameter `ExpectedBarcodesCount` defines the number of barcodes expected to be detected.
+Parameter `ExpectedBarcodesCount` defines the number of barcodes expected to be detected.
 
 ## Example
 

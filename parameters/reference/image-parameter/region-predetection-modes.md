@@ -39,7 +39,7 @@ Parameter `RegionPredetectionModes` controls how to find a region of interest (R
 
 ### Mode Arguments
 
-Parameter `RegionPredetectionModes` consist of a group of region predetection mode objects. Each region predetection  mode object includes a candidate mode and a series of auxiliary parameters as **mode arguments**. The **mode arguments** of the region predetection mode object is shown as follow:
+Parameter `RegionPredetectionModes` consist of a group of region predetection mode objects. Each region predetection  mode object includes a candidate mode and a series of mode arguments. The mode arguments of the region predetection mode object is shown as follow:
 
 <table style = "text-align:left">
     <tr>
@@ -349,7 +349,7 @@ Lets the library choose a mode automatically.
 
 Takes the whole image as a region. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * LibraryFileName
 * LibraryParameters
@@ -358,7 +358,7 @@ Takes the whole image as a region. This mode has the following arguments for fur
 
 Detects region using the general algorithm based on RGB colour contrast. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * MinImageDimension
 * Sensitivity
@@ -370,7 +370,7 @@ Detects region using the general algorithm based on RGB colour contrast. This mo
 
 Detects region using the general algorithm based on gray contrast. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * MinImageDimension
 * Sensitivity
@@ -382,7 +382,7 @@ Detects region using the general algorithm based on gray contrast. This mode has
 
 Detects region using the general algorithm based on HSV colour contrast. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 * AspectRatioRange
 * FindAccurateBoundary

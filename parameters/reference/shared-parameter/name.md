@@ -10,7 +10,7 @@ permalink: /parameters/reference/shared-parameter/name.html
 
 # Name
 
-Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier.
+Parameter `Name` represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier.
 
 ## Example
 

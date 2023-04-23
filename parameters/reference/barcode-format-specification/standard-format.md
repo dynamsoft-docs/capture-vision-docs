@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: StandardFormat - Dynamsoft Barcode Reader Parameters
-Description: This page shows Dynamsoft Barcode Reader Parameter Reference for StandardFormat.
+Description: The parameter StandardFormat of Dynamsoft Barcode Reader defines the standard barcode format.
 Keywords: StandardFormat , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -9,11 +9,11 @@ noTitleIndex: true
 permalink: /parameters/reference/barcode-format-specification/standard-format.html
 ---
 
-# StandardFormat  
+# StandardFormat
 
 `StandardFormat` defines the standard barcode format.
-## Example
 
+## Example
 
 ```json
 {
@@ -22,6 +22,7 @@ permalink: /parameters/reference/barcode-format-specification/standard-format.ht
 ```
 
 ## Parameter Summary
+
 The structure of the`StandardFormat` is shown as follow:
 
 | StandardFormat  Parameter Summary |
@@ -29,14 +30,3 @@ The structure of the`StandardFormat` is shown as follow:
 | **Type**<br>*string* |
 | **Range**<br>[BarcodeFormat]({{ site.enumerations }}barcode-reader/barcode-format.html#barcodeformat) |
 | **Default Value**<br> ""|
-
-
-### Default Settings
-
-If the `StandardFormat` is not configured in your template file, the following settings will be used as the default settings.
-
-```json
-{
-    "StandardFormat": ""
-}
-```
