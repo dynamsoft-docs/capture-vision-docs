@@ -5,6 +5,7 @@ Description: The parameter CharacterModelName of Dynamsoft Label Recognizer defi
 Keywords: Character model
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/text-line-specification/character-model-name.html
 ---
 

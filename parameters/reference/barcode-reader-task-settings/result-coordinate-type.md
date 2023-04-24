@@ -26,10 +26,10 @@ Parameter `ResultCoordinateType` defines the returned coordinate type.
 | ResultCoordinateType Parameter Summary |
 | :--------------------------------- |
 | **Type**<br>*String* |
-| **Range**<br>One of the Candidate Modes as a string:<br>RCT_PIXEL<br>RCT_PERCENTAGE |
+| **Range**<br>One of the result coordinate type as a string:<br>RCT_PIXEL<br>RCT_PERCENTAGE |
 | **Default Value**<br>RCT_PIXEL |
 
-## Candidate Modes Introduction
+## Result Coordinate Type Introduction
 
 ### RCT_PIXEL
 

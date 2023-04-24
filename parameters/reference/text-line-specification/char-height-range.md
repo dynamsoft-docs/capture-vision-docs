@@ -5,6 +5,7 @@ Description: The parameter CharHeightRange of Dynamsoft Label Recognizer defines
 Keywords: Applicable text line numbers
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/text-line-specification/char-height-range.html
 ---
 

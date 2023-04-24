@@ -5,6 +5,7 @@ Description: The parameter MaxTotalImageDimension of Dynamsoft Capture Vision de
 Keywords: Max total image dimension
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/global-parameter/max-total-image-dimension.html
 ---
 

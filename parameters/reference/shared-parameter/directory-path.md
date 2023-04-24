@@ -5,6 +5,7 @@ Description: The parameter DirectoryPath defines a path when the library have to
 Keywords: Directory path
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/shared-parameter/directory-path.html
 ---
 

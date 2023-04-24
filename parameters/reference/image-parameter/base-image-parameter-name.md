@@ -5,6 +5,7 @@ description: The parameter BaseImageParameterName of Dynamsoft Capture Vision is
 keywords: BaseImageParameterName, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 permalink: /parameters/reference/image-parameter/base-image-parameter-name.html
 ---
 

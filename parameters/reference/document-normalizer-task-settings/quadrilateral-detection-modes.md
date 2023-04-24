@@ -5,6 +5,7 @@ Description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Nor
 Keywords: Quadrilateral detection
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral-detection-modes.html
 ---
 
@@ -47,7 +48,7 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br><br><a href = "#dmperspectivecorrection">QDM_GENERAL</a>
+        <td><b>Candidate Mode List</b><br><a href = "#qdm_general">QDM_GENERAL</a>
         </td>
     </tr>
     <tr>

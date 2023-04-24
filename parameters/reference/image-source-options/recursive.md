@@ -5,6 +5,7 @@ Description: The parameter Recursive of Dynamsoft Capture Vision defines .
 Keywords: Recursive, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/image-source-options/recursive.html
 ---
 

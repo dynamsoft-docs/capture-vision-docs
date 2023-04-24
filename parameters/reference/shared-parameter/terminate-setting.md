@@ -5,6 +5,7 @@ Description: The parameter TerminateSetting defines the terminate stages of the 
 Keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/shared-parameter/terminate-setting.html
 ---
 

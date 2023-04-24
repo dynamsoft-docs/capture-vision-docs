@@ -5,6 +5,7 @@ Description: The parameter Text Line Area Points of Dynamsoft Label Recognizer d
 Keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/text-line-specification/position.html
 ---
 

@@ -5,6 +5,7 @@ description: The parameter RegionPredetectionModes of Dynamsoft Capture Vision i
 keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 permalink: /parameters/reference/image-parameter/region-predetection-modes.html
 ---
 
@@ -42,10 +43,12 @@ Parameter `RegionPredetectionModes` controls how to find a region of interest (R
 Parameter `RegionPredetectionModes` consist of a group of region predetection mode objects. Each region predetection  mode object includes a candidate mode and a series of mode arguments. The mode arguments of the region predetection mode object is shown as follow:
 
 <table style = "text-align:left">
-    <tr>
-        <th>Mode Argument Name</th>
-        <th>Mode Argument Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
+        </tr>
+    </thead>
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string

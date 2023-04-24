@@ -5,6 +5,7 @@ Description: The parameter Type of Dynamsoft Capture Vision defines .
 Keywords: Type, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/image-source-options/type.html
 ---
 

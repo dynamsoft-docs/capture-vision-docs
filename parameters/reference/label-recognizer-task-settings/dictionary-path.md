@@ -5,6 +5,7 @@ Description: The parameter DictionaryPath of Dynamsoft Label Recognizer defines 
 Keywords: user dictionary, text correction
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/label-recognizer-task-settings/dictionary-path.html
 ---
 

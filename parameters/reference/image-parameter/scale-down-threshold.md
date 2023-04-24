@@ -5,6 +5,7 @@ description: The parameter ScaleDownThreshold of Dynamsoft Capture Vision is for
 keywords: ScaleDownThreshold, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 permalink: /parameters/reference/image-parameter/scale-down-threshold.html
 ---
 

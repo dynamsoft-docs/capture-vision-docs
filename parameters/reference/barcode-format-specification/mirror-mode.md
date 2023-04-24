@@ -25,10 +25,10 @@ permalink: /parameters/reference/barcode-format-specification/mirror-mode.html
 
 The structure of the`MirrorMode` is shown as follow:
 
-| MirrorMode  Parameter Summary |
+| MirrorMode Parameter Summary |
 | :--------------------------------- |
 | **Type**<br>*String* |
-| **Range**<br>MM_NORMAL<br>MM_MIRROR<br>MM_BOTH |
+| **Candidate Mode List**<br>MM_NORMAL<br>MM_MIRROR<br>MM_BOTH |
 
 ### Default Settings
 

@@ -5,6 +5,7 @@ Description: The parameter TaskSettingNameArray of Dynamsoft Capture Vision defi
 Keywords: task settings, TargetROIDef
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/target-roi-def/task-setting-name-array.html
 ---
 

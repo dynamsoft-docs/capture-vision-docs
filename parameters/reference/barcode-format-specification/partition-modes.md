@@ -28,11 +28,15 @@ The structure of the `PartitionModes` is shown as follow:
 | PartitionModes  Parameter Summary |
 | :--------------------------------- |
 | **Type**<br>*string array* |
-| **Range**<br>PM_WHOLE_BARCODE<br>PM_ALIGNMENT_PARTITION |
+| **Candidate Mode List**<br>PM_WHOLE_BARCODE<br>PM_ALIGNMENT_PARTITION |
 | **Default Value**<br> ["PM_WHOLE_BARCODE","PM_ALIGNMENT_PARTITION"] |
 
-**Remarks**
+## Candidate Mode introduction
 
-- PM_WHOLE_BARCODE: Take the whole barcode for decoding.
-- PM_ALIGNMENT_PARTITION: Partition the barcode to blocks based on alignment.
-- It works only for QRCode and DataMatrix.
+### PM_WHOLE_BARCODE
+
+ake the whole barcode for decoding.
+
+### PM_ALIGNMENT_PARTITION
+
+Partition the barcode to blocks based on alignment.

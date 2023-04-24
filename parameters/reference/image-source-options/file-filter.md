@@ -5,6 +5,7 @@ Description: The parameter FileFilter of Dynamsoft Capture Vision defines .
 Keywords: File filter, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/image-source-options/file-filter.html
 ---
 

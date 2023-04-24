@@ -5,6 +5,7 @@ description: The parameter TextDetectionMode of Dynamsoft Capture Vision is for 
 keywords: TextDetectionMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 permalink: /parameters/reference/image-parameter/text-detection-mode.html
 ---
 

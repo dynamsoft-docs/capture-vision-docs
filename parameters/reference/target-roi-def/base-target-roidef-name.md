@@ -5,6 +5,7 @@ Description: The parameter BaseTargetROIDefName of Dynamsoft Capture Vision defi
 Keywords: inheritance, TargetROIDef
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/target-roi-def/base-target-roidef-name.html
 ---
 

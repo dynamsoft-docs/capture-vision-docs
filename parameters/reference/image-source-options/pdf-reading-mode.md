@@ -5,6 +5,7 @@ Description: The parameter PDFReadingMode of Dynamsoft Capture Vision defines .
 Keywords: PDF reading mode, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/image-source-options/pdf-reading-mode.html
 ---
 
@@ -101,3 +102,13 @@ If the `PDFReadingMode` is not configured in your template file, the following s
     }
 }
 ```
+
+## Candidate Mode Introduction
+
+### PDFRM_RASTER
+
+Converts the PDF file to image(s) first, then detects barcode
+
+### PDFRM_VECTOR
+
+Detects barcode from vector data in PDF file.

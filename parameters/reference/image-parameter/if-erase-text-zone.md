@@ -5,6 +5,7 @@ description: The parameter IfEraseTextZone of Dynamsoft Capture Vision is for co
 keywords: IfEraseTextZone, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 permalink: /parameters/reference/image-parameter/if-erase-text-zone.html
 ---
 

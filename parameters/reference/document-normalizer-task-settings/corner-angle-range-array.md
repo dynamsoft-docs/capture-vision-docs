@@ -5,6 +5,7 @@ Description: The parameter ConrnerAngleRangeArray of Dynamsoft Document Normaliz
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-range-array.html
 ---
 

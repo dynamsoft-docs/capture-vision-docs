@@ -5,6 +5,7 @@ Description: The parameter PauseFlag indicates that the region results generated
 Keywords: raw image, captured results, TargetROIDef
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 permalink: /parameters/reference/target-roi-def/pause-flag.html
 ---
 
