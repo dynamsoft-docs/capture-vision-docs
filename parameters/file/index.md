@@ -132,15 +132,15 @@ The following table list the main objects type and description of a complete par
 
 | Object Type                    | Description  |
 | :------------------------------| :----------- |
-|  CaptureVisionTemplate         |  This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.|
-|  ImageSource                   |  It defines the input for DCV, responsible for providing images to DCV. It can be defined as different image sources, including but not limited to image directories, scanners, cameras, etc.|
-| TargetROIDef                   |  It is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
-|  SemanticProcessing            |  It is used to specify one or more code parsing tasks to be performed on text/byte results to help extract human readable information. |
-|  BarcodeReaderTaskSetting      |  It is used to configure settings for barcode reading tasks performed on images in DCV. |
-|  LabelRecognizerTaskSetting    |  It is used to configure settings for label recognition tasks performed on images in DCV.|
-|  DocumentNormalizerTaskSetting |  It is used to configure the document detection or normalization process of an image in DCV. |
-|  CodeParserTaskSetting         |  It is used to configure code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
-|  ImageParameter                |  It provides various image-processing features to adjust and enhance the input image for better recognition results.|
+|  [CaptureVisionTemplate]({{site.parameter}}file/capture-vision-template.html)         |  This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.|
+|  [ImageSource]({{site.parameter}}file/image-source.html)                  |  It defines the input for DCV, responsible for providing images to DCV. It can be defined as different image sources, including but not limited to image directories, scanners, cameras, etc.|
+| [TargetROIDef]({{site.parameter}}file/target-roi-definition/index.html)                   |  It is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
+|  [SemanticProcessing]({{site.parameter}}file/semantic-processing/index.html)            |  It is used to specify one or more code parsing tasks to be performed on text/byte results to help extract human readable information. |
+|  [BarcodeReaderTaskSetting]({{site.parameter}}file/task-settings/barcode-reader-task-settings.html)      |  It is used to configure settings for barcode reading tasks performed on images in DCV. |
+|  [LabelRecognizerTaskSetting]({{site.parameter}}file/task-settings/label-recognizer-task-settings.html)    |  It is used to configure settings for label recognition tasks performed on images in DCV.|
+|  [DocumentNormalizerTaskSetting]({{site.parameter}}file/task-settings/document-normalizer-task-settings.html) |  It is used to configure the document detection or normalization process of an image in DCV. |
+|  [CodeParserTaskSetting]({{site.parameter}}file/task-settings/code-parser-task-settings.html)         |  It is used to configure code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
+|  [ImageParameter]({{site.parameter}}file/image-parameter.html)              |  It provides various image-processing features to adjust and enhance the input image for better recognition results.|
 
 For more details, please refer to [introduction of the capture vision template](capture-vision-template.md)
 
@@ -159,13 +159,6 @@ Dynamsoft Capture Vision (DCV) provides two methods to apply parameters:
    1. `InitSettings/InitSettingsFromFile` - after calling this interface, each parameter template in the file/string will be converted into a single parameter template object. They will replace the previously associated parameter template objects on the Capture Vision Router instance.
 
    2. `ResetSettings` - after calling this API, the internal associated parameter template objects are reset to the factory state.
-
-For more details, please refer to the following APIs:
-- [GetSimplifiedSettings]()
-- [UpdateSettings]()
-- [InitSettings]()
-- [InitSettingsFromFile]()
-- [ResetSettings]()
 
 ## Special Rules for DCV Parameter Configuration
 

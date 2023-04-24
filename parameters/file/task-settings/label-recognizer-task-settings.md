@@ -60,14 +60,14 @@ The `LabelRecognizerTaskSetting` object is used to configure settings for a labe
 
 | Parameter Name | Description |
 | -------------- | ----------- |
-| `Name` | Represents the name of the `LabelRecognizerTaskSetting` object, which serves as its unique identifier. |
-| `TextLineSpecificationNameArray` | Represents the collection of text line specification object names, used to refer to the `TextLineSpecification` objects. It is used to define the recognition settings for the text lines. |
-| `DictionaryPath` | Sets the path of the dictionary file. |
-| `DictionaryCorrectionThresholds`| Sets the threshold of dictionary error correction.|
-| `StringLengthRange` | Sets the range of string lengths for concatenated strings of recognized text lines.|
-| `StringRegExPattern` | Specifies the regular expression pattern for concatenated strings of recognized text lines.|
-| `SectionImageParameterArray` | Sets image parameters for three different sections, where each section performs image processing stages with different parameters.|
-| `StartSection` | Indicates which Section the task will start executing from.|
-| `TerminateSetting` | Indicates where the task stops, specifically indicating a Stage under a certain Section.|
-| `MaxThreadsInOneTask` | Represents the maximum number of parallel threads that can be used on a single task.|
-| `BaseLabelRecognizerTaskSettingName` | Represents the name of another `LabelRecognizerTaskSetting` object. It is used to inherit the parameters defined in its parent `LabelRecognizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.|
+| [`Name`](../../reference/shared-parameter/name.md) | Represents the name of the `LabelRecognizerTaskSetting` object, which serves as its unique identifier. |
+| [`TextLineSpecificationNameArray`](../../reference/label-recognizer-task-settings/) | Represents the collection of text line specification object names, used to refer to the `TextLineSpecification` objects. It is used to define the recognition settings for the text lines. |
+| [`DictionaryPath`](../../reference/label-recognizer-task-settings/dictionary-path.md) | Sets the path of the dictionary file. |
+| [`DictionaryCorrectionThresholds`](../../reference/label-recognizer-task-settings/dictionary-correction-thresholds.md)| Sets the threshold of dictionary error correction.|
+| [`StringLengthRange`](../../reference/label-recognizer-task-settings/string-length-range.md) | Sets the range of string lengths for concatenated strings of recognized text lines.|
+| [`StringRegExPattern`](../../reference/label-recognizer-task-settings/string-regex-pattern.md) | Specifies the regular expression pattern for concatenated strings of recognized text lines.|
+| [`SectionImageParameterArray`](../../reference/shared-parameter/section-image-parameter-array.md) | Sets image parameters for three different sections, where each section performs image processing stages with different parameters.|
+| [`StartSection`](../../reference/shared-parameter/start-section.md) | Indicates which Section the task will start executing from.|
+| [`TerminateSetting`](../../reference/shared-parameter/terminate-setting.md) | Indicates where the task stops, specifically indicating a Stage under a certain Section.|
+| [`MaxThreadsInOneTask`](../../reference/shared-parameter/max-threads-in-one-task.md) | Represents the maximum number of parallel threads that can be used on a single task.|
+| [`BaseLabelRecognizerTaskSettingName`](../../reference/label-recognizer-task-settings/base-label-recognizer-task-setting-name.md) | Represents the name of another `LabelRecognizerTaskSetting` object. It is used to inherit the parameters defined in its parent `LabelRecognizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.|

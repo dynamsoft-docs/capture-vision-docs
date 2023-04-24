@@ -11,7 +11,7 @@ permalink: /parameters/reference/text-line-specification/position.html
 
 # Text Line Area Points
 
-Text line area points parameters defines the position of the text lines with the vertice points. The point coordinates are measured in percentage based on the size of the `TargetROI`.
+Text line area points parameters defines the position of the text lines with the vertices points. The point coordinates are measured in percentage based on the size of the `TargetROI`.
 
 ## Example
 

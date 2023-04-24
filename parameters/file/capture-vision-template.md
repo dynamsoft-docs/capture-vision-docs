@@ -32,13 +32,13 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 
 | Parameter Name | Description |
 | -------------- | ----------- |
-| `Name` | Represents the name of the parameter template, which serves as its unique identifier. |
-| `ImageSourceName` | Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV. |
-| `ImageROIProcessingNameArray` | Represents the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. It is used to define recognition tasks performed on ROIs of an image, including reading barcodes, recognizing labels, or detecting document quadrilaterals. |
-| `SemanticProcessingNameArray`| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
-| `OutputRawImage` | Indicates whether DCV finally outputs the original input image. |
-| `MaxParallelTasks` | Indicates the maximum number of parallel tasks for the DCV runtime. |
-| `Timeout` | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|
+| [`Name`](../reference/shared-parameter/name.md) | Represents the name of the parameter template, which serves as its unique identifier. |
+| [`ImageSourceName`](../reference/capture-vision-template/image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV. |
+| [`ImageROIProcessingNameArray`](../reference/capture-vision-template/image-roi-processing-name-array.md) | Represents the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. It is used to define recognition tasks performed on ROIs of an image, including reading barcodes, recognizing labels, or detecting document quadrilaterals. |
+| [`SemanticProcessingNameArray`](../reference/capture-vision-template/semantic-processing-name-array.md)| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
+| [`OutputRawImage`](../reference/capture-vision-template/output-raw-Image.md) | Indicates whether DCV finally outputs the original input image. |
+| [`MaxParallelTasks`](../reference/capture-vision-template/max-parallel-tasks.md) | Indicates the maximum number of parallel tasks for the DCV runtime. |
+| [`Timeout`](../reference/capture-vision-template/timeout.md) | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|
 
 <div align="center">
    <p>Table 1 – Parameters Summary of CaptureVisionTemplate</p>
@@ -65,9 +65,9 @@ Next, we will focus on the core design of the `TargetROIDef` and `SemanticProces
 
 ## Core Design of TargetROIDef Object
 
-The `TargetROIDef` object is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image. In simple terms, `TargetROIDef` can be expressed using the following formula:
+The [`TargetROIDef`](./target-roi-definition/index.md) object is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image. In simple terms, [`TargetROIDef`](./target-roi-definition/index.md) can be expressed using the following formula:
 
-```json
+```
 TargetROIDef = Recognition Task Definition + Spatial Location Definition
 ```
 
@@ -225,11 +225,11 @@ Based on `Example 2`, regular expression filtering conditions are added to `dbr_
 
 At runtime, reference regions that do not meet the filtering conditions will be discarded and will not be passed as inputs to subsequent `TargetROIDef` for further processing.
 
-For more details about filtering reference objects, please refer to this link
+For more details about filtering reference objects, please refer to [`ReferenceObjectFilter`]({{site.parameter}}reference/target-roi-def/location.html#referenceobjectfilter)
 
 ## Core Design of SemanticProcessing Object
 
-The `SemanticProcessing` object is used to specify one or more tasks to analyze and extract information from image ROI processing results. The whole workflow typically involves following concepts.
+The [`SemanticProcessing`](./semantic-processing/index.md) object is used to specify one or more tasks to analyze and extract information from image ROI processing results. The whole workflow typically involves following concepts.
 
 ## Prerequisites
 
