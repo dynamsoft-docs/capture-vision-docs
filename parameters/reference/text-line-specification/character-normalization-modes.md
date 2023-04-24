@@ -5,7 +5,7 @@ Description: The parameter CharacterNormalizationModes of Dynamsoft Label Recogn
 Keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/text-line-specification/character-model-name.html
+permalink: /parameters/reference/text-line-specification/character-normalization-modes.html
 ---
 
 # CharacterNormalizationModes

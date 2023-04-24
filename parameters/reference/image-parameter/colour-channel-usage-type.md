@@ -1,5 +1,5 @@
 ---
-layout: default-layoutColourChannelUsageType
+layout: default-layout
 title: ColourChannelUsageType - Dynamsoft Capture Vision Parameters
 description: The parameter ColourChannelUsageType of Dynamsoft Capture Vision is for specifing how to use the colour channel from the source image buffer.
 keywords: ColourChannelUsageType, parameter reference, parameter

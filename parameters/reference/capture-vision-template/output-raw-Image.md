@@ -3,6 +3,7 @@ layout: default-layout
 Title: OutputRawImage - Dynamsoft Capture Vision Parameters
 Description: The parameter OutputRawImage indicates whether DCV finally outputs the original input image.
 Keywords: raw image, captured results, CaptureVisionTemplate
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 permalink: /parameters/reference/capture-vision-template/output-raw-Image.html
