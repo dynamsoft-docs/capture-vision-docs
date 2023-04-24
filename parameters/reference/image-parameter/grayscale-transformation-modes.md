@@ -60,7 +60,8 @@ If the `GrayscaleTransformationModes` is not configured in your template file, t
 
 ```json
 {
-    "GrayscaleTransformationModes": [
+    "GrayscaleTransformationModes": 
+    [
         {
             "Mode": "GTM_ORIGINAL" 
         }

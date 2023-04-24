@@ -125,6 +125,8 @@ permalink: /parameters/reference/index.html
 | [`BarcodeZoneMinDistanceToImageBorders`](barcode-format-specification/barcode-zone-min-distance-to-image-borders.md) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
 | [`Code128Subset`](barcode-format-specification/code128-subset.md) | Defines the subset of Code 128. |
 | [`EnableAddonCode`](barcode-format-specification/enable-addon-code.md) | Defines whether to identify addon code. |
+| [`EnableDataMatrixECC000-140`](barcode-format-specification/enable-data-matrix-ecc000-140.md) | Defines whether to read Data Matrix ECC000-140 barcode. |
+| [`EnableQRCodeModel1`](barcode-format-specification/enable-qr-code-model-1.md) | Defines whether to read QR code model 1. |
 | [`FindUnevenModuleBarcode`](barcode-format-specification/find-uneven-module-barcode.md) | Defines whether to find barcodes with uneven barcode modules. |
 | [`HeadModuleRatio`](barcode-format-specification/head-module-ratio.md) | Defines the module count and module size ratio of the barcode head section. |
 | [`MinQuietZoneWidth`](barcode-format-specification/min-quiet-zone-width.md) | Defines the minimum width (in moduleSize) of the barcode quiet zone. |
@@ -134,6 +136,7 @@ permalink: /parameters/reference/index.html
 | [`ModuleSizeRangeArray`](barcode-format-specification/module-size-range-array.md) | Defines the range of module size (in pixels) while barcode searching and result filtering. |
 | [`MSICodeCheckDigitCalculation`](barcode-format-specification/msi-code-check-digit-calculation.md) | Defines the scheme used for calculating a check digit of an MSI barcode. |
 | [`PartitionModes`](barcode-format-specification/partition-modes.md) | Defines the mode to apply partition process when decoding QRCode and DataMatrix. |
+| [`PatchCodeSearchingMargin`](barcode-format-specification/patch-code-searching-margins.md) | Defines the patch code searching margins. |
 | [`RequireStartStopChars`](barcode-format-specification/require-start-stop-chars.md) | Defines whether the start and stop characters are required when searching for common 1D barcodes. |
 | [`ReturnPartialBarcodeValue`](barcode-format-specification/return-partial-barcode-value.md) | Defines whether to return partial barcode value(s). |
 | [`StandardFormat`](barcode-format-specification/standard-format.md) | Defines the standard barcode format. |

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: EnableAddonCode - Dynamsoft Barcode Reader Parameters
-Description: The parameter Code128Subset of Dynamsoft Barcode Reader defines whether to identify addon code.
+Description: The parameter EnableAddonCode of Dynamsoft Barcode Reader defines whether to identify addon code.
 Keywords: EnableAddonCode , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -29,7 +29,7 @@ The structure of the `EnableAddonCode` is shown as follow:
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |
-| **Default Value**<br> 0|
+| **Default Value**<br>0 |
 
 **Remarks**
 
