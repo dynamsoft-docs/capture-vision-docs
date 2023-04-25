@@ -61,7 +61,7 @@ The `LabelRecognizerTaskSetting` object is used to configure settings for a labe
 | Parameter Name | Description |
 | -------------- | ----------- |
 | [`Name`](../../reference/shared-parameter/name.md) | Represents the name of the `LabelRecognizerTaskSetting` object, which serves as its unique identifier. |
-| [`TextLineSpecificationNameArray`](../../reference/label-recognizer-task-settings/) | Represents the collection of text line specification object names, used to refer to the `TextLineSpecification` objects. It is used to define the recognition settings for the text lines. |
+| [`TextLineSpecificationNameArray`](../../reference/label-recognizer-task-settings/text-line-specification-name-array.md) | Represents the collection of text line specification object names, used to refer to the `TextLineSpecification` objects. It is used to define the recognition settings for the text lines. |
 | [`DictionaryPath`](../../reference/label-recognizer-task-settings/dictionary-path.md) | Sets the path of the dictionary file. |
 | [`DictionaryCorrectionThresholds`](../../reference/label-recognizer-task-settings/dictionary-correction-thresholds.md)| Sets the threshold of dictionary error correction.|
 | [`StringLengthRange`](../../reference/label-recognizer-task-settings/string-length-range.md) | Sets the range of string lengths for concatenated strings of recognized text lines.|
