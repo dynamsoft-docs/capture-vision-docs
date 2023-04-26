@@ -42,8 +42,8 @@ A `ReferenceObjectFilter` object is defined as below:
 |---|---|---|---|
 | ReferenceTargetROIDefNameArray | string array | Optional | A string array while each element is a string that represents the name of a `TargetROIDef` object. |
 | AtomicResultTypeArray | string array | Optional | A string array while each element is a string that represents a type of atomic result that needs to be filtered |
-| TextLineFilteringCondition | string array | Optional | An object used to specify the conditions for filtering text lines. |
-| BarcodeFilteringCondition | string array | Optional | An object used to specify the conditions for filtering barcodes. |
+| TextLineFilteringCondition | JSON object | Optional | An object used to specify the conditions for filtering text lines. |
+| BarcodeFilteringCondition | JSON object | Optional | An object used to specify the conditions for filtering barcodes. |
 
 Here is a sample:
 
