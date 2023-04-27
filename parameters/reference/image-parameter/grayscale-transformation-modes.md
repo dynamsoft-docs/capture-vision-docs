@@ -50,7 +50,7 @@ Parameter `GrayscaleTransformationModes` consist of a group of grayscale transfo
         <td><b>Type</b><br><i>String</i></td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>GTM_ORIGINAL<br>GTM_INVERTED
+        <td><b>Candidate Mode List</b><br>GTM_ORIGINAL<br>GTM_INVERTED<br>GTM_SKIP
         </td>
     </tr>
 </table>

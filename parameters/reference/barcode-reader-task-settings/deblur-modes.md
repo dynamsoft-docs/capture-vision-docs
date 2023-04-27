@@ -64,6 +64,7 @@ The mode arguments of the deblur mode object are shown as follow:
             <br>DM_SHARPENING
             <br>DM_BASED_ON_LOC_BIN
             <br>DM_SHARPENING_SMOOTHING
+            <br>DM_SKIP
         </td>
     </tr>
     <tr>

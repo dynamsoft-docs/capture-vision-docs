@@ -55,7 +55,7 @@ Parameter `TextureDetectionModes` consist of a group of texture detection mode o
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>TDM_GENERAL_WIDTH_CONCENTRATION
+        <td><b>Candidate Mode List</b><br>TDM_GENERAL_WIDTH_CONCENTRATION<br>TDM_AUTO (Not supported yet.)<br>TDM_SKIP
         </td>
     </tr>
     <tr>

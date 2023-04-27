@@ -53,6 +53,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         <td><b>Candidate Mode List</b><br>TTDM_WORD
             <br>TTDM_LINE
             <br>TTDM_LAYOUT
+            <br>TTDM_SKIP
         </td>
     </tr>
     <tr>
@@ -181,14 +182,6 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
 {
     "TextDetectionMode" : 
     {
-        "CharHeightRange" : 
-        [
-            1,
-            1000,
-            1
-        ],
-        "Direction" : "HORIZONTAL",
-        "MaxSpacingInALine" : -1,
         "Mode" : "TTDM_SKIP"
     }   
 }
@@ -226,7 +219,6 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
             1
         ],
         "Direction" : "HORIZONTAL",
-        "MaxSpacingInALine" : -1,
         "Mode" : "TTDM_WORD"
     }
 }

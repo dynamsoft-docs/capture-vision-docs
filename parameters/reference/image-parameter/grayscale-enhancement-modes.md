@@ -66,6 +66,7 @@ Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancemen
             <br>GEM_GRAY_EQUALIZE
             <br>GEM_GRAY_SMOOTH
             <br>GEM_SHARPEN_SMOOTH
+            <br>GEM_SKIP
         </td>
     </tr>
     <tr>

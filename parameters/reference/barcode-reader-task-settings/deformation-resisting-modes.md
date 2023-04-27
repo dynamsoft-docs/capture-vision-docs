@@ -152,6 +152,15 @@ The mode arguments of the deformation resisting mode object are shown as follow:
 
 ### Default Settings
 
+```json
+"DeformationResistingModes" : 
+[
+    {
+        "Mode" : "DRM_SKIP"
+    }
+]
+```
+
 ## Candidate Modes Introduction
 
 ### DRM_GENERAL

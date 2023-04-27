@@ -61,6 +61,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     <tr>
         <td><b>Candidate Mode List</b><br>BM_THRESHOLD
             <br>BM_LOCAL_BLOCK
+            <br>BM_SKIP
         </td>
     </tr>
     <tr>
@@ -175,7 +176,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0, 1000]
+        <td><b>Range</b><br>[-1, 1000]
         </td>
     </tr>
     <tr>
@@ -192,7 +193,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0, 1000]
+        <td><b>Range</b><br>[-1, 1000]
         </td>
     </tr>
     <tr>
@@ -214,6 +215,23 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td><b>Valid For</b><br>All modes
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">GrayscaleEnhancementModesIndex<br>(Optional)</td>
+        <td><b>Description</b><br>The index of a specific image preprocessing mode in the GrayscaleEnhancementModes parameter which the current binarization mode is applied to.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[-1, 0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>BM_LOCAL_BLOCK<br>BM_THRESHOLD
         </td>
     </tr>
     <tr>
