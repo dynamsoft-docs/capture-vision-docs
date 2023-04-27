@@ -20,10 +20,9 @@ Parameter `TextDetectionMode` determines how to detect the text area. For tasks 
 {
     "TextDetectionMode":
     {
-        "Mode": "TDM_WORD",
+        "Mode": "TTDM_WORD",
         "Direction": "HORIZONTAL",
-        "CharHeightRange": [1,1000,1],
-        "MaxSpacingInALine": 10
+        "CharHeightRange": [1,1000,1]
     }
 }
 ```
@@ -115,15 +114,19 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0, 0x7fffffff]
+        <td><b>Range</b><br>[-1, 0x7fffffff]
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>0
+        <td><b>Default Value</b><br>-1
         </td>
     </tr>
     <tr>
         <td><b>Valid For</b><br>TTDM_LINE
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>0: means automatically set by the library.<br>It is a percentage value relative to the average letter height of each line.<br>All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
         </td>
     </tr>
     <tr>
