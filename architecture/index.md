@@ -176,7 +176,7 @@ Intermediate results are generated throughout the execution of a task and CVR ma
 
 #### **Elective intervention of the processing workflow**
 
-The DCV architecture allows external programs to intervene in image-processing. The steps are
+The DCV architecture allows external programs to intervene in the image processing. The steps are
 
 1. A specific type of intermediate result is generated;
 2. CVR dispatches the result to a registered listener A and pauses image-processing;
@@ -184,7 +184,7 @@ The DCV architecture allows external programs to intervene in image-processing. 
 4. The code examines the result, makes some changes, and sends it back to CVR;
 5. CVR injects the updated data back and resumes image-processing.
   
-The following diagram is a simple demonstration of this process
+The following diagram is a simple demonstration of this process:
 
 ![Intermediate-Result-Intervention](assets/Intermediate-Result-Intervention.png)
 
