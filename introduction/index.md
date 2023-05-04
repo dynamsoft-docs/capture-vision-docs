@@ -37,7 +37,7 @@ The barcode decoding feature of DCV is powered by Dynamsoft Barcode Reader (DBR)
 
 ### Dynamsoft Label Recognizer
 
-DCV's label recognition feature is powered by the Dynamsoft Label Recognizer (DLR) SDK. This powerful SDK is specifically designed to recognize meaningful zonal text or symbols within an image, commonly referred to as a 'Label' in this context. DLR is ideal for a wide range of scenarios, including recognizing price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, and much more. With its advanced capabilities, DLR is an essential component for any application that requires accurate and reliable label recognition.
+DCV's label recognition feature is powered by Dynamsoft Label Recognizer (DLR). This powerful SDK is specifically designed to recognize meaningful zonal text or symbols within an image, commonly referred to as a 'Label' in this context. DLR is ideal for a wide range of scenarios, including recognizing price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, and much more. With its advanced capabilities, DLR is an essential component for any application that requires accurate and reliable label recognition.
 
 <a href="https://www.dynamsoft.com/label-recognition/docs/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Label Recognizer.</a>
 
@@ -81,7 +81,7 @@ By providing these pre-built templates, DCV simplifies the development process a
 
 ### Scalability with Pluggable Components
 
-DCV is not a static system. Different solution requirements may require different combinations of product modules. With DCV's template-based approach, users only need to define the tasks and dependencies in the template file according to the specified rules based on their requirements. Once the template is received by DCV, it automatically parses the template, loads the required modules, and executes the corresponding logic. DCV's modular design allows users to focus on their specific needs without worrying about the internal details of module loading. This means that users can easily distribute their apps with only the necessary modules, resulting in reduced app size and improved performance.
+DCV is not a static system. Different business solutions may require different combinations of product modules. With DCV's template-based approach, users only need to define the tasks and dependencies in the template file according to the specified rules based on their requirements. Once the template is received by DCV, it automatically parses the template, loads the required modules, and executes the corresponding logic. DCV's modular design allows users to focus on their specific needs without worrying about the internal details of module loading. This means that users can easily distribute their apps with only the necessary modules, resulting in reduced app size and improved performance.
 The following are some common requirements and product modules that need to be loaded:
 
 | Solution Requirements                                        | Required Products     |
