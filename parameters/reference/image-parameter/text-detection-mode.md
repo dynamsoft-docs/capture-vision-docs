@@ -106,7 +106,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">MaxSpacingInALine<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top">MaxSpacingInALine<br>(Optional)</td>
         <td><b>Description</b><br>Sets the maximum spacing between characters treated as one line.
         </td>
     </tr>
@@ -128,6 +128,27 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
     </tr>
     <tr>
         <td><b>Remarks</b><br>0: means automatically set by the library.<br>It is a percentage value relative to the average letter height of each line.<br>All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the sensitivity of text detection.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[1, 9]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>For barcode decoding: 3<br>For label recognizing: 7<br>For document scanning: 7
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
         </td>
     </tr>
     <tr>
