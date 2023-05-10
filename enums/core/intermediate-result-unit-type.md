@@ -98,7 +98,7 @@ enum IntermediateResultUnitType : unsigned long long
    /** The type of the IntermediateResult is "recognized text lines". */
    IRUT_RECOGNIZED_TEXT_LINES = 1 << 25,
    /** The type of the IntermediateResult is "normalized image". */
-   IRUT_NORMALIZED_IMAGE = 1 << 26,
+   IRUT_NORMALIZED_IMAGES = 1 << 26,
    /** The type of the IntermediateResult is "all". */
    IRUT_ALL = 0x7FFFFFF
 };

@@ -44,6 +44,6 @@ This section consists of just one stage:
 
 ## Output and Parameters
 
-| Stage                | Intermediate Result Type | Related Parameter                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Document-normalizing | `IRUT_NORMALIZED_IMAGE`  | [`Brightness`](../../parameters/reference/document-normalizer-task-settings/brightness.md), [`Contrast`](../../parameters/reference/document-normalizer-task-settings/contrast.md), [`ColourMode`](../../parameters/reference/document-normalizer-task-settings/colour-mode.md), [`DeskewMode`](../../parameters/reference/document-normalizer-task-settings/deskew-mode.md) |
+| Stage | Intermediate Result Type | Related Parameter |
+| ----- | ------------------------ | ----------------- |
+| Document-normalizing | `IRUT_NORMALIZED_IMAGES`  | [`Brightness`](../../parameters/reference/document-normalizer-task-settings/brightness.md), [`Contrast`](../../parameters/reference/document-normalizer-task-settings/contrast.md), [`ColourMode`](../../parameters/reference/document-normalizer-task-settings/colour-mode.md), [`DeskewMode`](../../parameters/reference/document-normalizer-task-settings/deskew-mode.md) |
