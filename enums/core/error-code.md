@@ -134,6 +134,10 @@ typedef enum ErrorCode
    EC_CONVERT_COMPLEX_TEMPLATE_ERROR = -10061,
    /** Can't update settings at runtime. */
    EC_UPDATE_SETTINGS_AT_RUNTIME_FAILED = -10062,
+   /**The input image source was not found.*/
+   EC_NO_IMAGE_SOURCE = -10063,
+   /**Failed to read directory.*/
+   EC_READ_DIRECTORY_FAILED = -10064,
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    EC_NO_LICENSE = -20000,
