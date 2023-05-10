@@ -68,7 +68,9 @@ typedef enum ImagePixelFormat
    /** 64bit with ABGR channel order stored in memory from high to low address. */
    IPF_ABGR_16161616,
    /** 24bit with BGR channel order stored in memory from high to low address. */
-   IPF_BGR_888
+   IPF_BGR_888,
+   /** 0:Black, 255:White. */
+   IPF_BINARY_8,
 }ImagePixelFormat;
 ```
 >
