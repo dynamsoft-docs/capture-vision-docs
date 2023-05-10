@@ -280,7 +280,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
 
 ### Default Setting
 
-If the `ColourConversionModes` is not configured in your template file, the following settings will be used as the default settings.
+If the `BinarizationModes` is not configured in your template file, the following settings will be used as the default settings.
 
 #### For Barcode Decoding
 
@@ -289,7 +289,6 @@ If the `ColourConversionModes` is not configured in your template file, the foll
     "BinarizationModes" : 
     [
         {
-            "BinarizationThreshold" : -1,
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
             "EnableFillBinaryVacancy" : 0,
@@ -312,7 +311,6 @@ If the `ColourConversionModes` is not configured in your template file, the foll
     "BinarizationModes" : 
     [
         {
-            "BinarizationThreshold" : -1,
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
             "EnableFillBinaryVacancy" : 1,
@@ -335,7 +333,6 @@ If the `ColourConversionModes` is not configured in your template file, the foll
     "BinarizationModes" : 
     [
         {
-            "BinarizationThreshold" : -1,
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
             "EnableFillBinaryVacancy" : 0,
@@ -360,7 +357,6 @@ Re-binarize the text line area to support the character segmentation.
     "BinarizationModes" : 
     [
         {
-            "BinarizationThreshold": -1,
             "BlockSizeX": 11,
             "BlockSizeY": 11,
             "EnableFillBinaryVacancy": 1,
