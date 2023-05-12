@@ -14,6 +14,7 @@ The ImageParameter object is designed to configure and organize common parameter
 
 ```json
 {
+    "Name" : "ip_default",
     "BaseImageParameterName" : "",
     "BinarizationModes" : 
     [
@@ -60,7 +61,6 @@ The ImageParameter object is designed to configure and organize common parameter
         }
     ],
     "IfEraseTextZone" : 0,
-    "Name" : "ip_default",
     "RegionPredetectionModes" : 
     [
         {
