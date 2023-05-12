@@ -41,7 +41,7 @@ breadcrumbText: ErrorCode
 ```
 >
 ```cpp
-typedef enum ErrorCode 
+typedef enum ErrorCode
 {
    /** Successful. */
    EC_OK = 0,
@@ -132,8 +132,8 @@ typedef enum ErrorCode
    EC_IMAGE_ORIENTATION_INVALID = -10060,
    /** Complex tempalte can't be converted to simplified settings. */
    EC_CONVERT_COMPLEX_TEMPLATE_ERROR = -10061,
-   /** Can't update settings at runtime. */
-   EC_UPDATE_SETTINGS_AT_RUNTIME_FAILED = -10062,
+   /** Reject function call while capturing in progress.*/
+   EC_CALL_REJECTED_WHEN_CAPTURING = -10062,
    /**The input image source was not found.*/
    EC_NO_IMAGE_SOURCE = -10063,
    /**Failed to read directory.*/
