@@ -10,14 +10,14 @@ needGenerateH3Content: true
 
 # Overview of DCV parameters
 
-Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility, and its parameter system plays a crucial role in achieving this goal. The parameter system is highly configurable and can drive different behavior logic within the SDK. In this article, we will provide an overview of the parametric architecture design in Dynamsoft Capture Vision.
+Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility, and its parameter system plays a crucial role in achieving that. The parameter system can drive the behaviour of the SDK through its many varied configurations. In this article, we will provide an overview of the parametric architecture design of Dynamsoft Capture Vision.
 
 ## Key Terms
 
 In order to eliminate ambiguity, we first define several key terms.
 
 1. **Parameter**
-A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodeCount` parameter is used to control the expected count of recognized barcodes. Parameters can be configured with specific values or ranges of values, which can be adjusted as required.
+A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodesCount` parameter is used to control the expected number of barcodes in the image or frame. Parameters can be configured with specific values or a range of values, which can be adjusted as required.
 
 1. **Parameter template**
 A parameter template is a collection of parameters organized in a structured manner, expressed in JSON format. The name of the `CaptureVisionTemplate` object is also called "template name", which is a unique identifier assigned to each parameter template. In the DCV SDK, this name is used to load the relevant configurations and control runtime behavior.
@@ -25,7 +25,7 @@ A parameter template is a collection of parameters organized in a structured man
 1. **Parameter template file**
 A parameter template file is a JSON file that contains one or multiple parameter templates.
 
-## Organization of a Parameter Template File
+## Structure of a Parameter Template File
 
 As shown in the example below, the organizational structure of a parameter template file consists of several top-level objects such as `CaptureVisionTemplates`, `ImageSourceOptions`,`TargetROIDefOptions` etc.
 
