@@ -107,9 +107,9 @@ As shown in the example below, the organizational structure of a parameter templ
 }
 ```
 
-With the exception of GlobalParameter, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` are an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` are an array of `TargetROIDef` objects.
+With the exception of `GlobalParameter`, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` is an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` is an array of `TargetROIDef` objects, and so on.
 
-Furthermore, to reuse the same parameter definitions, reduce the size of the parameter template file, and simplify the parameter configuration hierarchy, the reference relationship was adopted in the parameter template file design. For example, the value of the `ImageSource` parameter for the first object in `CaptureVisionTemplates` is `ISA_0`, which refers to the first object in `ImageSourceOptions`.
+Furthermore, you will notice that some of the parameters' definitions are reused across the parameter template file. This helps reduce the size of the parameter template file and simplify the parameter configuration hierarchy, making it easier for you to understand and create your own template. For example, the value of the `ImageSourceName` parameter for the first object in `CaptureVisionTemplates` is `ISA_0`, which refers to the first object in `ImageSourceOptions`.
 
 Therefore, a parameter template starts with an object in `CaptureVisionTemplates` and recursively searches for the objects that are directly or indirectly referenced by it, and then combines them to form a specific set of parameters. Then, the parameter template may be applied to DCV through "template name" to control its internal execution logic.
 
@@ -121,7 +121,7 @@ The diagram below illustrates the objects included in a complete parameter templ
 
 - A solid green line indicates a one-to-zero or one-to-one correspondence between the two objects.
 - A solid black line indicates a one-to-zero or one-to-n correspondence between the two objects.
-- The dash line indicates that these objects may be associated with one-to-n `ImageParamter` objects, which may take effect at different stages of the algorithm.
+- The dash line indicates that these objects may be associated with one-to-n `ImageParameter` objects, which may take effect at different stages of the algorithm.
 
 <div align="center">
    <p><img src="./assets/dcv-template-reference-relationship.png" alt="Top level objects of DCV template file" width="100%" /></p>
