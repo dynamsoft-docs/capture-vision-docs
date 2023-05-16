@@ -18,11 +18,7 @@ breadcrumbText: CapturedResultItemType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: CapturedResultItemType
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -56,13 +49,4 @@ typedef enum CapturedResultItemType
    /** The type of the CapturedResultItem is "parsed result". */
    CRIT_PARSED_RESULT = 32
 } CapturedResultItemType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

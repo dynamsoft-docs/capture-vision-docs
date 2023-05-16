@@ -18,11 +18,7 @@ breadcrumbText: ErrorCode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: ErrorCode
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -138,6 +131,12 @@ typedef enum ErrorCode
    EC_NO_IMAGE_SOURCE = -10063,
    /**Failed to read directory.*/
    EC_READ_DIRECTORY_FAILED = -10064,
+   /**[Name] Module not found.*/
+   /**Name : */
+   /**DynamsoftBarcodeReader*/
+   /**DynamsoftLabelRecognizer*/
+   /**DynamsoftDocumentNormalizer*/
+   EC_MODULE_NOT_FOUND = -10065,
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    EC_NO_LICENSE = -20000,
@@ -151,14 +150,8 @@ typedef enum ErrorCode
    EC_DEVICE_NOT_MATCH = -20004,
    /** Failed to bind device. */
    EC_BIND_DEVICE_FAILED = -20005,
-   /** Interface InitLicenseFromDLS can not be used together with other license initiation interfaces. */
-   EC_LICENSE_INTERFACE_CONFLICT = -20006,
-   /** License Client dll is missing. */
-   EC_LICENSE_CLIENT_DLL_MISSING = -20007,
    /** Instance count is over limit. */
    EC_INSTANCE_COUNT_OVER_LIMIT = -20008,
-   /** Interface InitLicenseFromDLS has to be called before creating any SDK objects. */
-   EC_LICENSE_INIT_SEQUENCE_FAILED = -20009,
    /** Trial License */
    EC_TRIAL_LICENSE = -20010,
    /** Failed to reach License Server. */
@@ -239,13 +232,4 @@ typedef enum ErrorCode
    /** The license for parsing customized code type is invalid. */
    EC_CUSTOMIZED_CODE_TYPE_LICENSE_INVALID = -90011,
 } ErrorCode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

@@ -18,11 +18,7 @@ breadcrumbText: ImageTagType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: ImageTagType
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum ImageTagType
 {
@@ -48,13 +41,4 @@ typedef enum ImageTagType
    /** The image is a video frame. */
    ITT_VIDEO_FRAME
 } ImageTagType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

@@ -18,11 +18,7 @@ breadcrumbText: ExtendedBarcodeResultType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: ExtendedBarcodeResultType
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum ExtendedBarcodeResultType
 {
@@ -50,13 +43,4 @@ typedef enum ExtendedBarcodeResultType
    /**Specifies the partial text. This means part of the text result decoded from the barcode. */
    EBRT_PARTIAL_RESULT
 }ExtendedBarcodeResultType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

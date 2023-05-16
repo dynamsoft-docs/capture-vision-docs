@@ -18,11 +18,7 @@ breadcrumbText: VideoFrameQuality
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: VideoFrameQuality
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum VideoFrameQuality {
    /** The frame quality is recognized to be high. */
@@ -49,13 +42,4 @@ typedef enum VideoFrameQuality {
    /** The frame quality is unknown. */
    VFQ_UNKNOWN
 } VideoFrameQuality;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

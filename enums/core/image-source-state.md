@@ -18,11 +18,7 @@ breadcrumbText: ImageSourceState
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: ImageSourceState
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum ImageSourceState
 {
@@ -48,13 +41,4 @@ typedef enum ImageSourceState
    /** The source of ImageSourceAdapter is empty. */
    ISS_EXHAUSTED
 } ImageSourceState;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

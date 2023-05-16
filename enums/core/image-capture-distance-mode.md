@@ -18,11 +18,7 @@ breadcrumbText: ImageCaptureDistanceMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,24 +33,12 @@ breadcrumbText: ImageCaptureDistanceMode
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
-typedef enum ImageCaptureDistanceMode 
+typedef enum ImageCaptureDistanceMode
 {
    /** The image is taken by close-up shot camera. */
-   ICDM_NEAR,   
+   ICDM_NEAR,
    /** The image is taken by long shot camera. */
    ICDM_FAR
 } CaptureDistanceMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

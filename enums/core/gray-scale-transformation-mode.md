@@ -18,11 +18,7 @@ breadcrumbText: GrayscaleTransformationMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: GrayscaleTransformationMode
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -58,13 +51,4 @@ typedef enum GrayscaleTransformationMode
    /** Skips grayscale transformation. */
    GTM_SKIP = 0x00
 }GrayscaleTransformationMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

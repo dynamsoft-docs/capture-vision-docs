@@ -18,11 +18,7 @@ breadcrumbText: ImagePixelFormat
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: ImagePixelFormat
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -72,13 +65,4 @@ typedef enum ImagePixelFormat
    /** 0:Black, 255:White. */
    IPF_BINARY_8,
 }ImagePixelFormat;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

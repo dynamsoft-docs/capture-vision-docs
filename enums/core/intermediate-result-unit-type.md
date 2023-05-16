@@ -18,11 +18,7 @@ Enumeration `IntermediateResultUnitType` is used in each subclass of `Intermedia
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ Enumeration `IntermediateResultUnitType` is used in each subclass of `Intermedia
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -102,13 +95,4 @@ enum IntermediateResultUnitType : unsigned long long
    /** The type of the IntermediateResult is "all". */
    IRUT_ALL = 0x7FFFFFF
 };
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

@@ -18,11 +18,7 @@ breadcrumbText: CornerType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: CornerType
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum CornerType
 {
@@ -52,13 +45,4 @@ typedef enum CornerType
    /* The sides are not intersected but they definitly make up a corner. */
    CT_NOT_INTERSECTED = 3,
 } CornerType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

@@ -18,11 +18,7 @@ breadcrumbText: SectionType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: SectionType
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -58,13 +51,4 @@ typedef enum SectionType
    /** The result is output by "document normalization" section. */
    ST_DOCUMENT_NORMALIZATION,
 } SectionType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

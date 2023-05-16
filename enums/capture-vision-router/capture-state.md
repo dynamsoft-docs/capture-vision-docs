@@ -18,11 +18,7 @@ breadcrumbText: CaptureState
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: CaptureState
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp

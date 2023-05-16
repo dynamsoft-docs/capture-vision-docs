@@ -18,11 +18,7 @@ breadcrumbText: PresetTemplate
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: PresetTemplate
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp

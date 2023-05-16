@@ -18,11 +18,7 @@ breadcrumbText: LocalizationMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: LocalizationMode
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -70,13 +63,4 @@ typedef enum LocalizationMode
    /**Skips localization. */
    LM_SKIP = 0x00
 }LocalizationMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

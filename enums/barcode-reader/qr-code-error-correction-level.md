@@ -18,11 +18,7 @@ breadcrumbText: QRCodeErrorCorrectionLevel
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: QRCodeErrorCorrectionLevel
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum QRCodeErrorCorrectionLevel
 {
@@ -52,13 +45,4 @@ typedef enum QRCodeErrorCorrectionLevel
    /**Error Correction Level Q (medium-high) */
    QRECL_ERROR_CORRECTION_Q
 }QRCodeErrorCorrectionLevel;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

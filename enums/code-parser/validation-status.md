@@ -18,11 +18,7 @@ breadcrumbText: ValidationStatus
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: ValidationStatus
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum ValidationStatus
 {
@@ -50,13 +43,4 @@ typedef enum ValidationStatus
    /** The validation for the field has been failed. */
    VS_FAILED
 } ValidationStatus;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

@@ -18,11 +18,7 @@ breadcrumbText: TargetType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: TargetType
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum TargetType
 {
@@ -48,13 +41,4 @@ typedef enum TargetType
    /** The target type of the PDF file is "image". */
    TT_IMAGE
 } TargetType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

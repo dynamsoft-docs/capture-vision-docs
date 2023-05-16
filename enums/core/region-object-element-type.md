@@ -18,11 +18,7 @@ breadcrumbText: RegionObjectElementType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: RegionObjectElementType
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -62,13 +55,4 @@ typedef enum RegionObjectElementType
    /** The type of subclass TargetROIElement. */
    ROET_TARGET_ROI
 } RegionObjectElementType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

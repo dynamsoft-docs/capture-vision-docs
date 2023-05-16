@@ -18,11 +18,7 @@ breadcrumbText: MappingStatus
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: MappingStatus
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum MappingStatus
 {
@@ -50,13 +43,4 @@ typedef enum MappingStatus
    /** Failed to find a mapping for the field value. */
    MS_FAILED
 } MappingStatus;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

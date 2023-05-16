@@ -18,11 +18,7 @@ breadcrumbText: PDFReadingMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: PDFReadingMode
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -58,13 +51,4 @@ typedef enum PDFReadingMode
    PDFRM_REV = -2147483648,
 #endif
 } PDFReadingMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

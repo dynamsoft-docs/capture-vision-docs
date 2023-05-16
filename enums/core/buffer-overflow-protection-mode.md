@@ -18,11 +18,7 @@ breadcrumbText: BufferOverflowProtectionMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -37,9 +33,6 @@ breadcrumbText: BufferOverflowProtectionMode
 ```swift
 ```
 >
-```c
-```
->
 ```cpp
 typedef enum BufferOverflowProtectionMode
 {
@@ -48,13 +41,4 @@ typedef enum BufferOverflowProtectionMode
    /** New images are appended at the end, and oldest images are pushed out from the beginning if the buffer is full. */
    BOPM_APPEND = 1
 } BufferOverflowProtectionMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

@@ -18,11 +18,7 @@ breadcrumbText: DeblurMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
@@ -35,9 +31,6 @@ breadcrumbText: DeblurMode
 ```
 >
 ```swift
-```
->
-```c
 ```
 >
 ```cpp
@@ -70,13 +63,4 @@ typedef enum DeblurMode
    /**Skips the deblur process. */
    DM_SKIP = 0x00
 }DeblurMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```
