@@ -264,7 +264,7 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    DSBarcodeFormatUSPSIntelligentMail = 1 << 52,
    /** Postnet.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   DSBarcodeFormatPOSTNET = 1 << 53,
+   DSBarcodeFormatPostnet = 1 << 53,
    /** Planet.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
    DSBarcodeFormatPlant = 1 << 54,
@@ -278,7 +278,7 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
 ```
 >
 ```swift
-public enum EnumCameraPosition : Int
+public enum BarcodeFormat : Int
 {
    /** No barcode format in BarcodeFormat */
    Null = 0,
@@ -307,26 +307,26 @@ public enum EnumCameraPosition : Int
    industrial25 = 1 << 9,
    /** CODE39 Extended */
    code39Extended = 1 << 10,
-    /**DataBar Omnidirectional*/
+   /**DataBar Omnidirectional*/
    gs1DatabarOmnidirectional = 1 << 11,
-    /**DataBar Truncated*/
+   /**DataBar Truncated*/
    gs1DatabarTruncated = 1 << 12,
-    /**DataBar Stacked*/
+   /**DataBar Stacked*/
    gs1DatabarStacked = 1 << 13,
-    /**DataBar Stacked Omnidirectional*/
+   /**DataBar Stacked Omnidirectional*/
    gs1DatabarStackedOmnidirectional = 1 << 14,
-    /**DataBar Expanded*/
+   /**DataBar Expanded*/
    gs1DatabarExpanded = 1 << 15,
-    /**DataBar Expaned Stacked*/
+   /**DataBar Expaned Stacked*/
    gs1DatabarExpandedStacked = 1 << 16,
-    /**DataBar Limited*/
+   /**DataBar Limited*/
    gs1DatabarLimited = 1 << 17,
    /** Patch code. */
    patchCode = 1 << 18,
-    /**Micro PDF417*/
+   /**Micro PDF417*/
    microPDF417 = 1 << 19,
    /** MSI Code */
-   MSICode = 1 << 20,
+   msiCode = 1 << 20,
    /** CODE_11 . */
    code11 = 1 << 21,
    /** Decode barcode with 2 digital addons. */
@@ -336,22 +336,22 @@ public enum EnumCameraPosition : Int
    /** PDF417 */
    PDF417 = 1 << 25,
    /** QRCode */
-   QRCode = 1 << 26,
+   qrCode = 1 << 26,
    /** DataMatrix */
    dataMatrix = 1 << 27,
    /** AZTEC */
    aztec = 1 << 28,
-    /**MAXICODE */
+   /**MAXICODE */
    maxiCode = 1 << 29,
-    /**Micro QR Code*/
+   /**Micro QR Code*/
    microQR = 1 << 30,
-    /**GS1 Composite Code*/
+   /**GS1 Composite Code*/
    gs1Composite = 1 << 31,
    /** Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE*/
-   OneD = 0x3007FF,
+   oneD = 0x3007FF,
    /** Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED */
    gs1Databar = 0x3F800,
-   NonStandardBarcode = 1 << 32,
+   nonStandardBarcode = 1 << 32,
    /** DotCode Barcode.
    When you set this barcode format, the library will automatically add DSLocalizationModeStatisticsMarks to LocalizationMode if you don't set it,*/
    dotCode = 1 << 33,
@@ -363,16 +363,16 @@ public enum EnumCameraPosition : Int
    pharmaCode = 0xC00000000,
    /** Combined value of DSBarcodeFormatUSPSINTELLIGENTMAIL, DSBarcodeFormatPOSTNET, DSBarcodeFormatPLANET, DSBarcodeFormatAUSTRALIANPOST, DSBarcodeFormatRM4SCC.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   PostalCode = 0x1F0000000000000,
+   postalCode = 0x1F0000000000000,
    /** USPS Intelligent Mail.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   USPSIntelligentMail = 1 << 52,
+   uspsIntelligentMail = 1 << 52,
    /** Postnet.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   POSTNET = 1 << 53,
+   postnet = 1 << 53,
    /** Planet.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   plant = 1 << 54,
+   planet = 1 << 54,
    /** Australian Post.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
    australianPost = 1 << 55,
