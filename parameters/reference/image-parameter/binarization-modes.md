@@ -231,7 +231,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>BM_LOCAL_BLOCK<br>BM_THRESHOLD
+        <td><b>Valid For</b><br>All modes
         </td>
     </tr>
     <tr>
@@ -252,7 +252,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>All modes
         </td>
     </tr>
     <tr>
