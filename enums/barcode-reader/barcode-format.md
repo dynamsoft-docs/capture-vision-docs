@@ -91,7 +91,9 @@ export enum EnumBarcodeFormat {
    BF_MSI_CODE = 0x100000,
    /**Code 11*/
    BF_CODE_11 = 0x200000,
+   /**Decode barcode with 2 digital addons.*/
    BF_TWO_DIGIT_ADD_ON = 0x400000,
+   /** Decode barcode with 5 digital addons. */
    BF_FIVE_DIGIT_ADD_ON = 0x800000,
    /**Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC.*/
    BF_MATRIX_25 = 0x1000000000,
@@ -122,52 +124,99 @@ export enum EnumBarcodeFormat {
 >
 ```java
 public class EnumBarcodeFormat {
+   /***/
    public static final long BF_ALL = 0x1F0000FFE3FFFFFL;
+   /***/
    public static final long BF_DEFAULT = 0xFE3FFFFFL;
+   /***/
    public static final long BF_ONED = 0x3007FFL;
+   /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/
    public static final long BF_GS1_DATABAR = 0x3F800L;
+   /***/
    public static final long BF_NULL = 0L;
+   /***/
    public static final long BF_CODE_39 = 1L << 0;
+   /***/
    public static final long BF_CODE_128 = 1L << 1;
+   /***/
    public static final long BF_CODE_93 = 1L << 2;
+   /***/
    public static final long BF_CODABAR = 1L << 3;
+   /***/
    public static final long BF_ITF = 1L << 4;
+   /***/
    public static final long BF_EAN_13 = 1L << 5;
+   /**EAN_8 barcode.*/
    public static final long BF_EAN_8 = 1L << 6;
+   /**UPC_A barcode.*/
    public static final long BF_UPC_A = 1L << 7;
+   /**UPC_E barcode.*/
    public static final long BF_UPC_E = 1L << 8;
+   /**Industrial 25 barcode*/
    public static final long BF_INDUSTRIAL_25 = 1L << 9;
+   /***/
    public static final long BF_CODE_39_EXTENDED = 1L << 10;
+   /**GS1 Databar - Omnidirectional.*/
    public static final long BF_GS1_DATABAR_OMNIDIRECTIONAL = 1L << 11;
+   /**GS1 Databar - Truncated.*/
    public static final long BF_GS1_DATABAR_TRUNCATED = 1L << 12;
+   /**GS1 Databar - Stacked.*/
    public static final long BF_GS1_DATABAR_STACKED = 1L << 13;
+   /**GS1 Databar - Stacked omnidirectional.*/
    public static final long BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL = 1L << 14;
+   /**GS1 Databar - Expanded.*/
    public static final long BF_GS1_DATABAR_EXPANDED = 1L << 15;
+   /**GS1 Databar - Expanded stacked.*/
    public static final long BF_GS1_DATABAR_EXPANDED_STACKED = 1L << 16;
+   /**GS1 Databar - Limited.*/
    public static final long BF_GS1_DATABAR_LIMITED = 1L << 17;
+   /**Patch code.*/
    public static final long BF_PATCHCODE = 1L << 18;
+   /**Micro PDF417 barcode.*/
    public static final long BF_MICRO_PDF417 = 1L << 19;
+   /**MSI code.*/
    public static final long BF_MSI_CODE = 1L << 20;
+   /**Code 11.*/
    public static final long BF_CODE_11 = 1L << 21;
+   /**Decode barcode with 2 digital addons.*/
    public static final long BF_TWO_DIGIT_ADD_ON = 1L << 22,
+   /**Decode barcode with 5 digital addons.*/
    public static final long BF_FIVE_DIGIT_ADD_ON = 1L << 23,
+   /**PDF417 barcode.*/
    public static final long BF_PDF417 = 1L << 25;
+   /**QR code.*/
    public static final long BF_QR_CODE = 1L << 26;
+   /**Data matrix.*/
    public static final long BF_DATAMATRIX = 1L << 27;
+   /**AZTEC barcode.*/
    public static final long BF_AZTEC = 1L << 28;
+   /**Maxicode.*/
    public static final long BF_MAXICODE = 1L << 29;
+   /**Micro QR Code.*/
    public static final long BF_MICRO_QR = 1L << 30;
+   /**GS1 Composite Code.*/
    public static final long BF_GS1_COMPOSITE = 1L << 31;
+   /**Nonstandard barcode.*/
    public static final long BF_NONSTANDARD_BARCODE = 1L << 32;
+   /**Dotcode.*/
    public static final long BF_DOTCODE = 1L << 33;
+   /**Pharma code.*/
    public static final long BF_PHARMACODE = 0xC00000000L;
+   /**Pharma code with one track.*/
    public static final long BF_PHARMACODE_ONE_TRACK = 1L << 34;
+   /**Pharma code with two track.*/
    public static final long BF_PHARMACODE_TWO_TRACK = 1L << 35;
+   /**Postal code*/
    public static final long BF_POSTALCODE = 0x1F0000000000000L;
+   /**USPS Intelligent Mail barcode.*/
    public static final long BF_USPSINTELLIGENTMAIL = 1L << 52;
+   /**Postnet barcode.*/
    public static final long BF_POSTNET = 1L << 53;
+   /**Planet barcode.*/
    public static final long BF_PLANET = 1L << 54;
+   /**Australian post barcode.*/
    public static final long BF_AUSTRALIANPOST = 1L << 55;
+   /**Royal Mail 4-State Customer barcode.*/
    public static final long BF_RM4SCC = 1L << 56;
 }
 ```
@@ -281,101 +330,101 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
 public enum BarcodeFormat : Int
 {
    /** No barcode format in BarcodeFormat */
-   Null = 0,
+   Null = 0
    /** All supported formats in BarcodeFormat . */
-   all = 0x1F0000FFE3FFFFF,
-   default = 0xFE3FFFFF,
+   all = 0x1F0000FFE3FFFFF
+   default = 0xFE3FFFFF
    /** Code 39 */
-   code39 = 1,
+   code39 = 1
    /** Code 128 */
-   code128 = 1 << 1,
+   code128 = 1 << 1
    /** Code 93 */
-   code93 = 1 << 2,
+   code93 = 1 << 2
    /** Codabar */
-   codabar = 1 << 3,
+   codabar = 1 << 3
    /** Interleaved 2 of 5 */
-   ITF = 1 << 4,
+   ITF = 1 << 4
    /** EAN-13 */
-   EAN13 = 1 << 5,
+   EAN13 = 1 << 5
    /** EAN-8 */
-   EAN8 = 1 << 6,
+   EAN8 = 1 << 6
    /** UPC-A */
-   UPCA = 1 << 7,
+   UPCA = 1 << 7
    /** UPC-E */
-   UPCE = 1 << 8,
+   UPCE = 1 << 8
    /** Industrial 2 of 5 */
-   industrial25 = 1 << 9,
+   industrial25 = 1 << 9
    /** CODE39 Extended */
-   code39Extended = 1 << 10,
+   code39Extended = 1 << 10
    /**DataBar Omnidirectional*/
-   gs1DatabarOmnidirectional = 1 << 11,
+   gs1DatabarOmnidirectional = 1 << 11
    /**DataBar Truncated*/
-   gs1DatabarTruncated = 1 << 12,
+   gs1DatabarTruncated = 1 << 12
    /**DataBar Stacked*/
-   gs1DatabarStacked = 1 << 13,
+   gs1DatabarStacked = 1 << 13
    /**DataBar Stacked Omnidirectional*/
-   gs1DatabarStackedOmnidirectional = 1 << 14,
+   gs1DatabarStackedOmnidirectional = 1 << 14
    /**DataBar Expanded*/
-   gs1DatabarExpanded = 1 << 15,
+   gs1DatabarExpanded = 1 << 15
    /**DataBar Expaned Stacked*/
-   gs1DatabarExpandedStacked = 1 << 16,
+   gs1DatabarExpandedStacked = 1 << 16
    /**DataBar Limited*/
-   gs1DatabarLimited = 1 << 17,
+   gs1DatabarLimited = 1 << 17
    /** Patch code. */
-   patchCode = 1 << 18,
+   patchCode = 1 << 18
    /**Micro PDF417*/
-   microPDF417 = 1 << 19,
+   microPDF417 = 1 << 19
    /** MSI Code */
-   msiCode = 1 << 20,
+   msiCode = 1 << 20
    /** CODE_11 . */
-   code11 = 1 << 21,
+   code11 = 1 << 21
    /** Decode barcode with 2 digital addons. */
-   twoDigitAddOn = 1 << 22,
+   twoDigitAddOn = 1 << 22
    /** Decode barcode with 5 digital addons. */
-   fiveDigitAddOn = 1 << 23,
+   fiveDigitAddOn = 1 << 23
    /** PDF417 */
-   PDF417 = 1 << 25,
+   PDF417 = 1 << 25
    /** QRCode */
-   qrCode = 1 << 26,
+   qrCode = 1 << 26
    /** DataMatrix */
-   dataMatrix = 1 << 27,
+   dataMatrix = 1 << 27
    /** AZTEC */
-   aztec = 1 << 28,
+   aztec = 1 << 28
    /**MAXICODE */
-   maxiCode = 1 << 29,
+   maxiCode = 1 << 29
    /**Micro QR Code*/
-   microQR = 1 << 30,
+   microQR = 1 << 30
    /**GS1 Composite Code*/
-   gs1Composite = 1 << 31,
+   gs1Composite = 1 << 31
    /** Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE*/
-   oneD = 0x3007FF,
+   oneD = 0x3007FF
    /** Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED */
    gs1Databar = 0x3F800,
-   nonStandardBarcode = 1 << 32,
+   nonStandardBarcode = 1 << 32
    /** DotCode Barcode.
    When you set this barcode format, the library will automatically add DSLocalizationModeStatisticsMarks to LocalizationMode if you don't set it,*/
-   dotCode = 1 << 33,
+   dotCode = 1 << 33
    /** PHARMACODE_ONE_TRACK */
-   pharmaCodeOneTrack = 1 << 34,
+   pharmaCodeOneTrack = 1 << 34
    /** PHARMACODE_ONE_TRACK */
-   pharmaCodeTwoTrack = 1 << 35,
+   pharmaCodeTwoTrack = 1 << 35
    /** PHARMACODE */
-   pharmaCode = 0xC00000000,
+   pharmaCode = 0xC00000000
    /** Combined value of DSBarcodeFormatUSPSINTELLIGENTMAIL, DSBarcodeFormatPOSTNET, DSBarcodeFormatPLANET, DSBarcodeFormatAUSTRALIANPOST, DSBarcodeFormatRM4SCC.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
    postalCode = 0x1F0000000000000,
    /** USPS Intelligent Mail.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   uspsIntelligentMail = 1 << 52,
+   uspsIntelligentMail = 1 << 52
    /** Postnet.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   postnet = 1 << 53,
+   postnet = 1 << 53
    /** Planet.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   planet = 1 << 54,
+   planet = 1 << 54
    /** Australian Post.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   australianPost = 1 << 55,
+   australianPost = 1 << 55
    /** Royal Mail 4-State Customer Barcode.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
    RM4SCC = 1 << 56

@@ -22,15 +22,43 @@ breadcrumbText: ImageSourceState
    >
 >
 ```javascript
+export enum EnumImageSourceState
+{
+   /** The buffer of ImageSourceAdapter is temporarily empty. */
+   ISS_BUFFER_EMPTY = 0,
+   /** The source of ImageSourceAdapter is empty. */
+   ISS_EXHAUSTED = 1
+}
 ```
 >
 ```java
+public class EnumImageSourceState
+{
+   /** The buffer of ImageSourceAdapter is temporarily empty. */
+   public static final int ISS_BUFFER_EMPTY = 0;
+   /** The source of ImageSourceAdapter is empty. */
+   public static final int ISS_EXHAUSTED = 1;
+}
 ```
 >
 ```objc
+typedef NS_ENUM(NSInteger, DSImageSourceState)
+{
+   /** The buffer of ImageSourceAdapter is temporarily empty. */
+   DSImageSourceStateBufferEmpty = 0,
+   /** The source of ImageSourceAdapter is empty. */
+   DSImageSourceStateExhausted = 1
+}NS_SWIFT_NAME(ImageSourceState);
 ```
 >
 ```swift
+typedef NS_ENUM(NSInteger, DSImageSourceState)
+{
+   /** The buffer of ImageSourceAdapter is temporarily empty. */
+   bufferEmpty = 0
+   /** The source of ImageSourceAdapter is empty. */
+   exhausted = 1
+}NS_SWIFT_NAME(ImageSourceState);
 ```
 >
 ```cpp
