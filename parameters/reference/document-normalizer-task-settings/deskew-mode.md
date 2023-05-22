@@ -99,4 +99,4 @@ If the `DeskewMode` is not configured in your template file, the following setti
 
 ### DM_PERSPECTIVE_CORRECTION
 
-Deskew the document by applying perspective correction process. This mode has the following arguments for further customizing.
+Deskew the document by applying perspective correction process.
