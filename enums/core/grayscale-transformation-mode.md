@@ -24,10 +24,15 @@ breadcrumbText: GrayscaleTransformationMode
 ```javascript
 export enum EnumGrayscaleTransformationMode
 {
+   /** Skips grayscale transformation. */
    GTM_SKIP = 0,
+   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
    GTM_INVERTED = 1,
+   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
    GTM_ORIGINAL = 2,
+   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
    GTM_AUTO = 4,
+   /** Reserved setting for grayscale transformation mode. */
    GTM_REV = -2147483648
 }
 ```
@@ -35,10 +40,15 @@ export enum EnumGrayscaleTransformationMode
 ```java
 public class EnumGrayscaleTransformationMode
 {
+   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
    public static final int GTM_INVERTED = 1;
+   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
    public static final int GTM_ORIGINAL = 2;
+   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
    public static final int GTM_AUTO = 4;
+   /** Skips grayscale transformation. */
    public static final int GTM_SKIP = 0;
+   /** Reserved setting for grayscale transformation mode. */
    public static final int GTM_REV = -2147483648;
 }
 ```
@@ -63,15 +73,15 @@ typedef NS_ENUM(NSInteger, DSGrayscaleTransformationMode)
 public enum GrayscaleTransformationMode : Int
 {
    /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
-   DSGrayscaleTransformationModeInverted = 0x01
+   inverted = 0x01
    /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
-   DSGrayscaleTransformationModeOriginal = 0x02
+   original = 0x02
    /**Lets the library choose an algorithm automatically for grayscale transformation.*/
-   DSGrayscaleTransformationModeAuto     = 0x04
+   auto     = 0x04
    /** Skips grayscale transformation. */
-   DSGrayscaleTransformationModeSkip     = 0x00
+   skip     = 0x00
    /** Reserved setting for grayscale transformation mode. */
-   DSGrayscaleTransformationModeRev      = -2147483648
+   rev      = -2147483648
 }
 ```
 >

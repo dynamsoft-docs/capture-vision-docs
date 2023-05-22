@@ -41,6 +41,7 @@ export enum EnumDeblurMode {
    DM_BASED_ON_LOC_BIN = 128,
    /** Performs deblur process using the sharpening and smoothing algorithm. */
    DM_SHARPENING_SMOOTHING = 256,
+   /** Reserved setting for deblur mode. */
    DM_REV = -2147483648
 }
 ```
@@ -104,27 +105,27 @@ typedef NS_ENUM(NSInteger , DSDeblurMode)
 public enum DeblurMode : Int
 {
    /**Performs deblur process using the direct binarization algorithm.*/
-   DSDeblurModeDirectBinarization = 0x01
+   directBinarization = 0x01
    /**Performs deblur process using the threshold binarization algorithm.*/
-   DSDeblurModeThresholdBinarization = 0x02
+   thresholdBinarization = 0x02
    /**Performs deblur process using the gray equalization algorithm.*/
-   DSDeblurModeGrayEqualization = 0x04
+   grayEqualization = 0x04
    /**Performs deblur process using the smoothing algorithm.*/
-   DSDeblurModeSmoothing = 0x08
+   smoothing = 0x08
    /**Performs deblur process using the morphing algorithm.*/
-   DSDeblurModeMorphing = 0x10
+   morphing = 0x10
    /**Performs deblur process using the deep analysis algorithm.*/
-   DSDeblurModeDeepAnalysis = 0x20
+   deepAnalysis = 0x20
    /**Performs deblur process using the sharpening algorithm.*/
-   DSDeblurModeSharpening = 0x40
+   sharpening = 0x40
    /**Performs deblur process based on the binary image from the localization process.*/
-   DSDeblurModeBasedOnLocBin = 0x80
+   basedOnLocBin = 0x80
    /**Performs deblur process using the sharpening and smoothing algorithm.*/
-   DSDeblurModeSharpeningSmoothing = 0x100
+   sharpeningSmoothing = 0x100
    /**Reserved setting for deblur mode.*/
-   DSDeblurModeRev = -2147483648
+   rev = -2147483648
    /**Skips the deblur process.*/
-   DSDeblurModeSkip = 0x00
+   skip = 0x00
 }
 ```
 >

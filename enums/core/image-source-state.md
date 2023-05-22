@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, DSImageSourceState)
 ```
 >
 ```swift
-typedef NS_ENUM(NSInteger, DSImageSourceState)
+public enum ImageSourceState : Int
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
    bufferEmpty = 0
