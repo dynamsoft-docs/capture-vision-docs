@@ -42,7 +42,7 @@ breadcrumbText: Enumerations index
 - [CapturedResultItemType](core/captured-result-item-type.md)
 - [CornerType](core/corner-type.md)
 - [ErrorCode](core/error-code.md)
-- [GrayscaleTransformationMode](core/gray-scale-transformation-mode.md)
+- [GrayscaleTransformationMode](core/grayscale-transformation-mode.md)
 - [ImageCaptureDistanceMode](core/image-capture-distance-mode.md)
 - [ImagePixelFormat](core/image-pixel-format.md)
 - [ImageSourceState](core/image-source-state.md)

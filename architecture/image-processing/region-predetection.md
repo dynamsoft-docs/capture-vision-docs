@@ -49,5 +49,5 @@ Each of the five stages has its own output (known as an intermediate result) and
 | Cropping      | `IRUT_COLOUR_IMAGE`                | [`Location`](../../parameters/reference/target-roi-def/location.md)                                             |
 | Down-scaling  | `IRUT_SCALED_DOWN_COLOUR_IMAGE`    | [`ScaleDownThreshold`](../../parameters/reference/image-parameter/scale-down-threshold.md)                      |
 | Grayscaling   | `IRUT_GRAYSCALE_IMAGE`             | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                |
-| Transforming  | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE` | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/gray-scale-transformation-modes.md) |
+| Transforming  | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE` | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/grayscale-transformation-modes.md) |
 | Pre-Detecting | `IRUT_PREDETECTED_REGIONS`         | [`RegionPredetectionModes`](../../parameters/reference/image-parameter/region-predetection-modes.md)            |
