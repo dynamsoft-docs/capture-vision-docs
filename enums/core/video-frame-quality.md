@@ -18,44 +18,62 @@ breadcrumbText: VideoFrameQuality
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
+export enum EnumVideoFrameQuality {
+   /**The frame quality is measured to be high.*/
+   VFQ_HIGH = 0,
+   /**The frame quality is measured to be low.*/
+   VFQ_LOW = 1,
+   /**The frame quality is unknown.*/
+   VFQ_UNKNOWN = 2
+}
 ```
 >
 ```java
+public class EnumVideoFrameQuality {
+   /**The frame quality is measured to be high.*/
+   public static final int VFQ_HIGH = 0;
+   /**The frame quality is measured to be low.*/
+   public static final int VFQ_LOW = 1;
+   /**The frame quality is unknown.*/
+   public static final int VFQ_UNKNOWN = 2;
+}
 ```
 >
 ```objc
+typedef NS_ENUM(NSInteger, DSVideoFrameQuality)
+{
+   /**The frame quality is measured to be high.*/
+   VideoFrameQualityHigh,
+   /**The frame quality is measured to be low.*/
+   VideoFrameQualityLow,
+   /**The frame quality is unknown.*/
+   VideoFrameQualityUnknown
+} NS_SWIFT_NAME(VideoFrameQuality);
 ```
 >
 ```swift
-```
->
-```c
+public enum VideoFrameQuality : Int
+{
+   /**The frame quality is measured to be high.*/
+   high,
+   /**The frame quality is measured to be low.*/
+   low,
+   /**The frame quality is unknown.*/
+   unknown
+}
 ```
 >
 ```cpp
 typedef enum VideoFrameQuality {
-   /** The frame quality is recognized to be high. */
+   /**The frame quality is measured to be high.*/
    VFQ_HIGH,
-   /** The frame quality is recognized to be low. */
+   /**The frame quality is measured to be low.*/
    VFQ_LOW,
-   /** The frame quality is unknown. */
+   /**The frame quality is unknown.*/
    VFQ_UNKNOWN
 } VideoFrameQuality;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

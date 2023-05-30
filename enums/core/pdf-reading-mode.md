@@ -18,26 +18,68 @@ breadcrumbText: PDFReadingMode
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
+export enum EnumPDFReadingMode
+{
+   /** Outputs vector data found in the PDFs.*/
+   PDFRM_VECTOR = 1,
+   /** The default value.
+    * Outputs raster data found in the PDFs.
+    * Depending on the argument Resolution, 
+    * the SDK may rasterize the PDF pages.
+    * Check the template for available argument settings.*/
+   PDFRM_RASTER = 2,
+   /** Reserved setting for PDF reading mode.*/
+   PDFRM_REV = -2147483648
+}
 ```
 >
 ```java
+public class EnumPDFReadingMode
+{
+   /** Capture content from vector data in PDF file. */
+   public static final int PDFRM_VECTOR = 1;
+   /** The default value.
+    * Outputs raster data found in the PDFs.
+    * Depending on the argument Resolution, the SDK may rasterize the PDF pages.
+    * Check the template for available argument settings. */
+   public static final int PDFRM_RASTER = 2;
+   /** Reserved setting for PDF reading mode.*/
+   public static final int PDFRM_REV = -2147483648;
+}
 ```
 >
 ```objc
+typedef NS_ENUM(NSInteger, DSPDFReadingMode)
+{
+   /** Capture content from vector data in PDF file. */
+   DSPDFReadingModeVector = 0x01,
+   /** The default value.
+    * Outputs raster data found in the PDFs.
+    * Depending on the argument Resolution, the SDK may rasterize the PDF pages.
+    * Check the template for available argument settings. */
+   DSPDFReadingModeRaster = 0x02,
+   /** Reserved setting for PDF reading mode.*/
+   DSPDFReadingModeRev = -2147483648
+}NS_SWIFT_NAME(PDFReadingMode);
 ```
 >
 ```swift
-```
->
-```c
+public enum PDFReadingMode : Int
+{
+   /** Capture content from vector data in PDF file. */
+   vector = 0x01,
+   /** The default value.
+    * Outputs raster data found in the PDFs.
+    * Depending on the argument Resolution, the SDK may rasterize the PDF pages.
+    * Check the template for available argument settings. */
+   raster = 0x02,
+   /** Reserved setting for PDF reading mode.*/
+   rev = -2147483648
+}NS_SWIFT_NAME(PDFReadingMode);
 ```
 >
 ```cpp
@@ -47,24 +89,14 @@ typedef enum PDFReadingMode
    PDFRM_VECTOR = 0x01,
    /** The default value.
     * Outputs raster data found in the PDFs.
-    * Depending on the argument Resolution, 
-    * the SDK may rasterize the PDF pages.
+    * Depending on the argument Resolution, the SDK may rasterize the PDF pages.
     * Check the template for available argument settings. */
-   PDFRM_RASTER = 0x02,   
-   /** Reserved setting for PDF reading mode. */
+   PDFRM_RASTER = 0x02,
+   /** Reserved setting for PDF reading mode.*/
 #if defined(_WIN32) || defined(_WIN64)
    PDFRM_REV = 0x80000000,
 #else
    PDFRM_REV = -2147483648,
 #endif
 } PDFReadingMode;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```

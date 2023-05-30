@@ -63,7 +63,7 @@ Each of these stages has its own output (known as an intermediate result) and us
 | Cropping            | `IRUT_COLOUR_IMAGE`                    | N/A                                                                                                             |
 | Down-scaling        | `IRUT_SCALED_DOWN_COLOUR_IMAGE`        | [`ScaleDownThreshold`](../../parameters/reference/image-parameter/scale-down-threshold.md)                      |
 | Grayscaling         | `IRUT_GRAYSCALE_IMAGE`                 | [`ColourConversionModes`](../../parameters/reference/image-parameter/colour-conversion-modes.md)                |
-| Transforming        | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE`     | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/gray-scale-transformation-modes.md) |
+| Transforming        | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE`     | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/grayscale-transformation-modes.md) |
 | Enhancing           | `IRUT_ENHANCED_GRAYSCALE_IMAGE`        | [`GrayscaleEnhancementModes`](../../parameters/reference/image-parameter/grayscale-enhancement-modes.md)        |
 | Binarizing          | `IRUT_BINARY_IMAGE`                    | [`BinarizationModes`](../../parameters/reference/image-parameter/binarization-modes.md)                         |
 | Texture-detecting   | `IRUT_TEXTURE_DETECTION_RESULT`        | [`TextureDetectionModes`](../../parameters/reference/image-parameter/texture-detection-modes.md)                |

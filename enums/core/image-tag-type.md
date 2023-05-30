@@ -18,43 +18,53 @@ breadcrumbText: ImageTagType
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
+export enum EnumImageTagType
+{
+   /**The image is a file image.*/
+   ITT_FILE_IMAGE = 0,
+   /**The image is a video frame.*/
+   ITT_VIDEO_FRAME = 1
+}
 ```
 >
 ```java
+public class EnumImageTagType
+{
+   public static final int ITT_FILE_IMAGE = 0;
+   public static final int ITT_VIDEO_FRAME = 1;
+}
 ```
 >
 ```objc
+typedef NS_ENUM(NSInteger, DSImageTagType)
+{
+   /**The image tag is a DSFileImageTag.*/
+   DSImageTagTypeFileImage = 0,
+   /**The image tag is a DSVideoFrameTag.*/
+   DSImageTagTypeVideoFrame = 1,
+}NS_SWIFT_NAME(ImageTagType);
 ```
 >
 ```swift
-```
->
-```c
+public enum ImageTagType : Int
+{
+   /**The image tag is a DSFileImageTag.*/
+   fileImage = 0,
+   /**The image tag is a DSVideoFrameTag.*/
+   videoFrame = 1,
+}
 ```
 >
 ```cpp
 typedef enum ImageTagType
 {
-   /** The image is a file image. */
+   /**The image is a file image.*/
    ITT_FILE_IMAGE,
-   /** The image is a video frame. */
+   /**The image is a video frame.*/
    ITT_VIDEO_FRAME
 } ImageTagType;
-```
->
-```csharp
-```
->
-```java
-```
->
-```python
 ```
