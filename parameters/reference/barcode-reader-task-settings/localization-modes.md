@@ -159,6 +159,28 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
         </td>
     </tr>
     <tr>
+        <td rowspan = "5" style="vertical-align:text-top">ModuleSize<br>(Optional)</td>
+        <td><b>Description</b><br>Set the module size, if the module size is known.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[0, 0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>
+            LM_CENTRE<br>
+        </td>
+    </tr>
+    <tr>
         <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
         <td><b>Description</b><br>Sets the file name of the library to load dynamically.
         </td>
@@ -211,32 +233,19 @@ If the `LocalizationModes` is not configured in your template file, the followin
     "LocalizationModes" : 
     [
         {
-            "ConfidenceThreshold" : 60,
-            "IsOneDStacked" : 0,
-            "Mode" : "LM_CONNECTED_BLOCKS",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
+            "Mode" : "LM_CONNECTED_BLOCKS"
         },
         {
-            "ConfidenceThreshold" : 60,
             "IsOneDStacked" : 0,
             "Mode" : "LM_SCAN_DIRECTLY",
             "ScanDirection" : 0,
             "ScanStride" : 0
         },
         {
-            "ConfidenceThreshold" : 60,
-            "IsOneDStacked" : 0,
             "Mode" : "LM_STATISTICS",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
         },
         {
-            "ConfidenceThreshold" : 60,
-            "IsOneDStacked" : 0,
             "Mode" : "LM_LINES",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
         }
     ]
 }
@@ -309,6 +318,7 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 
 **Available Mode Arguments:**
 
+- ModuleSize
 - LibraryFileName
 - LibraryParameters
 
