@@ -14,7 +14,7 @@ The following diagram shows how sections connect to each other to form tasks:
 
 ```mermaid
 flowchart LR;
-     A[1.Barcode Localization]-->C[2.1.Shared Detection]
+     A[1.Region Pre-Detection]-->C[2.1.Shared Detection]
      C---D[2.2.Barcode Localization]
      C---E[2.2.Text-line Localization]
      C---F[2.2.Document Detection]
