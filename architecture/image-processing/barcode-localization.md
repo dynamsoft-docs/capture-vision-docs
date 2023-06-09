@@ -47,7 +47,7 @@ Each of these stages has its own output (known as an intermediate result) and us
 
 | Stage               | Intermediate Result Type       | Related Parameter                                                                                                                                                                                                |
 | ------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contour-locating    | `IRUT_CONTOURS`                | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) <br/>[`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/barcode-format-ids.md)   |
-| Line-locating       | `IRUT_LINE_SEGMENTS`           | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) <br/>[`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/barcode-format-ids.md)   |
-| Candidates-locating | `IRUT_CANDIDATE_BARCODE_ZONES` | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md)  <br/>[`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/barcode-format-ids.md)  |
-| Barcodes-locating   | `IRUT_LOCALIZED_BARCODES`      | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md)   <br/>[`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/barcode-format-ids.md) |
+| Contour-locating    | `IRUT_CONTOURS`                | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) |
+| Line-locating       | `IRUT_LINE_SEGMENTS`           | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) |
+| Candidates-locating | `IRUT_CANDIDATE_BARCODE_ZONES` | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) |
+| Barcodes-locating   | `IRUT_LOCALIZED_BARCODES`      | [`LocalizationModes`](../../parameters/reference/barcode-reader-task-settings/localization-modes.md) |
