@@ -85,8 +85,6 @@ export enum EnumErrorCode
    EC_DOMAIN_NOT_MATCHED = -10039,
    /**The reserved info does not match the reserved info bound in the current product key.*/
    EC_RESERVEDINFO_NOT_MATCHED = -10040,
-   /**The License DLL is missing.*/
-   EC_LICENSE_DLL_MISSING = -10042,
    /**The license key does not match the license content.*/
    EC_LICENSEKEY_NOT_MATCHED = -10043,
    /**Failed to request the license content.*/
@@ -284,8 +282,6 @@ public class EnumErrorCode
    public static final int EC_DOMAIN_NOT_MATCH = -10039,
    /** The reserved info does not match the reserved info bound in the current product key. */
    public static final int EC_RESERVED_INFO_NOT_MATCH = -10040,
-   /** The License DLL is missing. */
-   public static final int EC_LICENSE_DLL_MISSING = -10042;
    /** The license key does not match the license content. */
    public static final int EC_LICENSE_KEY_NOT_MATCH = -10043,
    /** Failed to request the license content. */
@@ -878,8 +874,6 @@ typedef enum ErrorCode
    EC_DOMAIN_NOT_MATCH = -10039,
    /** The reserved info does not match the reserved info bound in the current product key. */
    EC_RESERVED_INFO_NOT_MATCH = -10040,
-   /** The License DLL is missing. */
-   EC_LICENSE_DLL_MISSING = -10042;
    /** The license key does not match the license content. */
    EC_LICENSE_KEY_NOT_MATCH = -10043,
    /** Failed to request the license content. */
