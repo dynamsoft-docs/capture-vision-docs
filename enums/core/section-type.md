@@ -24,86 +24,96 @@ breadcrumbText: SectionType
 ```javascript
 export enum EnumSectionType
 {
+   /**No section type is specified.*/
+   ST_NULL = 0,
    /**The result is output by "region prediction" section.*/
-   ST_REGION_PREDETECTION = 0,
+   ST_REGION_PREDETECTION = 1,
    /**The result is output by "barcode localization" section.*/
-   ST_BARCODE_LOCALIZATION = 1,
+   ST_BARCODE_LOCALIZATION = 2,
    /**The result is output by "barcode decoding" section.*/
-   ST_BARCODE_DECODING = 2,
+   ST_BARCODE_DECODING = 3,
    /**The result is output by "text line localization" section.*/
-   ST_TEXT_LINE_LOCALIZATION = 3,
+   ST_TEXT_LINE_LOCALIZATION = 4,
    /**The result is output by "text line  recognition" section.*/
-   ST_TEXT_LINE_RECOGNITION = 4,
+   ST_TEXT_LINE_RECOGNITION = 5,
    /**The result is output by "document detection" section.*/
-   ST_DOCUMENT_DETECTION = 5,
+   ST_DOCUMENT_DETECTION = 6,
    /**The result is output by "document normalization" section.*/
-   ST_DOCUMENT_NORMALIZATION = 6
+   ST_DOCUMENT_NORMALIZATION = 7
 }
 ```
 >
 ```java
 public class EnumSectionType
 {
+   /**No section type is specified.*/
+   public static final int ST_NULL = 0;
    /**The result is output by "region prediction" section.*/
-   public static final int ST_REGION_PREDETECTION = 0;
+   public static final int ST_REGION_PREDETECTION = 1;
    /**The result is output by "barcode localization" section.*/
-   public static final int ST_BARCODE_LOCALIZATION = 1;
+   public static final int ST_BARCODE_LOCALIZATION = 2;
    /**The result is output by "barcode decoding" section.*/
-   public static final int ST_BARCODE_DECODING = 2;
+   public static final int ST_BARCODE_DECODING = 3;
    /**The result is output by "text line localization" section.*/
-   public static final int ST_TEXT_LINE_LOCALIZATION = 3;
+   public static final int ST_TEXT_LINE_LOCALIZATION = 4;
    /**The result is output by "text line  recognition" section.*/
-   public static final int ST_TEXT_LINE_RECOGNITION = 4;
+   public static final int ST_TEXT_LINE_RECOGNITION = 5;
    /**The result is output by "document detection" section.*/
-   public static final int ST_DOCUMENT_DETECTION = 5;
+   public static final int ST_DOCUMENT_DETECTION = 6;
    /**The result is output by "document normalization" section.*/
-   public static final int ST_DOCUMENT_NORMALIZATION = 6;
+   public static final int ST_DOCUMENT_NORMALIZATION = 7;
 }
 ```
 >
 ```objc
 typedef NS_ENUM(NSInteger, DSSectionType)
 {
+   /**No section type is specified.*/
+   DSSectionTypeNull = 0,
    /**The result is output by "region prediction" section.*/
-   DSSectionTypeRegionPredection = 0,
+   DSSectionTypeRegionPredection = 1,
    /**The result is output by "barcode localization" section.*/
-   DSSectionTypeBarcodeLocalization = 1,
+   DSSectionTypeBarcodeLocalization = 2,
    /**The result is output by "barcode decoding" section.*/
-   DSSectionTypeBarcodeDecoding = 2,
+   DSSectionTypeBarcodeDecoding = 3,
    /**The result is output by "text line localization" section.*/
-   DSSectionTypeTextLineLocalization = 3,
+   DSSectionTypeTextLineLocalization = 4,
    /**The result is output by "text line  recognition" section.*/
-   DSSectionTypeTextLineRecognition = 4,
+   DSSectionTypeTextLineRecognition = 5,
    /**The result is output by "document detection" section.*/
-   DSSectionTypeDocumentDetection = 5,
+   DSSectionTypeDocumentDetection = 6,
    /**The result is output by "document normalization" section.*/
-   DSSectionTypeDocumentNormalization = 6
+   DSSectionTypeDocumentNormalization = 7
 }NS_SWIFT_NAME(SectionType);
 ```
 >
 ```swift
 public enum SectionType : Int
 {
+   /**No section type is specified.*/
+   null = 0,
    /**The result is output by "region prediction" section.*/
-   regionPredection = 0,
+   regionPredection = 1,
    /**The result is output by "barcode localization" section.*/
-   barcodeLocalization = 1,
+   barcodeLocalization = 2,
    /**The result is output by "barcode decoding" section.*/
-   barcodeDecoding = 2,
+   barcodeDecoding = 3,
    /**The result is output by "text line localization" section.*/
-   textLineLocalization = 3,
+   textLineLocalization = 4,
    /**The result is output by "text line  recognition" section.*/
-   textLineRecognition = 4,
+   textLineRecognition = 5,
    /**The result is output by "document detection" section.*/
-   documentDetection = 5,
+   documentDetection = 6,
    /**The result is output by "document normalization" section.*/
-   documentNormalization = 6
+   documentNormalization = 7
 }
 ```
 >
 ```cpp
 typedef enum SectionType
 {
+   /**No section type is specified.*/
+   ST_NULL,
    /**The result is output by "region prediction" section.*/
    ST_REGION_PREDETECTION,
    /**The result is output by "barcode localization" section.*/

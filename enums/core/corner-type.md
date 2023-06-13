@@ -30,7 +30,7 @@ export enum EnumCornerType
    CT_T_INTERSECTED = 1,
    /** The corner is formed by two cross intersecting line segments. */
    CT_CROSS_INTERSECTED = 2,
-   /** The two line segments are not intersected but they definitly consist a corner. */
+   /** The two line segments are not intersected but they definitely consist a corner. */
    CT_NOT_INTERSECTED = 3
 }
 ```
@@ -44,7 +44,7 @@ public class EnumCornerType
    public static final int CT_T_INTERSECTED = 1;
    /** The corner is formed by two cross intersecting line segments. */
    public static final int CT_CROSS_INTERSECTED = 2;
-   /** The two line segments are not intersected but they definitly consist a corner. */
+   /** The two line segments are not intersected but they definitely consist a corner. */
    public static final int CT_NOT_INTERSECTED = 3;
 }
 ```
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSInteger, DSCornerType)
    DSCornerTypeTIntersected,
    /** The corner is formed by two cross intersecting line segments. */
    DSCornerTypeCrossIntersected,
-   /** The two line segments are not intersected but they definitly consist a corner. */
+   /** The two line segments are not intersected but they definitely consist a corner. */
    DSCornerTypeNotIntersected
 }NS_SWIFT_NAME(CornerType);
 ```
@@ -72,7 +72,7 @@ public enum CornerType : Int
    tIntersected
    /** The corner is formed by two cross intersecting line segments. */
    crossIntersected
-   /** The two line segments are not intersected but they definitly consist a corner. */
+   /** The two line segments are not intersected but they definitely consist a corner. */
    notIntersected
 }NS_SWIFT_NAME(CornerType);
 ```
@@ -86,7 +86,7 @@ typedef enum CornerType
    CT_T_INTERSECTED = 1,
    /* The sides of the corner is cross-intersected. */
    CT_CROSS_INTERSECTED = 2,
-   /* The sides are not intersected but they definitly make up a corner. */
+   /* The sides are not intersected but they definitely make up a corner. */
    CT_NOT_INTERSECTED = 3,
 } CornerType;
 ```
