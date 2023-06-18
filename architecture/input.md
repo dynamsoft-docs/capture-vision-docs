@@ -72,16 +72,11 @@ captureVisionRouter.setInput(cameraEnhancer);
 ```
 >
 ```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
-// Update the settings.
-reader.updateRuntimeSettings(settings);
+CaptureVisionRouter router = new CaptureVisionRouter();
+CameraView cameraView = findViewById(R.id.dce_camera_view);
+CameraEnhancer dce = new CameraEnhancer(cameraView, activity);
+
+router.setInput(dce);
 ```
 >
 ```objc
@@ -134,12 +129,12 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
 // Create a new instance of CCaptureVisionRouter
 CCaptureVisionRouter router;
 // Create a new instance of CDirectoryFetcher
-CDirectoryFetcher fetcher;
+CDirectoryFetcher *fetcher = new CDirectoryFetcher;
 // Config the fetcher
-fetcher.SetImageFetchInterval(1000);
-fetcher.SetDirectory("/PATH/TO/DIRECTORY", "*.JPG", true);
+fetcher->SetImageFetchInterval(1000);
+fetcher->SetDirectory("/PATH/TO/DIRECTORY", "*.JPG", true);
 // Set the fetcher as the input source
-router.SetInput(&fetcher);
+router.SetInput(fetcher);
 // Start the image capture process
 // ...
 ```
