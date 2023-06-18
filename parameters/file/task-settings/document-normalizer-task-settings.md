@@ -24,12 +24,12 @@ A `DocumentNormalizerTaskSetting` object is defined as below:
 | CornerAngleRangeArray | string | Optional | Sets the value for parameter [CornerAngleRangeArray]({{site.parameters_reference}}document-normalizer-task-settings/corner-angle-range-array.html) |
 | DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
 | LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
-| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
+| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.parameters_reference}}shared-parameter/max-threads-in-one-task.html) |
 | PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.parameters_reference}}document-normalizer-task-settings/page-size.html) |
 | QuadrilateralDetectionModes | string | Optional | Sets the value for parameter [QuadrilateralDetectionModes]({{site.parameters_reference}}document-normalizer-task-settings/quadrilateral-detection-modes.html) |
-| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.parameters_reference}}document-normalizer-task-settings/section-image-parameter-array.html) |
-| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.parameters_reference}}document-normalizer-task-settings/start-section.html) |
-| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.parameters_reference}}document-normalizer-task-settings/terminate-setting.html) |
+| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.parameters_reference}}shared-parameter/section-image-parameter-array.html) |
+| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.parameters_reference}}shared-parameter/start-section.html) |
+| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.parameters_reference}}shared-parameter/terminate-setting.html) |
 | BaseDocumentNormalizerTaskSettingName | string | Optional | Sets the value for parameter [BaseDocumentNormalizerTaskSettingName]({{site.parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) |
 
 Here is a sample:

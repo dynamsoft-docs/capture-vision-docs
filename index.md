@@ -17,7 +17,7 @@ needAutoGenerateSidebar: true
     - [Barcode Localization]({{site.architecture}}image-processing/barcode-localization.html)
     - [Barcode Decoding]({{site.architecture}}image-processing/barcode-decoding.html)
     - [TextLine Localization]({{site.architecture}}image-processing/textline-localization.html)
-    - [TextLine Recognition]({{site.architecture}}image-processing/textline-recogintion.html)
+    - [TextLine Recognition]({{site.architecture}}image-processing/textline-recognition.html)
     - [Document Detection]({{site.architecture}}image-processing/document-detection.html)
     - [Document Normalization]({{site.architecture}}image-processing/document-normalization.html)
   - [Semantic Processing]({{site.architecture}}semantic-processing.html)

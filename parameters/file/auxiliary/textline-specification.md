@@ -38,7 +38,7 @@ If the number **first** text line is not in the area, only the **third** and **f
 
 **Select CharacterModel**
 
-Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](character-model-array.md) page for how to configure the models.
+Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](character-model.md) page for how to configure the models.
 
 **Set Targeting Text Lines**
 
