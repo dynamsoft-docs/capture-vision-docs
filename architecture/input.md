@@ -75,7 +75,6 @@ captureVisionRouter.setInput(cameraEnhancer);
 CaptureVisionRouter router = new CaptureVisionRouter();
 CameraView cameraView = findViewById(R.id.dce_camera_view);
 CameraEnhancer dce = new CameraEnhancer(cameraView, activity);
-
 router.setInput(dce);
 ```
 >
