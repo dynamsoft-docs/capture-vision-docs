@@ -44,7 +44,7 @@ jobs:
           server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
           username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
-          port: 7500 
+          port: 21 
           local-dir: /home/ubuntu/DCVDocCore/_site/
           server-dir: /www.dynamsoft.com/capture-vision/docs/core/
 
