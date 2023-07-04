@@ -38,7 +38,7 @@ jobs:
           cd DCVDocCore && bundle exec jekyll build --incremental
 
 
-      - name: Sync files to Test Env
+      - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
