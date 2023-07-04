@@ -5,34 +5,39 @@ description: The parameter TextDetectionMode of Dynamsoft Capture Vision is for 
 keywords: TextDetectionMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/text-detection-mode.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/text-detection-mode.html
 ---
 
 
 # TextDetectionMode
 
-TextDetectionMode determines how to detect the text area. For tasks like barcode reading or border detection, the text part is not important; while for the task of text recognition, the results of detected text zone are mandatory.
+Parameter `TextDetectionMode` determines how to detect the text area. For tasks like barcode reading or border detection, the text part is not important; while for the task of text recognition, the results of detected text zone are mandatory.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
-    "TextDetectionMode":{
-        "Mode": "TDM_WORD",
+    "TextDetectionMode":
+    {
+        "Mode": "TTDM_WORD",
         "Direction": "HORIZONTAL",
-        "CharHeightRange": [1,1000,1],
-        "MaxSpacingInALine": 10
+        "CharHeightRange": [1,1000,1]
     }
 }
 ```
 
 ## Parameter Summary
-Parameter TextDetectionMode consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+
+Parameter `TextDetectionMode` consist of a group of text detection mode objects. Each text detection mode object includes a candidate mode and a series of mode arguments. The mode arguments of the text detection mode object is shown as follow:
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -45,9 +50,10 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>TDM_WORD
-            <br>TDM_LINE
-            <br>TDM_LAYOUT
+        <td><b>Candidate Mode List</b><br>TTDM_WORD
+            <br>TTDM_LINE
+            <br>TTDM_LAYOUT
+            <br>TTDM_SKIP
         </td>
     </tr>
     <tr>
@@ -100,7 +106,7 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">MaxSpacingInALine<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top">MaxSpacingInALine<br>(Optional)</td>
         <td><b>Description</b><br>Sets the maximum spacing between characters treated as one line.
         </td>
     </tr>
@@ -109,15 +115,40 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0, 0x7fffffff]
+        <td><b>Range</b><br>[-1, 0x7fffffff]
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>0
+        <td><b>Default Value</b><br>-1
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>TDM_LINE
+        <td><b>Valid For</b><br>TTDM_LINE
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>-1: means automatically set by the library.<br>It is a percentage value relative to the average letter height of each line.<br>All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the sensitivity of text detection.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[1, 9]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>For barcode decoding: 3<br>For label recognizing: 7<br>For document scanning: 7
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
         </td>
     </tr>
     <tr>
@@ -164,29 +195,66 @@ Parameter TextDetectionMode consists of one or more of the following modes, each
     </tr>
 </table>
 
-The default settings of TextDetectionMode is:
+### Default Setting
+
+#### For Barcode Decoding
 
 ```json
 {
-    
+    "TextDetectionMode" : 
+    {
+        "Mode" : "TTDM_SKIP"
+    }   
 }
 ```
 
+#### For Label Recognizing
+
+```json
+{
+    "TextDetectionMode" : 
+    {
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "MaxSpacingInALine" : -1,
+        "Mode" : "TTDM_LINE"
+    }
+}
+```
+
+#### For Document Scanning
+
+```json
+{
+    "TextDetectionMode" : 
+    {
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "Mode" : "TTDM_WORD"
+    }
+}
+```
 
 ## Candidate Modes Introduction
 
-### TDM_WORD
+### TTDM_WORD
 
+Find the text area based on the "word" objects. It is the fastest text detection mode but has the lowest accuracy.
 
+### TTDM_LINE
 
-### TDM_LINE
+Find the text area based on the "text line" objects. This mode has higher accuracy than the `TTDM_WORD`. It is currently implemented as the default mode for text line recognizing.
 
+### TTDM_LAYOUT
 
-
-### TDM_LAYOUT
-
-
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+Find the text area based on the layout. A mode with even higher accuracy than the `TTDM_LINE`. Not supported yet.

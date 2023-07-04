@@ -98,7 +98,7 @@ BarcodeFormatSpecification is able to set configurations for specified barcode f
 
 **Select target barcode format**
 
-Select `BarcodeFormatIds` for barcode by specifying the name of the format. View [`All supported barcode types`](character-model-array.md) page for more information.
+Select `BarcodeFormatIds` for barcode by specifying the name of the format. View enumeration [BarcodeFormats](../../../enums/barcode-reader/barcode-format.md) for all supported barcode formats.
 
 **Set special configurations for target format**
 

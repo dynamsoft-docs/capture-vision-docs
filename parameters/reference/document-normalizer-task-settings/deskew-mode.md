@@ -5,11 +5,15 @@ Description: The parameter DeskewMode of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/deskew-mode.html
 ---
 
 # DeskewMode
 
-DeskewMode specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
+Parameter `DeskewMode` specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
+
+## Example
 
 ```json
 {
@@ -21,13 +25,17 @@ DeskewMode specifies the method in which the deskew process way used to apply th
 }
 ```
 
-DeskewMode is defined with a object that contains two child parameters, `Mode` and `ContentDirection`.
+## Parameter Summary
+
+DeskewMode is defined with a object that contains two mode arguments, `Mode` and `ContentDirection`.
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -73,8 +81,22 @@ DeskewMode is defined with a object that contains two child parameters, `Mode` a
     </tr>
 </table>
 
-## Mode Explanation
+### Default Setting
+
+If the `DeskewMode` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "DeskewMode" : 
+    {
+        "ContentDirection" : 0,
+        "Mode" : "DM_PERSPECTIVE_CORRECTION"
+    }
+}
+```
+
+## Candidate Modes Introduction
 
 ### DM_PERSPECTIVE_CORRECTION
 
-Deskew the document by applying perspective correction process. This mode has the following arguments for further customizing.
+Deskew the document by applying perspective correction process.

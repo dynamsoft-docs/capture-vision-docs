@@ -5,11 +5,15 @@ Description: The parameter ConrnerAngleRangeArray of Dynamsoft Document Normaliz
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-range-array.html
 ---
 
 # ConrnerAngleRangeArray
 
-`ConrnerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
+Parameter `ConrnerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
+
+## Example
 
 ```json
 {
@@ -23,7 +27,11 @@ noTitleIndex: true
 }
 ```
 
+## Parameter Summary
+
 `ConrnerAngleRangeArray` consist one or more angle range objects. Each object contains a maximum and a minimum value of the angle.
+
+### Child Parameters
 
 <table style = "text-align:left">
     <thead>
@@ -70,3 +78,19 @@ noTitleIndex: true
         </td>
     </tr>
 </table>
+
+### Default Setting
+
+If the `CornerAngleRangeArray` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "CornerAngleRangeArray" : 
+    [
+        {
+            "MaxValue" : 110,
+            "MinValue" : 70
+        }
+    ]
+}
+```

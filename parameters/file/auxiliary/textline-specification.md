@@ -38,7 +38,7 @@ If the number **first** text line is not in the area, only the **third** and **f
 
 **Select CharacterModel**
 
-Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](character-model-array.md) page for how to configure the models.
+Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](character-model.md) page for how to configure the models.
 
 **Set Targeting Text Lines**
 
@@ -70,7 +70,7 @@ If your set the `ApplicableTextLineNumbers` as "1-8", the text line from 1 to 6 
 
 **Configure ImageProcessing Modes**
 
-`GrayscaleEnhancementModes` enhance the quality of the gray-scale image.
+`GrayscaleEnhancementModes` enhance the quality of the grayscale image.
 
 `BinarizationModes` configurations finally reflect in the quality of the binary image. It determines how the charaters are presented on the text areas before they recognized by the library. The higher quality of the binary image, the higher read rate and accuracy of the character recognition result.
 

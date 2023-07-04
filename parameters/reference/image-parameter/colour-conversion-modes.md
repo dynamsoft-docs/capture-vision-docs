@@ -5,15 +5,17 @@ description: The parameter ColourConversionModes of Dynamsoft Capture Vision is 
 keywords: ColourConversionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/colour-conversion-modes.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/colour-conversion-modes.html
 ---
 
 
 # ColourConversionModes
 
-ColourConversionModes is a parameter for setting the mode for converting a colour image to a grayscale image. It consists of one or more ColourConversionMode items and each item has its own arguments.
+Parameter `ColourConversionModes` is a parameter for setting the mode for converting a colour image to a grayscale image. It consists of one or more `ColourConversionMode` items and each item has its own arguments.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "ColourConversionModes": [
@@ -24,15 +26,17 @@ ColourConversionModes is a parameter for setting the mode for converting a colou
 }
 ```
 
-
 ## Parameter Summary
-Parameter ColourConversionModes consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
+
+Parameter `ColourConversionModes` consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of mode arguments. The mode arguments of the colour conversion mode object is shown as follow:
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -127,11 +131,11 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>“H_CHANNEL”,“S_CHANNEL”,“V_CHANNEL”
+        <td><b>Range</b><br>"H_CHANNEL","S_CHANNEL","V_CHANNEL"
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>“H_CHANNEL”
+        <td><b>Default Value</b><br>"H_CHANNEL"
         </td>
     </tr>
     <tr>
@@ -182,29 +186,24 @@ Parameter ColourConversionModes consist of a group of colour conversion mode obj
     </tr>
 </table>
 
-The default settings of ColourConversionModes is:
+### Default Setting
+
+If the `ColourConversionModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
-"BinarizationModes" : [
-         {
-            "Mode" : "CICM_GENERAL",
-            "RedChannelWeight" : -1,
+{
+    "ColourConversionModes" : 
+    [
+        {
             "BlueChannelWeight" : -1,
             "GreenChannelWeight" : -1,
-            "LibraryFileName" : "",
-            "LibraryParameters" : ""
-         }
-      ]
+            "Mode" : "CICM_GENERAL",
+            "RedChannelWeight" : -1,
+            "ReferChannel" : "H_CHANNEL"
+        }
+    ]
+}
 ```
-
-
-<!--
-“CICM_SKIP”
-“CICM_GENERAL”
-“CICM_HSV”
--->
-
-
 
 ## Candidate Modes Introduction
 
@@ -212,24 +211,20 @@ The default settings of ColourConversionModes is:
 
 Converts a colour image to a grayscale image using the general RGB colour model.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [RedChannelWeight]()
-- [BlueChannelWeight]()
-- [GreenChannelWeight]()
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+* RedChannelWeight
+* BlueChannelWeight
+* GreenChannelWeight
+* LibraryFileName
+* LibraryParameters
 
 ### CICM_HSV
 
 Converts a colour image to a grayscale image using the HSV colour model.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [ReferChannel]()
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+* ReferChannel
+* LibraryFileName
+* LibraryParameters

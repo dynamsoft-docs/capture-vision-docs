@@ -5,18 +5,21 @@ description: The parameter ScaleUpModes of Dynamsoft Capture Vision is for contr
 keywords: ScaleUpModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/scale-up-modes.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/scale-up-modes.html
 ---
 
 
 # ScaleUpModes
 
-ScaleUpModes is for controlling the scale-up process when targets in the image are too small.
+Parameter `ScaleUpModes` is for controlling the scale-up process when targets in the image are too small.
 
-**JSON Parameter Example**
+## Example
+
 ```json
 {
-    "ScaleUpModes": [
+    "ScaleUpModes": 
+    [
         {
             "Mode": "SUM_LINEAR_INTERPOLATION", 
             "ModuleSizeThreshold": 4,
@@ -37,13 +40,16 @@ ScaleUpModes is for controlling the scale-up process when targets in the image a
 ```
 
 ## Parameter Summary
-Parameter ScaleUpModes consists of one or more of the following modes, each mode representing a different scale up algorithm:
+
+Parameter `ScaleUpModes` consist of a group of scale up mode objects. Each scale up mode object includes a candidate mode and a series of mode arguments. The mode arguments of the scale up mode object is shown as follow:
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -234,22 +240,30 @@ Parameter ScaleUpModes consists of one or more of the following modes, each mode
     </tr>
 </table>
 
-The default settings of ScaleUpModes is:
+### Default Setting
+
+If the `ScaleUpModes` is not configured in your template file, the following setting will be used as the default setting.
 
 ```json
 {
-    "ScaleUpModes" : [
-         {
-            "Mode" : "SUM_AUTO"
-         }
-      ]
+    "ScaleUpModes" : 
+    [
+        {
+            "AcuteAngleWithXThreshold" : -1,
+            "LetterHeightThreshold" : 0,
+            "Mode" : "SUM_AUTO",
+            "ModuleSizeThreshold" : 0,
+            "TargetLetterHeight" : 0,
+            "TargetModuleSize" : 0
+        }
+    ]
 }
 ```
-
 
 ## Candidate Modes Introduction
 
 ### SUM_LINEAR_INTERPOLATION
+
 Scales up using the linear interpolation method. This mode has the following arguments for further customizing:
 
 - AcuteAngleWithXThreshold
@@ -260,8 +274,8 @@ Scales up using the linear interpolation method. This mode has the following arg
 - LibraryFileName
 - LibraryParameters
 
-
 ### SUM_NEAREST_NEIGHBOUR_INTERPOLATION
+
 Scales up using the nearest neighbour method. This mode has the following arguments for further customizing:
 
 - AcuteAngleWithXThreshold
@@ -272,12 +286,6 @@ Scales up using the nearest neighbour method. This mode has the following argume
 - LibraryFileName
 - LibraryParameters
 
-
 ### SUM_AUTO
+
 Lets the library choose a mode automatically.
-
-
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 

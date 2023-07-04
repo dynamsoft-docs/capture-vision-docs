@@ -5,11 +5,15 @@ Description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Nor
 Keywords: Quadrilateral detection
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/quadrilateral-detection-modes.html
 ---
 
 # QuadrilateralDetectionModes
 
-`QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
+Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
+
+## Example
 
 ```json
 {
@@ -21,13 +25,17 @@ noTitleIndex: true
 }
 ```
 
-`QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
+## Parameter Summary
+
+`QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other mode arguments.
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -40,7 +48,7 @@ noTitleIndex: true
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br><br><a href = "#dmperspectivecorrection">QDM_GENERAL</a>
+        <td><b>Candidate Mode List</b><br><a href = "#qdm_general">QDM_GENERAL</a>
         </td>
     </tr>
     <tr>
@@ -49,7 +57,22 @@ noTitleIndex: true
     </tr>
 </table>
 
-## Modes Paraphrase
+### Default Setting
+
+If the `QuadrilateralDetectionModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "QuadrilateralDetectionModes" : 
+    [
+        {
+            "Mode" : "QDM_GENERAL"
+        }
+    ]
+}
+```
+
+## Candidate Modes Introduction
 
 ### QDM_GENERAL
 

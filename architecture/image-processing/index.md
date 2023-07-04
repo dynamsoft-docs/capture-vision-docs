@@ -8,7 +8,7 @@ noTitleIndex: false
 permalink: /architecture/image-processing/index.html
 ---
 
-> *Go back to [DCV Architecture](../index.md)*
+> *Go to [DCV Architecture](../index.md)*
 
 # Image-Processing Tasks
 
@@ -89,22 +89,22 @@ flowchart LR;
 
 Each of the 7 sections mentioned in ["Divide Tasks into Sections"](#divide-tasks-into-sections) can be further divided into many stages as shown below:
 
-> Stages shared by "Barcode Localization", "Text-line Localization" and "Document Detection" are put together for the pseudo type "Shared Partial Section". Read more on [Shared Detection](shared-detection.md)
+> Stages shared by "Barcode Localization", "Text-line Localization" and "Document Detection" are put together for the pseudo type "Shared Detection Section". Read more on [Shared Detection](shared-detection.md)
 
-| Section Type             | Stages                                                                                                                                                                                                                                                                                                                                   |
-| :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Region Pre-detection      | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
-| *Shared Partial Section* | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
-| Barcode Localization     | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES                                                                                                                                                                                                                                          |
-| Text-line Localization    | IRUT_LOCALIZED_TEXT_LINES                                                                                                                                                                                                                                                                                                                |
-| Document Detection       | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS                                                                                                                                                                                                                  |
-| Barcode Decoding         | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES                                                                                                                   |
-| Text-line Recognition     | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
-| Document Normalization   | IRUT_NORMALIZED_IMAGE                                                                                                                                                                                                                                                                                                                    |
+| Section Type | Stages |
+| :----------- | :----- |
+| Region Pre-detection | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS |
+| Shared Detection Section | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
+| Barcode Localization | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES |
+| Text-line Localization | IRUT_LOCALIZED_TEXT_LINES |
+| Document Detection | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS |
+| Barcode Decoding | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES |
+| Text-line Recognition | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES |
+| Document Normalization | IRUT_NORMALIZED_IMAGES |
 
 ***Table 3: Sections and Stages***
 
-In total, there are 27 unique stages:
+In total, there are 27 unique stages which are identified by the types of results they generate:
 
 - IRUT_COLOUR_IMAGE
 - IRUT_SCALED_DOWN_COLOUR_IMAGE
@@ -132,13 +132,13 @@ In total, there are 27 unique stages:
 - IRUT_DETECTED_QUADS
 - IRUT_LOCALIZED_TEXT_LINES
 - IRUT_RECOGNIZED_TEXT_LINES
-- IRUT_NORMALIZED_IMAGE
+- IRUT_NORMALIZED_IMAGES
 
-These stages are the minimal processing units that can be manipulated. The results from these stages are called [intermediate results](intermediate-result.md). For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
+These stages are the minimal processing units that can be manipulated and these results are called intermediate results. For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](../output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
 
 ## Incomplete Task
 
 As mentioned in **Table 2** above, a task is usually complete, which means it consists of three consecutive sections. However, it is not always the case. 
 
-1. An incomplete task can be a halfway task which means it starts from step two or even step three and consists of only two or even just one section. Read more about [StartSection](../../parameters/reference/start-section.md).
-2. An incomplete task can be a premature task which means it ends early and doesn't produce the final results. Unlike a halfway task which must start at the beginning of a section, a premature task may end at any stage of a section. Read more about [TerminateSetting](../../parameters/reference/terminate-settings.md).
+1. An incomplete task can be a halfway task which means it starts from step two or even step three and consists of only two or even just one section. Read more about [StartSection](../../parameters/reference/shared-parameter/start-section.md).
+2. An incomplete task can be a premature task which means it ends early and doesn't produce the final results. Unlike a halfway task which must start at the beginning of a section, a premature task may end at any stage of a section. Read more about [TerminateSetting](../../parameters/reference/shared-parameter/terminate-setting.md).

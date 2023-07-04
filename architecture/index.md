@@ -24,13 +24,11 @@ In the [introduction](../introduction/index.md), we have introduced the followin
 
 The diagram below shows the architecture of Dynamsoft Capture Vision (DCV) and how these functional products fit into it:
 
-> There are a few other functional products in the diagram but we can ignore them for now.
-
 ![DCV Architecture](assets/dcv-architecture.png)
 
 ***Diagram 1: DCV Architecture***
 
-As shown in diagram 1, all functional products are *passive* in the architecture. In other words, they are either told to perform a task or given the result of another task, both of which are done by the *active* part of the architecture known as **Capture Vision Router (CVR)**.
+As shown in diagram 1, all functional products are ***passive*** in the architecture. In other words, they are either told to perform a task or given the result of another task, both of which are done by the ***active*** part of the architecture known as **Capture Vision Router (CVR)**.
 
 ## Capture Vision Router
 
@@ -104,9 +102,9 @@ Let's take the following sample image as an example
 
 The requirements are:
 
-1. Accurately find the boundary of the patient **form** and normalize it. This is a *DDN* task.
-2. Read the barcode **on the form** to get the patient ID. This is a *DBR* task.
-3. Read the text **above the barcode** to determine whether the patient has tested positive for COVID-19. This is a *DLR* task.
+1. Accurately find the boundary of the patient **form** and normalize it. This is a ***DDN*** task.
+2. Read the barcode **on the form** to get the patient ID. This is a ***DBR*** task.
+3. Read the text **above the barcode** to determine whether the patient has tested positive for COVID-19. This is a ***DLR*** task.
 
 Here is a simple demonstration of the coordination:
 
@@ -122,7 +120,7 @@ The interconnectivity of the different functional products in the DCV architectu
 
 We talked about how CVR [dispatches results to listening objects](#dispatch-results-to-listening-objects), where we introduced intermediate results which are produced at multiple check-points, known as stages, of a task. Another responsibility of CVR that we touched upon is [coordinating image-processing tasks](#coordinate-image-processing-tasks), where we learned that multiple tasks can be configured in a single workflow.
 
-Suppose a workflow defines three parallel tasks, namely *DDN*, *DBR* and *DLR* tasks, which execute on the same image or the same area on the image (known as [target region of interest](../parameters/file/target-roi-definition/location/index.md). All these three tasks analyze the pixels of the image to find results, and they share similar analysis "stages". Under certain conditions, they can share the results from these analysis stages so that one functional product (let's say *DBR*) can use the intermediate results produced by another functional product (let's say *DDN*), saving time and resources.
+Suppose a workflow defines three parallel tasks, namely ***DDN***, ***DBR*** and ***DLR*** tasks, which execute on the same image or the same area on the image (known as the [target region of interest](../parameters/reference/target-roi-def/location.md). All these three tasks analyze the pixels of the image to find results, and they share similar analysis "stages". Under certain conditions, they can share the results from these analysis stages so that one functional product (let's say ***DBR***) can use the intermediate results produced by another functional product (let's say ***DDN***), saving time and resources.
 
 > Read more on [*image-processing stages*](image-processing/index.md#divide-sections-into-stages).
 
@@ -132,7 +130,7 @@ The following diagram is a simple demonstration of the idea:
 
 ***Diagram 4: Intermediate Results Sharing***
 
-The diagram above shows that all three tasks share stage 1 while *DDN* & *DBR* share stage 2. When the workflow starts running, the following may happen:
+The diagram above shows that all three tasks share stage 1 while ***DDN*** & ***DBR*** also share stage 2. When the workflow starts running, the following may happen:
 
 1. The DDN task performs operations for all 3 stages;
 2. The DBR task directly uses results from the DDN task for stages 1 & 2 and only needs to perform an operation for stage 3;
@@ -140,7 +138,7 @@ The diagram above shows that all three tasks share stage 1 while *DDN* & *DBR* s
 
 > NOTE
 > 1. Usually there are far more than 3 stages per task.
-> 2. In real time, it is also likely for an early task to use the intermediate result of a later task.
+> 2. In real time, it is also likely for a slow task that starts early to use the intermediate result of a later task which is fast.
 
 #### **Parallel Image-Processing**
 
@@ -158,7 +156,7 @@ Another benefit of the DCV Architecture is that the outward interface is very si
 | Job 2     | Coordinate Image-Processing Tasks.     | `InitSettings()` accepts a parameter file which defines one or multiple workflows and `StartCapturing()` specifies one workflow to use. |
 | Job 3     | Dispatch Results to Listening Objects. | `AddResultReceiver()` accepts one or multiple listening objects.                                                                       |
 
-Job 1 and 3 serve as "input" and "output" and are straightforward. In different applications, the real difference will be in job 2 where different arrangements of tasks mean applications may do completely different things. For some usage scenarios, the workflows are usually consistent, which allows settings to be predefined as ["CaptureVisionTemplates"](../parameters/file/capture-vision-template.md). We call these scenarios **packable scenarios**. Customers can specify one of these templates to use in their applications, simplifying the development work needed.
+Job 1 and 3 serve as "input" and "output" and are straightforward. In actual applications, the real difference will be in job 2 where different arrangements of tasks mean applications may do completely different things. For some usage scenarios, the workflows are usually consistent, which allows settings to be predefined as ["CaptureVisionTemplates"](../parameters/file/capture-vision-template.md). We call these scenarios **packable scenarios**. Customers can specify one of these templates to use in their applications, simplifying the development work needed. Read more on [common scenarios](../introduction/index.md#simplicity-with-packable-scenarios).
 
 ### Bidirectional Interactivity with Intermediate Results
 
@@ -178,7 +176,7 @@ Intermediate results are generated throughout the execution of a task and CVR ma
 
 #### **Elective intervention of the processing workflow**
 
-The DCV architecture allows external programs to intervene in image-processing. The steps are
+The DCV architecture allows external programs to intervene in the image processing. The steps are
 
 1. A specific type of intermediate result is generated;
 2. CVR dispatches the result to a registered listener A and pauses image-processing;
@@ -186,7 +184,7 @@ The DCV architecture allows external programs to intervene in image-processing. 
 4. The code examines the result, makes some changes, and sends it back to CVR;
 5. CVR injects the updated data back and resumes image-processing.
   
-The following diagram is a simple demonstration of this process
+The following diagram is a simple demonstration of this process:
 
 ![Intermediate-Result-Intervention](assets/Intermediate-Result-Intervention.png)
 

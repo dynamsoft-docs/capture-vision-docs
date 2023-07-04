@@ -5,11 +5,15 @@ Description: The parameter TerminateSetting defines the terminate stages of the 
 Keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/shared-parameter/terminate-setting.html
 ---
 
 # TerminateSetting
 
 Parameter `TerminateSetting` defines the terminate stages of the task. For each sections in an alogrithm task, you can define only one terminate stage.
+
+## Example
 
 ```json
 "TerminateSetting":
@@ -19,7 +23,11 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
 }
 ```
 
-## As a BarcodeReaderTaskSetting Parameter
+## Parameter Summary
+
+Parameter `TerminateSetting` is available for  `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting` and `DocumentNormalizerTaskSetting`. It has different parameter range and default value under different parent object.
+
+### As a BarcodeReaderTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -57,7 +65,7 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
     </tbody>
 </table>
 
-## As a DocumentNormalizerTaskSetting Parameter
+### As a DocumentNormalizerTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -93,7 +101,7 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
     </tr>
 </table>
 
-## As a LabelRecognizerTaskSetting Parameter
+### As a LabelRecognizerTaskSetting Parameter
 
 <table style = "text-align:left">
     <thead>
@@ -137,6 +145,6 @@ Parameter `TerminateSetting` defines the terminate stages of the task. For each 
 | ST_BARCODE_LOCALIZATION | IRUT_COLOUR_IMAGE<br>IRUT_SCALED_DOWN_COLOUR_IMAGE<br>IRUT_GRAYSCALE_IMAGE<br>IRUT_TRANSFORMED_GRAYSCALE_IMAGE<br>IRUT_ENHANCED_GRAYSCALE_IMAGE<br>IRUT_BINARY_IMAGE<br>IRUT_TEXTURE_DETECTION_RESULT<br>IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE<br>IRUT_TEXTURE_REMOVED_BINARY_IMAGE<br>IRUT_TEXT_ZONES<br>IRUT_TEXT_REMOVED_BINARY_IMAGE <br>IRUT_CONTOURS<br>IRUT_LINE_SEGMENTS<br>IRUT_CANDIDATE_BARCODE_ZONES<br>IRUT_LOCALIZED_BARCODES |
 | ST_BARCODE_DECODING | IRUT_COLOUR_IMAGE<br>IRUT_GRAYSCALE_IMAGE<br>IRUT_TRANSFORMED_GRAYSCALE_IMAGE<br>IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE<br>IRUT_COMPLEMENTED_BARCODE_IMAGE<br>IRUT_SCALED_UP_BARCODE_IMAGE<br>IRUT_DECODED_BARCODES |
 | ST_DOCUMENT_DETECTION | IRUT_COLOUR_IMAGE<br>IRUT_SCALED_DOWN_COLOUR_IMAGE<br>IRUT_GRAYSCALE_IMAGE<br>IRUT_TRANSFORMED_GRAYSCALE_IMAGE<br>IRUT_ENHANCED_GRAYSCALE_IMAGE<br>IRUT_BINARY_IMAGE<br>IRUT_TEXTURE_DETECTION_RESULT<br>IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE<br>IRUT_TEXTURE_REMOVED_BINARY_IMAGE<br>IRUT_TEXT_ZONES<br>IRUT_TEXT_REMOVED_BINARY_IMAGE<br>IRUT_CONTOURS<br>IRUT_LINE_SEGMENTS<br>IRUT_LONG_LINES<br>IRUT_CORNERS<br>IRUT_CANDIDATE_QUAD_EDGES<br>IRUT_DETECTED_QUADS |
-| ST_DOCUMENT_NORMALIZATION | IRUT_NORMALIZED_IMAGE |
+| ST_DOCUMENT_NORMALIZATION | IRUT_NORMALIZED_IMAGES |
 | ST_TEXT_LINE_LOCALIZATION | IRUT_COLOUR_IMAGE<br>IRUT_SCALED_DOWN_COLOUR_IMAGE<br>IRUT_GRAYSCALE_IMAGE<br>IRUT_TRANSFORMED_GRAYSCALE_IMAGE<br>IRUT_ENHANCED_GRAYSCALE_IMAGE<br>IRUT_BINARY_IMAGE<br>IRUT_TEXTURE_DETECTION_RESULT<br>IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE<br>IRUT_TEXTURE_REMOVED_BINARY_IMAGE<br>IRUT_TEXT_ZONES<br>IRUT_TEXT_REMOVED_BINARY_IMAGE<br>IRUT_LOCALIZED_TEXT_LINES |
 | ST_TEXT_LINE_RECOGNITION | IRUT_COLOUR_IMAGE<br>IRUT_GRAYSCALE_IMAGE<br>IRUT_TRANSFORMED_GRAYSCALE_IMAGE<br>IRUT_RECOGNIZED_TEXT_LINES |

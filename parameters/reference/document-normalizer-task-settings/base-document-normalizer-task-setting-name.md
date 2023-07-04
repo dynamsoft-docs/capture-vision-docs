@@ -2,20 +2,26 @@
 layout: default-layout
 Title: BaseDocumentNormalizerTaskSettingName - Dynamsoft Document Normalizer Parameters
 Description: The parameter BaseDocumentNormalizerTaskSettingName of Dynamsoft Document Normalizer defines the base object of the current DocumentNormalizerTaskSetting.
-Keywords:
+Keywords: Base document normalizer task setting name
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/base-document-normalizer-task-setting-name.html
 ---
 
 # BaseDocumentNormalizerTaskSettingName
 
-Specify a `DocumentNormalizerTaskSetting` object name. The current object will inherit the parameter settings of the specified object.
+Parameter `BaseDocumentNormalizerTaskSettingName` represents the name of another `DocumentNormalizerTaskSetting` object. It is used to inherit the parameters defined in its parent `DocumentNormalizerTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+
+## Example
 
 ```json
 {
     "BaseDocumentNormalizerTaskSettingName": "DD_0"
 }
 ```
+
+## Parameter Summary
 
 | BaseDocumentNormalizerTaskSettingName Parameter Summary |
 | :------------------------------------------- |

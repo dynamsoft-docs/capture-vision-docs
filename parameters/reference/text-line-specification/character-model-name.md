@@ -5,17 +5,23 @@ Description: The parameter CharacterModelName of Dynamsoft Label Recognizer defi
 Keywords: Character model
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/text-line-specification/character-model-name.html
 ---
 
 # CharacterModelName
 
-`CharacterModelName` defines the range of the character height.
+Parameter `CharacterModelName` defines the name of the character model.
+
+## Example
 
 ```json
 {
     "CharacterModelName": "NumberLetter"
 }
 ```
+
+## Parameter Summary
 
 | CharacterModelName Parameter Summary |
 | :----------------------------------- |

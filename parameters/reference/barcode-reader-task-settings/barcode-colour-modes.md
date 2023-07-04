@@ -1,11 +1,43 @@
+---
+layout: default-layout
+Title: BarcodeColourModes - Dynamsoft Barcode Reader Parameters
+Description: The parameter BarcodeColourModes of Dynamsoft Barcode Reader defines the barcode colour modes.
+Keywords: Barcode colour modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/barcode-colour-modes.html
+---
 
-## BarcodeColourModes
+# BarcodeColourModes
+
+Parameter `BarcodeColourModes` defines the barcode colour modes. It consists of one or more modes, with each representing a different colour environment.
+
+## Example
+
+```json
+"BarcodeColourModes" : 
+[
+    {
+        "LightReflection" : 1,
+        "Mode" : "BICM_DARK_ON_LIGHT"
+    }
+]
+```
+
+## Parameter Summary
+
+Parameter `BarcodeColourModes` consist of a group of barcode colour mode objects. Each barcode colour mode object includes a candidate mode and a series of auxiliary mode arguments.
+
+### Mode Arguments
+
+The mode arguments of the barcode colour mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -96,3 +128,51 @@
         </td>
     </tr>
 </table>
+
+### Default Setting
+
+If the `BarcodeColourModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "BarcodeColourModes" : null
+}
+```
+
+## Candidate Modes Introduction
+
+### BICM_DARK_ON_LIGHT
+
+The target barcode is a dark item on a light background. This mode has the following arguments for further customizing.
+
+**Available Mode Arguments:**
+
+- LightReflection
+- LibraryFileName
+- LibraryParameters
+
+### BICM_DARK_ON_LIGHT_DARK_SURROUNDING
+
+The target barcode is a dark item on a light background surrounded by dark. This mode has the following arguments for further customizing.
+
+**Available Mode Arguments:**
+
+- LightReflection
+- LibraryFileName
+- LibraryParameters
+
+### BICM_LIGHT_ON_DARK
+
+The target barcode is a light item on a dark background. Not supported yet.
+
+### BICM_DARK_ON_DARK
+
+The target barcode is a dark item on a dark background. Not supported yet.
+
+### BICM_LIGHT_ON_LIGHT
+
+The target barcode is a light item on a light background. Not supported yet.
+
+### BICM_DARK_LIGHT_MIXED
+
+The target barcode is on background which is mixed by dark and light. Not supported yet

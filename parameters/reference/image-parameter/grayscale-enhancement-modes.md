@@ -5,15 +5,17 @@ description: The parameter GrayscaleEnhancementModes of Dynamsoft Capture Vision
 keywords: GrayscaleEnhancementModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/grayscale-enhancement-modes.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/grayscale-enhancement-modes.html
 ---
 
 
 # GrayscaleEnhancementModes
 
-GrayscaleEnhancementModes provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
+Parameter `GrayscaleEnhancementModes` provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "GrayscaleEnhancementModes": [
@@ -38,13 +40,16 @@ GrayscaleEnhancementModes provides some image processing methods to enhance the 
 ```
 
 ## Parameter Summary
-Parameter GrayscaleEnhancementModes consists of one or more of the following modes, each mode representing a different preprocessing algorithm:
+
+Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancement mode objects. Each grayscale enhancement mode object includes a candidate mode and a series of mode arguments. The mode arguments of the grayscale enhancement mode object is shown as follow:
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -61,6 +66,7 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
             <br>GEM_GRAY_EQUALIZE
             <br>GEM_GRAY_SMOOTH
             <br>GEM_SHARPEN_SMOOTH
+            <br>GEM_SKIP
         </td>
     </tr>
     <tr>
@@ -218,18 +224,25 @@ Parameter GrayscaleEnhancementModes consists of one or more of the following mod
     </tr>
 </table>
 
-The default settings of GrayscaleEnhancementModes is:
+### Default Setting
+
+If the `GrayscaleEnhancementModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
 {
-    "GrayscaleEnhancementModes": [
+    "GrayscaleEnhancementModes" : 
+    [
         {
-            "Mode": "GEM_GENERAL" 
+            "Mode" : "GEM_GENERAL",
+            "Sensitivity" : -1,
+            "SharpenBlockSizeX" : -1,
+            "SharpenBlockSizeY" : -1,
+            "SmoothBlockSizeX" : -1,
+            "SmoothBlockSizeY" : -1
         }
     ]
 }
 ```
-
 
 ## Candidate Modes Introduction
 
@@ -237,35 +250,30 @@ The default settings of GrayscaleEnhancementModes is:
 
 Takes the un-preprocessed grayscale image for the next stage of operations.
 
-
 ### GEM_GRAY_EQUALIZE
 
 Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast between content and background colour.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [Sensitivity]()
+* Sensitivity
 
 ### GEM_GRAY_SMOOTH
 
 Preprocesses the grayscale image using the gray smoothing algorithm. This mode can be used for for images with noise or texture.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [SmoothBlockSizeX]()
-- [SmoothBlockSizeY]()
+* SmoothBlockSizeX
+* SmoothBlockSizeY
 
 ### GEM_SHARPEN_SMOOTH
 
 Preprocesses the grayscale image using the sharpening and smoothing algorithm. This mode can be used for blurry images.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [SmoothBlockSizeX]()
-- [SmoothBlockSizeY]()
-- [SharpenBlockSizeX]()
-- [SharpenBlockSizeY]()
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+* SmoothBlockSizeX
+* SmoothBlockSizeY
+* SharpenBlockSizeX
+* SharpenBlockSizeY

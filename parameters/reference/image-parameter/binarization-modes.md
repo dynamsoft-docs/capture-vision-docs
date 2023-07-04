@@ -5,15 +5,17 @@ description: The parameter BinarizationModes of Dynamsoft Capture Vision is for 
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/binarization-modes.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/binarization-modes.html
 ---
 
 
 # BinarizationModes 
 
-This parameter helps control the process of binarization, i.e., converting a grayscale image to a binary image. A better binary image greatly helps the following processes. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. BinarizationModes consists of one or more modes, each mode representing a different binarization process.
+Parameter `BinarizationModes` helps control the process of binarization, i.e., converting a grayscale image to a binary image. A better binary image greatly helps the following processes. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. `BinarizationModes` consists of one or more modes, each mode representing a different binarization process.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "BinarizationModes": [
@@ -34,19 +36,21 @@ This parameter helps control the process of binarization, i.e., converting a gra
 }
 ```
 
-
 ## Parameter Summary
-Parameter BinarizationModes consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
+
+Parameter `BinarizationModes` consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of mode arguments. The available mode arguments of the binarization mode object is shown as follow.
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
         </td>
     </tr>
@@ -57,14 +61,11 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
     <tr>
         <td><b>Candidate Mode List</b><br>BM_THRESHOLD
             <br>BM_LOCAL_BLOCK
+            <br>BM_SKIP
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>BM_LOCAL_BLOCK
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">BlockSizeX<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">BlockSizeX<br>(Optional)</td>
         <td><b>Description</b><br>Sets the horizontal block size for the binarization process.
         </td>
     </tr>
@@ -77,15 +78,11 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>0
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">BlockSizeY<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">BlockSizeY<br>(Optional)</td>
         <td><b>Description</b><br>Sets the vertical block size for the binarization process.
         </td>
     </tr>
@@ -98,15 +95,11 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>0
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">EnableFillBinaryVacancy<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">EnableFillBinaryVacancy<br>(Optional)</td>
         <td><b>Description</b><br>Sets whether to enable binary vacancy filling.
         </td>
     </tr>
@@ -119,15 +112,11 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>1
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">ThresholdCompensation<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">ThresholdCompensation<br>(Optional)</td>
         <td><b>Description</b><br>Constant subtracted from the mean or weighted mean used for calculating the threshold. Normally, it is positive but may be zero or negative as well.
         </td>
     </tr>
@@ -140,15 +129,11 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>10
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>BM_LOCAL_BLOCK
         </td>
     </tr>
     <tr>
-            <td rowspan = "5" style="vertical-align:text-top">BinarizationThreshold<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">BinarizationThreshold<br>(Optional)</td>
         <td><b>Description</b><br>Sets the binarization threshold.
         </td>
     </tr>
@@ -161,11 +146,92 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>-1
+        <td><b>Valid For</b><br>BM_THRESHOLD
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>BM_THRESHOLD
+        <td rowspan = "4" style="vertical-align:text-top"><br>MorphOperation(Optional)</td>
+        <td><b>Description</b><br>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>String</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>"Erode", "Dilate", "Open" or "Close"
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeX<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the binarization threshold.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[-1, 1000]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeY<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the binarization threshold.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[-1, 1000]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">MorphShape<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the binarization threshold.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>String</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>"Rectangle", "Cross" or "Ellipse"
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">GrayscaleEnhancementModesIndex<br>(Optional)</td>
+        <td><b>Description</b><br>The index of a specific image preprocessing mode in the GrayscaleEnhancementModes parameter which the current binarization mode is applied to.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[-1, 0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
         </td>
     </tr>
     <tr>
@@ -186,7 +252,7 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>All modes
         </td>
     </tr>
     <tr>
@@ -212,58 +278,126 @@ Parameter BinarizationModes consist of a group of binarization mode objects. Eac
     </tr>
 </table>
 
-The default settings of BinarizationModes is:
+### Default Setting
+
+If the `BinarizationModes` is not configured in your template file, the following settings will be used as the default settings.
+
+#### For Barcode Decoding
 
 ```json
-"BinarizationModes" : [
-         {
+{
+    "BinarizationModes" : 
+    [
+        {
+            "BlockSizeX" : 0,
+            "BlockSizeY" : 0,
+            "EnableFillBinaryVacancy" : 0,
+            "GrayscaleEnhancementModesIndex" : -1,
             "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
+            "MorphShape" : "Rectangle",
+            "ThresholdCompensation" : 10
+        }
+    ]
+}
+```
+
+#### For Label Recognizing
+
+```json
+{
+    "BinarizationModes" : 
+    [
+        {
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
             "EnableFillBinaryVacancy" : 1,
-            "ThresholdCompensation" : 10,
-            "LibraryFileName" : "",
-            "LibraryParameters" : ""
-         }
-      ]
+            "GrayscaleEnhancementModesIndex" : -1,
+            "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
+            "MorphShape" : "Rectangle",
+            "ThresholdCompensation" : 10
+        }
+    ]
+}
 ```
 
-<!-- 
-- [BM_LOCAL_BLOCK](#bm_local_block)
-- [BM_THRESHOLD](#bm_threshold)
-- [BM_SKIP](#bm_skip)
-- BM_AUTO(not support yet)
--->
+#### For Document Normalizing
+
+```json
+{
+    "BinarizationModes" : 
+    [
+        {
+            "BlockSizeX" : 0,
+            "BlockSizeY" : 0,
+            "EnableFillBinaryVacancy" : 0,
+            "GrayscaleEnhancementModesIndex" : -1,
+            "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
+            "MorphShape" : "Rectangle",
+            "ThresholdCompensation" : 10
+        }
+    ]
+}
+```
+
+#### For Text Line Specification
+
+Re-binarize the text line area to support the character segmentation.
+
+```json
+{
+    "BinarizationModes" : 
+    [
+        {
+            "BlockSizeX": 11,
+            "BlockSizeY": 11,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Erode",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+        }
+    ]
+}
+```
 
 ## Candidate Modes Introduction
 
 ### BM_LOCAL_BLOCK
+
 If an image has different lighting conditions in different areas, BM_LOCAL_BLOCK can help. In this case, our algorithm determines the threshold for a pixel based on a small region around it, which makes it more adaptive and gives better results.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [BlockSizeX](#blocksizex)
-- [BlockSizeY](#blocksizey)
-- [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
-- [ThresholdCompensation](#thresholdcompensation)
-- [BinarizationThreshold](#binarizationthreshold)
-- [MorphOperation](#morphoperation)
-- [MorphShape](#morphshape)
-- [MorphOperationKernelSizeX](#morphoperationkernelsizex)
-- [MorphOperationKernelSizeY](#morphoperationkernelsizey)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+* BlockSizeX
+* BlockSizeY
+* EnableFillBinaryVacancy
+* ThresholdCompensation
+* BinarizationThreshold
+* MorphOperation
+* MorphShape
+* MorphOperationKernelSizeX
+* MorphOperationKernelSizeY
+* LibraryFileName
+* LibraryParameters
 
 ### BM_THRESHOLD
+
 Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
-- [BinarizationThreshold](#binarizationthreshold)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
- 
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
-
+* BinarizationThreshold
+* LibraryFileName
+* LibraryParameters

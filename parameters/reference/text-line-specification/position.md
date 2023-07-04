@@ -1,15 +1,19 @@
 ---
 layout: default-layout
-Title: {} - Dynamsoft Label Recognizer Parameters
-Description: The parameter {} of Dynamsoft Label Recognizer defines how to normalize the characters.
+Title: Text Line Area Points - Dynamsoft Label Recognizer Parameters
+Description: The parameter Text Line Area Points of Dynamsoft Label Recognizer defines how to normalize the characters.
 Keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/text-line-specification/position.html
 ---
 
 # Text Line Area Points
 
-Set the position of the text lines with the vertice points. The point coordinates are measured in percentage based on the size of the `TargetROI`.
+Text line area points parameters defines the position of the text lines with the vertices points. The point coordinates are measured in percentage based on the size of the `TargetROI`.
+
+## Example
 
 ```json
 {
@@ -22,46 +26,44 @@ Set the position of the text lines with the vertice points. The point coordinate
 
 Only the text lines that located in this area will be processed.
 
-## FirstPoint
+## Parameter Summary
+
+### FirstPoint
 
 The top-left vertex coordinate of the the text line. The coordinate is measured in percentage.
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | FirstPoint |
-| **Type** | *int Array* |
-| **Range** | Each member of the array should be a int value between 0 to 100. |
-| **Default Value** | *null* |
+| FirstPoint Parameter Summary |
+| :------------------------ |
+| **Type**<br>*int[2]* |
+| **Range**<br>Each member of the array should be a int value between 0 to 100. |
+| **Default Value**<br>*null* |
 
-## SecondPoint
+### SecondPoint
 
 The top-right vertex coordinate of the the text line. The coordinate is measured in percentage.
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | SecondPoint |
-| **Type** | *int Array* |
-| **Range** | Each member of the array should be a int value between 0 to 100. |
-| **Default Value** | *null* |
+| SecondPoint Parameter Summary |
+| :---------------------------- |
+| **Type**<br>*int[2]* |
+| **Range**<br>Each member of the array should be a int value between 0 to 100. |
+| **Default Value**<br>*null* |
 
-## ThirdPoint
+### ThirdPoint
 
 The bottom-right vertex coordinate of the the text line. The coordinate is measured in percentage.
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | ThirdPoint |
-| **Type** | *int Array* |
-| **Range** | Each member of the array should be a int value between 0 to 100. |
-| **Default Value** | *null* |
+| ThirdPoint Parameter Summary |
+| :--------------------------- |
+| **Type**<br>*int[2]* |
+| **Range**<br>Each member of the array should be a int value between 0 to 100. |
+| **Default Value**<br>*null* |
 
-## FourthPoint
+### FourthPoint
 
 The bottom-left vertex coordinate of the the text line. The coordinate is measured in percentage.
 
-|  |  |
-| :------------------- | :------------------------ |
-| Parameter Name | FourthPoint |
-| **Type** | *int Array* |
-| **Range** | Each member of the array should be a int value between 0 to 100. |
-| **Default Value** | *null* |
+| FourthPoint Parameter Summary |
+| :---------------------------- |
+| **Type**<br>*int[2]* |
+| **Range**<br>Each member of the array should be a int value between 0 to 100. |
+| **Default Value**<br>*null* |

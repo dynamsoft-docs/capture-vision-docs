@@ -5,11 +5,15 @@ Description: The parameter BaseTextLineSpecificationName of Dynamsoft Label Reco
 Keywords: Applicable text line numbers
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/text-line-specification/base-text-line-specification-name.html
 ---
 
 # BaseTextLineSpecificationName
 
-Specify a `TextLineSpecification` object name. The current object will inherit the parameter settings of the specified object.
+Parameter `BaseTextLineSpecificationName` represents the name of another `BaseTextLineSpecificationName` object. It is used to inherit the parameters defined in its parent `BaseTextLineSpecificationName` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+
+## Example
 
 ```json
 {
@@ -17,8 +21,11 @@ Specify a `TextLineSpecification` object name. The current object will inherit t
 }
 ```
 
+## Parameter Summary
+
 | BaseTextLineSpecificationName Parameter Summary |
 | :----------------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>One of the existing `TextLineSpecification` object name. |
 | **Default Value**<br>"" |
+| **Remarks**<br>The default value "" means this object don't inherit the settings of another object. |

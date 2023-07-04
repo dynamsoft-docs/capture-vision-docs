@@ -1,11 +1,48 @@
+---
+layout: default-layout
+Title: TextResultOrderModes - Dynamsoft Barcode Reader Parameters
+Description: The parameter TextResultOrderModes of Dynamsoft Barcode Reader defines the order of the returned text results.
+Keywords: Text result order modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/text-result-order-modes.html
+---
 
-## TextResultOrderModes
+# TextResultOrderModes
+
+Parameter `TextResultOrderModes` defines the order of the returned text results.
+
+## Example
+
+```json
+{
+    "TextResultOrderModes" :
+    [
+        {
+            "Mode" : "TROM_CONFIDENCE"
+        },
+        {
+            "Mode" : "TROM_POSITION"
+        },
+        {
+            "Mode" : "TROM_FORMAT"
+        }
+    ]
+}
+```
+
+## Parameter Summary
+
+Parameter `TextResultOrderModes` consist of a group of text result order mode objects. Each text result order mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the text result order mode object is shown as follow:
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -29,3 +66,38 @@
         </td>
     </tr>
 </table>
+
+### Default Setting
+
+If the `TextResultOrderModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "TextResultOrderModes" : 
+    [
+        {
+            "Mode" : "TROM_CONFIDENCE"
+        },
+        {
+            "Mode" : "TROM_POSITION"
+        },
+        {
+            "Mode" : "TROM_FORMAT"
+        }
+    ]
+}
+```
+
+## Candidate Modes Introduction
+
+### TROM_CONFIDENCE
+
+Returns the text results in descending order by confidence.
+
+### TROM_POSITION
+
+Returns the text results in position order, from top to bottom, then left to right.
+
+### TROM_FORMAT
+
+Returns the text results in alphabetical and numerical order by barcode format string

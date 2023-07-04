@@ -5,8 +5,10 @@ description: This article introduces Semantic Processing Section in the Dynamsof
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/image-processing/semantic-processing.html
+permalink: /architecture/semantic-processing.html
 ---
+
+> *Go to [DCV Architecture](index.md)*
 
 # Semantic Processing
 
@@ -25,14 +27,14 @@ The purpose of "Semantic Processing" is to make the recognized text more user fr
 
 ![semantic-processing-sample image](assets/semantic-processing-sample.png)
 
-we can find the MRZ and recognize the following text lines
+we can find the MRZ and recognize the following text lines with a "Recognize-Text-Lines" task:
 
 ```text
 P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<
 L898902C36UTO7408122F1204159ZE184226B<<<<<10
 ```
 
-these lines make no sense to a human eye, so we parse it with "Semantic Processing" and with a bit more code, the result becomes
+these lines don't make much sense to us, so we parse them with a "Semantic Processing" task and with a bit more code, the result becomes something like this:
 
 ```text
 Document Type : PASSPORT (TD-3)

@@ -1,19 +1,21 @@
 ---
 layout: default-layout
-title: RegionPredetectionModes - Dynamsoft Capture Vision Parameters
+title: RegionPredetectionModes * Dynamsoft Capture Vision Parameters
 description: The parameter RegionPredetectionModes of Dynamsoft Capture Vision is for detecting the region of interest(s) automatically.
 keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/region-predetection-modes.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/region-predetection-modes.html
 ---
 
 
 # RegionPredetectionModes
 
-RegionPredetectionModes controls how to find a region of interest (ROI) within the image or frame.
+Parameter `RegionPredetectionModes` controls how to find a region of interest (ROI) within the image or frame.
 
-**JSON Parameter Example**
+## Example
+
 ```json
 {
     "RegionPredetectionModes": [
@@ -35,15 +37,20 @@ RegionPredetectionModes controls how to find a region of interest (ROI) within t
 ```
 
 ## Parameter Summary
-Parameter RegionPredetectionModes consists of one or more of the following modes, each mode representing a different detection algorithm:
+
+### Mode Arguments
+
+Parameter `RegionPredetectionModes` consist of a group of region predetection mode objects. Each region predetection  mode object includes a candidate mode and a series of mode arguments. The mode arguments of the region predetection mode object is shown as follow:
 
 <table style = "text-align:left">
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
+        </tr>
+    </thead>
     <tr>
-        <th>Child Parameter Name</th>
-        <th>Child Parameter Summary</th>
-    </tr>
-    <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
         </td>
     </tr>
@@ -53,25 +60,17 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
     </tr>
     <tr>
         <td><b>Candidate Mode List</b><br>
-            <li>RPM_SKIP</li>
-            <li>RPM_AUTO</li>
-            <li>RPM_GENERAL</li>
-            <li>RPM_GENERAL_RGB_CONTRAST</li>
-            <li>RPM_GENERAL_GRAY_CONTRAST</li>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>RPM_GENERAL
+            RPM_SKIP<br>
+            RPM_AUTO<br>
+            RPM_GENERAL<br>
+            RPM_GENERAL_RGB_CONTRAST<br>
+            RPM_GENERAL_GRAY_CONTRAST<br>
+            RPM_GENERAL_HSV_CONTRAST
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">AspectRatioRange<br>(Optional)</td>
-        <td><b>Description</b><br>Specifies a set (or multiple sets) of aspect ratio range for filtering the predetected region:
-        <li>A set of aspect ratio range is defined as [MinAspectRatio, MaxAspectRatio].
-        <li>Using a "";"" to separate multiple sets.</li>
-        <li>Value range of MinAspectRatio, MaxAspectRatio: [1,10000].</li>
-        <li>Aspect ratio equals to height/width*100, while the height and width is from the bounding rectangle of the predetected region.</li>
+        <td><b>Description</b><br>Specifies one or multiple sets of aspect ratio ranges as a string for filtering the predetected region.<br><br><i>Aspect Ratio = BoundingRectWidth/BoundingRectHeight * 100</i>
         </td>
     </tr>
     <tr>
@@ -79,23 +78,23 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing aspect ratio range sets.
+        <td><b>Substruct</b><br>Define one range:<br>"[MinAspectRatio, MaxAspectRatio]"<br>Define multiple ranges:<br>"[MinAspectRatio, MaxAspectRatio];[MinAspectRatio, MaxAspectRatio];..."
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Range</b><br>MinAspectRatio: [0,10000]<br>MaxAspectRatio: [0,10000]
         </td>
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">FindAccurateBoundary<br>(Optional)</td>
-        <td><b>Description</b><br>Sets whether to enable finding accurate boundary:
-        <li>0: disable.</li>
-        <li>1: enable.</li>
+        <td rowspan = "4" style="vertical-align:text-top">FindAccurateBoundary<br>(Optional)</td>
+        <td><b>Description</b><br>Sets whether to enable finding accurate boundary:<br>
+        0: disable.<br>
+        1: enable.
         </td>
     </tr>
     <tr>
@@ -107,26 +106,15 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>0
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
-            <li>RPM_GENERAL_RGB_CONTRAST</li>
-            <li>RPM_GENERAL_GRAY_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
+            RPM_GENERAL_RGB_CONTRAST<br>
+            RPM_GENERAL_GRAY_CONTRAST
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">ForeAndBackgroundColours<br>(Optional)</td>
-        <td><b>Description</b><br>Specifies a set (or multiple sets) of the foreground and background colours used for region predetection algorithm based on HSV colour space:
-        <li>This argument is mandatory for RPM_GENERAL_HSV_CONTRAST mode. If there is no manual setting, no region can be detected.</li>
-        <li>A set of the foreground and background colours is defined as [ForegroundColour, BackgroundColour, Tolerance].</li>
-        <li>Using a "";"" to separate multiple sets.</li>
-        <li>ForegroundColourand BackgroundColour are the Hue values in the HSV colour space for defining the foreground and background colours of the regions you want to predetect. The value -1 means black, gray, white.</li>
-        <li>Tolerance is the allowable deviation of the Hue value defined by ForegroundColour.</li>
-        <li>Value range of ForegroundColour, BackgroundColour: [-1,360].</li>
-        <li>Value range of Tolerance: [0, 360].</li>
+        <td rowspan = "5" style="vertical-align:text-top">ForeAndBackgroundColours<br>(Required by RPM_GENERAL_HSV_CONTRAST )</td>
+        <td><b>Description</b><br>Specifies a set (or multiple sets) of the foreground and background colours used for region predetection algorithm based on HSV colour space:<br>
         </td>
     </tr>
     <tr>
@@ -134,11 +122,11 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing one or more colour sets.
+        <td><b>Substruct</b><br>Define one range:<br>"[ForegroundColour,BackgroundColour,Tolerance]"<br>Define multiple ranges:<br>"[ForegroundColour,BackgroundColour,Tolerance];[ForegroundColour,BackgroundColour,Tolerance];..."
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Range</b><br>ForegroundColour: [-1,360]<br>BackgroundColour: [-1,360]<br>Tolerance: [0, 360]
         </td>
     </tr>
     <tr>
@@ -147,11 +135,7 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">HeightRange<br>(Optional)</td>
-        <td><b>Description</b><br>Specifies a set (or multiple sets) of height range for filtering the predetected region:
-        <li>A set of height is defined as [MinHeight, MaxHeight].</li>
-        <li>Using a "";"" to separate multiple sets.</li>
-        <li>Value range of MinHeight, MaxHeight: [1, 0x7fffffff].</li>
-        <li>The height value is the height of the bounding rectangle of the predetected region.</li>
+        <td><b>Description</b><br>Specifies a set (or multiple sets) of height range for filtering the predetected region. The height is measured by the height of the bounding rect of the predetected region.
         </td>
     </tr>
     <tr>
@@ -159,25 +143,21 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing height range sets.
+        <td><b>Substruct</b><br>Define one range:<br>"[MinHeight, MaxHeight]"<br>Define multiple ranges:<br>"[MinHeight, MaxHeight];[MinHeight, MaxHeight];..."
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Range</b><br>MinHeight: [1, 0x7fffffff]<br>MaxHeight: [1, 0x7fffffff]
         </td>
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
         </td>
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">WidthRange<br>(Optional)</td>
-        <td><b>Description</b><br>Specifies a set (or multiple sets) of width range for filtering the predetected region:
-        <li>A set of width is defined as [MinWidth, MaxWidth].</li>
-        <li>Using a "";"" to separate multiple sets.</li>
-        <li>Value range of MinWidth, MaxWidth: [1, 0x7fffffff].</li>
-        <li>The width value is the width of the bounding rectangle of the predetected region.</li>
+        <td><b>Description</b><br>Specifies a set (or multiple sets) of width range for filtering the predetected region. The width is measured by the width of the bounding rect of the predetected region.
         </td>
     </tr>
     <tr>
@@ -185,22 +165,22 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
+        <td><b>Substruct</b><br>Define one range:<br>"[MinWidth, MaxWidth]"<br>Define multiple ranges:<br>"[MinWidth, MaxWidth];[MinWidth, MaxWidth];..."
+        </td>
+    </tr>
+    <tr>
         <td><b>Range</b><br>A string value representing height range sets.
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">MinImageDimension<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the minimum image dimension (in pixels) to enable region pre-detection:
-        <li>The library will enable the region pre-detection feature only when the image dimension is larger than the given value.</li>
+        <td rowspan = "4" style="vertical-align:text-top">MinImageDimension<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the minimum image dimension (in pixels) to enable region pre-detection.
+        The library will enable the region pre-detection feature only when the image dimension is larger than the given value.<br>
         </td>
     </tr>
     <tr>
@@ -208,28 +188,19 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[16384, 0x7fffffff]	
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>262144
+        <td><b>Range</b><br>[16384, 0x7fffffff]
         </td>
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
-            <li>RPM_GENERAL_RGB_CONTRAST</li>
-            <li>RPM_GENERAL_GRAY_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
+            RPM_GENERAL_RGB_CONTRAST<br>
+            RPM_GENERAL_GRAY_CONTRAST<br>
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">RelativeBarcodeRegions<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the barcode regions relative to the pre-detected region:
-        <li>Each region need to be defined as [Left, Top, Right, Bottom, Index]. If you want to define multiple regions, you can use a "";"" to separate them. If there is no region defined, the library will consider the predetected regions as barcode regions.</li>
-        <li>Left, Top, Right, Bottom are four percentage values relative to top-left corner of the predetected region.</li>
-        <li>Index means the index of a specific colour set in ForeAndBackgroundColours which the current region is applied to. If the value of index is set to -1, the current region will be applied to all colour sets in ForeAndBackgroundColours.</li>
-        <li>Value range of Left, Top, Right, Bottom: [-10000,10000].</li>
-        <li>Value range of Index: [-1, 0x7fffffff].</li>
+        <td rowspan = "6" style="vertical-align:text-top">RelativeRegions<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the barcode regions relative to the pre-detected region.
         </td>
     </tr>
     <tr>
@@ -237,20 +208,24 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing one or more regions.
+        <td><b>Substruct</b><br>Define one region:<br>"[Left,Top,Right,Bottom,Index]"<br>Define multiple region:<br>"[Left,Top,Right,Bottom,Index];[Left,Top,Right,Bottom,Index];..."
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Range</b><br>Left, Top, Right, Bottom: [-10000,10000]<br>Index: [-1,0x7fffffff]
         </td>
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
+        <td><b>Remarks</b><br>Parameters Left, Top, Right, Bottom are measured in percentage.<br>Parameter Index points to a specific colour that set in ForeAndBackgroundColours. Set it to -1 to apply the current RelativeRegion to all ForeAndBackgroundColours.
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
         <td><b>Description</b><br>Sets the sensitivity used for region predetection algorithm, a larger value means the library will take more effort to detect regions.
         </td>
     </tr>
@@ -263,14 +238,10 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>1
-        </td>
-    </tr>
-    <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
-            <li>RPM_GENERAL_RGB_CONTRAST</li>
-            <li>RPM_GENERAL_GRAY_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
+            RPM_GENERAL_RGB_CONTRAST<br>
+            RPM_GENERAL_GRAY_CONTRAST<br>
         </td>
     </tr>
     <tr>
@@ -292,9 +263,9 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
     </tr>
     <tr>
         <td><b>Valid For</b><br>
-            <li>RPM_GENERAL_HSV_CONTRAST</li>
-            <li>RPM_GENERAL_RGB_CONTRAST</li>
-            <li>RPM_GENERAL_GRAY_CONTRAST</li>
+            RPM_GENERAL_HSV_CONTRAST<br>
+            RPM_GENERAL_RGB_CONTRAST<br>
+            RPM_GENERAL_GRAY_CONTRAST<br>
         </td>
     </tr>
     <tr>
@@ -341,66 +312,89 @@ Parameter RegionPredetectionModes consists of one or more of the following modes
     </tr>
 </table>
 
+### Default Setting
+
 The default settings of RegionPredetectionModes is:
 
 ```json
 {
-    "RegionPredetectionModes": [
-         {
-            "Mode" : "RPM_GENERAL"
-         }
-      ]
+    "RegionPredetectionModes" : 
+    [
+        {
+            "AspectRatioRange" : "[]",
+            "FindAccurateBoundary" : 0,
+            "ForeAndBackgroundColours" : "[]",
+            "HeightRange" : "[]",
+            "ImageParameterName" : "",
+            "MeasuredByPercentage" : 1,
+            "MinImageDimension" : 262144,
+            "Mode" : "RPM_GENERAL",
+            "RelativeRegions" : "[]",
+            "Sensitivity" : 1,
+            "SpatialIndexBlockSize" : 5,
+            "WidthRange" : "[]"
+        }
+    ],
 }
 ```
-
 
 ## Candidate Modes Introduction
 
 ### RPM_SKIP
+
 Skip region pre-detection process.
 
 ### RPM_AUTO
+
 Lets the library choose a mode automatically.
 
 ### RPM_GENERAL
+
 Takes the whole image as a region. This mode has the following arguments for further customizing.
-**Available auxiliary parameters:**
-- [LibraryFileName]()
-- [LibraryParameters]()
+
+**Available Mode Arguments:**
+
+* LibraryFileName
+* LibraryParameters
 
 ### RPM_GENERAL_RGB_CONTRAST
+
 Detects region using the general algorithm based on RGB colour contrast. This mode has the following arguments for further customizing.
-**Available auxiliary parameters:**
-- [MinImageDimension]()
-- [Sensitivity]()
-- [SpatialIndexBlockSize]()
-- [LibraryFileName]()
-- [LibraryParameters]()
+
+**Available Mode Arguments:**
+
+* MinImageDimension
+* Sensitivity
+* SpatialIndexBlockSize
+* LibraryFileName
+* LibraryParameters
 
 ### RPM_GENERAL_GRAY_CONTRAST
+
 Detects region using the general algorithm based on gray contrast. This mode has the following arguments for further customizing.
-**Available auxiliary parameters:**
-- [MinImageDimension]()
-- [Sensitivity]()
-- [SpatialIndexBlockSize]()
-- [LibraryFileName]()
-- [LibraryParameters]()
+
+**Available Mode Arguments:**
+
+* MinImageDimension
+* Sensitivity
+* SpatialIndexBlockSize
+* LibraryFileName
+* LibraryParameters
 
 ### RPM_GENERAL_HSV_CONTRAST
-Detects region using the general algorithm based on HSV colour contrast. This mode has the following arguments for further customizing.
-**Available auxiliary parameters:**
-- [AspectRatioRange]()
-- [FindAccurateBoundary]()
-- [ForeAndBackgroundColours]()
-- [HeightRange]()
-- [WidthRange]()
-- [RelativeBarcodeRegions]()
-- [MinImageDimension]()
-- [Sensitivity]()
-- [SpatialIndexBlockSize]()
-- [LibraryFileName]()
-- [LibraryParameters]()
 
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+Detects region using the general algorithm based on HSV colour contrast. This mode has the following arguments for further customizing.
+
+**Available Mode Arguments:**
+
+* AspectRatioRange
+* FindAccurateBoundary
+* ForeAndBackgroundColours
+* HeightRange
+* WidthRange
+* RelativeBarcodeRegions
+* MinImageDimension
+* Sensitivity
+* SpatialIndexBlockSize
+* LibraryFileName
+* LibraryParameters

@@ -18,26 +18,47 @@ breadcrumbText: CaptureState
    >- Android
    >- Objective-C
    >- Swift
-   >- C
    >- C++
-   >- C#
-   >- Java
-   >- Python
    >
 >
 ```javascript
+export enum EnumCaptureState
+{
+   /** The data capturing is started. */
+   CS_STARTED = 0,
+   /** The data capturing is stopped. */
+   CS_STOPPED = 1
+}
 ```
 >
 ```java
+public class EnumCaptureState
+{
+   /** The data capturing is started. */
+   public static final int CS_STARTED = 0;
+   /** The data capturing is stopped. */
+   public static final int CS_STOPPED = 1;
+}
 ```
 >
 ```objc
+typedef NS_ENUM(NSInteger, DSCaptureState)
+{
+   /** The data capturing is started. */
+   DSCaptureStateStarted,
+   /** The data capturing is stopped. */
+   DSCaptureStateStopped
+} NS_SWIFT_NAME(CaptureState);
 ```
 >
 ```swift
-```
->
-```c
+public enum CaptureState : Int
+{
+   /** The data capturing is started. */
+   started
+   /** The data capturing is stopped. */
+   stopped
+} NS_SWIFT_NAME(CaptureState);
 ```
 >
 ```cpp

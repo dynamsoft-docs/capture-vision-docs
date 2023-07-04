@@ -5,15 +5,16 @@ description: The parameter BaseImageParameterName of Dynamsoft Capture Vision is
 keywords: BaseImageParameterName, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/base-image-parameter-name.html
+noTitleIndex: true
+permalink: /parameters/reference/image-parameter/base-image-parameter-name.html
 ---
-
 
 # BaseImageParameterName
 
-Parameter BaseImageParameterName specifies the object to be inherited.
+Parameter `BaseImageParameterName` represents the name of another `ImageParameter` object. It is used to inherit the parameters defined in its parent `ImageParameter` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
-**JSON Parameter Example**   
+## Example
+
 ```json
 {
     "BaseImageParameterName": "IP_0"
@@ -21,39 +22,10 @@ Parameter BaseImageParameterName specifies the object to be inherited.
 ```
 
 ## Parameter Summary
-Parameter BaseImageParameterName only specifies object of the same type. 
 
-<table style = "text-align:left">
-    <tr>
-        <th>BaseImageParameterName Parameter Details</th>
-    </tr>
-    <tr>
-        <td><b>Description</b><br>Inheritance is not performed by default.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>string</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Value range</b><br>Name string of an ImageParameter object.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>""
-        </td>
-    </tr>
-    
-</table>
-
-The default settings of BaseImageParameterName is:
-
-```json
-{
-    "BaseImageParameterName": ""
-}
-```
-
-## See Also
-- [Capture Vision Template]()
-- [Image Parameter]() 
+| BaseImageParameterName Parameter Summary |
+| :---------------------------------- |
+| **Description**<br>Name of the ImageParameter object to inherit. |
+| **Type**<br>*String* |
+| **Value range**<br>One of the ImageParameter name. |
+| **Default Value**<br>"" |

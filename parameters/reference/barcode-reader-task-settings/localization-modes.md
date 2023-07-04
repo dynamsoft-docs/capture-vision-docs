@@ -6,11 +6,12 @@ Keywords: Localization modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/localization-modes.html
 ---
 
 # LocalizationModes
 
-LocalizationModes determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
+Parameter `LocalizationModes` determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
 
 ## Example
 
@@ -30,15 +31,15 @@ LocalizationModes determines how to localize barcodes. It consists of one or mor
 
 ## Parameter Summary
 
-Parameter `LocalizationModes` consist of a group of localizaion mode objects. Each localization mode object includes a candidate mode and a series of auxiliary parameters. The structure of the localization mode object is shown as follow:
+Parameter `LocalizationModes` consist of a group of localizaion mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
 
-### Child Parameters
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -158,6 +159,28 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
         </td>
     </tr>
     <tr>
+        <td rowspan = "5" style="vertical-align:text-top">ModuleSize<br>(Optional)</td>
+        <td><b>Description</b><br>Set the module size, if the module size is known.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[0, 0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>
+            LM_CENTRE<br>
+        </td>
+    </tr>
+    <tr>
         <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
         <td><b>Description</b><br>Sets the file name of the library to load dynamically.
         </td>
@@ -203,39 +226,32 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
 
 ### Default Settings
 
-The default settings of LocalizationModes is:
+If the `LocalizationModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
-"LocalizationModes" : [
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_CONNECTED_BLOCKS"
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_SCAN_DIRECTLY",
-        "ScanDirection" : 0,
-        "ScanStride" : 0
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_STATISTICS"
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_LINES"
-    },
-    {
-        "LibraryFileName" : "",
-        "LibraryParameters" : "",
-        "Mode" : "LM_STATISTICS_MARKS"
-    }
-]
+{
+    "LocalizationModes" : 
+    [
+        {
+            "Mode" : "LM_CONNECTED_BLOCKS"
+        },
+        {
+            "IsOneDStacked" : 0,
+            "Mode" : "LM_SCAN_DIRECTLY",
+            "ScanDirection" : 0,
+            "ScanStride" : 0
+        },
+        {
+            "Mode" : "LM_STATISTICS",
+        },
+        {
+            "Mode" : "LM_LINES",
+        }
+    ]
+}
 ```
+
+If you specified an localization mode object with Mode Argument "Mode" only, the default values of the other mode arguments will used.
 
 ## Candidate Modes Introduction
 
@@ -243,7 +259,7 @@ The default settings of LocalizationModes is:
 
 Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -252,7 +268,7 @@ Localizes barcodes by searching for connected blocks. This algorithm usually giv
 
 Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -261,7 +277,7 @@ Localizes barcodes by groups of contiguous black-white regions. This is optimize
 
 Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -270,7 +286,7 @@ Localizes barcodes by searching for groups of lines. This is optimized for 1D an
 
 Localizes barcodes quickly. This mode is recommended in interactive scenario. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - ScanStride
 - ScanDirection
@@ -282,7 +298,7 @@ Localizes barcodes quickly. This mode is recommended in interactive scenario. Th
 
 Localizes barcodes by groups of marks.This is optimized for DPM codes. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -291,7 +307,7 @@ Localizes barcodes by groups of marks.This is optimized for DPM codes. This mode
 
 Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - LibraryFileName
 - LibraryParameters
@@ -300,8 +316,9 @@ Localizes barcodes by groups of connected blocks and lines.This is optimized for
 
 Localizes barcodes from the centre of the image. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
+- ModuleSize
 - LibraryFileName
 - LibraryParameters
 
@@ -309,7 +326,7 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 
 Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode. This mode has the following arguments for further customizing.
 
-**Available auxiliary parameters:**
+**Available Mode Arguments:**
 
 - ScanStride
 - ScanDirection

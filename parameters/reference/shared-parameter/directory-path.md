@@ -5,11 +5,15 @@ Description: The parameter DirectoryPath defines a path when the library have to
 Keywords: Directory path
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/shared-parameter/directory-path.html
 ---
 
 # DirectoryPath
 
 Parameter `DirectoryPath` defines a path when the library have to read files.
+
+## Example
 
 ```json
 {
@@ -17,11 +21,10 @@ Parameter `DirectoryPath` defines a path when the library have to read files.
 }
 ```
 
+## Parameter Summary
+
 | DirectoryPath Parameter Summary |
 | :------------- |
-| **Type**<br>*int[2]* |
-| **Range**<br>[-100, 100] |
-| **Default Value**<br>0 |
+| **Type**<br>*String* |
 
-- CharacterModel
-- ImageSourceOptions
+> Note: Parameter `DirectoryPath` is available for  `CharacterModel`, `ImageSourceOptions`. It has the same parameter type under different parent object.

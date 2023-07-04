@@ -5,17 +5,23 @@ Description: The parameter ApplicableTextLineNumbers of Dynamsoft Label Recogniz
 Keywords: Applicable text line numbers
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/text-line-specification/applicable-text-line-numbers.html
 ---
 
 # ApplicableTextLineNumbers
 
-The line numers of the targeting lines which are specified by the `TextLineSpecification` object.
+Parameter `ApplicableTextLineNumbers` specifies the line numers of the targeting lines which are specified by the `TextLineSpecification` object.
+
+## Example
 
 ```json
 {
     "ApplicableTextLineNumbers": "1-3, 5, 7-10"
 }
 ```
+
+## Parameter Summary
 
 | ApplicableTextLineNumbers Parameter Summary |
 | :----------------------------------- |

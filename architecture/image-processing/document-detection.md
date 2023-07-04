@@ -8,6 +8,8 @@ noTitleIndex: true
 permalink: /architecture/image-processing/document-detection.html
 ---
 
+> *Go to [DCV Architecture](../index.md)*
+
 The following diagram shows how sections connect to each other to form tasks:
 
 ```mermaid
@@ -22,74 +24,50 @@ flowchart LR;
      style F fill:#f96,stroke:#333,stroke-width:4px
 ```
 
-In this article, we'll discuss the first section of a task - **Document Detection**:
+In this article, we'll discuss the section **Document Detection** which is the product-specific part of the 2nd section of a "Normalize-a-Document" task.
+
+> The 2nd section of a "Normalize-a-Document" task consists of [**Shared Detection**](shared-detection.md) and **Document Detection**.
 
 # Section 2.2 - Document Detection
 
-**Document detection** is one of the key features of Dynamsoft Document Normalizer (DDN). If DDN tasks are arranged in the settings, the library will try detecting document boundaries from the image and output the location of the detectedd boundaries.
+The purpose of this section is to find the exact locations of "documents" on the image. 
 
-Preprocessing setting are available for DDN module. As a result, the preprocessing intermediate results can be inherited when performing the document detection algorithm.
+> A document is an object that exhibit clear boundaries.
 
-## Main Work Flow
+## Constituting Stages
 
-Based on the binary image output by section 2.1, DDN module performs boundary detection process on the image. It initially find contours of the target items and extract line segments from the contours. After a series of process, the library calculates the corners, edges and finally confirms the locations of the boundaries. Each boundary is output as a quadrilateral with the coordinates of its four vertices.
+This section consists of multiple stages which forms a fixed and relatively complete set of workflow:
+
+1. Contour-locating: to find contours that may be part of the document boundaries.
+2. Line-locating: to find lines that may be part of  the document boundaries.
+3. Long-line-merging: to merge line segments into long lines.
+4. Corner-locating: to find corners at intersections of long lines.
+5. Candidate-quad-edge-locating: to find candidate edges that may be part of the quads.
+6. Quad-locating: to find exact locations of documents.
+
+### Main Work Flow
+
+The algorithm first finds the contour of the target item and extracts line segments from the contour. After a series of processing, the library calculates the corners, edges, and finally determines the position of the boundaries. Each boundary is output as a quadrilateral and the coordinates of its four vertices.
 
 <div align="center">
    <p><img src="../assets/document-detection.png" alt="document-detection" width="30%" /></p>
    <p></p>
 </div>
 
-## Available Parameter Settings
+## Output and Parameters
 
-**LineExtractionModes**
+Each of these stages has its own output (known as an intermediate result) and usually a specific parameter that can regulate the operation:
 
-Defines how to extract lines from the image.
+| Stage                        | Intermediate Result Type    | Related Parameter                                                                                                   |
+| ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Contour-locating             | `IRUT_CONTOURS`             | N/A                                                                                                                 |
+| Line-locating                | `IRUT_LINE_SEGMENTS`        | [`LineExtractionModes`](../../parameters/reference/document-normalizer-task-settings/line-extraction-modes.md)      |
+| Long-line-merging            | `IRUT_LONG_LINES`           | N/A                                                                                                                 |
+| Corner-locating              | `IRUT_CORNERS`              | [`CornerAngleRangeArray`](../../parameters/reference/document-normalizer-task-settings/corner-angle-range-array.md) |
+| Candidate-quad-edge-locating | `IRUT_CANDIDATE_QUAD_EDGES` | N/A                                                                                                                 |
+| Quad-locating                | `IRUT_DETECTED_QUADS`       | N/A                                                                                                                 |
 
-**CornerAngleRangeArray**
+The following parameter may affect the whole process:
 
-Define the range of corner.
-
-**ContentType**
-
-Specify whether the targeting content is document page or tables.
-
-## Result Output
-
-The result of **Document Detection** section is output as `DetectedQuadsResult` which is generally received from the `CapturedResultReceiver` (CRR).
-
-During the process of **Document Detection**, a series of intermediate results are produced.
-
-**Document Detection Result**
-
-| Name | Description | Related Parameter(s) |
-| ---- | ----------- | -------------------- |
-| `DetectedQuadsResult` | The detected quadrilaterals output by the library. | N/A |
-
-> Notes: The result of document detection is output as one of the `CapturedResult` when its target ROI is specified in the `ImageROIProcessingArray`.
-
-**Document Detection Intermediate Results**
-
-| Name | Description | Related Parameter(s) |
-| ---- | ----------- | -------------------- |
-| `ContoursUnit` | The detected contours on the image. | N/A |
-| `LineSegmentsUnit` | The line segments extracted from the contours. | N/A |
-| `LongLinesUnit` | Merged from the line segments. | N/A |
-| `CornersUnit` | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `CornerAngleRangeArray` |
-| `CandidateQuadEdgesUnit` | The edges that candidate the quadrilateral assembling. | N/A |
-| `DetectedQuadsUnit` | The assembled quadrilaterals. | N/A |
-
-**Shared Preprocessing Intermediate Results**
-
-| Name | Description | Related Parameter(s) |
-| ---- | ----------- | -------------------- |
-| `ColourImageUnit` | The colour images. Generally, they are the original images. | N/A |
-| `ScaledDownColourImageUnit` | The scaled down colour images. | `ScaleDownThreshold` |
-| `GrayscaleImageUnit` | The gray scale images. | `ColourConversionModes` |
-| `TransformedGrayscaleImageUnit` | The colour inverted gray scale images. | `GrayscaleTransformationModes` |
-| `PredetectedRegionsUnit` | The coordinates of predetected regions quadrilateral(s) | `RegionPredetectionModes` |
-| `EnhancedGrayscaleImageUnit` | The enhanced gray scale images. | `ImagePreprocessingModes` |
-| `BinaryImageUnit` | The binary images. | `BinarizationModes` |
-| `TextureDetectionResultUnit` | The detected texture. | `TextureDetectionModes` |
-| `TextureRemovedGrayscaleImageUnit` | The gray scale images that have been removed texture. | `TextureDetectionModes` |
-| `TextureRemovedBinaryImageUnit` | The binary images that have been removed texture. | `TextureDetectionModes` |
-| `TextRemovedBinaryImageUnit` | The gray scale images that have been removed text. | `TextFilterModes` |
+- [`ContentType`](../../parameters/reference/document-normalizer-task-settings/content-type.md)
+- [`QuadrilateralDetectionModes`](../../parameters/reference/document-normalizer-task-settings/quadrilateral-detection-modes.md)

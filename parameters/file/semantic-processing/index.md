@@ -18,7 +18,7 @@ A `SemanticProcessing` object is defined as below:
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
 | ReferenceObjectFilter | JSON object | Optional | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions |
-| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameterReference}}task-setting-name-array.html) to define a group of semantic-processing tasks. |
+| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameters_reference}}task-setting-name-array.html) to define a group of semantic-processing tasks. |
 
 Here is a sample:
 
@@ -42,8 +42,8 @@ A `ReferenceObjectFilter` object is defined as below:
 |---|---|---|---|
 | ReferenceTargetROIDefNameArray | string array | Optional | A string array while each element is a string that represents the name of a `TargetROIDef` object. |
 | AtomicResultTypeArray | string array | Optional | A string array while each element is a string that represents a type of atomic result that needs to be filtered |
-| TextLineFilteringCondition | string array | Optional | An object used to specify the conditions for filtering text lines. |
-| BarcodeFilteringCondition | string array | Optional | An object used to specify the conditions for filtering barcodes. |
+| TextLineFilteringCondition | JSON object | Optional | An object used to specify the conditions for filtering text lines. |
+| BarcodeFilteringCondition | JSON object | Optional | An object used to specify the conditions for filtering barcodes. |
 
 Here is a sample:
 
@@ -85,7 +85,7 @@ In many cases, the process may involve filtering data to select only the relevan
 
 ## Task Execution
 
-This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameterFile}}task-settings/code-parser-task-setting.html) object.
+This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameter}}file/task-settings/code-parser-task-settings.html) object.
 
 ## Results Reporting
 

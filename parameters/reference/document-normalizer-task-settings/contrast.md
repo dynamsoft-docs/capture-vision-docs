@@ -5,17 +5,23 @@ Description: The parameter Contrast of Dynamsoft Document Normalizer specifies t
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/contrast.html
 ---
 
 # Contrast
 
 Parameter `Contrast` specifies the contrast of the normalized image.
 
+## Example
+
 ```json
 {
     "Contrast": 0
 }
 ```
+
+## Parameter Summary
 
 | Contrast Parameter Summary |
 | :------------------------ |

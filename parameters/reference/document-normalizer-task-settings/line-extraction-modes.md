@@ -5,11 +5,15 @@ Description: The parameter LineExtractionModes of Dynamsoft Document Normalizer 
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/line-extraction-modes.html
 ---
 
 # LineExtractionModes
 
-`LineExtractionModes` specifies the algorithm used to extract lines. It currently consist of `LEM_GENERAL` and `LEM_MARGIN_BASED`. Each mode representing a different way to extract lines.
+Parameter `LineExtractionModes` specifies the algorithm used to extract lines. It currently consist of `LEM_GENERAL` and `LEM_MARGIN_BASED`. Each mode representing a different way to extract lines.
+
+## Example
 
 ```json
 {
@@ -25,13 +29,17 @@ noTitleIndex: true
 }
 ```
 
-`LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other auxiliary parameters.
+## Parameter Summary
+
+`LineExtractionModes` consist one or more mode objects. Each mode object contains a candidate mode and other mode arguments.
+
+### Mode Arguments
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -54,7 +62,22 @@ noTitleIndex: true
     </tr>
 </table>
 
-## Candidate Modes Paraphrase
+### Default Setting
+
+If the `LineExtractionModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "LineExtractionModes" : 
+    [
+        {
+            "Mode" : "LEM_GENERAL"
+        }
+    ]
+}
+```
+
+## Candidate Modes Introduction
 
 ### LEM_GENERAL
 

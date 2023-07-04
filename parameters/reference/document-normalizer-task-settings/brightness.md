@@ -5,17 +5,23 @@ Description: The parameter Brightness of Dynamsoft Document Normalizer defines t
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/brightness.html
 ---
 
 # Brightness
 
 Parameter `Brightness` defines the brightness of the normalized image.
 
+## Example
+
 ```json
 {
     "Brightness": 0
 }
 ```
+
+## Parameter Summary
 
 | Brightness Parameter Summary |
 | :------------- |

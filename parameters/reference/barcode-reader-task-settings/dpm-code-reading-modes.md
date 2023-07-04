@@ -1,11 +1,44 @@
+---
+layout: default-layout
+Title: DPMCodeReadingModes - Dynamsoft Barcode Reader Parameters
+Description: The parameter DPMCodeReadingModes of Dynamsoft Barcode Reader defines how to read direct part mark (DPM) barcodes.
+Keywords: DPM code reading modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/dpm-code-reading-modes.html
+---
 
-## DPMCodeReadingModes
+# DPMCodeReadingModes
+
+Parameter `DPMCodeReadingModes` defines how to read direct part mark (DPM) barcodes.
+
+## Example
+
+```json
+{
+    "DPMCodeReadingModes":
+    [
+        {
+            "Mode": "DPMCRM_GENERAL" 
+        }
+    ]
+}
+```
+
+## Parameter Summary
+
+Parameter `DPMCodeReadingModes` consist of a group of DPM code reading mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary mode arguments.
+
+### Mode Arguments
+
+The mode arguments of the DPM code reading mode object are shown as follow:
 
 <table style = "text-align:left">
     <thead>
         <tr>
-            <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Mode Argument Name</th>
+            <th nowrap="nowrap">Mode Argument Summary</th>
         </tr>
     </thead>
     <tr>
@@ -70,3 +103,31 @@
         </td>
     </tr>
 </table>
+
+### Default Settings
+
+If the `DPMCodeReadingModes` is not configured in your template file, the following setting will be used as the default setting.
+
+```json
+{
+    "DPMCodeReadingModes" : 
+    [
+        {
+            "Mode" : "DPMCRM_SKIP"
+        }
+    ]
+}
+```
+
+## Candidate Modes Introduction
+
+### DPMCRM_GENERAL
+
+Reads DPM codes using the general algorithm. This mode has the following arguments for further customizing.
+
+- LibraryFileName
+- LibraryParameters
+
+### DPMCRM_AUTO
+
+Lets the library choose a mode automatically. Not supported yet

@@ -8,6 +8,8 @@ noTitleIndex: true
 permalink: /architecture/image-processing/document-normalization.html
 ---
 
+> *Go to [DCV Architecture](../index.md)*
+
 The following diagram shows how sections connect to each other to form tasks:
 
 ```mermaid
@@ -22,57 +24,26 @@ flowchart LR;
      style I fill:#f96,stroke:#333,stroke-width:4px
 ```
 
-In this article, we'll discuss the first section of a task - **Document Normalization**:
+In this article, we'll discuss the section **Document Normalization** which is usually the 3rd section of a "Normalize-a-Document" task.
 
 # Section 3 - Document Normalization
 
-Document Normalization is one of the key features of Dynamsoft Document Normalizer (DDN). In this section, the library performs a series of image-processing on the target ROI to convert the irregular shaped image into a standard rectangular image.
+The purpose of this section is to generate a standard rectangular image of the "document" localized in the section "Document Detection".
 
-## Main Features
+> A document is an object that exhibit clear boundaries.
 
-In the **Document Normalization** section, the content of the targeting area is cropped from the original image and a new image based on the cropped region is generated. When generating the new image, the following features might be applied to make sure the output image is shaped to a rectangle.
+## Constituting Stages
 
-* Deskew
-* Perspective Correction
-* Output Colour Mode
-* Brightness and Contrast
+This section consists of just one stage:
 
-## Result Output
+- Document-normalizing: to normalize the document which may involve one or several of these actions:
+  - Deskew
+  - Perspective correction
+  - Colour conversion
+  - Brightness and contrast adjustment
 
-The result of **Document Normalization** section is output as `NormalizedImagesResult` which is generally received from the `CapturedResultReceiver` (CRR).
+## Output and Parameters
 
-During the process of **Document Normalization**, a series of intermediate results are produced.
-
-**Document Normalization Result**
-
-| Name | Description | Related Parameter(s) |
-| ---- | ----------- | -------------------- |
-| `NormalizedImagesResult` | The normalized images output by the library. | N/A |
-
-If you did a normalize task only:
-
-| Name | Description | Related Parameter(s) |
-| ---- | ----------- | -------------------- |
-| `NormalizedImageUnit` | The normalized image. | `Brightness`, `Contrast`, `ColourMode`, `DeskewMode` |
-
-If you implement document detection and document normalization continuously, the following intermediate result are available as well.
-
-| Name | Description | Related Parameter(s) |
-| ---- | ----------- | -------------------- |
-| `ContoursUnit` | The detected contours on the image. | N/A |
-| `LineSegmentsUnit` | The line segments extracted from the contours. | N/A |
-| `LongLinesUnit` | Merged from the line segments. | N/A |
-| `CornersUnit` | Formed by intersected long lines. Corners participate in assembling quadrilaterals. | `InteriorAngleRangeArray` |
-| `CandidateQuadEdgesUnit` | The edges that candidate the quadrilateral assembling. | N/A |
-| `DetectedQuadsUnit` | The assembled quadrilaterals. The DetectedQuadResult is the  | N/A |
-| `ColourImageUnit` | The colour images. Generally, they are the original images. | N/A |
-| `ScaledDownColourImageUnit` | The scaled down colour images. | `ScaleDownThreshold` |
-| `GrayscaleImageUnit` | The gray scale images. | `ColourConversionModes` |
-| `TransformedGrayscaleImageUnit` | The colour inverted gray scale images. | `GrayscaleTransformationModes` |
-| `PredetectedRegionsUnit` | The coordinates of predetected regions quadrilateral(s) | `RegionPredetectionModes` |
-| `EnhancedGrayscaleImageUnit` | The enhanced gray scale images. | `ImagePreprocessingModes` |
-| `BinaryImageUnit` | The binary images. | `BinarizationModes` |
-| `TextureDetectionResultUnit` | The detected texture. | `TextureDetectionModes` |
-| `TextureRemovedGrayscaleImageUnit` | The gray scale images that have been removed texture. | `TextureDetectionModes` |
-| `TextureRemovedBinaryImageUnit` | The binary images that have been removed texture. | `TextureDetectionModes` |
-| `TextRemovedBinaryImageUnit` | The gray scale images that have been removed text. | `TextFilterModes` |
+| Stage | Intermediate Result Type | Related Parameter |
+| ----- | ------------------------ | ----------------- |
+| Document-normalizing | `IRUT_NORMALIZED_IMAGES`  | [`Brightness`](../../parameters/reference/document-normalizer-task-settings/brightness.md), [`Contrast`](../../parameters/reference/document-normalizer-task-settings/contrast.md), [`ColourMode`](../../parameters/reference/document-normalizer-task-settings/colour-mode.md), [`DeskewMode`](../../parameters/reference/document-normalizer-task-settings/deskew-mode.md) |
