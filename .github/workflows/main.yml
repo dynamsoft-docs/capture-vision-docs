@@ -27,13 +27,26 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
+          [ -d DCVDocCore ] && rm -rf DCVDocCore
+          [ -d capture-vision-docs ] && rm -rf capture-vision-docs
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           [ ! -d DCVDocCore ] && mkdir -p DCVDocCore
-          [ ! -d capture-vision-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/capture-vision-docs.git capture-vision-docs
-          [ ! -d Docs-Template-Repo-DCV2 ] && git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-DCV2
-          cd capture-vision-docs && git pull && cd .. && cp -rfp ./capture-vision-docs/* ./DCVDocCore/
-          cd Docs-Template-Repo-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-DCV2/* ./DCVDocCore/
+          git clone --depth 1  https://github.com/dynamsoft-docs/capture-vision-docs.git capture-vision-docs
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cp -rfp ./capture-vision-docs/* ./DCVDocCore/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocCore/
           cd DCVDocCore && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DCVDocCore/_site/ ./www.dynamsoft.com/capture-vision/docs/core/ prod
+
+
+      - name: Sync files to Test Env
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 7500 
+          local-dir: /home/ubuntu/DCVDocCore/_site/
+          server-dir: /www.dynamsoft.com/capture-vision/docs/core/
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -48,12 +61,12 @@ jobs:
           cd /home/ubuntu
           [ -d DCVDocCorePreview ] && rm -rf DCVDocCorePreview
           [ -d capture-vision-docs-preview ] && rm -rf capture-vision-docs-preview
-          [ -d Docs-Template-Repo-Preview-DCV2 ] && rm -rf Docs-Template-Repo-Preview-DCV2
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           [ ! -d DCVDocCorePreview ] && mkdir -p DCVDocCorePreview
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs.git capture-vision-docs-preview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs-preview/* ./DCVDocCorePreview/
-          cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DCVDocCorePreview/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocCorePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocCorePreview/_config.yml
           cd DCVDocCorePreview && bundle exec jekyll build --incremental
