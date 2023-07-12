@@ -122,7 +122,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <h1>Search</h1>                        
-                              <script async src="https://cse.google.com/cse.js?cx=32039cdf85bc7ae2b"></script>
+                              <script async src="https://cse.google.com/cse?cx=b5ca9ca31b6a640a2"></script>
                               <div class="gcse-search"></div>
                           </div>
                       </div>
@@ -227,16 +227,6 @@
           }, 100)
       })
 
-    //   let timeInt = setInterval(function() {
-    //       var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
-    //       if (scrollTo.length>0) {
-    //           container.scrollTop(
-    //               scrollTo.offset().top - container.offset().top + container.scrollTop()
-    //           );
-    //           clearInterval(timeInt)
-    //       }
-    //   }, 500)
-  
       function onSearchFinish(e) {
           var evt = window.event || e;
           if (evt.keyCode == 13) {
@@ -246,9 +236,27 @@
 
       $('#txtSearch').keydown(function(e) { 
           if (e.keyCode == 13) {
-              window.location.href = '/capture-vision/search.html?q=' + $('#txtSearch').val()
+              window.location.href = getSearchUrl() + '?q=' + $('#txtSearch').val()
           }
       })
+
+      function getSearchUrl() {
+        var searchUrl = "";
+        var product = getUrlVars(document.URL)["product"]
+        var repoType = getUrlVars(document.URL)["repoType"]
+        if (product) {
+            searchUrl += ("/" + product + "/docs")
+            searchUrl += ("/" + product)
+            repoType = repoType && repoType == "js" ? "web" : repoType;
+            if(repoType) {
+                searchUrl += ("/" + repoType)
+            }
+            searchUrl += '/search.html'
+        } else {
+            searchUrl = '/capture-vision/docs/core/search.html'
+        }
+        return searchUrl
+      }
 
   </script>
 
