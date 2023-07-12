@@ -245,7 +245,7 @@
         var product = getUrlVars(document.URL)["product"]
         var repoType = getUrlVars(document.URL)["repoType"]
         if (product) {
-            product = getDoumentName(product)
+            searchUrl += ("/" + product + "/docs")
             searchUrl += ("/" + product)
             repoType = repoType && repoType == "js" ? "web" : repoType;
             if(repoType) {
