@@ -97,24 +97,43 @@
             $('#txtSearch').keydown(function(e) {
                 if (e.keyCode == 13) {
                     let lang = getCurrentUrlLang(document.URL, true)
+                    var searchUrl = getSearchUrl()
                     if (!lang || lang == '') {
-                        window.location.href = '/capture-vision/search.html?q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?q=' + $('#txtSearch').val();
                     } else if (lang == 'android' || lang == 'objectivec-swift') {
-                        window.location.href = '/capture-vision/search.html?refinement=mobile_native_app&q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?refinement=mobile_native_app&q=' + $('#txtSearch').val();
                     } else if (lang == 'javascript') {
-                        window.location.href = '/capture-vision/search.html?refinement=javascript_web&q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?refinement=javascript_web&q=' + $('#txtSearch').val();
                     } else if (lang == 'cplusplus' || lang == 'c') {
-                        window.location.href = '/capture-vision/search.html?refinement=c/c++&q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?refinement=c/c++&q=' + $('#txtSearch').val();
                     } else if (lang == 'java') {
-                        window.location.href = '/capture-vision/search.html?refinement=java&q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?refinement=java&q=' + $('#txtSearch').val();
                     } else if (lang == 'dotnet') {
-                        window.location.href = '/capture-vision/search.html?refinement=.net&q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?refinement=.net&q=' + $('#txtSearch').val();
                     } else {
-                        window.location.href = '/capture-vision/search.html?q=' + $('#txtSearch').val();
+                        window.location.href = searchUrl + '?q=' + $('#txtSearch').val();
                     }
                 }
             })
         })
+
+        function getSearchUrl() {
+            var searchUrl = "";
+            var product = getUrlVars(document.URL)["product"]
+            var repoType = getUrlVars(document.URL)["repoType"]
+            if (product) {
+                product = getDoumentName(product)
+                searchUrl += ("/" + product)
+                repoType = repoType && repoType == "js" ? "web" : repoType;
+                if(repoType) {
+                    searchUrl += ("/" + repoType)
+                }
+                searchUrl += '/search.html'
+            } else {
+                searchUrl = '/capture-vision/docs/core/search.html'
+            }
+            return searchUrl
+        }
     </script>
 
     <!-- Google Tag Manager -->
