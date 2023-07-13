@@ -122,7 +122,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <h1>Search</h1>                        
-                              <script async src="https://cse.google.com/cse?cx=b5ca9ca31b6a640a2"></script>
+                              <script async src="https://cse.google.com/cse.js?cx=b5ca9ca31b6a640a2"></script>
                               <div class="gcse-search"></div>
                           </div>
                       </div>
@@ -138,26 +138,6 @@
     <div id="footerWrapper">
         {%- include page_footer.html -%}
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-
-    {%- if page.needAutoGenerateSidebar -%}
-    {%- unless page.needGenerateH3Content -%}
-    <script>
-        FullTreeMenuList(true, false);
-    </script>
-    {%- else -%}
-    <script>
-        FullTreeMenuList(true);
-    </script>
-    {%- endunless -%}
-    {%- else -%}
-    <script>
-        FullTreeMenuList(false);
-    </script>
-    {%- endif -%}
 
     <script type="text/javascript">
       $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
@@ -218,47 +198,7 @@
               }
           }
       }
-
-      $('.sideBarIcon').click(function() {
-          $(".sideBar").toggleClass('hide-sm');
-          $(".sideBar").toggleClass('hide-xs');
-          setTimeout(function() {
-              $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-          }, 100)
-      })
-
-      function onSearchFinish(e) {
-          var evt = window.event || e;
-          if (evt.keyCode == 13) {
-
-          }
-      }
-
-      $('#txtSearch').keydown(function(e) { 
-          if (e.keyCode == 13) {
-              window.location.href = getSearchUrl() + '?q=' + $('#txtSearch').val()
-          }
-      })
-
-      function getSearchUrl() {
-        var searchUrl = "";
-        var product = getUrlVars(document.URL)["product"]
-        var repoType = getUrlVars(document.URL)["repoType"]
-        if (product) {
-            searchUrl += ("/" + product + "/docs")
-            searchUrl += ("/" + product)
-            repoType = repoType && repoType == "js" ? "web" : repoType;
-            if(repoType) {
-                searchUrl += ("/" + repoType)
-            }
-            searchUrl += '/search.html'
-        } else {
-            searchUrl = '/capture-vision/docs/core/search.html'
-        }
-        return searchUrl
-      }
-
-  </script>
+    </script>
 
     {%- include livehelp.html -%}
 </body>
