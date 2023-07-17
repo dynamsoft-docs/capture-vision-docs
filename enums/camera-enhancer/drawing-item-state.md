@@ -26,29 +26,36 @@ Enumeration `CameraPosition` describes the camera position.
 ```java
 @IntDef({})
 @Retention(RetentionPolicy.CLASS)
-public @interface EnumCameraPosition {
-   // The back-facing camera.
-   public static final int CP_FRONT= 0;
-   // The front-facing camera.
-   public static final int CP_BACK = 1;
+public @interface EnumDrawingItemState {
+   // The state of the DrawingItem is the default state.
+   public static final int DIS_DEFAULT = 1;
+   // The state of the DrawingItem is selected.
+   public static final int DIS_SELECTED = 2;
 }
 ```
 >
 ```objc
-typedef NS_ENUM(NSInteger, DSCameraPosition)
-{
-   /** The back-facing camera. */
-   EnumCameraPositionBack = 0,
-   /** The front-facing camera. */
-   EnumCameraPositionBack = 1
+typedef NS_ENUM(NSInteger, DSDrawingItemState) {
+   /**
+    * The state of the DrawingItem is the default state.
+    */
+   DSDrawingItemStateDefault = 1,
+   /**
+    * The state of the DrawingItem is selected.
+    */
+   DSDrawingItemStateSelected = 2
 };
 ```
 >
 ```swift
 public enum CameraPosition : Int{
-   /** The back-facing camera. */
-   back = 0
-   /** The front-facing camera. */
-   front = 1
+   /**
+    * The state of the DrawingItem is the default state.
+    */
+   default = 1
+   /**
+    * The state of the DrawingItem is selected.
+    */
+   selected = 2
 }
 ```

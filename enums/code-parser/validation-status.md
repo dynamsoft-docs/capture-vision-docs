@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, DSValidationStatus)
    DSValidationStatusSucceeded = 1,
    /** The validation for the field has been failed. */
    DSValidationStatusFailed = 2
-}NS_SWIFT_NAME(ValidationStatus);
+};
 ```
 >
 ```swift

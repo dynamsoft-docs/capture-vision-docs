@@ -60,7 +60,7 @@ typedef NS_ENUM(NSInteger, DSQRCodeErrorCorrectionLevel)
     DSQRCodeErrorCorrectionLevelErrorCorrectionM = 2,
    /**Error Correction Level Q (medium-high) */
     DSQRCodeErrorCorrectionLevelErrorCorrectionQ = 3
-}NS_SWIFT_NAME(QRCodeErrorCorrectionLevel);
+};
 ```
 >
 ```swift

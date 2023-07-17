@@ -225,7 +225,7 @@ public class EnumBarcodeFormat {
 typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
 {
    /**No barcode format in BarcodeFormat*/
-   DSBarcodeFormatNull NS_SWIFT_NAME(Null) = 0,
+   DSBarcodeFormatNull = 0,
    /**All supported formats in BarcodeFormat .*/
    DSBarcodeFormatAll = 0x1F0000FFE3FFFFF,
    DSBarcodeFormatDefault = 0xFE3FFFFF,
@@ -323,7 +323,7 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    /**Royal Mail 4-State Customer Barcode.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
    DSBarcodeFormatRM4SCC = 1 << 56
-}NS_SWIFT_NAME(BarcodeFormat);
+};
 ```
 >
 ```swift

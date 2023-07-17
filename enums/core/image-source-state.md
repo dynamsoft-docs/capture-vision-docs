@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, DSImageSourceState)
    DSImageSourceStateBufferEmpty = 0,
    /** The source of ImageSourceAdapter is empty. */
    DSImageSourceStateExhausted = 1
-}NS_SWIFT_NAME(ImageSourceState);
+};
 ```
 >
 ```swift
@@ -58,7 +58,7 @@ public enum ImageSourceState : Int
    bufferEmpty = 0
    /** The source of ImageSourceAdapter is empty. */
    exhausted = 1
-}NS_SWIFT_NAME(ImageSourceState);
+};
 ```
 >
 ```cpp

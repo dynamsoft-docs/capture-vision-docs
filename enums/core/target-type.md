@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, DSTargetType)
    DSTargetTypePage = 0,
    /**The target type of the PDF file is "image".*/
    DSTargetTypeImage = 1
-}NS_SWIFT_NAME(TargetType);
+};
 ```
 >
 ```swift

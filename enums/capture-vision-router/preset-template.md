@@ -71,7 +71,7 @@ typedef NS_ENUM(NSInteger, DSPresetTemplate)
    DSPresetTemplateDetectAndNormalizeDocument,
    /** Template name: "normalize-document". */
    DSPresetTemplateNormalizeDocument
-}NS_SWIFT_NAME(PresetTemplate);
+};
 ```
 >
 ```swift

@@ -60,7 +60,7 @@ typedef NS_ENUM(NSInteger, DSCornerType)
    DSCornerTypeCrossIntersected,
    /** The two line segments are not intersected but they definitely consist a corner. */
    DSCornerTypeNotIntersected
-}NS_SWIFT_NAME(CornerType);
+};
 ```
 >
 ```swift
@@ -74,7 +74,7 @@ public enum CornerType : Int
    crossIntersected
    /** The two line segments are not intersected but they definitely consist a corner. */
    notIntersected
-}NS_SWIFT_NAME(CornerType);
+};
 ```
 >
 ```cpp

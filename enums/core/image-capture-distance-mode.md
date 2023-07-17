@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, DSImageCaptureDistanceMode)
    DSImageCaptureDistanceModeNear,
    /** The image is taken by long shot camera. */
    DSImageCaptureDistanceModeFar
-}NS_SWIFT_NAME(ImageCaptureDistanceMode);
+};
 ```
 >
 ```swift

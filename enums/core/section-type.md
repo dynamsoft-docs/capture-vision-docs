@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, DSSectionType)
    DSSectionTypeDocumentDetection = 6,
    /**The result is output by "document normalization" section.*/
    DSSectionTypeDocumentNormalization = 7
-}NS_SWIFT_NAME(SectionType);
+};
 ```
 >
 ```swift

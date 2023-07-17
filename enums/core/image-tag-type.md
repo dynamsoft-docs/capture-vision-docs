@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, DSImageTagType)
    DSImageTagTypeFileImage = 0,
    /**The image tag is a DSVideoFrameTag.*/
    DSImageTagTypeVideoFrame = 1,
-}NS_SWIFT_NAME(ImageTagType);
+};
 ```
 >
 ```swift

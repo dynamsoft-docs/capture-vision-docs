@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, DSVideoFrameQuality)
    VideoFrameQualityLow,
    /**The frame quality is unknown.*/
    VideoFrameQualityUnknown
-} NS_SWIFT_NAME(VideoFrameQuality);
+};
 ```
 >
 ```swift

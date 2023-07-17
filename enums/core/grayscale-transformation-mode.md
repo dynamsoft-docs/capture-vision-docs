@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, DSGrayscaleTransformationMode)
    DSGrayscaleTransformationModeSkip     = 0x00,
    /** Reserved setting for grayscale transformation mode. */
    DSGrayscaleTransformationModeRev      = -2147483648
-}NS_SWIFT_NAME(GrayscaleTransformationMode);
+};
 ```
 >
 ```swift

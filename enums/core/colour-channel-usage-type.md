@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, DSColourChannelUsageType)
     DSColourChannelUsageTypeRGBGChannelOnly = 4,
     /** Use only the blue channel for processing in RGB images.*/
     DSColourChannelUsageTypeRGBBChannelOnly = 5
-}NS_SWIFT_NAME(ColourChannelUsageType);
+};
 ```
 >
 ```swift
@@ -90,7 +90,7 @@ public enum ColourChannelUsageType : Int
    rgbgChannelOnly = 4,
     /** Use only the blue channel for processing in RGB images.*/
    rgbbChannelOnly = 5
-}NS_SWIFT_NAME(ColourChannelUsageType);
+};
 ```
 >
 ```cpp

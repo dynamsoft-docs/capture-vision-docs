@@ -119,7 +119,7 @@ typedef NS_ENUM(NSInteger, DSImagePixelFormat)
    DSImagePixelFormatBGR_888,
    /**  0:black, 255:white */
    DSImagePixelFormatBinary_8
-}NS_SWIFT_NAME(ImagePixelFormat);
+};
 ```
 >
 ```swift

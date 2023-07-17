@@ -610,7 +610,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    DSErrorCodeVINLicenseInvalid                = -90010,
    /** The license for parsing customized code type is invalid. */
    DSErrorCodeCustomizedCodeTypeLicenseInvalid = -90011,
-}NS_SWIFT_NAME(ErrorCode);
+};
 ```
 >
 ```swift

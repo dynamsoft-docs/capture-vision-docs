@@ -26,29 +26,36 @@ Enumeration `CameraPosition` describes the camera position.
 ```java
 @IntDef({})
 @Retention(RetentionPolicy.CLASS)
-public @interface EnumCameraPosition {
-   // The back-facing camera.
-   public static final int CP_FRONT= 0;
-   // The front-facing camera.
-   public static final int CP_BACK = 1;
+public @interface EnumCoordinateBase {
+   // pixel, percentage
+   public static final int CB_IMAGE = 0;
+   // DP
+   public static final int CB_VIEW = 1;
 }
 ```
 >
 ```objc
-typedef NS_ENUM(NSInteger, DSCameraPosition)
-{
-   /** The back-facing camera. */
-   EnumCameraPositionBack = 0,
-   /** The front-facing camera. */
-   EnumCameraPositionBack = 1
+typedef NS_ENUM(NSInteger, DSCoordinateBase) {
+   /**
+    * Image coordinate.
+    */
+   DSCoordinateBaseImage = 0,
+   /**
+    * View coordinate.
+    */
+   DSCoordinateBaseView = 1
 };
 ```
 >
 ```swift
-public enum CameraPosition : Int{
-   /** The back-facing camera. */
-   back = 0
-   /** The front-facing camera. */
-   front = 1
+public enum CoordinateBase : Int{
+   /**
+    * Image coordinate.
+    */
+   image = 0
+   /**
+    * View coordinate.
+    */
+   view = 1
 }
 ```

@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, DSMappingStatus)
    DSMappingStatusSucceeded = 1,
    /** Failed to find a mapping for the field value. */
    DSMappingStatusFailed = 2
-}NS_SWIFT_NAME(MappingStatus);
+};
 ```
 >
 ```swift

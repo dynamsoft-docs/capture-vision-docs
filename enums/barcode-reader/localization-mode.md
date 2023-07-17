@@ -100,7 +100,7 @@ typedef NS_ENUM(NSInteger , DSLocalizationMode)
    DSLocalizationModeRev = -2147483648,
    /**Skips localization. */
    DSLocalizationModeSkip = 0x00
-}NS_SWIFT_NAME(LocalizationMode);
+};
 ```
 >
 ```swift

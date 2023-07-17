@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
    DSCapturedResultItemTypeNormalizedImage = 16,
    /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
    DSCapturedResultItemTypeParsedResult = 32
-}NS_SWIFT_NAME(CapturedResultItemType);
+};
 ```
 >
 ```swift
@@ -90,7 +90,7 @@ public enum CapturedResultItemType : Int
    normalizedImage = 16
    /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
    parsedResult = 32
-}NS_SWIFT_NAME(CapturedResultItemType);
+};
 ```
 >
 ```cpp

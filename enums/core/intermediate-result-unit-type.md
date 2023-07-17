@@ -209,7 +209,7 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType)
    DSIntermediateResultUnitTypeNormalizedImages = 1 << 26,
    /**Specify all intermediate result types.*/
    DSIntermediateResultUnitTypeAll = 0x3FFFFFF
-}NS_SWIFT_NAME(IntermediateResultUnitType);
+};
 ```
 >
 ```swift

@@ -64,7 +64,7 @@ typedef NS_ENUM(NSInteger, DSPDFReadingMode)
    DSPDFReadingModeRaster = 0x02,
    /** Reserved setting for PDF reading mode.*/
    DSPDFReadingModeRev = -2147483648
-}NS_SWIFT_NAME(PDFReadingMode);
+};
 ```
 >
 ```swift
@@ -79,7 +79,7 @@ public enum PDFReadingMode : Int
    raster = 0x02,
    /** Reserved setting for PDF reading mode.*/
    rev = -2147483648
-}NS_SWIFT_NAME(PDFReadingMode);
+};
 ```
 >
 ```cpp

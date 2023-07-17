@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
    DSRegionObjectElementTypeDetectedQuad = 5,
    /**The type of subclass NormalizedImageElement.*/
    DSRegionObjectElementTypeNormalizedImage = 6
-}NS_SWIFT_NAME(RegionObjectElementType);
+};
 ```
 >
 ```swift

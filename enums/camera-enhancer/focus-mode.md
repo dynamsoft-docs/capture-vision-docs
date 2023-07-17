@@ -24,29 +24,38 @@ Enumeration `FocusMode` describes the focus mode.
 ```
 >
 ```java
-public enum EnumFocusMode {
+@IntDef({})
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumFocusMode {
    // Lock the focal length.
-   FM_LOCKED(1),
+   public static final int FM_LOCKED = 1;
    // Keep continuous auto-focus.
-   FM_CONTINUOUS_AUTO(2);
+   public static final int FM_CONTINUOUS_AUTO = 2;
 }
 ```
 >
 ```objc
-typedef NS_ENUM(NSInteger, EnumFocusMode)
-{
-   /** Lock the focal length. */
-   FM_LOCKED = 1,
-   /** Keep continuous auto-focus. */
-   FM_CONTINUOUS_AUTO = 2
+typedef NS_ENUM(NSInteger, DSFocusMode){
+   /**
+    * Lock the focal length.
+    */
+   FocusModeLocked           =   1,
+   /**
+    * Enable the continuous auto-focus.
+    */
+   FocusModeContinuousAuto     =   2
 };
 ```
 >
 ```swift
-public enum EnumFocusMode : Int{
-   /** Lock the focal length. */
-   FM_LOCKED = 1
-   /** Keep continuous auto-focus. */
-   FM_CONTINUOUS_AUTO = 2
+public enum FocusMode : Int{
+   /**
+    * Lock the focal length.
+    */
+   locked           =   1
+   /**
+    * Enable the continuous auto-focus.
+    */
+   continuousAuto     =   2
 }
 ```

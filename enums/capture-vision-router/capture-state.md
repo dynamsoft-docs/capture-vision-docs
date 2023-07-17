@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, DSCaptureState)
    DSCaptureStateStarted,
    /** The data capturing is stopped. */
    DSCaptureStateStopped
-} NS_SWIFT_NAME(CaptureState);
+};
 ```
 >
 ```swift
@@ -58,7 +58,7 @@ public enum CaptureState : Int
    started
    /** The data capturing is stopped. */
    stopped
-} NS_SWIFT_NAME(CaptureState);
+};
 ```
 >
 ```cpp

@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, DSBufferOverflowProtectionMode)
    DSBufferOverflowProtectionModeBlock = 0,
    /** New images are appended at the end, and oldest images are pushed out from the beginning if thebuffer is full.*/
    DSBufferOverflowProtectionModeAppend = 1,
-}NS_SWIFT_NAME(BufferOverflowProtectionMode);
+};
 ```
 >
 ```swift
