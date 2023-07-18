@@ -38,7 +38,8 @@ export enum EnumGrayscaleTransformationMode
 ```
 >
 ```java
-public class EnumGrayscaleTransformationMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumGrayscaleTransformationMode
 {
    /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
    public static final int GTM_INVERTED = 1;

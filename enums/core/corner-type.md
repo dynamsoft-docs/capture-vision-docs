@@ -36,7 +36,8 @@ export enum EnumCornerType
 ```
 >
 ```java
-public class EnumCornerType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCornerType
 {
    /** The corner is formed by two intersecting line segments. */
    public static final int CT_NORMAL_INTERSECTED = 0;

@@ -34,7 +34,8 @@ export enum EnumExtendedBarcodeResultType
 ```
 >
 ```java
-public class EnumExtendedBarcodeResultType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumExtendedBarcodeResultType
 {
    /**Specifies the standard text. This means the barcode value. */
    public static final int EBRT_STANDARD_RESULT = 0;

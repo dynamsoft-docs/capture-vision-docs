@@ -24,7 +24,7 @@ Enumeration `CameraPosition` describes the camera position.
 ```
 >
 ```java
-@IntDef({})
+@IntDef({CB_IMAGE,CB_VIEW})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumCoordinateBase {
    // pixel, percentage

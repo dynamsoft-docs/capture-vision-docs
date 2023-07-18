@@ -219,7 +219,8 @@ export enum EnumErrorCode
 ```
 >
 ```java
-public class EnumErrorCode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumErrorCode
 {
    /** Successful. */
    public static final int EC_OK = 0;

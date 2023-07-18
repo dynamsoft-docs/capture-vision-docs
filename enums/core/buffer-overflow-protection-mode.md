@@ -31,7 +31,8 @@ export enum EnumBufferOverflowProtectionMode {
 ```
 >
 ```java
-public class EnumBufferOverflowProtectionMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumBufferOverflowProtectionMode
 {
    /** New images are blocked when the buffer is full.*/
    public static final int BOPM_Block = 0;

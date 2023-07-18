@@ -40,7 +40,8 @@ export enum EnumCapturedResultItemType
 ```
 >
 ```java
-public class EnumCapturedResultItemType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCapturedResultItemType
 {
    /** The type of the CapturedResultItem is "raw image". */
    public static final int CRIT_RAW_IMAGE = 1;

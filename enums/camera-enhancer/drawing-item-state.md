@@ -24,7 +24,7 @@ Enumeration `CameraPosition` describes the camera position.
 ```
 >
 ```java
-@IntDef({})
+@IntDef({DIS_DEFAULT,DIS_SELECTED})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumDrawingItemState {
    // The state of the DrawingItem is the default state.

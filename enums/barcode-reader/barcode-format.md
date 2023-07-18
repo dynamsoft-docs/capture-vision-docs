@@ -123,7 +123,8 @@ export enum EnumBarcodeFormat {
 ```
 >
 ```java
-public class EnumBarcodeFormat {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumBarcodeFormat {
    /**All supported formats in BarcodeFormat.*/
    public static final long BF_ALL = 0x1F0000FFE3FFFFFL;
    /**The default settings.*/

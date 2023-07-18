@@ -32,7 +32,8 @@ export enum EnumImageSourceState
 ```
 >
 ```java
-public class EnumImageSourceState
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumImageSourceState
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
    public static final int ISS_BUFFER_EMPTY = 0;

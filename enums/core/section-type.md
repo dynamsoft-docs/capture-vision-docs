@@ -44,7 +44,8 @@ export enum EnumSectionType
 ```
 >
 ```java
-public class EnumSectionType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumSectionType
 {
    /**No section type is specified.*/
    public static final int ST_NULL = 0;

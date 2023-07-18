@@ -24,7 +24,7 @@ Enumeration `FocusMode` describes the focus mode.
 ```
 >
 ```java
-@IntDef({})
+@IntDef({FM_LOCKED,FM_CONTINUOUS_AUTO})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumFocusMode {
    // Lock the focal length.

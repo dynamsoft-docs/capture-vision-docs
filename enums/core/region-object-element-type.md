@@ -41,7 +41,8 @@ export enum EnumRegionObjectElementType {
 ```
 >
 ```java
-public class EnumRegionObjectElementType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumRegionObjectElementType
 {
    /**The type of subclass PredetectedRegionElement.*/
    public static final int ROET_PREDETECTED_REGION = 0;

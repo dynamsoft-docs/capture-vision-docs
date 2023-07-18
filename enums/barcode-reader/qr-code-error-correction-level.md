@@ -36,7 +36,8 @@ export enum EnumQRCodeErrorCorrectionLevel
 ```
 >
 ```java
-public class EnumQRCodeErrorCorrectionLevel
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumQRCodeErrorCorrectionLevel
 {
    /**Error Correction Level H (high) */
    public static final int QRECL_ERROR_CORRECTION_H = 0;

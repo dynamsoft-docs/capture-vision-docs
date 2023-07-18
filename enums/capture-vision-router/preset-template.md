@@ -39,7 +39,8 @@ export enum PresetTemplate {
 ```
 >
 ```java
-public class EnumPresetTemplate
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumPresetTemplate
 {
    /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
    public static final int PT_DEFAULT = 0;

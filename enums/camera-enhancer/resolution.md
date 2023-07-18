@@ -24,7 +24,7 @@ Enumeration `Resolution` describes the resolution.
 ```
 >
 ```java
-@IntDef({})
+@IntDef({RESOLUTION_AUTO,RESOLUTION_480P,RESOLUTION_720P,RESOLUTION_1080P,RESOLUTION_2K,RESOLUTION_4K})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumResolution {
    // Auto choose resolution, expected 1080P, if can't choose, choose first lower than 1080P.

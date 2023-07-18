@@ -38,7 +38,8 @@ export enum EnumPDFReadingMode
 ```
 >
 ```java
-public class EnumPDFReadingMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumPDFReadingMode
 {
    /** Capture content from vector data in PDF file. */
    public static final int PDFRM_VECTOR = 1;

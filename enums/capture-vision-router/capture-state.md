@@ -32,7 +32,8 @@ export enum EnumCaptureState
 ```
 >
 ```java
-public class EnumCaptureState
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCaptureState
 {
    /** The data capturing is started. */
    public static final int CS_STARTED = 0;

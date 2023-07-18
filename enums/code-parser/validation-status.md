@@ -34,7 +34,8 @@ export enum EnumValidationStatus
 ```
 >
 ```java
-public class EnumValidationStatus
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumValidationStatus
 {
    /** The field has no validation specified. */
    public static final int VS_NONE = 0;

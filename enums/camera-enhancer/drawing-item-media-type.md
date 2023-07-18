@@ -24,7 +24,6 @@ Enumeration `CameraPosition` describes the camera position.
 ```
 >
 ```java
-@IntDef({})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumDrawingItemMediaType {
    // The mediate type of the DrawingItem is rectangle.

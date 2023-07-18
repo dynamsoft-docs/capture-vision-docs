@@ -24,7 +24,7 @@ Enumeration `CameraState` describes the camera state.
 ```
 >
 ```java
-@IntDef({})
+@IntDef({OPENING,OPENED,CLOSING,CLOSED})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumCameraState {
    // The camera is opening.

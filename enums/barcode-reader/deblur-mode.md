@@ -47,7 +47,8 @@ export enum EnumDeblurMode {
 ```
 >
 ```java
-public class EnumDeblurMode {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumDeblurMode {
    /** Performs deblur process using the direct binarization algorithm. */
    public static final int DM_DIRECT_BINARIZATION = 0x01;
    /** Performs deblur process using the threshold binarization algorithm. */

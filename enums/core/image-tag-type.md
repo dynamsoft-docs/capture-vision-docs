@@ -32,7 +32,8 @@ export enum EnumImageTagType
 ```
 >
 ```java
-public class EnumImageTagType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumImageTagType
 {
    public static final int ITT_FILE_IMAGE = 0;
    public static final int ITT_VIDEO_FRAME = 1;

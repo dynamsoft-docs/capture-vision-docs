@@ -40,7 +40,8 @@ export enum EnumColourChannelUsageType
 ```
 >
 ```java
-public class EnumColourChannelUsageType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumColourChannelUsageType
 {
     /** Automatic color channel usage determination based on image pixel format and scene. */
     public static final int CCUT_AUTO = 0;

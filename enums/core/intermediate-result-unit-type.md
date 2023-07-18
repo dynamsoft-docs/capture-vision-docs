@@ -85,7 +85,8 @@ export enum EnumIntermediateResultUnitType {
 ```
 >
 ```java
-public class EnumIntermediateResultUnitType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumIntermediateResultUnitType
 {
    /**No IntermediateResult type is specified.*/
    public static final long IRUT_NULL = 0

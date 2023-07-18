@@ -55,7 +55,8 @@ export enum EnumImagePixelFormat {
 ```
 >
 ```java
-public class EnumCapturedResultItemType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCapturedResultItemType
 {
    /** 0:Black, 1:White. */
    public static final int IPF_BINARY = 0;

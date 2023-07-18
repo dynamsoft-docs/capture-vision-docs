@@ -31,7 +31,6 @@ Enumeration `EnhancerFeatures` indicates the advanced features of Dynamsoft Came
 ```
 >
 ```java
-@IntDef({})
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumEnhancedFeatures {
    //Enable the Frame filter feature of DCE
