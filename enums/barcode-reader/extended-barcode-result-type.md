@@ -34,7 +34,8 @@ export enum EnumExtendedBarcodeResultType
 ```
 >
 ```java
-public class EnumExtendedBarcodeResultType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumExtendedBarcodeResultType
 {
    /**Specifies the standard text. This means the barcode value. */
    public static final int EBRT_STANDARD_RESULT = 0;
@@ -54,7 +55,7 @@ typedef NS_ENUM(NSInteger, DSExtendedBarcodeResultType)
    DSExtendedBarcodeResultTypeCandidateResult = 1,
    /**Specifies the partial text. This means part of the text result decoded from the barcode. */
    DSExtendedBarcodeResultTypePartialResult = 2
-}NS_SWIFT_NAME(ExtendedBarcodeResultType);
+};
 ```
 >
 ```swift

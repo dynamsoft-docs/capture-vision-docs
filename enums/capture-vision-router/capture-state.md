@@ -32,7 +32,8 @@ export enum EnumCaptureState
 ```
 >
 ```java
-public class EnumCaptureState
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCaptureState
 {
    /** The data capturing is started. */
    public static final int CS_STARTED = 0;
@@ -48,7 +49,7 @@ typedef NS_ENUM(NSInteger, DSCaptureState)
    DSCaptureStateStarted,
    /** The data capturing is stopped. */
    DSCaptureStateStopped
-} NS_SWIFT_NAME(CaptureState);
+};
 ```
 >
 ```swift
@@ -58,7 +59,7 @@ public enum CaptureState : Int
    started
    /** The data capturing is stopped. */
    stopped
-} NS_SWIFT_NAME(CaptureState);
+};
 ```
 >
 ```cpp

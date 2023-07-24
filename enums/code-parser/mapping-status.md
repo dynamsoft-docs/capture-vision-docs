@@ -33,7 +33,8 @@ export enum EnumMappingStatus {
 ```
 >
 ```java
-public class EnumMappingStatus {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumMappingStatus {
    /** The field has no mapping specified. */
    public static final int MS_NONE = 0;
    /** Find a mapping for the field value. */
@@ -52,7 +53,7 @@ typedef NS_ENUM(NSInteger, DSMappingStatus)
    DSMappingStatusSucceeded = 1,
    /** Failed to find a mapping for the field value. */
    DSMappingStatusFailed = 2
-}NS_SWIFT_NAME(MappingStatus);
+};
 ```
 >
 ```swift

@@ -18,7 +18,7 @@ A `SemanticProcessing` object is defined as below:
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
 | ReferenceObjectFilter | JSON object | Optional | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions |
-| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameters_reference}}task-setting-name-array.html) to define a group of semantic-processing tasks. |
+| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameters_reference}}target-roi-def/task-setting-name-array.html) to define a group of semantic-processing tasks. |
 
 Here is a sample:
 

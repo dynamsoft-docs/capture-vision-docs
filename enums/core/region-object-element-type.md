@@ -41,7 +41,8 @@ export enum EnumRegionObjectElementType {
 ```
 >
 ```java
-public class EnumRegionObjectElementType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumRegionObjectElementType
 {
    /**The type of subclass PredetectedRegionElement.*/
    public static final int ROET_PREDETECTED_REGION = 0;
@@ -77,7 +78,7 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
    DSRegionObjectElementTypeDetectedQuad = 5,
    /**The type of subclass NormalizedImageElement.*/
    DSRegionObjectElementTypeNormalizedImage = 6
-}NS_SWIFT_NAME(RegionObjectElementType);
+};
 ```
 >
 ```swift

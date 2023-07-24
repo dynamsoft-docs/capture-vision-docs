@@ -38,7 +38,8 @@ export enum EnumPDFReadingMode
 ```
 >
 ```java
-public class EnumPDFReadingMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumPDFReadingMode
 {
    /** Capture content from vector data in PDF file. */
    public static final int PDFRM_VECTOR = 1;
@@ -64,7 +65,7 @@ typedef NS_ENUM(NSInteger, DSPDFReadingMode)
    DSPDFReadingModeRaster = 0x02,
    /** Reserved setting for PDF reading mode.*/
    DSPDFReadingModeRev = -2147483648
-}NS_SWIFT_NAME(PDFReadingMode);
+};
 ```
 >
 ```swift
@@ -79,7 +80,7 @@ public enum PDFReadingMode : Int
    raster = 0x02,
    /** Reserved setting for PDF reading mode.*/
    rev = -2147483648
-}NS_SWIFT_NAME(PDFReadingMode);
+};
 ```
 >
 ```cpp

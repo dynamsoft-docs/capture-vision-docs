@@ -32,7 +32,8 @@ export enum EnumTargetType
 ```
 >
 ```java
-public class EnumTargetType {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumTargetType {
    /**The target type of the PDF file is "page". Only available for PDFReadingMode raster.*/
    public static final int TT_PAGE = 0;
    /**The target type of the PDF file is "image".*/
@@ -47,7 +48,7 @@ typedef NS_ENUM(NSInteger, DSTargetType)
    DSTargetTypePage = 0,
    /**The target type of the PDF file is "image".*/
    DSTargetTypeImage = 1
-}NS_SWIFT_NAME(TargetType);
+};
 ```
 >
 ```swift
