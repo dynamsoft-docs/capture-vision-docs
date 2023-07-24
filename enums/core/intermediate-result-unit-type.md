@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: IntermediateResultUnitType
+codeAutoHeight: true
 ---
 
 # Enumeration IntermediateResultUnitType

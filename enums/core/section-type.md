@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: SectionType
+codeAutoHeight: true
 ---
 
 # Enumeration SectionType
