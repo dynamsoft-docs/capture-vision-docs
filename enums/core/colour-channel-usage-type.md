@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ColourChannelUsageType
+codeAutoHeight: true
 ---
 
 # Enumeration ColourChannelUsageType
@@ -40,7 +41,8 @@ enum EnumColourChannelUsageType
 ```
 >
 ```java
-public class EnumColourChannelUsageType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumColourChannelUsageType
 {
     /** Automatic color channel usage determination based on image pixel format and scene. */
     public static final int CCUT_AUTO = 0;
@@ -72,7 +74,7 @@ typedef NS_ENUM(NSInteger, DSColourChannelUsageType)
     DSColourChannelUsageTypeRGBGChannelOnly = 4,
     /** Use only the blue channel for processing in RGB images.*/
     DSColourChannelUsageTypeRGBBChannelOnly = 5
-}NS_SWIFT_NAME(ColourChannelUsageType);
+};
 ```
 >
 ```swift
@@ -90,7 +92,7 @@ public enum ColourChannelUsageType : Int
    rgbgChannelOnly = 4,
     /** Use only the blue channel for processing in RGB images.*/
    rgbbChannelOnly = 5
-}NS_SWIFT_NAME(ColourChannelUsageType);
+};
 ```
 >
 ```cpp

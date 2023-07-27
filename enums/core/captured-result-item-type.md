@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: CapturedResultItemType
+codeAutoHeight: true
 ---
 
 # Enumeration CapturedResultItemType
@@ -40,7 +41,8 @@ enum EnumCapturedResultItemType
 ```
 >
 ```java
-public class EnumCapturedResultItemType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCapturedResultItemType
 {
    /** The type of the CapturedResultItem is "raw image". */
    public static final int CRIT_RAW_IMAGE = 1;
@@ -72,7 +74,7 @@ typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
    DSCapturedResultItemTypeNormalizedImage = 16,
    /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
    DSCapturedResultItemTypeParsedResult = 32
-}NS_SWIFT_NAME(CapturedResultItemType);
+};
 ```
 >
 ```swift
@@ -90,7 +92,7 @@ public enum CapturedResultItemType : Int
    normalizedImage = 16
    /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
    parsedResult = 32
-}NS_SWIFT_NAME(CapturedResultItemType);
+};
 ```
 >
 ```cpp

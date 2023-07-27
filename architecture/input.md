@@ -75,7 +75,6 @@ captureVisionRouter.setInput(cameraEnhancer);
 CaptureVisionRouter router = new CaptureVisionRouter();
 CameraView cameraView = findViewById(R.id.dce_camera_view);
 CameraEnhancer dce = new CameraEnhancer(cameraView, activity);
-
 router.setInput(dce);
 ```
 >
@@ -117,12 +116,45 @@ Directory Fetcher is available on Mobile and Desktop/Server Platforms. It enable
    >
 >
 ```java
+// Create a new instance of CaptureVisionRouter
+CaptureVisionRouter router = new CaptureVisionRouter();
+// Create a new instance of DirectoryFetcher
+DirectoryFetcher fetcher = new DirectoryFetcher();
+// Config the fetcher
+fetcher.setImageFetchInterval(1000);
+fetcher.setDirectory("/PATH/TO/DIRECTORY", "*.JPG", true);
+// Set the fetcher as the input source
+router.SetInput(fetcher);
+// Start the image capture process
+// ...
 ```
 >
 ```objc
+// Create a new instance of CaptureVisionRouter
+DSCaptureVisionRouter* router = [[DSCaptureVisionRouter alloc] init];
+// Create a new instance of DirectoryFetcher
+DSDirectoryFetcher* fetcher = [[DSDirectoryFetcher alloc] init];
+// Config the fetcher
+[fetcher setImageFetchInterval:1000];
+[fetcher setDirectory:@"/PATH/TO/DIRECTORY" filter:@"*.JPG" recursive:YES];
+// Set the fetcher as the input source
+[router setInput:fetcher];
+// Start the image capture process
+// ...
 ```
 >
 ```swift
+// Create a new instance of CaptureVisionRouter
+var router = CaptureVisionRouter.init()
+// Create a new instance of DirectoryFetcher
+var fetcher = DirectoryFetcher.init()
+// Config the fetcher
+fetcher.setImageFetchInterval(1000)
+fetcher.setDirectory("/PATH/TO/DIRECTORY", filter:"*.jpg", recursive:true)
+// Set the fetcher as the input source
+router.setInput(fetcher)
+// Start the image capture process
+// ...
 ```
 >
 ```cpp
@@ -202,6 +234,45 @@ abstract class ImageSourceAdapter {
      * Determines whether the buffer is empty.
      */
     isBufferEmpty: () => boolean;
+}
+```
+>
+```java
+public abstract class ImageSourceAdapter
+{
+    public abstract boolean hasNextImageToFetch();
+    public void addImageToBuffer(ImageData image);
+    /**
+     * Returns a buffered image.
+     * @param removeFromBuffer Whether ISA should remove the image from Buffer after it is returned.
+     */
+    public ImageData getImage();
+    public void startFetching();
+    public void stopFetching();
+    /**
+     * invoke setNextImageToReturn(imageId, true)
+     */
+    public boolean setNextImageToReturn(int imageId);
+    public boolean setNextImageToReturn(int imageId, boolean keepInBuffer);
+    public boolean hasImage(int imageId);
+    /* Sets how many images are allowed to be buffered.
+     * @recommendation A class that implements the interface
+     * should try to keep the buffer full if at all possible.*/
+    public void setMaximumImageCount(int count);
+    /* Returns how many images can be buffered. */
+    public int getMaximumImageCount();
+    /* Sets a mode that determines the action to take when there
+     * is a new incoming image and the buffer is full.
+     * Allowed methods are defined in BufferOverflowProtectionMode.*/
+    public void setBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
+    public BufferOverflowProtectionMode getBufferOverflowProtectionMode();
+    /* Returns the actual count of buffered images. */
+    public int getImageCount();
+    /** Determines whether the buffer is empty.*/
+    public boolean isBufferEmpty();
+    public void clearBuffer();
+    public void setColourChannelUsageType(EnumColourChannelUsageType type);
+    public EnumColourChannelUsageType getColourChannelUsageType();
 }
 ```
 >

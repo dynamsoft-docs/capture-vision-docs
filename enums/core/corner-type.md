@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: CornerType
+codeAutoHeight: true
 ---
 
 # Enumeration CornerType
@@ -36,7 +37,8 @@ enum EnumCornerType
 ```
 >
 ```java
-public class EnumCornerType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCornerType
 {
    /** The corner is formed by two intersecting line segments. */
    public static final int CT_NORMAL_INTERSECTED = 0;
@@ -60,7 +62,7 @@ typedef NS_ENUM(NSInteger, DSCornerType)
    DSCornerTypeCrossIntersected,
    /** The two line segments are not intersected but they definitely consist a corner. */
    DSCornerTypeNotIntersected
-}NS_SWIFT_NAME(CornerType);
+};
 ```
 >
 ```swift
@@ -74,7 +76,7 @@ public enum CornerType : Int
    crossIntersected
    /** The two line segments are not intersected but they definitely consist a corner. */
    notIntersected
-}NS_SWIFT_NAME(CornerType);
+};
 ```
 >
 ```cpp

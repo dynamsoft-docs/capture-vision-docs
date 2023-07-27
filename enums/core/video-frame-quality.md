@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: VideoFrameQuality
+codeAutoHeight: true
 ---
 
 # Enumeration VideoFrameQuality
@@ -33,7 +34,8 @@ enum EnumVideoFrameQuality {
 ```
 >
 ```java
-public class EnumVideoFrameQuality {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumVideoFrameQuality {
    /**The frame quality is measured to be high.*/
    public static final int VFQ_HIGH = 0;
    /**The frame quality is measured to be low.*/
@@ -52,7 +54,7 @@ typedef NS_ENUM(NSInteger, DSVideoFrameQuality)
    VideoFrameQualityLow,
    /**The frame quality is unknown.*/
    VideoFrameQualityUnknown
-} NS_SWIFT_NAME(VideoFrameQuality);
+};
 ```
 >
 ```swift

@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: GrayscaleEnhancementMode
+codeAutoHeight: true
 ---
 
 # Enumeration GrayscaleEnhancementMode
@@ -42,7 +43,8 @@ enum EnumGrayscaleEnhancementMode
 ```
 >
 ```java
-public class EnumGrayscaleEnhancementMode {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumGrayscaleEnhancementMode {
    /**Not supported yet. */
    public static final int GEM_AUTO = 1;
    /**Takes the unpreprocessed image for following operations.*/

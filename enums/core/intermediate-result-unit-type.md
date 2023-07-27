@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: IntermediateResultUnitType
+codeAutoHeight: true
 ---
 
 # Enumeration IntermediateResultUnitType
@@ -85,7 +86,8 @@ enum EnumIntermediateResultUnitType {
 ```
 >
 ```java
-public class EnumIntermediateResultUnitType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumIntermediateResultUnitType
 {
    /**No IntermediateResult type is specified.*/
    public static final long IRUT_NULL = 0
@@ -209,7 +211,7 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType)
    DSIntermediateResultUnitTypeNormalizedImages = 1 << 26,
    /**Specify all intermediate result types.*/
    DSIntermediateResultUnitTypeAll = 0x3FFFFFF
-}NS_SWIFT_NAME(IntermediateResultUnitType);
+};
 ```
 >
 ```swift

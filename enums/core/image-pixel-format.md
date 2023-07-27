@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ImagePixelFormat
+codeAutoHeight: true
 ---
 
 # Enumeration ImagePixelFormat
@@ -55,7 +56,8 @@ enum EnumImagePixelFormat {
 ```
 >
 ```java
-public class EnumCapturedResultItemType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCapturedResultItemType
 {
    /** 0:Black, 1:White. */
    public static final int IPF_BINARY = 0;
@@ -119,7 +121,7 @@ typedef NS_ENUM(NSInteger, DSImagePixelFormat)
    DSImagePixelFormatBGR_888,
    /**  0:black, 255:white */
    DSImagePixelFormatBinary_8
-}NS_SWIFT_NAME(ImagePixelFormat);
+};
 ```
 >
 ```swift

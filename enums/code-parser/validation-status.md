@@ -34,7 +34,8 @@ enum EnumValidationStatus
 ```
 >
 ```java
-public class EnumValidationStatus
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumValidationStatus
 {
    /** The field has no validation specified. */
    public static final int VS_NONE = 0;
@@ -54,7 +55,7 @@ typedef NS_ENUM(NSInteger, DSValidationStatus)
    DSValidationStatusSucceeded = 1,
    /** The validation for the field has been failed. */
    DSValidationStatusFailed = 2
-}NS_SWIFT_NAME(ValidationStatus);
+};
 ```
 >
 ```swift

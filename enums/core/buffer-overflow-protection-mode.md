@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BufferOverflowProtectionMode
+codeAutoHeight: true
 ---
 
 # Enumeration BufferOverflowProtectionMode
@@ -31,7 +32,8 @@ enum EnumBufferOverflowProtectionMode {
 ```
 >
 ```java
-public class EnumBufferOverflowProtectionMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumBufferOverflowProtectionMode
 {
    /** New images are blocked when the buffer is full.*/
    public static final int BOPM_Block = 0;
@@ -47,7 +49,7 @@ typedef NS_ENUM(NSInteger, DSBufferOverflowProtectionMode)
    DSBufferOverflowProtectionModeBlock = 0,
    /** New images are appended at the end, and oldest images are pushed out from the beginning if thebuffer is full.*/
    DSBufferOverflowProtectionModeAppend = 1,
-}NS_SWIFT_NAME(BufferOverflowProtectionMode);
+};
 ```
 >
 ```swift

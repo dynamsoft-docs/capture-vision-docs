@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: QRCodeErrorCorrectionLevel
+codeAutoHeight: true
 ---
 
 # Enumeration QRCodeErrorCorrectionLevel
@@ -36,7 +37,8 @@ enum EnumQRCodeErrorCorrectionLevel
 ```
 >
 ```java
-public class EnumQRCodeErrorCorrectionLevel
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumQRCodeErrorCorrectionLevel
 {
    /**Error Correction Level H (high) */
    public static final int QRECL_ERROR_CORRECTION_H = 0;
@@ -60,7 +62,7 @@ typedef NS_ENUM(NSInteger, DSQRCodeErrorCorrectionLevel)
     DSQRCodeErrorCorrectionLevelErrorCorrectionM = 2,
    /**Error Correction Level Q (medium-high) */
     DSQRCodeErrorCorrectionLevelErrorCorrectionQ = 3
-}NS_SWIFT_NAME(QRCodeErrorCorrectionLevel);
+};
 ```
 >
 ```swift

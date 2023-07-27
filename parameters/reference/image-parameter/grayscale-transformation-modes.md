@@ -50,7 +50,7 @@ Parameter `GrayscaleTransformationModes` consist of a group of grayscale transfo
         <td><b>Type</b><br><i>String</i></td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>GTM_ORIGINAL<br>GTM_INVERTED<br>GTM_SKIP
+        <td><b>Candidate Mode List</b><br>GTM_ORIGINAL<br>GTM_INVERTED<br>GTM_AUTO
         </td>
     </tr>
 </table>
@@ -58,6 +58,37 @@ Parameter `GrayscaleTransformationModes` consist of a group of grayscale transfo
 ### Default Setting
 
 If the `GrayscaleTransformationModes` is not configured in your template file, the following settings will be used as the default settings.
+
+#### For Barcode Decoding
+
+```json
+{
+    "GrayscaleTransformationModes": 
+    [
+        {
+            "Mode": "GTM_ORIGINAL" 
+        }
+    ]
+}
+```
+
+#### For Label Recognizing
+
+```json
+{
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "GTM_ORIGINAL"
+        },
+        {
+            "Mode": "GTM_INVERTED" 
+        }
+    ]
+}
+```
+
+
+#### For Document Scanning
 
 ```json
 {
@@ -80,6 +111,6 @@ Keeps the original grayscale.
 
 Transforms the image to inverted grayscale.
 
-### GTM_INVERTED
+### GTM_AUTO
 
 Let the library choose automatically for grayscale transformation.
