@@ -22,7 +22,7 @@ breadcrumbText: ExtendedBarcodeResultType
    >
 >
 ```javascript
-export enum EnumExtendedBarcodeResultType
+enum EnumExtendedBarcodeResultType
 {
    /**Specifies the standard text. This means the barcode value. */
    EBRT_STANDARD_RESULT = 0,

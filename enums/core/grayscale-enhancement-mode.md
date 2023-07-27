@@ -22,7 +22,7 @@ breadcrumbText: GrayscaleEnhancementMode
    >
 >
 ```javascript
-export enum EnumGrayscaleEnhancementMode
+enum EnumGrayscaleEnhancementMode
 {
    /**Not supported yet. */
    GEM_AUTO = 1,

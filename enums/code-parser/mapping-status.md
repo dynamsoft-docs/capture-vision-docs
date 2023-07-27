@@ -22,7 +22,7 @@ breadcrumbText: MappingStatus
    >
 >
 ```javascript
-export enum EnumMappingStatus {
+enum EnumMappingStatus {
    /** The field has no mapping specified. */
    MS_NONE = 0,
    /** Find a mapping for the field value. */

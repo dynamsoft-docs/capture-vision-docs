@@ -22,7 +22,7 @@ breadcrumbText: PresetTemplate
    >
 >
 ```javascript
-export enum PresetTemplate {
+enum PresetTemplate {
    /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
    PT_DEFAULT = 0,
    /** Template name: "read-barcodes". */

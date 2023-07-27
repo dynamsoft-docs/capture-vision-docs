@@ -22,7 +22,7 @@ breadcrumbText: VideoFrameQuality
    >
 >
 ```javascript
-export enum EnumVideoFrameQuality {
+enum EnumVideoFrameQuality {
    /**The frame quality is measured to be high.*/
    VFQ_HIGH = 0,
    /**The frame quality is measured to be low.*/

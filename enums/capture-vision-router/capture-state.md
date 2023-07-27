@@ -22,7 +22,7 @@ breadcrumbText: CaptureState
    >
 >
 ```javascript
-export enum EnumCaptureState
+enum EnumCaptureState
 {
    /** The data capturing is started. */
    CS_STARTED = 0,

@@ -22,7 +22,7 @@ breadcrumbText: GrayscaleTransformationMode
    >
 >
 ```javascript
-export enum EnumGrayscaleTransformationMode
+enum EnumGrayscaleTransformationMode
 {
    /** Skips grayscale transformation. */
    GTM_SKIP = 0,

@@ -22,7 +22,7 @@ Enumeration `IntermediateResultUnitType` is used in each subclass of `Intermedia
    >
 >
 ```javascript
-export enum EnumIntermediateResultUnitType {
+enum EnumIntermediateResultUnitType {
    /**No IntermediateResult type is specified.*/
    IRUT_NULL = 0,
    /**The type of the IntermediateResult is "colour image".*/

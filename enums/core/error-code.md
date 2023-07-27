@@ -22,7 +22,7 @@ breadcrumbText: ErrorCode
    >
 >
 ```javascript
-export enum EnumErrorCode
+enum EnumErrorCode
 {
    /**Successful. */
    EC_OK = 0,

@@ -22,7 +22,7 @@ breadcrumbText: RegionObjectElementType
    >
 >
 ```javascript
-export enum EnumRegionObjectElementType {
+enum EnumRegionObjectElementType {
    /**The type of subclass PredetectedRegionElement.*/
    ROET_PREDETECTED_REGION = 0,
    /**The type of subclass LocalizedBarcodeElement.*/

@@ -22,7 +22,7 @@ breadcrumbText: PDFReadingMode
    >
 >
 ```javascript
-export enum EnumPDFReadingMode
+enum EnumPDFReadingMode
 {
    /** Outputs vector data found in the PDFs.*/
    PDFRM_VECTOR = 1,

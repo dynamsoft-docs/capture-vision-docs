@@ -22,7 +22,7 @@ breadcrumbText: CapturedResultItemType
    >
 >
 ```javascript
-export enum EnumCapturedResultItemType
+enum EnumCapturedResultItemType
 {
    /** The type of the CapturedResultItem is "raw image". */
    CRIT_RAW_IMAGE = 1,

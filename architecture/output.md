@@ -49,7 +49,7 @@ The CRR interface consists of
    >
 >
 ```javascript
-export interface CapturedResultReceiver {
+interface CapturedResultReceiver {
     /**
      * All results found on the image are returned through this callback.
      * This callback is always triggered.

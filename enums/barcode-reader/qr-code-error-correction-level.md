@@ -22,7 +22,7 @@ breadcrumbText: QRCodeErrorCorrectionLevel
    >
 >
 ```javascript
-export enum EnumQRCodeErrorCorrectionLevel
+enum EnumQRCodeErrorCorrectionLevel
 {
    /**Error Correction Level H (high) */
    QRECL_ERROR_CORRECTION_H = 0,

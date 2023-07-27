@@ -22,7 +22,7 @@ breadcrumbText: DeblurMode
    >
 >
 ```javascript
-export enum EnumDeblurMode {
+enum EnumDeblurMode {
    /** Performs deblur process using the direct binarization algorithm. */
    DM_DIRECT_BINARIZATION = 1,
    /** Performs deblur process using the threshold binarization algorithm. */

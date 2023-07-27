@@ -22,7 +22,7 @@ breadcrumbText: CornerType
    >
 >
 ```javascript
-export enum EnumCornerType
+enum EnumCornerType
 {
    /** The corner is formed by two intersecting line segments. */
    CT_NORMAL_INTERSECTED = 0,

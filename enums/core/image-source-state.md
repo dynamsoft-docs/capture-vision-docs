@@ -22,7 +22,7 @@ breadcrumbText: ImageSourceState
    >
 >
 ```javascript
-export enum EnumImageSourceState
+enum EnumImageSourceState
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
    ISS_BUFFER_EMPTY = 0,

@@ -22,7 +22,7 @@ breadcrumbText: ImagePixelFormat
    >
 >
 ```javascript
-export enum EnumImagePixelFormat {
+enum EnumImagePixelFormat {
    /** 0:Black, 1:White. */
    IPF_BINARY = 0,
    /** 0:White, 1:Black. */

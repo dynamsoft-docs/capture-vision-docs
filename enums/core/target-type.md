@@ -22,7 +22,7 @@ breadcrumbText: TargetType
    >
 >
 ```javascript
-export enum EnumTargetType
+enum EnumTargetType
 {
    /**The target type of the PDF file is "page". Only available for PDFReadingMode PDFRM_RASTER.*/
    TT_PAGE = 0,

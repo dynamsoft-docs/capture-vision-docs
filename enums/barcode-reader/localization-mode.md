@@ -22,7 +22,7 @@ breadcrumbText: LocalizationMode
    >
 >
 ```javascript
-export enum EnumLocalizationMode {
+enum EnumLocalizationMode {
    /**Not supported yet. */
    LM_AUTO = 1,
    /**Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. */

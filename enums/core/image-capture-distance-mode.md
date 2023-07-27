@@ -22,7 +22,7 @@ breadcrumbText: ImageCaptureDistanceMode
    >
 >
 ```javascript
-export enum ImageCaptureDistanceMode
+enum ImageCaptureDistanceMode
 {
    /** The image is taken by close-up shot camera. */
    ICDM_NEAR = 0,

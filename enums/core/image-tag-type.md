@@ -22,7 +22,7 @@ breadcrumbText: ImageTagType
    >
 >
 ```javascript
-export enum EnumImageTagType
+enum EnumImageTagType
 {
    /**The image is a file image.*/
    ITT_FILE_IMAGE = 0,

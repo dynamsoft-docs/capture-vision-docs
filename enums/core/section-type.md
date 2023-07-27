@@ -22,7 +22,7 @@ breadcrumbText: SectionType
    >
 >
 ```javascript
-export enum EnumSectionType
+enum EnumSectionType
 {
    /**No section type is specified.*/
    ST_NULL = 0,

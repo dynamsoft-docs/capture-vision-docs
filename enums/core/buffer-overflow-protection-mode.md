@@ -22,7 +22,7 @@ breadcrumbText: BufferOverflowProtectionMode
    >
 >
 ```javascript
-export enum EnumBufferOverflowProtectionMode {
+enum EnumBufferOverflowProtectionMode {
    /** New images are blocked when the buffer is full.*/
    BOPM_Block = 0,
    /** New images are appended at the end, and oldest images are pushed out frombeginning if the buffer is full.*/

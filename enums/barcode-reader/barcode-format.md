@@ -22,7 +22,7 @@ breadcrumbText: BarcodeFormat
    >
 >
 ```javascript
-export enum EnumBarcodeFormat {
+enum EnumBarcodeFormat {
    /**No barcode format in BarcodeFormat*/
    BF_NULL = 0x00,
    /**All supported formats in BarcodeFormat*/

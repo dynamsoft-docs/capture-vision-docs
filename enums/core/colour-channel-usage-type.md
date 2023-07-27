@@ -22,7 +22,7 @@ breadcrumbText: ColourChannelUsageType
    >
 >
 ```javascript
-export enum EnumColourChannelUsageType
+enum EnumColourChannelUsageType
 {
     /** Automatic color channel usage determination based on image pixel format and scene. */
     CCUT_AUTO = 0,

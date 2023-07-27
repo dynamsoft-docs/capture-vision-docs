@@ -22,7 +22,7 @@ breadcrumbText: ValidationStatus
    >
 >
 ```javascript
-export enum EnumValidationStatus
+enum EnumValidationStatus
 {
    /** The field has no validation specified. */
    VS_NONE = 0,
