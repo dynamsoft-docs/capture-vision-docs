@@ -14,98 +14,93 @@ breadcrumbText: PresetTemplate
 `PresetTemplate` describes the state of data capturing.
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >- C++
    >
 >
-```javascript
-enum PresetTemplate {
-   /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
-   PT_DEFAULT = 0,
-   /** Template name: "read-barcodes". */
-   PT_READ_BARCODES = 1,
-   /** Template name: "recognize-textLines". */
-   PT_RECOGNIZE_TEXT_LINES = 2,
-   /** Template name: "detect-document-boundaries". */
-   PT_DETECT_DOCUMENT_BOUNDARIES = 3,
-   /** Template name: "detect-and-normalize-document". */
-   PT_DETECT_AND_NORMALIZE_DOCUMENT = 4,
-   /** Template name: "normalize-document". */
-   PT_NORMALIZE_DOCUMENT = 5
-}
-```
->
 ```java
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumPresetTemplate
 {
    /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
-   public static final int PT_DEFAULT = 0;
+   String PT_DEFAULT = "default"; 
    /** Template name: "read-barcodes". */
-   public static final int PT_READ_BARCODES = 1;
+   String PT_READ_BARCODES = "read-barcodes";
    /** Template name: "recognize-textLines". */
-   public static final int PT_RECOGNIZE_TEXT_LINES = 2;
+   String PT_RECOGNIZE_TEXT_LINES = "recognize-textlines";
    /** Template name: "detect-document-boundaries". */
-   public static final int PT_DETECT_DOCUMENT_BOUNDARIES = 3;
+   String PT_DETECT_DOCUMENT_BOUNDARIES = "detect-document-boundaries";
    /** Template name: "detect-and-normalize-document". */
-   public static final int PT_DETECT_AND_NORMALIZE_DOCUMENT = 4;
+   String PT_DETECT_AND_NORMALIZE_DOCUMENT = "detect-and-normalize-document";
    /** Template name: "normalize-document". */
-   public static final int PT_NORMALIZE_DOCUMENT = 5;
+   String PT_NORMALIZE_DOCUMENT = "normalize-document";
 }
 ```
 >
 ```objc
-typedef NS_ENUM(NSInteger, DSPresetTemplate)
-{
-   /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
-   DSPresetTemplateDefault,
-   /** Template name: "read-barcodes". */
-   DSPresetTemplateReadBarcodes,
-   /** Template name: "recognize-textLines". */
-   DSPresetTemplateRecognizeTextLines,
-   /** Template name: "detect-document-boundaries". */
-   DSPresetTemplateDetectDocumentBoundaries,
-   /** Template name: "detect-and-normalize-document". */
-   DSPresetTemplateDetectAndNormalizeDocument,
-   /** Template name: "normalize-document". */
-   DSPresetTemplateNormalizeDocument
-};
+/**
+ * DSPresetTemplate defines the enumerations that indicates the preset capture vision templates.
+ */
+typedef NSString * DSPresetTemplate NS_STRING_ENUM NS_SWIFT_NAME(PresetTemplate);
+/**
+ * The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "default".
+ */
+FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateDefault NS_SWIFT_NAME(presetDefault);
+/**
+ * The template that enables barcode decoding only. The template name is "read-barcodes".
+ */
+FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateReadBarcodes NS_SWIFT_NAME(readBarcodes);
+/**
+ * The template that enables label recognizing only. The template name is "recognize-textLines".
+ */
+FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateRecognizeTextLines NS_SWIFT_NAME(recognizeTextLines);
+/**
+ * The template that enables boundary detecting only. The template name is "detect-document-boundaries".
+ */
+FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateDetectDocumentBoundaries NS_SWIFT_NAME(detectDocumentBoundaries);
+/**
+ * The template that enables both boundary detecting and document normalizing. The template name is "detect-and-normalize-document".
+ */
+FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateDetectAndNormalizeDocument NS_SWIFT_NAME(detectAndNormalizeDocument);
+/**
+ * The template that enables document normalizing only. The template name is "normalize-document".
+ */
+FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateNormalizeDocument NS_SWIFT_NAME(normalizeDocument);
 ```
 >
 ```swift
-public enum PresetTemplate : Int
+struct PresetTemplate
 {
    /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
-   default
+   static let default = "default";
    /** Template name: "read-barcodes". */
-   readBarcodes
+    static let readBarcodes = "read-barcodes";
    /** Template name: "recognize-textLines". */
-   recognizeTextLines
+    static let recognizeTextLines = "recognize-textLines";
    /** Template name: "detect-document-boundaries". */
-   detectDocumentBoundaries
+    static let detectDocumentBoundaries = "detect-document-boundaries";
    /** Template name: "detect-and-normalize-document". */
-   detectAndNormalizeDocument
+    static let detectAndNormalizeDocument ="detect-and-normalize-document";
    /** Template name: "normalize-document". */
-   normalizeDocument
+    static let normalizeDocument="normalize-document";
 }
 ```
 >
 ```cpp
-typedef enum PresetTemplate {
-   /** Template name: "default". It implements barcode decoding, label recognizing and document   normalizing. */
-   PT_DEFAULT,
+class CPresetTemplate {
+   /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
+   static const char* PT_DEFAULT;
    /** Template name: "read-barcodes". */
-   PT_READ_BARCODES,
+   static const char* PT_READ_BARCODES;
    /** Template name: "recognize-textLines". */
-   PT_RECOGNIZE_TEXT_LINES,
+   static const char* PT_RECOGNIZE_TEXT_LINES;
    /** Template name: "detect-document-boundaries". */
-   PT_DETECT_DOCUMENT_BOUNDARIES,
+   static const char* PT_DETECT_DOCUMENT_BOUNDARIES; 
    /** Template name: "detect-and-normalize-document". */
-   PT_DETECT_AND_NORMALIZE_DOCUMENT,
+   static const char* PT_DETECT_AND_NORMALIZE_DOCUMENT;
    /** Template name: "normalize-document". */
-   PT_NORMALIZE_DOCUMENT
-} PresetTemplate;
+   static const char* PT_NORMALIZE_DOCUMENT; 
+};
 ```

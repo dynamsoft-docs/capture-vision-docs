@@ -26,7 +26,7 @@ codeAutoHeight: true
 enum EnumCapturedResultItemType
 {
    /** The type of the CapturedResultItem is "raw image". */
-   CRIT_RAW_IMAGE = 1,
+   CRIT_ORIGINAL_IMAGE = 1,
    /** The type of the CapturedResultItem is "barcode". */
    CRIT_BARCODE = 2,
    /** The type of the CapturedResultItem is "text line". */
@@ -45,7 +45,7 @@ enum EnumCapturedResultItemType
 public @interface EnumCapturedResultItemType
 {
    /** The type of the CapturedResultItem is "raw image". */
-   public static final int CRIT_RAW_IMAGE = 1;
+   public static final int CRIT_ORIGINAL_IMAGE = 1;
    /** The type of the CapturedResultItem is "barcode". */
    public static final int CRIT_BARCODE = 2;
    /** The type of the CapturedResultItem is "text line". */
@@ -63,7 +63,7 @@ public @interface EnumCapturedResultItemType
 typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
 {
    /** The captured result is a raw image. You can convert it into a DSRawImageResultItem. */
-   DSCapturedResultItemTypeRawImage = 1,
+   DSCapturedResultItemTypeOriginalImage = 1,
    /** The captured result is a decoded barcode. You can convert it into a DSBarcodeResultItem. */
    DSCapturedResultItemTypeBarcode = 2,
    /** The captured result is a recognized text line. You can convert it into a DSTextLineResultItem. */
@@ -81,7 +81,7 @@ typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
 public enum CapturedResultItemType : Int
 {
    /** The captured result is a raw image. You can convert it into a DSRawImageResultItem. */
-   rawImage = 1
+   originalImage = 1
    /** The captured result is a decoded barcode. You can convert it into a DSBarcodeResultItem. */
    barcode = 2
    /** The captured result is a recognized text line. You can convert it into a DSTextLineResultItem. */
