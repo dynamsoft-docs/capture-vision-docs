@@ -8,6 +8,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: CapturedResultItemType
 codeAutoHeight: true
+permalink: /enums/core/captured-result-item-type-v2.0.0.html
 ---
 
 # Enumeration CapturedResultItemType
@@ -98,8 +99,8 @@ public enum CapturedResultItemType : Int
 ```cpp
 typedef enum CapturedResultItemType
 {
-   /** The type of the CapturedResultItem is "original image". */
-   CRIT_ORIGINAL_IMAGE = 1,
+   /** The type of the CapturedResultItem is "raw image". */
+   CRIT_RAW_IMAGE = 1,
    /** The type of the CapturedResultItem is "barcode". */
    CRIT_BARCODE = 2,
    /** The type of the CapturedResultItem is "text line". */
