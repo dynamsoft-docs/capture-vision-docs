@@ -67,7 +67,7 @@ permalink: /parameters/reference/index.html
 | [`ColourMode`](document-normalizer-task-settings/colour-mode.md) | Defines the output colour mode of the normalized image. |
 | [`ContentType`](document-normalizer-task-settings/content-type.md) | Defines which contents are the targeting objects. |
 | [`Contrast`](document-normalizer-task-settings/contrast.md) | Defines the contrast of the normalized image. |
-| [`CornerAngleRangeArray`](document-normalizer-task-settings/corner-angle-range-array.md) | Defines the range of angles (in degrees) of the extracted corners. |
+| [`CornerAngleRange`](document-normalizer-task-settings/corner-angle-range.md) | Defines the range of angles (in degrees) of the extracted corners. |
 | [`DeskewMode`](document-normalizer-task-settings/deskew-mode.md) | Defines the method in which the deskew process way used to apply the deskew process on the target normalized image. |
 | [`LineExtractionModes`](document-normalizer-task-settings/line-extraction-modes.md) | Defines the algorithm used to extract lines. |
 | [`PageSize`](document-normalizer-task-settings/page-size.md) | Defines the page size (width by height in pixels) of the normalized image. |

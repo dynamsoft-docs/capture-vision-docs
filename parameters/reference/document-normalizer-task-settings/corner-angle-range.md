@@ -1,23 +1,23 @@
 ---
 layout: default-layout
-Title: CornerAngleRangeArray - Dynamsoft Document Normalizer Parameters
-Description: The parameter CornerAngleRangeArray of Dynamsoft Document Normalizer is XXX.
+Title: CornerAngleRange - Dynamsoft Document Normalizer Parameters
+Description: The parameter CornerAngleRange of Dynamsoft Document Normalizer is XXX.
 Keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-range-array.html
+permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-range.html
 ---
 
-# CornerAngleRangeArray
+# CornerAngleRange
 
-Parameter `CornerAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
+Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of a quad or document.
 
 ## Example
 
 ```json
 {
-    "CornerAngleRangeArray":
+    "CornerAngleRange":
     [
         {
             "MinValue": 70,
@@ -29,7 +29,7 @@ Parameter `CornerAngleRangeArray` specifies the range of angles (in degrees) of 
 
 ## Parameter Summary
 
-`CornerAngleRangeArray` consist one or more angle range objects. Each object contains a maximum and a minimum value of the angle.
+`CornerAngleRange` The range of a maximum and a minimum value of the angle.
 
 ### Child Parameters
 
@@ -50,7 +50,7 @@ Parameter `CornerAngleRangeArray` specifies the range of angles (in degrees) of 
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0,180]
+        <td><b>Range</b><br>[0,90]
         </td>
     </tr>
     <tr>
@@ -67,25 +67,25 @@ Parameter `CornerAngleRangeArray` specifies the range of angles (in degrees) of 
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0,180]
+        <td><b>Range</b><br>[90,180]
         </td>
     </tr>
     <tr>
         <td><b>Default Value</b><br>110</td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>The sum of MinValue and MaxValue should be 180. If the values you input doesn't meet the requirement, they will be adjusted by the library automatically.
+        <td><b>Remarks</b><br>The sum of MinValue and MaxValue should be 180. If the input values doesn't meet the requirement, an error will be raised.
         </td>
     </tr>
 </table>
 
 ### Default Setting
 
-If the `CornerAngleRangeArray` is not configured in your template file, the following setting will be used as the default setting.
+If the `CornerAngleRange` is not configured in your template file, the following setting will be used as the default setting.
 
 ```json
 {
-    "CornerAngleRangeArray" : 
+    "CornerAngleRange" : 
     [
         {
             "MaxValue" : 110,

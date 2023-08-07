@@ -63,7 +63,7 @@ Each of these stages has its own output (known as an intermediate result) and us
 | Contour-locating             | `IRUT_CONTOURS`             | N/A                                                                                                                 |
 | Line-locating                | `IRUT_LINE_SEGMENTS`        | [`LineExtractionModes`](../../parameters/reference/document-normalizer-task-settings/line-extraction-modes.md)      |
 | Long-line-merging            | `IRUT_LONG_LINES`           | N/A                                                                                                                 |
-| Corner-locating              | `IRUT_CORNERS`              | [`CornerAngleRangeArray`](../../parameters/reference/document-normalizer-task-settings/corner-angle-range-array.md) |
+| Corner-locating              | `IRUT_CORNERS`              | [`CornerAngleRange`](../../parameters/reference/document-normalizer-task-settings/corner-angle-range.md) |
 | Candidate-quad-edge-locating | `IRUT_CANDIDATE_QUAD_EDGES` | N/A                                                                                                                 |
 | Quad-locating                | `IRUT_DETECTED_QUADS`       | N/A                                                                                                                 |
 
