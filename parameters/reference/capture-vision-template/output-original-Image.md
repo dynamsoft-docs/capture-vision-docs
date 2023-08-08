@@ -6,7 +6,7 @@ Keywords: original image, captured results, CaptureVisionTemplate
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/capture-vision-template/output-original-Image.html
+permalink: /parameters/reference/capture-vision-template/output-original-image.html
 ---
 
 # OutputOriginalImage
