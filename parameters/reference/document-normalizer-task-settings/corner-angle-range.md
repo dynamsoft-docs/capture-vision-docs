@@ -29,7 +29,7 @@ Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the e
 
 ## Parameter Summary
 
-`CornerAngleRange` The range of a maximum and a minimum value of the angle.
+`CornerAngleRange` The range of a maximum and a minimum value of the angles.
 
 ### Child Parameters
 
@@ -74,7 +74,8 @@ Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the e
         <td><b>Default Value</b><br>110</td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>The sum of MinValue and MaxValue should be 180. If the input values doesn't meet the requirement, an error will be raised.
+        <td><b>Remarks</b><br>Please ensure that all interior angles of the target quadrilateral fall within the specified value range.
+        <br>If the setting values doesn't meet the requirement ranges, an error will be raised.
         </td>
     </tr>
 </table>
