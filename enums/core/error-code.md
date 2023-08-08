@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ErrorCode
+codeAutoHeight: true
 ---
 
 # Enumeration ErrorCode
@@ -22,7 +23,7 @@ breadcrumbText: ErrorCode
    >
 >
 ```javascript
-export enum EnumErrorCode
+enum EnumErrorCode
 {
    /**Successful. */
    EC_OK = 0,
@@ -219,7 +220,8 @@ export enum EnumErrorCode
 ```
 >
 ```java
-public class EnumErrorCode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumErrorCode
 {
    /** Successful. */
    public static final int EC_OK = 0;
@@ -610,7 +612,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    DSErrorCodeVINLicenseInvalid                = -90010,
    /** The license for parsing customized code type is invalid. */
    DSErrorCodeCustomizedCodeTypeLicenseInvalid = -90011,
-}NS_SWIFT_NAME(ErrorCode);
+};
 ```
 >
 ```swift

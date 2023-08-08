@@ -21,7 +21,7 @@ A `DocumentNormalizerTaskSetting` object is defined as below:
 | ColourMode | string | Optional | Sets the value for parameter [ColourMode]({{site.parameters_reference}}document-normalizer-task-settings/colour-mode.html) |
 | ContentType | string | Optional | Sets the value for parameter [ContentType]({{site.parameters_reference}}document-normalizer-task-settings/content-type.html) |
 | Contrast | string | Optional | Sets the value for parameter [Contrast]({{site.parameters_reference}}document-normalizer-task-settings/contrast.html) |
-| CornerAngleRangeArray | string | Optional | Sets the value for parameter [CornerAngleRangeArray]({{site.parameters_reference}}document-normalizer-task-settings/corner-angle-range-array.html) |
+| CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
 | DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
 | LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
 | MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.parameters_reference}}shared-parameter/max-threads-in-one-task.html) |
@@ -52,7 +52,7 @@ Here is a sample:
         "ContentDirection" : 0,
         "Mode" : "DM_PERSPECTIVE_CORRECTION"
     },
-    "CornerAngleRangeArray" : [
+    "CornerAngleRange" : [
         {
             "MaxValue" : 110,
             "MinValue" : 70

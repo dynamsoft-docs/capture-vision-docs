@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ImageSourceState
+codeAutoHeight: true
 ---
 
 # Enumeration ImageSourceState
@@ -22,7 +23,7 @@ breadcrumbText: ImageSourceState
    >
 >
 ```javascript
-export enum EnumImageSourceState
+enum EnumImageSourceState
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
    ISS_BUFFER_EMPTY = 0,
@@ -32,7 +33,8 @@ export enum EnumImageSourceState
 ```
 >
 ```java
-public class EnumImageSourceState
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumImageSourceState
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
    public static final int ISS_BUFFER_EMPTY = 0;
@@ -48,7 +50,7 @@ typedef NS_ENUM(NSInteger, DSImageSourceState)
    DSImageSourceStateBufferEmpty = 0,
    /** The source of ImageSourceAdapter is empty. */
    DSImageSourceStateExhausted = 1
-}NS_SWIFT_NAME(ImageSourceState);
+};
 ```
 >
 ```swift
@@ -58,7 +60,7 @@ public enum ImageSourceState : Int
    bufferEmpty = 0
    /** The source of ImageSourceAdapter is empty. */
    exhausted = 1
-}NS_SWIFT_NAME(ImageSourceState);
+};
 ```
 >
 ```cpp

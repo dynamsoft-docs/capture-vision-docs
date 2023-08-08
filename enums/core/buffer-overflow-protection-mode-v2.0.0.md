@@ -8,6 +8,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BufferOverflowProtectionMode
 codeAutoHeight: true
+permalink: /enums/core/buffer-overflow-protection-mode-v2.0.0.html
 ---
 
 # Enumeration BufferOverflowProtectionMode
@@ -68,6 +69,6 @@ typedef enum BufferOverflowProtectionMode
    /** New images are blocked when the buffer is full. */
    BOPM_BLOCK = 0,
    /** New images are appended at the end, and oldest images are pushed out from the beginning if the buffer is full. */
-   BOPM_UPDATE = 1
+   BOPM_APPEND = 1
 } BufferOverflowProtectionMode;
 ```

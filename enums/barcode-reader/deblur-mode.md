@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DeblurMode
+codeAutoHeight: true
 ---
 
 # Enumeration DeblurMode
@@ -22,7 +23,7 @@ breadcrumbText: DeblurMode
    >
 >
 ```javascript
-export enum EnumDeblurMode {
+enum EnumDeblurMode {
    /** Performs deblur process using the direct binarization algorithm. */
    DM_DIRECT_BINARIZATION = 1,
    /** Performs deblur process using the threshold binarization algorithm. */
@@ -47,7 +48,8 @@ export enum EnumDeblurMode {
 ```
 >
 ```java
-public class EnumDeblurMode {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumDeblurMode {
    /** Performs deblur process using the direct binarization algorithm. */
    public static final int DM_DIRECT_BINARIZATION = 0x01;
    /** Performs deblur process using the threshold binarization algorithm. */
@@ -98,7 +100,7 @@ typedef NS_ENUM(NSInteger , DSDeblurMode)
    DSDeblurModeRev = -2147483648,
    /**Skips the deblur process.*/
    DSDeblurModeSkip = 0x00
-}NS_SWIFT_NAME(DeblurMode);
+};
 ```
 >
 ```swift

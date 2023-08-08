@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: SectionType
+codeAutoHeight: true
 ---
 
 # Enumeration SectionType
@@ -22,7 +23,7 @@ breadcrumbText: SectionType
    >
 >
 ```javascript
-export enum EnumSectionType
+enum EnumSectionType
 {
    /**No section type is specified.*/
    ST_NULL = 0,
@@ -44,7 +45,8 @@ export enum EnumSectionType
 ```
 >
 ```java
-public class EnumSectionType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumSectionType
 {
    /**No section type is specified.*/
    public static final int ST_NULL = 0;
@@ -84,7 +86,7 @@ typedef NS_ENUM(NSInteger, DSSectionType)
    DSSectionTypeDocumentDetection = 6,
    /**The result is output by "document normalization" section.*/
    DSSectionTypeDocumentNormalization = 7
-}NS_SWIFT_NAME(SectionType);
+};
 ```
 >
 ```swift

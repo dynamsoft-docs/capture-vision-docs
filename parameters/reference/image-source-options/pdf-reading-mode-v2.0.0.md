@@ -6,7 +6,7 @@ Keywords: PDF reading mode, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/image-source-options/pdf-reading-mode.html
+permalink: /parameters/reference/image-source-options/pdf-reading-mode-v2.0.0.html
 ---
 
 # PDFReadingMode
@@ -21,7 +21,7 @@ Parameter `PDFReadingMode` defines how to handle PDF files.
     {
         "Mode": "PDFRM_RASTER",
         "DPI": 300,
-        "RasterDataSource": "RDS_RASTERIZED_PAGES"
+        "TargetType": "TT_PAGE"
     }
 }
 ```
@@ -70,7 +70,7 @@ Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF 
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">RasterDataSource</td>
+        <td rowspan = "4" style="vertical-align:text-top">TargetType</td>
         <td><b>Description</b><br>Specifies a the target type.
         </td>
     </tr>
@@ -79,11 +79,11 @@ Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF 
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>One of the candidate mode as a string<br>RDS_RASTERIZED_PAGES<br>RDS_EXTRACTED_IMAGES
+        <td><b>Range</b><br>One of the candidate mode as a string</b><br>TT_PAGE<br>TT_IMAGE
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>RDS_RASTERIZED_PAGES
+        <td><b>Default Value</b><br>TT_PAGE
         </td>
     </tr>
 </table>
@@ -98,7 +98,7 @@ If the `PDFReadingMode` is not configured in your template file, the following s
     {
         "Mode": "PDFRM_RASTER",
         "DPI": 300,
-        "RasterDataSource": "RDS_RASTERIZED_PAGES"
+        "TargetType": "TT_PAGE"
     }
 }
 ```

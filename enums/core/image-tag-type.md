@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ImageTagType
+codeAutoHeight: true
 ---
 
 # Enumeration ImageTagType
@@ -22,7 +23,7 @@ breadcrumbText: ImageTagType
    >
 >
 ```javascript
-export enum EnumImageTagType
+enum EnumImageTagType
 {
    /**The image is a file image.*/
    ITT_FILE_IMAGE = 0,
@@ -32,7 +33,8 @@ export enum EnumImageTagType
 ```
 >
 ```java
-public class EnumImageTagType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumImageTagType
 {
    public static final int ITT_FILE_IMAGE = 0;
    public static final int ITT_VIDEO_FRAME = 1;
@@ -46,7 +48,7 @@ typedef NS_ENUM(NSInteger, DSImageTagType)
    DSImageTagTypeFileImage = 0,
    /**The image tag is a DSVideoFrameTag.*/
    DSImageTagTypeVideoFrame = 1,
-}NS_SWIFT_NAME(ImageTagType);
+};
 ```
 >
 ```swift

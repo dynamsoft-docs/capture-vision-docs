@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: LocalizationMode
+codeAutoHeight: true
 ---
 
 # Enumeration LocalizationMode
@@ -22,7 +23,7 @@ breadcrumbText: LocalizationMode
    >
 >
 ```javascript
-export enum EnumLocalizationMode {
+enum EnumLocalizationMode {
    /**Not supported yet. */
    LM_AUTO = 1,
    /**Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. */
@@ -49,7 +50,8 @@ export enum EnumLocalizationMode {
 ```
 >
 ```java
-public class EnumLocalizationMode {
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumLocalizationMode {
    /**Not supported yet. */
    public static final int LM_AUTO = 1;
    /**Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. */
@@ -100,7 +102,7 @@ typedef NS_ENUM(NSInteger , DSLocalizationMode)
    DSLocalizationModeRev = -2147483648,
    /**Skips localization. */
    DSLocalizationModeSkip = 0x00
-}NS_SWIFT_NAME(LocalizationMode);
+};
 ```
 >
 ```swift
