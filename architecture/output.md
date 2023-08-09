@@ -58,7 +58,7 @@ interface CapturedResultReceiver {
     /**
      * This callback is only triggered when the raw or original image is set to be returned.
      */
-    onRawImageResultReceived?: (pResult: RawImageResultItem) => void;
+    onOriginalImageResultReceived?: (pResult: OriginalImageResultItem) => void;
     /**
      * This callback is only triggered when barcodes are found on the image.
      */
@@ -86,7 +86,7 @@ public interface CapturedResultReceiver {
    /* The callback that contains all results. */
    default void onCapturedResultReceived(CapturedResult result);
    /* The callback that contains only the original raw image. */
-   default void onRawImageResultReceived(RawImageResultItem result);
+   default void onOriginalImageResultReceived(OriginalImageResultItem result);
    /* The callback that contains all barcode text found on the image. */
    default void onDecodedBarcodesReceived(DecodedBarcodesResult result);
    /* The callback that contains all text lines found on the image. */
@@ -106,7 +106,7 @@ public interface CapturedResultReceiver {
 - (void)onCapturedResultReceived:(DSCapturedResult*)result;
 @optional
 /* The callback that contains only the original raw image. */
-- (void)onRawImageResultReceived:(DSRawImageResultItem*)result;
+- (void)onOriginalImageResultReceived:(DSOriginalImageResultItem*)result;
 /* The callback that contains all barcode text found on the image. */
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult*)result;
 /* The callback that contains all text lines found on the image. */
@@ -124,7 +124,7 @@ protocol IntermediateResultReceiver{
    /* The callback that contains all results. */
    func onCapturedResultReceived(_ result: CapturedResult)
    /* The callback that contains only the original raw image. */
-   func onRawImageResultReceived(_ result: RawImageResultItem)
+   func onOriginalImageResultReceived(_ result: OriginalImageResultItem)
    /* The callback that contains all barcode text found on the image. */
    func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
    /* The callback that contains all text lines found on the image. */
@@ -155,7 +155,7 @@ public:
     /**
      * This callback is only triggered when the raw or original image is set to be returned.
      */
-    virtual void OnRawImageResultReceived(const CRawImageResultItem* pResult);
+    virtual void OnOriginalImageResultReceived(const COriginalImageResultItem* pResult);
     /**
      * This callback is only triggered when barcodes are found on the image.
      */
