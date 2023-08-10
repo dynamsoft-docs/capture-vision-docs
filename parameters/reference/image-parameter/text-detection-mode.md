@@ -119,7 +119,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>-1: means automatically set by the library.<br>It is a percentage value relative to the average letter height of each line.<br>All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
+        <td><b>Remarks</b><br>-1: means automatically set by the library.<br>It is a percentage value relative to the average letter height of each line.
         </td>
     </tr>
     <tr>
