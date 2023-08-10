@@ -41,7 +41,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
         </td>
     </tr>
@@ -54,10 +54,6 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
             <br>TTDM_LINE
             <br>TTDM_LAYOUT
             <br>TTDM_SKIP
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>
         </td>
     </tr>
     <tr>
@@ -82,7 +78,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">CharHeightRange<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">CharHeightRange<br>(Optional)</td>
         <td><b>Description</b><br>Sets the range of letter height in pixel or a percentage.
         <br>Format: [MinHeight, MaxHeight, ByThousandth].
         <br>if ByThousandth=1, the allowed values for MinHeight/MaxHeight=[1, 1000]
@@ -95,10 +91,6 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
     </tr>
     <tr>
         <td><b>Range</b><br>[1, 0x7fffffff]
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>[1,1000,1]
         </td>
     </tr>
     <tr>
@@ -131,7 +123,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
         <td><b>Description</b><br>Sets the sensitivity of text detection.
         </td>
     </tr>
@@ -141,10 +133,6 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
     </tr>
     <tr>
         <td><b>Range</b><br>[1, 9]
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>For barcode decoding: 3<br>For label recognizing: 7<br>For document scanning: 7
         </td>
     </tr>
     <tr>
@@ -203,8 +191,12 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
 {
     "TextDetectionMode" : 
     {
-        "Mode" : "TTDM_SKIP"
-    }   
+        "Mode" : "TTDM_LINE",
+        "Direction" : "HORIZONTAL",
+        "CharHeightRange" : [1, 1000, 1],
+        "MaxSpacingInALine" : -1,
+        "Sensitivity" : 3
+    }
 }
 ```
 
@@ -214,15 +206,11 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
 {
     "TextDetectionMode" : 
     {
-        "CharHeightRange" : 
-        [
-            1,
-            1000,
-            1
-        ],
+        "Mode" : "TTDM_LINE",
         "Direction" : "HORIZONTAL",
+        "CharHeightRange" : [20, 1000, 1],
         "MaxSpacingInALine" : -1,
-        "Mode" : "TTDM_LINE"
+        "Sensitivity" : 7
     }
 }
 ```
@@ -233,14 +221,10 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
 {
     "TextDetectionMode" : 
     {
-        "CharHeightRange" : 
-        [
-            1,
-            1000,
-            1
-        ],
+        "Mode" : "TTDM_WORD",
         "Direction" : "HORIZONTAL",
-        "Mode" : "TTDM_WORD"
+        "CharHeightRange" : [1, 1000, 1],
+        "Sensitivity" : 7
     }
 }
 ```
