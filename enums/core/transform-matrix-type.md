@@ -11,7 +11,7 @@ breadcrumbText: TransformMatrixType
 
 # Enumeration TransformMatrixType
 
-`TransformMatrixType` describes the target types.
+`TransformMatrixType` describes the transform matrix types.
 
 <div class="sample-code-prefix template2"></div>
    >- Android
