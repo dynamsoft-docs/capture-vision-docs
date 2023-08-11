@@ -18,12 +18,10 @@ Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the e
 ```json
 {
     "CornerAngleRange":
-    [
         {
-            "MinValue": 70,
-            "MaxValue": 110
+            "MinValue": 80,
+            "MaxValue": 100
         }
-    ]
 }
 ```
 
@@ -87,11 +85,9 @@ If the `CornerAngleRange` is not configured in your template file, the following
 ```json
 {
     "CornerAngleRange" : 
-    [
         {
             "MaxValue" : 110,
             "MinValue" : 70
         }
-    ]
 }
 ```
