@@ -17,7 +17,6 @@ breadcrumbText: PresetTemplate
    >- Android
    >- Objective-C
    >- Swift
-   >- C++
    >
 >
 ```java
@@ -86,21 +85,4 @@ struct PresetTemplate
    /** Template name: "normalize-document". */
     static let normalizeDocument="normalize-document";
 }
-```
->
-```cpp
-class CPresetTemplate {
-   /** Template name: "default". It implements barcode decoding, label recognizing and document normalizing. */
-   static const char* PT_DEFAULT;
-   /** Template name: "read-barcodes". */
-   static const char* PT_READ_BARCODES;
-   /** Template name: "recognize-textLines". */
-   static const char* PT_RECOGNIZE_TEXT_LINES;
-   /** Template name: "detect-document-boundaries". */
-   static const char* PT_DETECT_DOCUMENT_BOUNDARIES; 
-   /** Template name: "detect-and-normalize-document". */
-   static const char* PT_DETECT_AND_NORMALIZE_DOCUMENT;
-   /** Template name: "normalize-document". */
-   static const char* PT_NORMALIZE_DOCUMENT; 
-};
 ```
