@@ -126,7 +126,11 @@ Performs deblur process using the binarization algorithm. This mode has the foll
 
 ### DM_THRESHOLD_BINARIZATION
 
-Performs deblur process using the threshold binarization algorithm. This mode has the following arguments for further customizing.
+Performs deblur process using the threshold binarization algorithm.
+
+When processing OneD barcodes, you can add two `DM_THRESHOLD_BINARIZATION` to your DeblurModes settings. If you do, the second round `DM_THRESHOLD_BINARIZATION` will detect and fill in the blurry area with predicted barcode modules. The second round `DM_THRESHOLD_BINARIZATION` can sharpenly improve the read-rate of blurry OneD barcodes but sacrifice the accuracy.
+
+This mode has the following arguments for further customizing.
 
 **Available Mode Arguments:**
 
