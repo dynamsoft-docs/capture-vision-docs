@@ -31,7 +31,7 @@ Parameter `LocalizationModes` determines how to localize barcodes. It consists o
 
 ## Parameter Summary
 
-Parameter `LocalizationModes` consist of a group of localizaion mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
+Parameter `LocalizationModes` consist of a group of localization mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
 
 ### Mode Arguments
 
@@ -92,7 +92,7 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">ScanDirection<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top">ScanDirection<br>(Optional)</td>
         <td><b>Description</b><br>Sets the scan direction when searching barcode.
         </td>
     </tr>
@@ -106,6 +106,10 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>0: Both vertical and horizontal direction.<br>1: Vertical direction.<br>2: Horizontal direction.
         </td>
     </tr>
     <tr>
