@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: VerifyCheckDigit - Dynamsoft Barcode Reader Parameters
-Description: The parameter VerifyCheckDigit of Dynamsoft Barcode Reader specifies whether to verify the check digit in barcodes where this check digit is optional.
-Keywords: VerifyCheckDigit, parameter reference, parameter
+title: VerifyCheckDigit - Dynamsoft Barcode Reader Parameters
+description: The parameter VerifyCheckDigit of Dynamsoft Barcode Reader specifies whether to verify the check digit in barcodes where this check digit is optional.
+keywords: VerifyCheckDigit, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

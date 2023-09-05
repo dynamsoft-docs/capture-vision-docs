@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Name - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter Name of Dynamsoft Capture Vision defines the unique identifier of top-level objects.
-Keywords: top-level object, name, unique identifier
+title: Name - Dynamsoft Capture Vision Shared Parameters
+description: The parameter Name of Dynamsoft Capture Vision defines the unique identifier of top-level objects.
+keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Location - Dynamsoft Capture Vision Parameters
-Description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
-Keywords: Location
+title: Location - Dynamsoft Capture Vision Parameters
+description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+keywords: Location
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: LocalizationModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter LocalizationModes of Dynamsoft Barcode Reader defines the line numers of the targeting text lines.
-Keywords: Localization modes
+title: LocalizationModes - Dynamsoft Barcode Reader Parameters
+description: The parameter LocalizationModes of Dynamsoft Barcode Reader defines the line numers of the targeting text lines.
+keywords: Localization modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

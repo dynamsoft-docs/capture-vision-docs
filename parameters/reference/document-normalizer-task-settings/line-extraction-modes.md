@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: LineExtractionModes - Dynamsoft Document Normalizer Parameters
-Description: The parameter LineExtractionModes of Dynamsoft Document Normalizer is XXX.
-Keywords:
+title: LineExtractionModes - Dynamsoft Document Normalizer Parameters
+description: The parameter LineExtractionModes of Dynamsoft Document Normalizer is XXX.
+keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

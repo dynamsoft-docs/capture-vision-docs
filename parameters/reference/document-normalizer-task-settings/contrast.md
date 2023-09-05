@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Contrast - Dynamsoft Document Normalizer Parameters
-Description: The parameter Contrast of Dynamsoft Document Normalizer specifies the contrast of the normalized image.
-Keywords:
+title: Contrast - Dynamsoft Document Normalizer Parameters
+description: The parameter Contrast of Dynamsoft Document Normalizer specifies the contrast of the normalized image.
+keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

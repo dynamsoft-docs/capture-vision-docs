@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: IntermediateResultUnitType - Dynamsoft Core Enumerations
-Description: The enumeration IntermediateResultUnitType of Dynamsoft Core describes the type of the intermediate result unit.
-Keywords: Intermediate result unit type
+title: IntermediateResultUnitType - Dynamsoft Core Enumerations
+description: The enumeration IntermediateResultUnitType of Dynamsoft Core describes the type of the intermediate result unit.
+keywords: Intermediate result unit type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeFormatSpecificationNameArray - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeFormatSpecificationNameArray of Dynamsoft Barcode Reader defines the collection of BarcodeFormatSpecification object names
-Keywords: BarcodeFormatSpecification, BarcodeReaderTaskSetting
+title: BarcodeFormatSpecificationNameArray - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeFormatSpecificationNameArray of Dynamsoft Barcode Reader defines the collection of BarcodeFormatSpecification object names
+keywords: BarcodeFormatSpecification, BarcodeReaderTaskSetting
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MappingStatus - Dynamsoft Code Parser Enumerations
-Description: The enumeration MappingStatus of Dynamsoft Code Parser describes the mapping status of a parsed field.
-Keywords: Mapping status
+title: MappingStatus - Dynamsoft Code Parser Enumerations
+description: The enumeration MappingStatus of Dynamsoft Code Parser describes the mapping status of a parsed field.
+keywords: Mapping status
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ContentType - Dynamsoft Document Normalizer Parameters
-Description: The parameter ContentType of Dynamsoft Document Normalizer is XXX.
-Keywords:
+title: ContentType - Dynamsoft Document Normalizer Parameters
+description: The parameter ContentType of Dynamsoft Document Normalizer is XXX.
+keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeComplementModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeComplementModes of Dynamsoft Barcode Reader defines the barcode colour modes.
-Keywords: Barcode complement modes
+title: BarcodeComplementModes - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeComplementModes of Dynamsoft Barcode Reader defines the barcode colour modes.
+keywords: Barcode complement modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

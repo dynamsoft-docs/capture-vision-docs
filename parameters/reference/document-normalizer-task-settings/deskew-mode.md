@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DeskewMode - Dynamsoft Document Normalizer Parameters
-Description: The parameter DeskewMode of Dynamsoft Document Normalizer is XXX.
-Keywords:
+title: DeskewMode - Dynamsoft Document Normalizer Parameters
+description: The parameter DeskewMode of Dynamsoft Document Normalizer is XXX.
+keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

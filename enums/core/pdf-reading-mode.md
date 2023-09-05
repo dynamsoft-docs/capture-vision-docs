@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PDFReadingMode - Dynamsoft Core Enumerations
-Description: The enumeration PDFReadingMode of Dynamsoft Core describes all available PDF reading modes.
-Keywords: PDF Reading Mode
+title: PDFReadingMode - Dynamsoft Core Enumerations
+description: The enumeration PDFReadingMode of Dynamsoft Core describes all available PDF reading modes.
+keywords: PDF Reading Mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ImageTagType - Dynamsoft Core Enumerations
-Description: The enumeration ImageTagType of Dynamsoft Core describes the types of image tags.
-Keywords: Image tag type
+title: ImageTagType - Dynamsoft Core Enumerations
+description: The enumeration ImageTagType of Dynamsoft Core describes the types of image tags.
+keywords: Image tag type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

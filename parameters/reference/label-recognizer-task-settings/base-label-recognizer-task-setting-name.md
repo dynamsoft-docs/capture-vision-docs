@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BaseLabelRecognizerTaskSettingName - Dynamsoft Label Recognizer Parameters
-Description: The parameter BaseLabelRecognizerTaskSettingName of Dynamsoft Label Recognizer defines the name of the inherited LabelRecognizerTaskSetting object.
-Keywords: inheritance, LabelRecognizerTaskSetting
+title: BaseLabelRecognizerTaskSettingName - Dynamsoft Label Recognizer Parameters
+description: The parameter BaseLabelRecognizerTaskSettingName of Dynamsoft Label Recognizer defines the name of the inherited LabelRecognizerTaskSetting object.
+keywords: inheritance, LabelRecognizerTaskSetting
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

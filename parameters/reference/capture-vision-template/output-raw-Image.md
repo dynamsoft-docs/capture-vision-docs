@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: OutputRawImage - Dynamsoft Capture Vision Parameters
-Description: The parameter OutputRawImage indicates whether DCV finally outputs the original input image.
-Keywords: raw image, captured results, CaptureVisionTemplate
+title: OutputRawImage - Dynamsoft Capture Vision Parameters
+description: The parameter OutputRawImage indicates whether DCV finally outputs the original input image.
+keywords: raw image, captured results, CaptureVisionTemplate
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

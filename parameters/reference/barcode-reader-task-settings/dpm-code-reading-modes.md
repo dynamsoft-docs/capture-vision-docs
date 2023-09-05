@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DPMCodeReadingModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter DPMCodeReadingModes of Dynamsoft Barcode Reader defines how to read direct part mark (DPM) barcodes.
-Keywords: DPM code reading modes
+title: DPMCodeReadingModes - Dynamsoft Barcode Reader Parameters
+description: The parameter DPMCodeReadingModes of Dynamsoft Barcode Reader defines how to read direct part mark (DPM) barcodes.
+keywords: DPM code reading modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

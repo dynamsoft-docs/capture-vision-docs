@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: SectionType - Dynamsoft Core Enumerations
-Description: The enumeration SectionType of Dynamsoft Core describes the section of the algorithm.
-Keywords: Section type
+title: SectionType - Dynamsoft Core Enumerations
+description: The enumeration SectionType of Dynamsoft Core describes the section of the algorithm.
+keywords: Section type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

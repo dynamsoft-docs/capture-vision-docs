@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: FilterFilePath - Dynamsoft Label Recognizer Parameters
-Description: The parameter FilterFilePath defines a path when the library recognize characters.
-Keywords: Directory path
+title: FilterFilePath - Dynamsoft Label Recognizer Parameters
+description: The parameter FilterFilePath defines a path when the library recognize characters.
+keywords: Directory path
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

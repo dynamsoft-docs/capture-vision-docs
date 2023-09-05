@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TextResultOrderModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter TextResultOrderModes of Dynamsoft Barcode Reader defines the order of the returned text results.
-Keywords: Text result order modes
+title: TextResultOrderModes - Dynamsoft Barcode Reader Parameters
+description: The parameter TextResultOrderModes of Dynamsoft Barcode Reader defines the order of the returned text results.
+keywords: Text result order modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter TerminateSetting defines the terminate stages of the task.
-Keywords: Terminate setting
+title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
+description: The parameter TerminateSetting defines the terminate stages of the task.
+keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

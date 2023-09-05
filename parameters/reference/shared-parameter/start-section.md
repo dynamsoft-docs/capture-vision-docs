@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: StartSection - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter StartSection defines the start section of the algorithm task.
-Keywords: Start section
+title: StartSection - Dynamsoft Capture Vision Shared Parameters
+description: The parameter StartSection defines the start section of the algorithm task.
+keywords: Start section
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: FileFilter - Dynamsoft Capture Vision Parameters
-Description: The parameter FileFilter of Dynamsoft Capture Vision defines .
-Keywords: File filter, ISA
+title: FileFilter - Dynamsoft Capture Vision Parameters
+description: The parameter FileFilter of Dynamsoft Capture Vision defines .
+keywords: File filter, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

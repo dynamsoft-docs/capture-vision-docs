@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MSICodeCheckDigitCalculation - Dynamsoft Barcode Reader Parameters
-Description: The parameter ModuleSizeRangeArray of Dynamsoft Barcode Reader defines the scheme used for calculating a check digit of an MSI barcode.
-Keywords: MSICodeCheckDigitCalculation , parameter reference, parameter
+title: MSICodeCheckDigitCalculation - Dynamsoft Barcode Reader Parameters
+description: The parameter ModuleSizeRangeArray of Dynamsoft Barcode Reader defines the scheme used for calculating a check digit of an MSI barcode.
+keywords: MSICodeCheckDigitCalculation , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

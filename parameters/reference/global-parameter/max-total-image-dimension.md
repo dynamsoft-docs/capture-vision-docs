@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MaxTotalImageDimension - Dynamsoft Capture Vision Global Parameters
-Description: The parameter MaxTotalImageDimension of Dynamsoft Capture Vision defines the maximum total dimension of the images that read in the memory.
-Keywords: Max total image dimension
+title: MaxTotalImageDimension - Dynamsoft Capture Vision Global Parameters
+description: The parameter MaxTotalImageDimension of Dynamsoft Capture Vision defines the maximum total dimension of the images that read in the memory.
+keywords: Max total image dimension
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

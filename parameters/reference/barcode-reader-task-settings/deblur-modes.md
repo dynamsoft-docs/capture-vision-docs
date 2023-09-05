@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DeblurModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter DeblurModes of Dynamsoft Barcode Reader defines the mode and priority for deblurring.
-Keywords: Deblur modes
+title: DeblurModes - Dynamsoft Barcode Reader Parameters
+description: The parameter DeblurModes of Dynamsoft Barcode Reader defines the mode and priority for deblurring.
+keywords: Deblur modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

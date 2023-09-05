@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeFormatIds - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeFormatIds of Dynamsoft Barcode Reader defines the barcode formats to process.
-Keywords: Barcode format IDs
+title: BarcodeFormatIds - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeFormatIds of Dynamsoft Barcode Reader defines the barcode formats to process.
+keywords: Barcode format IDs
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

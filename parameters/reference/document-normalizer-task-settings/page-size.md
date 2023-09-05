@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PageSize - Dynamsoft Document Normalizer Parameters
-Description: The parameter PageSize of Dynamsoft Document Normalizer is XXX.
-Keywords: Page size
+title: PageSize - Dynamsoft Document Normalizer Parameters
+description: The parameter PageSize of Dynamsoft Document Normalizer is XXX.
+keywords: Page size
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

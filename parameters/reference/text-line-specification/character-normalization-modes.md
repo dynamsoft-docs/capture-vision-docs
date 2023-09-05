@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CharacterNormalizationModes - Dynamsoft Label Recognizer Parameters
-Description: The parameter CharacterNormalizationModes of Dynamsoft Label Recognizer defines how to normalize the characters.
-Keywords: Character normalization
+title: CharacterNormalizationModes - Dynamsoft Label Recognizer Parameters
+description: The parameter CharacterNormalizationModes of Dynamsoft Label Recognizer defines how to normalize the characters.
+keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
