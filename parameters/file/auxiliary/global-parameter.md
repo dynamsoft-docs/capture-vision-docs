@@ -1,8 +1,8 @@
 ---
 layout: default-layout
 title: GlobalParameters - Dynamsoft Capture Vision Parameter File
-description: The GlobalParameters object in the Dynamsoft Capture Vision Parameter File is XXX.
-keywords:
+description: The GlobalParameters object in the Dynamsoft Capture Vision Parameter File defines the global parameters.
+keywords: image dimension, global parameters
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
