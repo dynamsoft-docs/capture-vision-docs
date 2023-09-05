@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeZoneMinDistanceToImageBorders - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeZoneMinDistanceToImageBorders of Dynamsoft Barcode Reader defines the minimum distance (in pixels) between the barcode zone and image borders.
-Keywords: BarcodeZoneMinDistanceToImageBorders , parameter reference, parameter
+title: BarcodeZoneMinDistanceToImageBorders - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeZoneMinDistanceToImageBorders of Dynamsoft Barcode Reader defines the minimum distance (in pixels) between the barcode zone and image borders.
+keywords: BarcodeZoneMinDistanceToImageBorders , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

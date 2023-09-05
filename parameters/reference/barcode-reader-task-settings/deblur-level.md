@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DeblurLevel - Dynamsoft Barcode Reader Parameters
-Description: The parameter DeblurLevel of Dynamsoft Barcode Reader defines the efforts used to process the blurriness of the barcode.
-Keywords: Base barcode reader task setting name
+title: DeblurLevel - Dynamsoft Barcode Reader Parameters
+description: The parameter DeblurLevel of Dynamsoft Barcode Reader defines the efforts used to process the blurriness of the barcode.
+keywords: Base barcode reader task setting name
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

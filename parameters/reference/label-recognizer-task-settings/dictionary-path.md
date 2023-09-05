@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DictionaryPath - Dynamsoft Label Recognizer Parameters
-Description: The parameter DictionaryPath of Dynamsoft Label Recognizer defines the path of the dictionary file
-Keywords: user dictionary, text correction
+title: DictionaryPath - Dynamsoft Label Recognizer Parameters
+description: The parameter DictionaryPath of Dynamsoft Label Recognizer defines the path of the dictionary file
+keywords: user dictionary, text correction
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

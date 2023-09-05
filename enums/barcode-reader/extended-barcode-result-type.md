@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ExtendedBarcodeResultType - Dynamsoft Barcode Reader Enumerations
-Description: The enumeration ExtendedBarcodeResultType of Dynamsoft Barcode Reader describes the type of the extended barcode result.
-Keywords: Extended barcode result type
+title: ExtendedBarcodeResultType - Dynamsoft Barcode Reader Enumerations
+description: The enumeration ExtendedBarcodeResultType of Dynamsoft Barcode Reader describes the type of the extended barcode result.
+keywords: Extended barcode result type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

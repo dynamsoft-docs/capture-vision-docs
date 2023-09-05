@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TransformMatrixType - Dynamsoft Core Enumerations
-Description: The enumeration TransformMatrixType of Dynamsoft Core describes transform matrix types.
-Keywords: Target type
+title: TransformMatrixType - Dynamsoft Core Enumerations
+description: The enumeration TransformMatrixType of Dynamsoft Core describes transform matrix types.
+keywords: Target type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

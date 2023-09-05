@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeFormatSpecification - Dynamsoft Capture Vision Parameter File
-Description: The BarcodeFormatSpecification object in the Dynamsoft Capture Vision Parameter File defines how barcodes will be processed.
-Keywords: Barcode format specification, binarization, grayscale enhancement, character normalization
+title: BarcodeFormatSpecification - Dynamsoft Capture Vision Parameter File
+description: The BarcodeFormatSpecification object in the Dynamsoft Capture Vision Parameter File defines how barcodes will be processed.
+keywords: Barcode format specification, binarization, grayscale enhancement, character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---

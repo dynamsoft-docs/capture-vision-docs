@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TailModuleRatio - Dynamsoft Barcode Reader Parameters
-Description: The parameter TailModuleRatio of Dynamsoft Barcode Reader defines the module count and module size ratio of the barcode tail section.
-Keywords: TailModuleRatio , parameter reference, parameter
+title: TailModuleRatio - Dynamsoft Barcode Reader Parameters
+description: The parameter TailModuleRatio of Dynamsoft Barcode Reader defines the module count and module size ratio of the barcode tail section.
+keywords: TailModuleRatio , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: RasterDataSource - Dynamsoft Core Enumerations
-Description: The enumeration RasterDataSource of Dynamsoft Core describes raster data source types.
-Keywords: Target type
+title: RasterDataSource - Dynamsoft Core Enumerations
+description: The enumeration RasterDataSource of Dynamsoft Core describes raster data source types.
+keywords: Target type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

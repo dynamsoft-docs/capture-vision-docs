@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PresetTemplate - Dynamsoft Vision Router Enumerations
-Description: The enumeration PresetTemplate of Dynamsoft Vision Router describes the preset template.
-Keywords: Capture state
+title: PresetTemplate - Dynamsoft Vision Router Enumerations
+description: The enumeration PresetTemplate of Dynamsoft Vision Router describes the preset template.
+keywords: Capture state
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

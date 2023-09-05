@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CornerAngleRange - Dynamsoft Document Normalizer Parameters
-Description: The parameter CornerAngleRange of Dynamsoft Document Normalizer is XXX.
-Keywords:
+title: CornerAngleRange - Dynamsoft Document Normalizer Parameters
+description: The parameter CornerAngleRange of Dynamsoft Document Normalizer is XXX.
+keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

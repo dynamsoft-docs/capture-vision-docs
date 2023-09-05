@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ExpectedBarcodesCount - Dynamsoft Barcode Reader Parameters
-Description: The parameter ExpectedBarcodesCount of Dynamsoft Barcode Reader defines the number of barcodes expected to be detected.
-Keywords: Expected barcodes count
+title: ExpectedBarcodesCount - Dynamsoft Barcode Reader Parameters
+description: The parameter ExpectedBarcodesCount of Dynamsoft Barcode Reader defines the number of barcodes expected to be detected.
+keywords: Expected barcodes count
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

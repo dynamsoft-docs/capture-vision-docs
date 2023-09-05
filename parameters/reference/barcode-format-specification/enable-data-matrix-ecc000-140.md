@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: EnableDataMatrixECC000-140 - Dynamsoft Barcode Reader Parameters
-Description: The parameter EnableDataMatrixECC000-140 of Dynamsoft Barcode Reader defines whether to read Data Matrix ECC000-140 barcode.
-Keywords: Enable Data Matrix ECC000-140 , parameter reference, parameter
+title: EnableDataMatrixECC000-140 - Dynamsoft Barcode Reader Parameters
+description: The parameter EnableDataMatrixECC000-140 of Dynamsoft Barcode Reader defines whether to read Data Matrix ECC000-140 barcode.
+keywords: Enable Data Matrix ECC000-140 , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

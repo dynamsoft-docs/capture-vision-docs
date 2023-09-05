@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: GrayscaleTransformationMode - Dynamsoft Core Enumerations
-Description: The enumeration GrayscaleTransformationMode of Dynamsoft Core describes all available grayscale transformation modes.
-Keywords: Grayscale transformation modes
+title: GrayscaleTransformationMode - Dynamsoft Core Enumerations
+description: The enumeration GrayscaleTransformationMode of Dynamsoft Core describes all available grayscale transformation modes.
+keywords: Grayscale transformation modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

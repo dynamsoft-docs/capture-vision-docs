@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ImagePixelFormat - Dynamsoft Core Enumerations
-Description: The enumeration ImagePixelFormat of Dynamsoft Core describes all supported image pixel formats.
-Keywords: Image pixel format
+title: ImagePixelFormat - Dynamsoft Core Enumerations
+description: The enumeration ImagePixelFormat of Dynamsoft Core describes all supported image pixel formats.
+keywords: Image pixel format
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PDFReadingMode - Dynamsoft Capture Vision Parameters
-Description: The parameter PDFReadingMode of Dynamsoft Capture Vision defines .
-Keywords: PDF reading mode, ISA
+title: PDFReadingMode - Dynamsoft Capture Vision Parameters
+description: The parameter PDFReadingMode of Dynamsoft Capture Vision defines .
+keywords: PDF reading mode, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

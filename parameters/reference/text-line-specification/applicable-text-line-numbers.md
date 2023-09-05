@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ApplicableTextLineNumbers - Dynamsoft Label Recognizer Parameters
-Description: The parameter ApplicableTextLineNumbers of Dynamsoft Label Recognizer defines the line numers of the targeting text lines.
-Keywords: Applicable text line numbers
+title: ApplicableTextLineNumbers - Dynamsoft Label Recognizer Parameters
+description: The parameter ApplicableTextLineNumbers of Dynamsoft Label Recognizer defines the line numers of the targeting text lines.
+keywords: Applicable text line numbers
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

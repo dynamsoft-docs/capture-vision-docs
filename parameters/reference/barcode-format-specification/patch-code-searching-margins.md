@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PatchCodeSearchingMargins - Dynamsoft Barcode Reader Parameters
-Description: The parameter PatchCodeSearchingMargins of Dynamsoft Barcode Reader defines the patch code searching margins.
-Keywords: PatchCodeSearchingMargins , parameter reference, parameter
+title: PatchCodeSearchingMargins - Dynamsoft Barcode Reader Parameters
+description: The parameter PatchCodeSearchingMargins of Dynamsoft Barcode Reader defines the patch code searching margins.
+keywords: PatchCodeSearchingMargins , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

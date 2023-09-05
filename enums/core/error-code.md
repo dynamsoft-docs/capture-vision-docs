@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ErrorCode - Dynamsoft Core Enumerations
-Description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
-Keywords: Error code
+title: ErrorCode - Dynamsoft Core Enumerations
+description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
+keywords: Error code
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

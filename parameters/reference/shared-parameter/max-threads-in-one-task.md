@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MaxThreadsInOneTask - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one task.
-Keywords: Max threads
+title: MaxThreadsInOneTask - Dynamsoft Capture Vision Shared Parameters
+description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one task.
+keywords: Max threads
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

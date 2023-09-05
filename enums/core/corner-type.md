@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CornerType - Dynamsoft Core Enumerations
-Description: The enumeration CornerType of Dynamsoft Core describes how the corner is formed by its sides.
-Keywords: Corner type
+title: CornerType - Dynamsoft Core Enumerations
+description: The enumeration CornerType of Dynamsoft Core describes how the corner is formed by its sides.
+keywords: Corner type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

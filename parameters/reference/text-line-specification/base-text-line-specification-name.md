@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BaseTextLineSpecificationName - Dynamsoft Label Recognizer Parameters
-Description: The parameter BaseTextLineSpecificationName of Dynamsoft Label Recognizer defines the name of base TextLineSpecification object.
-Keywords: Applicable text line numbers
+title: BaseTextLineSpecificationName - Dynamsoft Label Recognizer Parameters
+description: The parameter BaseTextLineSpecificationName of Dynamsoft Label Recognizer defines the name of base TextLineSpecification object.
+keywords: Applicable text line numbers
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

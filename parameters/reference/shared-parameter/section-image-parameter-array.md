@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: SectionImageParameterArray - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter SectionImageParameterArray defines the image processing algorithms that implemented in the different sections of an algorithm task.
-Keywords: Section image parameter
+title: SectionImageParameterArray - Dynamsoft Capture Vision Shared Parameters
+description: The parameter SectionImageParameterArray defines the image processing algorithms that implemented in the different sections of an algorithm task.
+keywords: Section image parameter
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

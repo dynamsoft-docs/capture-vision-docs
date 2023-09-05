@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeTextRegExPattern - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeTextRegExPattern of Dynamsoft Barcode Reader defines the regular expression pattern of barcode text characters for barcodes searching and result filtering.
-Keywords: BarcodeTextRegExPattern, parameter reference, parameter
+title: BarcodeTextRegExPattern - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeTextRegExPattern of Dynamsoft Barcode Reader defines the regular expression pattern of barcode text characters for barcodes searching and result filtering.
+keywords: BarcodeTextRegExPattern, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

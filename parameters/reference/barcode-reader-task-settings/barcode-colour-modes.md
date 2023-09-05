@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeColourModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeColourModes of Dynamsoft Barcode Reader defines the barcode colour modes.
-Keywords: Barcode colour modes
+title: BarcodeColourModes - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeColourModes of Dynamsoft Barcode Reader defines the barcode colour modes.
+keywords: Barcode colour modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

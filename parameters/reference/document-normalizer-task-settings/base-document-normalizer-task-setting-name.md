@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BaseDocumentNormalizerTaskSettingName - Dynamsoft Document Normalizer Parameters
-Description: The parameter BaseDocumentNormalizerTaskSettingName of Dynamsoft Document Normalizer defines the base object of the current DocumentNormalizerTaskSetting.
-Keywords: Base document normalizer task setting name
+title: BaseDocumentNormalizerTaskSettingName - Dynamsoft Document Normalizer Parameters
+description: The parameter BaseDocumentNormalizerTaskSettingName of Dynamsoft Document Normalizer defines the base object of the current DocumentNormalizerTaskSetting.
+keywords: Base document normalizer task setting name
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
