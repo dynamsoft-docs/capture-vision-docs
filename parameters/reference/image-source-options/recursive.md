@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Recursive - Dynamsoft Capture Vision Parameters
-Description: The parameter Recursive of Dynamsoft Capture Vision defines .
-Keywords: Recursive, ISA
+title: Recursive - Dynamsoft Capture Vision Parameters
+description: The parameter Recursive of Dynamsoft Capture Vision defines .
+keywords: Recursive, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MinResultConfidence - Dynamsoft Barcode Reader Parameters
-Description: The parameter MinResultConfidence of Dynamsoft Barcode Reader defines the minimum confidence of the result.
-Keywords: MinResultConfidence , parameter reference, parameter
+title: MinResultConfidence - Dynamsoft Barcode Reader Parameters
+description: The parameter MinResultConfidence of Dynamsoft Barcode Reader defines the minimum confidence of the result.
+keywords: MinResultConfidence , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

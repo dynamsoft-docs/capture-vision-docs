@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: GrayscaleEnhancementMode - Dynamsoft Core Enumerations
-Description: The enumeration GrayscaleEnhancementMode of Dynamsoft Core describes all available grayscale enhancement modes.
-Keywords: Grayscale enhancement modes
+title: GrayscaleEnhancementMode - Dynamsoft Core Enumerations
+description: The enumeration GrayscaleEnhancementMode of Dynamsoft Core describes all available grayscale enhancement modes.
+keywords: Grayscale enhancement modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: GrayscaleEnhancementMode
+codeAutoHeight: true
 ---
 
 # Enumeration GrayscaleEnhancementMode
@@ -22,7 +23,7 @@ breadcrumbText: GrayscaleEnhancementMode
    >
 >
 ```javascript
-export enum EnumGrayscaleEnhancementMode
+enum EnumGrayscaleEnhancementMode
 {
    /**Not supported yet. */
    GEM_AUTO = 1,

@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: ImageSourceState - Dynamsoft Core Enumerations
-Description: The enumeration ImageSourceState of Dynamsoft Core describes the state of ImageSourceAdapter.
-Keywords: Image source state
+title: ImageSourceState - Dynamsoft Core Enumerations
+description: The enumeration ImageSourceState of Dynamsoft Core describes the state of ImageSourceAdapter.
+keywords: Image source state
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ImageSourceState
+codeAutoHeight: true
 ---
 
 # Enumeration ImageSourceState
@@ -22,7 +23,7 @@ breadcrumbText: ImageSourceState
    >
 >
 ```javascript
-export enum EnumImageSourceState
+enum EnumImageSourceState
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
    ISS_BUFFER_EMPTY = 0,

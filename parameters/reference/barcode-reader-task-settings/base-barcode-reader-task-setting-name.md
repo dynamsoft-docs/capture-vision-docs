@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BaseBarcodeReaderTaskSettingName - Dynamsoft Barcode Reader Parameters
-Description: The parameter BaseBarcodeReaderTaskSettingName of Dynamsoft Barcode Reader defines the name of base BarcodeReaderTaskSetting.
-Keywords: Base barcode reader task setting name
+title: BaseBarcodeReaderTaskSettingName - Dynamsoft Barcode Reader Parameters
+description: The parameter BaseBarcodeReaderTaskSettingName of Dynamsoft Barcode Reader defines the name of base BarcodeReaderTaskSetting.
+keywords: Base barcode reader task setting name
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

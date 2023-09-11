@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: TargetType - Dynamsoft Core Enumerations
-Description: The enumeration TargetType of Dynamsoft Core describes target types.
-Keywords: Target type
+title: TargetType - Dynamsoft Core Enumerations
+description: The enumeration TargetType of Dynamsoft Core describes target types.
+keywords: Target type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: TargetType
+codeAutoHeight: true
 ---
 
 # Enumeration TargetType
@@ -22,7 +23,7 @@ breadcrumbText: TargetType
    >
 >
 ```javascript
-export enum EnumTargetType
+enum EnumTargetType
 {
    /**The target type of the PDF file is "page". Only available for PDFReadingMode PDFRM_RASTER.*/
    TT_PAGE = 0,

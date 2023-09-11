@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MirrorMode - Dynamsoft Barcode Reader Parameters
-Description: The parameter MirrorMode of Dynamsoft Barcode Reader defines whether to decode mirrored barcodes.
-Keywords: MirrorMode , parameter reference, parameter
+title: MirrorMode - Dynamsoft Barcode Reader Parameters
+description: The parameter MirrorMode of Dynamsoft Barcode Reader defines whether to decode mirrored barcodes.
+keywords: MirrorMode , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: CapturedResultItemType - Dynamsoft Core Enumerations
-Description: The enumeration CapturedResultItemType of Dynamsoft Core describes all types of captured result item.
-Keywords: Captured result types
+title: CapturedResultItemType - Dynamsoft Core Enumerations
+description: The enumeration CapturedResultItemType of Dynamsoft Core describes all types of captured result item.
+keywords: Captured result types
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: CapturedResultItemType
+codeAutoHeight: true
 ---
 
 # Enumeration CapturedResultItemType
@@ -22,10 +23,10 @@ breadcrumbText: CapturedResultItemType
    >
 >
 ```javascript
-export enum EnumCapturedResultItemType
+enum EnumCapturedResultItemType
 {
-   /** The type of the CapturedResultItem is "raw image". */
-   CRIT_RAW_IMAGE = 1,
+   /** The type of the CapturedResultItem is "original image". */
+   CRIT_ORIGINAL_IMAGE = 1,
    /** The type of the CapturedResultItem is "barcode". */
    CRIT_BARCODE = 2,
    /** The type of the CapturedResultItem is "text line". */
@@ -43,8 +44,8 @@ export enum EnumCapturedResultItemType
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumCapturedResultItemType
 {
-   /** The type of the CapturedResultItem is "raw image". */
-   public static final int CRIT_RAW_IMAGE = 1;
+   /** The type of the CapturedResultItem is "original image". */
+   public static final int CRIT_ORIGINAL_IMAGE = 1;
    /** The type of the CapturedResultItem is "barcode". */
    public static final int CRIT_BARCODE = 2;
    /** The type of the CapturedResultItem is "text line". */
@@ -61,8 +62,8 @@ public @interface EnumCapturedResultItemType
 ```objc
 typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
 {
-   /** The captured result is a raw image. You can convert it into a DSRawImageResultItem. */
-   DSCapturedResultItemTypeRawImage = 1,
+   /** The captured result is a original image. You can convert it into a DSOriginalImageResultItem. */
+   DSCapturedResultItemTypeOriginalImage = 1,
    /** The captured result is a decoded barcode. You can convert it into a DSBarcodeResultItem. */
    DSCapturedResultItemTypeBarcode = 2,
    /** The captured result is a recognized text line. You can convert it into a DSTextLineResultItem. */
@@ -79,8 +80,8 @@ typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
 ```swift
 public enum CapturedResultItemType : Int
 {
-   /** The captured result is a raw image. You can convert it into a DSRawImageResultItem. */
-   rawImage = 1
+   /** The captured result is a original image. You can convert it into a DSOriginalImageResultItem. */
+   originalImage = 1
    /** The captured result is a decoded barcode. You can convert it into a DSBarcodeResultItem. */
    barcode = 2
    /** The captured result is a recognized text line. You can convert it into a DSTextLineResultItem. */
@@ -97,8 +98,8 @@ public enum CapturedResultItemType : Int
 ```cpp
 typedef enum CapturedResultItemType
 {
-   /** The type of the CapturedResultItem is "raw image". */
-   CRIT_RAW_IMAGE = 1,
+   /** The type of the CapturedResultItem is "original image". */
+   CRIT_ORIGINAL_IMAGE = 1,
    /** The type of the CapturedResultItem is "barcode". */
    CRIT_BARCODE = 2,
    /** The type of the CapturedResultItem is "text line". */

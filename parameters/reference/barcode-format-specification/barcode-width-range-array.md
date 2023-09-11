@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeWidthRangeArray - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeWidthRangeArray of Dynamsoft Barcode Reader defines the range of widths (in pixels) for barcodes searching and result filtering.
-Keywords: BarcodeWidthRangeArray  , parameter reference, parameter
+title: BarcodeWidthRangeArray - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeWidthRangeArray of Dynamsoft Barcode Reader defines the range of widths (in pixels) for barcodes searching and result filtering.
+keywords: BarcodeWidthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

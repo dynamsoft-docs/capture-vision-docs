@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: ColourChannelUsageType - Dynamsoft Core Enumerations
-Description: The enumeration ColourChannelUsageType of Dynamsoft Core describes how the color channel is used in the image.
-Keywords: Corner type
+title: ColourChannelUsageType - Dynamsoft Core Enumerations
+description: The enumeration ColourChannelUsageType of Dynamsoft Core describes how the color channel is used in the image.
+keywords: Corner type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ColourChannelUsageType
+codeAutoHeight: true
 ---
 
 # Enumeration ColourChannelUsageType
@@ -22,7 +23,7 @@ breadcrumbText: ColourChannelUsageType
    >
 >
 ```javascript
-export enum EnumColourChannelUsageType
+enum EnumColourChannelUsageType
 {
     /** Automatic color channel usage determination based on image pixel format and scene. */
     CCUT_AUTO = 0,

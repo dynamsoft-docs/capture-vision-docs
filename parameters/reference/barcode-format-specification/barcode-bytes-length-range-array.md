@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeBytesLengthRangeArray - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeBytesLengthRangeArray of Dynamsoft Barcode Reader defines the range of barcode bytes length for barcodes searching and result filtering.
-Keywords: BarcodeBytesLengthRangeArray  , parameter reference, parameter
+title: BarcodeBytesLengthRangeArray - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeBytesLengthRangeArray of Dynamsoft Barcode Reader defines the range of barcode bytes length for barcodes searching and result filtering.
+keywords: BarcodeBytesLengthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

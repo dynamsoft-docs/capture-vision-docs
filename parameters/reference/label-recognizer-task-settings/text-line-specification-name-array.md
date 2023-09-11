@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TextLineSpecificationNameArray - Dynamsoft Label Recognizer Parameters
-Description: The parameter TextLineSpecificationNameArray of Dynamsoft Label Recognizer defines the collection of text line specification object names
-Keywords: text line specification, LabelRecognizerTaskSetting
+title: TextLineSpecificationNameArray - Dynamsoft Label Recognizer Parameters
+description: The parameter TextLineSpecificationNameArray of Dynamsoft Label Recognizer defines the collection of text line specification object names
+keywords: text line specification, LabelRecognizerTaskSetting
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

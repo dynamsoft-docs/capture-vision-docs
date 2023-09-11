@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: DeblurMode - Dynamsoft Barcode Reader Enumerations
-Description: The enumeration DeblurMode of Dynamsoft Barcode Reader describes deblur modes that implemented on the localized barcodes.
-Keywords: Deblur mode
+title: DeblurMode - Dynamsoft Barcode Reader Enumerations
+description: The enumeration DeblurMode of Dynamsoft Barcode Reader describes deblur modes that implemented on the localized barcodes.
+keywords: Deblur mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DeblurMode
+codeAutoHeight: true
 ---
 
 # Enumeration DeblurMode
@@ -22,7 +23,7 @@ breadcrumbText: DeblurMode
    >
 >
 ```javascript
-export enum EnumDeblurMode {
+enum EnumDeblurMode {
    /** Performs deblur process using the direct binarization algorithm. */
    DM_DIRECT_BINARIZATION = 1,
    /** Performs deblur process using the threshold binarization algorithm. */

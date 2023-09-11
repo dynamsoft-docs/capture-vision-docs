@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: HeadModuleRatio - Dynamsoft Barcode Reader Parameters
-Description: The parameter HeadModuleRatio of Dynamsoft Barcode Reader defines the module count and module size ratio of the barcode head section.
-Keywords: HeadModuleRatio , parameter reference, parameter
+title: HeadModuleRatio - Dynamsoft Barcode Reader Parameters
+description: The parameter HeadModuleRatio of Dynamsoft Barcode Reader defines the module count and module size ratio of the barcode head section.
+keywords: HeadModuleRatio , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

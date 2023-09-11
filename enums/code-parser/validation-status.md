@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ValidationStatus - Dynamsoft Code Parser Enumerations
-Description: The enumeration ValidationStatus of Dynamsoft Code Parser describes the validation status of a parsed field.
-Keywords: Validation status
+title: ValidationStatus - Dynamsoft Code Parser Enumerations
+description: The enumeration ValidationStatus of Dynamsoft Code Parser describes the validation status of a parsed field.
+keywords: Validation status
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -22,7 +22,7 @@ breadcrumbText: ValidationStatus
    >
 >
 ```javascript
-export enum EnumValidationStatus
+enum EnumValidationStatus
 {
    /** The field has no validation specified. */
    VS_NONE = 0,

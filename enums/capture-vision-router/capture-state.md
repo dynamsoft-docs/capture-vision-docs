@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CaptureState - Dynamsoft Vision Router Enumerations
-Description: The enumeration CaptureState of Dynamsoft Vision Router describes the state of data capturing.
-Keywords: Capture state
+title: CaptureState - Dynamsoft Vision Router Enumerations
+description: The enumeration CaptureState of Dynamsoft Vision Router describes the state of data capturing.
+keywords: Capture state
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -22,7 +22,7 @@ breadcrumbText: CaptureState
    >
 >
 ```javascript
-export enum EnumCaptureState
+enum EnumCaptureState
 {
    /** The data capturing is started. */
    CS_STARTED = 0,

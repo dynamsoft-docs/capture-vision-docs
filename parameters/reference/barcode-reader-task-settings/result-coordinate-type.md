@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ResultCoordinateType - Dynamsoft Barcode Reader Parameters
-Description: The parameter ResultCoordinateType of Dynamsoft Barcode Reader defines the returned coordinate type.
-Keywords: ResultCoordinateType
+title: ResultCoordinateType - Dynamsoft Barcode Reader Parameters
+description: The parameter ResultCoordinateType of Dynamsoft Barcode Reader defines the returned coordinate type.
+keywords: ResultCoordinateType
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

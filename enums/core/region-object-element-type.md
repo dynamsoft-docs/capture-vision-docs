@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: RegionObjectElementType - Dynamsoft Core Enumerations
-Description: The enumeration RegionObjectElementType of Dynamsoft Core describes the types of RegionObjectElement.
-Keywords: Region object element type
+title: RegionObjectElementType - Dynamsoft Core Enumerations
+description: The enumeration RegionObjectElementType of Dynamsoft Core describes the types of RegionObjectElement.
+keywords: Region object element type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: RegionObjectElementType
+codeAutoHeight: true
 ---
 
 # Enumeration RegionObjectElementType
@@ -22,7 +23,7 @@ breadcrumbText: RegionObjectElementType
    >
 >
 ```javascript
-export enum EnumRegionObjectElementType {
+enum EnumRegionObjectElementType {
    /**The type of subclass PredetectedRegionElement.*/
    ROET_PREDETECTED_REGION = 0,
    /**The type of subclass LocalizedBarcodeElement.*/

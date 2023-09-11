@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: StandardFormat - Dynamsoft Barcode Reader Parameters
-Description: The parameter StandardFormat of Dynamsoft Barcode Reader defines the standard barcode format.
-Keywords: StandardFormat , parameter reference, parameter
+title: StandardFormat - Dynamsoft Barcode Reader Parameters
+description: The parameter StandardFormat of Dynamsoft Barcode Reader defines the standard barcode format.
+keywords: StandardFormat , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

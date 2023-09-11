@@ -16,7 +16,7 @@ permalink: /parameters/reference/index.html
 | [`ImageROIProcessingNameArray`](capture-vision-template/image-roi-processing-name-array.md) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
 | [`ImageSourceName`](capture-vision-template/image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. |
 | [`MaxParallelTasks`](capture-vision-template/max-parallel-tasks.md) | Defines the maximum number of parallel tasks for the DCV runtime. |
-| [`OutputRawImage`](capture-vision-template/output-raw-Image.md) | Indicates whether DCV finally outputs the original input image. |
+| [`OutputOriginalImage`](capture-vision-template/output-original-Image.md) | Indicates whether DCV finally outputs the original input image. |
 | [`SemanticProcessingNameArray`](capture-vision-template/semantic-processing-name-array.md) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
 | [`Timeout`](capture-vision-template/timeout.md) | Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. |
 
@@ -67,7 +67,7 @@ permalink: /parameters/reference/index.html
 | [`ColourMode`](document-normalizer-task-settings/colour-mode.md) | Defines the output colour mode of the normalized image. |
 | [`ContentType`](document-normalizer-task-settings/content-type.md) | Defines which contents are the targeting objects. |
 | [`Contrast`](document-normalizer-task-settings/contrast.md) | Defines the contrast of the normalized image. |
-| [`CornerAngleRangeArray`](document-normalizer-task-settings/corner-angle-range-array.md) | Defines the range of angles (in degrees) of the extracted corners. |
+| [`CornerAngleRange`](document-normalizer-task-settings/corner-angle-range.md) | Defines the range of angles (in degrees) of the extracted corners. |
 | [`DeskewMode`](document-normalizer-task-settings/deskew-mode.md) | Defines the method in which the deskew process way used to apply the deskew process on the target normalized image. |
 | [`LineExtractionModes`](document-normalizer-task-settings/line-extraction-modes.md) | Defines the algorithm used to extract lines. |
 | [`PageSize`](document-normalizer-task-settings/page-size.md) | Defines the page size (width by height in pixels) of the normalized image. |

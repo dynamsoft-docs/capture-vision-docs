@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeHeightRangeArray - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeHeightRangeArray of Dynamsoft Barcode Reader defines the range of heights (in pixels) for barcodes searching and result filtering.
-Keywords: BarcodeHeightRangeArray  , parameter reference, parameter
+title: BarcodeHeightRangeArray - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeHeightRangeArray of Dynamsoft Barcode Reader defines the range of heights (in pixels) for barcodes searching and result filtering.
+keywords: BarcodeHeightRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

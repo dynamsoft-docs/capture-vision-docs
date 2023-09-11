@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: BarcodeFormat - Dynamsoft Barcode Reader Enumerations
-Description: The enumeration BarcodeFormat of Dynamsoft Barcode Reader describes the supported barcode formats.
-Keywords: Barcode formats
+title: BarcodeFormat - Dynamsoft Barcode Reader Enumerations
+description: The enumeration BarcodeFormat of Dynamsoft Barcode Reader describes the supported barcode formats.
+keywords: Barcode formats
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BarcodeFormat
+codeAutoHeight: true
 ---
 
 # Enumeration BarcodeFormat
@@ -22,7 +23,7 @@ breadcrumbText: BarcodeFormat
    >
 >
 ```javascript
-export enum EnumBarcodeFormat {
+enum EnumBarcodeFormat {
    /**No barcode format in BarcodeFormat*/
    BF_NULL = 0x00,
    /**All supported formats in BarcodeFormat*/

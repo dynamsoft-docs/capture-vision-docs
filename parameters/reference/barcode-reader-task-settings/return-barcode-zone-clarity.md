@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ReturnBarcodeZoneClarity - Dynamsoft Barcode Reader Parameters
-Description: The parameter ReturnBarcodeZoneClarity of Dynamsoft Barcode Reader defines the returned coordinate type.
-Keywords: Barcode zone clarity
+title: ReturnBarcodeZoneClarity - Dynamsoft Barcode Reader Parameters
+description: The parameter ReturnBarcodeZoneClarity of Dynamsoft Barcode Reader defines the returned coordinate type.
+keywords: Barcode zone clarity
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: RequireStartStopChars - Dynamsoft Barcode Reader Parameters
-Description: The parameter RequireStartStopChars of Dynamsoft Barcode Reader defines whether the start and stop characters are required when searching for common 1D barcodes.
-Keywords: RequireStartStopChars , parameter reference, parameter
+title: RequireStartStopChars - Dynamsoft Barcode Reader Parameters
+description: The parameter RequireStartStopChars of Dynamsoft Barcode Reader defines whether the start and stop characters are required when searching for common 1D barcodes.
+keywords: RequireStartStopChars , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

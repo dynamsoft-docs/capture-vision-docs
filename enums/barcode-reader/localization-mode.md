@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: LocalizationMode - Dynamsoft Barcode Reader Enumerations
-Description: The enumeration LocalizationMode of Dynamsoft Barcode Reader describes the localization modes of the barcodes.
-Keywords: Localization mode
+title: LocalizationMode - Dynamsoft Barcode Reader Enumerations
+description: The enumeration LocalizationMode of Dynamsoft Barcode Reader describes the localization modes of the barcodes.
+keywords: Localization mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: LocalizationMode
+codeAutoHeight: true
 ---
 
 # Enumeration LocalizationMode
@@ -22,7 +23,7 @@ breadcrumbText: LocalizationMode
    >
 >
 ```javascript
-export enum EnumLocalizationMode {
+enum EnumLocalizationMode {
    /**Not supported yet. */
    LM_AUTO = 1,
    /**Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. */

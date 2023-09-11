@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: VideoFrameQuality - Dynamsoft Core Enumerations
-Description: The enumeration VideoFrameQuality of Dynamsoft Core describes the quality of video frames.
-Keywords: Video frame quality
+title: VideoFrameQuality - Dynamsoft Core Enumerations
+description: The enumeration VideoFrameQuality of Dynamsoft Core describes the quality of video frames.
+keywords: Video frame quality
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: VideoFrameQuality
+codeAutoHeight: true
 ---
 
 # Enumeration VideoFrameQuality
@@ -22,7 +23,7 @@ breadcrumbText: VideoFrameQuality
    >
 >
 ```javascript
-export enum EnumVideoFrameQuality {
+enum EnumVideoFrameQuality {
    /**The frame quality is measured to be high.*/
    VFQ_HIGH = 0,
    /**The frame quality is measured to be low.*/

@@ -12,7 +12,7 @@ permalink: /parameters/file/auxiliary/index.html
 
 The following objects are auxiliary settings that help define specific aspects of an image-processing workflow:
 
-1. [BarcodeFormatSpecificationNameArray](barcode-format-specification.md)
+1. [BarcodeFormatSpecification](barcode-format-specification.md)
 2. [CharacterModel](character-model.md)
 3. [TextLineSpecification](textline-specification.md)
 4. [GlobalParameters](global-parameter.md)

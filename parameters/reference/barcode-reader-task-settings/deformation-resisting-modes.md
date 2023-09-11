@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DeformationResistingModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter DeformationResistingModes of Dynamsoft Barcode Reader defines how to handle distorted and deformed barcodes.
-Keywords: Deblur modes
+title: DeformationResistingModes - Dynamsoft Barcode Reader Parameters
+description: The parameter DeformationResistingModes of Dynamsoft Barcode Reader defines how to handle distorted and deformed barcodes.
+keywords: Deblur modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

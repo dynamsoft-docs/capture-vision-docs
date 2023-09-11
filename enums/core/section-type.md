@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: SectionType - Dynamsoft Core Enumerations
-Description: The enumeration SectionType of Dynamsoft Core describes the section of the algorithm.
-Keywords: Section type
+title: SectionType - Dynamsoft Core Enumerations
+description: The enumeration SectionType of Dynamsoft Core describes the section of the algorithm.
+keywords: Section type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: SectionType
+codeAutoHeight: true
 ---
 
 # Enumeration SectionType
@@ -22,7 +23,7 @@ breadcrumbText: SectionType
    >
 >
 ```javascript
-export enum EnumSectionType
+enum EnumSectionType
 {
    /**No section type is specified.*/
    ST_NULL = 0,
