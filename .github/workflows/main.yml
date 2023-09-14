@@ -35,7 +35,7 @@ jobs:
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs/* ./DCVDocCore/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocCore/
-          cd DCVDocCore && bundle exec jekyll build --incremental
+          cd DCVDocCore && bundle install && bundle exec jekyll build
 
 
       - name: Sync files
@@ -74,7 +74,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocCorePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocCorePreview/_config.yml
-          cd DCVDocCorePreview && bundle exec jekyll build --incremental
+          cd DCVDocCorePreview && bundle install && bundle exec jekyll build
 
 
       - name: Sync files to Test Env
