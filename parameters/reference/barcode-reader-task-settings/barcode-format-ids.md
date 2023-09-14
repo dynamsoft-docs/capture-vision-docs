@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/barcode-format-ids
 
 # BarcodeFormatIds
 
-Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You can specify multiple barcode formats at one time. View enumeration [BarcodeFormats](../../../enums/barcode-reader/barcode-format.md) for all supported barcode formats.
+Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You can specify multiple barcode formats at one time. View enumeration [BarcodeFormats]({{site.enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
 
 ## Example
 
