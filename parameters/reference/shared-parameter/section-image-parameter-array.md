@@ -20,11 +20,11 @@ Parameter `SectionImageParameterArray` defines the image processing algorithms t
     "SectionImageParameterArray":
     [
         {
-            "Section": "REGION_PREDETECTION",
+            "Section": "ST_REGION_PREDETECTION",
             "ImageParameterName": "IP_0"
         },
         {
-            "Section": "TEXT_LINE_LOCALIZATION",
+            "Section": "ST_TEXT_LINE_LOCALIZATION",
             "ImageParameterName": "IP_1"
         }
 
