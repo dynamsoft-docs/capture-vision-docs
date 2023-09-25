@@ -38,7 +38,7 @@ permalink: /parameters/reference/index-v2.0.0.html
 | [`DictionaryPath`](label-recognizer-task-settings/dictionary-path.md) | Sets the path of the dictionary file. |
 | [`StringLengthRange`](label-recognizer-task-settings/string-length-range.md) | Sets the range of string lengths for concatenated strings of recognized text lines. |
 | [`StringRegExPattern`](label-recognizer-task-settings/string-regex-pattern.md) | Specifies the regular expression pattern for concatenated strings of recognized text lines. |
-| [TextLineSpecificationNameArray](label-recognizer-task-settings/text-line-specification-name-array.md) | Defines the collection of text line specification object names |
+| [`TextLineSpecificationNameArray`](label-recognizer-task-settings/text-line-specification-name-array.md) | Defines the collection of text line specification object names |
 
 ## Barcode Reader Task Setting
 
