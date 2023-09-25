@@ -86,7 +86,7 @@ Filter the reference object by specifying the type of atomic results. In the `Ta
 | AtomicResultTypeArray Parameter Summary |
 | :------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE` and `ART_FRAME` |
+| **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE`, `ART_FRAME`, `ART_TABLE_CELL`, `ART_GEOMETRY_LINE`, `ART_CORNER` and `ART_COLOUR_REGION` |
 | **Default Value**<br>["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"] |
 
 #### BarcodeFilteringCondition
