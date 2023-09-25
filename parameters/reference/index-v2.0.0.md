@@ -48,13 +48,11 @@ permalink: /parameters/reference/index-v2.0.0.html
 | [`BarcodeComplementModes`](barcode-reader-task-settings/barcode-complement-modes.md) | Defines how to complement the missing parts of a barcode. |
 | [`BarcodeFormatIds`](barcode-reader-task-settings/barcode-format-ids.md) | Defines the formats of the barcode to process. |
 | [`BaseBarcodeReaderTaskSettingName`](barcode-reader-task-settings/base-barcode-reader-task-setting-name.md) | Represents the name of another `BarcodeReaderTaskSetting` object to inherit from. |
-| [`DeblurLevel`](barcode-reader-task-settings/deblur-level.md) | Defines the efforts used to process the blurriness of the barcode. |
 | [`DeblurModes`](barcode-reader-task-settings/deblur-modes.md) | Defines the mode and priority for deblurring. |
 | [`DeformationResistingModes`](barcode-reader-task-settings/deformation-resisting-modes.md) | Defines how to handle distorted and deformed barcodes. |
 | [`DPMCodeReadingModes`](barcode-reader-task-settings/dpm-code-reading-modes.md) | Defines how to read direct part mark (DPM) barcodes. |
 | [`ExpectedBarcodesCount`](barcode-reader-task-settings/expected-barcodes-count.md) | Defines the number of barcodes expected to be detected. |
 | [`LocalizationModes`](barcode-reader-task-settings/localization-modes.md) | Defines how to localize barcodes. |
-| [`ResultCoordinateType`](barcode-reader-task-settings/result-coordinate-type.md) | Defines the returned coordinate type. |
 | [`ReturnBarcodeZoneClarity`](barcode-reader-task-settings/return-barcode-zone-clarity.md) | Defines whether to return the clarity of the barcode zone. |
 | [`TextResultOrderModes`](barcode-reader-task-settings/text-result-order-modes.md) | Defines the order of the returned text results. |
 

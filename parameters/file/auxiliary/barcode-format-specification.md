@@ -62,7 +62,6 @@ BarcodeFormatSpecification is able to set configurations for specified barcode f
     ],
     "BarcodeZoneMinDistanceToImageBorders" : 1,
     "Code128Subset" : "A",
-    "DeblurLevel" : 9,
     "DeformationResistingModes" : [
         {
             "Mode": "DRM_GENERAL", 
