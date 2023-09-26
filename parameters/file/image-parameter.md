@@ -16,103 +16,84 @@ The ImageParameter object is designed to configure and organize common parameter
 {
     "Name" : "ip_default",
     "BaseImageParameterName" : "",
-    "BinarizationModes" : 
-    [
-        {
-            "BinarizationThreshold" : -1,
-            "BlockSizeX" : 0,
-            "BlockSizeY" : 0,
-            "EnableFillBinaryVacancy" : 1,
-            "GrayscaleEnhancementModesIndex" : -1,
-            "Mode" : "BM_LOCAL_BLOCK",
-            "MorphOperation" : "Close",
-            "MorphOperationKernelSizeX" : -1,
-            "MorphOperationKernelSizeY" : -1,
-            "MorphShape" : "Rectangle",
-            "ThresholdCompensation" : 10
-        }
-    ],
+    "BinarizationModes" : [/**BinarizationMode objects.*/],
     "ColourChannelUsageType" : "CCUT_AUTO",
-    "ColourConversionModes" : 
-    [
-        {
-            "BlueChannelWeight" : -1,
-            "GreenChannelWeight" : -1,
-            "Mode" : "CICM_GENERAL",
-            "RedChannelWeight" : -1,
-            "ReferChannel" : "H_CHANNEL"
-        }
-    ],
-    "GrayscaleEnhancementModes" : 
-    [
-        {
-            "Mode" : "GEM_GENERAL",
-            "Sensitivity" : -1,
-            "SharpenBlockSizeX" : -1,
-            "SharpenBlockSizeY" : -1,
-            "SmoothBlockSizeX" : -1,
-            "SmoothBlockSizeY" : -1
-        }
-    ],
-    "GrayscaleTransformationModes" : 
-    [
-        {
-            "Mode" : "GTM_ORIGINAL"
-        }
-    ],
+    "ColourConversionModes" : [/**ColourConversionMode objects.*/],
+    "GrayscaleEnhancementModes" : [/**GrayscaleEnhancementMode objects.*/],
+    "GrayscaleTransformationModes" : [/**GrayscaleTransformationModes objects.*/],
     "IfEraseTextZone" : 0,
-    "RegionPredetectionModes" : 
-    [
-        {
-            "AspectRatioRange" : "[]",
-            "FindAccurateBoundary" : 0,
-            "ForeAndBackgroundColours" : "[]",
-            "HeightRange" : "[]",
-            "ImageParameterName" : "",
-            "MeasuredByPercentage" : 1,
-            "MinImageDimension" : 262144,
-            "Mode" : "RPM_GENERAL",
-            "RelativeRegions" : "[]",
-            "Sensitivity" : 1,
-            "SpatialIndexBlockSize" : 5,
-            "WidthRange" : "[]"
-        }
-    ],
+    "RegionPredetectionModes" : [/**RegionPredetectionMode objects.*/],
     "ScaleDownThreshold" : 2300,
-    "ScaleUpModes" : 
-    [
+    "ScaleUpModes" : [/**ScaleUpMode objects.*/],
+    "TextDetectionMode" : {/**A TextDetectionMode object.*/},
+    "TextureDetectionModes" : [/**TextureDetectionMode objects.*/]
+}
+```
+
+## Definition and Reference
+
+Each algorithm section of the funtional products has a default `ImageParameter` settings. You can either skip the ImageParameter settings to implement the default settings or define your own `ImageParameter` objects and specify them in the sections you want to customize.
+
+### Definition an ImageParameter Object
+
+`ImageParameter` objects are configured under `ImageParameterOptions` and each object has a unique name as its identifier.
+
+```json
+{
+    "ImageParameterOptions": [
         {
-            "AcuteAngleWithXThreshold" : -1,
-            "LetterHeightThreshold" : 0,
-            "Mode" : "SUM_AUTO",
-            "ModuleSizeThreshold" : 0,
-            "TargetLetterHeight" : 0,
-            "TargetModuleSize" : 0
-        }
-    ],
-    "TextDetectionMode" : 
-    {
-        "CharHeightRange" : 
-        [
-            1,
-            1000,
-            1
-        ],
-        "Direction" : "HORIZONTAL",
-        "MaxSpacingInALine" : -1,
-        "Mode" : "TTDM_SKIP"
-    },
-    "TextureDetectionModes" : 
-    [
+            "Name": "IP_0"
+        },
         {
-            "Mode" : "TDM_GENERAL_WIDTH_CONCENTRATION",
-            "Sensitivity" : 5
+            "Name": "IP_1"
         }
     ]
 }
 ```
 
-## Summary of ImageParameter top-level parameters
+You can define a new `ImageParameter` object based on an existing `ImageParameter` object. For example:
+
+```json
+{
+    "ImageParameterOptions": [
+        {
+            "Name": "IP_0"
+        },
+        {
+            "Name": "IP_1",
+            "BaseImageParameterName" : "IP_0"
+        }
+    ]
+}
+```
+
+### Specify an ImageParameter for Task Sections
+
+`ImageParameter` is referenced in task settings under `SectionImageParameterArray` with their names. For example:
+
+```json
+{
+    "SectionImageParameterArray":
+    [
+        {
+            "Section": "ST_REGION_PREDETECTION",
+            "ImageParameterName": "IP_0"
+        },
+        {
+            "Section": "ST_BARCODE_LOCALIZATION",
+            "ImageParameterName": "IP_1"
+        },
+        {
+            "Section": "ST_BARCODE_DECODING",
+            "ImageParameterName": "IP_2"
+        }
+    ]
+}
+```
+
+## Detailed Parameter References
+
+View the parameter references for the details of each `ImageParameter` parameters.
 
 | Parameter Name | Description |
 | -------------- | ----------- |
