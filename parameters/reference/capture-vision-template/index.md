@@ -11,6 +11,18 @@ permalink: /parameters/reference/capture-vision-template/index.html
 
 # CaptureVisionTemplate Parameters
 
+```json
+{
+    "Name" : "CV_0",
+    "ImageSourceName": "ISA_0",
+    "ImageROIProcessingNameArray": ["TA_0" ],
+    "SemanticProcessingNameArray": ["SP_0"],
+    "OutputOriginalImage": 0,
+    "MaxParallelTasks" : 4,
+    "Timeout" : 500
+}
+```
+
 | Parameter Name | Description |
 | -------------- | ----------- |
 | [`ImageROIProcessingNameArray`](image-roi-processing-name-array.md) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |

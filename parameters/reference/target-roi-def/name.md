@@ -17,7 +17,7 @@ Parameter `Name` represents a TargetROIDef object, which serves as its unique id
 
 ```json
 {
-    "Name" : "cv_0"
+    "Name" : "roi_0"
 }
 ```
 
