@@ -14,7 +14,7 @@ Control reference content.
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`BarcodeReaderTaskSetting.Name`]({{site.parameters_reference}}shared-parameter/name.md) | The name of the BarcodeReaderTaskSetting object. |
+ | [`BarcodeReaderTaskSetting.Name`]({{site.parameters_reference}}shared-parameter/name.html) | The name of the BarcodeReaderTaskSetting object. |
  | [`BarcodeReaderTaskSetting.BarcodeFormatSpecificationNameArray`]({{site.parameters_reference}}barcode-reader-task-settings/barcode-format-specification-name-array.html) | The names of the referenced BarcodeFormatSpecification object(s). |
 
 
