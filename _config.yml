@@ -12,6 +12,13 @@ parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 cpp: /capture-vision/docs/server/programming/cplusplus/
 
+android: /capture-vision/docs/mobile/programming/android/
+oc: /capture-vision/docs/mobile/programming/ios/
+react_native: /capture-vision/docs/mobile/programming/react-native/
+flutter: /capture-vision/docs/mobile/programming/flutter/
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+cordova: /capture-vision/docs/mobile/programming/cordova/
+
 assets: /capture-vision/docs/core/assets/
 edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
 smile_icon: /capture-vision/docs/core/assets/img-icon/icon-smile.png
