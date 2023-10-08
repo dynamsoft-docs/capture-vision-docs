@@ -16,17 +16,99 @@ The ImageParameter object is designed to configure and organize common parameter
 {
     "Name" : "ip_default",
     "BaseImageParameterName" : "",
-    "BinarizationModes" : [/**BinarizationMode objects.*/],
+    "BinarizationModes" : 
+    [
+        {
+            "BinarizationThreshold" : -1,
+            "BlockSizeX" : 0,
+            "BlockSizeY" : 0,
+            "EnableFillBinaryVacancy" : 1,
+            "GrayscaleEnhancementModesIndex" : -1,
+            "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
+            "MorphShape" : "Rectangle",
+            "ThresholdCompensation" : 10
+        }
+    ],
     "ColourChannelUsageType" : "CCUT_AUTO",
-    "ColourConversionModes" : [/**ColourConversionMode objects.*/],
-    "GrayscaleEnhancementModes" : [/**GrayscaleEnhancementMode objects.*/],
-    "GrayscaleTransformationModes" : [/**GrayscaleTransformationModes objects.*/],
+    "ColourConversionModes" : 
+    [
+        {
+            "BlueChannelWeight" : -1,
+            "GreenChannelWeight" : -1,
+            "Mode" : "CICM_GENERAL",
+            "RedChannelWeight" : -1,
+            "ReferChannel" : "H_CHANNEL"
+        }
+    ],
+    "GrayscaleEnhancementModes" : 
+    [
+        {
+            "Mode" : "GEM_GENERAL",
+            "Sensitivity" : -1,
+            "SharpenBlockSizeX" : -1,
+            "SharpenBlockSizeY" : -1,
+            "SmoothBlockSizeX" : -1,
+            "SmoothBlockSizeY" : -1
+        }
+    ],
+    "GrayscaleTransformationModes" : 
+    [
+        {
+            "Mode" : "GTM_ORIGINAL"
+        }
+    ],
     "IfEraseTextZone" : 0,
-    "RegionPredetectionModes" : [/**RegionPredetectionMode objects.*/],
+    "RegionPredetectionModes" : 
+    [
+        {
+            "AspectRatioRange" : "[]",
+            "FindAccurateBoundary" : 0,
+            "ForeAndBackgroundColours" : "[]",
+            "HeightRange" : "[]",
+            "ImageParameterName" : "",
+            "MeasuredByPercentage" : 1,
+            "MinImageDimension" : 262144,
+            "Mode" : "RPM_GENERAL",
+            "RelativeRegions" : "[]",
+            "Sensitivity" : 1,
+            "SpatialIndexBlockSize" : 5,
+            "WidthRange" : "[]"
+        }
+    ],
     "ScaleDownThreshold" : 2300,
-    "ScaleUpModes" : [/**ScaleUpMode objects.*/],
-    "TextDetectionMode" : {/**A TextDetectionMode object.*/},
-    "TextureDetectionModes" : [/**TextureDetectionMode objects.*/]
+    "ScaleUpModes" : 
+    [
+        {
+            "AcuteAngleWithXThreshold" : -1,
+            "LetterHeightThreshold" : 0,
+            "Mode" : "SUM_AUTO",
+            "ModuleSizeThreshold" : 0,
+            "TargetLetterHeight" : 0,
+            "TargetModuleSize" : 0
+        }
+    ],
+    "TextDetectionMode" : 
+    {
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "MaxSpacingInALine" : -1,
+        "Mode" : "TTDM_SKIP"
+    },
+    "TextureDetectionModes" : 
+    [
+        {
+            "Mode" : "TDM_GENERAL_WIDTH_CONCENTRATION",
+            "Sensitivity" : 5
+        }
+    ]
 }
 ```
 
@@ -91,7 +173,7 @@ You can define a new `ImageParameter` object based on an existing `ImageParamete
 }
 ```
 
-## Detailed Parameter References
+## Summary of ImageParameter Top-level Parameters
 
 View the parameter references for the details of each `ImageParameter` parameters.
 
