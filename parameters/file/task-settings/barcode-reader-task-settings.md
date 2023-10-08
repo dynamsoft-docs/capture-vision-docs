@@ -14,7 +14,7 @@ Control reference content.
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`BarcodeReaderTaskSetting.Name`]({{site.parameters_reference}}shared-parameter/name.md) | The name of the BarcodeReaderTaskSetting object. |
+ | [`BarcodeReaderTaskSetting.Name`]({{site.parameters_reference}}shared-parameter/name.html) | The name of the BarcodeReaderTaskSetting object. |
  | [`BarcodeReaderTaskSetting.BarcodeFormatSpecificationNameArray`]({{site.parameters_reference}}barcode-reader-task-settings/barcode-format-specification-name-array.html) | The names of the referenced BarcodeFormatSpecification object(s). |
 
 
@@ -32,7 +32,6 @@ All available parameters related to barcode decoding are listed here, along with
  | [`BarcodeColourModes`]({{site.parameters_reference}}barcode-reader-task-settings/barcode-colour-modes.html) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`BarcodeComplementModes`]({{site.parameters_reference}}barcode-reader-task-settings/barcode-complement-modes.html) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`DeformationResistingModes`]({{site.parameters_reference}}barcode-reader-task-settings/deformation-resisting-modes.html) | Sets the mode and priority for deformation resisting. |
- | [`ResultCoordinateType`]({{site.parameters_reference}}barcode-reader-task-settings/result-coordinate-type.html) | Specifies the format for the coordinates returned |
  | [`ReturnBarcodeZoneClarity`]({{site.parameters_reference}}barcode-reader-task-settings/return-barcode-zone-clarity.html) | Sets whether or not to return the clarity of the barcode zone. |
  | [`TextResultOrderModes`]({{site.parameters_reference}}barcode-reader-task-settings/text-result-order-modes.html) | Sets the mode and priority for the order of the text results returned. |
  | [`BaseBarcodeReaderTaskSettingName`]({{site.parameters_reference}}barcode-reader-task-settings/base-barcode-reader-task-setting-name.html) | Sets the name of a BarcodeReaderTaskSetting object to be Inheritanced.|
@@ -51,7 +50,6 @@ When DCV executes tasks related to barcode reading, it will process them accordi
     "MaxThreadsInOneTask":4, 
     "ExpectedBarcodesCount" : 512,
     "BarcodeFormatIds" : [ "BF_ALL" ],
-    "DeblurLevel" : 9,
     "DeblurModes" : null,
     "BarcodeFormatSpecificationNameArray" : null,
     "LocalizationModes" : [
@@ -106,8 +104,6 @@ When DCV executes tasks related to barcode reading, it will process them accordi
             "Mode" : "DRM_SKIP"
         }
     ],
-
-    "ResultCoordinateType" : "RCT_PIXEL",
     "ReturnBarcodeZoneClarity" : 0,
     "TextResultOrderModes" : [
         {
