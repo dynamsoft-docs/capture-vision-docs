@@ -11,18 +11,6 @@ permalink: /parameters/reference/capture-vision-template/index.html
 
 # CaptureVisionTemplate Parameters
 
-```json
-{
-    "ImageSourceName": "ISA_0",
-    "ImageROIProcessingNameArray": ["TA_0" ],
-    "MaxParallelTasks" : 4,
-    "Name" : "CV_0",
-    "OutputOriginalImage": 0,
-    "SemanticProcessingNameArray": ["SP_0"],
-    "Timeout" : 500
-}
-```
-
 | Parameter Name | Description |
 | -------------- | ----------- |
 | [`ImageSourceName`](image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. |
