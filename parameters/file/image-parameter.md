@@ -116,7 +116,7 @@ The ImageParameter object is designed to configure and organize common parameter
 
 Each algorithm section of the funtional products has a default `ImageParameter` settings. You can either skip the ImageParameter settings to implement the default settings or define your own `ImageParameter` objects and specify them in the sections you want to customize.
 
-### Definition an ImageParameter Object
+### Define an ImageParameter Object
 
 `ImageParameter` objects are configured under `ImageParameterOptions` and each object has a unique name as its identifier.
 
