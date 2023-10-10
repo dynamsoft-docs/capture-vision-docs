@@ -257,7 +257,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectOriginIndex<br></td>
-        <td><b>Description</b><br>Define which point of the reference onject will be set as the origin of the coordinate system.
+        <td><b>Description</b><br>Define which point of the reference object will be set as the origin of the coordinate system.
         </td>
     </tr>
     <tr>
