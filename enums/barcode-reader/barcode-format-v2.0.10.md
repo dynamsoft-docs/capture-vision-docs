@@ -28,7 +28,7 @@ enum EnumBarcodeFormat {
    BF_NULL = 0x00,
    /**All supported formats in BarcodeFormat*/
    BF_ALL = 0xFFFFFFFFFFFFFFFF,
-   BF_DEFAULT = 0xFE3BFFFF,
+   BF_DEFAULT = 0xFE3FFFFF,
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE;*/
    BF_ONED = 0x003007FF,
    /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/
@@ -129,7 +129,7 @@ public @interface EnumBarcodeFormat {
    /**All supported formats in BarcodeFormat.*/
    public static final long BF_ALL = 0x1F0000FFE3FFFFFL;
    /**The default settings.*/
-   public static final long BF_DEFAULT = 0xFE3BFFFFL;
+   public static final long BF_DEFAULT = 0xFE3FFFFFL;
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE.*/
    public static final long BF_ONED = 0x3007FFL;
    /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/
@@ -230,7 +230,7 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    DSBarcodeFormatNull = 0,
    /**All supported formats in BarcodeFormat .*/
    DSBarcodeFormatAll = 0x1F0000FFE3FFFFF,
-   DSBarcodeFormatDefault = 0xFE3BFFFF,
+   DSBarcodeFormatDefault = 0xFE3FFFFF,
    /**Code 39*/
    DSBarcodeFormatCode39 = 1,
    /**Code 128*/
@@ -335,7 +335,7 @@ public enum BarcodeFormat : Int
    Null = 0
    /**All supported formats in BarcodeFormat .*/
    all = 0x1F0000FFE3FFFFF
-   default = 0xFE3BFFFF
+   default = 0xFE3FFFFF
    /**Code 39*/
    code39 = 1
    /**Code 128*/
@@ -441,7 +441,7 @@ enum BarcodeFormat : unsigned long long
    /**All supported formats in BarcodeFormat.*/
    BF_ALL = 0xFFFFFFFFFFFFFFFF,
    /**Use the default barcode format settings.*/
-   BF_DEFAULT = 0xFE3BFFFF,
+   BF_DEFAULT = 0xFE3FFFFF,
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE;*/
    BF_ONED = 0x003007FF,
    /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/

@@ -38,6 +38,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 | [`SemanticProcessingNameArray`](../reference/capture-vision-template/semantic-processing-name-array.md)| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
 | [`OutputOriginalImage`](../reference/capture-vision-template/output-original-Image.md) | Indicates whether DCV finally outputs the original input image. |
 | [`MaxParallelTasks`](../reference/capture-vision-template/max-parallel-tasks.md) | Indicates the maximum number of parallel tasks for the DCV runtime. |
+| [`MinImageCaptureInterval`]({{ site.dcv_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
 | [`Timeout`](../reference/capture-vision-template/timeout.md) | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|
 
 <div align="center">

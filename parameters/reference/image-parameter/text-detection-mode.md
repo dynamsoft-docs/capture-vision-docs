@@ -66,7 +66,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>"HORIZONTAL", "VERTICAL", "OBLIQUE"
+        <td><b>Range</b><br>"HORIZONTAL", "VERTICAL", "OBLIQUE", "UNKNOWN"
         </td>
     </tr>
     <tr>

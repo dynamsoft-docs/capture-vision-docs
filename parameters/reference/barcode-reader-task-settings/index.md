@@ -17,7 +17,6 @@ permalink: /parameters/reference/barcode-reader-task-settings/index.html
 | [`BarcodeComplementModes`](barcode-complement-modes.md) | Defines how to complement the missing parts of a barcode. |
 | [`BarcodeFormatIds`](barcode-format-ids.md) | Defines the formats of the barcode to process. |
 | [`BaseBarcodeReaderTaskSettingName`](base-barcode-reader-task-setting-name.md) | Represents the name of another `BarcodeReaderTaskSetting` object to inherit from. |
-| [`DeblurLevel`](deblur-level.md) | Defines the efforts used to process the blurriness of the barcode. |
 | [`DeblurModes`](deblur-modes.md) | Defines the mode and priority for deblurring. |
 | [`DeformationResistingModes`](deformation-resisting-modes.md) | Defines how to handle distorted and deformed barcodes. |
 | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Defines how to read direct part mark (DPM) barcodes. |
