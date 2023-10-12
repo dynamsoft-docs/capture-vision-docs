@@ -179,6 +179,7 @@ permalink: /parameters/reference/index.html
 | -------------------- | ----------- |
 | [`DirectoryPath`](image-source-options/directory-path.md) | Defines the path of the image source. |
 | [`FileFilter`](image-source-options/file-filter.md) | Defines a file name filter string, which determines which files are fetched. |
+| [`Name`]({{ site.dcv_parameters_reference }}image-source-options/name.html) | Defines the name of a `ImageSource` object, which serves as its unique identifier. |
 | [`Pages`]({{ site.dcv_parameters_reference }}image-source-options/pages.html) | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching. |
 | [`PDFReadingMode`](image-source-options/pdf-reading-mode.md) | Defines how to handle PDF files. |
 | [`Recursive`](image-source-options/recursive.md) | Defines whether to fetch files recursively. |
@@ -189,14 +190,3 @@ permalink: /parameters/reference/index.html
 | Parameter Name  | Description |
 | ---------------------------- | ----------- |
 | [`MaxTotalImageDimension`](global-parameter/max-total-image-dimension.md) | Defines the maximum total dimension of the images that read in the memory. |
-
-## Shared Parameter
-
-| Parameter Name  | Description |
-| --------------- | ----------- |
-| [`DirectoryPath`](shared-parameter/directory-path.md) | Defines a path when the library have to read files. |
-| [`MaxThreadsInOneTask`](shared-parameter/max-threads-in-one-task.md) | Defines the maximum threads that can be consumed in one task. |
-| [`Name`](shared-parameter/name.md) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
-| [`SectionImageParameterArray`](shared-parameter/section-image-parameter-array.md) | Defines the image processing algorithms that implemented in the task. |
-| [`StartSection`](shared-parameter/start-section.md) | Defines the start section of the algorithm task. |
-| [`TerminateSetting`](shared-parameter/terminate-setting.md) | Defines the terminate stages of the task. |

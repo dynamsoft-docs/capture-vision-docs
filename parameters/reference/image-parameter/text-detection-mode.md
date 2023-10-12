@@ -70,7 +70,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>"HORIZONTAL"
+        <td><b>Default Value</b><br>"UNKNOWN"
         </td>
     </tr>
     <tr>

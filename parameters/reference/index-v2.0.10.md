@@ -187,14 +187,3 @@ permalink: /parameters/reference/index.html
 | Parameter Name  | Description |
 | ---------------------------- | ----------- |
 | [`MaxTotalImageDimension`](global-parameter/max-total-image-dimension.md) | Defines the maximum total dimension of the images that read in the memory. |
-
-## Shared Parameter
-
-| Parameter Name  | Description |
-| --------------- | ----------- |
-| [`DirectoryPath`](shared-parameter/directory-path.md) | Defines a path when the library have to read files. |
-| [`MaxThreadsInOneTask`](shared-parameter/max-threads-in-one-task.md) | Defines the maximum threads that can be consumed in one task. |
-| [`Name`](shared-parameter/name.md) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
-| [`SectionImageParameterArray`](shared-parameter/section-image-parameter-array.md) | Defines the image processing algorithms that implemented in the task. |
-| [`StartSection`](shared-parameter/start-section.md) | Defines the start section of the algorithm task. |
-| [`TerminateSetting`](shared-parameter/terminate-setting.md) | Defines the terminate stages of the task. |
