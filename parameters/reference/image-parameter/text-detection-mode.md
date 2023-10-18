@@ -192,7 +192,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
     "TextDetectionMode" : 
     {
         "Mode" : "TTDM_LINE",
-        "Direction" : "HORIZONTAL",
+        "Direction" : "UNKNOWN",
         "CharHeightRange" : [1, 1000, 1],
         "MaxSpacingInALine" : -1,
         "Sensitivity" : 3
