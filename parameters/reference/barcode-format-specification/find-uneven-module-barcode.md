@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: FindUnevenModuleBarcode - Dynamsoft Barcode Reader Parameters
-Description: The parameter Code128Subset of Dynamsoft Barcode Reader defines whether to find barcodes with uneven barcode modules.
-Keywords: FindUnevenModuleBarcode , parameter reference, parameter
+title: FindUnevenModuleBarcode - Dynamsoft Barcode Reader Parameters
+description: The parameter Code128Subset of Dynamsoft Barcode Reader defines whether to find barcodes with uneven barcode modules.
+keywords: FindUnevenModuleBarcode , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

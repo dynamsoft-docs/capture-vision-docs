@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: ErrorCode - Dynamsoft Core Enumerations
-Description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
-Keywords: Error code
+title: ErrorCode - Dynamsoft Core Enumerations
+description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
+keywords: Error code
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ErrorCode
+codeAutoHeight: true
 ---
 
 # Enumeration ErrorCode
@@ -22,7 +23,7 @@ breadcrumbText: ErrorCode
    >
 >
 ```javascript
-export enum EnumErrorCode
+enum EnumErrorCode
 {
    /**Successful. */
    EC_OK = 0,
@@ -85,8 +86,6 @@ export enum EnumErrorCode
    EC_DOMAIN_NOT_MATCHED = -10039,
    /**The reserved info does not match the reserved info bound in the current product key.*/
    EC_RESERVEDINFO_NOT_MATCHED = -10040,
-   /**The License DLL is missing.*/
-   EC_LICENSE_DLL_MISSING = -10042,
    /**The license key does not match the license content.*/
    EC_LICENSEKEY_NOT_MATCHED = -10043,
    /**Failed to request the license content.*/
@@ -119,6 +118,12 @@ export enum EnumErrorCode
    EC_NO_IMAGE_SOURCE = -10063,
    /**Failed to read directory.*/
    EC_READ_DIRECTORY_FAILED = -10064,
+   /**The file already exists but overwriting is disabled.*/
+   EC_FILE_ALREADY_EXISTS = -10067,
+   /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+   EC_CREATE_FILE_FAILED = -10068,
+   /**The input ImageData object contains invalid parameter(s).*/
+   EC_IMGAE_DATA_INVALID = -10069,
    /** -20000~-29999: DLS license error code. */
    /**No license.*/
    EC_NO_LICENSE = -20000,
@@ -221,7 +226,8 @@ export enum EnumErrorCode
 ```
 >
 ```java
-public class EnumErrorCode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumErrorCode
 {
    /** Successful. */
    public static final int EC_OK = 0;
@@ -284,8 +290,6 @@ public class EnumErrorCode
    public static final int EC_DOMAIN_NOT_MATCH = -10039,
    /** The reserved info does not match the reserved info bound in the current product key. */
    public static final int EC_RESERVED_INFO_NOT_MATCH = -10040,
-   /** The License DLL is missing. */
-   public static final int EC_LICENSE_DLL_MISSING = -10042;
    /** The license key does not match the license content. */
    public static final int EC_LICENSE_KEY_NOT_MATCH = -10043,
    /** Failed to request the license content. */
@@ -324,6 +328,12 @@ public class EnumErrorCode
    /**DynamsoftLabelRecognizer*/
    /**DynamsoftDocumentNormalizer*/
    public static final int EC_MODULE_NOT_FOUND = -10065,
+   /**The file already exists but overwriting is disabled.*/
+   public static final int EC_FILE_ALREADY_EXISTS = -10067,
+   /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+   public static final int EC_CREATE_FILE_FAILED = -10068,
+   /**The input ImageData object contains invalid parameter(s).*/
+   public static final int EC_IMGAE_DATA_INVALID = -10069,
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    public static final int EC_NO_LICENSE = -20000,
@@ -520,6 +530,12 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    /**DynamsoftLabelRecognizer*/
    /**DynamsoftDocumentNormalizer*/
    DSErrorCodeModuleNotFound                   = -10065,
+   /**The file already exists but overwriting is disabled.*/
+   DSErrorCodeFileAlreadyExists                = -10067,
+   /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+   DSErrorCodeCreateFileFailed                 = -10068,
+   /**The input ImageData object contains invalid parameter(s).*/
+   DSErrorCodeImageDataInvalid                 = -10069,
    /**No license.*/
    DSErrorCodeNoLicense                        = -20000,
    /**The handshake code is invalid. */
@@ -614,7 +630,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    DSErrorCodeVINLicenseInvalid                = -90010,
    /** The license for parsing customized code type is invalid. */
    DSErrorCodeCustomizedCodeTypeLicenseInvalid = -90011,
-}NS_SWIFT_NAME(ErrorCode);
+};
 ```
 >
 ```swift
@@ -714,6 +730,12 @@ public enum ErrorCode : Int
    /**DynamsoftLabelRecognizer*/
    /**DynamsoftDocumentNormalizer*/
    moduleNotFound                   = -10065
+   /**The file already exists but overwriting is disabled.*/
+   fileAlreadyExists                = -10067
+   /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+   createFileFailed                 = -10068
+   /**The input ImageData object contains invalid parameter(s).*/
+   imageDataInvalid                 = -10069
    /**No license.*/
    noLicense                        = -20000
    /**The handshake code is invalid. */
@@ -878,8 +900,6 @@ typedef enum ErrorCode
    EC_DOMAIN_NOT_MATCH = -10039,
    /** The reserved info does not match the reserved info bound in the current product key. */
    EC_RESERVED_INFO_NOT_MATCH = -10040,
-   /** The License DLL is missing. */
-   EC_LICENSE_DLL_MISSING = -10042;
    /** The license key does not match the license content. */
    EC_LICENSE_KEY_NOT_MATCH = -10043,
    /** Failed to request the license content. */
@@ -918,6 +938,12 @@ typedef enum ErrorCode
    /**DynamsoftLabelRecognizer*/
    /**DynamsoftDocumentNormalizer*/
    EC_MODULE_NOT_FOUND = -10065,
+   /**The file already exists but overwriting is disabled.*/
+   EC_FILE_ALREADY_EXISTS = -10067,
+   /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+   EC_CREATE_FILE_FAILED = -10068,
+   /**The input ImageData object contains invalid parameter(s).*/
+   EC_IMGAE_DATA_INVALID = -10069,
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    EC_NO_LICENSE = -20000,

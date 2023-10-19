@@ -24,11 +24,13 @@ Enumeration `CameraPosition` describes the camera position.
 ```
 >
 ```java
-public enum EnumCameraPosition {
-   /** The back-facing camera. */
-   CP_BACK(0),
-   /** The front-facing camera. */
-   CP_FRONT(1);
+@IntDef({CP_FRONT,CP_BACK})
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCameraPosition {
+   // The back-facing camera.
+   public static final int CP_FRONT= 0;
+   // The front-facing camera.
+   public static final int CP_BACK = 1;
 }
 ```
 >

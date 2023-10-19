@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: StringRegExPattern - Dynamsoft Label Recognizer Parameters
-Description: The parameter StringRegExPattern of Dynamsoft Label Recognizer defines the regular expression pattern for concatenated strings of recognized text lines.
-Keywords: text lines, concatenated strings, regular expression
+title: StringRegExPattern - Dynamsoft Label Recognizer Parameters
+description: The parameter StringRegExPattern of Dynamsoft Label Recognizer defines the regular expression pattern for concatenated strings of recognized text lines.
+keywords: text lines, concatenated strings, regular expression
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

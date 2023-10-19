@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: QRCodeErrorCorrectionLevel - Dynamsoft Barcode Reader Enumerations
-Description: The enumeration QRCodeErrorCorrectionLevel of Dynamsoft Barcode Reader describes the error correction level when processing the QR code.
-Keywords: QR code error correction level
+title: QRCodeErrorCorrectionLevel - Dynamsoft Barcode Reader Enumerations
+description: The enumeration QRCodeErrorCorrectionLevel of Dynamsoft Barcode Reader describes the error correction level when processing the QR code.
+keywords: QR code error correction level
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: QRCodeErrorCorrectionLevel
+codeAutoHeight: true
 ---
 
 # Enumeration QRCodeErrorCorrectionLevel
@@ -22,7 +23,7 @@ breadcrumbText: QRCodeErrorCorrectionLevel
    >
 >
 ```javascript
-export enum EnumQRCodeErrorCorrectionLevel
+enum EnumQRCodeErrorCorrectionLevel
 {
    /**Error Correction Level H (high) */
    QRECL_ERROR_CORRECTION_H = 0,
@@ -36,7 +37,8 @@ export enum EnumQRCodeErrorCorrectionLevel
 ```
 >
 ```java
-public class EnumQRCodeErrorCorrectionLevel
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumQRCodeErrorCorrectionLevel
 {
    /**Error Correction Level H (high) */
    public static final int QRECL_ERROR_CORRECTION_H = 0;
@@ -60,7 +62,7 @@ typedef NS_ENUM(NSInteger, DSQRCodeErrorCorrectionLevel)
     DSQRCodeErrorCorrectionLevelErrorCorrectionM = 2,
    /**Error Correction Level Q (medium-high) */
     DSQRCodeErrorCorrectionLevelErrorCorrectionQ = 3
-}NS_SWIFT_NAME(QRCodeErrorCorrectionLevel);
+};
 ```
 >
 ```swift

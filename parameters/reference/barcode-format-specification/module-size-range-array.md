@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ModuleSizeRangeArray - Dynamsoft Barcode Reader Parameters
-Description: The parameter ModuleSizeRangeArray of Dynamsoft Barcode Reader defines the range of module size (in pixels) while barcode searching and result filtering.
-Keywords: ModuleSizeRangeArray , parameter reference, parameter
+title: ModuleSizeRangeArray - Dynamsoft Barcode Reader Parameters
+description: The parameter ModuleSizeRangeArray of Dynamsoft Barcode Reader defines the range of module size (in pixels) while barcode searching and result filtering.
+keywords: ModuleSizeRangeArray , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

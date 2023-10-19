@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: QuadrilateralDetectionModes - Dynamsoft Document Normalizer Parameters
-Description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Normalizer is XXX.
-Keywords: Quadrilateral detection
+title: QuadrilateralDetectionModes - Dynamsoft Document Normalizer Parameters
+description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Normalizer is XXX.
+keywords: Quadrilateral detection
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

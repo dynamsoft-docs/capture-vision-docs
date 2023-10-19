@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeZoneBarCountRangeArray - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeZoneBarCountRangeArray of Dynamsoft Barcode Reader defines the range of bar count of the barcode zone for barcodes searching.
-Keywords: BarcodeZoneBarCountRangeArray , parameter reference, parameter
+title: BarcodeZoneBarCountRangeArray - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeZoneBarCountRangeArray of Dynamsoft Barcode Reader defines the range of bar count of the barcode zone for barcodes searching.
+keywords: BarcodeZoneBarCountRangeArray , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

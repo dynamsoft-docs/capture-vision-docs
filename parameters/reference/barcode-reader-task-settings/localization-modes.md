@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: LocalizationModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter LocalizationModes of Dynamsoft Barcode Reader defines the line numers of the targeting text lines.
-Keywords: Localization modes
+title: LocalizationModes - Dynamsoft Barcode Reader Parameters
+description: The parameter LocalizationModes of Dynamsoft Barcode Reader defines the line numers of the targeting text lines.
+keywords: Localization modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -31,7 +31,7 @@ Parameter `LocalizationModes` determines how to localize barcodes. It consists o
 
 ## Parameter Summary
 
-Parameter `LocalizationModes` consist of a group of localizaion mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
+Parameter `LocalizationModes` consist of a group of localization mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
 
 ### Mode Arguments
 
@@ -92,7 +92,7 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">ScanDirection<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top">ScanDirection<br>(Optional)</td>
         <td><b>Description</b><br>Sets the scan direction when searching barcode.
         </td>
     </tr>
@@ -106,6 +106,10 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     </tr>
     <tr>
         <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>0: Both vertical and horizontal direction.<br>1: Vertical direction.<br>2: Horizontal direction.
         </td>
     </tr>
     <tr>
@@ -156,6 +160,28 @@ Parameter `LocalizationModes` consist of a group of localizaion mode objects. Ea
     <tr>
         <td><b>Valid For</b><br>
             LM_SCAN_DIRECTLY<br>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">ModuleSize<br>(Optional)</td>
+        <td><b>Description</b><br>Set the module size, if the module size is known.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>[0, 0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>
+            LM_CENTRE<br>
         </td>
     </tr>
     <tr>
@@ -211,32 +237,19 @@ If the `LocalizationModes` is not configured in your template file, the followin
     "LocalizationModes" : 
     [
         {
-            "ConfidenceThreshold" : 60,
-            "IsOneDStacked" : 0,
-            "Mode" : "LM_CONNECTED_BLOCKS",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
+            "Mode" : "LM_CONNECTED_BLOCKS"
         },
         {
-            "ConfidenceThreshold" : 60,
             "IsOneDStacked" : 0,
             "Mode" : "LM_SCAN_DIRECTLY",
             "ScanDirection" : 0,
             "ScanStride" : 0
         },
         {
-            "ConfidenceThreshold" : 60,
-            "IsOneDStacked" : 0,
             "Mode" : "LM_STATISTICS",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
         },
         {
-            "ConfidenceThreshold" : 60,
-            "IsOneDStacked" : 0,
             "Mode" : "LM_LINES",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
         }
     ]
 }
@@ -309,6 +322,7 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 
 **Available Mode Arguments:**
 
+- ModuleSize
 - LibraryFileName
 - LibraryParameters
 

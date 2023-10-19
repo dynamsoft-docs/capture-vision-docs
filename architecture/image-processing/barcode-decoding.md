@@ -53,5 +53,5 @@ Each of these stages has its own output (known as an intermediate result) and us
 | Transforming          | `IRUT_TRANSFORMED_GRAYSCALE_IMAGE`        | [`GrayscaleTransformationModes`](../../parameters/reference/image-parameter/grayscale-transformation-modes.md)        |
 | Deformation-reducing  | `IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE` | [`DeformationResistingModes`](../../parameters/reference/barcode-reader-task-settings/deformation-resisting-modes.md) |
 | Barcode-complementing | `IRUT_COMPLEMENTED_BARCODE_IMAGE`         | [`BarcodeComplementModes`](../../parameters/reference/barcode-reader-task-settings/barcode-complement-modes.md)       |
-| Up-scaling            | `IRUT_SCALED_UP_BARCODE_IMAGE`            | N/A                                                                                                                   |
+| Up-scaling            | `IRUT_SCALED_UP_BARCODE_IMAGE`            | [`ScaleUpModes`](../../parameters/reference/image-parameter/scale-up-modes.md) |
 | Barcode-decoding      | `IRUT_DECODED_BARCODES`                   | N/A                                                                                                                   |

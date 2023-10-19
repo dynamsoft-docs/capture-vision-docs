@@ -24,37 +24,59 @@ Enumeration `CameraState` describes the camera state.
 ```
 >
 ```java
-public enum EnumCameraState {
-   OPENING(0),
-   OPENED(1),
-   CLOSING(2),
-   CLOSED(3);
+@IntDef({OPENING,OPENED,CLOSING,CLOSED})
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCameraState {
+   // The camera is opening.
+   public static final int OPENING = 0;
+   // The camera is opened.
+   public static final int OPENED = 1;
+   // The camera is closing.
+   public static final int CLOSING = 2;
+   // The camera is closed.
+   public static final int CLOSED = 3;
 }
 ```
 >
 ```objc
 typedef NS_ENUM(NSInteger, DSCameraState)
 {
-   /** The camera is opening.*/
-   EnumCAMERA_STATE_OPENING NS_SWIFT_NAME(EnumCAMERA_STATE_OPENING)  = 0,
-   /** The camera is opened.*/
-   EnumCAMERA_STATE_OPENED  NS_SWIFT_NAME(EnumCAMERA_STATE_OPENED)   = 1,
-   /** The camera is closing.*/
-   EnumCAMERA_STATE_CLOSING  NS_SWIFT_NAME(EnumCAMERA_STATE_CLOSING)   = 2,
-   /** The camera is closed.*/
-   EnumCAMERA_STATE_CLOSED  NS_SWIFT_NAME(EnumCAMERA_STATE_CLOSED)   = 3
+   /**
+    * The camera is opening.
+    */
+   CameraStateOpening = 0,
+   /**
+    * The camera is opened.
+    */
+   CameraStateOpened = 1,
+   /**
+    * The camera is closing.
+    */
+   CameraStateClosing = 2,
+   /**
+    * The camera is closed.
+    */
+   CameraStateClosed = 3
 };
 ```
 >
 ```swift
-public enum EnumCameraState : Int{
-   /** The camera is opening.*/
-   EnumCAMERA_STATE_OPENING = 0
-   /** The camera is opened.*/
-   EnumCAMERA_STATE_OPENED = 1
-   /** The camera is closing.*/
-   EnumCAMERA_STATE_CLOSING = 2
-   /** The camera is closed.*/
-   EnumCAMERA_STATE_CLOSED = 3
+public enum CameraState : Int{
+   /**
+    * The camera is opening.
+    */
+   opening = 0
+   /**
+    * The camera is opened.
+    */
+   opened = 1
+   /**
+    * The camera is closing.
+    */
+   closing = 2
+   /**
+    * The camera is closed.
+    */
+   closed = 3
 }
 ```

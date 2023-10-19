@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: MinQuietZoneWidth - Dynamsoft Barcode Reader Parameters
-Description: The parameter MinQuietZoneWidth of Dynamsoft Barcode Reader defines the minimum width (in moduleSize) of the barcode quiet zone.
-Keywords: MinQuietZoneWidth , parameter reference, parameter
+title: MinQuietZoneWidth - Dynamsoft Barcode Reader Parameters
+description: The parameter MinQuietZoneWidth of Dynamsoft Barcode Reader defines the minimum width (in moduleSize) of the barcode quiet zone.
+keywords: MinQuietZoneWidth , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

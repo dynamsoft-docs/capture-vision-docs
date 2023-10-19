@@ -18,7 +18,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
     "ImageSourceName": "ISA_0",
     "ImageROIProcessingNameArray": ["TA_0" ],
     "SemanticProcessingNameArray": ["SP_0"],
-    "OutputRawImage": 0,
+    "OutputOriginalImage": 0,
     "MaxParallelTasks" : 4,
     "Timeout" : 500
 }
@@ -36,8 +36,9 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 | [`ImageSourceName`](../reference/capture-vision-template/image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV. |
 | [`ImageROIProcessingNameArray`](../reference/capture-vision-template/image-roi-processing-name-array.md) | Represents the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. It is used to define recognition tasks performed on ROIs of an image, including reading barcodes, recognizing labels, or detecting document quadrilaterals. |
 | [`SemanticProcessingNameArray`](../reference/capture-vision-template/semantic-processing-name-array.md)| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
-| [`OutputRawImage`](../reference/capture-vision-template/output-raw-Image.md) | Indicates whether DCV finally outputs the original input image. |
+| [`OutputOriginalImage`](../reference/capture-vision-template/output-original-Image.md) | Indicates whether DCV finally outputs the original input image. |
 | [`MaxParallelTasks`](../reference/capture-vision-template/max-parallel-tasks.md) | Indicates the maximum number of parallel tasks for the DCV runtime. |
+| [`MinImageCaptureInterval`]({{ site.dcv_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
 | [`Timeout`](../reference/capture-vision-template/timeout.md) | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|
 
 <div align="center">
@@ -50,7 +51,7 @@ In the parameter template, the `ImageSourceName` parameter refers to the `ImageS
 
 ## Captured Output Configuration
 
-`OuputRawImage`, `ImageROIProcessingNameArray` and `SemanticProcessingNameArray` are three different parameters that control the captured output, organized as a `CapturedResult` interface in DCV. `CapturedResult` represents a set of all captured result items on an image. Each type of result Item represents the output of different task types. The following figure lists the rough relationship between DCV output parameters and output results.
+`OuputOriginalImage`, `ImageROIProcessingNameArray` and `SemanticProcessingNameArray` are three different parameters that control the captured output, organized as a `CapturedResult` interface in DCV. `CapturedResult` represents a set of all captured result items on an image. Each type of result Item represents the output of different task types. The following figure lists the rough relationship between DCV output parameters and output results.
 
 <div align="center">
    <p><img src="assets/dcv-parameters-result-relationship.png" alt="Relationship between DCV parameters and output results" width="100%" /></p>
@@ -231,22 +232,22 @@ For more details about filtering reference objects, please refer to [`ReferenceO
 
 The [`SemanticProcessing`](./semantic-processing/index.md) object is used to specify one or more tasks to analyze and extract information from image ROI processing results. The whole workflow typically involves following concepts.
 
-## Prerequisites
+### Prerequisites
 
 A `SemanticProcessing` object will take effect when its name is referenced in `CaptureVisionTemplate.SemanticProcessingNameArray`.
 
-## Launch Timing
+### Launch Timing
 
 The semantic process is triggered only after all the recognition tasks referenced in `CaptureVisionTemplate.ImageROIProcessingNameArray` have been completed.
 
-## Data Filtering
+### Data Filtering
 
 In many cases, the process may involve filtering data to select only the relevant sources, such as a label text meeting a specific regular expression or a barcode meeting a specific format. `ReferenceObjectFilter` is used to specify such data filtering criteria.
 
-## Task Execution
+### Task Execution
 
-This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameterFile}}task-settings/code-parser-task-setting.html) object.
+This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameter}}file/task-settings/code-parser-task-settings.html) object.
 
-## Results Reporting
+### Results Reporting
 
 Currently, semantic-processing supports code parsing tasks, so the result is returned with callback [`OnParsedResultsReceived`]().

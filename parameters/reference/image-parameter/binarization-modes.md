@@ -385,6 +385,7 @@ If an image has different lighting conditions in different areas, BM_LOCAL_BLOCK
 * EnableFillBinaryVacancy
 * ThresholdCompensation
 * BinarizationThreshold
+* GrayscaleEnhancementModesIndex
 * MorphOperation
 * MorphShape
 * MorphOperationKernelSizeX
@@ -399,5 +400,10 @@ Binarizes the image for each pixel based on a unified threshold. If the gray val
 **Available Mode Arguments:**
 
 * BinarizationThreshold
+* GrayscaleEnhancementModesIndex
+* MorphOperation
+* MorphShape
+* MorphOperationKernelSizeX
+* MorphOperationKernelSizeY
 * LibraryFileName
 * LibraryParameters

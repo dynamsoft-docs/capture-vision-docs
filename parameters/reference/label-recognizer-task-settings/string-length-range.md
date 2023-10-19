@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: StringLengthRange - Dynamsoft Label Recognizer Parameters
-Description: The parameter StringLengthRange of Dynamsoft Label Recognizer defines the range of string lengths for concatenated strings of recognized text lines.
-Keywords: text lines, concatenated strings length
+title: StringLengthRange - Dynamsoft Label Recognizer Parameters
+description: The parameter StringLengthRange of Dynamsoft Label Recognizer defines the range of string lengths for concatenated strings of recognized text lines.
+keywords: text lines, concatenated strings length
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

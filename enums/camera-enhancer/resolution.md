@@ -24,49 +24,71 @@ Enumeration `Resolution` describes the resolution.
 ```
 >
 ```java
-public enum EnumResolution {
-   // Use the default resolution. Generally, the default resolution is 1080P.
-   RESOLUTION_AUTO(0),
-   // The 480P resolution. Generally, the video frame size is about 360*640.
-   RESOLUTION_480P(1),
-   // The 720P resolution. Generally, the video frame size is about 720*1280.
-   RESOLUTION_720P(2),
-   // The 1080P resolution. Generally, the video frame size is about 1080*1920.
-   RESOLUTION_1080P(3),
-   // The 2K resolution. Generally, the video frame size is about 1080*1920.
-   RESOLUTION_2K(4),
-   // The 4K resolution. Generally, the video frame size is about 2160*3840.
-   RESOLUTION_4K(5);
+@IntDef({RESOLUTION_AUTO,RESOLUTION_480P,RESOLUTION_720P,RESOLUTION_1080P,RESOLUTION_2K,RESOLUTION_4K})
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumResolution {
+   // Auto choose resolution, expected 1080P, if can't choose, choose first lower than 1080P.
+   public static final int RESOLUTION_AUTO = 0;
+   // 480P
+   public static final int RESOLUTION_480P = 1;
+   // 720P
+   public static final int RESOLUTION_720P = 2;
+   // 1080P
+   public static final int RESOLUTION_1080P = 3;
+   // 2K
+   public static final int RESOLUTION_2K = 4;
+   // 4K
+   public static final int RESOLUTION_4K = 5;
 }
 ```
 >
 ```objc
-typedef NS_ENUM(NSInteger, EnumResolution)
+typedef NS_ENUM(NSInteger, DSResolution)
 {
-   /** Use the default resolution. Generally, the default resolution is 1080P. */
-   EnumRESOLUTION_AUTO = 0,
-   /** The 480P resolution. Generally, the video frame size is about 480*640. */
-   EnumRESOLUTION_480P = 1,
-   /** The 720P resolution. Generally, the video frame size is about 720*1280. */
-   EnumRESOLUTION_720P = 2,
-   /** The 1080P resolution. Generally, the video frame size is about 1080*1920. */
-   EnumRESOLUTION_1080P = 0,
-   /** The 1080P resolution. Generally, the video frame size is about 2160*3840. */
-   EnumRESOLUTION_4K = 1
+   /**
+    * Set the video streaming to the auto selected resolution.
+    */
+   ResolutionAuto = 0,
+   /**
+    * Set the video streaming to the 480P resolution.
+    */
+   Resolution480P = 1,
+   /**
+    * Set the video streaming to the 720P resolution.
+    */
+   Resolution720P = 2,
+   /**
+    * Set the video streaming to the 480P resolution.
+    */
+   Resolution1080P = 3,
+   /**
+    * Set the video streaming to the 4K resolution.
+    */
+   Resolution4K = 4
 };
 ```
 >
 ```swift
-public enum EnumResolution : Int{
-   /** Use the default resolution. Generally, the default resolution is 1080P. */
-   EnumRESOLUTION_AUTO = 0,
-   /** The 480P resolution. Generally, the video frame size is about 480*640. */
-   EnumRESOLUTION_480P = 1,
-   /** The 720P resolution. Generally, the video frame size is about 720*1280. */
-   EnumRESOLUTION_720P = 2,
-   /** The 1080P resolution. Generally, the video frame size is about 1080*1920. */
-   EnumRESOLUTION_1080P = 0,
-   /** The 1080P resolution. Generally, the video frame size is about 2160*3840. */
-   EnumRESOLUTION_4K = 1
+public enum Resolution : Int{
+   /**
+    * Set the video streaming to the auto selected resolution.
+    */
+   auto = 0
+   /**
+    * Set the video streaming to the 480P resolution.
+    */
+   480P = 1
+   /**
+    * Set the video streaming to the 720P resolution.
+    */
+   720P = 2
+   /**
+    * Set the video streaming to the 480P resolution.
+    */
+   1080P = 3
+   /**
+    * Set the video streaming to the 4K resolution.
+    */
+   4K = 4
 }
 ```

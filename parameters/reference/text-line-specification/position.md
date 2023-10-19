@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Text Line Area Points - Dynamsoft Label Recognizer Parameters
-Description: The parameter Text Line Area Points of Dynamsoft Label Recognizer defines how to normalize the characters.
-Keywords: Character normalization
+title: Text Line Area Points - Dynamsoft Label Recognizer Parameters
+description: The parameter Text Line Area Points of Dynamsoft Label Recognizer defines how to normalize the characters.
+keywords: Character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

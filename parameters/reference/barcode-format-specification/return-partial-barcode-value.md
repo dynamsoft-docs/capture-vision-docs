@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ReturnPartialBarcodeValue - Dynamsoft Barcode Reader Parameters
-Description: The parameter ReturnPartialBarcodeValue of Dynamsoft Barcode Reader defines whether to return partial barcode value(s).
-Keywords: ReturnPartialBarcodeValue , parameter reference, parameter
+title: ReturnPartialBarcodeValue - Dynamsoft Barcode Reader Parameters
+description: The parameter ReturnPartialBarcodeValue of Dynamsoft Barcode Reader defines whether to return partial barcode value(s).
+keywords: ReturnPartialBarcodeValue , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

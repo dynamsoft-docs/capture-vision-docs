@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BaseTargetROIDefName - Dynamsoft Capture Vision Parameters
-Description: The parameter BaseTargetROIDefName of Dynamsoft Capture Vision defines the name of the inherited TargetROIDef object.
-Keywords: inheritance, TargetROIDef
+title: BaseTargetROIDefName - Dynamsoft Capture Vision Parameters
+description: The parameter BaseTargetROIDefName of Dynamsoft Capture Vision defines the name of the inherited TargetROIDef object.
+keywords: inheritance, TargetROIDef
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

@@ -18,7 +18,7 @@ A `SemanticProcessing` object is defined as below:
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
 | ReferenceObjectFilter | JSON object | Optional | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions |
-| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.parameterReference}}task-setting-name-array.html) to define a group of semantic-processing tasks. |
+| TaskSettingNameArray | string array | Optional | Sets the value for parameter [TaskSettingNameArray]({{site.dcv_parameters_reference}}target-roi-def/task-setting-name-array.html) to define a group of semantic-processing tasks. |
 
 Here is a sample:
 
@@ -85,7 +85,7 @@ In many cases, the process may involve filtering data to select only the relevan
 
 ## Task Execution
 
-This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameterFile}}task-settings/code-parser-task-setting.html) object.
+This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameter}}file/task-settings/code-parser-task-settings.html) object.
 
 ## Results Reporting
 

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DictionaryCorrectionThresholds - Dynamsoft Label Recognizer Parameters
-Description: The parameter DictionaryCorrectionThresholds of Dynamsoft Label Recognizer defines the threshold of dictionary error correction.
-Keywords: user dictionary, text correction
+title: DictionaryCorrectionThresholds - Dynamsoft Label Recognizer Parameters
+description: The parameter DictionaryCorrectionThresholds of Dynamsoft Label Recognizer defines the threshold of dictionary error correction.
+keywords: user dictionary, text correction
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

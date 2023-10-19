@@ -1,6 +1,6 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/main
 repository: dynamsoft-docs/capture-vision-docs
-docFullPath: https://www.dynamsoft.com/capture-vision/docs/
+docFullPath: https://www.dynamsoft.com/capture-vision/docs/core/
 firstLevelUrl: /capture-vision/docs/core/
 docHomePage: /capture-vision/docs/core/introduction/
 
@@ -8,9 +8,16 @@ introduction: /capture-vision/docs/core/introduction/
 architecture: /capture-vision/docs/core/architecture/
 parameter: /capture-vision/docs/core/parameters/
 enums: /capture-vision/docs/core/enums/
-parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 cpp: /capture-vision/docs/server/programming/cplusplus/
+
+android: /capture-vision/docs/mobile/programming/android/
+oc: /capture-vision/docs/mobile/programming/ios/
+react_native: /capture-vision/docs/mobile/programming/react-native/
+flutter: /capture-vision/docs/mobile/programming/flutter/
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+cordova: /capture-vision/docs/mobile/programming/cordova/
 
 assets: /capture-vision/docs/core/assets/
 edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
@@ -25,6 +32,11 @@ useVersionTree: true
 baseurl: "/capture-vision/docs/core"
 plugins:
   - jemoji
+  - jekyll-webp
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-readme-index
+  - jekyll-seo-tag
 
 url: "https://www.dynamsoft.com" # sitemap root
 

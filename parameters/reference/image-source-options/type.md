@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Type - Dynamsoft Capture Vision Parameters
-Description: The parameter Type of Dynamsoft Capture Vision defines .
-Keywords: Type, ISA
+title: Type - Dynamsoft Capture Vision Parameters
+description: The parameter Type of Dynamsoft Capture Vision defines .
+keywords: Type, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

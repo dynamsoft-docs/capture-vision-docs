@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: EnableAddonCode - Dynamsoft Barcode Reader Parameters
-Description: The parameter EnableAddonCode of Dynamsoft Barcode Reader defines whether to identify addon code.
-Keywords: EnableAddonCode , parameter reference, parameter
+title: EnableAddonCode - Dynamsoft Barcode Reader Parameters
+description: The parameter EnableAddonCode of Dynamsoft Barcode Reader defines whether to identify addon code.
+keywords: EnableAddonCode , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

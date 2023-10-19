@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: ImagePixelFormat - Dynamsoft Core Enumerations
-Description: The enumeration ImagePixelFormat of Dynamsoft Core describes all supported image pixel formats.
-Keywords: Image pixel format
+title: ImagePixelFormat - Dynamsoft Core Enumerations
+description: The enumeration ImagePixelFormat of Dynamsoft Core describes all supported image pixel formats.
+keywords: Image pixel format
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ImagePixelFormat
+codeAutoHeight: true
 ---
 
 # Enumeration ImagePixelFormat
@@ -22,7 +23,7 @@ breadcrumbText: ImagePixelFormat
    >
 >
 ```javascript
-export enum EnumImagePixelFormat {
+enum EnumImagePixelFormat {
    /** 0:Black, 1:White. */
    IPF_BINARY = 0,
    /** 0:White, 1:Black. */
@@ -55,7 +56,8 @@ export enum EnumImagePixelFormat {
 ```
 >
 ```java
-public class EnumCapturedResultItemType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumCapturedResultItemType
 {
    /** 0:Black, 1:White. */
    public static final int IPF_BINARY = 0;
@@ -119,7 +121,7 @@ typedef NS_ENUM(NSInteger, DSImagePixelFormat)
    DSImagePixelFormatBGR_888,
    /**  0:black, 255:white */
    DSImagePixelFormatBinary_8
-}NS_SWIFT_NAME(ImagePixelFormat);
+};
 ```
 >
 ```swift

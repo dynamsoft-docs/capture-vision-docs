@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: ImageCaptureDistanceMode - Dynamsoft Core Enumerations
-Description: The enumeration ImageCaptureDistanceMode of Dynamsoft Core is used to distinguish the close-up images from the prospect images.
-Keywords: Image capture distance
+title: ImageCaptureDistanceMode - Dynamsoft Core Enumerations
+description: The enumeration ImageCaptureDistanceMode of Dynamsoft Core is used to distinguish the close-up images from the prospect images.
+keywords: Image capture distance
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: ImageCaptureDistanceMode
+codeAutoHeight: true
 ---
 
 # Enumeration ImageCaptureDistanceMode
@@ -22,7 +23,7 @@ breadcrumbText: ImageCaptureDistanceMode
    >
 >
 ```javascript
-export enum ImageCaptureDistanceMode
+enum ImageCaptureDistanceMode
 {
    /** The image is taken by close-up shot camera. */
    ICDM_NEAR = 0,
@@ -32,7 +33,8 @@ export enum ImageCaptureDistanceMode
 ```
 >
 ```java
-public class EnumImageCaptureDistanceMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumImageCaptureDistanceMode
 {
    /** The image is taken by close-up shot camera. */
    public static final int ICDM_NEAR = 0;
@@ -48,7 +50,7 @@ typedef NS_ENUM(NSInteger, DSImageCaptureDistanceMode)
    DSImageCaptureDistanceModeNear,
    /** The image is taken by long shot camera. */
    DSImageCaptureDistanceModeFar
-}NS_SWIFT_NAME(ImageCaptureDistanceMode);
+};
 ```
 >
 ```swift

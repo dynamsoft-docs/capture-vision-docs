@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PartitionModes - Dynamsoft Barcode Reader Parameters
-Description: The parameter PartitionModes of Dynamsoft Barcode Reader is used to select the mode used to apply partition process when decoding QRCode and DataMatrix.
-Keywords: PartitionModes , parameter reference, parameter
+title: PartitionModes - Dynamsoft Barcode Reader Parameters
+description: The parameter PartitionModes of Dynamsoft Barcode Reader is used to select the mode used to apply partition process when decoding QRCode and DataMatrix.
+keywords: PartitionModes , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

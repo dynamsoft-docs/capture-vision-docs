@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: IntermediateResultUnitType - Dynamsoft Core Enumerations
-Description: The enumeration IntermediateResultUnitType of Dynamsoft Core describes the type of the intermediate result unit.
-Keywords: Intermediate result unit type
+title: IntermediateResultUnitType - Dynamsoft Core Enumerations
+description: The enumeration IntermediateResultUnitType of Dynamsoft Core describes the type of the intermediate result unit.
+keywords: Intermediate result unit type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: IntermediateResultUnitType
+codeAutoHeight: true
 ---
 
 # Enumeration IntermediateResultUnitType
@@ -22,7 +23,7 @@ Enumeration `IntermediateResultUnitType` is used in each subclass of `Intermedia
    >
 >
 ```javascript
-export enum EnumIntermediateResultUnitType {
+enum EnumIntermediateResultUnitType {
    /**No IntermediateResult type is specified.*/
    IRUT_NULL = 0,
    /**The type of the IntermediateResult is "colour image".*/
@@ -85,7 +86,8 @@ export enum EnumIntermediateResultUnitType {
 ```
 >
 ```java
-public class EnumIntermediateResultUnitType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumIntermediateResultUnitType
 {
    /**No IntermediateResult type is specified.*/
    public static final long IRUT_NULL = 0
@@ -209,7 +211,7 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType)
    DSIntermediateResultUnitTypeNormalizedImages = 1 << 26,
    /**Specify all intermediate result types.*/
    DSIntermediateResultUnitTypeAll = 0x3FFFFFF
-}NS_SWIFT_NAME(IntermediateResultUnitType);
+};
 ```
 >
 ```swift

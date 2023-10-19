@@ -14,9 +14,8 @@ Control reference content.
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`BarcodeReaderTaskSetting.Name`](#name) | The name of the BarcodeReaderTaskSetting object. |
- | [`BarcodeReaderTaskSetting.Description`](#description) | The description of the ImageParameter object. |
- | [`BarcodeReaderTaskSetting.FormatSpecificationNameArray`](#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
+ | [`BarcodeReaderTaskSetting.Name`]({{site.dcv_parameters_reference}}shared-parameter/name.html) | The name of the BarcodeReaderTaskSetting object. |
+ | [`BarcodeReaderTaskSetting.BarcodeFormatSpecificationNameArray`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/barcode-format-specification-name-array.html) | The names of the referenced BarcodeFormatSpecification object(s). |
 
 
 
@@ -25,18 +24,21 @@ All available parameters related to barcode decoding are listed here, along with
 
  | Parameter Name | Description |
  | -------------- | ----------- |
- | [`ExpectedBarcodesCount`]() | Sets the number of barcodes expected to be detected for each image. |
- | [`BarcodeFormatIds`]() | Sets which barcode format the current FormatSpecification configuration is applied to. |
- | [`DeblurModes`]() | Sets the mode and priority for deblurring. |
- | [`LocalizationModes`]() | Sets the mode and priority for barcode localization algorithms. |
- | [`DPMCodeReadingModes`]() | Sets the mode and priority for DPM code reading. |
- | [`BarcodeColourModes`]() | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
- | [`BarcodeComplementModes`]() | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`DeformationResistingModes`]() | Sets the mode and priority for deformation resisting. |
- | [`ResultCoordinateType`]() | Specifies the format for the coordinates returned |
- | [`ReturnBarcodeZoneClarity`]() | Sets whether or not to return the clarity of the barcode zone. |
- | [`TextResultOrderModes`]() | Sets the mode and priority for the order of the text results returned. |
- | [`BaseBarcodeReaderTaskSettingName`]() | Sets the name of a BarcodeReaderTaskSetting object to be Inheritanced.|
+ | [`ExpectedBarcodesCount`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) | Sets the number of barcodes expected to be detected for each image. |
+ | [`BarcodeFormatIds`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/barcode-format-ids.html) | Sets which barcode format the current FormatSpecification configuration is applied to. |
+ | [`DeblurModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) | Sets the mode and priority for deblurring. |
+ | [`LocalizationModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) | Sets the mode and priority for barcode localization algorithms. |
+ | [`DPMCodeReadingModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html) | Sets the mode and priority for DPM code reading. |
+ | [`BarcodeColourModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/barcode-colour-modes.html) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
+ | [`BarcodeComplementModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/barcode-complement-modes.html) | Sets the mode and priority to complement the missing parts in the barcode. |
+ | [`DeformationResistingModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deformation-resisting-modes.html) | Sets the mode and priority for deformation resisting. |
+ | [`ReturnBarcodeZoneClarity`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/return-barcode-zone-clarity.html) | Sets whether or not to return the clarity of the barcode zone. |
+ | [`TextResultOrderModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/text-result-order-modes.html) | Sets the mode and priority for the order of the text results returned. |
+ | [`BaseBarcodeReaderTaskSettingName`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/base-barcode-reader-task-setting-name.html) | Sets the name of a BarcodeReaderTaskSetting object to be Inheritanced.|
+| [`SectionImageParameterArray`]({{site.dcv_parameters_reference}}shared-parameter/section-image-parameter-array.html) | Sets image parameters for three different sections, where each section performs image processing stages with different parameters.|
+| [`StartSection`]({{site.dcv_parameters_reference}}shared-parameter/start-section.html) | Indicates which Section the task will start executing from.|
+| [`TerminateSetting`]({{site.dcv_parameters_reference}}shared-parameter/terminate-setting.html) | Indicates where the task stops, specifically indicating a Stage under a certain Section.|
+| [`MaxThreadsInOneTask`]({{site.dcv_parameters_reference}}shared-parameter/max-threads-in-one-task.html) | Represents the maximum number of parallel threads that can be used on a single task.|
 
 When DCV executes tasks related to barcode reading, it will process them according to the settings in the `BarcodeReaderTaskSetting`. Here is a sample:
 
@@ -48,7 +50,6 @@ When DCV executes tasks related to barcode reading, it will process them accordi
     "MaxThreadsInOneTask":4, 
     "ExpectedBarcodesCount" : 512,
     "BarcodeFormatIds" : [ "BF_ALL" ],
-    "DeblurLevel" : 9,
     "DeblurModes" : null,
     "BarcodeFormatSpecificationNameArray" : null,
     "LocalizationModes" : [
@@ -103,8 +104,6 @@ When DCV executes tasks related to barcode reading, it will process them accordi
             "Mode" : "DRM_SKIP"
         }
     ],
-
-    "ResultCoordinateType" : "RCT_PIXEL",
     "ReturnBarcodeZoneClarity" : 0,
     "TextResultOrderModes" : [
         {

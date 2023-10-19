@@ -134,11 +134,11 @@ In total, there are 27 unique stages which are identified by the types of result
 - IRUT_RECOGNIZED_TEXT_LINES
 - IRUT_NORMALIZED_IMAGES
 
-These stages are the minimal processing units that can be manipulated and these results are called intermediate results. For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
+These stages are the minimal processing units that can be manipulated and these results are called intermediate results. For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](../output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
 
 ## Incomplete Task
 
 As mentioned in **Table 2** above, a task is usually complete, which means it consists of three consecutive sections. However, it is not always the case. 
 
-1. An incomplete task can be a halfway task which means it starts from step two or even step three and consists of only two or even just one section. Read more about [StartSection](../../parameters/reference/start-section.md).
-2. An incomplete task can be a premature task which means it ends early and doesn't produce the final results. Unlike a halfway task which must start at the beginning of a section, a premature task may end at any stage of a section. Read more about [TerminateSetting](../../parameters/reference/terminate-settings.md).
+1. An incomplete task can be a halfway task which means it starts from step two or even step three and consists of only two or even just one section. Read more about [StartSection](../../parameters/reference/shared-parameter/start-section.md).
+2. An incomplete task can be a premature task which means it ends early and doesn't produce the final results. Unlike a halfway task which must start at the beginning of a section, a premature task may end at any stage of a section. Read more about [TerminateSetting](../../parameters/reference/shared-parameter/terminate-setting.md).

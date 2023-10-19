@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
-Description: The parameter TerminateSetting defines the terminate stages of the task.
-Keywords: Terminate setting
+title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
+description: The parameter TerminateSetting defines the terminate stages of the task.
+keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
@@ -11,7 +11,7 @@ permalink: /parameters/reference/shared-parameter/terminate-setting.html
 
 # TerminateSetting
 
-Parameter `TerminateSetting` defines the terminate stages of the task. For each sections in an alogrithm task, you can define only one terminate stage.
+Parameter `TerminateSetting` defines the terminate stages of each section in the task. For each sections, you can define only one terminate stage.
 
 ## Example
 

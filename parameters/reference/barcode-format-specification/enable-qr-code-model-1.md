@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: EnableQRCodeModel1 - Dynamsoft Barcode Reader Parameters
-Description: The parameter EnableQRCodeModel1 of Dynamsoft Barcode Reader defines whether to read QR code model 1.
-Keywords: EnableQRCodeModel1 , parameter reference, parameter
+title: EnableQRCodeModel1 - Dynamsoft Barcode Reader Parameters
+description: The parameter EnableQRCodeModel1 of Dynamsoft Barcode Reader defines whether to read QR code model 1.
+keywords: EnableQRCodeModel1 , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

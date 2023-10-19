@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Enumerations - Dynamsoft Capture Vision
-Description: The index of enumeration page
-Keywords: Enumerations
+title: Enumerations - Dynamsoft Capture Vision
+description: The index of enumeration page
+keywords: Enumerations
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

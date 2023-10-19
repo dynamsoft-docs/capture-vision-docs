@@ -31,59 +31,78 @@ Enumeration `EnhancerFeatures` indicates the advanced features of Dynamsoft Came
 ```
 >
 ```java
-public class EnumEnhancerFeatures {
-   // The frame sharpness filter feature.
-   public static final int EF_FRAME_FILTER = 1;
-   // The sensor filter feature.
-   public static final int EF_SENSOR_CONTROL = 2;
-   // The enhanced focus feature.
-   public static final int EF_ENHANCED_FOCUS = 4;
-   // The fast mode of DCE.
-   public static final int EF_FAST_MODE = 8;
-   // The auto-zoom feature.
-   public static final int EF_AUTO_ZOOM = 16;
-   // Add a smart torch on the UI.
-   public static final int EF_SMART_TORCH = 32;
-   // The combined value of all the features.
-   public static final int EF_ALL = 63;
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumEnhancedFeatures {
+   //Enable the Frame filter feature of DCE
+   public static final int EF_FRAME_FILTER = 0x01;
+   //Enable the sensor control feature of DCE
+   public static final int EF_SENSOR_CONTROL = 0x02;
+   //Enable the camera focus features of DCE
+   public static final int EF_ENHANCED_FOCUS = 0x04;
+   //Enable the autozoom feature
+   public static final int EF_AUTO_ZOOM = 0x10;
+   //Enable the smart torch button
+   public static final int EF_SMART_TORCH = 0x20;
+   // Enable all.
+   public static final int EF_ALL = 0x3F;
 }
 ```
 >
 ```objc
-typedef NS_ENUM(NSInteger, DSEnhancerFeatures)
+typedef NS_ENUM(NSInteger, DSEnhancedFeatures)
 {
-   /** The frame sharpness filter feature. */
-   EnumFRAME_FILTER = 0X01,
-   /** The sensor filter feature. */
-   EnumSENSOR_CONTROL = 0X02,
-   /** The enhanced focus feature. */
-   EnumENHANCED_FOCUS = 0X04,
-   /** The fast mode of DCE. */
-   EnumFAST_MODE = 0X08,
-   /** The auto-zoom feature. */
-   EnumAUTO_ZOOM = 0X10,
-   /** Add a smart torch on the UI. */
-   EnumSMART_TORCH = 0X20,
-   /** The combined value of all the features. */
-   EnumALL = 0X3F
+   /**
+    * Enable frame filter feature of the camera enhancer to make a filter out the low-quality frames.
+    */
+   EnhancedFeatureFrameFilter = 0X01,
+   /**
+    * Enable sensor control to filter out all the frames when the device is shaking.
+    */
+   EnhancedFeatureSensorControl = 0X02,
+   /**
+    * Enhanced focus helps low-end devices on focusing.
+    */
+   EnhancedFeatureEnhancedFocus = 0X04,
+   /**
+    * Enable the camera zoom-in automatically when barcode is far away.
+    */
+   EnhancedFeatureAutoZoom = 0X10,
+   /**
+    * Display a torch button when the environment light is low.
+    */
+   EnhancedFeatureSmartTorch = 0X20,
+   /**
+    * Enable all the enhanced features.
+    */
+   EnhancedFeatureAll = 0X3F
 };
 ```
 >
 ```swift
-public enum EnhancerFeatures : Int{
-   /** The frame sharpness filter feature. */
-   EnumFRAME_FILTER = 0X01
-   /** The sensor filter feature. */
-   EnumSENSOR_CONTROL = 0X02
-   /** The enhanced focus feature. */
-   EnumENHANCED_FOCUS = 0X04
-   /** The fast mode of DCE. */
-   EnumFAST_MODE = 0X08
-   /** The auto-zoom feature. */
-   EnumAUTO_ZOOM = 0X10
-   /** Add a smart torch on the UI. */
-   EnumSMART_TORCH = 0X20
-   /** The combined value of all the features. */
-   EnumALL = 0X3F
+public enum EnhancedFeatures : Int{
+   /**
+    * Enable frame filter feature of the camera enhancer to make a filter out the low-quality frames.
+    */
+   frameFilter = 0X01
+   /**
+    * Enable sensor control to filter out all the frames when the device is shaking.
+    */
+   sensorControl = 0X02
+   /**
+    * Enhanced focus helps low-end devices on focusing.
+    */
+   enhancedFocus = 0X04
+   /**
+    * Enable the camera zoom-in automatically when barcode is far away.
+    */
+   autoZoom = 0X10
+   /**
+    * Display a torch button when the environment light is low.
+    */
+   smartTorch = 0X20
+   /**
+    * Enable all the enhanced features.
+    */
+   all = 0X3F
 }
 ```

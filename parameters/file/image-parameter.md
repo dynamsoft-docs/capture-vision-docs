@@ -112,7 +112,70 @@ The ImageParameter object is designed to configure and organize common parameter
 }
 ```
 
-## Summary of ImageParameter top-level parameters
+## Definition and Reference
+
+Each algorithm section of the funtional products has a default `ImageParameter` settings. You can either skip the ImageParameter settings to implement the default settings or define your own `ImageParameter` objects and specify them in the sections you want to customize.
+
+### Define an ImageParameter Object
+
+`ImageParameter` objects are configured under `ImageParameterOptions` and each object has a unique name as its identifier.
+
+```json
+{
+    "ImageParameterOptions": [
+        {
+            "Name": "IP_0"
+        },
+        {
+            "Name": "IP_1"
+        }
+    ]
+}
+```
+
+You can define a new `ImageParameter` object based on an existing `ImageParameter` object. For example:
+
+```json
+{
+    "ImageParameterOptions": [
+        {
+            "Name": "IP_0"
+        },
+        {
+            "Name": "IP_1",
+            "BaseImageParameterName" : "IP_0"
+        }
+    ]
+}
+```
+
+### Specify an ImageParameter for Task Sections
+
+`ImageParameter` is referenced in task settings under `SectionImageParameterArray` with their names. For example:
+
+```json
+{
+    "SectionImageParameterArray":
+    [
+        {
+            "Section": "ST_REGION_PREDETECTION",
+            "ImageParameterName": "IP_0"
+        },
+        {
+            "Section": "ST_BARCODE_LOCALIZATION",
+            "ImageParameterName": "IP_1"
+        },
+        {
+            "Section": "ST_BARCODE_DECODING",
+            "ImageParameterName": "IP_2"
+        }
+    ]
+}
+```
+
+## Summary of ImageParameter Top-level Parameters
+
+View the parameter references for the details of each `ImageParameter` parameters.
 
 | Parameter Name | Description |
 | -------------- | ----------- |

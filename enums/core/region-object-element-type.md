@@ -1,17 +1,18 @@
 ---
 layout: default-layout
-Title: RegionObjectElementType - Dynamsoft Core Enumerations
-Description: The enumeration RegionObjectElementType of Dynamsoft Core describes the types of RegionObjectElement.
-Keywords: Region object element type
+title: RegionObjectElementType - Dynamsoft Core Enumerations
+description: The enumeration RegionObjectElementType of Dynamsoft Core describes the types of RegionObjectElement.
+keywords: Region object element type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: RegionObjectElementType
+codeAutoHeight: true
 ---
 
 # Enumeration RegionObjectElementType
 
-`RegionObjectElementType` is used to determine the particular type of the subclasses of `RegionOjectElement`.
+`RegionObjectElementType` is used to determine the particular type of the subclasses of `RegionObjectElement`.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -22,12 +23,12 @@ breadcrumbText: RegionObjectElementType
    >
 >
 ```javascript
-export enum EnumRegionObjectElementType {
+enum EnumRegionObjectElementType {
    /**The type of subclass PredetectedRegionElement.*/
    ROET_PREDETECTED_REGION = 0,
    /**The type of subclass LocalizedBarcodeElement.*/
    ROET_LOCALIZED_BARCODE = 1,
-   /**The type of subclass PredetectedRegionElement.*/
+   /**The type of subclass DecodedBarcodeElement.*/
    ROET_DECODED_BARCODE = 2,
    /**The type of subclass LocalizedTextLineElement.*/
    ROET_LOCALIZED_TEXT_LINE = 3,
@@ -41,13 +42,14 @@ export enum EnumRegionObjectElementType {
 ```
 >
 ```java
-public class EnumRegionObjectElementType
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumRegionObjectElementType
 {
    /**The type of subclass PredetectedRegionElement.*/
    public static final int ROET_PREDETECTED_REGION = 0;
    /**The type of subclass LocalizedBarcodeElement.*/
    public static final int ROET_LOCALIZED_BARCODE = 1;
-   /**The type of subclass PredetectedRegionElement.*/
+   /**The type of subclass DecodedBarcodeElement.*/
    public static final int ROET_DECODED_BARCODE = 2;
    /**The type of subclass LocalizedTextLineElement.*/
    public static final int ROET_LOCALIZED_TEXT_LINE = 3;
@@ -67,7 +69,7 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
    DSRegionObjectElementTypePredetectedRegion = 0,
    /**The type of subclass LocalizedBarcodeElement.*/
    DSRegionObjectElementTypeLocalizedBarcode = 1,
-   /**The type of subclass PredetectedRegionElement.*/
+   /**The type of subclass DecodedBarcodeElement.*/
    DSRegionObjectElementTypeDecodedBarcode = 2,
    /**The type of subclass LocalizedTextLineElement.*/
    DSRegionObjectElementTypeLocalizedTextLine = 3,
@@ -77,7 +79,7 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
    DSRegionObjectElementTypeDetectedQuad = 5,
    /**The type of subclass NormalizedImageElement.*/
    DSRegionObjectElementTypeNormalizedImage = 6
-}NS_SWIFT_NAME(RegionObjectElementType);
+};
 ```
 >
 ```swift
@@ -87,7 +89,7 @@ public enum RegionObjectElementType : Int
    predetectedRegion = 0,
    /**The type of subclass LocalizedBarcodeElement.*/
    localizedBarcode = 1,
-   /**The type of subclass PredetectedRegionElement.*/
+   /**The type of subclass DecodedBarcodeElement.*/
    decodedBarcode = 2,
    /**The type of subclass LocalizedTextLineElement.*/
    localizedTextLine = 3,
@@ -107,7 +109,7 @@ typedef enum RegionObjectElementType
    ROET_PREDETECTED_REGION,
    /**The type of subclass LocalizedBarcodeElement.*/
    ROET_LOCALIZED_BARCODE,
-   /**The type of subclass PredetectedRegionElement.*/
+   /**The type of subclass DecodedBarcodeElement.*/
    ROET_DECODED_BARCODE,
    /**The type of subclass LocalizedTextLineElement.*/
    ROET_LOCALIZED_TEXT_LINE,

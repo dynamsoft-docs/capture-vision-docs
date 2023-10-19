@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeFormatIds - Dynamsoft Barcode Reader Parameters
-Description: The parameter BarcodeFormatIds of Dynamsoft Barcode Reader defines the barcode formats to process.
-Keywords: Barcode format IDs
+title: BarcodeFormatIds - Dynamsoft Barcode Reader Parameters
+description: The parameter BarcodeFormatIds of Dynamsoft Barcode Reader defines the barcode formats to process.
+keywords: Barcode format IDs
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/barcode-format-ids
 
 # BarcodeFormatIds
 
-Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You can specify multiple barcode formats at one time. View enumeration [BarcodeFormats](../../../enums/barcode-reader/barcode-format.md) for all supported barcode formats.
+Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You can specify multiple barcode formats at one time. View enumeration [BarcodeFormats]({{site.enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
 
 ## Example
 

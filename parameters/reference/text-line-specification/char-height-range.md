@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CharHeightRange - Dynamsoft Label Recognizer Parameters
-Description: The parameter CharHeightRange of Dynamsoft Label Recognizer defines the range of the character height.
-Keywords: Applicable text line numbers
+title: CharHeightRange - Dynamsoft Label Recognizer Parameters
+description: The parameter CharHeightRange of Dynamsoft Label Recognizer defines the range of the character height.
+keywords: Applicable text line numbers
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

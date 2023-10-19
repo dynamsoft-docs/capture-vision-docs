@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: BarcodeFormatSpecification - Dynamsoft Capture Vision Parameter File
-Description: The BarcodeFormatSpecification object in the Dynamsoft Capture Vision Parameter File defines how barcodes will be processed.
-Keywords: Barcode format specification, binarization, grayscale enhancement, character normalization
+title: BarcodeFormatSpecification - Dynamsoft Capture Vision Parameter File
+description: The BarcodeFormatSpecification object in the Dynamsoft Capture Vision Parameter File defines how barcodes will be processed.
+keywords: Barcode format specification, binarization, grayscale enhancement, character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
@@ -62,7 +62,6 @@ BarcodeFormatSpecification is able to set configurations for specified barcode f
     ],
     "BarcodeZoneMinDistanceToImageBorders" : 1,
     "Code128Subset" : "A",
-    "DeblurLevel" : 9,
     "DeformationResistingModes" : [
         {
             "Mode": "DRM_GENERAL", 
@@ -98,7 +97,7 @@ BarcodeFormatSpecification is able to set configurations for specified barcode f
 
 **Select target barcode format**
 
-Select `BarcodeFormatIds` for barcode by specifying the name of the format. View [`All supported barcode types`](character-model-array.md) page for more information.
+Select `BarcodeFormatIds` for barcode by specifying the name of the format. View enumeration [BarcodeFormats]({{site.enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
 
 **Set special configurations for target format**
 

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Location - Dynamsoft Capture Vision Parameters
-Description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
-Keywords: Location
+title: Location - Dynamsoft Capture Vision Parameters
+description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+keywords: Location
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
@@ -86,7 +86,7 @@ Filter the reference object by specifying the type of atomic results. In the `Ta
 | AtomicResultTypeArray Parameter Summary |
 | :------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE` and `ART_FRAME` |
+| **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE`, `ART_FRAME`, `ART_TABLE_CELL`, `ART_GEOMETRY_LINE`, `ART_CORNER` and `ART_COLOUR_REGION` |
 | **Default Value**<br>["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"] |
 
 #### BarcodeFilteringCondition
@@ -257,7 +257,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectOriginIndex<br></td>
-        <td><b>Description</b><br>Define which point of the reference onject will be set as the origin of the coordinate system.
+        <td><b>Description</b><br>Define which point of the reference object will be set as the origin of the coordinate system.
         </td>
     </tr>
     <tr>

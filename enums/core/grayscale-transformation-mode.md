@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-Title: GrayscaleTransformationMode - Dynamsoft Core Enumerations
-Description: The enumeration GrayscaleTransformationMode of Dynamsoft Core describes all available grayscale transformation modes.
-Keywords: Grayscale transformation modes
+title: GrayscaleTransformationMode - Dynamsoft Core Enumerations
+description: The enumeration GrayscaleTransformationMode of Dynamsoft Core describes all available grayscale transformation modes.
+keywords: Grayscale transformation modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: GrayscaleTransformationMode
+codeAutoHeight: true
 ---
 
 # Enumeration GrayscaleTransformationMode
@@ -22,7 +23,7 @@ breadcrumbText: GrayscaleTransformationMode
    >
 >
 ```javascript
-export enum EnumGrayscaleTransformationMode
+enum EnumGrayscaleTransformationMode
 {
    /** Skips grayscale transformation. */
    GTM_SKIP = 0,
@@ -38,7 +39,8 @@ export enum EnumGrayscaleTransformationMode
 ```
 >
 ```java
-public class EnumGrayscaleTransformationMode
+@Retention(RetentionPolicy.CLASS)
+public @interface EnumGrayscaleTransformationMode
 {
    /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
    public static final int GTM_INVERTED = 1;
@@ -66,7 +68,7 @@ typedef NS_ENUM(NSInteger, DSGrayscaleTransformationMode)
    DSGrayscaleTransformationModeSkip     = 0x00,
    /** Reserved setting for grayscale transformation mode. */
    DSGrayscaleTransformationModeRev      = -2147483648
-}NS_SWIFT_NAME(GrayscaleTransformationMode);
+};
 ```
 >
 ```swift
