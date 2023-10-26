@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Name - Dynamsoft Capture Vision Parameter Reference BarcodeFormatSpecification Object.
-description: The parameter Name of Dynamsoft Capture Vision defines the unique identifier of top-level objects.
+description: The parameter Name defines the unique identifier of BarcodeFormatSpecification object.
 keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
 noTitleIndex: true

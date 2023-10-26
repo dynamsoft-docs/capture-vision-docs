@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Name - Dynamsoft Capture Vision semantic processing object
-description: The parameter Name of Dynamsoft Capture Vision semantic processing defines the unique identifier of a semantic processing object.
+description: The parameter Name defines the unique identifier of SemanticProcessing object.
 keywords: top-level object, name, unique identifier, semantic processing
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -11,7 +11,7 @@ permalink: /parameters/reference/semantic-processing/name.html
 
 # Name
 
-Parameter `Name` represents the name of a SemanticProcessing object, which serves as its unique identifier.
+Parameter `Name` represents the name of a `SemanticProcessing` object, which serves as its unique identifier.
 
 ## Example
 
