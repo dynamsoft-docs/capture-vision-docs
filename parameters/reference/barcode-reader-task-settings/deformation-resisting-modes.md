@@ -90,7 +90,7 @@ The mode arguments of the deformation resisting mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>View <a href="{{site.parameters_reference}}image-parameter/grayscale-enhancement-modes.html">GrayScaleEnhancementModes</a> page for how to set this mode.
+        <td><b>Remarks</b><br>View <a href="{{site.dcv_parameters_reference}}image-parameter/grayscale-enhancement-modes.html">GrayScaleEnhancementModes</a> page for how to set this mode.
         </td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ The mode arguments of the deformation resisting mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>View <a href="{{site.parameters_reference}}image-parameter/binarization-modes.html">BinarizationMode</a> page for how to set this parameter.
+        <td><b>Remarks</b><br>View <a href="{{site.dcv_parameters_reference}}image-parameter/binarization-modes.html">BinarizationMode</a> page for how to set this parameter.
         </td>
     </tr>
     <tr>

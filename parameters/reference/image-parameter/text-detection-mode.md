@@ -66,11 +66,11 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>"HORIZONTAL", "VERTICAL", "OBLIQUE"
+        <td><b>Range</b><br>"HORIZONTAL", "VERTICAL", "OBLIQUE", "UNKNOWN"
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>"HORIZONTAL"
+        <td><b>Default Value</b><br>"UNKNOWN"
         </td>
     </tr>
     <tr>
@@ -192,7 +192,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
     "TextDetectionMode" : 
     {
         "Mode" : "TTDM_LINE",
-        "Direction" : "HORIZONTAL",
+        "Direction" : "UNKNOWN",
         "CharHeightRange" : [1, 1000, 1],
         "MaxSpacingInALine" : -1,
         "Sensitivity" : 3

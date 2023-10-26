@@ -28,7 +28,7 @@ enum EnumBarcodeFormat {
    BF_NULL = 0x00,
    /**All supported formats in BarcodeFormat*/
    BF_ALL = 0xFFFFFFFFFFFFFFFF,
-   BF_DEFAULT = 0xFE3BFFFF,
+   BF_DEFAULT = 0xFE3FFFFF,
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE;*/
    BF_ONED = 0x003007FF,
    /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/
@@ -127,9 +127,9 @@ enum EnumBarcodeFormat {
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumBarcodeFormat {
    /**All supported formats in BarcodeFormat.*/
-   public static final long BF_ALL = 0xFFFFFFFFFFFFFFFF;
+   public static final long BF_ALL = 0x1F0000FFE3FFFFFL;
    /**The default settings.*/
-   public static final long BF_DEFAULT = 0xFE3BFFFFL;
+   public static final long BF_DEFAULT = 0xFE3FFFFFL;
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE.*/
    public static final long BF_ONED = 0x3007FFL;
    /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/
@@ -184,8 +184,6 @@ public @interface EnumBarcodeFormat {
    public static final long BF_TWO_DIGIT_ADD_ON = 1L << 22,
    /**Decode barcode with 5 digital addons.*/
    public static final long BF_FIVE_DIGIT_ADD_ON = 1L << 23,
-   /**Code 32*/
-   public static final long BF_CODE_32 =  1L << 24;
    /**PDF417 barcode.*/
    public static final long BF_PDF417 = 1L << 25;
    /**QR code.*/
@@ -210,8 +208,6 @@ public @interface EnumBarcodeFormat {
    public static final long BF_PHARMACODE_ONE_TRACK = 1L << 34;
    /**Pharma code with two track.*/
    public static final long BF_PHARMACODE_TWO_TRACK = 1L << 35;
-   /**Matrix25.*/
-   public static final long BF_MATRIX_25 = 1L << 36;
    /**Postal code*/
    public static final long BF_POSTALCODE = 0x1F0000000000000L;
    /**USPS Intelligent Mail barcode.*/
@@ -224,8 +220,6 @@ public @interface EnumBarcodeFormat {
    public static final long BF_AUSTRALIANPOST = 1L << 55;
    /**Royal Mail 4-State Customer barcode.*/
    public static final long BF_RM4SCC = 1L << 56;
-   /**Kix.*/
-   public static final long BF_KIX = 1L << 57;
 }
 ```
 >
@@ -235,8 +229,8 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    /**No barcode format in BarcodeFormat*/
    DSBarcodeFormatNull = 0,
    /**All supported formats in BarcodeFormat .*/
-   DSBarcodeFormatAll = 0xFFFFFFFFFFFFFFFF,
-   DSBarcodeFormatDefault = 0xFE3BFFFF,
+   DSBarcodeFormatAll = 0x1F0000FFE3FFFFF,
+   DSBarcodeFormatDefault = 0xFE3FFFFF,
    /**Code 39*/
    DSBarcodeFormatCode39 = 1,
    /**Code 128*/
@@ -285,8 +279,6 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    DSBarcodeFormatTwoDigitAddOn = 1 << 22,
    /**Decode barcode with 5 digital addons.*/
    DSBarcodeFormatFiveDigitAddOn = 1 << 23,
-   /**Code 32*/
-   DSBarcodeFormatCode32 =  1L << 24,
    /**PDF417*/
    DSBarcodeFormatPDF417 = 1 << 25,
    /**QRCode*/
@@ -295,11 +287,11 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    DSBarcodeFormatDataMatrix = 1 << 27,
    /**AZTEC*/
    DSBarcodeFormatAztec = 1 << 28,
-   /**MAXICODE*/
+    /**MAXICODE*/
    DSBarcodeFormatMaxiCode = 1 << 29,
-   /**Micro QR Code*/
+    /**Micro QR Code*/
    DSBarcodeFormatMicroQR = 1 << 30,
-   /**GS1 Composite Code*/
+    /**GS1 Composite Code*/
    DSBarcodeFormatGS1Composite = 1 << 31,
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE*/
    DSBarcodeFormatOneD = 0x3007FF,
@@ -313,8 +305,6 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    DSBarcodeFormatPharmaCodeOneTrack = 1 << 34,
    /**PHARMACODE_ONE_TRACK*/
    DSBarcodeFormatPharmaCodeTwoTrack = 1 << 35,
-   /**Matrix25.*/
-   DSBarcodeFormatMatrix25 = 1L << 36,
    /**PHARMACODE*/
    DSBarcodeFormatPharmaCode = 0xC00000000,
    /**Combined value of DSBarcodeFormatUSPSINTELLIGENTMAIL, DSBarcodeFormatPOSTNET, DSBarcodeFormatPLANET, DSBarcodeFormatAUSTRALIANPOST, DSBarcodeFormatRM4SCC.
@@ -334,9 +324,7 @@ typedef NS_OPTIONS(NSUInteger , DSBarcodeFormat)
    DSBarcodeFormatAustralianPost = 1 << 55,
    /**Royal Mail 4-State Customer Barcode.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   DSBarcodeFormatRM4SCC = 1 << 56,
-   /**Kix*/
-   DSBarcodeFormatKix = 1L << 57
+   DSBarcodeFormatRM4SCC = 1 << 56
 };
 ```
 >
@@ -346,8 +334,8 @@ public enum BarcodeFormat : Int
    /**No barcode format in BarcodeFormat*/
    Null = 0
    /**All supported formats in BarcodeFormat .*/
-   all = 0xFFFFFFFFFFFFFFFF
-   default = 0xFE3BFFFF
+   all = 0x1F0000FFE3FFFFF
+   default = 0xFE3FFFFF
    /**Code 39*/
    code39 = 1
    /**Code 128*/
@@ -396,8 +384,6 @@ public enum BarcodeFormat : Int
    twoDigitAddOn = 1 << 22
    /**Decode barcode with 5 digital addons.*/
    fiveDigitAddOn = 1 << 23
-   /**Code 32*/
-   code32 =  1L << 24
    /**PDF417*/
    PDF417 = 1 << 25
    /**QRCode*/
@@ -424,8 +410,6 @@ public enum BarcodeFormat : Int
    pharmaCodeOneTrack = 1 << 34
    /**PHARMACODE_ONE_TRACK*/
    pharmaCodeTwoTrack = 1 << 35
-   /**Matrix25.*/
-   matrix25 = 1L << 36
    /**PHARMACODE*/
    pharmaCode = 0xC00000000
    /**Combined value of DSBarcodeFormatUSPSINTELLIGENTMAIL, DSBarcodeFormatPOSTNET, DSBarcodeFormatPLANET, DSBarcodeFormatAUSTRALIANPOST, DSBarcodeFormatRM4SCC.
@@ -445,9 +429,7 @@ public enum BarcodeFormat : Int
    australianPost = 1 << 55
    /**Royal Mail 4-State Customer Barcode.
    When you set this barcode format, the library will automatically add LocalizationModeStatisticsPostalCode to LocalizationMode if you don't set it,*/
-   RM4SCC = 1 << 56,
-   /**Kix*/
-   kix = 1L << 57
+   RM4SCC = 1 << 56
 }
 ```
 >
@@ -459,7 +441,7 @@ enum BarcodeFormat : unsigned long long
    /**All supported formats in BarcodeFormat.*/
    BF_ALL = 0xFFFFFFFFFFFFFFFF,
    /**Use the default barcode format settings.*/
-   BF_DEFAULT = 0xFE3BFFFF,
+   BF_DEFAULT = 0xFE3FFFFF,
    /**Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE;*/
    BF_ONED = 0x003007FF,
    /**Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED*/

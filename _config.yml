@@ -8,7 +8,7 @@ introduction: /capture-vision/docs/core/introduction/
 architecture: /capture-vision/docs/core/architecture/
 parameter: /capture-vision/docs/core/parameters/
 enums: /capture-vision/docs/core/enums/
-parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 cpp: /capture-vision/docs/server/programming/cplusplus/
 

@@ -16,7 +16,6 @@ permalink: /parameters/reference/index.html
 | [`ImageROIProcessingNameArray`](capture-vision-template/image-roi-processing-name-array.md) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
 | [`ImageSourceName`](capture-vision-template/image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. |
 | [`MaxParallelTasks`](capture-vision-template/max-parallel-tasks.md) | Defines the maximum number of parallel tasks for the DCV runtime. |
-| [`MinImageCaptureInterval`]({{ site.dcv_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
 | [`Name`](capture-vision-template/name.md) | Defines the name of a `CaptureVisionTemplate` object, which serves as its unique identifier. |
 | [`OutputOriginalImage`](capture-vision-template/output-original-Image.md) | Indicates whether DCV finally outputs the original input image. |
 | [`SemanticProcessingNameArray`](capture-vision-template/semantic-processing-name-array.md) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
@@ -179,8 +178,6 @@ permalink: /parameters/reference/index.html
 | -------------------- | ----------- |
 | [`DirectoryPath`](image-source-options/directory-path.md) | Defines the path of the image source. |
 | [`FileFilter`](image-source-options/file-filter.md) | Defines a file name filter string, which determines which files are fetched. |
-| [`Name`]({{ site.dcv_parameters_reference }}image-source-options/name.html) | Defines the name of a `ImageSource` object, which serves as its unique identifier. |
-| [`Pages`]({{ site.dcv_parameters_reference }}image-source-options/pages.html) | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching. |
 | [`PDFReadingMode`](image-source-options/pdf-reading-mode.md) | Defines how to handle PDF files. |
 | [`Recursive`](image-source-options/recursive.md) | Defines whether to fetch files recursively. |
 | [`Type`](image-source-options/type.md) | Defines the type of the ImageSource object, which helps CVR create the correct type of image source. |

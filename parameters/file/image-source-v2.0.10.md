@@ -23,8 +23,7 @@ An `ImageSource` object defines an image source to be created and maintained by 
         "Mode": "PDFRM_RASTER",
         "DPI": 300,
         "TargetType": "TT_PAGE"
-    },
-    "Pages": [0,3,5,7,10]
+    }
 }
 ```
 
@@ -42,7 +41,6 @@ An `ImageSource` object defines an image source to be created and maintained by 
 | `FileFilter`     | Specifies a file name filter string, which determines which files are fetched.                           |
 | `Recursive`      | Indicates whether to fetch files recursively.                                                            |
 | `PDFReadingMode` | Defines how to handle PDF files.                                                                         |
-| `Pages`          | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching.                                                                         |
 
 <div align="center">
    <p>Table 1 – Parameters Summary of ImageSource</p>

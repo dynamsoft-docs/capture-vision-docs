@@ -17,8 +17,8 @@ A `CodeParserTaskSetting` object is defined as below:
 | Key Name | Value Type | Required or Optional | Description |
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `CodeParserTaskSetting` object. The value must be unique between all `task-setting` objects. |
-| CodeSpecifications | string array | Optional | Sets the value for parameter [CodeSpecifications]({{site.parameters_reference}}code-parser-task-settings/code-specifications.html) to define an array of specification file name objects that determine how to parse the code string |
-| ResourcesPath | string | Optional | Sets the value for parameter [ResourcesPath]({{site.parameters_reference}}code-parser-task-settings/resources-path.html) to define the directory path that contains the resources needed for the code parser. |
+| CodeSpecifications | string array | Optional | Sets the value for parameter [CodeSpecifications]({{site.dcv_parameters_reference}}code-parser-task-settings/code-specifications.html) to define an array of specification file name objects that determine how to parse the code string |
+| ResourcesPath | string | Optional | Sets the value for parameter [ResourcesPath]({{site.dcv_parameters_reference}}code-parser-task-settings/resources-path.html) to define the directory path that contains the resources needed for the code parser. |
 
 Here is a sample:
 
