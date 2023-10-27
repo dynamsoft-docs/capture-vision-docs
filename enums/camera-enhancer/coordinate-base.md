@@ -14,14 +14,10 @@ breadcrumbText: CameraPosition
 Enumeration `CameraPosition` describes the camera position.
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
->
-```javascript
-```
 >
 ```java
 @IntDef({CB_IMAGE,CB_VIEW})
