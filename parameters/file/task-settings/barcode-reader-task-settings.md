@@ -10,12 +10,6 @@ permalink: /parameters/file/task-settings/barcode-reader-task-settings.html
 # BarcodeReaderTaskSetting Object
 In Dynamsoft Capture Vision(DCV), we use Json files to configure and organize the process tasks. The `BarcodeReaderTaskSetting` described in this chapter is one of the configurable tasks. If you have more strict requirements for speed or accuracy, it is highly recommended that you start by trying the barcode  reader task settings.
 
-Control reference content.
-
- | Parameter Name | Description |
- | -------------- | ----------- | 
-
-
 
 ## Available Settings
 All available parameters related to barcode decoding are listed here, along with a brief description.
