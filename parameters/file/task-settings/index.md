@@ -8,7 +8,7 @@ noTitleIndex: false
 permalink: /parameters/file/task-settings/index.html
 ---
 
-# Task Settings
+# Task Setting Objects
 
 Each functional product can perform its own individual task. These tasks are configured with the following objects:
 
@@ -16,6 +16,5 @@ Each functional product can perform its own individual task. These tasks are con
 | :----------------------------------------------------------------------------- | :------------------------- | :---------------------------- | :------------------ |
 | [`BarcodeReaderTaskSetting Object`](barcode-reader-task-settings.md)           | Read Barcodes              | Dynamsoft Barcode Reader      | Image-Processing    |
 | [`LabelRecognizerTaskSetting Object`](label-recognizer-task-settings.md)       | Recognize Text Lines       | Dynamsoft Label Recognizer    | Image-Processing    |
-| [`DocumentNormalizerTaskSetting Object`](document-normalizer-task-settings.md) | Detect Document Boundaries | Dynamsoft Document Normalizer | Image-Processing    |
-| [`DocumentNormalizerTaskSetting Object`](document-normalizer-task-settings.md) | Normalize a Document       | Dynamsoft Document Normalizer | Image-Processing    |
+| [`DocumentNormalizerTaskSetting Object`](document-normalizer-task-settings.md) | Detect Document Boundaries and Normalize a Document | Dynamsoft Document Normalizer | Image-Processing    |
 | [`CodeParserTaskSetting Object`](code-parser-task-settings.md)                 | Parse a string             | Dynamsoft Code Parser         | Semantic-Processing |
