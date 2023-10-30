@@ -1,12 +1,11 @@
 ---
 layout: default-layout
-title: Name - Dynamsoft Capture Vision semantic processing object
-description: The parameter Name of Dynamsoft Capture Vision semantic processing defines the unique identifier of a semantic processing object.
-keywords: top-level object, name, unique identifier, semantic processing
+title: ReferenceObjectFilter - Dynamsoft Capture Vision Semantic Processing object
+description: The parameter ReferenceObjectFilter defines a group of filter conditions for figuring out the `reference objects`.
+keywords: referenceobjectfilter
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/shared-parameter/name.html
 ---
 
 # ReferenceObjectFilter

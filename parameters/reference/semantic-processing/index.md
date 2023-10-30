@@ -14,5 +14,5 @@ permalink: /parameters/reference/semantic-processing/index.html
 | Parameter Name | Description |
 | -------------- | ----------- |
 | [`Name`](name.md) | Defines the name of a `SemanticProcessing` object, which serves as its unique identifier. |
-| [`ReferenceObjectFilter`](reference-object-filter.md) |  |
-| [`TaskSettingsNameArray`](task-settings-name-array.md) |  |
+| [`ReferenceObjectFilter`](reference-object-filter.md) | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions. |
+| [`TaskSettingsNameArray`](task-setting-name-array.md) | Represents the collection of task setting object names, used to refer to the `CodeParserTaskSetting` objects. |

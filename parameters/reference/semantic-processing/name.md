@@ -6,7 +6,6 @@ keywords: top-level object, name, unique identifier, semantic processing
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/semantic-processing/name.html
 ---
 
 # Name
