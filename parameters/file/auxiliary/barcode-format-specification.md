@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # BarcodeFormatSpecification Object
 
-BarcodeFormatSpecification is able to set configurations for specified barcode formats. This is the parameter that defines how the algorithm decode barcodes in a `Barcode Reader` task. You can leave this area empty to use the default barcode reading settings.
+`BarcodeFormatSpecification` is able to set configurations for specified barcode formats. You can leave this area empty to use the default barcode reading settings.
 
 ```json
 {

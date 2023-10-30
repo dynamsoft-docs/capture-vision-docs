@@ -7,9 +7,9 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# GlobalParameters
+# GlobalParameter Object
 
-Currently, the `MaxTotalImageDimension` is the only parameter under `GlobalParameters`.
+Currently, the `MaxTotalImageDimension` is the only parameter under `GlobalParameter`.
 
 ## MaxTotalImageDimension
 

@@ -24,17 +24,17 @@ A `DocumentNormalizerTaskSetting` object is defined as below:
 | CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.dcv_parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
 | DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.dcv_parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
 | LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.dcv_parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
-| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcv_parameters_reference}}shared-parameter/max-threads-in-one-task.html) |
+| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcv_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
 | PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.dcv_parameters_reference}}document-normalizer-task-settings/page-size.html) |
 | QuadrilateralDetectionModes | string | Optional | Sets the value for parameter [QuadrilateralDetectionModes]({{site.dcv_parameters_reference}}document-normalizer-task-settings/quadrilateral-detection-modes.html) |
-| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.dcv_parameters_reference}}shared-parameter/section-image-parameter-array.html) |
-| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.dcv_parameters_reference}}shared-parameter/start-section.html) |
-| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.dcv_parameters_reference}}shared-parameter/terminate-setting.html) |
+| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.dcv_parameters_reference}}document-normalizer-task-settings/section-image-parameter-array.html) |
+| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.dcv_parameters_reference}}document-normalizer-task-settings/start-section.html) |
+| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.dcv_parameters_reference}}document-normalizer-task-settings/terminate-setting.html) |
 | BaseDocumentNormalizerTaskSettingName | string | Optional | Sets the value for parameter [BaseDocumentNormalizerTaskSettingName]({{site.dcv_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) |
 
 Here is a sample:
 
-```JSON
+```json
 {
     "Name": "DR_1",
     "MaxThreadsInOneTask":4,

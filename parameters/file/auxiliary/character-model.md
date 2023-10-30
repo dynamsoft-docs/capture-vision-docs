@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# CharacterModel
+# CharacterModel Object
 
 A `CharacterModel` object defines how the library find Convolutional Neural Networks (CNN) models files that support the character recognition.
 

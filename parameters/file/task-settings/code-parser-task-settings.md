@@ -22,7 +22,7 @@ A `CodeParserTaskSetting` object is defined as below:
 
 Here is a sample:
 
-```JSON
+```json
 {
     "Name": "CPT1_PARSE_VIN",
     "CodeSpecifications": ["VIN"], 
