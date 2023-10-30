@@ -21,6 +21,12 @@ Enumeration `CameraPosition` describes the camera position.
    >
 >
 ```javascript
+enum EnumDrawingItemState {
+   /**The state of the DrawingItem is the default state. */
+   DIS_DEFAULT = 1,
+   /**The state of the DrawingItem is selected. */
+   DIS_SELECTED = 2
+}
 ```
 >
 ```java

@@ -14,14 +14,10 @@ breadcrumbText: Resolution
 Enumeration `Resolution` describes the resolution.
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
->
-```javascript
-```
 >
 ```java
 @IntDef({RESOLUTION_AUTO,RESOLUTION_480P,RESOLUTION_720P,RESOLUTION_1080P,RESOLUTION_2K,RESOLUTION_4K})

@@ -28,6 +28,14 @@ Enumeration `EnhancerFeatures` indicates the advanced features of Dynamsoft Came
    >
 >
 ```javascript
+enum EnumEnhancedFeatures {
+   /**Enable the camera focus feature. */
+   EF_ENHANCED_FOCUS = 0x04,
+   /**Enable the autozoom feature. */
+   EF_AUTO_ZOOM = 0x10,
+   /**Enable the tap to focus feature. */
+   EF_TAP_TO_FOCUS = 0x40
+}
 ```
 >
 ```java
