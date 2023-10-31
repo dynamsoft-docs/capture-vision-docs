@@ -8,11 +8,11 @@ noTitleIndex: false
 permalink: /parameters/file/auxiliary/index.html
 ---
 
-# Auxiliary Settings
+# Auxiliary Setting Objects
 
 The following objects are auxiliary settings that help define specific aspects of an image-processing workflow:
 
-1. [BarcodeFormatSpecification](barcode-format-specification.md)
-2. [CharacterModel](character-model.md)
-3. [TextLineSpecification](textline-specification.md)
-4. [GlobalParameters](global-parameter.md)
+1. [BarcodeFormatSpecification Object](barcode-format-specification.md)
+2. [CharacterModel Object](character-model.md)
+3. [TextLineSpecification Object](textline-specification.md)
+4. [GlobalParameter Object](global-parameter.md)

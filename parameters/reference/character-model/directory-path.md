@@ -6,7 +6,6 @@ keywords: Directory path
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/shared-parameter/directory-path.html
 ---
 
 # DirectoryPath

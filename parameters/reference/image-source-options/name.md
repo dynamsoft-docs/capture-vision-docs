@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Name - Dynamsoft Capture Vision semantic processing object
-description: The parameter Name defines the unique identifier of SemanticProcessing object.
-keywords: top-level object, name, unique identifier, semantic processing
+title: Name - Dynamsoft Capture Vision Parameter Reference ImageSource Object.
+description: The parameter Name defines the unique identifier of ImageSource object.
+keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
@@ -10,13 +10,13 @@ needGenerateH3Content: true
 
 # Name
 
-Parameter `Name` represents the name of a `SemanticProcessing` object, which serves as its unique identifier.
+Parameter `Name` represents the name of a `ImageSource` object, which serves as its unique identifier.
 
 ## Example
 
 ```json
 {
-    "Name" : "sp_0"
+    "Name" : "is_0"
 }
 ```
 

@@ -21,6 +21,24 @@ Enumeration `CameraPosition` describes the camera position.
    >
 >
 ```javascript
+enum EnumDrawingItemMediaType {
+   /**The mediate type of the DrawingItem is rectangle. */
+   DIMT_RECTANGLE = 1,
+   /**The mediate type of the DrawingItem is quadrilateral. */
+   DIMT_QUADRILATERAL = 2,
+   /**The mediate type of the DrawingItem is text. */
+   DIMT_TEXT = 4,
+   /**The mediate type of the DrawingItem is arc. */
+   DIMT_ARC = 8,
+   /**The mediate type of the DrawingItem is image. */
+   DIMT_IMAGE = 16,
+   /**The mediate type of the DrawingItem is polygon. */
+   DIMT_POLYGON = 32,
+   /**The mediate type of the DrawingItem is line. */
+   DIMT_LINE = 64,
+   /**The mediate type of the DrawingItem is a group of shapes. */
+   DIMT_GROUP = 128
+}
 ```
 >
 ```java
