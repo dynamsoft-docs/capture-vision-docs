@@ -159,14 +159,14 @@ router.setInput(fetcher)
 >
 ```cpp
 // Create a new instance of CCaptureVisionRouter
-CCaptureVisionRouter router;
+CCaptureVisionRouter* router = new CCaptureVisionRouter;
 // Create a new instance of CDirectoryFetcher
 CDirectoryFetcher *fetcher = new CDirectoryFetcher;
 // Config the fetcher
 fetcher->SetImageFetchInterval(1000);
 fetcher->SetDirectory("/PATH/TO/DIRECTORY", "*.JPG", true);
 // Set the fetcher as the input source
-router.SetInput(fetcher);
+router->SetInput(fetcher);
 // Start the image capture process
 // ...
 ```
@@ -395,9 +395,8 @@ public:
     virtual void StopFetching();
     /**
      * Returns a buffered image.
-     * @param removeFromBuffer Whether ISA should remove the image from Buffer after it is returned.
      */
-    virtual CImageData* GetImage(bool removeFromBuffer = true);
+    virtual CImageData* GetImage();
     /* Gets or Sets how many images are allowed to be buffered.
      * @recommendation A class that implements the interface
      * should try to keep the buffer full if at all possible.*/
@@ -416,6 +415,23 @@ public:
     int GetImageCount() const;
     /* Determines whether the buffer is empty.*/
     bool IsBufferEmpty() const;
-    // static int FreeImageData(CImageData *imageData);
+    /**
+    * Sets the usage type of a color channel in images.
+    */
+    void SetColourChannelUsageType(ColourChannelUsageType type);
+    /**
+    * Gets the usage type of a color channel in images.
+    *
+    * @return Returns the usage type of a color channel in images.
+    *
+    */
+    ColourChannelUsageType GetColourChannelUsageType()const;
+    /**
+    * Sets the error listener for the image source. This function allows you to set an error listener object that will receive notifications when errors occur during image source operations.
+    * If an error occurs, the error infomation will be passed to the listener's OnErrorReceived method.
+    * @param [in] listener A pointer to an instance of CImageSourceErrorListener or its derived class, which will handle error notifications.
+    */
+    void SetErrorListener(CImageSourceErrorListener* listener);
+
 };
 ```
