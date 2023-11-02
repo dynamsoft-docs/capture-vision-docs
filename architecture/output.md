@@ -151,39 +151,41 @@ public:
      * All results found on the image are returned through this callback.
      * This callback is always triggered.
      */
-    virtual void OnCapturedResultReceived(const CCapturedResult* pResult);
+    virtual void OnCapturedResultReceived(CCapturedResult* pResult);
     /**
      * This callback is only triggered when the raw or original image is set to be returned.
      */
-    virtual void OnOriginalImageResultReceived(const COriginalImageResultItem* pResult);
+    virtual void OnOriginalImageResultReceived(COriginalImageResultItem* pResult);
     /**
      * This callback is only triggered when barcodes are found on the image.
      */
-    virtual void OnDecodedBarcodesReceived(const dbr::CDecodedBarcodesResult* pResult);
+    virtual void OnDecodedBarcodesReceived(dbr::CDecodedBarcodesResult* pResult);
     /**
      * This callback is only triggered when text-lines are found on the image.
      */
-    virtual void OnRecognizedTextLinesReceived(const dlr::CRecognizedTextLinesResult* pResult);
+    virtual void OnRecognizedTextLinesReceived(dlr::CRecognizedTextLinesResult* pResult);
     /**
      * This callback is only triggered when document boundary quads are detected on the image.
      */
-    virtual void OnDetectedQuadsReceived(const ddn::CDetectedQuadsResult* pResult);
+    virtual void OnDetectedQuadsReceived(ddn::CDetectedQuadsResult* pResult);
     /**
      * This callback is only triggered when the image has been normalized successfully.
      */
-    virtual void OnNormalizedImagesReceived(const ddn::CNormalizedImagesResult* pResult);
+    virtual void OnNormalizedImagesReceived(ddn::CNormalizedImagesResult* pResult);
     /**
      * This callback is only triggered when there are parsed results on the image.
      */
-    virtual void OnParsedResultsReceived(const dcp::CParsedResult* pResult);
+    virtual void OnParsedResultsReceived(dcp::CParsedResult* pResult);
 };
 ```
 
 ## Intermediate Result Receiver
 
-Intermediate Result Receiver (IRR) is an interface for the output of intermediate results. Intermediate results refer to the following 27 types of results:
+Intermediate Result Receiver (IRR) is an interface for the output of intermediate results.
 
-### Intermediate results
+### Intermediate Results
+
+Intermediate results refer to the following 27 types of results:
 
 1. Pre-detected regions unit
 2. Localized barcodes unit
@@ -529,7 +531,7 @@ public:
     CIntermediateResultReceiver();
     virtual ~CIntermediateResultReceiver(){};
     CObservationParameters* GetObservationParameters();
-    virtual void OnTaskResultsReceived(const CIntermediateResult* pResult, const IntermediateResultExtraInfo* info);
+    virtual void OnTaskResultsReceived(CIntermediateResult* pResult, const IntermediateResultExtraInfo* info);
     virtual void OnPredetectedRegionsReceived(CPredetectedRegionsUnit *pResult, const IntermediateResultExtraInfo* info);
     virtual void OnLocalizedBarcodesReceived(dbr::intermediate_results::CLocalizedBarcodesUnit *pResult, const IntermediateResultExtraInfo* info);
     virtual void OnDecodedBarcodesReceived(dbr::intermediate_results::CDecodedBarcodesUnit *pResult, const IntermediateResultExtraInfo* info);

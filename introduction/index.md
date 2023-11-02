@@ -72,10 +72,10 @@ DCV's simplicity is reflected in the large number of user scenario-based templat
 
 | Scenarios                                                                         | Built-in template |
 | :---------------------------------------------------------------------------------| :-----------------|
-| Reading barcodes.                                                                 | "read-barcodes"             |
-| Recognizing text on labels.                                                       | "recognize-textlines"             |
-| Detecting document borders.                                                       | "detect-document-boundaries"             |
-| Detecting and normalize document.                                                       | "detect-and-normalize-document"             |
+| Reading barcodes.                                                                 | "ReadBarcodes_Default"             |
+| Recognizing text on labels.                                                       | "RecognizeTextLines_Default"             |
+| Detecting document borders.                                                       | "DetectDocumentBoundaries_Default"             |
+| Detecting and normalize document.                                                 | "DetectAndNormalizeDocument_Default"             |
 
 By providing these pre-built templates, DCV simplifies the development process and allows developers to quickly and easily integrate these features into their applications. This makes DCV a highly accessible and user-friendly SDK for developers of all skill levels.
 

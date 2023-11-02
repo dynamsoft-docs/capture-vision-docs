@@ -10,14 +10,14 @@ needGenerateH3Content: true
 
 # Overview of DCV parameters
 
-Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility, and its parameter system plays a crucial role in achieving this goal. The parameter system is highly configurable and can drive different behavior logic within the SDK. In this article, we will provide an overview of the parametric architecture design in Dynamsoft Capture Vision.
+Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility, and its parameter system plays a crucial role in achieving that. The parameter system can drive the behaviour of the SDK through its many varied configurations. In this article, we will provide an overview of the parametric architecture design of Dynamsoft Capture Vision.
 
 ## Key Terms
 
 In order to eliminate ambiguity, we first define several key terms.
 
 1. **Parameter**
-A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodeCount` parameter is used to control the expected count of recognized barcodes. Parameters can be configured with specific values or ranges of values, which can be adjusted as required.
+A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodesCount` parameter is used to control the expected number of recognized barcodes in the image or frame. Parameters can be configured with specific values or a range of values, which can be adjusted as required.
 
 1. **Parameter template**
 A parameter template is a collection of parameters organized in a structured manner, expressed in JSON format. The name of the `CaptureVisionTemplate` object is also called "template name", which is a unique identifier assigned to each parameter template. In the DCV SDK, this name is used to load the relevant configurations and control runtime behavior.
@@ -25,7 +25,7 @@ A parameter template is a collection of parameters organized in a structured man
 1. **Parameter template file**
 A parameter template file is a JSON file that contains one or multiple parameter templates.
 
-## Organization of a Parameter Template File
+## Structure of a Parameter Template File
 
 As shown in the example below, the organizational structure of a parameter template file consists of several top-level objects such as `CaptureVisionTemplates`, `ImageSourceOptions`,`TargetROIDefOptions` etc.
 
@@ -107,9 +107,9 @@ As shown in the example below, the organizational structure of a parameter templ
 }
 ```
 
-With the exception of GlobalParameter, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` are an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` are an array of `TargetROIDef` objects.
+With the exception of `GlobalParameter`, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` is an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` is an array of `TargetROIDef` objects, and so on.
 
-Furthermore, to reuse the same parameter definitions, reduce the size of the parameter template file, and simplify the parameter configuration hierarchy, the reference relationship was adopted in the parameter template file design. For example, the value of the `ImageSource` parameter for the first object in `CaptureVisionTemplates` is `ISA_0`, which refers to the first object in `ImageSourceOptions`.
+Furthermore, you will notice that some of the parameters' definitions are reused across the parameter template file. This helps reduce the size of the parameter template file and simplify the parameter configuration hierarchy, making it easier for you to understand and create your own template. For example, the value of the `ImageSourceName` parameter for the first object in `CaptureVisionTemplates` is `ISA_0`, which refers to the first object in `ImageSourceOptions`.
 
 Therefore, a parameter template starts with an object in `CaptureVisionTemplates` and recursively searches for the objects that are directly or indirectly referenced by it, and then combines them to form a specific set of parameters. Then, the parameter template may be applied to DCV through "template name" to control its internal execution logic.
 
@@ -121,7 +121,7 @@ The diagram below illustrates the objects included in a complete parameter templ
 
 - A solid green line indicates a one-to-zero or one-to-one correspondence between the two objects.
 - A solid black line indicates a one-to-zero or one-to-n correspondence between the two objects.
-- The dash line indicates that these objects may be associated with one-to-n `ImageParamter` objects, which may take effect at different stages of the algorithm.
+- The dash line indicates that these objects may be associated with one-to-n `ImageParameter` objects, which may take effect at different stages of the algorithm.
 
 <div align="center">
    <p><img src="./assets/dcv-template-reference-relationship.png" alt="Top level objects of DCV template file" width="100%" /></p>
@@ -133,20 +133,20 @@ The following table list the main objects type and description of a complete par
 | Object Type                    | Description  |
 | :------------------------------| :----------- |
 |  [CaptureVisionTemplate]({{site.parameter}}file/capture-vision-template.html)         |  This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.|
-|  [ImageSource]({{site.parameter}}file/image-source.html)                  |  It defines the input for DCV, responsible for providing images to DCV. It can be defined as different image sources, including but not limited to image directories, scanners, cameras, etc.|
-| [TargetROIDef]({{site.parameter}}file/target-roi-definition/index.html)                   |  It is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
-|  [SemanticProcessing]({{site.parameter}}file/semantic-processing/index.html)            |  It is used to specify one or more code parsing tasks to be performed on text/byte results to help extract human readable information. |
-|  [BarcodeReaderTaskSetting]({{site.parameter}}file/task-settings/barcode-reader-task-settings.html)      |  It is used to configure settings for barcode reading tasks performed on images in DCV. |
-|  [LabelRecognizerTaskSetting]({{site.parameter}}file/task-settings/label-recognizer-task-settings.html)    |  It is used to configure settings for label recognition tasks performed on images in DCV.|
-|  [DocumentNormalizerTaskSetting]({{site.parameter}}file/task-settings/document-normalizer-task-settings.html) |  It is used to configure the document detection or normalization process of an image in DCV. |
-|  [CodeParserTaskSetting]({{site.parameter}}file/task-settings/code-parser-task-settings.html)         |  It is used to configure code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
-|  [ImageParameter]({{site.parameter}}file/image-parameter.html)              |  It provides various image-processing features to adjust and enhance the input image for better recognition results.|
+|  [ImageSource]({{site.parameter}}file/image-source.html)                  |  Defines the input for DCV responsible for providing images to DCV. It can be defined as different image sources, including but not limited to, image directories, scanners, cameras, etc.|
+| [TargetROIDef]({{site.parameter}}file/target-roi-definition/index.html)                   |  Used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
+|  [SemanticProcessing]({{site.parameter}}file/semantic-processing/index.html)            |  Used to specify one or more code parsing tasks to be performed on text/byte results to help extract human readable information. |
+|  [BarcodeReaderTaskSetting]({{site.parameter}}file/task-settings/barcode-reader-task-settings.html)      |  Configures the settings for barcode reading tasks performed on images in DCV. |
+|  [LabelRecognizerTaskSetting]({{site.parameter}}file/task-settings/label-recognizer-task-settings.html)    |  Configures the settings for label recognition tasks performed on images in DCV.|
+|  [DocumentNormalizerTaskSetting]({{site.parameter}}file/task-settings/document-normalizer-task-settings.html) |  Configures the settings for the document detection or normalization process of an image in DCV. |
+|  [CodeParserTaskSetting]({{site.parameter}}file/task-settings/code-parser-task-settings.html)         |  Configures the code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
+|  [ImageParameter]({{site.parameter}}file/image-parameter.html)              |  Provides various image-processing features to adjust and enhance the input image for better recognition results.|
 
 For more details, please refer to [introduction of the capture vision template](capture-vision-template.md)
 
 ## How to Apply DCV Parameters
 
-Dynamsoft Capture Vision (DCV) provides two methods to apply parameters:
+There are two ways in which the parameters can be implemented in Dynamsoft Capture Vision (DCV):
 
 - `SimplifiedCaptureVisionSettings`: It is a structure that contains commonly used DCV parameters. To update DCV parameters using `SimplifiedCaptureVisionSettings`, you can follow these steps:
 
