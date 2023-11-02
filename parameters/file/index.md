@@ -17,7 +17,7 @@ Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility,
 In order to eliminate ambiguity, we first define several key terms.
 
 1. **Parameter**
-A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodesCount` parameter is used to control the expected number of barcodes in the image or frame. Parameters can be configured with specific values or a range of values, which can be adjusted as required.
+A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodesCount` parameter is used to control the expected number of recognized barcodes in the image or frame. Parameters can be configured with specific values or a range of values, which can be adjusted as required.
 
 1. **Parameter template**
 A parameter template is a collection of parameters organized in a structured manner, expressed in JSON format. The name of the `CaptureVisionTemplate` object is also called "template name", which is a unique identifier assigned to each parameter template. In the DCV SDK, this name is used to load the relevant configurations and control runtime behavior.
