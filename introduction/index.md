@@ -12,8 +12,8 @@ noTitleIndex: true
 Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products, which cover image capturing, content understanding, result parsing, and interactive workflow.
 
 1. With the implementation of the Image Source Adapter (ISA) interface, a seamless integration with DCV is possible, allowing easy access to various image sources.
-2. The Dynamsoft Barcode Reader (DBR), Dynamsoft Document Normalizer (DDN), and Dynamsoft Label Recognizer (DLR) play crucial roles in reading barcodes, structures, and texts from images.
-3. The Dynamsoft Code Parser (DCP) is utilized to extract meaningful fields from text/bytes results, ensuring optimal data parsing capabilities.
+2. Dynamsoft Barcode Reader (DBR), Dynamsoft Document Normalizer (DDN), and Dynamsoft Label Recognizer (DLR) play crucial roles in reading barcodes, structures, and texts from images.
+3. Dynamsoft Code Parser (DCP) is utilized to extract meaningful fields from text/bytes results, ensuring optimal data parsing capabilities.
 4. To seamlessly access intermediate and final results within the DCV SDK, the Capture Result Receiver (CRR) and Intermediate Result Receiver (IRR) interfaces are provided. After users implement these interfaces and register with DCV, they can obtain the results efficiently and conveniently.
 5. To view and edit the output results, Dynamsoft Camera Enhancer (DCE) provide a suite of robust viewing and editing functions.
 

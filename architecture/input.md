@@ -432,6 +432,5 @@ public:
     * @param [in] listener A pointer to an instance of CImageSourceErrorListener or its derived class, which will handle error notifications.
     */
     void SetErrorListener(CImageSourceErrorListener* listener);
-
 };
 ```
