@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/localization-modes
 
 # LocalizationModes
 
-Parameter `LocalizationModes` determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
+Determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
 
 ## Example
 
@@ -257,11 +257,11 @@ If the `LocalizationModes` is not configured in your template file, the followin
 
 If you specified an localization mode object with Mode Argument "Mode" only, the default values of the other mode arguments will used.
 
-## Candidate Modes Introduction
+## Candidate Modes Descriptions
 
 ### LM_CONNECTED_BLOCKS
 
-Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further customizing.
+Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -270,7 +270,7 @@ Localizes barcodes by searching for connected blocks. This algorithm usually giv
 
 ### LM_STATISTICS
 
-Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. This mode has the following arguments for further customizing.
+Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -279,7 +279,7 @@ Localizes barcodes by groups of contiguous black-white regions. This is optimize
 
 ### LM_LINES
 
-Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. This mode has the following arguments for further customizing.
+Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -288,7 +288,7 @@ Localizes barcodes by searching for groups of lines. This is optimized for 1D an
 
 ### LM_SCAN_DIRECTLY
 
-Localizes barcodes quickly. This mode is recommended in interactive scenario. This mode has the following arguments for further customizing.
+Localizes barcodes quickly. This mode is recommended in interactive scenario. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -300,7 +300,7 @@ Localizes barcodes quickly. This mode is recommended in interactive scenario. Th
 
 ### LM_STATISTICS_MARKS
 
-Localizes barcodes by groups of marks.This is optimized for DPM codes. This mode has the following arguments for further customizing.
+Localizes barcodes by groups of marks. This is optimized for DPM codes. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -309,7 +309,7 @@ Localizes barcodes by groups of marks.This is optimized for DPM codes. This mode
 
 ### LM_STATISTICS_POSTAL_CODE
 
-Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. This mode has the following arguments for further customizing.
+Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -318,7 +318,7 @@ Localizes barcodes by groups of connected blocks and lines.This is optimized for
 
 ### LM_CENTRE
 
-Localizes barcodes from the centre of the image. This mode has the following arguments for further customizing.
+Localizes barcodes from the centre of the image. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
@@ -328,7 +328,7 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 
 ### LM_ONED_FAST_SCAN
 
-Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode. This mode has the following arguments for further customizing.
+Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
