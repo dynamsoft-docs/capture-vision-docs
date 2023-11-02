@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/localization-modes
 
 # LocalizationModes
 
-Determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process. Different localization modes should be used depending on the targeted barcode format - for more info please see [Localization Modes Descriptions](#localization-modes-descriptions).
+Determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
 
 ## Example
 
@@ -257,11 +257,11 @@ If the `LocalizationModes` is not configured in your template file, the followin
 
 If you specified an localization mode object with Mode Argument "Mode" only, the default values of the other mode arguments will used.
 
-## Localization Modes Descriptions
+## Candidate Modes Descriptions
 
 ### LM_CONNECTED_BLOCKS
 
-Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority no matter which barcode format you are scanning. This mode has the following arguments for further cuztomization.
+Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further cuztomization.
 
 **Available Mode Arguments:**
 
