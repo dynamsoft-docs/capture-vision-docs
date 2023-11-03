@@ -6,7 +6,7 @@ keywords: CharacterModel, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/capture-vision-template/index.html
+permalink: /parameters/reference/character-model/index.html
 ---
 
 # CharacterModel Parameters
