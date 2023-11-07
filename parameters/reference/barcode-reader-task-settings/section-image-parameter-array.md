@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: SectionImageParameterArray - Dynamsoft Capture Vision Shared Parameters
+title: SectionImageParameterArray - Dynamsoft Barcode Reader Parameters
 description: The parameter SectionImageParameterArray defines the image processing algorithms that implemented in the different sections of an algorithm task.
 keywords: Section image parameter
 needAutoGenerateSidebar: true

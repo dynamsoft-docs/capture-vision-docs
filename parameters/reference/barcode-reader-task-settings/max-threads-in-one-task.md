@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: MaxThreadsInOneTask - Dynamsoft Capture Vision Shared Parameters
+title: MaxThreadsInOneTask - Dynamsoft Barcode Reader Parameters
 description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one task.
 keywords: Max threads
 needAutoGenerateSidebar: true

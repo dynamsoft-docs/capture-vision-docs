@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
-description: The parameter TerminateSetting defines the terminate stages of the task.
+title: TerminateSetting - Dynamsoft Barcode Reader Parameters
+description: The parameter TerminateSetting defines the terminate stage of the task.
 keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-reader-task-settings/terminate-setting.
 
 # TerminateSetting
 
-Parameter `TerminateSetting` defines the terminate stages of each section in the task. For each sections, you can define only one terminate stage.
+Parameter `TerminateSetting` defines the stage where the algorithm task stops.
 
 ## Example
 
@@ -35,7 +35,7 @@ Parameter `TerminateSetting` defines the terminate stages of each section in the
     <tbody>
         <tr>
             <td rowspan = "3" style="vertical-align:text-top">Section<br></td>
-            <td><b>Description</b><br>Specifies a mode for ordering.</td>
+            <td><b>Description</b><br>Specifies the section type where the algorithm task stops.</td>
         </tr>
         <tr>
             <td><b>Type</b><br><i>String</i></td>
@@ -49,13 +49,13 @@ Parameter `TerminateSetting` defines the terminate stages of each section in the
         </tr>
         <tr>
             <td rowspan = "3" style="vertical-align:text-top">Stage<br></td>
-            <td><b>Description</b><br>Specifies a mode for ordering.</td>
+            <td><b>Description</b><br>Specifies the stage type where the algorithm task stops.</td>
         </tr>
         <tr>
             <td><b>Type</b><br><i>String</i></td>
         </tr>
         <tr>
-            <td><b>Range</b><br>One of the <b>IntermediateResultUnitType</b> as a string. The available stage type is different for each sections. View the <a href="#appendix---available-stage-for-sections">appendix</a> for more details.
+            <td><b>Range</b><br>One of the <b>IntermediateResultUnitType</b> as a string. The available stage types are different for each section. View the <a href="#appendix---available-stage-for-sections">appendix</a> for more details.
             </td>
         </tr>
     </tbody>
