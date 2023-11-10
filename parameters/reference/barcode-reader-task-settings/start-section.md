@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: StartSection - Dynamsoft Capture Vision Shared Parameters
+title: StartSection - Dynamsoft Barcode Reader Parameters
 description: The parameter StartSection defines the start section of the algorithm task.
 keywords: Start section
 needAutoGenerateSidebar: true

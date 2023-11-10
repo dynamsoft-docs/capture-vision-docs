@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Name - Dynamsoft Capture Vision Parameter Reference BarcodeReaderTaskSetting Object.
+title: BarcodeReaderTaskSetting Name - Dynamsoft Barcode Reader Parameters.
 description: The parameter Name defines the unique identifier of BarcodeReaderTaskSetting object.
 keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
