@@ -51,7 +51,6 @@ public @interface EnumPresetTemplate
    String PT_RECOGNIZE_NUMBERS_AND_UPPERCASE_LETTERS = "RecognizeNumbersAndUppercaseLetters";
    /** Template name: "RecognizeUppercaseLetters". */
    String PT_RECOGNIZE_UPPERCASE_LETTERS = "RecognizeUppercaseLetters";
-
 }
 ```
 >
