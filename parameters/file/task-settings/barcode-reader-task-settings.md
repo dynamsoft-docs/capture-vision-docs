@@ -128,8 +128,8 @@ When DCV executes tasks related to barcode reading, it will process them accordi
     "TerminateSetting": 
     {
         "Section": "REGION_PREDETECTION",
-        "Stage": "IRUT_GRAYSCALE_IMAGE", 
+        "Stage": "IRUT_GRAYSCALE_IMAGE" 
     },
-    "BaseBarcodeReaderTaskSettingName": "", 
+    "BaseBarcodeReaderTaskSettingName": ""
 }
 ```
