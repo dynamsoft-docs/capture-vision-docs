@@ -26,7 +26,6 @@ The `LabelRecognizerTaskSetting` object is used to configure settings for a labe
     ],
     "StringLengthRange" : [3,200],
     "StringRegExPattern" : "",
-
     "SectionImageParameterArray":[
         {
             "Section": "REGION_PREDETECTION",
