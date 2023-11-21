@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: SectionImageParameterArray - Dynamsoft Barcode Reader Parameters
-description: The parameter SectionImageParameterArray defines the image processing algorithms that implemented in the different sections of an algorithm task.
+description: The parameter SectionImageParameterArray defines the image processing algorithms that implemented in the different sections of a barcode reader algorithm task.
 keywords: Section image parameter
 needAutoGenerateSidebar: true
 noTitleIndex: true

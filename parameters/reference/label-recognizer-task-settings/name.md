@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Name - Dynamsoft Capture Vision Parameter Reference LabelRecognizerTaskSetting Object.
-description: The parameter Name defines the unique identifier of LabelRecognizerTaskSetting object.
+title: LabelRecognizerTaskSetting Name - Dynamsoft Label Recognizer Parameter.
+description: The parameter Name defines the unique identifier of a LabelRecognizerTaskSetting object.
 keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
 noTitleIndex: true
