@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: StartSection - Dynamsoft Capture Vision Shared Parameters
-description: The parameter StartSection defines the start section of the algorithm task.
+title: StartSection - Dynamsoft Label Recognizer Parameters
+description: The parameter StartSection defines the start section of the label recognition algorithm task.
 keywords: Start section
 needAutoGenerateSidebar: true
 noTitleIndex: true

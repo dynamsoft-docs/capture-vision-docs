@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TerminateSetting - Dynamsoft Capture Vision Shared Parameters
-description: The parameter TerminateSetting defines the terminate stages of the task.
+title: TerminateSetting - Dynamsoft Label Recognizer Parameters
+description: The parameter TerminateSetting defines the terminate stages of the label recognition task.
 keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true

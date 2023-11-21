@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: MaxThreadsInOneTask - Dynamsoft Capture Vision Shared Parameters
-description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one task.
+title: MaxThreadsInOneTask - Dynamsoft Document Normalizer Parameters
+description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one document normalizer task.
 keywords: Max threads
 needAutoGenerateSidebar: true
 noTitleIndex: true

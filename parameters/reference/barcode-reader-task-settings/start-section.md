@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: StartSection - Dynamsoft Barcode Reader Parameters
-description: The parameter StartSection defines the start section of the algorithm task.
+description: The parameter StartSection defines the start section of the barcode reader algorithm task.
 keywords: Start section
 needAutoGenerateSidebar: true
 noTitleIndex: true

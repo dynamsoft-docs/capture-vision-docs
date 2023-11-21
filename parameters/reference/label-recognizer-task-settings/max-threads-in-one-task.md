@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: MaxThreadsInOneTask - Dynamsoft Capture Vision Shared Parameters
-description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one task.
+title: MaxThreadsInOneTask - Dynamsoft Label Recognizer Parameters
+description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one label recognition task.
 keywords: Max threads
 needAutoGenerateSidebar: true
 noTitleIndex: true

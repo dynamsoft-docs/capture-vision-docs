@@ -272,7 +272,6 @@ Parameter `Offset` is an object that defines how the location is offset from the
         <td><b>Default Value</b><br>0
         </td>
     </tr>
-    <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectSizeType<br></td>
         <td><b>Description</b><br>Define which coordinate system to use when configuring offset parameters basd on the reference objects.
@@ -292,7 +291,6 @@ Parameter `Offset` is an object that defines how the location is offset from the
         <td><b>Default Value</b><br>"default"
         </td>
     </tr>
-    <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MeasuredInPercentage<br></td>
         <td><b>Description</b><br>Set whether or not to use percentage to measure the points' coordinates.
@@ -310,7 +308,6 @@ Parameter `Offset` is an object that defines how the location is offset from the
         <td><b>Default Value</b><br>1
         </td>
     </tr>
-    <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">FirstPoint<br></td>
         <td><b>Description</b><br>The top-left vertex of the ROI.
@@ -321,15 +318,15 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>
+        <td><b>Default Value</b><br>null
         </td>
     </tr>
     <tr>
         <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
             <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        </td>
     </tr>
-    <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">SecondPoint<br></td>
         <td><b>Description</b><br>The top-right vertex of the ROI.
@@ -340,15 +337,15 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>
+        <td><b>Default Value</b><br>null
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
+        <td><b>Remarks</b><br>When MeasureInPercentage = 1:
             <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        </td>
     </tr>
-    <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ThirdPoint<br></td>
         <td><b>Description</b><br>The bottom-right vertex of the ROI.
@@ -363,11 +360,11 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
+        <td><b>Remarks</b><br>When MeasureInPercentage = 1:
             <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        </td>
     </tr>
-    <!---->
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">FourthPoint<br></td>
         <td><b>Description</b><br>The bottom-left vertex of the ROI.
@@ -384,6 +381,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
     <tr>
         <td><b>Remarks</b><br>When MeasureInPercentage = 1:
             <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object</b>.
+            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        </td>
     </tr>
 </table>

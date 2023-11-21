@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TerminateSetting - Dynamsoft Barcode Reader Parameters
-description: The parameter TerminateSetting defines the terminate stage of the task.
+description: The parameter TerminateSetting defines the terminate stage of the barcode reader task.
 keywords: Terminate setting
 needAutoGenerateSidebar: true
 noTitleIndex: true
