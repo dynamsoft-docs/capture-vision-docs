@@ -159,6 +159,7 @@ One of the filter conditions. Filter the reference objects with the frame inform
     <tr>
         <td rowspan = "3" style="vertical-align:text-top">AspectRatioRange</td>
         <td><b>Description</b><br>Filter the reference objects by the aspect ratio of their original images.
+        <br><br><i>Aspect Ratio = BoundingRectHeight/BoundingRectWidth * 100</i><br><br>[MinAspectRatio, MaxAspectRatio]
         </td>
     </tr>
     <tr>

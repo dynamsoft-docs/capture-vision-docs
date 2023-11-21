@@ -70,7 +70,7 @@ Parameter `RegionPredetectionModes` consist of a group of region predetection mo
     </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">AspectRatioRange<br>(Optional)</td>
-        <td><b>Description</b><br>Specifies one or multiple sets of aspect ratio ranges as a string for filtering the predetected region.<br><br><i>Aspect Ratio = BoundingRectWidth/BoundingRectHeight * 100</i>
+        <td><b>Description</b><br>Specifies one or multiple sets of aspect ratio ranges as a string for filtering the predetected region.<br><br><i>Aspect Ratio = BoundingRectHeight/BoundingRectWidth * 100</i>
         </td>
     </tr>
     <tr>
