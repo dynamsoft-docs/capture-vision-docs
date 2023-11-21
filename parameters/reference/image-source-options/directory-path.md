@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DirectoryPath - Dynamsoft Capture Vision Shared Parameters
+title: DirectoryPath - ImageSource - Dynamsoft Capture Vision Parameters
 description: The parameter DirectoryPath defines a path when the library have to read files.
 keywords: Directory path
 needAutoGenerateSidebar: true

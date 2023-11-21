@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: StartSection - Dynamsoft Capture Vision Shared Parameters
-description: The parameter StartSection defines the start section of the algorithm task.
+title: StartSection - Dynamsoft Document Normalizer Parameters
+description: The parameter StartSection defines the start section of the document normalizer algorithm task.
 keywords: Start section
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Name - Dynamsoft Capture Vision Parameter Reference DocumentNormalizerTaskSetting Object.
-description: The parameter Name defines the unique identifier of DocumentNormalizerTaskSetting object.
+title: DocumentNormalizerTaskSetting Name - Dynamsoft Document Normalizer Parameter.
+description: The parameter Name defines the unique identifier of a DocumentNormalizerTaskSetting object.
 keywords: top-level object, name, unique identifier
 needAutoGenerateSidebar: true
 noTitleIndex: true
