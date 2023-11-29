@@ -14,12 +14,21 @@ breadcrumbText: TransformMatrixType
 `TransformMatrixType` describes the transform matrix types.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >- C++
    >
 >
+```javascript
+enum EnumTransformMatrixType {
+    /**Represents a transformation matrix that converts coordinates from the local image to the original image.*/
+    TMT_LOCAL_TO_ORIGINAL_IMAGE,
+    /**Represents a transformation matrix that converts coordinates from the original image to the local image.*/
+    TMT_ORIGINAL_TO_LOCAL_IMAGE
+}
+```
 >
 ```java
 public @interface EnumTransformMatrixType {
