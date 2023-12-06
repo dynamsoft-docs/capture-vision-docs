@@ -24,7 +24,6 @@ permalink: /parameters/reference/barcode-reader-task-settings/index.html
 | [`LocalizationModes`](localization-modes.md) | Defines how to localize barcodes. |
 | [`MaxThreadsInOneTask`](max-threads-in-one-task.md) | Defines the maximum threads that can be consumed in one task. |
 | [`Name`](name.md) | Defines the name of a `BarcodeReaderTaskSetting` object, which serves as its unique identifier. |
-| [`ResultCoordinateType`](result-coordinate-type.md) | Defines the returned coordinate type. |
 | [`ReturnBarcodeZoneClarity`](return-barcode-zone-clarity.md) | Defines whether to return the clarity of the barcode zone. |
 | [`SectionImageParameterArray`](section-image-parameter-array.md) | Defines `ImageParameter` in section unit. |
 | [`StartSection`](start-section.md) | Defines the start section of the `BarcodeReaderTask`. |
