@@ -6,7 +6,6 @@ keywords: PDF reading mode, ISA
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/image-source-options/pdf-reading-mode-v2.0.0.html
 ---
 
 # PDFReadingMode

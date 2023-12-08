@@ -28,4 +28,4 @@ Parameter `StringRegExPattern` specifies the regular expression pattern for conc
 | **Type**<br>*String* |
 | **Range**<br>All standard regular expressions.|
 | **Default Value**<br>"" |
-| **Remarks**<br>This is a filtering parameter. After all recognized text lines are concatenated, they will be matched against this regular expression. Results that do not match will not be output.|
+| **Remarks**<br>This is a filtering parameter. After all recognized text lines are concatenated, they will be matched against this regular expression. Results that do not match will not be output. |
