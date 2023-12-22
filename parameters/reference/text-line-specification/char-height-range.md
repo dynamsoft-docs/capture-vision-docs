@@ -11,7 +11,7 @@ permalink: /parameters/reference/text-line-specification/char-height-range.html
 
 # CharHeightRange
 
-Parameter `CharHeightRange` defines the range of the character height.
+Parameter `CharHeightRange` defines the range of the character height (in pixel or a percentage value relative to the height of the `targetROI`).
 
 ## Example
 
@@ -26,6 +26,6 @@ Parameter `CharHeightRange` defines the range of the character height.
 | CharHeightRange Parameter Summary |
 | :-------------------------------- |
 | **Type**<br>*int Array* |
-| **Range**<br>The first 2 members should be int values between 1 to 1000. The third member should be 0 or 1. |
+| **Range**<br>The third member should be 0 or 1, which determines whether the range is measured by thousandth. If measured by thousandth, the first 2 members should be int values between 1 to 1000. Otherwise, they should between 1 to 0x7fffffff. |
 | **Default Value**<br>"" |
-| **Remarks**<br>Measured in thousandth. |
+| **Remarks**<br>Format: [MinHeight, MaxHeight, ByThousandth]. |
