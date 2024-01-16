@@ -944,14 +944,6 @@ typedef enum ErrorCode
    EC_CREATE_FILE_FAILED = -10068,
    /**The input ImageData object contains invalid parameter(s).*/
    EC_IMGAE_DATA_INVALID = -10069,
-   /**The size of the input image do not meet the requirements.*/
-   EC_IMAGE_SIZE_NOT_MATCH = -10070,
-   /**The pixel format of the input image do not meet the requirements.*/
-   EC_IMAGE_PIXEL_FORMAT_NOT_MATCH = -10071,
-   /**The section level result is irreplaceable.*/
-   EC_SECTION_LEVEL_RESULT_IRREPLACEABLE = -10072,
-    /**The axis definition is incorrect.*/
-    EC_AXIS_DEFINITION_INCORRECT = -10073,   
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    EC_NO_LICENSE = -20000,
@@ -1009,10 +1001,6 @@ typedef enum ErrorCode
    /** -40000~-49999: DLR error code */
    /** Character Model file is not found. */
    EC_CHARACTER_MODEL_FILE_NOT_FOUND = -40100,
-   /**There is a conflict in the layout of TextLineGroup. */
-   EC_TEXT_LINE_GROUP_LAYOUT_CONFLICT = -40101,
-   /**There is a conflict in the regex of TextLineGroup. */
-   EC_TEXT_LINE_GROUP_REGEX_CONFLICT = -40102,
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    EC_CONTENT_NOT_FOUND = -50056,

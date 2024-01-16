@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: BinarizationModes - Dynamsoft Capture Vision Text Line Specification Parameters
+title: BinarizationModes - Dynamsoft Label Recognizer Parameter
 description: The parameter BinarizationModes of text line specification controls the process of text line binarization.
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /parameters/reference/image-parameter/binarization-modes.html
+permalink: /parameters/reference/text-line-specification/binarization-modes.html
 ---
 
 

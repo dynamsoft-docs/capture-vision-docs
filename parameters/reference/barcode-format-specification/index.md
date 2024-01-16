@@ -24,7 +24,7 @@ permalink: /parameters/reference/barcode-format-specification/index.html
 | [`BarcodeZoneBarCountRangeArray`](barcode-zone-bar-count-range-array.md) | Defines the range of bar count of the barcode zone for barcodes searching. |
 | [`BarcodeZoneMinDistanceToImageBorders`](barcode-zone-min-distance-to-image-borders.md) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
 | [`Code128Subset`](code128-subset.md) | Defines the subset of Code 128. |
-| [`EnableAddonCode`](enable-addon-code.md) | Defines whether to identify addon code. |
+| [`EnableAddOnCode`](enable-addon-code.md) | Defines whether to identify addon code. |
 | [`EnableDataMatrixECC000-140`](enable-data-matrix-ecc000-140.md) | Defines whether to read Data Matrix ECC000-140 barcode. |
 | [`EnableQRCodeModel1`](enable-qr-code-model-1.md) | Defines whether to read QR code model 1. |
 | [`FindUnevenModuleBarcode`](find-uneven-module-barcode.md) | Defines whether to find barcodes with uneven barcode modules. |

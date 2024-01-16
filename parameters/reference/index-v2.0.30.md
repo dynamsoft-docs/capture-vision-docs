@@ -4,7 +4,7 @@ title: Dynamsoft Capture Vision Parameter Reference - Main Page
 description: Dynamsoft Capture Vision Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index.html
+permalink: /parameters/reference/index-v2.0.30.html
 ---
 
 # Parameter Reference
@@ -133,14 +133,6 @@ permalink: /parameters/reference/index.html
 | [`GrayscaleEnhancementModes`](text-line-specification/grayscale-enhancement-modes.md) | Provides some image processing methods to enhance the grayscale quality of the text line area. |
 | [`StringLengthRange`](text-line-specification/string-length-range.md) | Sets the range of string length for each recognized line. |
 | [`StringRegExPattern`](text-line-specification/string-regex-pattern.md) | Specifies the regular expression pattern of the string within a line. It is used to correct the recognized line text. |
-| [`ConcatStringLengthRange`](text-line-specification/concat-string-length-range.md) | Sets the range of string length for the concated recognized text lines. |
-| [`ConcatStringRegExPattern`](text-line-specification/concat-string-regex-pattern.md) | Specifies the regular expression pattern of the concated text lines. It is used to correct the recognized line text. |
-| [`ConcatSeparator`](text-line-specification/concat-separator.md) | Defines the concat separator used to join multiple lines of text. |
-| [`ConcatResults`](text-line-specification/concat-results.md) | Defines whether to concatenate multiple lines of text.  |
-| [`OutputResults`](text-line-specification/output-results.md) | Defines whether to enable the output of the `TextLineSpecification` object. |
-| [`SubGroups`](text-line-specification/sub-groups.md) | Defines the layout of subgroups of the `TextLineSpecification` object. |
-| [`ReferenceGroupName`](text-line-specification/reference-group-name.md) | Defines the reference group for space layout configuration. |
-| [`TextLinesCount`](text-line-specification/text-lines-count.md) | Defines the expected number of text lines for the `TextLineSpecification` object. |
 
 ## Character Model
 

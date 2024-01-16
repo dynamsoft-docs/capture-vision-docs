@@ -113,6 +113,14 @@ The mode arguments of the deblur mode object are shown as follow:
 
 ### Default Setting
 
+If the `DeblurModes` is not configured in your template file, the following settings will be used as the default settings.
+
+```json
+{
+    "DeblurModes": null
+}
+```
+
 ## Candidate Modes Introduction
 
 ### DM_DIRECT_BINARIZATION

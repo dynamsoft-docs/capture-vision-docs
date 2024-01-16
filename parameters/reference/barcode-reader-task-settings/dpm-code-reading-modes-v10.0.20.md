@@ -56,23 +56,6 @@ The mode arguments of the DPM code reading mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">BarcodeFormat<br>(Optional)</td>
-        <td><b>Description</b><br>Specifies the format of the DPM barcode to be processed.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>"BF_DATAMATRIX" or "BF_QR_CODE"
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>"BF_DATAMATRIX"
-        </td>
-    </tr>
-    <tr>
         <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
         <td><b>Description</b><br>Sets the file name of the library to load dynamically.
         </td>
@@ -137,7 +120,6 @@ If the `DPMCodeReadingModes` is not configured in your template file, the follow
 
 Reads DPM codes using the general algorithm. This mode has the following arguments for further customizing.
 
-- BarcodeFormat
 - LibraryFileName
 - LibraryParameters
 

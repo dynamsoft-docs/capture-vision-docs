@@ -123,7 +123,7 @@ permalink: /parameters/reference/index-v2.0.0.html
 | [`BarcodeZoneBarCountRangeArray`](barcode-format-specification/barcode-zone-bar-count-range-array.md) | Defines the range of bar count of the barcode zone for barcodes searching. |
 | [`BarcodeZoneMinDistanceToImageBorders`](barcode-format-specification/barcode-zone-min-distance-to-image-borders.md) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
 | [`Code128Subset`](barcode-format-specification/code128-subset.md) | Defines the subset of Code 128. |
-| [`EnableAddonCode`](barcode-format-specification/enable-addon-code.md) | Defines whether to identify addon code. |
+| [`EnableAddOnCode`](barcode-format-specification/enable-addon-code.md) | Defines whether to identify addon code. |
 | [`EnableDataMatrixECC000-140`](barcode-format-specification/enable-data-matrix-ecc000-140.md) | Defines whether to read Data Matrix ECC000-140 barcode. |
 | [`EnableQRCodeModel1`](barcode-format-specification/enable-qr-code-model-1.md) | Defines whether to read QR code model 1. |
 | [`FindUnevenModuleBarcode`](barcode-format-specification/find-uneven-module-barcode.md) | Defines whether to find barcodes with uneven barcode modules. |

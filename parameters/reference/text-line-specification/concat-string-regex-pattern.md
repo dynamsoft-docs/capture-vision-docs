@@ -1,22 +1,22 @@
 ---
 layout: default-layout
-title: StringRegExPattern - Dynamsoft Label Recognizer Parameters
-description: The parameter StringRegExPattern of text line specification is for specifying the regex pattern of the text line strings.
-keywords: string regex pattern, parameter reference, parameter
+title: ConcatStringRegExPattern - Dynamsoft Label Recognizer Parameters
+description: The parameter ConcatStringRegExPattern of text line specification is for specifying the regex pattern of the concated text lines.
+keywords: concat string regex pattern, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# StringRegExPattern
+# ConcatStringRegExPattern
 
-Specifies the regular expression pattern of the string within a line. It is used to correct the recognized line text.
+Specifies the regular expression pattern of the concated text lines. It is used to correct the recognized line text.
 
 ## Example
 
 ```json
 {
-    "StringRegExPattern":""
+    "ConcatStringRegExPattern":""
 }
 ```
 
@@ -25,9 +25,9 @@ Specifies the regular expression pattern of the string within a line. It is used
 | Parameter Details |
 | :----------------------------------- |
 | **Type**<br>*String* |
-| **Range**<br>The supported regular expression pattern syntax is shown in the following table. |
+| **Range**<br>The supported regular expression pattern syntax is shown in the following table.|
 | **Default Value**<br>"" |
-| **Remarks**<br> It is used to correct the recognized line text. |
+| **Remarks**<br>It is used to correct the recognized line text. |
 
 Supported regular expressions pattern syntax:
 

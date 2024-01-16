@@ -120,6 +120,10 @@ permalink: /parameters/reference/index.html
 | [`ThirdPoint`](text-line-specification/position.md#thirdpoint) | The bottom-right vertex coordinate of the the text line. |
 | [`FourthPoint`](text-line-specification/position.md#fourthpoint) | The bottom-left vertex coordinate of the the text line. |
 | [`Name`](text-line-specification/name.md) | Defines the name of a `TextLineSpecification` object, which serves as its unique identifier. |
+| [`BinarizationModes`](text-line-specification/binarization-modes.md) | Helps control the process of binarization, i.e., converting a grayscale image to a binary image. |
+| [`GrayscaleEnhancementModes`](text-line-specification/grayscale-enhancement-modes.md) | Provides some image processing methods to enhance the grayscale quality of the text line area. |
+| [`StringLengthRange`](text-line-specification/string-length-range.md) | Sets the range of string length for each recognized line. |
+| [`StringRegExPattern`](text-line-specification/string-regex-pattern.md) | Specifies the regular expression pattern of the string within a line. It is used to correct the recognized line text. |
 
 ## Character Model
 
@@ -144,7 +148,7 @@ permalink: /parameters/reference/index.html
 | [`BarcodeZoneBarCountRangeArray`](barcode-format-specification/barcode-zone-bar-count-range-array.md) | Defines the range of bar count of the barcode zone for barcodes searching. |
 | [`BarcodeZoneMinDistanceToImageBorders`](barcode-format-specification/barcode-zone-min-distance-to-image-borders.md) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
 | [`Code128Subset`](barcode-format-specification/code128-subset.md) | Defines the subset of Code 128. |
-| [`EnableAddonCode`](barcode-format-specification/enable-addon-code.md) | Defines whether to identify addon code. |
+| [`EnableAddOnCode`](barcode-format-specification/enable-addon-code.md) | Defines whether to identify addon code. |
 | [`EnableDataMatrixECC000-140`](barcode-format-specification/enable-data-matrix-ecc000-140.md) | Defines whether to read Data Matrix ECC000-140 barcode. |
 | [`EnableQRCodeModel1`](barcode-format-specification/enable-qr-code-model-1.md) | Defines whether to read QR code model 1. |
 | [`FindUnevenModuleBarcode`](barcode-format-specification/find-uneven-module-barcode.md) | Defines whether to find barcodes with uneven barcode modules. |

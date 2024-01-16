@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: GrayscaleEnhancementModes - Dynamsoft Capture Vision Text Line Specification Parameters
+title: GrayscaleEnhancementModes - Dynamsoft Label Recognizer Parameters
 description: The parameter GrayscaleEnhancementModes of text line specification is for enhancing the quality of grayscale image of the text line area.
 keywords: GrayscaleEnhancementModes, parameter reference, parameter
 needAutoGenerateSidebar: true
