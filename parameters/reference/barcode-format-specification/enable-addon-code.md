@@ -1,31 +1,31 @@
 ---
 layout: default-layout
-title: EnableAddonCode - Dynamsoft Barcode Reader Parameters
-description: The parameter EnableAddonCode of Dynamsoft Barcode Reader defines whether to identify addon code.
-keywords: EnableAddonCode , parameter reference, parameter
+title: EnableAddOnCode - Dynamsoft Barcode Reader Parameters
+description: The parameter EnableAddOnCode of Dynamsoft Barcode Reader defines whether to identify addon code.
+keywords: EnableAddOnCode , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 permalink: /parameters/reference/barcode-format-specification/enable-addon-code.html
 ---
 
-# EnableAddonCode
+# EnableAddOnCode
 
-Parameter `EnableAddonCode` defines whether to identify addon code.
+Parameter `EnableAddOnCode` defines whether to identify addon code.
 
 ## Example
 
 ```json
 {
-    "EnableAddonCode": 1
+    "EnableAddOnCode": 1
 }
 ```
 
 ## Parameter Summary
 
-The structure of the `EnableAddonCode` is shown as follow:
+The structure of the `EnableAddOnCode` is shown as follow:
 
-| EnableAddonCode  Parameter Summary |
+| EnableAddOnCode  Parameter Summary |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

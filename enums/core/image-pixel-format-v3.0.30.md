@@ -189,7 +189,5 @@ typedef enum ImagePixelFormat
    IPF_BGR_888,
    /** 0:Black, 255:White. */
    IPF_BINARY_8,
-   /**0:White, 255:Black */
-   IPF_BINARY_8_INVERTED
 }ImagePixelFormat;
 ```

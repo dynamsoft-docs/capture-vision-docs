@@ -23,6 +23,7 @@ Parameter `Location` defines the location of the TargetROI with `reference objec
         {
             "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"],
             "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME","ART_TABLE_CELL"],
+            "ReferenceTaskNameArray": ["A_task"],
             "BarcodeFilteringCondition": 
             {
                 "BarcodeFormatIds": ["BF_CODE39"], 
@@ -52,7 +53,7 @@ Parameter `Location` defines the location of the TargetROI with `reference objec
         },
         "Offset": {
             "ReferenceObjectOriginIndex": 0,
-            "ReferenceObjectSizeType": "default",
+            "ReferenceObjectType": "ROT_ATOMIC_OBJECT",
             "MeasuredByPercentage" : 1,
             "FirstPoint" : [ 0, 0 ],
             "SecondPoint" : [ 100, 0 ],
@@ -88,6 +89,16 @@ Filter the reference object by specifying the type of atomic results. In the `Ta
 | **Type**<br>*String[]* |
 | **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE`, `ART_FRAME`, `ART_TABLE_CELL`, `ART_GEOMETRY_LINE`, `ART_CORNER` and `ART_COLOUR_REGION` |
 | **Default Value**<br>["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"] |
+
+#### ReferenceTaskNameArray
+
+Filter the reference object by specifying the reference task name array. 
+
+| AtomicResultTypeArray Parameter Summary |
+| :------------------- |
+| **Type**<br>*String[]* |
+| **Range**<br>Each member should be one of the task in the reference TargetROIDef object array. |
+| **Default Value**<br>null |
 
 #### BarcodeFilteringCondition
 
@@ -247,35 +258,52 @@ One of the filter conditions. Filter the reference objects with the text line co
 
 ### Offset
 
-Parameter `Offset` is an object that defines how the location is offset from the `reference object` or the original image.
+Parameter `Offset` is an object that defines how the location is offset from the `reference object` or the original image. It includes the following child parameters:
+
+* ReferenceObjectOriginIndex
+* ReferenceObjectType
+* ReferenceXAxis
+* ReferenceYAxis
+* MeasuredByPercentage
+* FirstPoint
+* SecondPoint
+* ThirdPoint
+* FourthPoint
+
+#### ReferenceObjectOriginIndex
+
+Defines which point of the reference object will be set as the origin of the coordinate system.
+
+| ReferenceObjectOriginIndex Parameter Details |
+| :------------------- |
+| **Type**<br>*int* |
+| **Value Range**<br>[0,3] |
+| **Default Value**<br>0 |
+
+#### ReferenceObjectType
+
+Defines which coordinate system to use when configuring offset parameters basd on the reference objects.
+
+| ReferenceObjectType Parameter Details |
+| :------------------- |
+| **Type**<br>*String* |
+| **Value Range**<br>"ROT_ATOMIC_OBJECT" or "ROT_WHOLE_IMAGE" |
+| **Default Value**<br>"ROT_ATOMIC_OBJECT" |
+
+#### ReferenceXAxis
+
+Defines the x-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. It includes the following child parameters:
 
 <table style = "text-align:left">
     <thead>
         <tr>
             <th nowrap="nowrap">Child Parameter Name</th>
-            <th nowrap="nowrap">Child Parameter Summary</th>
+            <th nowrap="nowrap">Child Parameter Details</th>
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectOriginIndex<br></td>
-        <td><b>Description</b><br>Define which point of the reference object will be set as the origin of the coordinate system.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>int</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>[0,3]
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>0
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "4" style="vertical-align:text-top">ReferenceObjectSizeType<br></td>
-        <td><b>Description</b><br>Define which coordinate system to use when configuring offset parameters basd on the reference objects.
+        <td rowspan = "4" style="vertical-align:text-top">AxisType<br></td>
+        <td><b>Description</b><br>The type of the axis.
         </td>
     </tr>
     <tr>
@@ -283,18 +311,19 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>"default" or "wholeimage"
-                <br>"default": Create the offset coordinate system based on the reference object.
-                <br>"wholeimage": Create the offset coordinate system based on the original image.
+        <td><b>Value Range</b><br>"AT_MIDPOINT_EDGE", "AT_EDGE", or "AT_ROTATION_OTHER_AXIS"
+                <br>"AT_MIDPOINT_EDGE": Indicates connecting the midpoints of the reference object's opposite edges as the axis.
+                <br>"AT_EDGE": Indicates using one of the reference object's edges as the axis.
+                <br>"AT_ROTATION_OTHER_AXIS": Indicates deriving the current axis by rotating another reference axis.
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>"default"
+        <td><b>Default Value</b><br>"AT_MIDPOINT_EDGE"
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">MeasuredInPercentage<br></td>
-        <td><b>Description</b><br>Set whether or not to use percentage to measure the points' coordinates.
+        <td rowspan = "5" style="vertical-align:text-top">EdgeIndex<br></td>
+        <td><b>Description</b><br>Define which edge of the reference object will be set as the x-axis of the coordinate system.
         </td>
     </tr>
     <tr>
@@ -302,7 +331,105 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>0 or 1
+        <td><b>Value Range</b><br>0, 1, 2, 3
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>Valid only when `AxisType` is "AT_EDGE"</b>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">RotationAngle<br></td>
+        <td><b>Description</b><br>The counterclockwise rotation angle used to rotate the reference axis.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Value Range</b><br>[0, 180]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>90
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b>Valid only when `AxisType` is "AT_ROTATION_OTHER_AXIS".</b>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">LengthReference<br></td>
+        <td><b>Description</b><br>Defines the measurement benchmark.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>String</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Value Range</b><br>"LR_X", "LR_Y"
+                <br>"LR_X": Indicates using the x-axis edge length as the standard length within the coordinate system.
+                <br>"LR_Y": Indicates using the y-axis edge length as the standard length within the coordinate system .
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>"LR_X"
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>Valid only when `AxisType` is "AT_MIDPOINT_EDGE" or "AT_EDGE"</b>
+        </td>
+    </tr>
+</table>
+
+#### ReferenceYAxis
+
+Defines the y-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. It includes the following child parameters:
+
+<table style = "text-align:left">
+    <thead>
+        <tr>
+            <th nowrap="nowrap">Child Parameter Name</th>
+            <th nowrap="nowrap">Child Parameter Details</th>
+        </tr>
+    </thead>
+    <tr>
+        <td rowspan = "4" style="vertical-align:text-top">AxisType<br></td>
+        <td><b>Description</b><br>The type of the axis.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>String</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Value Range</b><br>"AT_MIDPOINT_EDGE", "AT_EDGE", or "AT_ROTATION_OTHER_AXIS"
+                <br>"AT_MIDPOINT_EDGE": Indicates connecting the midpoints of the reference object's opposite edges as the axis.
+                <br>"AT_EDGE": Indicates using one of the reference object's edges as the axis.
+                <br>"AT_ROTATION_OTHER_AXIS": Indicates deriving the current axis by rotating another reference axis.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>"AT_MIDPOINT_EDGE"
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">EdgeIndex<br></td>
+        <td><b>Description</b><br>Define which edge of the reference object will be set as the y-axis of the coordinate system.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Value Range</b><br>0, 1, 2, 3
         </td>
     </tr>
     <tr>
@@ -310,79 +437,111 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">FirstPoint<br></td>
-        <td><b>Description</b><br>The top-left vertex of the ROI.
+        <td><b>Remarks</b><br>Valid only when `AxisType` is "AT_EDGE"</b>
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>int[2]</i>
+        <td rowspan = "5" style="vertical-align:text-top">RotationAngle<br></td>
+        <td><b>Description</b><br>The clockwise rotation angle used to rotate the reference axis.
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>null
+        <td><b>Type</b><br><i>int</i>
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>When MeasureInPercentage = 1: 
-            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        <td><b>Value Range</b><br>[0, 180]
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">SecondPoint<br></td>
-        <td><b>Description</b><br>The top-right vertex of the ROI.
+        <td><b>Default Value</b><br>90
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>int[2]</i>
+        <td><b>Remarks</b>Valid only when `AxisType` is "AT_ROTATION_OTHER_AXIS".</b>
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>null
+        <td rowspan = "5" style="vertical-align:text-top">LengthReference<br></td>
+        <td><b>Description</b><br>Defines the measurement benchmark.
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>When MeasureInPercentage = 1:
-            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        <td><b>Type</b><br><i>String</i>
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">ThirdPoint<br></td>
-        <td><b>Description</b><br>The bottom-right vertex of the ROI.
+        <td><b>Value Range</b><br>"LR_X", "LR_Y"
+                <br>"LR_X": Indicates using the x-axis edge length as the standard length within the coordinate system.
+                <br>"LR_Y": Indicates using the y-axis edge length as the standard length within the coordinate system .
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>int[2]</i>
+        <td><b>Default Value</b><br>"LR_Y"
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>null
-        </td>
-    </tr>
-    <tr>
-        <td><b>Remarks</b><br>When MeasureInPercentage = 1:
-            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "4" style="vertical-align:text-top">FourthPoint<br></td>
-        <td><b>Description</b><br>The bottom-left vertex of the ROI.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>int[2]</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>null
-        </td>
-    </tr>
-    <tr>
-        <td><b>Remarks</b><br>When MeasureInPercentage = 1:
-            <br>If your ReferenceObjectSizeType is "default", the coordinate is measured based on the size of the <b>reference object</b>.
-            <br>If your ReferenceObjectSizeType is "wholeimage", the coordinate is measured based on the size of the <b>TargetROI of the reference object.</b>
+        <td><b>Remarks</b><br>Valid only when `AxisType` is "AT_MIDPOINT_EDGE" or "AT_EDGE"</b>
         </td>
     </tr>
 </table>
+
+#### MeasuredByPercentage
+
+Sets whether or not to use percentage to measure the points' coordinates.
+
+| MeasuredByPercentage Parameter Details |
+| :------------------- |
+| **Type**<br>*int* |
+| **Range**<br>0 or 1 |
+| **Default Value**<br>1 |
+| **Remarks**<br>0: not by percentage <br>1: by percentage |
+
+#### FirstPoint
+
+Specifies the top-left vertex of the ROI with two possible expression forms:
+
+* `[X, Y]`: Represents the coordinates on the x and y axes. The expression in percentage for x and y is determined by parameter `MeasuredByPercentage`.
+* `[X, Y, MeasuredXByPercentage, MeasuredYByPercentage]`: Includes independent control over whether the values for x and y are expressed in percentage. `MeasuredXByPercentage` determines if the x-value is in percentage, and `MeasuredYByPercentage` controls the y-value.
+
+| FirstPoint Parameter Details |
+| :------------------- |
+| **Type**<br>*int[2]* or *int[4]* |
+| **Default Value**<br>null |
+
+#### SecondPoint
+
+Specifies the top-right vertex of the ROI with two possible expression forms:
+
+* `[X, Y]`: Represents the coordinates on the x and y axes. The expression in percentage for x and y is determined by parameter `MeasuredByPercentage`.
+* `[X, Y, MeasuredXByPercentage, MeasuredYByPercentage]`: Includes independent control over whether the values for x and y are expressed in percentage. `MeasuredXByPercentage` determines if the x-value is in percentage, and `MeasuredYByPercentage` controls the y-value.
+
+| FirstPoint Parameter Details |
+| :------------------- |
+| **Type**<br>*int[2]* or *int[4]* |
+| **Default Value**<br>null |
+
+#### ThirdPoint
+
+Specifies the bottom-right vertex of the ROI with two possible expression forms:
+
+* `[X, Y]`: Represents the coordinates on the x and y axes. The expression in percentage for x and y is determined by parameter `MeasuredByPercentage`.
+* `[X, Y, MeasuredXByPercentage, MeasuredYByPercentage]`: Includes independent control over whether the values for x and y are expressed in percentage. `MeasuredXByPercentage` determines if the x-value is in percentage, and `MeasuredYByPercentage` controls the y-value.
+
+| FirstPoint Parameter Details |
+| :------------------- |
+| **Type**<br>*int[2]* or *int[4]* |
+| **Default Value**<br>null |
+
+#### FourthPoint
+
+Specifies the bottom-left vertex of the ROI with two possible expression forms:
+
+* `[X, Y]`: Represents the coordinates on the x and y axes. The expression in percentage for x and y is determined by parameter `MeasuredByPercentage`.
+* `[X, Y, MeasuredXByPercentage, MeasuredYByPercentage]`: Includes independent control over whether the values for x and y are expressed in percentage. `MeasuredXByPercentage` determines if the x-value is in percentage, and `MeasuredYByPercentage` controls the y-value.
+
+| FirstPoint Parameter Details |
+| :------------------- |
+| **Type**<br>*int[2]* or *int[4]* |
+| **Default Value**<br>null |
+

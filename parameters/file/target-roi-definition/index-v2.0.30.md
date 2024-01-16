@@ -34,7 +34,7 @@ The `TargetROIDef` object is used to specify one or more recognition tasks to be
         },
         "Offset": {
             "ReferenceObjectOriginIndex": 0, 
-            "ReferenceObjectType": "ROT_ATOMIC_OBJECT", 
+            "ReferenceObjectSizeType": "default", 
             "MeasuredByPercentage" : 1,
             "FirstPoint" : [ 0, 0 ],
             "SecondPoint" : [ 100, 0 ],
@@ -116,7 +116,7 @@ Defines the filter conditions of the reference objects. You can filter the refer
 
 ### Offset
 
-Defines the offset of the target region from the reference object. If there is no reference object defined, the origin will be set to the top-left vertex of the original image.
+Defines the offset of the target region from the reference object. The origin of the offset is the top-left vertex of the reference object. If there is no reference object defined, the origin will be set to the top-left vertex of the original image.
 
 <div align="center">
    <p><img src="../assets/location-offset.png" alt="Offset example" width="50%" /></p>
@@ -127,11 +127,9 @@ Defines the offset of the target region from the reference object. If there is n
 
 | Parameter Name | Description |
 | -------------------------------- | ----------- |
-| [`ReferenceObjectOriginIndex`]({{site.dcv_parameters_reference}}target-roi-def/location.html#referenceobjectoriginindex) | Defines which point of the reference object will be set as the origin of the coordinate system. |
-| [`ReferenceObjectType`]({{site.dcv_parameters_reference}}target-roi-def/location.html#referenceobjecttype) | Defines which coordinate system to use when configuring offset parameters basd on the reference objects. |
-| [`ReferenceXAxis`]({{site.dcv_parameters_reference}}target-roi-def/location.html#referencexaxis) | Defines the x-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. |
-| [`ReferenceYAxis`]({{site.dcv_parameters_reference}}target-roi-def/location.html#referenceyaxis) | Defines the y-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. |
-| [`MeasuredByPercentage`]({{site.dcv_parameters_reference}}target-roi-def/location.html#measuredbypercentage) | Sets whether or not to use percentage to measure the points' coordinates. |
+| [`ReferenceObjectOriginIndex`]({{site.dcv_parameters_reference}}target-roi-def/location.html#referenceobjectoriginindex) | This parameter is used to indicate which point in the quadrilateral of the `ReferenceObject` the origin refers to. |
+| [`ReferenceObjectSizeType`]({{site.dcv_parameters_reference}}target-roi-def/location.html#referenceobjectsizetype) | This parameter is used to indicate the rule by which the region of the `ReferenceObject` is calculated. |
+| [`MeasuredByPercentage`]({{site.dcv_parameters_reference}}target-roi-def/location.html#measuredbypercentage) | Set barcode conditions that can be used as reference objects. |
 | [`FirstPoint`]({{site.dcv_parameters_reference}}target-roi-def/location.html#firstpoint) | The first point of the target region, which defines the offset from the origin. |
 | [`SecondPoint`]({{site.dcv_parameters_reference}}target-roi-def/location.html#secondpoint) | The second point of the target region, which defines the offset from the origin. |
 | [`ThirdPoint`]({{site.dcv_parameters_reference}}target-roi-def/location.html#thirdpoint) | The third point of the target region, which defines the offset from the origin. |
