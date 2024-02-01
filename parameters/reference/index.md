@@ -210,3 +210,10 @@ permalink: /parameters/reference/index.html
 | Parameter Name  | Description |
 | ---------------------------- | ----------- |
 | [`MaxTotalImageDimension`](global-parameter/max-total-image-dimension.md) | Defines the maximum total dimension of the images that read in the memory. |
+
+## OutputTaskSetting Parameters
+
+| Parameter Name | Description |
+| -------------- | ----------- |
+| [`Name`](output-task-setting/name.md) | Defines the name of a [`OutputTaskSetting`]({{ site.parameter }}file/task-settings/output-task-setting.html) object, which serves as its unique identifier. |
+| [`OutputCondidtion`](output-task-setting/output-condition.md) | Defines how the [`OutputTaskSetting`]({{ site.parameter }}file/task-settings/output-task-setting.html) object outputs results that satisfy multiple filter conditions across products. |

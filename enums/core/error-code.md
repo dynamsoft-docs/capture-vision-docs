@@ -334,6 +334,12 @@ public @interface EnumErrorCode
    public static final int EC_CREATE_FILE_FAILED = -10068,
    /**The input ImageData object contains invalid parameter(s).*/
    public static final int EC_IMGAE_DATA_INVALID = -10069,
+   /**The size of the input image do not meet the requirements.*/
+   public static final int EC_IMAGE_SIZE_NOT_MATCH = -10070,
+   /**The pixel format of the input image do not meet the requirements.*/
+   public static final int EC_IMAGE_PIXEL_FORMAT_NOT_MATCH = -10071,
+   /**The section level result is irreplaceable.*/
+   public static final int EC_SECTION_LEVEL_RESULT_IRREPLACEABLE = -10072,
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    public static final int EC_NO_LICENSE = -20000,
@@ -391,6 +397,10 @@ public @interface EnumErrorCode
    /** -40000~-49999: DLR error code */
    /** Character Model file is not found. */
    public static final int EC_CHARACTER_MODEL_FILE_NOT_FOUND = -40100,
+   /**There is a conflict in the layout of TextLineGroup. */
+   public static final int EC_TEXT_LINE_GROUP_LAYOUT_CONFLICT = -40101,
+   /**There is a conflict in the regex of TextLineGroup. */
+   public static final int EC_TEXT_LINE_GROUP_REGEX_CONFLICT = -40102,
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    public static final int EC_CONTENT_NOT_FOUND = -50056,
@@ -536,6 +546,12 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    DSErrorCodeCreateFileFailed                 = -10068,
    /**The input ImageData object contains invalid parameter(s).*/
    DSErrorCodeImageDataInvalid                 = -10069,
+   /**The size of the input image does not meet the requirements.*/
+   DSErrorImageSizeNotMatch                    = -10070,
+   /**The pixel format of the input image does not meet the requirements.*/
+   DSErrorImagePixelFormatNotMatch             = -10071,
+   /**The section level result is irreplaceable.*/
+   DSErrorSectionLevelResultIrreplaceable      = -10072,
    /**No license.*/
    DSErrorCodeNoLicense                        = -20000,
    /**The handshake code is invalid. */
@@ -594,6 +610,10 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    /** -40000~-49999: DLR error code */
    /** Character Model file is not found. */
    DSErrorCodeCharacterModelFileNotFound       = -40100,
+   /** There is a conflict in the layout of TextLineGroup. */
+   DSErrorTextLineGroupLayoutConflict          = -40101,
+   /** There is a conflict in the regex of TextLineGroup. */
+   DSErrorTextLineGroupRegexConflict           = -40102,
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    DSErrorCodeContentNotFound                  = -50056,
@@ -736,6 +756,12 @@ public enum ErrorCode : Int
    createFileFailed                 = -10068
    /**The input ImageData object contains invalid parameter(s).*/
    imageDataInvalid                 = -10069
+   /**The size of the input image does not meet the requirements.*/
+   imageSizeNotMatch                = -10070
+   /**The pixel format of the input image does not meet the requirements.*/
+   imagePixelFormatNotMatch         = -10071
+   /**The section level result is irreplaceable.*/
+   sectionLevelResultIrreplaceable  = -10072
    /**No license.*/
    noLicense                        = -20000
    /**The handshake code is invalid. */
@@ -794,6 +820,10 @@ public enum ErrorCode : Int
    /** -40000~-49999: DLR error code */
    /** Character Model file is not found. */
    characterModelFileNotFound       = -40100
+   /** There is a conflict in the layout of TextLineGroup. */
+   textLineGroupLayoutConflict      = -40101
+   /** There is a conflict in the regex of TextLineGroup. */
+   textLineGroupRegexConflict       = -40102
    /** -50000~-59999: DDN error code. */
    /** No content has been detected. */
    contentNotFound                  = -50056
