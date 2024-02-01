@@ -39,8 +39,6 @@ public @interface EnumCaptureState
    public static final int CS_STARTED = 0;
    /** The data capturing is stopped. */
    public static final int CS_STOPPED = 1;
-   /** The data capturing is paused. */
-   public static final int CS_PAUSED = 2;
 }
 ```
 >
@@ -50,9 +48,7 @@ typedef NS_ENUM(NSInteger, DSCaptureState)
    /** The data capturing is started. */
    DSCaptureStateStarted,
    /** The data capturing is stopped. */
-   DSCaptureStateStopped,
-   /** The data capturing is paused. */
-   DSCaptureStatePaused
+   DSCaptureStateStopped
 };
 ```
 >
@@ -63,8 +59,6 @@ public enum CaptureState : Int
    started
    /** The data capturing is stopped. */
    stopped
-   /** The data capturing is paused. */
-   paused
 };
 ```
 >
