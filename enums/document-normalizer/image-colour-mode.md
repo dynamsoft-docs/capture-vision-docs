@@ -34,8 +34,11 @@ enum EnumImageColourMode {
 ```java
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumImageColourMode {
+    /** Output colour image.*/
     public static final int ICM_COLOUR = 0;
+    /** Output grayscale image.*/
     public static final int ICM_GRAYSCALE = 1;
+    /** Output binary image.*/
     public static final int ICM_BINARY = 2;
     public EnumImageColourMode() {
     }
@@ -45,22 +48,12 @@ public @interface EnumImageColourMode {
 ```swift
 typedef NS_ENUM(NSInteger , DSImageColourMode)
 {
-
-    /**
-     * Output colour image.
-     */
+    /** Output colour image.*/
     DSImageColourModeColour = 0x01,
-
-    /**
-     * Output grayscale image.
-     */
+    /** Output grayscale image.*/
     DSImageColourModeGrayscale = 0x02,
-
-    /**
-     * Output binary image.
-     */
+    /** Output binary image.*/
     DSImageColourModeBinary = 0x04
-
 }NS_SWIFT_NAME(ImageColourMode);
 ```
 >
