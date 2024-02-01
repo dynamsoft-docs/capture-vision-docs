@@ -9,6 +9,17 @@ needAutoGenerateSidebar: true
 # Dynamsoft Capture Vision Documentation
 
 - [Introduction]({{site.introduction}})
+- Development
+  - [Web (Client Side)]({{ site.js }})
+  - Mobile
+    - [Android]({{ site.android }})
+    - [iOS]({{ site.oc }})
+    - [React Native]({{ site.react_native }}?product=dbr&repoType=mobile&version=latest)
+    - [Flutter]({{ site.flutter }}?product=dbr&repoType=mobile&version=latest)
+    - [Xamarin.Forms]({{ site.xamarin }}?product=dbr&repoType=mobile&version=latest)
+    - [Cordova]({{ site.cordova }}?product=dbr&repoType=mobile&version=latest)
+- Server / Desktop
+  - [C++]({{ site.cpp }})
 - [Architecture]({{site.architecture}})
   - [Input]({{site.architecture}}input.html)
   - [Image Processing]({{site.architecture}}image-processing/index.html)
