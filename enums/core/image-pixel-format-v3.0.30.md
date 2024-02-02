@@ -51,7 +51,9 @@ enum EnumImagePixelFormat {
    /** 24bit with BGR channel order stored in memory from high to low address. */
    IPF_BGR_888 = 12,
    /** 0:Black, 255:White. */
-   IPF_BINARY_8 = 13
+   IPF_BINARY_8 = 13,
+   /**NV12 */
+   IPF_NV12 = 14
 }
 ```
 >
@@ -86,7 +88,9 @@ public @interface EnumCapturedResultItemType
    /** 24bit with BGR channel order stored in memory from high to low address. */
    public static final int IPF_BGR_888 = 12;
    /** 0:Black, 255:White. */
-   public static final int IPF_BINARY_8 = 13
+   public static final int IPF_BINARY_8 = 13;
+   /**NV12 */
+   public static final int IPF_NV12 = 14;
 }
 ```
 >
@@ -120,7 +124,9 @@ typedef NS_ENUM(NSInteger, DSImagePixelFormat)
    /** 24bit with BGR channel order stored in memory from high to low address*/
    DSImagePixelFormatBGR_888,
    /**  0:black, 255:white */
-   DSImagePixelFormatBinary_8
+   DSImagePixelFormatBinary_8,
+   /**NV12 */
+   DSImagePixelFormatNV12
 };
 ```
 >
@@ -155,6 +161,8 @@ public enum ImagePixelFormat : Int
    BGR_888
    /**  0:black, 255:white */
    binary_8
+   /**NV12 */
+   NV12
 }
 ```
 >
@@ -189,5 +197,7 @@ typedef enum ImagePixelFormat
    IPF_BGR_888,
    /** 0:Black, 255:White. */
    IPF_BINARY_8,
+   /**NV12 */
+   IPF_NV12
 }ImagePixelFormat;
 ```
