@@ -22,12 +22,12 @@ breadcrumbText: ImageColourMode
 >
 ```javascript
 enum EnumImageColourMode {
-   /** The field has no mapping specified. */
-   MS_NONE = 0,
-   /** Find a mapping for the field value. */
-   MS_SUCCEEDED = 1,
-   /** Failed to find a mapping for the field value. */
-   MS_FAILED = 2
+    /** Output image in colour mode. */
+    ICM_COLOUR = 0,
+    /** Output image in grayscale mode. */
+    ICM_GRAYSCALE = 1,
+    /** Output image in binary mode. */
+    ICM_BINARY = 2
 }
 ```
 >
@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger , DSImageColourMode)
     DSImageColourModeGrayscale = 0x02,
     /** Output binary image.*/
     DSImageColourModeBinary = 0x04
+
 }NS_SWIFT_NAME(ImageColourMode);
 ```
 >
