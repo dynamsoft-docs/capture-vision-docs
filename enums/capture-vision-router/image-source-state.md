@@ -13,7 +13,7 @@ codeAutoHeight: true
 
 # Enumeration ImageSourceState
 
-`ImageSourceState` describes the status of an object that conforms to the `ImageSourceAdapter` interface and is designated as the image source in a `CaptureVisionRouter` object.
+`ImageSourceState` describes the state of an object that conforms to the `ImageSourceAdapter` interface and is designated as the image source in a `CaptureVisionRouter` object.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
