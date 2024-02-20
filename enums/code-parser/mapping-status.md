@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: MappingStatus - Dynamsoft Code Parser Enumerations
-description: The enumeration MappingStatus of Dynamsoft Code Parser describes the mapping status of a parsed field.
+description: The enumeration MappingStatus of Dynamsoft Code Parser represents the outcome of a mapping operation on a field.
 keywords: Mapping status
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -11,7 +11,7 @@ breadcrumbText: MappingStatus
 
 # Enumeration MappingStatus
 
-`MappingStatus` describes the mapping status of a parsed field.
+`MappingStatus` represents the outcome of a mapping operation on a field.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -23,12 +23,18 @@ breadcrumbText: MappingStatus
 >
 ```javascript
 enum EnumMappingStatus {
-   /** The field has no mapping specified. */
-   MS_NONE = 0,
-   /** Find a mapping for the field value. */
-   MS_SUCCEEDED = 1,
-   /** Failed to find a mapping for the field value. */
-   MS_FAILED = 2
+    /** 
+     * Indicates that no mapping operation has been initiated.
+     */
+    MS_NONE = 0,
+    /** 
+     * Indicates that the mapping operation was successfully completed.
+     */
+    MS_SUCCEEDED = 1,
+    /** 
+     * Indicates that the mapping operation failed to complete.
+     */
+    MS_FAILED = 2
 }
 ```
 >

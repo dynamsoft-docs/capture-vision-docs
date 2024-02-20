@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration ImageTagType
 
-`ImageTagType` describes the type of the image tag, which is used to distinguish video frame and file images.
+`ImageTagType` categorizes images based on their source, distinguishing between images extracted from video streams (video frame) and those loaded from static files (file image).
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -25,9 +25,9 @@ codeAutoHeight: true
 ```javascript
 enum EnumImageTagType
 {
-   /**The image is a file image.*/
+   /**Represents an image that has been sourced from a static file.*/
    ITT_FILE_IMAGE = 0,
-   /**The image is a video frame.*/
+   /**Indicates that the image is a frame extracted from a video stream.*/
    ITT_VIDEO_FRAME = 1
 }
 ```
@@ -64,9 +64,9 @@ public enum ImageTagType : Int
 ```cpp
 typedef enum ImageTagType
 {
-   /**The image is a file image.*/
+   /**Represents an image that has been sourced from a static file.*/
    ITT_FILE_IMAGE,
-   /**The image is a video frame.*/
+   /**Indicates that the image is a frame extracted from a video stream.*/
    ITT_VIDEO_FRAME
 } ImageTagType;
 ```

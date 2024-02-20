@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration GrayscaleTransformationMode
 
-`GrayscaleTransformationMode` describes the grayscale transformation mode.
+`GrayscaleTransformationMode` specifies the method employed to transform images in grayscale.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -25,16 +25,32 @@ codeAutoHeight: true
 ```javascript
 enum EnumGrayscaleTransformationMode
 {
-   /** Skips grayscale transformation. */
-   GTM_SKIP = 0,
-   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
-   GTM_INVERTED = 1,
-   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
-   GTM_ORIGINAL = 2,
-   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
-   GTM_AUTO = 4,
-   /** Reserved setting for grayscale transformation mode. */
-   GTM_REV = -2147483648
+    /**
+     * Bypasses grayscale transformation, leaving the image in its current state without any modification to its grayscale values.
+     * This mode is selected when no alteration of the grayscale data is desired, passing the image through to subsequent operations without modification.
+     */
+    GTM_SKIP = 0,
+    /**
+     * Applies an inversion to the grayscale values of the image, effectively transforming light elements to dark and vice versa.
+     * This mode is particularly useful for images with light text on dark backgrounds, enhancing visibility for further processing.
+     */
+    GTM_INVERTED = 1,
+    /**
+     * Maintains the original grayscale values of the image without any transformation. This mode is suited for images with
+     * dark elements on light backgrounds, ensuring the natural contrast and detail are preserved for subsequent analysis.
+     */
+    GTM_ORIGINAL = 2,
+    /**
+     * Delegates the choice of grayscale transformation to the library's algorithm, which automatically determines the most
+     * suitable transformation based on the image's characteristics. This mode is beneficial when the optimal transformation
+     * is not known in advance or varies across different images.
+     */
+    GTM_AUTO = 4,
+    /**
+     * Reserved for future expansion or internal use. This placeholder indicates a grayscale transformation mode that is
+     * not currently defined for public use but may be utilized for upcoming features or reserved for specific, undocumented adjustments.
+     */
+    GTM_REV = -2147483648
 }
 ```
 >

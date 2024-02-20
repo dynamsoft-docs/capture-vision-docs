@@ -38,7 +38,7 @@ Capture Vision Router (CVR) is the most important part of the DCV architecture. 
 
 In the DCV architecture, an image source refers to an object that has implemented the [Image Source Adapter (ISA) interface](input.md#image-source-adapter). For example, Dynamsoft Camera Enhancer (DCE) is often used as an image source in applications that use Dynamsoft software.
 
-At runtime, CVR accepts an image source and acts as an image input for the the functional products. Usually, this is a continuous process which ends when the image source is exhausted.
+At runtime, CVR accepts an image source and acts as an image input for the functional products. Usually, this is a continuous process which ends when the image source is exhausted.
 
 ### Coordinate Image-Processing Tasks
 
