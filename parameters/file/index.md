@@ -160,7 +160,7 @@ The following table list the main objects type and description of a complete par
 |  [LabelRecognizerTaskSetting]({{site.parameter}}file/task-settings/label-recognizer-task-settings.html)    |  Configures the settings for label recognition tasks performed on images in DCV.|
 |  [DocumentNormalizerTaskSetting]({{site.parameter}}file/task-settings/document-normalizer-task-settings.html) |  Configures the settings for the document detection or normalization process of an image in DCV. |
 |  [CodeParserTaskSetting]({{site.parameter}}file/task-settings/code-parser-task-settings.html)         |  Configures the code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
-|  [OutputTaskSetting]({{site.parameter}}file/task-settings/output-task-settings.html)         | Configure how to output the expected results of the ancestor `TargetROIDef` by filtering the results of the descendant `TargetROIDef` object. |
+|  [OutputTaskSetting]({{site.parameter}}file/task-settings/output-task-setting.html)         | Configure how to output the expected results of the ancestor `TargetROIDef` by filtering the results of the descendant `TargetROIDef` object. |
 |  [ImageParameter]({{site.parameter}}file/image-parameter.html)              |  Provides various image-processing features to adjust and enhance the input image for better recognition results.|
 
 For more details, please refer to [introduction of the capture vision template](capture-vision-template.md)

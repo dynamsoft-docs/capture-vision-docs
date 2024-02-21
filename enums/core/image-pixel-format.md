@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration ImagePixelFormat
 
-`ImagePixelFormat` describes all the supported image pixel formats.
+`ImagePixelFormat` defines the range of pixel formats that an image can have, specifying how color and transparency data are represented in each pixel of the image.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript

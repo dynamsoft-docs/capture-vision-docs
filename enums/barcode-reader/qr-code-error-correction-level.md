@@ -23,16 +23,15 @@ codeAutoHeight: true
    >
 >
 ```javascript
-enum EnumQRCodeErrorCorrectionLevel
-{
-   /**Error Correction Level H (high) */
-   QRECL_ERROR_CORRECTION_H = 0,
-   /**Error Correction Level L (low) */
-   QRECL_ERROR_CORRECTION_L = 1,
-   /**Error Correction Level M (medium-low) */
-   QRECL_ERROR_CORRECTION_M = 2,
-   /**Error Correction Level Q (medium-high) */
-   QRECL_ERROR_CORRECTION_Q = 3
+enum EnumQRCodeErrorCorrectionLevel{
+    /** High error correction level, allowing for up to 30% data recovery. Suitable for environments where QR codes might be subject to significant damage. */
+    QRECL_ERROR_CORRECTION_H = 0,
+    /** Low error correction level, allowing for up to 7% data recovery. Optimal for scenarios where QR code integrity is less likely to be compromised. */
+    QRECL_ERROR_CORRECTION_L = 1,
+    /** Medium-low error correction level, allowing for up to 15% data recovery. Balances the need for data integrity with the desire to maximize data capacity. */
+    QRECL_ERROR_CORRECTION_M = 2,
+    /** Medium-high error correction level, allowing for up to 25% data recovery. Designed for situations where some QR code damage might be expected. */
+    QRECL_ERROR_CORRECTION_Q = 3
 }
 ```
 >

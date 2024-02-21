@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration RegionObjectElementType
 
-`RegionObjectElementType` is used to determine the particular type of the subclasses of `RegionObjectElement`.
+`RegionObjectElementType` specifies the exact subclass type within the `RegionObjectElement` hierarchy. This enumeration facilitates the identification and differentiation of various processed elements in an image.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -24,20 +24,23 @@ codeAutoHeight: true
 >
 ```javascript
 enum EnumRegionObjectElementType {
-   /**The type of subclass PredetectedRegionElement.*/
-   ROET_PREDETECTED_REGION = 0,
-   /**The type of subclass LocalizedBarcodeElement.*/
-   ROET_LOCALIZED_BARCODE = 1,
-   /**The type of subclass DecodedBarcodeElement.*/
-   ROET_DECODED_BARCODE = 2,
-   /**The type of subclass LocalizedTextLineElement.*/
-   ROET_LOCALIZED_TEXT_LINE = 3,
-   /**The type of subclass RecognizedTextLineElement.*/
-   ROET_RECOGNIZED_TEXT_LINE = 4,
-   /**The type of subclass DetectedQuadElement.*/
-   ROET_DETECTED_QUAD = 5,
-   /**The type of subclass NormalizedImageElement.*/
-   ROET_NORMALIZED_IMAGE = 6
+    /** 
+     * Corresponds to the `PredetectedRegionElement` subclass, representing areas within the image identified as potentially significant
+     * for further analysis before detailed processing.
+     */
+    ROET_PREDETECTED_REGION = 0,
+    /** Corresponds to the `LocalizedBarcodeElement` subclass, indicating areas where barcodes have been localized within the image.*/
+    ROET_LOCALIZED_BARCODE = 1,
+    /** Corresponds to the `DecodedBarcodeElement` subclass, signifying barcodes that have not only been localized but also successfully decoded. */
+    ROET_DECODED_BARCODE = 2,
+    /** Corresponds to the `LocalizedTextLineElement` subclass, indicating lines of text that have been localized within the image. */
+    ROET_LOCALIZED_TEXT_LINE = 3,
+    /** Corresponds to the `RecognizedTextLineElement` subclass, referring to text lines that have been recognized. */
+    ROET_RECOGNIZED_TEXT_LINE = 4,
+    /** Corresponds to the `DetectedQuadElement` subclass, representing quadrilateral shapes detected within the image. */
+    ROET_DETECTED_QUAD = 5,
+    /** Corresponds to the `NormalizedImageElement` subclass, referring to images that have been normalized. */
+    ROET_NORMALIZED_IMAGE = 6
 }
 ```
 >

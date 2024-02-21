@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration ImagePixelFormat
 
-`ImagePixelFormat` describes all the supported image pixel formats.
+`ImagePixelFormat` defines the range of pixel formats that an image can have, specifying how color and transparency data are represented in each pixel of the image.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -24,35 +24,35 @@ codeAutoHeight: true
 >
 ```javascript
 enum EnumImagePixelFormat {
-   /** 0:Black, 1:White. */
+   /** Binary format representing images with two colors: 0 for black and 1 for white. */
    IPF_BINARY = 0,
-   /** 0:White, 1:Black. */
+   /** Inverted binary format with 0 for white and 1 for black. */
    IPF_BINARYINVERTED = 1,
-   /** 8bit gray. */
+   /** Grayscale format with 8 bits per pixel, allowing for 256 shades of gray. */
    IPF_GRAYSCALED = 2,
-   /** NV21. */
+   /** NV21 format, a YUV planar format used commonly in camera preview and video encoding, with 8-bit Y followed by interleaved V/U values. */
    IPF_NV21 = 3,
-   /** 16bit with RGB channel order stored in memory from high to low address. */
+   /** RGB format with 5 bits for red and blue, and 6 bits for green, stored in a 16-bit structure. */
    IPF_RGB_565 = 4,
-   /** 16bit with RGB channel order stored in memory from high to low address. */
+   /** Similar to RGB_565 but with 5 bits for each color channel, providing uniform color depth across channels in a 16-bit structure. */
    IPF_RGB_555 = 5,
-   /** 24bit with RGB channel order stored in memory from high to low address. */
+   /** Standard 24-bit RGB format with 8 bits per channel. */
    IPF_RGB_888 = 6,
-   /** 32bit with ARGB channel order stored in memory from high to low address. */
+   /** 32-bit ARGB format with 8 bits per channel, including an alpha channel for transparency. */
    IPF_ARGB_8888 = 7,
-   /** 48bit with RGB channel order stored in memory from high to low address. */
+   /** High-depth 48-bit RGB format with 16 bits per channel. */
    IPF_RGB_161616 = 8,
-   /** 64bit with ARGB channel order stored in memory from high to low address. */
+   /** 64-bit ARGB format with 16 bits per channel, including an alpha channel. */
    IPF_ARGB_16161616 = 9,
-   /** 32bit with ABGR channel order stored in memory from high to low address. */
+   /** 32-bit ABGR format with 8 bits per channel, storing color information in reverse order of ARGB_8888. */
    IPF_ABGR_8888 = 10,
-   /** 64bit with ABGR channel order stored in memory from high to low address. */
+   /** 64-bit ABGR format with 16 bits per channel, providing high color depth and transparency in the reverse order of ARGB_16161616. */
    IPF_ABGR_16161616 = 11,
-   /** 24bit with BGR channel order stored in memory from high to low address. */
+   /** 24-bit BGR format with 8 bits per channel, where the blue channel is stored first. */
    IPF_BGR_888 = 12,
-   /** 0:Black, 255:White. */
+   /** Binary format with 8 bits per pixel, enabling more detailed binary images by allowing for antialiasing or other binary representations. */
    IPF_BINARY_8 = 13,
-   /**NV12 */
+   /** NV12 format, similar to NV21 but with the U and V color components swapped. */
    IPF_NV12 = 14
 }
 ```

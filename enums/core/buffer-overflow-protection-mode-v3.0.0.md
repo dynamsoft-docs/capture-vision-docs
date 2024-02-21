@@ -13,7 +13,7 @@ permalink: /enums/core/buffer-overflow-protection-mode-v2.0.0.html
 
 # Enumeration BufferOverflowProtectionMode
 
-`BufferOverflowProtectionMode` describes the protection modes when the buffer of `ImageSourceAdapter` is overflow.
+`BufferOverflowProtectionMode` describes the protection modes to manage situations when the `ImageSourceAdapter`'s buffer exceeds its capacity. 
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
