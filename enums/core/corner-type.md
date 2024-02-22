@@ -29,19 +29,16 @@ enum EnumCornerType {
      * This is the most common corner type, where the angle between the line segments can vary from acute to obtuse.
      */
     CT_NORMAL_INTERSECTED = 0,
-
     /**
      * Describes a corner where two line segments intersect in a T-shape.
      * This occurs when one line segment terminates at the midpoint of another, creating three distinct angles.
      */
     CT_T_INTERSECTED = 1,
-
     /**
      * Characterizes a corner formed by two line segments intersecting each other in a cross shape.
      * This configuration results in four angles and is commonly encountered in grid or lattice patterns.
      */
     CT_CROSS_INTERSECTED = 2,
-
     /**
      * Defines a scenario where two line segments do not physically intersect but conceptually form a corner.
      * This can occur in virtual shapes or when the corner is implied by the continuation of lines beyond their endpoints.
