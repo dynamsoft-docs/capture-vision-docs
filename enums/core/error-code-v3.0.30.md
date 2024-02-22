@@ -128,7 +128,6 @@ enum EnumErrorCode
     EC_CREATE_FILE_FAILED = -10068,
     /** The input ImageData object contains invalid parameters. This could be due to incorrect data types, out-of-range values, or improperly formatted data being passed to a function expecting ImageData. */
     EC_IMGAE_DATA_INVALID = -10069,
-
     // DLS license error codes range from -20000 to -29999
     /** Indicates no license is available or the license is not set. */
     EC_NO_LICENSE = -20000,
@@ -150,7 +149,6 @@ enum EnumErrorCode
     EC_TRIAL_LICENSE = -20010,
     /** The system failed to reach the License Server, likely due to network connectivity issues. */
     EC_FAILED_TO_REACH_DLS = -20200,
-
     // DBR error codes range from -30000 to -39999
     /** The specified barcode format is invalid or unsupported. */
     EC_BARCODE_FORMAT_INVALID = -30009,
@@ -186,20 +184,16 @@ enum EnumErrorCode
     EC_DOTCODE_LICENSE_INVALID = -30061,
     /** The license for decoding Pharmacode barcodes is invalid or not present. */
     EC_PHARMACODE_LICENSE_INVALID = -30062,
-
     // DLR error codes range from -40000 to -49999
     /** Indicates that the required character model file was not found, possibly due to incorrect paths or missing files. */
     EC_CHARACTER_MODEL_FILE_NOT_FOUND = -40100,
-
     // DDN error codes range from -50000 to -59999
     /** The specified quadrilateral is invalid, potentially due to incorrect points or an unprocessable shape. */
     EC_QUADRILATERAL_INVALID = -50057,
-
     // Panorama error codes range from -70000 to -79999
     /** The license for generating or processing panoramas is invalid or missing. */
     EC_PANORAMA_LICENSE_INVALID = -70060,
     // Reserved error codes range from -80000 to -89999
-
     // DCP error codes range from -90000 to -99999
     /** The specified resource path does not exist, indicating a missing directory or incorrect path specification. */
     EC_RESOURCE_PATH_NOT_EXIST = -90001,
