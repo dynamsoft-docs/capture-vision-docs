@@ -32,7 +32,6 @@ The ImageParameter object is designed to configure and organize common parameter
             "ThresholdCompensation" : 10
         }
     ],
-    "ColourChannelUsageType" : "CCUT_AUTO",
     "ColourConversionModes" : 
     [
         {
@@ -182,7 +181,6 @@ View the parameter references for the details of each `ImageParameter` parameter
 | [`Name`](../reference/shared-parameter/name.md) | Represents the name of the `ImageParameter` object, which serves as its unique identifier. |
 | [`BaseImageParameterName`](../reference/image-parameter/base-image-parameter-name.md) | Represents the name of another `ImageParameter` object. It is used to inherit the parameters defined in its parent `ImageParameter` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.|
 | [`BinarizationModes`](../reference/image-parameter/binarization-modes.md) | Used to control the binarization process, including two modes of local binarization and global binarization. |
-| [`ColourChannelUsageType`](../reference/image-parameter/colour-channel-usage-type.md) | Specifies how to use the colour channel from the source image buffer.|
 | [`ColourConversionModes`](../reference/image-parameter/colour-conversion-modes.md) | Used to control the process of colour conversion, i.e. converting a colour image to a grayscale image.|
 | [`GrayscaleEnhancementModes`](../reference/image-parameter/grayscale-enhancement-modes.md) | Provides some image processing methods to enhance the quality of the grayscale image, including gray equalization, grayscale smoothing, grayscale sharpening and smoothing.|
 | [`GrayscaleTransformationModes`](../reference/image-parameter/grayscale-transformation-modes.md) | Used to control the color mode of the grayscale image, including the original mode and the inverted mode. |

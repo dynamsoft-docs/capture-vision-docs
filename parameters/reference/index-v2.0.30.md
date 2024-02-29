@@ -103,7 +103,6 @@ permalink: /parameters/reference/index-v2.0.30.html
 | ---------------------------------- | ----------- |
 | [`BaseImageParameterName`](image-parameter/base-image-parameter-name.md) | Represents the name of another `ImageParameter` object to inherit from. |
 | [`BinarizationModes`](image-parameter/binarization-modes.md) | Defines the process of binarization |
-| [`ColourChannelUsageType`](image-parameter/colour-channel-usage-type.md) | Defines how to use the colour channel from the source image buffer. |
 | [`ColourConversionModes`](image-parameter/colour-conversion-modes.md) | Defines how to convert a colour image to a grayscale image. |
 | [`GrayscaleEnhancementModes`](image-parameter/grayscale-enhancement-modes.md) | Defines the image processing methods to enhance the quality of the grayscale image. |
 | [`GrayscaleTransformationModes`](image-parameter/grayscale-transformation-modes.md) | Defines whether or not to invert the color of the grayscale image. |

@@ -976,9 +976,7 @@ typedef enum ErrorCode
    /**The section level result is irreplaceable.*/
    EC_SECTION_LEVEL_RESULT_IRREPLACEABLE = -10072,
    /**The axis definition is incorrect.*/
-   EC_AXIS_DEFINITION_INCORRECT = -10073,
-   /**The result is not replaceable due to type mismatch*/
-   EC_RESULT_TYPE_MISMATCH_IRREPLACEABLE = -10074,
+   EC_AXIS_DEFINITION_INCORRECT = -10073,   
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    EC_NO_LICENSE = -20000,
@@ -996,8 +994,6 @@ typedef enum ErrorCode
    EC_INSTANCE_COUNT_OVER_LIMIT = -20008,
    /** Trial License */
    EC_TRIAL_LICENSE = -20010,
-   /**Online license validation failed due to network issues. Using cached license information for validation*/
-   EC_LICENSE_CACHE_USED = -20012,
    /** Failed to reach License Server. */
    EC_FAILED_TO_REACH_DLS = -20200,
    /** -30000~-39999: DBR error code. */

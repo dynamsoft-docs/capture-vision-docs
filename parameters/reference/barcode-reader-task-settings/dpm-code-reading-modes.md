@@ -27,7 +27,7 @@ Parameter `DPMCodeReadingModes` defines how to read direct part mark (DPM) barco
 
 ## Parameter Summary
 
-Parameter `DPMCodeReadingModes` consist of a group of DPM code reading mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary mode arguments.
+Parameter `DPMCodeReadingModes` consist of a group of DPM code reading mode objects. Each object includes a candidate mode and a series of auxiliary mode arguments.
 
 ### Mode Arguments
 
