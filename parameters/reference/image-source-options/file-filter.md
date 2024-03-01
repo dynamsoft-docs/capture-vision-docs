@@ -25,7 +25,7 @@ Parameter `FileFilter` specifies a file name filter string, which determines whi
 
 | ScaleDownThreshold Parameter Summary |
 | :----------------------------------- |
-| **Description**<br>Afile name filter string |
+| **Description**<br>A file name filter string |
 | **Type**<br>*String* |
-| **Value range**<br>One of the files extension name. For example: "*.BMP;*.JPG;*.GIF", or "*.*", etc. |
+| **Value range**<br>One of the files extension name. For example: "\*.BMP;\*.JPG;\*.GIF", or "\*.\*", etc. |
 | **Default Value**<br>"" |
