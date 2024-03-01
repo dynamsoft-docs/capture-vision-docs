@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BufferOverflowProtectionMode
 codeAutoHeight: true
-permalink: /enums/core/buffer-overflow-protection-mode-v2.0.0.html
+permalink: /enums/core/buffer-overflow-protection-mode-v3.0.0.html
 ---
 
 # Enumeration BufferOverflowProtectionMode

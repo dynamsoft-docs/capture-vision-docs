@@ -9,7 +9,7 @@ noTitleIndex: true
 permalink: /parameters/reference/barcode-reader-task-settings/barcode-complement-modes.html
 ---
 
-## BarcodeComplementModes
+# BarcodeComplementModes
 
 Parameter `BarcodeComplementModes` defines how to complement the missing parts of a barcode.
 

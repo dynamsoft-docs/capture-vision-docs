@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: CapturedResultItemType
 codeAutoHeight: true
-permalink: /enums/core/captured-result-item-type-v2.0.0.html
+permalink: /enums/core/captured-result-item-type-v3.0.0.html
 ---
 
 # Enumeration CapturedResultItemType

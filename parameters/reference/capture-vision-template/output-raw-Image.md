@@ -6,7 +6,7 @@ keywords: raw image, captured results, CaptureVisionTemplate
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/capture-vision-template/output-raw-Image.html
+permalink: /parameters/reference/capture-vision-template/output-raw-image.html
 ---
 
 # OutputRawImage
