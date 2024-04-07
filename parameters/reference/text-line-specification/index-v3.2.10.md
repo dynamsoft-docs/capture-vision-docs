@@ -34,5 +34,3 @@ noTitleIndex: true
 | [`SubGroups`](sub-groups.md) | Defines the layout of subgroups of the `TextLineSpecification` object. |
 | [`ReferenceGroupName`](reference-group-name.md) | Defines the reference group for space layout configuration. |
 | [`TextLinesCount`](text-lines-count.md) | Defines the expected number of text lines for the `TextLineSpecification` object. |
-| [`ConfusableCharactersCorrection`](confusable-characters-correction.md) | Defines the confusing character set and an array of reference font names for error correction. |
-| [`ExpectedGroupsCount`](expected-groups-count.md) | Defines the expected number of `TextLineGroups` to be found. |

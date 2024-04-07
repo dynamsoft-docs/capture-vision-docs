@@ -76,6 +76,8 @@ permalink: /parameters/reference/index.html
 | [`StringRegExPattern`](label-recognizer-task-settings/string-regex-pattern.md) | Specifies the regular expression pattern for concatenated strings of recognized text lines. |
 | [`TerminateSetting`](label-recognizer-task-settings/terminate-setting.md) | Defines the terminate stages of each section in the task. For each sections, you can define only one terminate stage. |
 | [`TextLineSpecificationNameArray`](label-recognizer-task-settings/text-line-specification-name-array.md) | Defines the collection of text line specification object names |
+| [`ConfusableCharactersPath`](label-recognizer-task-settings/confusable-characters-path.md) | Defines the path to the .data file of the confusable characters. |
+| [`ClusterSamplesCountThreshold`](label-recognizer-task-settings/cluster-samples-count-threshold.md) | Defines the threshold for successful character clustering. |
 
 ## Document Normalizer Task Setting
 
@@ -140,6 +142,7 @@ permalink: /parameters/reference/index.html
 | [`SubGroups`](text-line-specification/sub-groups.md) | Defines the layout of subgroups of the `TextLineSpecification` object. |
 | [`ReferenceGroupName`](text-line-specification/reference-group-name.md) | Defines the reference group for space layout configuration. |
 | [`TextLinesCount`](text-line-specification/text-lines-count.md) | Defines the expected number of text lines for the `TextLineSpecification` object. |
+| [`ConfusableCharactersCorrection`](text-line-specification/confusable-characters-correction.md) | Defines the confusing character set and an array of reference font names for error correction. |
 
 ## Character Model
 

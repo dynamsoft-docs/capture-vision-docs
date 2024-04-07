@@ -4,7 +4,6 @@ title: Dynamsoft Capture Vision Parameter Reference - Main Page
 description: Dynamsoft Capture Vision Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index-v2.0.30.html
 ---
 
 # Parameter Reference

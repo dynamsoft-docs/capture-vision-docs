@@ -22,6 +22,4 @@ noTitleIndex: true
 | [`StringLengthRange`](string-length-range.md) | Sets the range of string lengths for concatenated strings of recognized text lines. |
 | [`StringRegExPattern`](string-regex-pattern.md) | Specifies the regular expression pattern for concatenated strings of recognized text lines. |
 | [`TerminateSetting`](terminate-setting.md) | Defines the terminate stages of each section in the task. For each sections, you can define only one terminate stage. |
-| [`TextLineSpecificationNameArray`](text-line-specification-name-array.md) | Defines the collection of text line specification object names. |
-| [`ConfusableCharactersPath`](confusable-characters-path.md) | Defines the path to the .data file of the confusable characters. |
-| [`ClusterSamplesCountThreshold`](cluster-samples-count-threshold.md) | Defines the threshold for successful character clustering. |
+| [`TextLineSpecificationNameArray`](text-line-specification-name-array.md) | Defines the collection of text line specification object names |
