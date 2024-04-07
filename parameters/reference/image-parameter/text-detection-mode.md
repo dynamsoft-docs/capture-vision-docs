@@ -139,6 +139,27 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
         <td><b>Valid For</b><br>All modes
         </td>
     </tr>
+        <tr>
+        <td rowspan = "5" style="vertical-align:text-top">StringLengthRange<br>(Optional)</td>
+        <td><b>Description</b><br>Sets a range to restrict the string length.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>int[]</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>Each member of the array should be in [0, 0x7fffffff]
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>LabelRecognizer: [3,50]. <br>BarcodeReader & DocumentNormalizer: null
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>All modes
+        </td>
+    </tr>
     <tr>
         <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
         <td><b>Description</b><br>Sets the file name of the library to load dynamically.

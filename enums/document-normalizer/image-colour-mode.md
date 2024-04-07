@@ -54,7 +54,6 @@ typedef NS_ENUM(NSInteger , DSImageColourMode)
     DSImageColourModeGrayscale = 0x02,
     /** Output binary image.*/
     DSImageColourModeBinary = 0x04
-
 }NS_SWIFT_NAME(ImageColourMode);
 ```
 >

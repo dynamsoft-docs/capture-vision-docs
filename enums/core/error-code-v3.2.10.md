@@ -979,8 +979,6 @@ typedef enum ErrorCode
    EC_AXIS_DEFINITION_INCORRECT = -10073,
    /**The result is not replaceable due to type mismatch*/
    EC_RESULT_TYPE_MISMATCH_IRREPLACEABLE = -10074,
-   /**Failed to load the PDF library.*/
-   EC_PDF_LIBRARY_LOAD_FAILED = -10075,
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    EC_NO_LICENSE = -20000,
