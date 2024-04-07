@@ -41,7 +41,7 @@ The mode arguments of the DPM code reading mode object are shown as follow:
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode to read DPM barcode.
         </td>
     </tr>
@@ -125,4 +125,4 @@ Reads DPM codes using the general algorithm. This mode has the following argumen
 
 ### DPMCRM_AUTO
 
-Lets the library choose a mode automatically. Not supported yet
+Lets the library choose a mode automatically. Not supported yet.
