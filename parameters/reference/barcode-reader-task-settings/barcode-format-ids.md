@@ -27,4 +27,4 @@ Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You 
 | :--------------------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each member of the array should be one of the BarcodeFormat enumeration member as a string. |
-| **Default Value**<br>[ "BF_ALL" ] |
+| **Default Value**<br>[ "BF_DEFAULT" ] |
