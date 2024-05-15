@@ -28,4 +28,4 @@ Parameter `OutputResults` defines whether to enable the output of the `TextLineS
 | :----------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>0,1 |
-| **Default Value**<br>0. It does not output the text line result for the `TextLineSpecification` object. |
+| **Default Value**<br>1. It outputs the text line result for the `TextLineSpecification` object. |
