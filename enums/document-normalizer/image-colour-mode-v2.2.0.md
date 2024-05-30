@@ -18,7 +18,6 @@ breadcrumbText: ImageColourMode
    >- Android
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -68,13 +67,4 @@ typedef enum ImageColourMode
     /** Output image in binary mode. */
     ICM_BINARY = 2
 } ImageColourMode;
-```
->
-```csharp
-public enum EnumImageColourMode
-{
-    ICM_COLOUR = 0,
-    ICM_GRAYSCALE = 1,
-    ICM_BINARY = 2
-}
 ```

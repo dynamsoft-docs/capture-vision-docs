@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -102,13 +101,4 @@ typedef enum PDFReadingMode
    PDFRM_REV = -2147483648,
 #endif
 } PDFReadingMode;
-```
->
-```csharp
-public enum EnumPDFReadingMode
-{
-    PDFRM_VECTOR = 0x01,
-    PDFRM_RASTER = 0x02,
-    PDFRM_REV = -2147483648,
-}
 ```

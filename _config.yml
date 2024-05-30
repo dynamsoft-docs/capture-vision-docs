@@ -12,6 +12,8 @@ dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 cpp: /capture-vision/docs/server/programming/cplusplus/
 
+dotnet: /capture-vision/docs/server/programming/dotnet/
+
 js: /capture-vision/docs/web/programming/javascript/
 android: /capture-vision/docs/mobile/programming/android/
 oc: /capture-vision/docs/mobile/programming/ios/

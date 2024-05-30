@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -72,14 +71,4 @@ typedef enum ImageCaptureDistanceMode
    /** The image is taken by long shot camera. */
    ICDM_FAR
 } CaptureDistanceMode;
-```
->
-```csharp
-public enum EnumImageCaptureDistanceMode
-{
-    /**The image is taken by close-up shot camera.*/
-    ICDM_NEAR,
-    /**The image is taken by long shot camera.*/
-    ICDM_FAR
-}
 ```

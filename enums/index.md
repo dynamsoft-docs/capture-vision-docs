@@ -30,6 +30,7 @@ breadcrumbText: Enumerations index
 ## CaptureVisionRouter Enumerations
 
 - [CaptureState](capture-vision-router/capture-state.md)
+- [ImageSourceState](capture-vision-router/image-source-state.md)
 
 ## CodeParser Enumerations
 
@@ -45,7 +46,6 @@ breadcrumbText: Enumerations index
 - [GrayscaleTransformationMode](core/grayscale-transformation-mode.md)
 - [ImageCaptureDistanceMode](core/image-capture-distance-mode.md)
 - [ImagePixelFormat](core/image-pixel-format.md)
-- [ImageSourceState](core/image-source-state.md)
 - [ImageTagType](core/image-tag-type.md)
 - [IntermediateResultUnitType](core/intermediate-result-unit-type.md)
 - [PDFReadingMode](core/pdf-reading-mode.md)

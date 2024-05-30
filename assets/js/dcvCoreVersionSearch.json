@@ -1,6 +1,6 @@
 [
 	{
-        "version": "2.2.20",
+        "version": "2.2.30",
         "matchList": {
             "dcvRepoCore": [
                 {
@@ -20,7 +20,7 @@
                     "version": "2.2.20"
                 },{
                     "path": "/parameters/reference/document-normalizer-task-settings",
-                    "version": "2.2.20"
+                    "version": "2.2.10"
                 },{
                     "path": "/parameters/reference/global-parameter",
                     "version": "2.2.30"

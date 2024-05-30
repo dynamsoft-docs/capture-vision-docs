@@ -19,7 +19,6 @@ breadcrumbText: MappingStatus
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -85,16 +84,4 @@ typedef enum MappingStatus
    /** Failed to find a mapping for the field value. */
    MS_FAILED
 } MappingStatus;
-```
->
-```csharp
-public enum EnumMappingStatus
-{
-    /** The field has no mapping specified. */
-    MS_NONE,
-    /** Find a mapping for the field value. */
-    MS_SUCCEEDED,
-    /** Failed to find a mapping for the field value. */
-    MS_FAILED
-}
 ```

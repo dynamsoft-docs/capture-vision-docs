@@ -20,7 +20,6 @@ needAutoGenerateSidebar: true
     - [Cordova]({{ site.cordova }}?product=dbr&repoType=mobile&version=latest)
 - Server / Desktop
   - [C++]({{ site.cpp }})
-  - [.NET]({{ site.dotnet }})
 - [Architecture]({{site.architecture}})
   - [Input]({{site.architecture}}input.html)
   - [Image Processing]({{site.architecture}}image-processing/index.html)

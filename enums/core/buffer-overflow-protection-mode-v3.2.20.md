@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -71,14 +70,4 @@ typedef enum BufferOverflowProtectionMode
    /** New images are appended at the end, and oldest images are pushed out from the beginning if the buffer is full. */
    BOPM_UPDATE = 1
 } BufferOverflowProtectionMode;
-```
->
-```csharp
-public enum EnumBufferOverflowProtectionMode
-{
-    /** New images are blocked when the buffer is full. */
-    BOPM_BLOCK = 0x00,
-    /** New images are appended at the end, and the oldest images are pushed out from the beginning if the buffer is full. */
-    BOPM_UPDATE = 0x01,
-}
 ```

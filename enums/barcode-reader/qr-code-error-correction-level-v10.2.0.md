@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -91,18 +90,4 @@ typedef enum QRCodeErrorCorrectionLevel
    /**Error Correction Level Q (medium-high) */
    QRECL_ERROR_CORRECTION_Q
 }QRCodeErrorCorrectionLevel;
-```
->
-```csharp
-public enum EnumQRCodeErrorCorrectionLevel
-{
-    /**Error Correction Level H (high) */
-    QRECL_ERROR_CORRECTION_H,
-    /**Error Correction Level L (low) */
-    QRECL_ERROR_CORRECTION_L,
-    /**Error Correction Level M (medium-low) */
-    QRECL_ERROR_CORRECTION_M,
-    /**Error Correction Level Q (medium-high) */
-    QRECL_ERROR_CORRECTION_Q
-}
 ```
