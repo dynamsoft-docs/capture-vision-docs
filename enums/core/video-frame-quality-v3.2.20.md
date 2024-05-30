@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -79,16 +78,4 @@ typedef enum VideoFrameQuality {
    /**The frame quality is unknown.*/
    VFQ_UNKNOWN
 } VideoFrameQuality;
-```
->
-```csharp
-public enum EnumVideoFrameQuality
-{
-    /**The frame quality is measured to be high.*/
-    VFQ_HIGH,
-    /**The frame quality is measured to be low.*/
-    VFQ_LOW,
-    /**The frame quality is unknown.*/
-    VFQ_UNKNOWN
-}
 ```

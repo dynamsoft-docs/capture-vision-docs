@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -82,16 +81,4 @@ typedef enum ExtendedBarcodeResultType
    /**Specifies the partial text. This means part of the text result decoded from the barcode. */
    EBRT_PARTIAL_RESULT
 }ExtendedBarcodeResultType;
-```
->
-```csharp
-public enum EnumExtendedBarcodeResultType
-{
-    /**Specifies the standard text. This means the barcode value. */
-    EBRT_STANDARD_RESULT,
-    /**Specifies all the candidate text. This means all the standard text results decoded from the barcode. */
-    EBRT_CANDIDATE_RESULT,
-    /**Specifies the partial text. This means part of the text result decoded from the barcode. */
-    EBRT_PARTIAL_RESULT
-}
 ```

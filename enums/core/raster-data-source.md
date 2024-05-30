@@ -19,6 +19,7 @@ breadcrumbText: RasterDataSource
    >- Objective-C
    >- Swift
    >- C++
+   >- C#
    >
 >
 ```javascript
@@ -68,4 +69,12 @@ typedef enum RasterDataSource
    /**The raster data source type of the PDF file is "images".*/
    RDS_EXTRACTED_IMAGES
 } RasterDataSource;
+```
+>
+```csharp
+public enum EnumRasterDataSource
+{
+    RDS_RASTERIZED_PAGES,
+    RDS_EXTRACTED_IMAGES
+}
 ```

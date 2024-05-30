@@ -19,7 +19,6 @@ breadcrumbText: ValidationStatus
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -86,16 +85,4 @@ typedef enum ValidationStatus
    /** The validation for the field has been failed. */
    VS_FAILED
 } ValidationStatus;
-```
->
-```csharp
-public enum EnumValidationStatus
-{
-    /** The field has no validation specified. */
-    VS_NONE,
-    /** The validation for the field has been succeeded. */
-    VS_SUCCEEDED,
-    /** The validation for the field has been failed. */
-    VS_FAILED
-}
 ```

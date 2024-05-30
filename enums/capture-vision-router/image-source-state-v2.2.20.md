@@ -21,7 +21,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -73,14 +72,4 @@ typedef enum ImageSourceState
    /** Signifies that the source for the image source has been depleted. */
    ISS_EXHAUSTED
 } ImageSourceState;
-```
->
-```csharp
-public enum EnumImageSourceState
-{
-    /**The buffer of ImageSourceAdapter is temporarily empty.*/
-    ISS_BUFFER_EMPTY,
-    /**The source of ImageSourceAdapter is empty.*/
-    ISS_EXHAUSTED
-}
 ```

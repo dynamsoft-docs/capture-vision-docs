@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -70,14 +69,4 @@ typedef enum ImageTagType
    /**Indicates that the image is a frame extracted from a video stream.*/
    ITT_VIDEO_FRAME
 } ImageTagType;
-```
->
-```csharp
-public enum EnumImageTagType
-{
-    /**The image is a file image.*/
-    ITT_FILE_IMAGE,
-    /**The image is a video frame.*/
-    ITT_VIDEO_FRAME
-}
 ```

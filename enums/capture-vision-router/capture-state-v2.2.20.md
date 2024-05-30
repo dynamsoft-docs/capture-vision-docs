@@ -19,7 +19,6 @@ breadcrumbText: CaptureState
    >- Objective-C
    >- Swift
    >- C++
-   >- C#
    >
 >
 ```javascript
@@ -75,18 +74,4 @@ typedef enum CaptureState
    /**The data capturing is resumed.*/
    CS_RESUMED
 } CaptureState;
-```
->
-```csharp
-public enum EnumCaptureState
-{
-    /**The data capturing is started.*/
-    CS_STARTED,
-    /**The data capturing is stopped.*/
-    CS_STOPPED,
-    /**The data capturing is paused.*/
-    CS_PAUSED,
-    /**The data capturing is resumed.*/
-    CS_RESUMED
-}
 ```
