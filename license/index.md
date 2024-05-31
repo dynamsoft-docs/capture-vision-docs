@@ -8,7 +8,7 @@ description: License Activation Page
 
 # License Activation
 
-## Get a License Key
+## Get a License
 
 ### Trial License
 
@@ -18,11 +18,11 @@ To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Tr
 
 For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=dcvCoreDocs&product=dcv&package=core) to purchase a full license.
 
-## Activate the license
+## Activate the License
 
 The following code snippets demonstrate how to activate a license.
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C++
 >- Java-Android
