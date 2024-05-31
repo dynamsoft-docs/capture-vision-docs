@@ -12,7 +12,7 @@ permalink: /architecture/image-processing/index.html
 
 # Image-Processing Tasks
 
-There are multiple types of tasks when processing images in the Dynamsoft Capture Vision (DCV) architecture.
+In the Dynamsoft Capture Vision (DCV) architecture, various image processing tasks exist, each constituting a comprehensive algorithmic procedure designed to extract specific information or to produce an improved version of the original image.
 
 ## Task Types
 
@@ -29,7 +29,7 @@ The following are the image-processing tasks supported at present:
 
 ## Divide Tasks into Sections
 
-Each image-processing task can be further divided into three sections:
+Each image-processing task can be further divided into three sections, each of these sections constitutes a collection of relevant algorithmic proedures designed to produce the location results 
 
 | Task Type            | Sections                                                            |
 | :------------------- | :------------------------------------------------------------------ |
@@ -91,16 +91,16 @@ Each of the 7 sections mentioned in ["Divide Tasks into Sections"](#divide-tasks
 
 > Stages shared by "Barcode Localization", "Text-line Localization" and "Document Detection" are put together for the pseudo type "Shared Detection Section". Read more on [Shared Detection](shared-detection.md)
 
-| Section Type | Stages |
-| :----------- | :----- |
-| Region Pre-detection | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS |
+| Section Type             | Stages                                                                                                                                                                                                                                                                                                                                   |
+| :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Region Pre-detection     | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
 | Shared Detection Section | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
-| Barcode Localization | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES |
-| Text-line Localization | IRUT_LOCALIZED_TEXT_LINES |
-| Document Detection | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS |
-| Barcode Decoding | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES |
-| Text-line Recognition | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES |
-| Document Normalization | IRUT_NORMALIZED_IMAGES |
+| Barcode Localization     | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES                                                                                                                                                                                                                                          |
+| Text-line Localization   | IRUT_LOCALIZED_TEXT_LINES                                                                                                                                                                                                                                                                                                                |
+| Document Detection       | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS                                                                                                                                                                                                                  |
+| Barcode Decoding         | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES                                                                                                                   |
+| Text-line Recognition    | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
+| Document Normalization   | IRUT_NORMALIZED_IMAGES                                                                                                                                                                                                                                                                                                                   |
 
 ***Table 3: Sections and Stages***
 

@@ -52,3 +52,4 @@ needAutoGenerateSidebar: true
     - [Character Model]({{site.parameter}}file/auxiliary/character-model.html)
     - [Global Parameter]({{site.parameter}}file/auxiliary/global-parameter.html)
   - [Parameter Reference]({{site.parameter}}reference/index.html)
+  - [License Activation]({{site.license_activation}}index.html)
