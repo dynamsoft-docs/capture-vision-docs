@@ -9,6 +9,7 @@ architecture: /capture-vision/docs/core/architecture/
 parameter: /capture-vision/docs/core/parameters/
 enums: /capture-vision/docs/core/enums/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
+license_activation: /capture-vision/docs/core/license/
 
 cpp: /capture-vision/docs/server/programming/cplusplus/
 
