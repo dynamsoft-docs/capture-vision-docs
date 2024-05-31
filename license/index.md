@@ -8,13 +8,15 @@ description: License Activation Page
 
 # License Activation
 
-## Get a trial key
+## Get a License Key
 
-To test Dynamsoft SDKs, you can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/) link.
+### Trial License
 
-## Get a full license
+To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=dcvCoreDocs&product=dcv&package=core) link.
 
-- [Contact us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
+### Full License
+
+For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=dcvCoreDocs&product=dcv&package=core) to purchase a full license.
 
 ## Activate the license
 
@@ -27,12 +29,10 @@ The following code snippets demonstrate how to activate a license.
 >- Objective-C
 >- Swift
 >
->
-1. 
 ```js
 Dynamsoft.License.LicenseManager.initLicense("--Enter Your License Key Here--");
 ```
-2.
+>
 ```cpp
 int errorCode = 0;
 char szErrorMsg[256];
@@ -40,7 +40,7 @@ errorCode = CLicenseManager::InitLicense("--Enter Your License Key Here--", szEr
 if (errorCode != DM_OK)
    cout << szErrorMsg << endl;
 ```
-3. 
+> 
 ```java
 LicenseManager.initLicense("--Enter Your License Key Here--", MainActivity.this, new LicenseVerificationListener() {
    @Override
@@ -51,14 +51,14 @@ LicenseManager.initLicense("--Enter Your License Key Here--", MainActivity.this,
    }
 });
 ```
-4. 
+>
 ```objc
 [DynamsoftLicenseManager initLicense:@"--Enter Your License Key Here--" verificationDelegate: self];
 - (void)licenseVerificationCallback:(BOOL)isSuccess error:(NSError *)error{
    // Add your code to execute when license verification call back is handled.
 }
 ```
-5. 
+>
 ```swift
 DynamsoftLicenseManager.initLicense("--Enter Your License Key Here--", verificationDelegate: self)
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
