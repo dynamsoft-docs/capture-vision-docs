@@ -12,11 +12,11 @@ description: License Activation Page
 
 ### Trial License
 
-To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=dcvCoreDocs&product=dcv&package=core) link.
+To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=dcvCoreDocs&product=cvs&package=core) link.
 
 ### Full License
 
-For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=dcvCoreDocs&product=dcv&package=core) to purchase a full license.
+For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=dcvCoreDocs&product=cvs&package=core) to purchase a full license.
 
 ## Activate the License
 
