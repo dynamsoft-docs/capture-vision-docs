@@ -14,6 +14,14 @@ description: License Activation Page
 
 To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=dcvCoreDocs&product=cvs&package=core) link.
 
+> Note that the trial you get will support all the following products with the option "Capture Vision Suite":
+> 
+> 1. Dynamsoft Barcode Reader
+> 2. Dynamsoft Document Normalizer
+> 3. Dynamsoft Label Recognizer
+> 4. Dynamsoft Camera Enhancer
+> 5. Dynamsoft Code Parser
+
 ### Full License
 
 For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=dcvCoreDocs&product=cvs&package=core) to purchase a full license.
