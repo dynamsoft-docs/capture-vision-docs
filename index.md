@@ -14,6 +14,7 @@ needAutoGenerateSidebar: true
   - Mobile
     - [Android]({{ site.android }})
     - [iOS]({{ site.oc }})
+    - [MAUI]({{ site.maui }})
     - [React Native]({{ site.react_native }}?product=dbr&repoType=mobile&version=latest)
     - [Flutter]({{ site.flutter }}?product=dbr&repoType=mobile&version=latest)
     - [Xamarin.Forms]({{ site.xamarin }}?product=dbr&repoType=mobile&version=latest)

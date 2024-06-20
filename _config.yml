@@ -22,6 +22,7 @@ react_native: /capture-vision/docs/mobile/programming/react-native/
 flutter: /capture-vision/docs/mobile/programming/flutter/
 xamarin: /capture-vision/docs/mobile/programming/xamarin/
 cordova: /capture-vision/docs/mobile/programming/cordova/
+maui: /capture-vision/docs/mobile/programming/maui/
 
 assets: /capture-vision/docs/core/assets/
 edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
