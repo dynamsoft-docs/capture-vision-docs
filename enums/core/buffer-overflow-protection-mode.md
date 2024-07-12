@@ -27,7 +27,7 @@ codeAutoHeight: true
 enum EnumBufferOverflowProtectionMode {
    /** New images are blocked when the buffer is full.*/
    BOPM_Block = 0,
-   /** New images are appended at the end, and oldest images are pushed out frombeginning if the buffer is full.*/
+   /** New images are appended at the end, and oldest images are pushed out from the beginning if the buffer is full.*/
    BOPM_Update = 1
 }
 ```

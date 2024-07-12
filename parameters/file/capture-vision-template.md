@@ -113,28 +113,28 @@ The following json is a parameter template fragment that configures ROI dependen
 {
     "TargetROIDefOptions" : [
         {
-            "Name" : "roi_ddn", 
+            "Name" : "ddn_roi", 
             "TaskSettingNameArray": [ "ddn_task" ], 
             "Location" : null
         }, 
         {
-            "Name" : "roi_dlr", 
+            "Name" : "dlr_roi", 
             "TaskSettingNameArray": [ "dlr_task" ], 
             "Location": 
             {
                 "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["roi_ddn"], 
+                    "ReferenceTargetROIDefNameArray": ["ddn_roi"], 
                 },
                 "Offset": null
             }
         },
         {
-            "Name" : "roi_dbr1", 
+            "Name" : "dbr_roi1", 
             "TaskSettingNameArray": [ "dbr_task" ], 
             "Location": 
             {
                 "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["roi_dlr"], 
+                    "ReferenceTargetROIDefNameArray": ["dlr_roi"], 
                 },
                 "Offset":{
                     // offset downwards
@@ -142,12 +142,12 @@ The following json is a parameter template fragment that configures ROI dependen
             }
         },
         {
-            "Name" : "roi_dbr2", 
+            "Name" : "dbr_roi2", 
             "TaskSettingNameArray": [ "dbr_task" ], 
             "Location": 
             {
                 "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["roi_dlr"], 
+                    "ReferenceTargetROIDefNameArray": ["dlr_roi"], 
                 },
                 "Offset":{
                     // offset upwards

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: QuadrilateralDetectionModes - Dynamsoft Document Normalizer Parameters
-description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Normalizer.
+description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Normalizer v2.2.12.
 keywords: Quadrilateral detection
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -18,8 +18,7 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
 {
     "QuadrilateralDetectionModes": [
         {
-            "Mode": "QDM_GENERAL",
-            "MinDocumentAreaRatio" : 30
+            "Mode": "QDM_GENERAL"
         }
     ]
 }
@@ -55,23 +54,6 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
         <td><b>Default Value</b><br>["QDM_GENERAL"]
         </td>
     </tr>
-        <tr>
-        <td rowspan = "4" style="vertical-align:text-top">MinDocumentAreaRatio<br>(Optional)</td>
-        <td><b>Description</b><br>The minimum ratio between the target document area and the total image area. Only those exceeding this value will be outputted (measured in percentages).
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>Int</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Value Range</b><br>[0,100]</a>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>0, indicates the use of automatic exclusion logic to filter out small quads. When this value is changed to anything other than 0, the automatic filtering logic will be disabled.
-        </td>
-    </tr>
 </table>
 
 ### Default Setting
@@ -83,8 +65,7 @@ If the `QuadrilateralDetectionModes` is not configured in your template file, th
     "QuadrilateralDetectionModes" : 
     [
         {
-            "Mode" : "QDM_GENERAL",
-            "MinDocumentAreaRatio" : 0
+            "Mode" : "QDM_GENERAL"
         }
     ]
 }
