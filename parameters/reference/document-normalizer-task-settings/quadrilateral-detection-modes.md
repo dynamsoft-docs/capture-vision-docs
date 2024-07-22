@@ -19,7 +19,7 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
     "QuadrilateralDetectionModes": [
         {
             "Mode": "QDM_GENERAL",
-            "MinDocumentAreaRatio" : 30
+            "MinQuadrilateralAreaRatio" : 30
         }
     ]
 }
@@ -56,7 +56,7 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
         </td>
     </tr>
         <tr>
-        <td rowspan = "4" style="vertical-align:text-top">MinDocumentAreaRatio<br>(Optional)</td>
+        <td rowspan = "4" style="vertical-align:text-top">MinQuadrilateralAreaRatio<br>(Optional)</td>
         <td><b>Description</b><br>The minimum ratio between the target document area and the total image area. Only those exceeding this value will be outputted (measured in percentages).
         </td>
     </tr>
@@ -84,7 +84,7 @@ If the `QuadrilateralDetectionModes` is not configured in your template file, th
     [
         {
             "Mode" : "QDM_GENERAL",
-            "MinDocumentAreaRatio" : 0
+            "MinQuadrilateralAreaRatio" : 0
         }
     ]
 }
