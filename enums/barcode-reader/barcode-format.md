@@ -154,7 +154,7 @@ public @interface EnumBarcodeFormat {
    public static final long BF_UPC_E = 1L << 8;
    /**Industrial 25 barcode*/
    public static final long BF_INDUSTRIAL_25 = 1L << 9;
-   /**Code 39 Extened.*/
+   /**Code 39 Extended.*/
    public static final long BF_CODE_39_EXTENDED = 1L << 10;
    /**GS1 Databar - Omnidirectional.*/
    public static final long BF_GS1_DATABAR_OMNIDIRECTIONAL = 1L << 11;

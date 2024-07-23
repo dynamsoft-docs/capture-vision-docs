@@ -139,7 +139,7 @@ Next, we will focus on introducing some main objects and their relationships in 
 
 The diagram below illustrates the objects included in a complete parameter template, as well as the reference relationships between them.
 
-- A solid green line indicates a one-to-zero or one-to-one correspondence between the two objects.
+- A solid blue line indicates a one-to-zero or one-to-one correspondence between the two objects.
 - A solid black line indicates a one-to-zero or one-to-n correspondence between the two objects.
 - The dash line indicates that these objects may be associated with one-to-n `ImageParameter` objects, which may take effect at different stages of the algorithm.
 

@@ -80,8 +80,6 @@ enum EnumIntermediateResultUnitType {
     IRUT_RECOGNIZED_TEXT_LINES = 1 << 25,
     /** Successfully normalized images. */
     IRUT_NORMALIZED_IMAGES = 1 << 26,
-    /**Detected short lines.*/
-    IRUT_SHORT_LINES = 1 << 27,
     /** A mask to select all types of intermediate results. */
     IRUT_ALL = 0xFFFFFFF
 }
@@ -146,8 +144,6 @@ public @interface EnumIntermediateResultUnitType {
     long IRUT_RECOGNIZED_TEXT_LINES = 1L << 25;
     /** Successfully normalized images. */
     long IRUT_NORMALIZED_IMAGES = 1L << 26;
-    /** Detected short lines. */
-    long IRUT_SHORT_LINES = 1L << 27;
     /** A mask to select all types of intermediate results. */
     long IRUT_ALL = 0xFFFFFFFL;
 }
@@ -211,8 +207,6 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
     DSIntermediateResultUnitTypeRecognizedTextLines = 1 << 25,
     /** Successfully normalized images. */
     DSIntermediateResultUnitTypeNormalizedImages = 1 << 26,
-    /** Detected short lines. */
-    DSIntermediateResultUnitTypeShortLines = 1 << 27,
     /** A mask to select all types of intermediate results. */
     DSIntermediateResultUnitTypeAll = 0xFFFFFFF
 };
@@ -276,8 +270,6 @@ public enum IntermediateResultUnitType: Int {
     case recognizedTextLines = 1 << 25
     /** Successfully normalized images. */
     case normalizedImages = 1 << 26
-    /** Detected short lines. */
-    case shortLines = 1 << 27
     /** A mask to select all types of intermediate results. */
     case all = 0xFFFFFFF
 }
@@ -341,11 +333,7 @@ enum IntermediateResultUnitType : unsigned long long {
     IRUT_RECOGNIZED_TEXT_LINES = 1 << 25,
     /** Successfully normalized images. */
     IRUT_NORMALIZED_IMAGES = 1 << 26,
-    /** Detected short lines. */
-    IRUT_SHORT_LINES = 1 << 27,
-    /** Recognized raw text lines. */
-    IRUT_RAW_TEXT_LINES = 1 << 28,
     /** A mask to select all types of intermediate results. */
-    IRUT_ALL = 0xFFFFFFFFFFFFFFFF
+    IRUT_ALL = 0xFFFFFFF
 };
 ```

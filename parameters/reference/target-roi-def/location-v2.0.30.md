@@ -293,7 +293,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">MeasuredInPercentage<br></td>
+        <td rowspan = "4" style="vertical-align:text-top">MeasuredByPercentage<br></td>
         <td><b>Description</b><br>Set whether or not to use percentage to measure the points' coordinates.
         </td>
     </tr>

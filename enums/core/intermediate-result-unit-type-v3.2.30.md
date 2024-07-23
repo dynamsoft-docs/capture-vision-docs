@@ -343,9 +343,7 @@ enum IntermediateResultUnitType : unsigned long long {
     IRUT_NORMALIZED_IMAGES = 1 << 26,
     /** Detected short lines. */
     IRUT_SHORT_LINES = 1 << 27,
-    /** Recognized raw text lines. */
-    IRUT_RAW_TEXT_LINES = 1 << 28,
     /** A mask to select all types of intermediate results. */
-    IRUT_ALL = 0xFFFFFFFFFFFFFFFF
+    IRUT_ALL = 0xFFFFFFF
 };
 ```

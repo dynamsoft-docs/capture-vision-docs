@@ -23,6 +23,7 @@ A `DocumentNormalizerTaskSetting` object is defined as below:
 | Contrast | string | Optional | Sets the value for parameter [Contrast]({{site.dcv_parameters_reference}}document-normalizer-task-settings/contrast.html) |
 | CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.dcv_parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
 | DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.dcv_parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
+| ExpectedDocumentsCount | string | Optional | Sets the value for parameter [ExpectedDocumentsCount]({{site.dcv_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) |
 | LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.dcv_parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
 | MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcv_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
 | PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.dcv_parameters_reference}}document-normalizer-task-settings/page-size.html) |

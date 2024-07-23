@@ -161,7 +161,7 @@ The following parameter template snippet shows how to define ROI from the origin
                 "ReferenceObjectFilter": null,
                 "Offset":
                 {
-                    "MeasuredInPercentage": 1,
+                    "MeasuredByPercentage": 1,
                     "FirstPoint": [ 0, 0 ],
                     "SecondPoint": [ 100, 0 ],
                     "ThirdPoint": [ 100, 50 ],
@@ -212,7 +212,7 @@ The following example shows how to configure the `ReferenceObjectFilter` to use 
                 },
                 "Offset" :
                 {
-                    "MeasuredInPercentage" : 1,
+                    "MeasuredByPercentage" : 1,
                     "FirstPoint" : [ 20, 140 ],
                     "SecondPoint" : [ 60, 140 ],
                     "ThirdPoint" : [ 60, 170 ],
