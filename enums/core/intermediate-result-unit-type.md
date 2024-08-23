@@ -82,8 +82,10 @@ enum EnumIntermediateResultUnitType {
     IRUT_NORMALIZED_IMAGES = 1 << 26,
     /**Detected short lines.*/
     IRUT_SHORT_LINES = 1 << 27,
+    /**grouped lines of text.*/
+    IRUT_TEXT_LINE_GROUPS = 1 << 28,
     /** A mask to select all types of intermediate results. */
-    IRUT_ALL = 0xFFFFFFF
+    IRUT_ALL = 0xFFFFFFFFFFFFFFFF
 }
 ```
 >

@@ -47,7 +47,7 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br><a href = "#qdm_general">QDM_GENERAL</a>
+        <td><b>Candidate Mode List</b><br><a href = "#qdm_general">QDM_GENERAL</a><br><a href = "#qdm_skip">QDM_SKIP</a>
         </td>
     </tr>
     <tr>
@@ -76,3 +76,7 @@ If the `QuadrilateralDetectionModes` is not configured in your template file, th
 ### QDM_GENERAL
 
 Detects quadrilateral(s) using the general algorithm.
+
+### QDM_SKIP
+
+Skip quadrilateral(s) detection.

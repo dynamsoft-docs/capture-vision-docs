@@ -28,7 +28,7 @@ Parameter `Location` defines the location of the TargetROI with `reference objec
             {
                 "BarcodeFormatIds": ["BF_CODE39"], 
                 "BarcodeTextRegExPattern": ".*b.*b.*b.*", 
-                "RegionState": "default", 
+                "RegionState": "default"
             },
             "FrameFilteringCondition": 
             {
@@ -36,19 +36,19 @@ Parameter `Location` defines the location of the TargetROI with `reference objec
                 "AspectRatioRange": [1, 10000],
                 "WidthRange": [1, 0x7fffffff],
                 "HeightRange": [1, 0x7fffffff],
-                "RegionState": "default",
+                "RegionState": "default"
             },
             "TableCellFilteringCondition":
             {
                 "RowNumbers": "1,3,5", 
                 "ColNumbers": "1", 
-                "RegionState": "default", 
+                "RegionState": "default"
             },
             "TextLineFilteringCondition":
             {
                 "LineNumbers": "1,3-5",
                 "LineStringRegExPattern": "Sodium[(\w| )]*",
-                "RegionState": "default", 
+                "RegionState": "default"
             }
         },
         "Offset": {
@@ -58,7 +58,7 @@ Parameter `Location` defines the location of the TargetROI with `reference objec
             "FirstPoint" : [ 0, 0 ],
             "SecondPoint" : [ 100, 0 ],
             "ThirdPoint" : [ 100, 100 ],
-            "FourthPoint" : [ 0, 100 ],
+            "FourthPoint" : [ 0, 100 ]
         }
     }
 }
