@@ -291,7 +291,7 @@ If the `BinarizationModes` is not configured in your template file, the followin
         {
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
-            "EnableFillBinaryVacancy" : 0,
+            "EnableFillBinaryVacancy" : 1,
             "GrayscaleEnhancementModesIndex" : -1,
             "Mode" : "BM_LOCAL_BLOCK",
             "MorphOperation" : "Close",

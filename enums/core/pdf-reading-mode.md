@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -111,4 +112,11 @@ public enum EnumPDFReadingMode
     PDFRM_RASTER = 0x02,
     PDFRM_REV = -2147483648,
 }
+```
+>
+```python
+class EnumPDFReadingMode(IntEnum):
+    PDFRM_VECTOR = 0x01
+    PDFRM_RASTER = 0x02
+    PDFRM_REV = -2147483648
 ```

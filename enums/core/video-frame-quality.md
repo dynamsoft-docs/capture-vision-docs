@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -91,4 +92,14 @@ public enum EnumVideoFrameQuality
     /**The frame quality is unknown.*/
     VFQ_UNKNOWN
 }
+```
+>
+```python
+class EnumVideoFrameQuality(IntEnum):
+    #The frame quality is measured to be high.
+    VFQ_HIGH
+    #The frame quality is measured to be low.
+    VFQ_LOW
+    #The frame quality is unknown.
+    VFQ_UNKNOWN
 ```

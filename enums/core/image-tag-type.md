@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -80,4 +81,12 @@ public enum EnumImageTagType
     /**The image is a video frame.*/
     ITT_VIDEO_FRAME
 }
+```
+>
+```python
+class EnumImageTagType(IntEnum):
+    #The image is a file image.
+    ITT_FILE_IMAGE
+    #The image is a video frame.
+    ITT_VIDEO_FRAME
 ```

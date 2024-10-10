@@ -36,16 +36,7 @@ typedef NS_ENUM(NSInteger, DSCameraPosition)
    /** The back-facing camera. */
    DSCameraPositionBack = 0,
    /** The front-facing camera. */
-   DSCameraPositionBack = 1,
-   /**
-    * The back-facing ultra-wide-angle camera. It is an ultra-wide-angle camera for macro-distance capturing.
-    */
-   DSCameraPositionBackUltraWide,
-   /**
-    * A back-facing virtual camera. It is a vitural camera that can switch between the wide-angle camera and the ultra-wide-angle camera automatically.
-    * Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max.
-    */
-   DSCameraPositionBackDualWideAuto
+   DSCameraPositionBack = 1
 };
 ```
 >
@@ -55,14 +46,5 @@ public enum CameraPosition : Int{
    back = 0
    /** The front-facing camera. */
    front = 1
-   /**
-    * The back-facing ultra-wide-angle camera. It is an ultra-wide-angle camera for macro-distance capturing.
-    */
-   backUltraWide
-   /**
-    * A back-facing virtual camera. It is a vitural camera that can switch between the wide-angle camera and the ultra-wide-angle camera automatically.
-    * Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max.
-    */
-   backDualWideAuto
 }
 ```

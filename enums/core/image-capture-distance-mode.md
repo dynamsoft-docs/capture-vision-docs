@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -82,4 +83,12 @@ public enum EnumImageCaptureDistanceMode
     /**The image is taken by long shot camera.*/
     ICDM_FAR
 }
+```
+>
+```python
+class EnumImageCaptureDistanceMode(IntEnum):
+    #The image is taken by close-up shot camera.
+    ICDM_NEAR
+    #The image is taken by long shot camera.
+    ICDM_FAR
 ```

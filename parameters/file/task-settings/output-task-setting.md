@@ -43,7 +43,7 @@ The `OutputTaskSetting` object is used to configure how to output the expected r
 | Parameter Name | Value Type | Required or Optional | Description |
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `OutputTaskSetting` object. The value must be unique between all `task-setting` objects. |
-| OutputCondition | {{site.dcv_parameters_reference}}output-task-setting/output-condition.html | Optional | Sets how the current `OutputTaskSetting` object outputs results that meet multiple filter conditions across products.|
+| OutputCondition | {{site.dcvb_parameters_reference}}output-task-setting/output-condition.html | Optional | Sets how the current `OutputTaskSetting` object outputs results that meet multiple filter conditions across products.|
 
 ## Design of the OutputCondition object
 

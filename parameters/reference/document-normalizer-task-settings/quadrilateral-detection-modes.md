@@ -65,7 +65,7 @@ Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection pro
         </td>
     </tr>
     <tr>
-        <td><b>Value Range</b><br>[0,100]</a>
+        <td><b>Value Range</b><br>[0,100]
         </td>
     </tr>
     <tr>

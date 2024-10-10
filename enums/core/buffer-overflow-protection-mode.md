@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -81,4 +82,12 @@ public enum EnumBufferOverflowProtectionMode
     /** New images are appended at the end, and the oldest images are pushed out from the beginning if the buffer is full. */
     BOPM_UPDATE = 0x01,
 }
+```
+>
+```python
+class EnumBufferOverflowProtectionMode(IntEnum):
+    # New images are blocked when the buffer is full. 
+    BOPM_BLOCK = 0x00
+    # New images are appended at the end, and the oldest images are pushed out from the beginning if the buffer is full. 
+    BOPM_UPDATE = 0x01
 ```

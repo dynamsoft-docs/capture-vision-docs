@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -105,4 +106,16 @@ public enum EnumQRCodeErrorCorrectionLevel
     /**Error Correction Level Q (medium-high) */
     QRECL_ERROR_CORRECTION_Q
 }
+```
+>
+```python
+class EnumQRCodeErrorCorrectionLevel(IntEnum):
+    #Error Correction Level H (high) 
+    QRECL_ERROR_CORRECTION_H
+    #Error Correction Level L (low) 
+    QRECL_ERROR_CORRECTION_L
+    #Error Correction Level M (medium-low) 
+    QRECL_ERROR_CORRECTION_M
+    #Error Correction Level Q (medium-high) 
+    QRECL_ERROR_CORRECTION_Q
 ```

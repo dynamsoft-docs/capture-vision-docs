@@ -19,6 +19,7 @@ breadcrumbText: ImageColourMode
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -77,4 +78,11 @@ public enum EnumImageColourMode
     ICM_GRAYSCALE = 1,
     ICM_BINARY = 2
 }
+```
+>
+```python
+class EnumImageColourMode(IntEnum):
+    ICM_COLOUR = 0
+    ICM_GRAYSCALE = 1
+    ICM_BINARY = 2
 ```

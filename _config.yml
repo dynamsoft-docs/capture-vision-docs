@@ -4,25 +4,29 @@ docFullPath: https://www.dynamsoft.com/capture-vision/docs/core/
 firstLevelUrl: /capture-vision/docs/core/
 docHomePage: /capture-vision/docs/core/introduction/
 
-introduction: /capture-vision/docs/core/introduction/
-architecture: /capture-vision/docs/core/architecture/
-parameter: /capture-vision/docs/core/parameters/
-enums: /capture-vision/docs/core/enums/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
-license_activation: /capture-vision/docs/core/license/
+dcvb_introduction: /capture-vision/docs/core/introduction/
+dcvb_architecture: /capture-vision/docs/core/architecture/
+dcvb_parameters: /capture-vision/docs/core/parameters/
+dcvb_enums: /capture-vision/docs/core/enums/
+dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
-cpp: /capture-vision/docs/server/programming/cplusplus/
+dcvb_js: /capture-vision/docs/web/programming/javascript/
+dcvb_cpp: /capture-vision/docs/server/programming/cplusplus/
+dcvb_dotnet: /capture-vision/docs/server/programming/dotnet/
+dcvb_python: /capture-vision/docs/server/programming/python/
+dcvb_android: /capture-vision/docs/mobile/programming/android/
+dcvb_ios: /capture-vision/docs/mobile/programming/ios/
+dcvb_maui: /capture-vision/docs/mobile/programming/maui/
+dcvb_react_native: /capture-vision/docs/mobile/programming/react-native/
+dcvb_cordova: /capture-vision/docs/mobile/programming/cordova/
+dcvb_flutter: /capture-vision/docs/mobile/programming/flutter/
+dcvb_xamarin: /capture-vision/docs/mobile/programming/xamarin/
 
-dotnet: /capture-vision/docs/server/programming/dotnet/
+dlr_archived_introduction: /label-recognition/docs-archive/core/introduction/
+ddn_archived_introduction: /document-normalizer/docs-archive/core/introduction/
+dcp_archived_introduction: /code-parser/docs-archive/core/introduction/
+dce_archived_introduction: /camera-enhancer/docs/core/introduction/
 
-js: /capture-vision/docs/web/programming/javascript/
-android: /capture-vision/docs/mobile/programming/android/
-oc: /capture-vision/docs/mobile/programming/ios/
-react_native: /capture-vision/docs/mobile/programming/react-native/
-flutter: /capture-vision/docs/mobile/programming/flutter/
-xamarin: /capture-vision/docs/mobile/programming/xamarin/
-cordova: /capture-vision/docs/mobile/programming/cordova/
-maui: /capture-vision/docs/mobile/programming/maui/
 
 assets: /capture-vision/docs/core/assets/
 edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
@@ -32,7 +36,8 @@ dbr_icon: /capture-vision/docs/core/assets/img-icon/icon-dbr.svg
 dwt_icon: /capture-vision/docs/core/assets/img-icon/icon-dwt.svg
 dnt_icon: /capture-vision/docs/core/assets/img-icon/icon-dnt.svg
 
-useVersionTree: true
+useVersionTree: false
+isDCV: true
 
 baseurl: "/capture-vision/docs/core"
 plugins:

@@ -20,6 +20,7 @@ breadcrumbText: ValidationStatus
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -98,4 +99,14 @@ public enum EnumValidationStatus
     /** The validation for the field has been failed. */
     VS_FAILED
 }
+```
+>
+```python
+class EnumValidationStatus(IntEnum):
+    # The field has no validation specified. 
+    VS_NONE
+    # The validation for the field has been succeeded. 
+    VS_SUCCEEDED
+    # The validation for the field has been failed. 
+    VS_FAILED
 ```

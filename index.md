@@ -1,56 +1,31 @@
 ---
 layout: home-page
-title: Dynamsoft Capture Vision Documentation
-keywords: Dynamsoft Capture Vision, dlr, documentation
-description: Dynamsoft Capture Vision Documentation Homepage
-needAutoGenerateSidebar: true
+title: Dynamsoft Capture Vision SDK Documentation
+keywords: dynamsoft capture vision, documentation
+breadcrumbText: HomePage
+description: Dynamsoft Capture Vision SDK Documentation Homepage
 ---
 
 # Dynamsoft Capture Vision Documentation
 
-- [Introduction]({{site.introduction}})
-- Development
-  - [Web (Client Side)]({{ site.js }})
-  - Mobile
-    - [Android]({{ site.android }})
-    - [iOS]({{ site.oc }})
-    - [MAUI]({{ site.maui }})
-    - [React Native]({{ site.react_native }}?product=dbr&repoType=mobile&version=latest)
-    - [Flutter]({{ site.flutter }}?product=dbr&repoType=mobile&version=latest)
-    - [Xamarin.Forms]({{ site.xamarin }}?product=dbr&repoType=mobile&version=latest)
-    - [Cordova]({{ site.cordova }}?product=dbr&repoType=mobile&version=latest)
-- Server / Desktop
-  - [C++]({{ site.cpp }})
-  - [.NET]({{ site.dotnet }})
-- [Architecture]({{site.architecture}})
-  - [Input]({{site.architecture}}input.html)
-  - [Image Processing]({{site.architecture}}image-processing/index.html)
-    - [Region Pre-detection]({{site.architecture}}image-processing/region-predetection.html)
-    - [Shared Detection]({{site.architecture}}image-processing/shared-detection.html)
-    - [Barcode Localization]({{site.architecture}}image-processing/barcode-localization.html)
-    - [Barcode Decoding]({{site.architecture}}image-processing/barcode-decoding.html)
-    - [TextLine Localization]({{site.architecture}}image-processing/textline-localization.html)
-    - [TextLine Recognition]({{site.architecture}}image-processing/textline-recognition.html)
-    - [Document Detection]({{site.architecture}}image-processing/document-detection.html)
-    - [Document Normalization]({{site.architecture}}image-processing/document-normalization.html)
-  - [Semantic Processing]({{site.architecture}}semantic-processing.html)
-  - [Output]({{site.architecture}}output.html)
-- [Parameters]({{site.parameter}})
-  - [Parameter Organization]({{site.parameter}}file/index.html)
-    - [CaptureVisionTemplate Object]({{site.parameter}}file/capture-vision-template.html)
-    - [ImageSource Object]({{site.parameter}}file/image-source.html)
-    - [TargetROIDef Object]({{site.parameter}}file/target-roi-definition/index.html)
-    - [Semantic Processing]({{site.parameter}}file/semantic-processing/index.html)
-    - [Task Settings]({{site.parameter}}file/task-settings/index.html)
-      - [BarcodeReader Task Settings]({{site.parameter}}file/task-settings/barcode-reader-task-settings.html)
-      - [LabelRecognizer Task Settings]({{site.parameter}}file/task-settings/label-recognizer-task-settings.html)
-      - [DocumentNormalizer Task Settings]({{site.parameter}}file/task-settings/document-normalizer-task-settings.html)
-      - [CodeParser Task Settings]({{site.parameter}}file/task-settings/code-parser-task-settings.html)
-    - [Image Parameter Object]({{site.parameter}}file/image-parameter.html)
-    - [Auxiliary Settings]({{site.parameter}}file/auxiliary/index.html)
-    - [Barcode Format Spec]({{site.parameter}}file/auxiliary/barcode-format-specification.html)
-    - [Text Line Spec]({{site.parameter}}file/auxiliary/textline-specification.html)
-    - [Character Model]({{site.parameter}}file/auxiliary/character-model.html)
-    - [Global Parameter]({{site.parameter}}file/auxiliary/global-parameter.html)
-  - [Parameter Reference]({{site.parameter}}reference/index.html)
-  - [License Activation]({{site.license_activation}}index.html)
+`Dynamsoft Capture Vision (DCV)` architecture is newly established to aggregate the features of functional products `Dynamsoft Barcode Reader`, `Dynamsoft Label Recognizer`, `Dynamsoft Document Normalizer`, `Dynamsoft Code Parser` and `Dynamsoft Camera Enhancer`. The features are designed to be pluggable, customizable and interactable. In addition, the functional products share the computation so that their processing speed is much higher than working individually. As we continue to improve, we have consolidated all documentations of these products into a single, unified platform.
+
+To explore the latest features and updates of `Dynamsoft Capture Vision`, please refer to the documentation sections below.
+
+* [Web (Client Side)]({{ site.dcvb_js }}){:target="_blank"}
+* Mobile
+  * [Android]({{ site.dcvb_android }}){:target="_blank"}
+  * [iOS]({{ site.dcvb_ios }}){:target="_blank"}
+  * [MAUI]({{ site.dcvb_maui }}){:target="_blank"}
+* Server / Desktop
+  * [Python]({{ site.dcvb_python }}){:target="_blank"}
+  * [.NET]({{ site.dcvb_dotnet }}){:target="_blank"}
+  * [C++]({{ site.dcvb_cpp }}){:target="_blank"}
+
+
+The documentation for products `Dynamsoft Label Recognizer`, `Dynamsoft Document Normalizer`, `Dynamsoft Code Parser` and `Dynamsoft Camera Enhancer` has been archived, but remains accessible through the following links:
+
+* [Archived Dynamsoft Label Recognizer Documentation]({{ site.dlr_archived_introduction }}){:target="_blank"}
+* [Archived Dynamsoft Document Normalizer Documentation]({{ site.ddn_archived_introduction }}){:target="_blank"}
+* [Archived Dynamsoft Code Parser Documentation]({{ site.dcp_archived_introduction }}){:target="_blank"}
+* [Archived Dynamsoft Camera Enhancer Documentation]({{ site.dce_archived_introduction }}){:target="_blank"}

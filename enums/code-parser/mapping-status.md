@@ -20,6 +20,7 @@ breadcrumbText: MappingStatus
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -97,4 +98,14 @@ public enum EnumMappingStatus
     /** Failed to find a mapping for the field value. */
     MS_FAILED
 }
+```
+>
+```python
+class EnumMappingStatus(IntEnum):
+    # The field has no mapping specified. 
+    MS_NONE
+    # Find a mapping for the field value. 
+    MS_SUCCEEDED
+    # Failed to find a mapping for the field value. 
+    MS_FAILED
 ```

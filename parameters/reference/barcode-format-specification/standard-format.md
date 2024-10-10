@@ -28,5 +28,5 @@ The structure of the`StandardFormat` is shown as follow:
 | StandardFormat  Parameter Summary |
 | :--------------------------------- |
 | **Type**<br>*string* |
-| **Range**<br>[BarcodeFormat]({{ site.enums }}barcode-reader/barcode-format.html#barcodeformat) |
+| **Range**<br>[BarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html#barcodeformat) |
 | **Default Value**<br> ""|
