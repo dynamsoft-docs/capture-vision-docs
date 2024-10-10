@@ -16,9 +16,9 @@ A `SemanticProcessing` object is defined as below:
 
 | Key Name | Value Type | Required or Optional | Description |
 |---|---|---|---|
-| [Name]({{site.dcv_parameters_reference}}semantic-processing/name.html) | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
-| [ReferenceObjectFilter]({{site.dcv_parameters_reference}}semantic-processing/reference-object-filter.html) | JSON object | Optional | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions. |
-| [TaskSettingNameArray]({{site.dcv_parameters_reference}}semantic-processing/task-setting-name-array.html) | string array | Optional | Represents the collection of task setting object names, used to refer to the `CodeParserTaskSetting` objects. |
+| [Name]({{site.dcvb_parameters_reference}}semantic-processing/name.html) | string | Mandatory | Sets the name of current `SemanticProcessing` object. The value must be unique between all `SemanticProcessing` objects. |
+| [ReferenceObjectFilter]({{site.dcvb_parameters_reference}}semantic-processing/reference-object-filter.html) | JSON object | Optional | Sets a [ReferenceObjectFilter](#referenceobjectfilter) object to define the filter conditions. |
+| [TaskSettingNameArray]({{site.dcvb_parameters_reference}}semantic-processing/task-setting-name-array.html) | string array | Optional | Represents the collection of task setting object names, used to refer to the `CodeParserTaskSetting` objects. |
 
 Here is a sample:
 
@@ -85,7 +85,7 @@ In many cases, the process may involve filtering data to select only the relevan
 
 ## Task Execution
 
-This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameter}}file/task-settings/code-parser-task-settings.html) object.
+This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object.
 
 ## Results Reporting
 

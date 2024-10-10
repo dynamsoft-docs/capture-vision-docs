@@ -38,7 +38,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 | [`SemanticProcessingNameArray`](../reference/capture-vision-template/semantic-processing-name-array.md)| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
 | [`OutputOriginalImage`](../reference/capture-vision-template/output-original-Image.md) | Indicates whether DCV finally outputs the original input image. |
 | [`MaxParallelTasks`](../reference/capture-vision-template/max-parallel-tasks.md) | Indicates the maximum number of parallel tasks for the DCV runtime. |
-| [`MinImageCaptureInterval`]({{ site.dcv_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
+| [`MinImageCaptureInterval`]({{ site.dcvb_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
 | [`Timeout`](../reference/capture-vision-template/timeout.md) | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|
 
 <div align="center">
@@ -226,7 +226,7 @@ Based on `Example 2`, regular expression filtering conditions are added to `dbr_
 
 At runtime, reference regions that do not meet the filtering conditions will be discarded and will not be passed as inputs to subsequent `TargetROIDef` for further processing.
 
-For more details about filtering reference objects, please refer to [`ReferenceObjectFilter`]({{site.parameter}}reference/target-roi-def/location.html#referenceobjectfilter)
+For more details about filtering reference objects, please refer to [`ReferenceObjectFilter`]({{site.dcvb_parameters}}reference/target-roi-def/location.html#referenceobjectfilter)
 
 ## Core Design of SemanticProcessing Object
 
@@ -246,7 +246,7 @@ In many cases, the process may involve filtering data to select only the relevan
 
 ### Task Execution
 
-This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.parameter}}file/task-settings/code-parser-task-settings.html) object.
+This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object.
 
 ### Results Reporting
 

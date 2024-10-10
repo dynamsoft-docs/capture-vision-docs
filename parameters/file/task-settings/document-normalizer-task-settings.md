@@ -17,21 +17,21 @@ A `DocumentNormalizerTaskSetting` object is defined as below:
 | Key Name | Value Type | Required or Optional | Description |
 |---|---|---|---|
 | Name | string | Mandatory | Sets the name of current `DocumentNormalizerTaskSetting` object. The value must be unique between all `task-setting` objects. |
-| Brightness | string | Optional | Sets the value for parameter [Brightness]({{site.dcv_parameters_reference}}document-normalizer-task-settings/brightness.html) |
-| ColourMode | string | Optional | Sets the value for parameter [ColourMode]({{site.dcv_parameters_reference}}document-normalizer-task-settings/colour-mode.html) |
-| ContentType | string | Optional | Sets the value for parameter [ContentType]({{site.dcv_parameters_reference}}document-normalizer-task-settings/content-type.html) |
-| Contrast | string | Optional | Sets the value for parameter [Contrast]({{site.dcv_parameters_reference}}document-normalizer-task-settings/contrast.html) |
-| CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.dcv_parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
-| DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.dcv_parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
-| ExpectedDocumentsCount | string | Optional | Sets the value for parameter [ExpectedDocumentsCount]({{site.dcv_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) |
-| LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.dcv_parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
-| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcv_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
-| PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.dcv_parameters_reference}}document-normalizer-task-settings/page-size.html) |
-| QuadrilateralDetectionModes | string | Optional | Sets the value for parameter [QuadrilateralDetectionModes]({{site.dcv_parameters_reference}}document-normalizer-task-settings/quadrilateral-detection-modes.html) |
-| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.dcv_parameters_reference}}document-normalizer-task-settings/section-image-parameter-array.html) |
-| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.dcv_parameters_reference}}document-normalizer-task-settings/start-section.html) |
-| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.dcv_parameters_reference}}document-normalizer-task-settings/terminate-setting.html) |
-| BaseDocumentNormalizerTaskSettingName | string | Optional | Sets the value for parameter [BaseDocumentNormalizerTaskSettingName]({{site.dcv_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) |
+| Brightness | string | Optional | Sets the value for parameter [Brightness]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/brightness.html) |
+| ColourMode | string | Optional | Sets the value for parameter [ColourMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/colour-mode.html) |
+| ContentType | string | Optional | Sets the value for parameter [ContentType]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/content-type.html) |
+| Contrast | string | Optional | Sets the value for parameter [Contrast]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/contrast.html) |
+| CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
+| DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
+| ExpectedDocumentsCount | string | Optional | Sets the value for parameter [ExpectedDocumentsCount]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) |
+| LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
+| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
+| PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/page-size.html) |
+| QuadrilateralDetectionModes | string | Optional | Sets the value for parameter [QuadrilateralDetectionModes]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/quadrilateral-detection-modes.html) |
+| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/section-image-parameter-array.html) |
+| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/start-section.html) |
+| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/terminate-setting.html) |
+| BaseDocumentNormalizerTaskSettingName | string | Optional | Sets the value for parameter [BaseDocumentNormalizerTaskSettingName]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) |
 
 Here is a sample:
 

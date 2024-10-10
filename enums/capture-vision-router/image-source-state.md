@@ -22,6 +22,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -83,4 +84,12 @@ public enum EnumImageSourceState
     /**The source of ImageSourceAdapter is empty.*/
     ISS_EXHAUSTED
 }
+```
+>
+```python
+class EnumImageSourceState(IntEnum):
+    #The buffer of ImageSourceAdapter is temporarily empty.
+    ISS_BUFFER_EMPTY
+    #The source of ImageSourceAdapter is empty.
+    ISS_EXHAUSTED
 ```

@@ -21,6 +21,7 @@ codeAutoHeight: true
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -147,4 +148,20 @@ public enum EnumColourChannelUsageType
     /**Use only the blue channel for processing in RGB images.*/
     CCUT_RGB_B_CHANNEL_ONLY
 }
+```
+>
+```python
+class EnumColourChannelUsageType(IntEnum):
+    #Automatic color channel usage determination based on image pixel format and scene.
+    CCUT_AUTO
+    #Use all available color channels for processing.
+    CCUT_FULL_CHANNEL
+    #Use only the Y(luminance) channel for processing in images represented in the NV21 format.
+    CCUT_Y_CHANNEL_ONLY
+    #Use only the red channel for processing in RGB images.
+    CCUT_RGB_R_CHANNEL_ONLY
+    #Use only the green channel for processing in RGB images.
+    CCUT_RGB_G_CHANNEL_ONLY
+    #Use only the blue channel for processing in RGB images.
+    CCUT_RGB_B_CHANNEL_ONLY
 ```

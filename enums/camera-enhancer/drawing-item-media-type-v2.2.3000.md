@@ -52,8 +52,6 @@ public @interface EnumDrawingItemMediaType {
    public static final int DIMT_TEXT = 4;
    // The mediate type of the DrawingItem is line.
    public static final int DIMT_LINE = 8;
-   // The mediate type of the DrawingItem is Arc.
-   public static final int DIMT_ARC = 16;
 }
 ```
 >
@@ -74,11 +72,7 @@ typedef NS_ENUM(NSInteger, DSDrawingItemMediaType) {
    /**
     * The mediate type of the DrawingItem is line.
     */
-   DSDrawingItemMediaTypeLine = 8,
-   /**
-    * The mediate type of the DrawingItem is arc.
-    */
-   DSDrawingItemMediaTypeArc = 16
+   DSDrawingItemMediaTypeLine = 8
 };
 ```
 >
@@ -100,9 +94,5 @@ public enum DrawingItemMediaType : Int{
     * The mediate type of the DrawingItem is line.
     */
    line = 8
-   /**
-    * The mediate type of the DrawingItem is arc.
-    */
-   arc = 16
 }
 ```

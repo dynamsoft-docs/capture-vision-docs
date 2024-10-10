@@ -20,6 +20,7 @@ breadcrumbText: CaptureState
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -89,4 +90,16 @@ public enum EnumCaptureState
     /**The data capturing is resumed.*/
     CS_RESUMED
 }
+```
+>
+```python
+class EnumCaptureState(IntEnum):
+    #The data capturing is started.
+    CS_STARTED
+    #The data capturing is stopped.
+    CS_STOPPED
+    #The data capturing is paused.
+    CS_PAUSED
+    #The data capturing is resumed.
+    CS_RESUMED
 ```

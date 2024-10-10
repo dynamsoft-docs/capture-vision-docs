@@ -20,6 +20,7 @@ breadcrumbText: RasterDataSource
    >- Swift
    >- C++
    >- C#
+   >- Python
    >
 >
 ```javascript
@@ -77,4 +78,10 @@ public enum EnumRasterDataSource
     RDS_RASTERIZED_PAGES,
     RDS_EXTRACTED_IMAGES
 }
+```
+>
+```python
+class EnumRasterDataSource(IntEnum):
+    RDS_RASTERIZED_PAGES
+    RDS_EXTRACTED_IMAGES
 ```
