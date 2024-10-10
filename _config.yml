@@ -1,40 +1,40 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/main
 repository: dynamsoft-docs/capture-vision-docs
-docFullPath: https://www.dynamsoft.com/capture-vision/docs/core/
-firstLevelUrl: /capture-vision/docs/core/
-docHomePage: /capture-vision/docs/core/introduction/
+docFullPath: https://www.dynamsoft.com/capture-vision/docs-archive/core/
+firstLevelUrl: /capture-vision/docs-archive/core/
+docHomePage: /capture-vision/docs-archive/core/introduction/
 
-introduction: /capture-vision/docs/core/introduction/
-architecture: /capture-vision/docs/core/architecture/
-parameter: /capture-vision/docs/core/parameters/
-enums: /capture-vision/docs/core/enums/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
-license_activation: /capture-vision/docs/core/license/
+introduction: /capture-vision/docs-archive/core/introduction/
+architecture: /capture-vision/docs-archive/core/architecture/
+parameter: /capture-vision/docs-archive/core/parameters/
+enums: /capture-vision/docs-archive/core/enums/
+dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
+license_activation: /capture-vision/docs-archive/core/license/
 
-cpp: /capture-vision/docs/server/programming/cplusplus/
+cpp: /capture-vision/docs-archive/server/programming/cplusplus/
 
-dotnet: /capture-vision/docs/server/programming/dotnet/
+dotnet: /capture-vision/docs-archive/server/programming/dotnet/
 
-js: /capture-vision/docs/web/programming/javascript/
-android: /capture-vision/docs/mobile/programming/android/
-oc: /capture-vision/docs/mobile/programming/ios/
-react_native: /capture-vision/docs/mobile/programming/react-native/
-flutter: /capture-vision/docs/mobile/programming/flutter/
-xamarin: /capture-vision/docs/mobile/programming/xamarin/
-cordova: /capture-vision/docs/mobile/programming/cordova/
-maui: /capture-vision/docs/mobile/programming/maui/
+js: /capture-vision/docs-archive/web/programming/javascript/
+android: /capture-vision/docs-archive/mobile/programming/android/
+oc: /capture-vision/docs-archive/mobile/programming/ios/
+react_native: /capture-vision/docs-archive/mobile/programming/react-native/
+flutter: /capture-vision/docs-archive/mobile/programming/flutter/
+xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
+cordova: /capture-vision/docs-archive/mobile/programming/cordova/
+maui: /capture-vision/docs-archive/mobile/programming/maui/
 
-assets: /capture-vision/docs/core/assets/
-edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
-smile_icon: /capture-vision/docs/core/assets/img-icon/icon-smile.png
-sad_icon: /capture-vision/docs/core/assets/img-icon/icon-sad.png
-dbr_icon: /capture-vision/docs/core/assets/img-icon/icon-dbr.svg
-dwt_icon: /capture-vision/docs/core/assets/img-icon/icon-dwt.svg
-dnt_icon: /capture-vision/docs/core/assets/img-icon/icon-dnt.svg
+assets: /capture-vision/docs-archive/core/assets/
+edit_icon: /capture-vision/docs-archive/core/assets/img-icon/edit-icon.png
+smile_icon: /capture-vision/docs-archive/core/assets/img-icon/icon-smile.png
+sad_icon: /capture-vision/docs-archive/core/assets/img-icon/icon-sad.png
+dbr_icon: /capture-vision/docs-archive/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /capture-vision/docs-archive/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /capture-vision/docs-archive/core/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
 
-baseurl: "/capture-vision/docs/core"
+baseurl: "/capture-vision/docs-archive/core"
 plugins:
   - jemoji
   - jekyll-webp
