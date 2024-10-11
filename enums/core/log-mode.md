@@ -10,7 +10,7 @@ breadcrumbText: LogMode
 codeAutoHeight: true
 ---
 
-# LogMode
+# Enumeration LogMode
 
 `LogMode` describes the logging modes.
 
