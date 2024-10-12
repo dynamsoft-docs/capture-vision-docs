@@ -1,20 +1,19 @@
 ---
 layout: default-layout
-title: License Activation - Dynamsoft SDKs
+title: License Initialization - Dynamsoft SDKs
 keywords: license
-breadcrumbText: License Activation
-description: License Activation Page
+description: License Initialization Page
 ---
 
-# License Activation
+# License Initialization
 
 ## Get a License
 
 ### Trial License
 
-To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=dcvCoreDocs&product=cvs&package=core) link.
+To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=docs&product=dcv) link.
 
-> Note that the trial you get will support all the following products with the option "Capture Vision Suite":
+> Note that the trial you get will support all the following products:
 > 
 > 1. Dynamsoft Barcode Reader
 > 2. Dynamsoft Document Normalizer
@@ -24,7 +23,7 @@ To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Tr
 
 ### Full License
 
-For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=dcvCoreDocs&product=cvs&package=core) to purchase a full license.
+For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=docs&product=dcv) to purchase a full license.
 
 ## Activate the License
 
@@ -36,6 +35,8 @@ The following code snippets demonstrate how to activate a license.
 >- Java-Android
 >- Objective-C
 >- Swift
+>- C#
+>- Python
 >
 ```js
 Dynamsoft.License.LicenseManager.initLicense("--Enter Your License Key Here--");
@@ -72,4 +73,29 @@ DynamsoftLicenseManager.initLicense("--Enter Your License Key Here--", verificat
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
    // Add your code to execute when license verification call back is handled.
 }
+```
+>
+```csharp
+int errorCode = 0;
+string errorMsg;
+errorCode = LicenseManager.InitLicense("--Enter Your License Key Here--", out errorMsg);
+if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_CACHE_USED)
+{
+    Console.WriteLine("License initialization error: " + errorMsg);
+}
+else
+{
+    CaptureVisionRouter cvr = new CaptureVisionRouter();
+    // add code for further process
+}
+```
+>
+```python
+error_code = 0
+error_code, error_msg = LicenseManager.init_license("--Enter Your License Key Here--")
+if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
+    print("License initialization error: " + error_msg)
+else:
+    CaptureVisionRouter cvr = new CaptureVisionRouter()
+    # add code for further process
 ```
