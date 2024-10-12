@@ -32,7 +32,7 @@ The following code snippets demonstrate how to activate a license.
 <div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C++
->- Java-Android
+>- Android
 >- Objective-C
 >- Swift
 >- C#
