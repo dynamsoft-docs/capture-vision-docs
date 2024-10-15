@@ -7,27 +7,25 @@ description: License Initialization Page
 
 # License Initialization
 
-## Get a License
+This guide outlines the steps required to initialize a license for the following Dynamsoft products:
+
+* Dynamsoft Barcode Reader
+* Dynamsoft Capture Vision
+* MRZ Scanner
+
+## Obtaining a License
 
 ### Trial License
 
-To test Dynamsoft SDKs, request a 30-day trial license through the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=docs&product=dcv) link.
-
-> Note that the trial you get will support all the following products:
-> 
-> 1. Dynamsoft Barcode Reader
-> 2. Dynamsoft Document Normalizer
-> 3. Dynamsoft Label Recognizer
-> 4. Dynamsoft Camera Enhancer
-> 5. Dynamsoft Code Parser
+To evaluate Dynamsoft SDKs, you can request a 30-day trial license by clicking [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense/?utm_source=docs&product=dcv).
 
 ### Full License
 
-For using Dynamsoft SDKs in production, [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=docs&product=dcv) to purchase a full license.
+For production use, please [contact our sales team](https://www.dynamsoft.com/company/contact/?utm_source=docs&product=dcv) to purchase a full license.
 
-## Activate the License
+## Activating the License
 
-The following code snippets demonstrate how to activate a license.
+The following code snippets provide guidance on how to activate the license for your application.
 
 <div class="sample-code-prefix template2"></div>
 >- JavaScript
