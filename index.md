@@ -12,20 +12,25 @@ description: Dynamsoft Capture Vision SDK Documentation Homepage
 
 To explore the latest features and updates of `Dynamsoft Capture Vision`, please refer to the documentation sections below.
 
-* [Web (Client Side)]({{ site.dcvb_js }}){:target="_blank"}
-* Mobile
-  * [Android]({{ site.dcvb_android }}){:target="_blank"}
-  * [iOS]({{ site.dcvb_ios }}){:target="_blank"}
-  * [MAUI]({{ site.dcvb_maui }}){:target="_blank"}
-* Server / Desktop
-  * [Python]({{ site.dcvb_python }}){:target="_blank"}
-  * [.NET]({{ site.dcvb_dotnet }}){:target="_blank"}
-  * [C++]({{ site.dcvb_cpp }}){:target="_blank"}
+<div class="editionList"></div>
+
+* Web (Client Side):
+  * ![Web Icon]({{site.assets}}img-icon/homepage/js.svg){:class="js"} [Web]({{ site.dcvb_js }}){:target="_blank"}
+* Mobile:
+  * ![Android Icon]({{site.assets}}img-icon/homepage/Android.svg){:class="android"} [Android]({{ site.dcvb_android }}){:target="_blank"}
+  * ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.dcvb_ios }}){:target="_blank"}
+  * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.dcvb_maui }}){:target="_blank"}
+* Server / Desktop:
+  * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.dcvb_python }}){:target="_blank"}
+  * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dcvb_dotnet }}){:target="_blank"}
+  * ![C++ Icon]({{site.assets}}img-icon/homepage/cplusplus.svg){:class="cplusplus"} [C++]({{ site.dcvb_cpp }}){:target="_blank"}
 
 
 The documentation for products `Dynamsoft Label Recognizer`, `Dynamsoft Document Normalizer`, `Dynamsoft Code Parser` and `Dynamsoft Camera Enhancer` has been archived, but remains accessible through the following links:
 
-* [Archived Dynamsoft Label Recognizer Documentation]({{ site.dlr_archived_introduction }}){:target="_blank"}
-* [Archived Dynamsoft Document Normalizer Documentation]({{ site.ddn_archived_introduction }}){:target="_blank"}
-* [Archived Dynamsoft Code Parser Documentation]({{ site.dcp_archived_introduction }}){:target="_blank"}
-* [Archived Dynamsoft Camera Enhancer Documentation]({{ site.dce_archived_introduction }}){:target="_blank"}
+<div class="archivedProductList"></div>
+
+* ![dlr Icon]({{site.assets}}img-icon/homepage/dlr.svg){:class="product-icon dlr"} [Dynamsoft Label Recognizer]({{ site.dlr_archived_introduction }}){:target="_blank"}
+* ![ddn Icon]({{site.assets}}img-icon/homepage/ddn.svg){:class="product-icon ddn"} [Dynamsoft Document Normalizer]({{ site.ddn_archived_introduction }}){:target="_blank"}
+* ![dcp Icon]({{site.assets}}img-icon/homepage/dcp.svg){:class="product-icon dcp"} [Dynamsoft Code Parser]({{ site.dcp_archived_introduction }}){:target="_blank"}
+* ![dce Icon]({{site.assets}}img-icon/homepage/dce.svg){:class="product-icon dce"} [Dynamsoft Camera Enhancer]({{ site.dce_archived_introduction }}){:target="_blank"}
