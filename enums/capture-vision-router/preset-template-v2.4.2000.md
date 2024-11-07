@@ -220,7 +220,7 @@ struct PresetTemplate
 ```
 >
 ```python
-class EnumPresetTemplate(str, Enum):
+class EnumPresetTemplate(Enum):
    # Template name: "Default". It supports barcode decoding, label recognizing and document normalizing.
    PT_DEFAULT = "Default"
    # Template name: "ReadBarcodes_Default". It only supports barcode decoding.
