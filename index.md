@@ -24,13 +24,3 @@ To explore the latest features and updates of `Dynamsoft Capture Vision`, please
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.dcvb_python }}){:target="_blank"}
   * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dcvb_dotnet }}){:target="_blank"}
   * ![C++ Icon]({{site.assets}}img-icon/homepage/cplusplus.svg){:class="cplusplus"} [C++]({{ site.dcvb_cpp }}){:target="_blank"}
-
-
-The documentation for products `Dynamsoft Label Recognizer`, `Dynamsoft Document Normalizer`, `Dynamsoft Code Parser` and `Dynamsoft Camera Enhancer` has been archived, but remains accessible through the following links:
-
-<div class="archivedProductList"></div>
-
-* ![dlr Icon]({{site.assets}}img-icon/homepage/dlr.svg){:class="product-icon dlr"} [Dynamsoft Label Recognizer]({{ site.dlr_archived_introduction }}){:target="_blank"}
-* ![ddn Icon]({{site.assets}}img-icon/homepage/ddn.svg){:class="product-icon ddn"} [Dynamsoft Document Normalizer]({{ site.ddn_archived_introduction }}){:target="_blank"}
-* ![dcp Icon]({{site.assets}}img-icon/homepage/dcp.svg){:class="product-icon dcp"} [Dynamsoft Code Parser]({{ site.dcp_archived_introduction }}){:target="_blank"}
-* ![dce Icon]({{site.assets}}img-icon/homepage/dce.svg){:class="product-icon dce"} [Dynamsoft Camera Enhancer]({{ site.dce_archived_introduction }}){:target="_blank"}
