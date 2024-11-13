@@ -151,7 +151,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top"><br>MorphOperation(Optional)</td>
-        <td><b>Description</b><br>
+        <td><b>Description</b><br>Sets the morph operation for the morphology process.
         </td>
     </tr>
     <tr>
@@ -168,7 +168,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeX<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the binarization threshold.
+        <td><b>Description</b><br>Sets the horizontal kernel size for the morphology process.
         </td>
     </tr>
     <tr>
@@ -185,7 +185,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeY<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the binarization threshold.
+        <td><b>Description</b><br>Sets the vertical kernel size for the morphology process.
         </td>
     </tr>
     <tr>
@@ -202,7 +202,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphShape<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the binarization threshold.
+        <td><b>Description</b><br>Sets the morph shape for the morphology process.
         </td>
     </tr>
     <tr>
