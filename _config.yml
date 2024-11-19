@@ -22,6 +22,8 @@ dcvb_react_native: /capture-vision/docs/mobile/programming/react-native/
 dcvb_cordova: /capture-vision/docs/mobile/programming/cordova/
 dcvb_flutter: /capture-vision/docs/mobile/programming/flutter/
 dcvb_xamarin: /capture-vision/docs/mobile/programming/xamarin/
+dcv_archive_react_native: /capture-vision/docs-archive/mobile/programming/react-native/
+dcv_archive_flutter: /capture-vision/docs-archive/mobile/programming/flutter/
 
 dlr_archived_introduction: /label-recognition/docs-archive/core/introduction/
 ddn_archived_introduction: /document-normalizer/docs-archive/core/introduction/
