@@ -350,11 +350,11 @@ enum IntermediateResultUnitType : unsigned long long
    IRUT_RECOGNIZED_TEXT_LINES = 1 << 25,
    /**The type of the IntermediateResult is "normalized image".*/
    IRUT_NORMALIZED_IMAGES = 1 << 26,
-	/**The type of the IntermediateResult is "short lines".*/
-	IRUT_SHORT_LINES = 1 << 27,
-	/**The type of the IntermediateResult is "text line groups".*/
-	IRUT_RAW_TEXT_LINES = 1LL << 28,
-	/**The type of the IntermediateResult is "all".*/
-	IRUT_ALL = 0xFFFFFFFFFFFFFFFF
+   /**The type of the IntermediateResult is "short lines".*/
+   IRUT_SHORT_LINES = 1 << 27,
+   /**The type of the IntermediateResult is "text line groups".*/
+   IRUT_RAW_TEXT_LINES = 1LL << 28,
+   /**The type of the IntermediateResult is "all".*/
+   IRUT_ALL = 0xFFFFFFFFFFFFFFFF
 };
 ```
