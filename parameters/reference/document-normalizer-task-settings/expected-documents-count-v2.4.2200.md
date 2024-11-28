@@ -26,4 +26,4 @@ ExpectedDocumentsCount sets the number of documents expected to be detected.
 | :--------------- |
 | **Type**<br><i>int</i> |
 | **Range**<br>[0, 0x7fffffff] |
-| **Default Value**<br> 1 |
+| **Default Value**<br> 0 |

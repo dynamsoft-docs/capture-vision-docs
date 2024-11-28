@@ -151,9 +151,7 @@ public @interface EnumIntermediateResultUnitType {
     /** Detected short lines. */
     long IRUT_SHORT_LINES = 1L << 27;
     /** Recognized raw text lines. */
-    public static final long IRUT_RAW_TEXT_LINES = 1L << 28;
-    /**Detected logic lines.*/
-    public static final long IRUT_LOGIC_LINES = 1L << 29;
+    public static final long IRUT_RAW_TEXT_LINES = 1 << 28;
     /** A mask to select all types of intermediate results. */
     long IRUT_ALL = 0xFFFFFFFFFFFFFFFF;
 }
@@ -221,8 +219,6 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
     DSIntermediateResultUnitTypeShortLines = 1 << 27,
     /** Recognized raw text lines. */
     DSIntermediateResultUnitTypeRawTextLines = 1 << 28,
-    /**Detected logic lines.*/
-    DSIntermediateResultUnitTypeLogicLines = 1 << 29,
     /** A mask to select all types of intermediate results. */
     DSIntermediateResultUnitTypeAll = 0xFFFFFFFFFFFFFFFF
 };
@@ -290,8 +286,6 @@ public enum IntermediateResultUnitType: Int {
     case shortLines = 1 << 27
     /** Recognized raw text lines. */
     rawTextLines = 1 << 28
-    /**Detected logic lines.*/
-    logicLines = 1 << 29
     /** A mask to select all types of intermediate results. */
     case all = 0xFFFFFFFFFFFFFFFF
 }
@@ -356,13 +350,11 @@ enum IntermediateResultUnitType : unsigned long long
    IRUT_RECOGNIZED_TEXT_LINES = 1 << 25,
    /**The type of the IntermediateResult is "normalized image".*/
    IRUT_NORMALIZED_IMAGES = 1 << 26,
-   /**The type of the IntermediateResult is "short lines".*/
-   IRUT_SHORT_LINES = 1 << 27,
-   /**The type of the IntermediateResult is "text line groups".*/
-   IRUT_RAW_TEXT_LINES = 1LL << 28,
-   /**Detected logic lines.*/
-   IRUT_LOGIC_LINES = 1LL << 29,
-   /**The type of the IntermediateResult is "all".*/
-   IRUT_ALL = 0xFFFFFFFFFFFFFFFF
+	/**The type of the IntermediateResult is "short lines".*/
+	IRUT_SHORT_LINES = 1 << 27,
+	/**The type of the IntermediateResult is "text line groups".*/
+	IRUT_RAW_TEXT_LINES = 1LL << 28,
+	/**The type of the IntermediateResult is "all".*/
+	IRUT_ALL = 0xFFFFFFFFFFFFFFFF
 };
 ```
