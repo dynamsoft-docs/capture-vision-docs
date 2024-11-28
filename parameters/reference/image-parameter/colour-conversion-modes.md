@@ -51,6 +51,7 @@ Parameter `ColourConversionModes` consist of a group of colour conversion mode o
     <tr>
         <td><b>Candidate Mode List</b><br>CICM_HSV
             <br>CICM_GENERAL
+            <br>CICM_EDGE_ENHANCEMENT
             <br>CICM_SKIP
         </td>
     </tr>
@@ -188,6 +189,8 @@ Parameter `ColourConversionModes` consist of a group of colour conversion mode o
 
 ### Default Setting
 
+#### For Barcode Decoding & Label Recognizing
+
 If the `ColourConversionModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
@@ -205,6 +208,31 @@ If the `ColourConversionModes` is not configured in your template file, the foll
 }
 ```
 
+#### For Document Detection
+
+In document detection tasks, various ColuorConversionModes will be tried as much as possible to gather sufficient information for subsequent line detection and assembly.
+
+```json
+{
+    "ColourConversionModes" : 
+    [
+        {
+            "BlueChannelWeight" : -1,
+            "GreenChannelWeight" : -1,
+            "Mode" : "CICM_GENERAL",
+            "RedChannelWeight" : -1,
+        },
+        {
+            "Mode" : "CICM_EDGE_ENHANCEMENT"
+        },
+        {
+            "Mode" : "CICM_HSV",
+            "ReferChannel" : "H_CHANNEL"
+        }
+    ]
+}
+```
+
 ## Candidate Modes Introduction
 
 ### CICM_GENERAL
@@ -216,6 +244,15 @@ Converts a colour image to a grayscale image using the general RGB colour model.
 * RedChannelWeight
 * BlueChannelWeight
 * GreenChannelWeight
+* LibraryFileName
+* LibraryParameters
+
+### CICM_EDGE_ENHANCEMENT
+
+Converts a colour image to a grayscale image, and enhances the pixel value of points with more significant contrast, to highlight edge features during conversion.
+
+**Available Mode Arguments:**
+
 * LibraryFileName
 * LibraryParameters
 

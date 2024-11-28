@@ -6,7 +6,6 @@ keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/document-normalizer-task-settings/corner-angle-range.html
 ---
 
 # CornerAngleRange
@@ -52,7 +51,7 @@ Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the e
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>60
+        <td><b>Default Value</b><br>70
         </td>
     </tr>
     <tr>
@@ -69,7 +68,7 @@ Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the e
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>120</td>
+        <td><b>Default Value</b><br>110</td>
     </tr>
     <tr>
         <td><b>Remarks</b><br>Please ensure that all interior angles of the target quadrilateral fall within the specified value range.
@@ -86,8 +85,8 @@ If the `CornerAngleRange` is not configured in your template file, the following
 {
     "CornerAngleRange" : 
         {
-            "MaxValue" : 120,
-            "MinValue" : 60
+            "MaxValue" : 110,
+            "MinValue" : 70
         }
 }
 ```
