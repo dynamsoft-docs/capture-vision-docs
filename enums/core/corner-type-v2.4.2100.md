@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- Python
    >
 >
 ```javascript
@@ -103,16 +102,4 @@ typedef enum CornerType
    /* The sides are not intersected but they definitely make up a corner. */
    CT_NOT_INTERSECTED = 3,
 } CornerType;
-```
->
-```python
-class EnumCornerType(IntEnum):
-   # The sides of the corner is normally intersected.
-   CT_NORMAL_INTERSECTED
-   # The sides of the corner is T-intersected.
-   CT_T_INTERSECTED
-   # The sides of the corner is cross-intersected.
-   CT_CROSS_INTERSECTED
-   # The sides are not intersected but they definitely make up a corner.
-   CT_NOT_INTERSECTED
 ```

@@ -15,11 +15,23 @@ codeAutoHeight: true
 `CrossVerificationStatus` describes the status of the captured results.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >- C++
    >
+>
+```javascript
+enum EnumCrossVerificationStatus {
+  /** The cross verification has not been performed yet. */
+  CVS_NOT_VERIFIED = 0,
+  /** The cross verification has been passed successfully. */
+  CVS_PASSED = 1,
+  /** The cross verification has failed. */
+  CVS_FAILED = 2
+  }
+```
 >
 ```java
 @Retention(RetentionPolicy.CLASS)
