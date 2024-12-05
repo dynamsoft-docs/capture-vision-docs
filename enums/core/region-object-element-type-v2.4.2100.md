@@ -20,7 +20,6 @@ codeAutoHeight: true
    >- Objective-C
    >- Swift
    >- C++
-   >- Python
    >
 >
 ```javascript
@@ -128,26 +127,4 @@ typedef enum RegionObjectElementType
    /**The type of subclass TargetROIElement.*/
    ROET_TARGET_ROI
 } RegionObjectElementType;
-```
->
-```python
-class EnumRegionObjectElementType(IntEnum):
-   # The type of subclass PredetectedRegionElement.
-   ROET_PREDETECTED_REGION
-   # The type of subclass LocalizedBarcodeElement.
-   ROET_LOCALIZED_BARCODE
-   # The type of subclass DecodedBarcodeElement.
-   ROET_DECODED_BARCODE
-   # The type of subclass LocalizedTextLineElement.
-   ROET_LOCALIZED_TEXT_LINE
-   # The type of subclass RecognizedTextLineElement.
-   ROET_RECOGNIZED_TEXT_LINE
-   # The type of subclass DetectedQuadElement.
-   ROET_DETECTED_QUAD
-   # The type of subclass NormalizedImageElement.
-   ROET_NORMALIZED_IMAGE
-   # The type of subclass SourceImageElement.
-   ROET_SOURCE_IMAGE
-   # The type of subclass TargetROIElement.
-   ROET_TARGET_ROI
 ```
