@@ -35,7 +35,7 @@ The structure of the `PartitionModes` is shown as follow:
 
 ### PM_WHOLE_BARCODE
 
-ake the whole barcode for decoding.
+Take the whole barcode for decoding.
 
 ### PM_ALIGNMENT_PARTITION
 
