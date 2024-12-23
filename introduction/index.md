@@ -25,7 +25,7 @@ DCV powers your software development through the following aspects:
 4. High Performance With Shared Computations
 5. Bidirectional Interactivity with Intermediate Results
 
-DCV enables you to develop highly customizable applications for barcode reading, label recognition, document board detection, and result parsing. These applications offer enterprise-grade performance and can be tailored to meet your specific business needs.
+DCV enables you to develop highly customizable applications for barcode reading, label recognition, document border detection, and result parsing. These applications offer enterprise-grade performance and can be tailored to meet your specific business needs.
 
 ## Functional Products
 
