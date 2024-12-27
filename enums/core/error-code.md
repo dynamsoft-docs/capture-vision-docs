@@ -458,7 +458,7 @@ public @interface EnumErrorCode
 ```
 >
 ```objc
-typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
+typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**Successful. */
    DSErrorOK                               = 0,
    /**Unknown error. */
@@ -665,7 +665,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    /** Failed to load resource. */
    DSErrorResourceLoadFailed               = -90002,
    /** The code specification is not found. */
-   DSErrorCodeSpecificationNotFound        = -90003,
+   DSErrorSpecificationNotFound        = -90003,
    /** The full code string is empty. */
    DSErrorFullCodeEmpty                    = -90004,
    /** Failed to preprocess the full code string */

@@ -441,107 +441,107 @@ public @interface EnumErrorCode
 ```
 >
 ```objc
-typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
+typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**Successful. */
-   DSErrorCodeOK                               = 0,
+   DSErrorOK                               = 0,
    /**Unknown error. */
-   DSErrorCodeUnknown                          = -10000,
+   DSErrorUnknown                          = -10000,
    /**Not enough memory to perform the operation. */
-   DSErrorCodeNoMemory                         = -10001,
+   DSErrorNoMemory                         = -10001,
    /**Null pointer */
-   DSErrorCodeNullPointer                      = -10002,
+   DSErrorNullPointer                      = -10002,
    /**License invalid*/
-   DSErrorCodeLicenseInvalid                   = -10003,
+   DSErrorLicenseInvalid                   = -10003,
    /**License expired*/
-   DSErrorCodeLicenseExpired                   = -10004,
+   DSErrorLicenseExpired                   = -10004,
    /**File not found*/
-   DSErrorCodeFileNotFound                     = -10005,
+   DSErrorFileNotFound                     = -10005,
    /**The file type is not supported. */
-   DSErrorCodeFiletypeNotSupported             = -10006,
+   DSErrorFiletypeNotSupported             = -10006,
    /**The BPP (Bits Per Pixel) is not supported. */
-   DSErrorCodeBPPNotSupported                  = -10007,
+   DSErrorBPPNotSupported                  = -10007,
    /**Failed to read the image. */
-   DSErrorCodeImageReadFailed                  = -10012,
+   DSErrorImageReadFailed                  = -10012,
    /**Failed to read the TIFF image. */
-   DSErrorCodeTiffReadFailed                   = -10013,
+   DSErrorTiffReadFailed                   = -10013,
    /**The DIB (Device-Independent Bitmaps) buffer is invalid. */
-   DSErrorCodeDIBBufferInvalid                 = -10018,
+   DSErrorDIBBufferInvalid                 = -10018,
    /**Failed to read the PDF image. */
-   DSErrorCodePdfReadFailed                    = -10021,
+   DSErrorPdfReadFailed                    = -10021,
    /**The PDF DLL is missing. */
-   DSErrorCodePdfDllMissing                    = -10022,
+   DSErrorPdfDllMissing                    = -10022,
    /**The page number is invalid. */
-   DSErrorCodePageNumberInvalid                = -10023,
+   DSErrorPageNumberInvalid                = -10023,
    /**The custom size is invalid. */
-   DSErrorCodeCustomSizeInvalid                = -10024,
+   DSErrorCustomSizeInvalid                = -10024,
    /** timeout. */
-   DSErrorCodeTimeout                          = -10026,
+   DSErrorTimeout                          = -10026,
    /**Json parse failed*/
-   DSErrorCodeJsonParseFailed                  = -10030,
+   DSErrorJsonParseFailed                  = -10030,
    /**Json type invalid*/
-   DSErrorCodeJsonTypeInvalid                  = -10031,
+   DSErrorJsonTypeInvalid                  = -10031,
    /**Json key invalid*/
-   DSErrorCodeJsonKeyInvalid                   = -10032,
+   DSErrorJsonKeyInvalid                   = -10032,
    /**Json value invalid*/
-   DSErrorCodeJsonValueInvalid                 = -10033,
+   DSErrorJsonValueInvalid                 = -10033,
    /**Json name key missing*/
-   DSErrorCodeJsonNameKeyMissing               = -10034,
+   DSErrorJsonNameKeyMissing               = -10034,
    /**The value of the key "Name" is duplicated.*/
-   DSErrorCodeJsonNameValueDuplicated          = -10035,
+   DSErrorJsonNameValueDuplicated          = -10035,
    /**Template name invalid*/
-   DSErrorCodeTemplateNameInvalid              = -10036,
+   DSErrorTemplateNameInvalid              = -10036,
    /**The name reference is invalid.*/
-   DSErrorCodeJsonNameReferenceInvalid         = -10037,
+   DSErrorJsonNameReferenceInvalid         = -10037,
    /**Parameter value invalid*/
-   DSErrorCodeParameterValueInvalid            = -10038,
+   DSErrorParameterValueInvalid            = -10038,
    /**The domain of your current site does not match the domain bound in the current product key.*/
-   DSErrorCodeDomainNotMatch                   = -10039,
+   DSErrorDomainNotMatch                   = -10039,
    /**The reserved info does not match the reserved info bound in the current product key.*/
-   DSErrorCodeReservedInfoNotMatch             = -10040,
+   DSErrorReservedInfoNotMatch             = -10040,
    /**The license key does not match the license content.*/
-   DSErrorCodeLicenseKeyNotMatch               = -10043,
+   DSErrorLicenseKeyNotMatch               = -10043,
    /**Failed to request the license content.*/
-   DSErrorCodeRequestFailed                    = -10044,
+   DSErrorRequestFailed                    = -10044,
    /**Failed to init the license.*/
-   DSErrorCodeLicenseInitFailed                = -10045,
+   DSErrorLicenseInitFailed                = -10045,
    /**Failed to set mode's argument.*/
-   DSErrorCodeSetModeArgumentError             = -10051,
+   DSErrorSetModeArgumentError             = -10051,
    /**The license content is invalid.*/
-   DSErrorCodeLicenseContentInvalid            = -10052,
+   DSErrorLicenseContentInvalid            = -10052,
    /**The license key is invalid.*/
-   DSErrorCodeLicenseKeyInvalid                = -10053,
+   DSErrorLicenseKeyInvalid                = -10053,
    /**The license key has no remaining quota.*/
-   DSErrorCodeLicenseDeviceRunsOut             = -10054,
+   DSErrorLicenseDeviceRunsOut             = -10054,
    /**Failed to get mode's argument.*/
-   DSErrorCodeGetModeArgumentError             = -10055,
+   DSErrorGetModeArgumentError             = -10055,
    /**The Intermediate Result Types license is invalid.*/
-   DSErrorCodeIrtLicenseInvalid                = -10056,
+   DSErrorIrtLicenseInvalid                = -10056,
    /**Failed to save file.*/
-   DSErrorCodeFileSaveFailed                   = -10058,
+   DSErrorFileSaveFailed                   = -10058,
    /**The stage type is invalid.*/
-   DSErrorCodeStageTypeInvalid                 = -10059,
+   DSErrorStageTypeInvalid                 = -10059,
    /**The image orientation is invalid.*/
-   DSErrorCodeImageOrientationInvalid          = -10060,
+   DSErrorImageOrientationInvalid          = -10060,
    /**Failed to convert complex tempalte to simplified settings.*/
-   DSErrorCodeConvertComplexTemplateError      = -10061,
+   DSErrorConvertComplexTemplateError      = -10061,
    /**Reject function call while capturing in progress.*/
-   DSErrorCodeCallRejectedWhenCapturing        = -10062,
+   DSErrorCallRejectedWhenCapturing        = -10062,
    /**The input image source was not found.*/
-   DSErrorCodeNoImageSource                    = -10063,
+   DSErrorNoImageSource                    = -10063,
    /**Failed to read directory.*/
-   DSErrorCodeReadDirectoryFailed              = -10064,
+   DSErrorReadDirectoryFailed              = -10064,
    /**[Name] Module not found.*/
    /**Name : */
    /**DynamsoftBarcodeReader*/
    /**DynamsoftLabelRecognizer*/
    /**DynamsoftDocumentNormalizer*/
-   DSErrorCodeModuleNotFound                   = -10065,
+   DSErrorModuleNotFound                   = -10065,
    /**The file already exists but overwriting is disabled.*/
-   DSErrorCodeFileAlreadyExists                = -10067,
+   DSErrorFileAlreadyExists                = -10067,
    /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
-   DSErrorCodeCreateFileFailed                 = -10068,
+   DSErrorCreateFileFailed                 = -10068,
    /**The input ImageData object contains invalid parameter(s).*/
-   DSErrorCodeImageDataInvalid                 = -10069,
+   DSErrorImageDataInvalid                 = -10069,
    /**The size of the input image does not meet the requirements.*/
    DSErrorImageSizeNotMatch                    = -10070,
    /**The pixel format of the input image does not meet the requirements.*/
@@ -549,103 +549,103 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSErrorCode) {
    /**The section level result is irreplaceable.*/
    DSErrorSectionLevelResultIrreplaceable      = -10072,
    /**No license.*/
-   DSErrorCodeNoLicense                        = -20000,
+   DSErrorNoLicense                        = -20000,
    /**The handshake code is invalid. */
-   DSErrorCodeHandshakeCodeInvalid             = -20001,
+   DSErrorHandshakeCodeInvalid             = -20001,
    /**Failed to read or write license cache. */
-   DSErrorCodeLicenseBufferFailed              = -20002,
+   DSErrorLicenseBufferFailed              = -20002,
    /**Falied to synchronize license info wirh license tracking server. */
-   DSErrorCodeLicenseSyncFailed                = -20003,
+   DSErrorLicenseSyncFailed                = -20003,
    /**Device does not match with license buffer. */
-   DSErrorCodeDeviceNotMatch                   = -20004,
+   DSErrorDeviceNotMatch                   = -20004,
    /**Falied to bind device. */
-   DSErrorCodeBindDeviceFailed                 = -20005,
+   DSErrorBindDeviceFailed                 = -20005,
    /**Install.*/
-   DSErrorCodeInstanceCountOverLimit           = -20008,
+   DSErrorInstanceCountOverLimit           = -20008,
    /**Trial License*/
-   DSErrorCodeTrialLicense                     = -20010,
+   DSErrorTrialLicense                     = -20010,
    /**The license is not valid for current version*/
-   DSErrorCodeLicenseVersionNotMatch           = -20011,
+   DSErrorLicenseVersionNotMatch           = -20011,
    /**Failed to reach License Tracking Server.*/
-   DSErrorCodeFailedToReachDLS                 = -20200
+   DSErrorFailedToReachDLS                 = -20200
    /** -30000~-39999: DBR error code. */
    /** The barcode format is invalid. */
-   DSErrorCodeBarcodeFormatInvalid             = -30009,
+   DSErrorBarcodeFormatInvalid             = -30009,
    /** The QR Code license is invalid. */
-   DSErrorCodeQRLicenseInvalid                 = -30016,
+   DSErrorQRLicenseInvalid                 = -30016,
    /** The 1D Barcode license is invalid. */
-   DSErrorCode1DLicenseInvalid                 = -30017,
+   DSError1DLicenseInvalid                 = -30017,
    /** The PDF417 license is invalid. */
-   DSErrorCodePDF417LicenseInvalid             = -30019,
+   DSErrorPDF417LicenseInvalid             = -30019,
    /** The DATAMATRIX license is invalid. */
-   DSErrorCodeDATAMATRIXLicenseInvalid         = -30020,
+   DSErrorDATAMATRIXLicenseInvalid         = -30020,
    /** The custom module size is invalid. */
-   DSErrorCodeCustomModuleSizeInvalid          = -30025,
+   DSErrorCustomModuleSizeInvalid          = -30025,
    /** The AZTEC license is invalid. */
-   DSErrorCodeAztecLicenseInvalid              = -30041,
+   DSErrorAztecLicenseInvalid              = -30041,
    /** The Patchcode license is invalid. */
-   DSErrorCodePatchCodeLicenseInvalid          = -30046,
+   DSErrorPatchCodeLicenseInvalid          = -30046,
    /** The Postal code license is invalid. */
-   DSErrorCodePostalCodeLicenseInvalid         = -30047,
+   DSErrorPostalCodeLicenseInvalid         = -30047,
    /** The DPM license is invalid. */
-   DSErrorCodeDPMLicenseInvalid                = -30048,
+   DSErrorDPMLicenseInvalid                = -30048,
    /** The frame decoding thread already exists. */
-   DSErrorCodeFrameDecodingThreadExists        = -30049,
+   DSErrorFrameDecodingThreadExists        = -30049,
    /** Failed to stop the frame decoding thread. */
-   DSErrorCodeStopDecodingThreadFailed         = -30050,
+   DSErrorStopDecodingThreadFailed         = -30050,
    /** The Maxicode license is invalid. */
-   DSErrorCodeMaxiCodeLicenseInvalid           = -30057,
+   DSErrorMaxiCodeLicenseInvalid           = -30057,
    /** The GS1 Databar license is invalid. */
-   DSErrorCodeGS1DatabarLicenseInvalid         = -30058,
+   DSErrorGS1DatabarLicenseInvalid         = -30058,
    /** The GS1 Composite code license is invalid. */
-   DSErrorCodeGS1CompositeLicenseInvalid       = -30059,
+   DSErrorGS1CompositeLicenseInvalid       = -30059,
    /** The DotCode license is invalid. */
-   DSErrorCodeDotCodeLicenseInvalid            = -30061,
+   DSErrorDotCodeLicenseInvalid            = -30061,
    /** The Pharmacode license is invalid. */
-   DSErrorCodePharmaCodeLicenseInvalid         = -30062,
+   DSErrorPharmaCodeLicenseInvalid         = -30062,
    /** -40000~-49999: DLR error code */
    /** Character Model file is not found. */
-   DSErrorCodeCharacterModelFileNotFound       = -40100,
+   DSErrorCharacterModelFileNotFound       = -40100,
    /** There is a conflict in the layout of TextLineGroup. */
    DSErrorTextLineGroupLayoutConflict          = -40101,
    /** There is a conflict in the regex of TextLineGroup. */
    DSErrorTextLineGroupRegexConflict           = -40102,
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
-   DSErrorCodeContentNotFound                  = -50056,
+   DSErrorContentNotFound                  = -50056,
    /*The quardrilateral is invalid. */
-   DSErrorCodeQuardrilateralInvalid            = -50057,
+   DSErrorQuardrilateralInvalid            = -50057,
    /** -60000~-69999: DCE error code. */
-   DSErrorCodeCameraModelNotExist              = -60003,
-   DSErrorCodeCameraIDNotExist                 = -60006,
-   DSErrorCodeNoSensor                         = -60045,
+   DSErrorCameraModelNotExist              = -60003,
+   DSErrorCameraIDNotExist                 = -60006,
+   DSErrorNoSensor                         = -60045,
    /**-70000~-79999: Panorama error code. */
    /**The panorama license is invalid. */
-   DSErrorCodePanoramaLicenseInvalid           = -70060,
+   DSErrorPanoramaLicenseInvalid           = -70060,
    /** -80000~-89999: Reserved error code. */
    /**-90000~-99999: DCP error code. */
    /** The resource path is not exist. */
-   DSErrorCodeResourcePathNotExist             = -90001,
+   DSErrorResourcePathNotExist             = -90001,
    /** Failed to load resource. */
-   DSErrorCodeResourceLoadFailed               = -90002,
+   DSErrorResourceLoadFailed               = -90002,
    /** The code specification is not found. */
-   DSErrorCodeCodeSpecificationNotFound        = -90003,
+   DSErrorCodeSpecificationNotFound        = -90003,
    /** The full code string is empty. */
-   DSErrorCodeFullCodeEmpty                    = -90004,
+   DSErrorFullCodeEmpty                    = -90004,
    /** Failed to preprocess the full code string */
-   DSErrorCodeFullCodePreprocessFailed         = -90005,
+   DSErrorFullCodePreprocessFailed         = -90005,
    /** The license for parsing South Africa Driver License is invalid. */
-   DSErrorCodeZADLLicenseInvalid               = -90006,
+   DSErrorZADLLicenseInvalid               = -90006,
    /** The license for parsing North America DL/ID is invalid. */
-   DSErrorCodeAAMVADLIDLicenseInvalid          = -90007,
+   DSErrorAAMVADLIDLicenseInvalid          = -90007,
    /** The license for parsing Aadhaar is invalid. */
-   DSErrorCodeAADHAARLicenseInvalid            = -90008,
+   DSErrorAADHAARLicenseInvalid            = -90008,
    /** The license for parsing Machine Readable Travel Documents is invalid. */
-   DSErrorCodeMRTDLicenseInvalid               = -90009,
+   DSErrorMRTDLicenseInvalid               = -90009,
    /** The license for parsing Vehicle Identification Number is invalid. */
-   DSErrorCodeVINLicenseInvalid                = -90010,
+   DSErrorVINLicenseInvalid                = -90010,
    /** The license for parsing customized code type is invalid. */
-   DSErrorCodeCustomizedCodeTypeLicenseInvalid = -90011,
+   DSErrorCustomizedCodeTypeLicenseInvalid = -90011,
 };
 ```
 >
