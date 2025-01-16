@@ -23,12 +23,11 @@ A `DocumentNormalizerTaskSetting` object is defined as below:
 | CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
 | DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
 | ExpectedDocumentsCount | string | Optional | Sets the value for parameter [ExpectedDocumentsCount]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) |
-| LineAssemblyMode | string | Optional | Sets the value for parameter [LineAssemblyMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/line-assembly-mode.html) |
+| LineExtractionModes | string | Optional | Sets the value for parameter [LineExtractionModes]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/line-extraction-modes.html) |
 | MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
 | PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/page-size.html) |
 | QuadrilateralDetectionModes | string | Optional | Sets the value for parameter [QuadrilateralDetectionModes]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/quadrilateral-detection-modes.html) |
 | SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/section-image-parameter-array.html) |
-| ShortLineDetectionMode | string | Optional | Sets the value for parameter [ShortLineDetectionMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/short-line-detection-mode.html) |
 | StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/start-section.html) |
 | TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/terminate-setting.html) |
 | BaseDocumentNormalizerTaskSettingName | string | Optional | Sets the value for parameter [BaseDocumentNormalizerTaskSettingName]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) |
@@ -39,6 +38,11 @@ Here is a sample:
 {
     "Name": "DR_1",
     "MaxThreadsInOneTask":4,
+    "LineExtractionModes" : [
+        {
+            "Mode": "LEM_GENERAL"
+        }
+    ],
     "Brightness" : 0,
     "ColourMode" : "ICM_COLOUR",
     "ContentType" : "CT_DOCUMENT",
@@ -60,16 +64,6 @@ Here is a sample:
             "Mode" : "QDM_GENERAL"
         }
     ],
-    "LineAssemblyMode":
-    {
-        "Mode": "LAM_GENERAL",
-        "Sensitivity": 3
-    },
-    "ShortlineDetectionMode":
-    {
-        "Mode": "SDM_GENERAL",
-        "Sensitivity": 3
-    }
     "SectionImageParameterArray" : [
         {
             "Section": "REGION_PREDETECTION",
