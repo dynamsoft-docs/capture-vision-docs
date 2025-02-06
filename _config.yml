@@ -3,6 +3,8 @@ repository: dynamsoft-docs/capture-vision-docs
 docFullPath: https://www.dynamsoft.com/capture-vision/docs/core/
 firstLevelUrl: /capture-vision/docs/core/
 docHomePage: /capture-vision/docs/core/introduction/
+searchIndexName: Crawler-DCV-Docs-New
+searchNeedFilter: true
 
 dcvb_introduction: /capture-vision/docs/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
