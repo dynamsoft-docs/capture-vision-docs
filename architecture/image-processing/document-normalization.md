@@ -5,7 +5,6 @@ description: This article introduces Document Normalization Section in the Dynam
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/image-processing/document-normalization.html
 ---
 
 The following diagram shows how sections connect to each other to form tasks:

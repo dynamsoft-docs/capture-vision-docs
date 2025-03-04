@@ -6,7 +6,6 @@ keywords: Deblur modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/deblur-modes.html
 ---
 
 # DeblurModes

@@ -6,7 +6,6 @@ keywords: TargetROIDef, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/target-roi-def/index.html
 ---
 
 # TargetROIDef Parameters

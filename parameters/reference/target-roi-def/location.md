@@ -6,7 +6,6 @@ keywords: Location
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/target-roi-def/location.html
 ---
 
 # Location

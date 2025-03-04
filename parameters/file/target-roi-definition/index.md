@@ -127,15 +127,15 @@ Defines the offset of the target region from the reference object. If there is n
 
 | Parameter Name | Description |
 | -------------------------------- | ----------- |
-| [`ReferenceObjectOriginIndex`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#referenceobjectoriginindex) | Defines which point of the reference object will be set as the origin of the coordinate system. |
-| [`ReferenceObjectType`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#referenceobjecttype) | Defines which coordinate system to use when configuring offset parameters basd on the reference objects. |
-| [`ReferenceXAxis`]({{site.dcvb_parameters_reference}}target-roi-def/offset/reference-x-axis.html) | Defines the x-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. |
-| [`ReferenceYAxis`]({{site.dcvb_parameters_reference}}target-roi-def/offset/reference-y-axis.html) | Defines the y-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. |
-| [`MeasuredByPercentage`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#measuredbypercentage) | Sets whether or not to use percentage to measure the points' coordinates. |
-| [`FirstPoint`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#firstpoint) | The first point of the target region, which defines the offset from the origin. |
-| [`SecondPoint`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#secondpoint) | The second point of the target region, which defines the offset from the origin. |
-| [`ThirdPoint`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#thirdpoint) | The third point of the target region, which defines the offset from the origin. |
-| [`FourthPoint`]({{site.dcvb_parameters_reference}}target-roi-def/offset/offset-parameter-details.html#fourthpoint) | The fourth point of the target region, which defines the offset from the origin. |
+| [`ReferenceObjectOriginIndex`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#referenceobjectoriginindex) | Defines which point of the reference object will be set as the origin of the coordinate system. |
+| [`ReferenceObjectType`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#referenceobjecttype) | Defines which coordinate system to use when configuring offset parameters basd on the reference objects. |
+| [`ReferenceXAxis`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/reference-x-axis.html) | Defines the x-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. |
+| [`ReferenceYAxis`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/reference-y-axis.html) | Defines the y-axis of the coordinate system to use when configuring offset parameters basd on the reference objects. |
+| [`MeasuredByPercentage`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#measuredbypercentage) | Sets whether or not to use percentage to measure the points' coordinates. |
+| [`FirstPoint`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#firstpoint) | The first point of the target region, which defines the offset from the origin. |
+| [`SecondPoint`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#secondpoint) | The second point of the target region, which defines the offset from the origin. |
+| [`ThirdPoint`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#thirdpoint) | The third point of the target region, which defines the offset from the origin. |
+| [`FourthPoint`]({{site.dcvb_parameters_reference}}target-roi-def/location/offset/offset-parameter-details.html#fourthpoint) | The fourth point of the target region, which defines the offset from the origin. |
 
 ## How to Configure Target/Reference Relationships
 

@@ -5,7 +5,6 @@ description: This article introduces all image-processing tasks in the Dynamsoft
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/image-processing/index.html
 ---
 
 # Image-Processing Tasks

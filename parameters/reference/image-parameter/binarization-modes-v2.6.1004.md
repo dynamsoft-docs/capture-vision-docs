@@ -6,7 +6,6 @@ keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /parameters/reference/image-parameter/binarization-modes.html
 ---
 
 

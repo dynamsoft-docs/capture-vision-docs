@@ -6,7 +6,6 @@ keywords: ImageParameter, parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/image-parameter/index.html
 ---
 
 # ImageParameter Parameters
