@@ -6,7 +6,6 @@ keywords: GrayscaleEnhancementModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /parameters/reference/image-parameter/grayscale-enhancement-modes.html
 ---
 
 
@@ -234,11 +233,11 @@ If the `GrayscaleEnhancementModes` is not configured in your template file, the 
     [
         {
             "Mode" : "GEM_GENERAL",
-            "Sensitivity" : -1,
-            "SharpenBlockSizeX" : -1,
-            "SharpenBlockSizeY" : -1,
-            "SmoothBlockSizeX" : -1,
-            "SmoothBlockSizeY" : -1
+            "Sensitivity" : 5,
+            "SharpenBlockSizeX" : 3,
+            "SharpenBlockSizeY" : 3,
+            "SmoothBlockSizeX" : 3,
+            "SmoothBlockSizeY" : 3
         }
     ]
 }

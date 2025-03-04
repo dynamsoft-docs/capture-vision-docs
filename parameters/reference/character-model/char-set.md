@@ -65,7 +65,7 @@ Parameter `CharSet` is an object that defines specific configurations for charac
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>It is dependent on the character model: <br>
+        <td><b>Range</b><br>It is dependent on the CharRecognition model: <br>
 		Number: [0-9] <br>
 		Letter: [a-zA-Z] <br>
 		UpperCase: [A-Z] <br>

@@ -6,7 +6,6 @@ keywords: Max threads
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/document-normalizer-task-settings/max-threads-in-one-task.html
 ---
 
 # MaxThreadsInOneTask

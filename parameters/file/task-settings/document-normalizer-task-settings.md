@@ -9,87 +9,100 @@ noTitleIndex: true
 
 # DocumentNormalizerTaskSetting Object
 
-## Parameter Organization
-
-A `DocumentNormalizerTaskSetting` object is defined as below:
-
-| Key Name | Value Type | Required or Optional | Description |
-|---|---|---|---|
-| Name | string | Mandatory | Sets the name of current `DocumentNormalizerTaskSetting` object. The value must be unique between all `task-setting` objects. |
-| Brightness | string | Optional | Sets the value for parameter [Brightness]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/brightness.html) |
-| ColourMode | string | Optional | Sets the value for parameter [ColourMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/colour-mode.html) |
-| ContentType | string | Optional | Sets the value for parameter [ContentType]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/content-type.html) |
-| Contrast | string | Optional | Sets the value for parameter [Contrast]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/contrast.html) |
-| CornerAngleRange | string | Optional | Sets the value for parameter [CornerAngleRange]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/corner-angle-range.html) |
-| DeskewMode | string | Optional | Sets the value for parameter [DeskewMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/deskew-mode.html) |
-| ExpectedDocumentsCount | string | Optional | Sets the value for parameter [ExpectedDocumentsCount]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) |
-| LineAssemblyMode | string | Optional | Sets the value for parameter [LineAssemblyMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/line-assembly-mode.html) |
-| MaxThreadsInOneTask | string array | Optional | Sets the value for parameter [MaxThreadsInOneTask]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) |
-| PageSize | string | Optional | Sets the value for parameter [PageSize]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/page-size.html) |
-| QuadrilateralDetectionModes | string | Optional | Sets the value for parameter [QuadrilateralDetectionModes]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/quadrilateral-detection-modes.html) |
-| SectionImageParameterArray | string | Optional | Sets the value for parameter [SectionImageParameterArray]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/section-image-parameter-array.html) |
-| ShortLineDetectionMode | string | Optional | Sets the value for parameter [ShortLineDetectionMode]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/short-line-detection-mode.html) |
-| StartSection | string | Optional | Sets the value for parameter [StartSection]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/start-section.html) |
-| TerminateSetting | string | Optional | Sets the value for parameter [TerminateSetting]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/terminate-setting.html) |
-| BaseDocumentNormalizerTaskSettingName | string | Optional | Sets the value for parameter [BaseDocumentNormalizerTaskSettingName]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) |
-
-Here is a sample:
+The `DocumentNormalizerTaskSetting` object is used to configure settings for a document normalizer task to be performed on certain regions of interest (ROIs) in an image.
 
 ```json
 {
-    "Name": "DR_1",
-    "MaxThreadsInOneTask":4,
-    "Brightness" : 0,
-    "ColourMode" : "ICM_COLOUR",
-    "ContentType" : "CT_DOCUMENT",
-    "Contrast" : 0,
-    "DeskewMode" : 
-    {
-        "ContentDirection" : 0,
-        "Mode" : "DM_PERSPECTIVE_CORRECTION"
-    },
-    "CornerAngleRange" : [
-        {
-            "MaxValue" : 110,
-            "MinValue" : 70
-        }
-    ],
-    "PageSize" : [-1, -1],
-    "QuadrilateralDetectionModes" : [
-        {
-            "Mode" : "QDM_GENERAL"
-        }
-    ],
-    "LineAssemblyMode":
-    {
-        "Mode": "LAM_GENERAL",
-        "Sensitivity": 3
-    },
-    "ShortlineDetectionMode":
-    {
-        "Mode": "SDM_GENERAL",
-        "Sensitivity": 3
-    }
-    "SectionImageParameterArray" : [
-        {
-            "Section": "REGION_PREDETECTION",
-            "ImageParameterName": "IP_0"
-        },
-        {
-            "Section": "DOCUMENT_DETECTION",
-            "ImageParameterName": "IP_1"
-        },
-        {
-            "Section": "DOCUMENT_NORMALIZATION",
-            "ImageParameterName": "IP_2"
-        }
-    ],
-    "StartSection": "REGION_PREDETECTION",
-    "TerminateSetting":
-    {
-        "Section": "REGION_PREDETECTION",
-        "Stage": "IRUT_GRAYSCALE_IMAGE",
-    },    
+    "Name": "ddn_task_default",
+    "MaxThreadsInOneTask": 4,
+	"ExpectedDocumentsCount": 1,
     "BaseDocumentNormalizerTaskSettingName": "",
+    "SectionArray": [
+        {
+            "Section": "ST_REGION_PREDETECTION",
+            "ImageParameterName": "ip_default",
+			"StageArray": [
+				{
+					"Stage": "SST_PREDETECT_REGIONS",
+					"RegionPredetectionModes": [
+					]
+				}
+			]
+        },
+        {
+            "Section": "ST_DOCUMENT_DETECTION",
+            "ContentType": "CT_DOCUMENT",
+            "ImageParameterName": "ip_default",
+			"StageArray": [
+				{
+					"Stage": "SST_ASSEMBLE_LONG_LINES"
+				},
+				{
+					"Stage": "SST_ASSEMBLE_LOGICAL_LINES"
+				},						
+				{
+					"Stage": "SST_DETECT_CORNERS",
+					"CornerAngleRange": {
+						"MaxValue": 110,
+						"MinValue": 70
+					}
+				},
+				{
+					"Stage": "SST_DETECT_EDGES"
+				},
+				{
+					"Stage": "SST_DETECT_QUADS",
+					"QuadrilateralDetectionModes": [
+						{
+							"Mode": "QDM_GENERAL"
+						}
+					]
+				}
+			]					
+        },
+        {
+            "Section": "ST_DOCUMENT_DESKEWING",
+            "ImageParameterName": "ip_default",
+			"StageArray":[
+				{
+					"Stage": "SST_DESKEW_IMAGE",
+					"DeskewMode": {
+						"ContentDirection": 0,
+						"Mode": "DSM_PERSPECTIVE_CORRECTION"
+					},
+					"PageSize": [
+						-1,
+						-1
+					]							
+				}
+			]
+        },
+        {
+            "Section": "ST_IMAGE_ENHANCEMENT",
+            "ImageParameterName": "ip_0",
+			"StageArray":[
+				{
+					"Stage": "SST_ENHANCE_IMAGE",
+					"ColourMode": "ICM_COLOUR",
+					"Brightness": 0,
+					"Contrast": 0							
+				}
+			]
+        }
+    ]
 }
 ```
+
+<div align="center">
+   <p>Example 1 – Parameters of DocumentNormalizerTaskSetting</p>
+</div>
+
+## Summary of DocumentNormalizerTaskSetting top-level parameters
+
+| Parameter Name | Description |
+| -------------- | ----------- |
+| [`Name`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/name.html) | Defines the name of a `DocumentNormalizerTaskSetting` object, which serves as its unique identifier. |
+| [`BaseDocumentNormalizerTaskSettingName`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) | Represents the name of another `DocumentNormalizerTaskSetting` object to inherit from. |
+| [`MaxThreadsInOneTask`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) | Defines the maximum threads that can be consumed in one task. |
+| [`ExpectedDocumentsCount`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) | Defines the number of documents expected to be detected. |
+| [`SectionArray`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/section-array.html) | Defines which sections exist under the `DocumentNormalizerTaskSetting`. |

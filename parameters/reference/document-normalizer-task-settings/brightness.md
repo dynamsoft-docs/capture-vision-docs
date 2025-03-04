@@ -1,17 +1,16 @@
 ---
 layout: default-layout
 title: Brightness - Dynamsoft Document Normalizer Parameters
-description: The parameter Brightness of Dynamsoft Document Normalizer defines the brightness of the normalized image.
+description: The parameter Brightness of Dynamsoft Document Normalizer defines the brightness of the image.
 keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/document-normalizer-task-settings/brightness.html
 ---
 
 # Brightness
 
-Parameter `Brightness` defines the brightness of the normalized image.
+Parameter `Brightness` defines the brightness of the target image.
 
 ## Example
 

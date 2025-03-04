@@ -6,7 +6,6 @@ keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /parameters/reference/image-parameter/binarization-modes.html
 ---
 
 
@@ -61,6 +60,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     <tr>
         <td><b>Candidate Mode List</b><br>BM_THRESHOLD
             <br>BM_LOCAL_BLOCK
+            <br>BM_AUTO
             <br>BM_SKIP
         </td>
     </tr>
@@ -159,7 +159,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>"Erode", "Dilate", "Open" or "Close"
+        <td><b>Range</b><br>"Erode", "Dilate", "Open", "Close", "Auto" or "None"
         </td>
     </tr>
     <tr>
@@ -168,7 +168,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeX<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the horizontal kernel size for the morphology process.
+        <td><b>Description</b><br>Sets the horizontal kernel size for the morphology process. 0 stands for auto.
         </td>
     </tr>
     <tr>
@@ -176,7 +176,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[-1, 1000]
+        <td><b>Range</b><br>[0, 1000]
         </td>
     </tr>
     <tr>
@@ -185,7 +185,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeY<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the vertical kernel size for the morphology process.
+        <td><b>Description</b><br>Sets the vertical kernel size for the morphology process. 0 stands for auto.
         </td>
     </tr>
     <tr>
@@ -193,7 +193,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[-1, 1000]
+        <td><b>Range</b><br>[0, 1000]
         </td>
     </tr>
     <tr>

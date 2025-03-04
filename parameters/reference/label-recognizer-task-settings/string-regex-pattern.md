@@ -6,7 +6,6 @@ keywords: text lines, concatenated strings, regular expression
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/label-recognizer-task-settings/string-regex-pattern.html
 ---
 
 # StringRegExPattern
