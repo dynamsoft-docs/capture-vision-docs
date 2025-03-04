@@ -6,15 +6,12 @@ keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /parameters/reference/image-parameter/region-predetection-modes.html
 ---
 
 
 # RegionPredetectionModes
 
 Parameter `RegionPredetectionModes` controls how to find a region of interest (ROI) within the image or frame.
-
-## Example
 
 ```json
 {
@@ -29,9 +26,13 @@ Parameter `RegionPredetectionModes` controls how to find a region of interest (R
         },
         {
             "Mode": "RPM_GENERAL_HSV_CONTRAST", 
-            "ForeAndBackgroundColours":[20,170,10],
+            "ForeAndBackgroundColours":"[20,170,10]",
             "WidthRange": "[100, 200]"
-        }
+        },
+        {
+            "Mode": "RPM_NEURAL_NETWORK",
+            "DetectionModelName": ""
+        }        
     ]
 }
 ```
@@ -65,7 +66,30 @@ Parameter `RegionPredetectionModes` consist of a group of region predetection mo
             RPM_GENERAL<br>
             RPM_GENERAL_RGB_CONTRAST<br>
             RPM_GENERAL_GRAY_CONTRAST<br>
-            RPM_GENERAL_HSV_CONTRAST
+            RPM_GENERAL_HSV_CONTRAST<br>
+            RPM_NEURAL_NETWORK
+        </td>
+    </tr>    
+    <tr>
+        <td rowspan = "5" style="vertical-align:text-top">DetectionModelName<br>(Optional)</td>
+        <td><b>Description</b><br>References the detection model by its name.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>String</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>The name of a Model object that defined in CaptureVisionModelOptions.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>
+            RPM_NEURAL_NETWORK<br>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>""
         </td>
     </tr>
     <tr>
@@ -396,5 +420,15 @@ Detects region using the general algorithm based on HSV colour contrast. This mo
 * MinImageDimension
 * Sensitivity
 * SpatialIndexBlockSize
+* LibraryFileName
+* LibraryParameters
+
+### RPM_NEURAL_NETWORK
+
+Detects region using the object detection model.
+
+**Available Mode Arguments:**
+
+* DetectionModelName
 * LibraryFileName
 * LibraryParameters

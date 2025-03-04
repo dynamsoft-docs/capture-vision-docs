@@ -6,7 +6,6 @@ keywords: Base document normalizer task setting name
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/document-normalizer-task-settings/base-document-normalizer-task-setting-name.html
 ---
 
 # BaseDocumentNormalizerTaskSettingName

@@ -62,6 +62,8 @@ noTitleIndex: true
     ],
     "BarcodeZoneMinDistanceToImageBorders" : 1,
     "Code128Subset" : "A",
+    "DataMatrixSizeOptions": ["DMS_DEFAULT"],
+    "DataMatrixModuleIsotropic": 1
     "DeformationResistingModes" : [
         {
             "Mode": "DRM_GENERAL", 

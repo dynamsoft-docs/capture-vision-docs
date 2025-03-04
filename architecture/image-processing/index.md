@@ -8,137 +8,56 @@ noTitleIndex: false
 permalink: /architecture/image-processing/index.html
 ---
 
-> *Go to [DCV Architecture](../index.md)*
-
 # Image-Processing Tasks
 
-In the Dynamsoft Capture Vision (DCV) architecture, various image processing tasks exist, each constituting a comprehensive algorithmic procedure designed to extract specific information or to produce an improved version of the original image.
+In the Dynamsoft Capture Vision (DCV) architecture, various image-processing tasks exist, each representing a comprehensive algorithmic procedure designed to extract specific information or enhance the original image.
 
-## Task Types
+## Tasks
 
-The following are the image-processing tasks supported at present:
+The following image-processing tasks are currently supported:
 
-| Task Type                  | Performed By | Category         | Result Type             |
-| :------------------------- | :----------- | :--------------- | :---------------------- |
-| Read Barcodes              | DBR          | Image-Processing | Decoded Barcodes        |
-| Recognize Text Lines       | DLR          | Image-Processing | Recognized TextLines    |
-| Detect Document Boundaries | DDN          | Image-Processing | Document Boundary Quads |
-| Normalize a Document       | DDN          | Image-Processing | Normalized Image        |
+- Read barcodes
+- Recognize text lines
+- Normalize a document
 
-***Table 1: Task Types***
+## Sections and stages
 
-## Divide Tasks into Sections
+Each image-processing task consists of multiple sections, with each section containing algorithmic procedures that generate location-based results. Additionally, each section is further divided into multiple stages.
 
-Each image-processing task can be further divided into three sections, each of these sections constitutes a collection of relevant algorithmic proedures designed to produce the location results 
+The sections for each task are listed below. To learn more about the stages within each section, follow the provided links.
 
-| Task Type            | Sections                                                            |
-| :------------------- | :------------------------------------------------------------------ |
-| Read Barcodes        | Region Pre-detection, Barcode Localization, Barcode Decoding        |
-| Recognize Text Lines | Region Pre-detection, Text-line Localization, Text-line Recognition |
-| Normalize a Document | Region Pre-detection, Document Detection, Document Normalization    |
+### Read barcodes
 
-***Table 2: Tasks and Sections***
+This task includes the following sections:
 
-In total, there are 7 unique image-processing sections, which belong to one of three steps of a task:
+- [Region pre-detection](../../parameters/reference/barcode-reader-task-settings/section-region-predetection.md)
+- [Barcode localization](../../parameters/reference/barcode-reader-task-settings/section-barcode-localization.md)
+- [Barcode decoding](../../parameters/reference/barcode-reader-task-settings/section-barcode-decoding.md)
 
-### Step one: initial image-processing
+### Recognize text lines
 
-This step tries to find parts of the image, called "regions of interest (ROI)" that exhibit distinct features that match the result we are trying to obtain. Then these regions are cropped to produce regional images as the final output of this step for the next step to process. There is only one section for this step:
+This task includes the following sections:
 
-- [Region Pre-detection](region-predetection.md)
+- [Region pre-detection](../../parameters/reference/label-recognizer-task-settings/section-regions-predetection.md)
+- [Text-line localization](../../parameters/reference/label-recognizer-task-settings/section-text-lines-localization.md)
+- [Text-line recognition](../../parameters/reference/label-recognizer-task-settings/section-text-lines-recognition.md)
 
-> 1. If no specific region is found, the entire image is the output.
-> 2. There can be multiple regions found which result in multiple regional images as the output.
+### Normalize a document
 
-### Step two: detecting the precise location
+This task includes the following sections:
 
-This step tries to find the precise location, called "zones", of the final results (a barcode, a text-line or a document) on the regional images from step one. Then these zones are cropped to produce zonal images as the final output of this step.
+- [Region pre-detection](../../parameters/reference/document-normalizer-task-settings/section-regions-predetection.md)
+- [Document detection](../../parameters/reference/document-normalizer-task-settings/section-document-detection.md)
+- [Document deskewing](../../parameters/reference/document-normalizer-task-settings/section-document-deskewing.md)
+- [Image enhancement](../../parameters/reference/document-normalizer-task-settings/section-image-enhancement.md)
 
-Step two of a task can be one of the following three sections:
+## Stages and intermediate results
 
-- [Barcode Localization](barcode-localization.md)
-- [Text-line Localization](textline-localization.md)
-- [Document Detection](document-detection.md) (a document refers to an object with a quadrilateral boundary)
+Stages are the smallest processing units in the workflow, and their outputs are referred to as intermediate results. The result of one stage typically serves as the input for the next.
 
-> As mentioned in ["Divide Sections into Stages"](#divide-sections-into-stages), each section is further divided into stages. These three sections in step two starts with the same few stages. Read more on [Shared Detection](shared-detection.md).
+Users can register listeners to capture results from one or multiple stages. DCV also allows real-time intervention, enabling users to modify the algorithmic process by adjusting intermediate results between stages.
 
-### Step three: producing the final results
+For more details, refer to:
 
-Based on the zonal images, each functional product performs the last operation to obtain the final results.
-
-Step three of a task can be one of the following three sections:
-
-- [Barcode Decoding](barcode-decoding.md)
-- [Text-line Recognition](textline-recognition.md)
-- [Document Normalization](document-normalization.md)
-
-The following is a simple demonstration of the sections:
-
-```mermaid
-flowchart LR;
-     A[1.Region Pre-Detection]-->C[2.1.Shared Detection]
-     C---D[2.2.Barcode Localization]
-     C---E[2.2.Text-line Localization]
-     C---F[2.2.Document Detection]
-     D---G[3.Barcode Decoding]
-     E---H[3.Text-line Recognition]
-     F---I[3.Document Normalization]
-```
-
-## Divide Sections into Stages
-
-Each of the 7 sections mentioned in ["Divide Tasks into Sections"](#divide-tasks-into-sections) can be further divided into many stages as shown below:
-
-> Stages shared by "Barcode Localization", "Text-line Localization" and "Document Detection" are put together for the pseudo type "Shared Detection Section". Read more on [Shared Detection](shared-detection.md)
-
-| Section Type             | Stages                                                                                                                                                                                                                                                                                                                                   |
-| :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Region Pre-detection     | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_PREDETECTED_REGIONS                                                                                                                                                                                                |
-| Shared Detection Section | IRUT_COLOUR_IMAGE, IRUT_SCALED_DOWN_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, <br /> IRUT_TRANSFORMED_GRAYSCALE_IMAGE, IRUT_ENHANCED_GRAYSCALE_IMAGE, IRUT_BINARY_IMAGE, <br /> IRUT_TEXTURE_DETECTION_RESULT, IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE, IRUT_TEXTURE_REMOVED_BINARY_IMAGE, <br /> IRUT_TEXT_ZONES, IRUT_TEXT_REMOVED_BINARY_IMAGE |
-| Barcode Localization     | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_CANDIDATE_BARCODE_ZONES, <br /> IRUT_LOCALIZED_BARCODES                                                                                                                                                                                                                                          |
-| Text-line Localization   | IRUT_LOCALIZED_TEXT_LINES                                                                                                                                                                                                                                                                                                                |
-| Document Detection       | IRUT_CONTOURS, IRUT_LINE_SEGMENTS, IRUT_LONG_LINES, <br /> IRUT_CORNERS, IRUT_CANDIDATE_QUAD_EDGES, IRUT_DETECTED_QUADS                                                                                                                                                                                                                  |
-| Barcode Decoding         | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE, IRUT_COMPLEMENTED_BARCODE_IMAGE, IRUT_SCALED_UP_BARCODE_IMAGE, <br /> IRUT_DECODED_BARCODES                                                                                                                   |
-| Text-line Recognition    | IRUT_COLOUR_IMAGE, IRUT_GRAYSCALE_IMAGE, IRUT_TRANSFORMED_GRAYSCALE_IMAGE, <br /> IRUT_RECOGNIZED_TEXT_LINES                                                                                                                                                                                                                             |
-| Document Normalization   | IRUT_NORMALIZED_IMAGES                                                                                                                                                                                                                                                                                                                   |
-
-***Table 3: Sections and Stages***
-
-In total, there are 27 unique stages which are identified by the types of results they generate:
-
-- IRUT_COLOUR_IMAGE
-- IRUT_SCALED_DOWN_COLOUR_IMAGE
-- IRUT_GRAYSCALE_IMAGE
-- IRUT_TRANSFORMED_GRAYSCALE_IMAGE
-- IRUT_ENHANCED_GRAYSCALE_IMAGE
-- IRUT_PREDETECTED_REGIONS
-- IRUT_BINARY_IMAGE
-- IRUT_TEXTURE_DETECTION_RESULT
-- IRUT_TEXTURE_REMOVED_GRAYSCALE_IMAGE
-- IRUT_TEXTURE_REMOVED_BINARY_IMAGE
-- IRUT_CONTOURS
-- IRUT_LINE_SEGMENTS
-- IRUT_TEXT_ZONES
-- IRUT_TEXT_REMOVED_BINARY_IMAGE
-- IRUT_CANDIDATE_BARCODE_ZONES
-- IRUT_LOCALIZED_BARCODES
-- IRUT_SCALED_UP_BARCODE_IMAGE
-- IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE
-- IRUT_COMPLEMENTED_BARCODE_IMAGE
-- IRUT_DECODED_BARCODES
-- IRUT_LONG_LINES
-- IRUT_CORNERS
-- IRUT_CANDIDATE_QUAD_EDGES
-- IRUT_DETECTED_QUADS
-- IRUT_LOCALIZED_TEXT_LINES
-- IRUT_RECOGNIZED_TEXT_LINES
-- IRUT_NORMALIZED_IMAGES
-
-These stages are the minimal processing units that can be manipulated and these results are called intermediate results. For successive stages, the result of one stage is usually the source object to be processed by the next stage. A user can register listeners to obtain the results for one or multiple stages. DCV also allows the user to manipulate the algorithmic process by changing the result in between stages. Read more on [Intermediate Result Receiver](../output.md#intermediate-result-receiver) and [Bidirectional Interactivity with Intermediate Results](../index.md#bidirectional-interactivity-with-intermediate-results).
-
-## Incomplete Task
-
-As mentioned in **Table 2** above, a task is usually complete, which means it consists of three consecutive sections. However, it is not always the case. 
-
-1. An incomplete task can be a halfway task which means it starts from step two or even step three and consists of only two or even just one section. Read more about [StartSection](../../parameters/reference/shared-parameter/start-section.md).
-2. An incomplete task can be a premature task which means it ends early and doesn't produce the final results. Unlike a halfway task which must start at the beginning of a section, a premature task may end at any stage of a section. Read more about [TerminateSetting](../../parameters/reference/shared-parameter/terminate-setting.md).
+- [Intermediate result receiver](../output.md#intermediate-result-receiver)  
+- [Bidirectional interactivity with intermediate results](../index.md#bidirectional-interactivity-with-intermediate-results)  

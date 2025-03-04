@@ -6,7 +6,6 @@ keywords: text line specification, LabelRecognizerTaskSetting
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/label-recognizer-task-settings/text-line-specification-name-array.html
 ---
 
 # TextLineSpecificationNameArray

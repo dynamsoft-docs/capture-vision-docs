@@ -6,7 +6,6 @@ keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/reference/document-normalizer-task-settings/content-type.html
 ---
 
 # ContentType

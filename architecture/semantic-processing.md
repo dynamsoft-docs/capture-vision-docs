@@ -8,33 +8,26 @@ noTitleIndex: true
 permalink: /architecture/semantic-processing.html
 ---
 
-> *Go to [DCV Architecture](index.md)*
-
 # Semantic Processing
 
-A semantic processing operation usually follows [Text-line Recognition](image-processing/textline-recognition.md) or [Barcode Decoding](image-processing/barcode-decoding.md):
+A semantic processing operation usually follows either a "Read barcodes" task or a "Recognize text lines" task.
 
-```mermaid
-flowchart LR;
-     A[3.Text-line Recognition]-->C[Semantic Processing]
-     B[3.Barcode Decoding]-->C[Semantic Processing]
-     style C fill:#f96,stroke:#333,stroke-width:4px
-```
+## What is Semantic Processing?
 
-## What is Semantic Processing
+The purpose of semantic processing is to make recognized text more user-friendly. Currently, this means parsing text that follows a specific format into structured fields.  
 
-The purpose of "Semantic Processing" is to make the recognized text more user friendly. At present, it means to parse a text, which follows a specific specification, into fields. For example, on this sample passport image
+For example, in the following passport image:
 
 ![semantic-processing-sample image](assets/semantic-processing-sample.png)
 
-we can find the MRZ and recognize the following text lines with a "Recognize-Text-Lines" task:
+A "Recognize text lines" task extracts the following lines:
 
 ```text
 P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<
 L898902C36UTO7408122F1204159ZE184226B<<<<<10
 ```
 
-these lines don't make much sense to us, so we parse them with a "Semantic Processing" task and with a bit more code, the result becomes something like this:
+By itself, this text may not be easily readable. However, using a "Semantic Processing" task, we can parse it into meaningful fields. With some additional processing, the result becomes:
 
 ```text
 Document Type : PASSPORT (TD-3)
