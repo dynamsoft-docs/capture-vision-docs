@@ -97,9 +97,9 @@ noTitleIndex: true
 
 ### Parameter Configurations
 
-**Select target barcode format**
+**Set target barcode format**
 
-Select `BarcodeFormatIds` for barcode by specifying the name of the format. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
+Sets `BarcodeFormatIds` to specify which barcode format the current FormatSpecification configuration is applied to. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
 
 **Set special configurations for target format**
 

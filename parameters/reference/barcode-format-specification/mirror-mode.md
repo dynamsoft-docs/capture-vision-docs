@@ -34,7 +34,7 @@ The structure of the`MirrorMode` is shown as follow:
 
 Different barcode formats have different default MirrorMode settings:
 
-- MM_BOTH: QRCode, DataMatrix, PDF417, AZTEC, Micro QR Code, Micro PDF417, DotCode and Pharmacode Two-Track.
+- MM_BOTH: QRCode, DataMatrix, PDF417, AZTEC, Micro QR Code, Micro PDF417 and DotCode.
 - MM_NORMAL: Other barcode formats
 
 ## Candidate Modes Introduction
