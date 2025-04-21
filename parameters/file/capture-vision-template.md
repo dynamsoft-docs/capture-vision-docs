@@ -32,7 +32,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
 
 | Parameter Name | Description |
 | -------------- | ----------- |
-| [`Name`](../reference/shared-parameter/name.md) | Represents the name of the parameter template, which serves as its unique identifier. |
+| [`Name`](../reference/capture-vision-template/name.md) | Represents the name of the parameter template, which serves as its unique identifier. |
 | [`ImageSourceName`](../reference/capture-vision-template/image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV. |
 | [`ImageROIProcessingNameArray`](../reference/capture-vision-template/image-roi-processing-name-array.md) | Represents the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. It is used to define recognition tasks performed on ROIs of an image, including reading barcodes, recognizing labels, or detecting document quadrilaterals. |
 | [`SemanticProcessingNameArray`](../reference/capture-vision-template/semantic-processing-name-array.md)| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
