@@ -29,7 +29,7 @@ Parameter `CodeSpecifications` specifies the names of `CodeSpecification` used f
 
 **Remarks**
 
-- The default value, [], means all CodeSpecification under resources path will be used.
+- The default value, [], means all `CodeSpecification` under default resources path will be used.
 - A `CodeSpecification` is a file named as [Name].dcpres which defines the fields and parsing rules for a specific code type.
 - Currently supported values:
     * MRTD_TD1_ID
