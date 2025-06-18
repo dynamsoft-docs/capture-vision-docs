@@ -400,7 +400,7 @@ public @interface EnumErrorCode
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    public static final int EC_CONTENT_NOT_FOUND = -50056,
-   /*The quardrilateral is invalid. */
+   /*The quadrilateral is invalid. */
    public static final int EC_QUADRILATERAL_INVALID = -50057,
    /** -60000~-69999: DCE error code. */
    /**-60000~-69999: DCE error code*/
@@ -613,7 +613,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
-   /*The quardrilateral is invalid. */
+   /*The quadrilateral is invalid. */
    DSErrorQuardrilateralInvalid            = -50057,
    /** -60000~-69999: DCE error code. */
    DSErrorCameraModelNotExist              = -60003,
@@ -823,7 +823,7 @@ public enum ErrorCode : Int
    /** -50000~-59999: DDN error code. */
    /** No content has been detected. */
    contentNotFound                  = -50056
-   /*The quardrilateral is invalid. */
+   /*The quadrilateral is invalid. */
    quardrilateralInvalid            = -50057
    /** -60000~-69999: DCE error code. */
    /** The camera module is not exist. */
@@ -1048,7 +1048,7 @@ typedef enum ErrorCode
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    EC_CONTENT_NOT_FOUND = -50056,
-   /*The quardrilateral is invalid. */
+   /*The quadrilateral is invalid. */
    EC_QUADRILATERAL_INVALID = -50057,
    /** -60000~-69999: DCE error code. */
    /**-60000~-69999: DCE error code*/
@@ -1276,7 +1276,7 @@ public enum EnumErrorCode
     /**There is a conflict in the regex of TextLineGroup. */
     EC_TEXT_LINE_GROUP_REGEX_CONFLICT = -40102,
     /**-50000~-59999: DDN error code*/
-    /*The quardrilateral is invalid*/
+    /*The quadrilateral is invalid*/
     EC_QUADRILATERAL_INVALID = -50057,
     /**-60000~-69999: DCE error code*/
     /**-70000~-79999: Panorama error code*/
