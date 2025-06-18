@@ -614,7 +614,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
    /*The quadrilateral is invalid. */
-   DSErrorquadrilateralInvalid            = -50057,
+   DSErrorQuadrilateralInvalid            = -50057,
    /** -60000~-69999: DCE error code. */
    DSErrorCameraModelNotExist              = -60003,
    DSErrorCameraIDNotExist                 = -60006,
