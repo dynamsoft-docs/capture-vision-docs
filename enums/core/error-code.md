@@ -413,7 +413,7 @@ public @interface EnumErrorCode
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    public static final int EC_CONTENT_NOT_FOUND = -50056,
-   /*The quardrilateral is invalid. */
+   /*The quadrilateral is invalid. */
    public static final int EC_QUADRILATERAL_INVALID = -50057,
    /*[Document Normalizer] No license found.*/
    public static final int EC_DDN_LICENSE_NOT_FOUND = -50058,
@@ -642,8 +642,8 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /** -50000~-59999: DDN error code. */
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
-   /*The quardrilateral is invalid. */
-   DSErrorQuardrilateralInvalid            = -50057,
+   /*The quadrilateral is invalid. */
+   DSErrorquadrilateralInvalid            = -50057,
    /*[Document Normalizer] No license found.*/
    DSErrorDDNLicenseNotFound               = -50058,
    /** -60000~-69999: DCE error code. */
@@ -873,8 +873,8 @@ public enum ErrorCode : Int
    /** -50000~-59999: DDN error code. */
    /** No content has been detected. */
    contentNotFound                  = -50056
-   /*The quardrilateral is invalid. */
-   quardrilateralInvalid            = -50057
+   /*The quadrilateral is invalid. */
+   quadrilateralInvalid            = -50057
    /*[Document Normalizer] No license found.*/
    ddnLicenseNotFound               = -50058
    /** -60000~-69999: DCE error code. */
@@ -1110,7 +1110,7 @@ typedef enum ErrorCode
     /** -50000~-59999: DDN error code. */
     /**No content has been detected. */
     EC_CONTENT_NOT_FOUND = -50056,
-    /*The quardrilateral is invalid. */
+    /*The quadrilateral is invalid. */
     EC_QUADRILATERAL_INVALID = -50057,
     /*[Document Normalizer] No license found.*/
     EC_DOCUMENT_NORMALIZER_LICENSE_NOT_FOUND = -50058,
@@ -1348,7 +1348,7 @@ public enum EnumErrorCode
     /**[Label Recognizer] No license found.*/
     EC_LABEL_RECOGNIZER_LICENSE_NOT_FOUND = -40103,
     /**-50000~-59999: DDN error code*/
-    /*The quardrilateral is invalid*/
+    /*The quadrilateral is invalid*/
     EC_QUADRILATERAL_INVALID = -50057,
     /**[Document Normalizer] No license found.*/
     EC_DOCUMENT_NORMALIZER_LICENSE_NOT_FOUND = -50058,
@@ -1581,7 +1581,7 @@ class EnumErrorCode(IntEnum):
     #[Label Recognizer] No license found.
     EC_LABEL_RECOGNIZER_LICENSE_NOT_FOUND = -40103
     #-50000~-59999: DDN error code
-    #The quardrilateral is invalid
+    #The quadrilateral is invalid
     EC_QUADRILATERAL_INVALID = -50057
     #[Document Normalizer] No license found.
     EC_DOCUMENT_NORMALIZER_LICENSE_NOT_FOUND = -50058
