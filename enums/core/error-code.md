@@ -643,7 +643,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
    /*The quadrilateral is invalid. */
-   DSErrorQuadrilateralInvalid            = -50057,
+   DSErrorQuardrilateralInvalid            = -50057,
    /*[Document Normalizer] No license found.*/
    DSErrorDDNLicenseNotFound               = -50058,
    /** -60000~-69999: DCE error code. */
@@ -874,7 +874,7 @@ public enum ErrorCode : Int
    /** No content has been detected. */
    contentNotFound                  = -50056
    /*The quadrilateral is invalid. */
-   quadrilateralInvalid            = -50057
+   quardrilateralInvalid            = -50057
    /*[Document Normalizer] No license found.*/
    ddnLicenseNotFound               = -50058
    /** -60000~-69999: DCE error code. */

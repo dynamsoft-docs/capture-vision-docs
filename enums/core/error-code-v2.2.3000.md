@@ -614,7 +614,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
    /*The quadrilateral is invalid. */
-   DSErrorQuadrilateralInvalid            = -50057,
+   DSErrorQuardrilateralInvalid            = -50057,
    /** -60000~-69999: DCE error code. */
    DSErrorCameraModelNotExist              = -60003,
    DSErrorCameraIDNotExist                 = -60006,
@@ -824,7 +824,7 @@ public enum ErrorCode : Int
    /** No content has been detected. */
    contentNotFound                  = -50056
    /*The quadrilateral is invalid. */
-   quadrilateralInvalid            = -50057
+   quardrilateralInvalid            = -50057
    /** -60000~-69999: DCE error code. */
    /** The camera module is not exist. */
    cameraModelNotExist              = -60003
