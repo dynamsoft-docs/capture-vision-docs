@@ -57,7 +57,7 @@ The `TargetROIDef` object is used to specify one or more recognition tasks to be
 | [`TaskSettingNameArray`]({{site.dcvb_parameters_reference}}target-roi-def/task-setting-name-array.html) | Represents the collection of task setting object names, used to refer to the `BarcodeReaderTaskSetting`,`LabelRecognizerTaskSetting`,`DocumentNormalizerTaskSetting` objects. It is used to define recognition tasks such as reading barcodes, recognizing labels, or detecting document quads. |
 | [`Location`]({{site.dcvb_parameters_reference}}target-roi-def/location.html) | Define the spatial location where the recognition tasks are performed. It consists of `ReferenceObjectFilter` and `Offset` parameter. |
 | [`BaseTargetROIDefName`]({{site.dcvb_parameters_reference}}target-roi-def/base-target-roidef-name.html) | Represents the name of another `TargetROIDef` object. It is used to inherit the parameters defined in its parent `TargetROIDef` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.|
-| [`EnableResultsDeduplication`]({{site.dcvb_parameters_reference}}target-roi-def/enable-result-deduplication.html) | Represents whether to enable the result deduplication. |
+| [`EnableResultsDeduplication`]({{site.dcvb_parameters_reference}}target-roi-def/enable-results-deduplication.html) | Represents whether to enable the result deduplication. |
 
 In simple terms, `TargetROIDef` can be expressed using the following formula:
 
