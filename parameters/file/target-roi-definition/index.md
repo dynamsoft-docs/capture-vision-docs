@@ -71,11 +71,12 @@ The recognition tasks configured on the `TargetROIDef` object include barcode re
 The atomic result of each task type is the smallest output item, which can be a barcode, text line, table cell, detected quadrilateral, etc. `CapturedResult` represents a set of all captured atomic result items on an image. The following table lists the task types and corresponding atomic result item types.
 
 | Task Type                 | Performed By | Atomic Result Type     |
-| :-------------------      | :----------- | :------------------- |
+| :-------------------      | :----------- | :--------------------- |
 | Read Barcodes             | Dynamsoft Barcode Reader SDK          | BarcodeResultItem               |
 | Recognize Text Lines      | Dynamsoft Label Recognizer SDK        | TextResultItem                  |
 | Detect Document Borders   | Dynamsoft Document Normalizer SDK     | DetectedQuadResultItem          |
-| Normalize a Document      | Dynamsoft Document Normalizer SDK     | NormalizedImageResultItem       |
+| Deskew a Document         | Dynamsoft Document Normalizer SDK     | DeskewedImageResultItem         |
+| Enhance an Image          | Dynamsoft Document Normalizer SDK     | EnhancedImageResultItem         |
 
 If you want to learn more about the design details of recognition task settings, please refer to the following links:
 
