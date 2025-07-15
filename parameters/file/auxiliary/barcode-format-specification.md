@@ -71,6 +71,8 @@ noTitleIndex: true
         }
     ],
     "FindUnevenModuleBarcode" : 1,
+    "IncludeTrailingCheckDigit": 1,
+    "IncludeImpliedAI01": 0,
     "HeadModuleRatio" : "211412",
     "MinQuietZoneWidth" : 1,
     "MinRatioOfBarcodeZoneWidthToHeight" : 100,

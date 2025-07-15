@@ -53,5 +53,13 @@ plugins:
   - jekyll-readme-index
   - jekyll-seo-tag
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      noTitleIndex: true
+      needAutoGenerateSidebar: true
+      needGenerateH3Content: true
+
 url: "https://www.dynamsoft.com" # sitemap root
 
