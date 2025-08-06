@@ -38,13 +38,3 @@ The maximum number of instances of the model.
 | **Range**<br>[1,256] |
 | **Default Value**<br>1 (4 for single character model) |
 
-
-## ModelArgs
-
-The maximum number of instances of the model.
-
-| Parameter Summary |
-| :------------------- |
-| **Type**<br>*JSON object* |
-| **Range**<br>[1,256] |
-| **Default Value**<br>1 (4 for single character model) |
