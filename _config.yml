@@ -17,6 +17,7 @@ dcvb_js: /capture-vision/docs/web/programming/javascript/
 dcvb_cpp: /capture-vision/docs/server/programming/cplusplus/
 dcvb_dotnet: /capture-vision/docs/server/programming/dotnet/
 dcvb_python: /capture-vision/docs/server/programming/python/
+dcvb_java: /capture-vision/docs/server/programming/java/
 dcvb_android: /capture-vision/docs/mobile/programming/android/
 dcvb_ios: /capture-vision/docs/mobile/programming/ios/
 dcvb_maui: /capture-vision/docs/mobile/programming/maui/
