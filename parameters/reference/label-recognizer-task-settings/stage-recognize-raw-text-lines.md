@@ -26,7 +26,7 @@ The `RecognizeRawTextLinesStage` is designed at the stage level to recognize the
     "ConfusableCharactersPath": "",
     "ClusterSamplesCountThreshold": 0,
     "OverlappingCharactersPath": "OverlappingChars.data", 
-    "EnableForcedCorrection": 1
+    "EnableRegexForceCorrection": 1
 }
 ```
 
