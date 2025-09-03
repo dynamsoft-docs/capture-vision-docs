@@ -6,6 +6,7 @@ keywords: text lines, concatenated strings length
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
+permalink: /parameters/reference/label-recognizer-task-settings/string-length-range.html
 ---
 
 # StringLengthRange

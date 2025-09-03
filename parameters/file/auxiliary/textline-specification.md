@@ -9,13 +9,12 @@ noTitleIndex: true
 
 # TextLineSpecification Object
 
-Set the `CharacterModel`, `TextLineRecModel`, `ImageProcessing` parameters and other configurations for the specified text lines. This is the parameter that defines how the algorithm extract characters from each text lines of a `LabelRecognizer` task. You can leave this area empty to use the default character recognizing settings.
+Set the `CharacterModel`, `ImageProcessing` parameters and other configurations for the specified text lines. This is the parameter that defines how the algorithm extract characters from each text lines of a `LabelRecognizer` task. You can leave this area empty to use the default character recognizing settings.
 
 ```json
 {
     "Name":"LS_1",
     "CharacterModelName" : "NumberLetter",
-    "TextLineRecModelName" : "",
     "ApplicableTextLineNumbers":"",
     "GrayscaleEnhancementModes" : [],
     "BinarizationModes" : [],
@@ -31,17 +30,15 @@ Set the `CharacterModel`, `TextLineRecModel`, `ImageProcessing` parameters and o
 }
 ```
 
+If the number **first** text line is not in the area, only the **third** and **fifth** text lines are processed.
+
 ## Usage Instructions
 
 ### Parameter Configurations
 
 **Select CharacterModel**
 
-Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](capture-vision-model.md) page for how to configure the models.
-
-**Select TextLineRecModel**
-
-Select one of the `TextLineRecModel` for the text line(s) by specifying the name of the model. View [`TextLineRecModel`](capture-vision-model.md) page for how to configure the models.
+Select one of the `CharacterModel` for the text line(s) by specifying the name of the model. View [`CharacterModel`](character-model.md) page for how to configure the models.
 
 **Set Targeting Text Lines**
 
@@ -75,9 +72,9 @@ If your set the `ApplicableTextLineNumbers` as "1-8", the text line from 1 to 6 
 
 `GrayscaleEnhancementModes` enhance the quality of the grayscale image.
 
-`BinarizationModes` configurations finally reflect in the quality of the binary image. It determines how the characters are presented on the text areas before they recognized by the library. The higher quality of the binary image, the higher read rate and accuracy of the character recognition result.
+`BinarizationModes` configurations finally reflect in the quality of the binary image. It determines how the charaters are presented on the text areas before they recognized by the library. The higher quality of the binary image, the higher read rate and accuracy of the character recognition result.
 
-`CharacterNormalizationModes` are additional settings that further improve the quality of characters. Generally, they are **morphological transformations**. You can view more about them from <a href="https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html" target="_blank">Image-Processing in OpenCV - Morphological Transformations</a>.
+`CharacterNormalizationModes` are additional settings that further improve the quality of characters. Genarally, they are **morphological transformations**. You can view more about them from <a href="https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html" target="_blank">Image-Processing in OpenCV - Morphological Transformations</a>.
 
 ### Quick Settings
 
@@ -86,7 +83,7 @@ Based on a existing `TextLineSpecification` object, you can use `BaseTextLineSpe
 ```json
 {
     "Name":"LS_0",
-    "CharacterModelName" : "NumberLetterCharRecognition",
+    "CharacterModelName" : "NumberLetter",
     "ApplicableTextLineNumbers":"1-3",
     "BinarizationModes" : [
         {
@@ -116,4 +113,4 @@ Based on a existing `TextLineSpecification` object, you can use `BaseTextLineSpe
 
 ### Additional Annotations
 
-`LabelRecognizerTaskSetting` determines how a label recognizer task works from initializing to finalizing. As a parameter of `LabelRecognizerTaskSetting`, `TextLineSpecification` decides how the text lines are processed when they are detected in the label recognizer task. A group of default settings has been allocated for the `TextLineSpecification` so that the `LabelRecognizerTaskSetting` still works without specifying `TextLineSpecification` parameters.
+`LabelRecognizerTaskSetting` determines how a label recognizer task works from initializing to finializing. As a parameter of `LabelRecognizerTaskSetting`, `TextLineSpecification` decides how the text lines are processed when they are detected in the label recognizer task. A group of default settings has been allocated for the `TextLineSpecification` so that the `LabelRecognizerTaskSetting` still works without specifying `TextLineSpecification` parameters.

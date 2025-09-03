@@ -6,15 +6,18 @@ keywords: Character model
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
+permalink: /parameters/reference/text-line-specification/character-model-name.html
 ---
 
 # CharacterModelName
 
-The `CharacterModelName` parameter references the character model by its name.
+Parameter `CharacterModelName` defines the name of the character model.
+
+## Example
 
 ```json
 {
-    "CharacterModelName": "NumberLetterCharRecognition"
+    "CharacterModelName": "NumberLetter"
 }
 ```
 
@@ -23,5 +26,5 @@ The `CharacterModelName` parameter references the character model by its name.
 | CharacterModelName Parameter Summary |
 | :----------------------------------- |
 | **Type**<br>*String* |
-| **Range**<br>The name of a Character Model object that defined in `CaptureVisionModelOptions`. |
-| **Default Value**<br>"NumberLetterCharRecognition" |
+| **Range**<br>The name of a `CharacterModel` object that defined in `CharacterModelOptions`. |
+| **Default Value**<br>"NumberLetter" |

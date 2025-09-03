@@ -75,12 +75,12 @@ As shown in the example below, the organizational structure of a parameter templ
     "TextLineSpecificationOptions" : [
         {
             "Name" : "LS_0",
-            "CharacterModelName" : "NumberLetterCharRecognition"
+            "CharacterModelName" : "NumberLetter"
         }
     ],
-    "CaptureVisionModelOptions" : [
+    "CharacterModelOptions" : [
         {
-            "Name" : "NumberLetterCharRecognition"
+            "Name" : "NumberLetter"
         }
     ],
     "DocumentNormalizerTaskSettingOptions": [
@@ -152,19 +152,16 @@ The following table list the main objects type and description of a complete par
 
 | Object Type                    | Description  |
 | :------------------------------| :----------- |
-| [CaptureVisionTemplate]({{site.dcvb_parameters}}file/capture-vision-template.html) | This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.|
-| [ImageSource]({{site.dcvb_parameters}}file/image-source.html) | Defines the input for DCV responsible for providing images to DCV. It can be defined as different image sources, including but not limited to, image directories, scanners, cameras, etc.|
-| [TargetROIDef]({{site.dcvb_parameters}}file/target-roi-definition/index.html) | Used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
-| [SemanticProcessing]({{site.dcvb_parameters}}file/semantic-processing/index.html) | Used to specify one or more code parsing tasks to be performed on text/byte results to help extract human readable information. |
-| [BarcodeReaderTaskSetting]({{site.dcvb_parameters}}file/task-settings/barcode-reader-task-settings.html) | Configures the settings for barcode reading tasks performed on images in DCV. |
-| [LabelRecognizerTaskSetting]({{site.dcvb_parameters}}file/task-settings/label-recognizer-task-settings.html) | Configures the settings for label recognition tasks performed on images in DCV.|
-| [DocumentNormalizerTaskSetting]({{site.dcvb_parameters}}file/task-settings/document-normalizer-task-settings.html) | Configures the settings for the document detection or normalization process of an image in DCV. |
-| [CodeParserTaskSetting]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) | Configures the code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
-| [OutputTaskSetting]({{site.dcvb_parameters}}file/task-settings/output-task-setting.html) | Configure how to output the expected results of the ancestor `TargetROIDef` by filtering the results of the descendant `TargetROIDef` object. |
-| [ImageParameter]({{site.dcvb_parameters}}file/image-parameter.html) | Provides various image-processing features to adjust and enhance the input image for better recognition results.|
-| [CaptureVisionModel]({{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html) | Defines how the library find Convolutional Neural Networks (CNN) model files.|
-| [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html) | Sets configurations for specified barcode formats.|
-| [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/textline-specification.html) | Defines configurations for the specified text lines.|
+|  [CaptureVisionTemplate]({{site.dcvb_parameters}}file/capture-vision-template.html)         |  This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.|
+|  [ImageSource]({{site.dcvb_parameters}}file/image-source.html)                  |  Defines the input for DCV responsible for providing images to DCV. It can be defined as different image sources, including but not limited to, image directories, scanners, cameras, etc.|
+| [TargetROIDef]({{site.dcvb_parameters}}file/target-roi-definition/index.html)                   |  Used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
+|  [SemanticProcessing]({{site.dcvb_parameters}}file/semantic-processing/index.html)            |  Used to specify one or more code parsing tasks to be performed on text/byte results to help extract human readable information. |
+|  [BarcodeReaderTaskSetting]({{site.dcvb_parameters}}file/task-settings/barcode-reader-task-settings.html)      |  Configures the settings for barcode reading tasks performed on images in DCV. |
+|  [LabelRecognizerTaskSetting]({{site.dcvb_parameters}}file/task-settings/label-recognizer-task-settings.html)    |  Configures the settings for label recognition tasks performed on images in DCV.|
+|  [DocumentNormalizerTaskSetting]({{site.dcvb_parameters}}file/task-settings/document-normalizer-task-settings.html) |  Configures the settings for the document detection or normalization process of an image in DCV. |
+|  [CodeParserTaskSetting]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html)         |  Configures the code parsing tasks such as passport MRZ, driving license and other user specific tasks in DCV etc.|
+|  [OutputTaskSetting]({{site.dcvb_parameters}}file/task-settings/output-task-setting.html)         | Configure how to output the expected results of the ancestor `TargetROIDef` by filtering the results of the descendant `TargetROIDef` object. |
+|  [ImageParameter]({{site.dcvb_parameters}}file/image-parameter.html)              |  Provides various image-processing features to adjust and enhance the input image for better recognition results.|
 
 For more details, please refer to [introduction of the capture vision template](capture-vision-template.md)
 

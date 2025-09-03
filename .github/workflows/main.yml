@@ -31,3 +31,12 @@ jobs:
       doc-repo: capture-vision-docs
       doc-url: capture-vision/docs/core
     secrets: inherit
+
+  Build-v2:
+    if: ${{ github.ref == 'refs/heads/v2' }}
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@DCV-v2
+    with:
+      doc-repo: capture-vision-docs
+      doc-url: capture-vision/docs/v2/core
+      doc-branch: v2
+    secrets: inherit

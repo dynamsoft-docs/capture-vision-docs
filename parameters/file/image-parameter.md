@@ -10,58 +10,106 @@ noTitleIndex: false
 
 # ImageParameter Object
 
-The ImageParameter object is designed to configure and organize parameters for image processing stages, including but not limited to convert color-to-grayscale stage, enhance grayscale image stage, binarize image stage, detect text zone stage, and detect texture stage. You can configure detailed parameters for each stage.
+The ImageParameter object is designed to configure and organize common parameters for image processing, including but not limited to color-to-grayscale conversion, grayscale enhancement, binarization, color region pre-detection, text detection, and texture detection. These configuration parameters play a role in different stages of recognition tasks.
 
 ```json
-"ImageParameterOptions": [
+{
+    "Name" : "ip_default",
+    "BaseImageParameterName" : "",
+    "BinarizationModes" : 
+    [
+        {
+            "BinarizationThreshold" : -1,
+            "BlockSizeX" : 0,
+            "BlockSizeY" : 0,
+            "EnableFillBinaryVacancy" : 1,
+            "GrayscaleEnhancementModesIndex" : -1,
+            "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
+            "MorphShape" : "Rectangle",
+            "ThresholdCompensation" : 10
+        }
+    ],
+    "ColourConversionModes" : 
+    [
+        {
+            "BlueChannelWeight" : -1,
+            "GreenChannelWeight" : -1,
+            "Mode" : "CICM_GENERAL",
+            "RedChannelWeight" : -1,
+            "ReferChannel" : "H_CHANNEL"
+        }
+    ],
+    "GrayscaleEnhancementModes" : 
+    [
+        {
+            "Mode" : "GEM_GENERAL",
+            "Sensitivity" : -1,
+            "SharpenBlockSizeX" : -1,
+            "SharpenBlockSizeY" : -1,
+            "SmoothBlockSizeX" : -1,
+            "SmoothBlockSizeY" : -1
+        }
+    ],
+    "GrayscaleTransformationModes" : 
+    [
+        {
+            "Mode" : "GTM_ORIGINAL"
+        }
+    ],
+    "IfEraseTextZone" : 0,
+    "RegionPredetectionModes" : 
+    [
+        {
+            "AspectRatioRange" : "[]",
+            "FindAccurateBoundary" : 0,
+            "ForeAndBackgroundColours" : "[]",
+            "HeightRange" : "[]",
+            "ImageParameterName" : "",
+            "MeasuredByPercentage" : 1,
+            "MinImageDimension" : 262144,
+            "Mode" : "RPM_GENERAL",
+            "RelativeRegions" : "[]",
+            "Sensitivity" : 1,
+            "SpatialIndexBlockSize" : 5,
+            "WidthRange" : "[]"
+        }
+    ],
+    "ScaleDownThreshold" : 2300,
+    "ScaleUpModes" : 
+    [
+        {
+            "AcuteAngleWithXThreshold" : -1,
+            "LetterHeightThreshold" : 0,
+            "Mode" : "SUM_AUTO",
+            "ModuleSizeThreshold" : 0,
+            "TargetLetterHeight" : 0,
+            "TargetModuleSize" : 0
+        }
+    ],
+    "TextDetectionMode" : 
     {
-        "Name" : "ip_default",
-        "BaseImageParameterName": "ip_base",
-        "ApplicableStages":[
-            { "Stage": "SST_SCALE_IMAGE", "ImageScaleSetting" : {} },
-            { "Stage": "SST_CONVERT_TO_GRAYSCALE", "ColourConversionModes" : [] },
-            { "Stage": "SST_TRANSFORM_GRAYSCALE", "GrayscaleTransformationModes" : [] },
-            { "Stage": "SST_ENHANCE_GRAYSCALE", "GrayscaleEnhancementModes" : [] },
-            { "Stage": "SST_BINARIZE_IMAGE", "BinarizationModes" : [] },
-            { "Stage": "SST_DETECT_TEXTURE", "TextureDetectionModes" : [] },
-            { "Stage": "SST_REMOVE_TEXTURE_FROM_GRAYSCALE" },
-            { "Stage": "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE" },
-            { "Stage": "SST_FIND_CONTOURS" },
-            { "Stage": "SST_DETECT_SHORTLINES", "ShortlineDetectionMode": {} },
-            { "Stage": "SST_ASSEMBLE_LINES", "LineAssemblyMode": {} },
-            { "Stage": "SST_DETECT_TEXT_ZONES", "TextDetectionMode": {} },
-            { "Stage": "SST_REMOVE_TEXT_ZONES_FROM_BINARY", "IfEraseTextZone": 0 }
-        ]
-    }
-],
+        "CharHeightRange" : 
+        [
+            1,
+            1000,
+            1
+        ],
+        "Direction" : "HORIZONTAL",
+        "MaxSpacingInALine" : -1,
+        "Mode" : "TTDM_SKIP"
+    },
+    "TextureDetectionModes" : 
+    [
+        {
+            "Mode" : "TDM_GENERAL_WIDTH_CONCENTRATION",
+            "Sensitivity" : 5
+        }
+    ]
+}
 ```
-
-- [Name]({{ site.dcvb_parameters_reference }}image-parameter/name.html)
-- [BaseImageParameterName]({{ site.dcvb_parameters_reference }}image-parameter/base-image-parameter-name.html)
-- [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html)
-  - [Scale Image Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-scale-image.html)
-    - [ImageScaleSetting]({{ site.dcvb_parameters_reference }}image-parameter/image-scale-settings.html)
-  - [Convert to Grayscale Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-convert-to-grayscale.html)
-    - [ColourConversionModes]({{ site.dcvb_parameters_reference }}image-parameter/colour-conversion-modes.html)
-  - [Transform Grayscale Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-transform-grayscale.html)
-    - [GrayscaleTransformationModes]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-transformation-modes.html)
-  - [Enhance Grayscale Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-enhance-grayscale.html)
-    - [GrayscaleEnhancementModes]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html)
-  - [Binarize Image Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-binarize-image.html)
-    - [BinarizationModes]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html)
-  - [Detect Texture Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-detect-texture.html)
-    - [TextureDetectionModes]({{ site.dcvb_parameters_reference }}image-parameter/texture-detection-modes.html)
-  - [Remove Texture From Grayscale Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-remove-texture-from-grayscale.html)
-  - [Binarize Texture Removed Grayscale Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-binarize-texture-removed-grayscale.html)
-  - [Find Contours Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-find-contours.html)
-  - [Detect Shortlines Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-detect-shortlines.html)
-    - [ShortlineDetectionMode]({{ site.dcvb_parameters_reference }}image-parameter/shortline-detection-mode.html)
-  - [Assemble Lines Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-assemble-lines.html)
-    - [LineAssemblyMode]({{ site.dcvb_parameters_reference }}image-parameter/line-assembly-mode.html)
-  - [Detect Text Zones Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-detect-text-zones.html)
-    - [TextDetectionMode]({{ site.dcvb_parameters_reference }}image-parameter/text-detection-mode.html)
-  - [Remove Text Zones From Binary Stage]({{ site.dcvb_parameters_reference }}image-parameter/stage-remove-text-zones-from-binary.html)
-    - [IfEraseTextZone]({{ site.dcvb_parameters_reference }}image-parameter/if-erase-text-zone.html)
 
 ## Definition and Reference
 
@@ -106,7 +154,7 @@ You can define a new `ImageParameter` object based on an existing `ImageParamete
 
 ```json
 {
-    "SectionArray":
+    "SectionImageParameterArray":
     [
         {
             "Section": "ST_REGION_PREDETECTION",
@@ -129,25 +177,16 @@ You can define a new `ImageParameter` object based on an existing `ImageParamete
 View the parameter references for the details of each `ImageParameter` parameters.
 
 | Parameter Name | Description |
-| ---------------------------------- | ----------- |
-| [`BaseImageParameterName`](../reference/image-parameter/base-image-parameter-name.md) | Represents the name of another `ImageParameter` object to inherit from. |
-| [`Name`](../reference/image-parameter/name.md) | Defines the name of a `ImageParameter` object, which serves as its unique identifier. |
-| [`ApplicableStages`](../reference/image-parameter/applicable-stages.md) | Defines the applicable stage parameters with an array of stage objects. |
-
-## Available Stages
-
-| Stage Name | Description |
-| ---------- | ----------- |
-| [`SST_SCALE_IMAGE`](../reference/image-parameter/stage-scale-image.md) | The stage for scaling up or down the image. |
-| [`SST_CONVERT_TO_GRAYSCALE`](../reference/image-parameter/stage-convert-to-grayscale.md) | The stage for converting a colour image to a grayscale image. |
-| [`SST_TRANSFORM_GRAYSCALE`](../reference/image-parameter/stage-transform-grayscale.md) | The stage for transforming the grayscale image. Generally used when processing inverted barcodes or text lines. |
-| [`SST_ENHANCE_GRAYSCALE`](../reference/image-parameter/stage-enhance-grayscale.md) | The stage for enhancing the quality of the grayscale image. |
-| [`SST_BINARIZE_IMAGE`](../reference/image-parameter/stage-binarize-image.md) | The stage for binarizing the image. |
-| [`SST_DETECT_TEXTURE`](../reference/image-parameter/stage-detect-texture.md) | The stage for detecting texture on the image. |
-| [`SST_REMOVE_TEXTURE_FROM_GRAYSCALE`](../reference/image-parameter/stage-remove-texture-from-grayscale.md) | The stage for removing texture from the grayscale image. |
-| [`SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE`](../reference/image-parameter/stage-binarize-texture-removed-grayscale.md) | The stage for binarizing the texture removed grayscale image. |
-| [`SST_FIND_CONTOURS`](../reference/image-parameter/stage-find-contours.md) | The stage for finding contours in the image. |
-| [`SST_DETECT_SHORTLINES`](../reference/image-parameter/stage-detect-shortlines.md) | The stage for detecting short lines for document boundary detection. |
-| [`SST_ASSEMBLE_LINES`](../reference/image-parameter/stage-assemble-lines.md) | The stage for assembling lines. |
-| [`SST_DETECT_TEXT_ZONES`](../reference/image-parameter/stage-detect-text-zones.md) | The stage for detecting text zones on the image. |
-| [`SST_REMOVE_TEXT_ZONES_FROM_BINARY`](../reference/image-parameter/stage-remove-text-zones-from-binary.md) | The stage for removing text zones from the binary image. |
+| -------------- | ----------- |
+| [`Name`](../reference/shared-parameter/name.md) | Represents the name of the `ImageParameter` object, which serves as its unique identifier. |
+| [`BaseImageParameterName`](../reference/image-parameter/base-image-parameter-name.md) | Represents the name of another `ImageParameter` object. It is used to inherit the parameters defined in its parent `ImageParameter` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.|
+| [`BinarizationModes`](../reference/image-parameter/binarization-modes.md) | Used to control the binarization process, including two modes of local binarization and global binarization. |
+| [`ColourConversionModes`](../reference/image-parameter/colour-conversion-modes.md) | Used to control the process of colour conversion, i.e. converting a colour image to a grayscale image.|
+| [`GrayscaleEnhancementModes`](../reference/image-parameter/grayscale-enhancement-modes.md) | Provides some image processing methods to enhance the quality of the grayscale image, including gray equalization, grayscale smoothing, grayscale sharpening and smoothing.|
+| [`GrayscaleTransformationModes`](../reference/image-parameter/grayscale-transformation-modes.md) | Used to control the color mode of the grayscale image, including the original mode and the inverted mode. |
+| [`IfEraseTextZone`](../reference/image-parameter/if-erase-text-zone.md) | Indicates whether to erase the detected text area in the image.|
+| [`RegionPredetectionModes`](../reference/image-parameter/region-predetection-modes.md) | Controls how to find a region of interest (ROI) within the image or frame. It consists of one or more modes, each mode representing a different way to find a region of interest.|
+| [`ScaleDownThreshold`](../reference/image-parameter/scale-down-threshold.md) | Controls the threshold used when shrinking an image. If the shorter edge size is larger than the given value, the library will calculate the required height and width of the image and shrink the image to that size.|
+| [`ScaleUpModes`](../reference/image-parameter/scale-up-modes.md)| Determines the process for scaling up an image used for detecting barcodes with small module size or recognizing text lines with small fonts. It consists of one or more modes, each mode represents a way to implement the scale-up. |
+| [`TextDetectionMode`](../reference/image-parameter/text-detection-mode.md) | Determines how to detect texts on an image. It consists of one or more modes, each mode represents a way to implement the detection. |
+| [`TextureDetectionModes`](../reference/image-parameter/texture-detection-modes.md) | Determines how to detect texture on an image. It consists of one or more modes, each mode represents a way to implement the detection. |

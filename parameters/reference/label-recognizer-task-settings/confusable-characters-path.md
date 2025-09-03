@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ConfusableCharactersPath - Dynamsoft Label Recognizer Parameters
-description: The parameter ConfusableCharactersPath of Dynamsoft Label Recognizer defines the path to the .data file containing standard characters features for confusable characters telling.
+description: The parameter ConfusableCharactersPath of Dynamsoft Label Recognizer defines the path to the .data file of the confusable characters.
 keywords: confusable characters path
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # ConfusableCharactersPath
 
-The parameter `ConfusableCharactersPath` sets the path to the .data file containing characters features for confusable characters telling.
+The parameter `ConfusableCharactersPath` sets the path to the .data file of the confusable characters.
 
 ## Example
 

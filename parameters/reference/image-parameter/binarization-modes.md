@@ -6,6 +6,7 @@ keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /parameters/reference/image-parameter/binarization-modes.html
 ---
 
 
@@ -17,20 +18,19 @@ Parameter `BinarizationModes` helps control the process of binarization, i.e., c
 
 ```json
 {
-    "BinarizationModes" : 
-    [
+    "BinarizationModes": [
         {
-            "BinarizationThreshold" : -1,
-            "BlockSizeX" : 0,
-            "BlockSizeY" : 0,
+            "Mode": "BM_LOCAL_BLOCK", 
+            "BlockSizeX": 5,
+            "BlockSizeY": 5,
             "EnableFillBinaryVacancy" : 1,
-            "GrayscaleEnhancementModesIndex" : -1,
-            "Mode" : "BM_LOCAL_BLOCK",
-            "MorphOperation" : "None",
-            "MorphOperationKernelSizeX" : 0,
-            "MorphOperationKernelSizeY" : 0,
-            "MorphShape" : "Rectangle",
-            "ThresholdCompensation" : 10
+            "ThresholdCompensation" : 5,
+            "LibraryFileName" : "",
+            "LibraryParameters" : ""
+        },
+        {
+            "Mode": "BM_THRESHOLD", 
+            "BinarizationThreshold": 125
         }
     ]
 }
@@ -61,7 +61,6 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     <tr>
         <td><b>Candidate Mode List</b><br>BM_THRESHOLD
             <br>BM_LOCAL_BLOCK
-            <br>BM_AUTO
             <br>BM_SKIP
         </td>
     </tr>
@@ -160,7 +159,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>"Erode", "Dilate", "Open", "Close", "Auto" or "None"
+        <td><b>Range</b><br>"Erode", "Dilate", "Open" or "Close"
         </td>
     </tr>
     <tr>
@@ -169,7 +168,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeX<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the horizontal kernel size for the morphology process. 0 stands for auto.
+        <td><b>Description</b><br>Sets the horizontal kernel size for the morphology process.
         </td>
     </tr>
     <tr>
@@ -177,7 +176,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0, 1000]
+        <td><b>Range</b><br>[-1, 1000]
         </td>
     </tr>
     <tr>
@@ -186,7 +185,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">MorphOperationKernelSizeY<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the vertical kernel size for the morphology process. 0 stands for auto.
+        <td><b>Description</b><br>Sets the vertical kernel size for the morphology process.
         </td>
     </tr>
     <tr>
@@ -194,7 +193,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>[0, 1000]
+        <td><b>Range</b><br>[-1, 1000]
         </td>
     </tr>
     <tr>
@@ -283,22 +282,21 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
 
 If the `BinarizationModes` is not configured in your template file, the following settings will be used as the default settings.
 
-#### For Stage SST_BINARIZE_IMAGE
+#### For Barcode Decoding
 
 ```json
 {
     "BinarizationModes" : 
     [
         {
-            "BinarizationThreshold" : -1,
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
             "EnableFillBinaryVacancy" : 1,
             "GrayscaleEnhancementModesIndex" : -1,
             "Mode" : "BM_LOCAL_BLOCK",
-            "MorphOperation" : "None",
-            "MorphOperationKernelSizeX" : 0,
-            "MorphOperationKernelSizeY" : 0,
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
             "MorphShape" : "Rectangle",
             "ThresholdCompensation" : 10
         }
@@ -306,22 +304,21 @@ If the `BinarizationModes` is not configured in your template file, the followin
 }
 ```
 
-#### For Stage SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE
+#### For Label Recognizing
 
 ```json
 {
     "BinarizationModes" : 
     [
         {
-            "BinarizationThreshold" : -1,
             "BlockSizeX" : 0,
             "BlockSizeY" : 0,
             "EnableFillBinaryVacancy" : 1,
             "GrayscaleEnhancementModesIndex" : -1,
-            "Mode" : "BM_AUTO",
-            "MorphOperation" : "None",
-            "MorphOperationKernelSizeX" : 0,
-            "MorphOperationKernelSizeY" : 0,
+            "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
             "MorphShape" : "Rectangle",
             "ThresholdCompensation" : 10
         }
@@ -329,24 +326,49 @@ If the `BinarizationModes` is not configured in your template file, the followin
 }
 ```
 
-#### For DeformationResistingModes
+#### For Document Normalizing
 
 ```json
 {
-    "BinarizationMode" : 
-    {
-        "BinarizationThreshold" : -1,
-        "BlockSizeX" : 0,
-        "BlockSizeY" : 0,
-        "EnableFillBinaryVacancy" : 1,
-        "GrayscaleEnhancementModesIndex" : -1,
-        "Mode" : "BM_LOCAL_BLOCK",
-        "MorphOperation" : "None",
-        "MorphOperationKernelSizeX" : 0,
-        "MorphOperationKernelSizeY" : 0,
-        "MorphShape" : "Rectangle",
-        "ThresholdCompensation" : 10
-    }
+    "BinarizationModes" : 
+    [
+        {
+            "BlockSizeX" : 0,
+            "BlockSizeY" : 0,
+            "EnableFillBinaryVacancy" : 0,
+            "GrayscaleEnhancementModesIndex" : -1,
+            "Mode" : "BM_LOCAL_BLOCK",
+            "MorphOperation" : "Close",
+            "MorphOperationKernelSizeX" : -1,
+            "MorphOperationKernelSizeY" : -1,
+            "MorphShape" : "Rectangle",
+            "ThresholdCompensation" : 10
+        }
+    ]
+}
+```
+
+#### For Text Line Specification
+
+Re-binarize the text line area to support the character segmentation.
+
+```json
+{
+    "BinarizationModes" : 
+    [
+        {
+            "BlockSizeX": 11,
+            "BlockSizeY": 11,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Erode",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+        }
+    ]
 }
 ```
 

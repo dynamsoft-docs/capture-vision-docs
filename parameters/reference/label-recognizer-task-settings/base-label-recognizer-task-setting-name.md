@@ -6,6 +6,7 @@ keywords: inheritance, LabelRecognizerTaskSetting
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
+permalink: /parameters/reference/label-recognizer-task-settings/base-label-recognizer-task-setting-name.html
 ---
 
 # BaseLabelRecognizerTaskSettingName

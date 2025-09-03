@@ -62,8 +62,6 @@ noTitleIndex: true
     ],
     "BarcodeZoneMinDistanceToImageBorders" : 1,
     "Code128Subset" : "A",
-    "DataMatrixSizeOptions": ["DMS_DEFAULT"],
-    "DataMatrixModuleIsotropic": 1
     "DeformationResistingModes" : [
         {
             "Mode": "DRM_GENERAL", 
@@ -71,8 +69,6 @@ noTitleIndex: true
         }
     ],
     "FindUnevenModuleBarcode" : 1,
-    "IncludeTrailingCheckDigit": 1,
-    "IncludeImpliedAI01": 0,
     "HeadModuleRatio" : "211412",
     "MinQuietZoneWidth" : 1,
     "MinRatioOfBarcodeZoneWidthToHeight" : 100,
@@ -99,9 +95,9 @@ noTitleIndex: true
 
 ### Parameter Configurations
 
-**Set target barcode format**
+**Select target barcode format**
 
-Sets `BarcodeFormatIds` to specify which barcode format the current FormatSpecification configuration is applied to. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
+Select `BarcodeFormatIds` for barcode by specifying the name of the format. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
 
 **Set special configurations for target format**
 

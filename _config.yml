@@ -1,51 +1,41 @@
-repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/main
+repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs/blob/v2
 repository: dynamsoft-docs/capture-vision-docs
-docFullPath: https://www.dynamsoft.com/capture-vision/docs/core/
-firstLevelUrl: /capture-vision/docs/core/
-docHomePage: /capture-vision/docs/core/introduction/
+docFullPath: https://www.dynamsoft.com/capture-vision/docs/v2/core/
+firstLevelUrl: /capture-vision/docs/v2/core/
+docHomePage: /capture-vision/docs/v2/core/introduction/
 searchIndexName: Crawler-DCV-Docs-New
 searchNeedFilter: true
 
-dcvb_introduction: /capture-vision/docs/core/introduction/
-dcvb_architecture: /capture-vision/docs/core/architecture/
-dcvb_parameters: /capture-vision/docs/core/parameters/
-dcvb_enums: /capture-vision/docs/core/enums/
-dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
-dcvb_license_activation: /capture-vision/docs/core/license/
+dcvb_introduction: /capture-vision/docs/v2/core/introduction/
+dcvb_architecture: /capture-vision/docs/v2/core/architecture/
+dcvb_parameters: /capture-vision/docs/v2/core/parameters/
+dcvb_enums: /capture-vision/docs/v2/core/enums/
+dcvb_parameters_reference: /capture-vision/docs/v2/core/parameters/reference/
+dcvb_license_activation: /capture-vision/docs/v2/core/license/
 
-dcvb_js: /capture-vision/docs/web/programming/javascript/
-dcvb_cpp: /capture-vision/docs/server/programming/cplusplus/
-dcvb_dotnet: /capture-vision/docs/server/programming/dotnet/
-dcvb_python: /capture-vision/docs/server/programming/python/
-dcvb_java: /capture-vision/docs/server/programming/java/
-dcvb_android: /capture-vision/docs/mobile/programming/android/
-dcvb_ios: /capture-vision/docs/mobile/programming/ios/
-dcvb_maui: /capture-vision/docs/mobile/programming/maui/
-dcvb_react_native: /capture-vision/docs/mobile/programming/react-native/
-dcvb_cordova: /capture-vision/docs/mobile/programming/cordova/
-dcvb_flutter: /capture-vision/docs/mobile/programming/flutter/
-dcvb_xamarin: /capture-vision/docs/mobile/programming/xamarin/
+dcvb_js: /capture-vision/docs/v2/web/programming/javascript/
+dcvb_cpp: /capture-vision/docs/v2/server/programming/cplusplus/
+dcvb_dotnet: /capture-vision/docs/v2/server/programming/dotnet/
+dcvb_python: /capture-vision/docs/v2/server/programming/python/
+dcvb_android: /capture-vision/docs/v2/mobile/programming/android/
+dcvb_ios: /capture-vision/docs/v2/mobile/programming/ios/
+dcvb_maui: /capture-vision/docs/v2/mobile/programming/maui/
 dcv_archive_react_native: /capture-vision/docs-archive/mobile/programming/react-native/
 dcv_archive_flutter: /capture-vision/docs-archive/mobile/programming/flutter/
 
-dlr_archived_introduction: /label-recognition/docs-archive/core/introduction/
-ddn_archived_introduction: /document-normalizer/docs-archive/core/introduction/
-dcp_archived_introduction: /code-parser/docs-archive/core/introduction/
-dce_archived_introduction: /camera-enhancer/docs-archive/core/introduction/
-
-
-assets: /capture-vision/docs/core/assets/
-edit_icon: /capture-vision/docs/core/assets/img-icon/edit-icon.png
-smile_icon: /capture-vision/docs/core/assets/img-icon/icon-smile.png
-sad_icon: /capture-vision/docs/core/assets/img-icon/icon-sad.png
-dbr_icon: /capture-vision/docs/core/assets/img-icon/icon-dbr.svg
-dwt_icon: /capture-vision/docs/core/assets/img-icon/icon-dwt.svg
-dnt_icon: /capture-vision/docs/core/assets/img-icon/icon-dnt.svg
+assets: /capture-vision/docs/v2/core/assets/
+edit_icon: /capture-vision/docs/v2/core/assets/img-icon/edit-icon.png
+smile_icon: /capture-vision/docs/v2/core/assets/img-icon/icon-smile.png
+sad_icon: /capture-vision/docs/v2/core/assets/img-icon/icon-sad.png
+dbr_icon: /capture-vision/docs/v2/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /capture-vision/docs/v2/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /capture-vision/docs/v2/core/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
+useJSVersionV3: true
 isDCV: true
 
-baseurl: "/capture-vision/docs/core"
+baseurl: "/capture-vision/docs/v2/core"
 plugins:
   - jemoji
   - jekyll-webp
@@ -53,14 +43,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-readme-index
   - jekyll-seo-tag
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      noTitleIndex: true
-      needAutoGenerateSidebar: true
-      needGenerateH3Content: true
 
 url: "https://www.dynamsoft.com" # sitemap root
 

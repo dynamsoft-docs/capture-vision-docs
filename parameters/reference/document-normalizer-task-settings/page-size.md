@@ -6,11 +6,12 @@ keywords: Page size
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/page-size.html
 ---
 
 # PageSize
 
-Parameter `PageSize` sets the page size (width by height in pixels) of the target image.
+Parameter `PageSize` sets the page size (width by height in pixels) of the normalized image.
 
 ## Example
 

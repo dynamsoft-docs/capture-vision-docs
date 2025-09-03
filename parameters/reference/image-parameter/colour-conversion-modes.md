@@ -6,6 +6,7 @@ keywords: ColourConversionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /parameters/reference/image-parameter/colour-conversion-modes.html
 ---
 
 

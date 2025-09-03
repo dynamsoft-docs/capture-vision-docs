@@ -6,6 +6,7 @@ keywords: Section image parameter
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/section-image-parameter-array.html
 ---
 
 # SectionImageParameterArray

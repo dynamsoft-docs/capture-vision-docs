@@ -6,6 +6,7 @@ keywords: GrayscaleTransformationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /parameters/reference/image-parameter/grayscale-transformation-modes.html
 ---
 
 

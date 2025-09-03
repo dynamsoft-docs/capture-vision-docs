@@ -5,7 +5,10 @@ description: This article introduces Document Normalization Section in the Dynam
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /architecture/image-processing/document-normalization.html
 ---
+
+> *Go to [DCV Architecture](../index.md)*
 
 The following diagram shows how sections connect to each other to form tasks:
 
@@ -17,14 +20,13 @@ flowchart LR;
      C---F[2.2.Document Detection]
      D---G[3.Barcode Decoding]
      E---H[3.Text-line Recognition]
-     F---I[3.Document Deskewing]
-     I---J[4.Image Enhancement]
+     F---I[3.Document Normalization]
      style I fill:#f96,stroke:#333,stroke-width:4px
 ```
 
-In this article, we'll discuss the section **Document Deskewing** which is usually the 3rd section of a "Normalize-a-Document" task.
+In this article, we'll discuss the section **Document Normalization** which is usually the 3rd section of a "Normalize-a-Document" task.
 
-# Section 3 - Document Deskewing
+# Section 3 - Document Normalization
 
 The purpose of this section is to generate a standard rectangular image of the "document" localized in the section "Document Detection".
 
@@ -34,12 +36,14 @@ The purpose of this section is to generate a standard rectangular image of the "
 
 This section consists of just one stage:
 
-- Document-deskewing: to deskew the document which may involve one or several of these actions:
+- Document-normalizing: to normalize the document which may involve one or several of these actions:
   - Deskew
   - Perspective correction
+  - Colour conversion
+  - Brightness and contrast adjustment
 
 ## Output and Parameters
 
 | Stage | Intermediate Result Type | Related Parameter |
 | ----- | ------------------------ | ----------------- |
-| Document-deskewing | `IRUT_DESKEWED_IMAGE`  | [`PageSize`](../../parameters/reference/document-normalizer-task-settings/page-size.md), [`DeskewMode`](../../parameters/reference/document-normalizer-task-settings/deskew-mode.md) |
+| Document-normalizing | `IRUT_NORMALIZED_IMAGES`  | [`Brightness`](../../parameters/reference/document-normalizer-task-settings/brightness.md), [`Contrast`](../../parameters/reference/document-normalizer-task-settings/contrast.md), [`ColourMode`](../../parameters/reference/document-normalizer-task-settings/colour-mode.md), [`DeskewMode`](../../parameters/reference/document-normalizer-task-settings/deskew-mode.md) |

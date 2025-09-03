@@ -34,5 +34,3 @@ The structure of the `MinQuietZoneWidth` is shown as follow:
 **Remarks**
 
 - The unit is a multiplier of the barcode module size. For example, if barcode module is 2px and MinQuietZoneWidth is 4, then the width of quiet zone is 8px.
-- This parameter is valid only for OneD barcode formats.
-

@@ -6,6 +6,7 @@ keywords: Deblur modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/reference/barcode-reader-task-settings/deblur-modes.html
 ---
 
 # DeblurModes
@@ -63,50 +64,7 @@ The mode arguments of the deblur mode object are shown as follow:
             <br>DM_SHARPENING
             <br>DM_BASED_ON_LOC_BIN
             <br>DM_SHARPENING_SMOOTHING
-            <br>DM_NEURAL_NETWORK
             <br>DM_SKIP
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">DeblurModelNameArray<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html" target="_blank">CaptureVisionModel</a> objects.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String Array</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>Each element is the name of a `CaptureVisionModel` object.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>null
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>DM_NEURAL_NETWORK.
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">Level<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the effort level used for deblurring, a larger value may improve the Read Rate but slowdown the Speed.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>int</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>[1, 9]
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>4
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>DM_NEURAL_NETWORK.
         </td>
     </tr>
     <tr>
@@ -247,17 +205,5 @@ Performs deblur process using the sharpening and smoothing algorithm. This mode 
 
 **Available Mode Arguments:**
 
-- LibraryFileName
-- LibraryParameters
-
-
-### DM_NEURAL_NETWORK
-
-Performs deblur process by utilizing a neural network model.
-
-**Available Mode Arguments:**
-
-- DeblurModelNameArray
-- Level
 - LibraryFileName
 - LibraryParameters

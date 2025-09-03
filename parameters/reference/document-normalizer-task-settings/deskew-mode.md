@@ -6,11 +6,12 @@ keywords:
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
+permalink: /parameters/reference/document-normalizer-task-settings/deskew-mode.html
 ---
 
 # DeskewMode
 
-Parameter `DeskewMode` specifies the method in which the deskew process way used to apply the deskew process on the target image. It consists one of one following candidate modes, each mode represents an implement.
+Parameter `DeskewMode` specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
 
 ## Example
 
