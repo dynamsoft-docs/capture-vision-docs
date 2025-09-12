@@ -44,6 +44,7 @@ dnt_icon: /capture-vision/docs/core/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
 isDCV: true
+useJSVersionV3: true
 
 baseurl: "/capture-vision/docs/core"
 plugins:
