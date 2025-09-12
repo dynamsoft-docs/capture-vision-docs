@@ -2,3 +2,4 @@ useGroupedVersion: true
 
 version_info_list:
   - value: latest version
+  - value: 2.x
