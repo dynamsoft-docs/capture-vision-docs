@@ -25,14 +25,12 @@ The structure of the `IncludeTrailingCheckDigit` is shown as follow:
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |
-| **Default Value**<br>1 |
+| **Default Value**<br>0 |
 
 **Remarks**
 
 - 0: exclude.
 - 1: include.
 - This parameter is valid only for Code 128.
-
-**Availability**
-
-Introduced in version 11.0.4000.
+- Introduced in version 11.0.4000.
+- Changed the default value to 0 from 1 in version 11.2.1000

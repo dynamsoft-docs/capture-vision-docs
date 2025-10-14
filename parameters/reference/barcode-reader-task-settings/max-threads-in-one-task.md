@@ -3,10 +3,6 @@ layout: default-layout
 title: MaxThreadsInOneTask - Dynamsoft Barcode Reader Parameters
 description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one barcode reader task.
 keywords: Max threads
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/barcode-reader-task-settings/max-threads-in-one-task.html
 ---
 
 # MaxThreadsInOneTask
@@ -26,5 +22,10 @@ Parameter `MaxThreadsInOneTask` defines the maximum threads that can be consumed
 | MaxThreadsInOneTask Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
-| **Range**<br>[0, 4] |
-| **Default Value**<br>4 |
+| **Range**<br>[0, 256] |
+| **Default Value**<br>0 |
+
+**Remarks**
+
+- Changed the default value to 0 from 4 in version 11.2.1000
+- Updated the value range to [0, 256] in version 11.2.1000

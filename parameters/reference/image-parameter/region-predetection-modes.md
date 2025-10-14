@@ -67,29 +67,7 @@ Parameter `RegionPredetectionModes` consist of a group of region predetection mo
             RPM_GENERAL_RGB_CONTRAST<br>
             RPM_GENERAL_GRAY_CONTRAST<br>
             RPM_GENERAL_HSV_CONTRAST<br>
-            RPM_NEURAL_NETWORK
-        </td>
-    </tr>    
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">DetectionModelName<br>(Optional)</td>
-        <td><b>Description</b><br>References the detection model by its name.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>The name of a Model object that defined in CaptureVisionModelOptions.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>
-            RPM_NEURAL_NETWORK<br>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>""
+            RPM_GRAY_CONSISTENCY
         </td>
     </tr>
     <tr>
@@ -293,45 +271,45 @@ Parameter `RegionPredetectionModes` consist of a group of region predetection mo
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the file name of the library to load dynamically.
+        <td rowspan = "5" style="vertical-align:text-top">GrayRange<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the target grayscale value range, formatted as [MinGrayValue, MaxGrayValue], for candidate regions.
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>String</i>
+        <td><b>Type</b><br><i>Int Array</i>
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing file name.
+        <td><b>Range</b><br>MinGrayValue: [0,255]<br>MaxGrayValue: [0,255]
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Default Value</b><br>[0,255]
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>RPM_GRAY_CONSISTENCY.
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryParameters<br>(Optional)</td>
-        <td><b>Description</b><br>The library must be in the same place with Dynamsoft Barcode Reader Library.
+        <td rowspan = "5" style="vertical-align:text-top">MatchRatio<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the minimum percentage of pixels within a spatial block that must fall into the `GrayRange` for the block to be considered consistent.
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>String</i>
+        <td><b>Type</b><br><i>Int</i>
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing parameters.
+        <td><b>Range</b><br>[0, 100]
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Default Value</b><br>50
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>RPM_GRAY_CONSISTENCY
         </td>
     </tr>
 </table>
@@ -376,11 +354,6 @@ Lets the library choose a mode automatically.
 
 Takes the whole image as a region. This mode has the following arguments for further customizing.
 
-**Available Mode Arguments:**
-
-* LibraryFileName
-* LibraryParameters
-
 ### RPM_GENERAL_RGB_CONTRAST
 
 Detects region using the general algorithm based on RGB colour contrast. This mode has the following arguments for further customizing.
@@ -390,8 +363,6 @@ Detects region using the general algorithm based on RGB colour contrast. This mo
 * MinImageDimension
 * Sensitivity
 * SpatialIndexBlockSize
-* LibraryFileName
-* LibraryParameters
 
 ### RPM_GENERAL_GRAY_CONTRAST
 
@@ -402,8 +373,6 @@ Detects region using the general algorithm based on gray contrast. This mode has
 * MinImageDimension
 * Sensitivity
 * SpatialIndexBlockSize
-* LibraryFileName
-* LibraryParameters
 
 ### RPM_GENERAL_HSV_CONTRAST
 
@@ -420,15 +389,16 @@ Detects region using the general algorithm based on HSV colour contrast. This mo
 * MinImageDimension
 * Sensitivity
 * SpatialIndexBlockSize
-* LibraryFileName
-* LibraryParameters
 
-### RPM_NEURAL_NETWORK
+### RPM_GRAY_CONSISTENCY
 
-Detects region using the object detection model.
+Detects regions in a grayscale image where pixel values fall within a specified gray range and demonstrate local consistency. This is useful for locating areas with uniform brightness, such as document backgrounds or label zones.
 
 **Available Mode Arguments:**
 
-* DetectionModelName
-* LibraryFileName
-* LibraryParameters
+* GrayRange
+* MatchRatio
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.1000 and Dynamsoft Capture Vision version 3.2.1000.

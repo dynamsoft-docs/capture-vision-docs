@@ -68,7 +68,7 @@ The mode arguments of the deblur mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">DeblurModelNameArray<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top">DeblurModelNameArray<br>(Optional)</td>
         <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html" target="_blank">CaptureVisionModel</a> objects.
         </td>
     </tr>
@@ -86,6 +86,35 @@ The mode arguments of the deblur mode object are shown as follow:
     </tr>
     <tr>
         <td><b>Valid For</b><br>DM_NEURAL_NETWORK.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>Deprecated in version 11.2.1000 and will be removed in future versions. Please use `ModelNameArray` instead.<br>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan = "6" style="vertical-align:text-top">ModelNameArray<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html" target="_blank">CaptureVisionModel</a> objects.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Type</b><br><i>String Array</i>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Range</b><br>Each element is the name of a `CaptureVisionModel` object.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Default Value</b><br>null
+        </td>
+    </tr>
+    <tr>
+        <td><b>Valid For</b><br>DM_NEURAL_NETWORK.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>
         </td>
     </tr>
     <tr>
@@ -110,45 +139,28 @@ The mode arguments of the deblur mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the file name of the library to load dynamically.
+        <td rowspan = "6" style="vertical-align:text-top">Methods<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the methods used for deep analysis.
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>String</i>
+        <td><b>Type</b><br><i>String Array</i>
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing file name.
+        <td><b>Range</b><br>Each element is a deep analysis method.<br>OneDGeneral: for OneD barcodes.<br>TwoDGeneral: for 2D barcodes.<br>EAN13Enhanced: for EAN13 barcodes.
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Default Value</b><br>null
         </td>
     </tr>
     <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Valid For</b><br>DM_DEEP_ANALYSIS.
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryParameters<br>(Optional)</td>
-        <td><b>Description</b><br>The library must be in the same place with Dynamsoft Barcode Reader Library.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>A string value representing parameters.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>""
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>All modes.
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>
         </td>
     </tr>
 </table>
@@ -162,6 +174,21 @@ If the `DeblurModes` is not configured in your template file, the following sett
     "DeblurModes": null
 }
 ```
+
+**Remarks**  
+
+The actual deblur modes used are:
+- For Barcode Format PDF417
+
+[DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING,DM_DEEP_ANALYSIS]
+
+- For Barcode Format OneD  
+
+[DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,**DM_NEURAL_NETWORK(with EAN13Decoder and Code128Decoder)**,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING]
+
+- For other formats
+
+[DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING]
 
 ## Candidate Modes Introduction
 
@@ -257,7 +284,7 @@ Performs deblur process by utilizing a neural network model.
 
 **Available Mode Arguments:**
 
-- DeblurModelNameArray
+- ModelNameArray
 - Level
 - LibraryFileName
 - LibraryParameters
