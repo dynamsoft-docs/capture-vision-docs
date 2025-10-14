@@ -29,7 +29,7 @@ Parameter `ExpectedBarcodesCount` defines the number of barcodes expected to be 
 | **Range**<br>[0, 0x7fffffff] |
 | **Default Value**<br>0 |
 
-Remarks
+**Remarks**
 
 - 0: detects at least one barcode.
 - N ( N > 0 ): detects N barcodes.

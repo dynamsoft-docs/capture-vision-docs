@@ -26,5 +26,6 @@ Parameter `MaxParallelTasks` defines the maximum number of parallel tasks for th
 | MaxParallelTasks Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
-| **Range**<br>[1, 256] |
+| **Range**<br>-1, 0, [1, 256] |
 | **Default Value**<br>4 |
+| **Remarks** <br>1) 0: Only open the management thread, the execution task thread and the management thread are the same thread.<br>2) -1: Do not open the management thread or the task thread, that is, run in the thread that calls StartCapturing. |

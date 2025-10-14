@@ -1,12 +1,11 @@
 ---
 layout: default-layout
 title: LocalizationModes - Dynamsoft Barcode Reader Parameters
-description: The parameter LocalizationModes of Dynamsoft Barcode Reader defines the line numers of the targeting text lines.
+description: The parameter LocalizationModes of Dynamsoft Barcode Reader defines how to localize barcodes.
 keywords: Localization modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/localization-modes.html
 ---
 
 # LocalizationModes
@@ -54,18 +53,15 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
     <tr>
         <td><b>Candidate Mode List</b><br>
             LM_CONNECTED_BLOCKS<br>
-            LM_STATISTICS<br>
             LM_LINES<br>
+            LM_NEURAL_NETWORK<br>
             LM_SCAN_DIRECTLY<br>
+            LM_STATISTICS<br>
             LM_STATISTICS_MARKS<br>
             LM_STATISTICS_POSTAL_CODE<br>
             LM_CENTRE<br>
             LM_ONED_FAST_SCAN<br>
             LM_SKIP<br>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>
         </td>
     </tr>
     <tr>
@@ -185,45 +181,28 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the file name of the library to load dynamically.
+        <td rowspan = "6" style="vertical-align:text-top">ModelNameArray<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the names of a barcode localization model.
         </td>
     </tr>
     <tr>
-        <td><b>Type</b><br><i>String</i>
+        <td><b>Type</b><br><i>String Array</i>
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>A string value representing file name.
+        <td><b>Range</b><br>Each element is the name of a model.
         </td>
     </tr>
     <tr>
-        <td><b>Default Value</b><br>""
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>All candidate modes.
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryParameters<br>(Optional)</td>
-        <td><b>Description</b><br>The library must be in the same place with Dynamsoft Barcode Reader Library.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>A string value representing parameters.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>""
+        <td><b>Default Value</b><br>null
         </td>
     </tr>
     <tr>
         <td><b>Valid For</b><br>All candidate modes.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>
         </td>
     </tr>
 </table>
@@ -265,8 +244,7 @@ Localizes barcodes by searching for connected blocks. This algorithm usually giv
 
 **Available Mode Arguments:**
 
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_STATISTICS
 
@@ -274,8 +252,7 @@ Localizes barcodes by groups of contiguous black-white regions. This is optimize
 
 **Available Mode Arguments:**
 
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_LINES
 
@@ -283,8 +260,7 @@ Localizes barcodes by searching for groups of lines. This is optimized for 1D an
 
 **Available Mode Arguments:**
 
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_SCAN_DIRECTLY
 
@@ -295,8 +271,7 @@ Localizes barcodes quickly. This mode is recommended in interactive scenario. Th
 - ScanStride
 - ScanDirection
 - IsOneDStacked
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_STATISTICS_MARKS
 
@@ -304,8 +279,7 @@ Localizes barcodes by groups of marks. This is optimized for DPM codes. This mod
 
 **Available Mode Arguments:**
 
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_STATISTICS_POSTAL_CODE
 
@@ -313,8 +287,7 @@ Localizes barcodes by groups of connected blocks and lines.This is optimized for
 
 **Available Mode Arguments:**
 
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_CENTRE
 
@@ -323,8 +296,7 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 **Available Mode Arguments:**
 
 - ModuleSize
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
 
 ### LM_ONED_FAST_SCAN
 
@@ -335,5 +307,13 @@ Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barco
 - ScanStride
 - ScanDirection
 - ConfidenceThreshold
-- LibraryFileName
-- LibraryParameters
+- ModelNameArray
+
+### LM_NEURAL_NETWORK
+
+Localizes barcodes by utilizing a neural network model. This mode has the following arguments for further cuztomization.
+
+**Available Mode Arguments:**
+
+- ModelNameArray
+

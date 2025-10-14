@@ -25,5 +25,10 @@ Parameter `MaxThreadsInOneTask` defines the maximum threads that can be consumed
 | MaxThreadsInOneTask Parameter Summary |
 | :------------- |
 | **Type**<br>*int* |
-| **Range**<br>[0, 4] |
-| **Default Value**<br>4 |
+| **Range**<br>[0, 256] |
+| **Default Value**<br>0 |
+
+**Remarks**
+
+- Changed the default value to 0 from 4 in version 3.2.1000
+- Updated the value range to [0, 256] in version 3.2.1000
