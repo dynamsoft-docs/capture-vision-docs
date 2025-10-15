@@ -60,7 +60,7 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">ModelNameArray<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top">ModelNameArray<br>(Optional)</td>
         <td><b>Description</b><br>Sets the names of a text localization model.
         </td>
     </tr>
@@ -69,7 +69,7 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>Each element is the name of a model.
+        <td><b>Range</b><br>Each element is the name of a model. Candidate values: "MRZLocalization".
         </td>
     </tr>
     <tr>
@@ -78,6 +78,10 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
     </tr>
     <tr>
         <td><b>Valid For</b><br>LM_NEURAL_NETWORK.
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>When set to null, model "MRZLocalization" will be used by default.
         </td>
     </tr>
 </table>

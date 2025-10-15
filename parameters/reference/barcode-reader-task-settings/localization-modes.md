@@ -42,7 +42,7 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
         </td>
     </tr>
@@ -190,7 +190,7 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>Each element is the name of a model.
+        <td><b>Range</b><br>Each element is the name of a model.<br>Candidate values: "OneDLocalization", "DataMatrixQRCodeLocalization".
         </td>
     </tr>
     <tr>
@@ -202,7 +202,7 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>When set to null, both "OneDLocalization" and "DataMatrixQRCodeLocalization" models will be used by default.
         </td>
     </tr>
 </table>

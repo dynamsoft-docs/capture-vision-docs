@@ -102,7 +102,7 @@ The mode arguments of the deblur mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>Each element is the name of a `CaptureVisionModel` object.
+        <td><b>Range</b><br>Each element is the name of a `CaptureVisionModel` object.<br>Candidate values: "OneDDeblur", "EAN13Decoder", "Code128Decoder".
         </td>
     </tr>
     <tr>
@@ -114,7 +114,7 @@ The mode arguments of the deblur mode object are shown as follow:
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>When set to null, all "OneDDeblur", "EAN13Decoder", "Code128Decoder" models will be used by default.
         </td>
     </tr>
     <tr>
