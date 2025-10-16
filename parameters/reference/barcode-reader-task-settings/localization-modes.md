@@ -181,7 +181,7 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
         </td>
     </tr>
     <tr>
-        <td rowspan = "6" style="vertical-align:text-top">ModelNameArray<br>(Optional)</td>
+        <td rowspan = "6" style="vertical-align:text-top" id="modelnamearray">ModelNameArray<br>(Optional)</td>
         <td><b>Description</b><br>Sets the names of a barcode localization model.
         </td>
     </tr>
