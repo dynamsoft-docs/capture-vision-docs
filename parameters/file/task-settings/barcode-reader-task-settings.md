@@ -23,7 +23,6 @@ All available parameters related to barcode decoding are listed here, along with
  | [`ExpectedBarcodesCount`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) | Sets the number of barcodes expected to be detected for each image. |
  | [`MaxThreadsInOneTask`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/max-threads-in-one-task.html) | Represents the maximum number of parallel threads that can be used on a single task.|
  | [`Name`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/name.html) | The name of the BarcodeReaderTaskSetting object. |
- | [`ReturnBarcodeZoneClarity`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/return-barcode-zone-clarity.html) | Sets whether or not to return the clarity of the barcode zone. |
  | [`SectionArray`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-array.html) | Defines which sections exist under the `BarcodeReaderTaskSetting`. |
  | [`TextResultOrderModes`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/text-result-order-modes.html) | Sets the mode and priority for the order of the text results returned. |
  | [`BaseBarcodeReaderTaskSettingName`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/base-barcode-reader-task-setting-name.html) | Sets the name of a BarcodeReaderTaskSetting object to be Inheritanced.|
@@ -44,7 +43,6 @@ When DCV executes tasks related to barcode reading, it will process them accordi
             "Mode" : "DPMCRM_SKIP"
         }
     ],
-    "ReturnBarcodeZoneClarity" : 0,
     "SectionArray": [
         {
             "Section": "ST_REGION_PREDETECTION",
@@ -87,7 +85,8 @@ When DCV executes tasks related to barcode reading, it will process them accordi
                 },
                 {
                     "Stage": "SST_DECODE_BARCODES",
-                    "DeblurModes": []
+                    "DeblurModes": [],
+                    "ReturnBarcodeZoneClarity" : 0
                 }
             ]
         }
