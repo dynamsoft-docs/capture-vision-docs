@@ -6,7 +6,6 @@ keywords: BarcodeBytesLengthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/barcode-bytes-length-range-array.html
 ---
 
 # BarcodeBytesLengthRangeArray
@@ -29,7 +28,7 @@ Parameter `BarcodeBytesLengthRangeArray` defines the range of barcode bytes leng
 
 ## Parameter Summary
 
-Parameter `BarcodeBytesLengthRangeArray` consist of a group of barcode bytes length range objects. Each barcode angle range object includes the maximum and minimum value of the barcode bytes length range.
+Parameter `BarcodeBytesLengthRangeArray` consist of a group of barcode bytes length range objects. Each object includes the maximum and minimum value of the barcode bytes length range.
 
 <table style = "text-align:left">
     <thead>

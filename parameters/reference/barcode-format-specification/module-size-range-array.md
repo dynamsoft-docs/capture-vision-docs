@@ -6,7 +6,6 @@ keywords: ModuleSizeRangeArray , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/module-size-range-array.html
 ---
 
 # ModuleSizeRangeArray
@@ -29,7 +28,7 @@ Parameter `ModuleSizeRangeArray` defines the range of module size (in pixels) wh
 
 ## Parameter Summary
 
-Parameter `ModuleSizeRangeArray` consist of a group of barcode module size range objects. Each barcode angle range object includes the maximum and minimum value of the barcode module size range.
+Parameter `ModuleSizeRangeArray` consist of a group of barcode module size range objects. Each object includes the maximum and minimum value of the barcode module size range.
 
 <table style = "text-align:left">
     <thead>

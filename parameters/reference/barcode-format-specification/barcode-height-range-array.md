@@ -6,7 +6,6 @@ keywords: BarcodeHeightRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/barcode-height-range-array.html
 ---
 
 # BarcodeHeightRangeArray
@@ -29,7 +28,7 @@ Parameter `BarcodeHeightRangeArray` defines the range of heights (in pixels) for
 
 ## Parameter Summary
 
-Parameter `BarcodeHeightRangeArray` consist of a group of barcode height range objects. Each barcode angle range object includes the maximum and minimum value of the barcode height range.
+Parameter `BarcodeHeightRangeArray` consist of a group of barcode height range objects. Each object includes the maximum and minimum value of the barcode height range.
 
 <table style = "text-align:left">
     <thead>
