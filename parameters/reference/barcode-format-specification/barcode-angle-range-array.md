@@ -6,7 +6,6 @@ keywords: BarcodeAngleRangeArray , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/barcode-angle-range-array.html
 ---
 
 # BarcodeAngleRangeArray
@@ -29,7 +28,7 @@ Parameter `BarcodeAngleRangeArray` defines the range of angles (in degrees) for 
 
 ## Parameter Summary
 
-Parameter `BarcodeAngleRangeArray` consist of a group of barcode rotation angle range objects. Each barcode angle range object includes the maximum and minimum value of the barcode rotation angle range.
+Parameter `BarcodeAngleRangeArray` consist of a group of barcode rotation angle range objects. Each object includes the maximum and minimum value of the barcode rotation angle range.
 
 <table style = "text-align:left">
     <thead>

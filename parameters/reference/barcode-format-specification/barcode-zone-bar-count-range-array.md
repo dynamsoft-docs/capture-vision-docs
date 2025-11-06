@@ -6,7 +6,6 @@ keywords: BarcodeZoneBarCountRangeArray , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/barcode-zone-bar-count-range-array.html
 ---
 
 # BarcodeZoneBarCountRangeArray
@@ -28,7 +27,7 @@ Parameter `BarcodeZoneBarCountRangeArray` defines the range of bar count of the 
 
 ## Parameter Summary
 
-Parameter `BarcodeZoneBarCountRangeArray` consist of a group of barcode zone bar count range objects. Each barcode angle range object includes the maximum and minimum value of the barcode zone bar count range.
+Parameter `BarcodeZoneBarCountRangeArray` consist of a group of barcode zone bar count range objects. Each object includes the maximum and minimum value of the barcode zone bar count range.
 
 <table style = "text-align:left">
     <thead>

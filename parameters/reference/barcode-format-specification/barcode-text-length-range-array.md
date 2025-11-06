@@ -6,7 +6,6 @@ keywords: BarcodeTextLengthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/barcode-text-length-range-array.html
 ---
 
 # BarcodeTextLengthRangeArray
@@ -29,7 +28,7 @@ Parameter `BarcodeTextLengthRangeArray` defines the range of barcode text length
 
 ## Parameter Summary
 
-Parameter `BarcodeTextLengthRangeArray` consist of a group of barcode text length range objects. Each barcode angle range object includes the maximum and minimum value of the barcode text length range.
+Parameter `BarcodeTextLengthRangeArray` consist of a group of barcode text length range objects. Each object includes the maximum and minimum value of the barcode text length range.
 
 <table style = "text-align:left">
     <thead>

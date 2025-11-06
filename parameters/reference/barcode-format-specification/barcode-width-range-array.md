@@ -6,7 +6,6 @@ keywords: BarcodeWidthRangeArray  , parameter reference, parameter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/barcode-width-range-array.html
 ---
 
 # BarcodeWidthRangeArray
@@ -29,7 +28,7 @@ Parameter `BarcodeWidthRangeArray` defines the range of widths (in pixels) for b
 
 ## Parameter Summary
 
-Parameter `BarcodeWidthRangeArray` consist of a group of barcode width range objects. Each barcode angle range object includes the maximum and minimum value of the barcode width range.
+Parameter `BarcodeWidthRangeArray` consist of a group of barcode width range objects. Each object includes the maximum and minimum value of the barcode width range.
 
 <table style = "text-align:left">
     <thead>
