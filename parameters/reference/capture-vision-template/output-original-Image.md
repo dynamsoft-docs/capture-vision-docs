@@ -3,17 +3,23 @@ layout: default-layout
 title: OutputOriginalImage - Dynamsoft Capture Vision Parameters
 description: The parameter OutputOriginalImage indicates whether DCV finally outputs the original input image.
 keywords: original image, captured results, CaptureVisionTemplate
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 permalink: /parameters/reference/capture-vision-template/output-original-image.html
 ---
-
 # OutputOriginalImage
 
 Parameter `OutputOriginalImage` indicates whether DCV finally outputs the original input image.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+CaptureVisionTemplates[i]
+    └── OutputOriginalImage
+```
+
+**Parent object:** [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,9 +27,16 @@ Parameter `OutputOriginalImage` indicates whether DCV finally outputs the origin
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `OutputOriginalImage` parameter.
+> - To use it, embed this parameter within a [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| OutputOriginalImage Parameter Summary |
+## Parameter Details
+
+| OutputOriginalImage Parameter Details |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>0,1 |

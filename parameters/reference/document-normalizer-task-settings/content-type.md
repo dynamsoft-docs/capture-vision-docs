@@ -1,18 +1,26 @@
 ---
 layout: default-layout
 title: ContentType - Dynamsoft Document Normalizer Parameters
-description: The parameter ContentType of Dynamsoft Document Normalizer is XXX.
-keywords:
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
+description: The parameter ContentType defines which contents are the targeting objects.
+keywords: ContentType
 ---
 
 # ContentType
 
-Parameter `ContentType` defines which contents are the targeting objects.
+`ContentType` defines which contents are the targeting objects.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object where Section = "ST_DOCUMENT_DETECTION")
+        └── ContentType
+```
+
+**Parent object:** [DocumentDetectionSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-detection.html)
+
+**Example:**
 
 ```json
 {
@@ -20,9 +28,16 @@ Parameter `ContentType` defines which contents are the targeting objects.
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ContentType` parameter.
+> - To use it, embed this parameter within a [DocumentDetectionSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-detection.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| ContentType Parameter Summary |
+## Parameter Details
+
+| ContentType Parameter Details |
 | :---------------------------- |
 | **Type**<br>*String* |
 | **Available Content Type**<br><br>CT_DOCUMENT<br>CT_TABLE<br>CT_UNKNOWN |

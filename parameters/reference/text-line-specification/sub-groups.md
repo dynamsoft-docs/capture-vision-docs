@@ -3,22 +3,26 @@ layout: default-layout
 title: SubGroups - Dynamsoft Label Recognizer Parameters
 description: The parameters SubGroups defines the layout of subgroups of the TextLineSpecification object.
 keywords: SubGroups
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/text-line-specification/sub-groups.html
 ---
 
 # SubGroups
 
 Parameter `SubGroups` defines the layout of subgroups of the `TextLineSpecification` object. It can be nested recursively defined.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── SubGroups
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
-    "Name": "tls_0",
-    "ApplicableTextLineNumbers": "3-7",
     "SubGroups" : [
         {
             "Name": "tls_0_0",
@@ -36,11 +40,19 @@ Parameter `SubGroups` defines the layout of subgroups of the `TextLineSpecificat
 }
 ```
 
+> [!NOTE]
+> - This snippet shows only the `SubGroups` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
 <div align="center">
    <p><img src="../assets/text-line-group-example.png" alt="SubGroups example" width="80%" /></p>
 </div>
 
-## Parameter Summary
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

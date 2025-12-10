@@ -6,35 +6,54 @@ keywords: Text result order modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/text-result-order-modes.html
 ---
 
 # TextResultOrderModes
 
-Parameter `TextResultOrderModes` defines the order of the returned text results.
+Parameter `TextResultOrderModes` defines the order of the returned text results. It consists of one or more modes, each mode representing a different ordering criterion.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── TextResultOrderModes
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/index.html) object
+
+**Example:**
 
 ```json
 {
-    "TextResultOrderModes" :
-    [
+    "TextResultOrderModes": [
         {
-            "Mode" : "TROM_CONFIDENCE"
+            "Mode": "TROM_CONFIDENCE"
         },
         {
-            "Mode" : "TROM_POSITION"
+            "Mode": "TROM_POSITION"
         },
         {
-            "Mode" : "TROM_FORMAT"
+            "Mode": "TROM_FORMAT"
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `TextResultOrderModes` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/index.html) object at the task-level.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Parameter `TextResultOrderModes` consist of a group of text result order mode objects. Each text result order mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the text result order mode object is shown as follow:
+## Parameter Details
+
+Parameter `TextResultOrderModes` consists of a group of text result order mode objects. Each text result order mode object includes a candidate mode and a series of auxiliary mode arguments.
+
+### Mode Arguments
+
+The mode arguments of the text result order mode object are as follows:
 
 ### Mode Arguments
 
@@ -46,7 +65,7 @@ Parameter `TextResultOrderModes` consist of a group of text result order mode ob
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode for ordering.
         </td>
     </tr>
@@ -61,10 +80,6 @@ Parameter `TextResultOrderModes` consist of a group of text result order mode ob
             <br>TROM_SKIP
         </td>
     </tr>
-    <tr>
-        <td><b>Default Value</b><br>
-        </td>
-    </tr>
 </table>
 
 ### Default Setting
@@ -73,22 +88,21 @@ If the `TextResultOrderModes` is not configured in your template file, the follo
 
 ```json
 {
-    "TextResultOrderModes" : 
-    [
+    "TextResultOrderModes": [
         {
-            "Mode" : "TROM_CONFIDENCE"
+            "Mode": "TROM_CONFIDENCE"
         },
         {
-            "Mode" : "TROM_POSITION"
+            "Mode": "TROM_POSITION"
         },
         {
-            "Mode" : "TROM_FORMAT"
+            "Mode": "TROM_FORMAT"
         }
     ]
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### TROM_CONFIDENCE
 

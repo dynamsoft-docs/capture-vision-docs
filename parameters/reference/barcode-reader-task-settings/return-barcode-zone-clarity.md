@@ -1,19 +1,27 @@
 ---
 layout: default-layout
 title: ReturnBarcodeZoneClarity - Dynamsoft Barcode Reader Parameters
-description: The parameter ReturnBarcodeZoneClarity of Dynamsoft Barcode Reader defines the returned coordinate type.
+description: The parameter ReturnBarcodeZoneClarity defines whether to return the clarity of the barcode zone.
 keywords: Barcode zone clarity
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/return-barcode-zone-clarity.html
 ---
 
 # ReturnBarcodeZoneClarity
 
-Parameter `ReturnBarcodeZoneClarity` defines whether to return the clarity of the barcode zone.
+`ReturnBarcodeZoneClarity` defines whether to return the clarity of the barcode zone.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_DECODE_BARCODES")
+            └── ReturnBarcodeZoneClarity
+```
+
+**Parent object:** [DecodeBarcodesStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-decode-barcodes.html)
+
+**Example:**
 
 ```json
 {
@@ -21,9 +29,16 @@ Parameter `ReturnBarcodeZoneClarity` defines whether to return the clarity of th
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ReturnBarcodeZoneClarity` parameter.
+> - To use it, embed this parameter within a [DecodeBarcodesStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-decode-barcodes.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| ReturnBarcodeZoneClarity Parameter Summary |
+## Parameter Details
+
+| ReturnBarcodeZoneClarity Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

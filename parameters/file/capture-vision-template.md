@@ -20,6 +20,7 @@ A `CaptureVisionTemplate` object is the entry object of a parameter template in 
     "SemanticProcessingNameArray": ["SP_0"],
     "OutputOriginalImage": 0,
     "MaxParallelTasks" : 4,
+    "MinImageCaptureInterval" : 0,
     "Timeout" : 500
 }
 ```
@@ -250,4 +251,4 @@ This is the main part of the workflow where the actual tasks are defined. `TaskS
 
 ### Results Reporting
 
-Currently, semantic-processing supports code parsing tasks, so the result is returned with callback [`OnParsedResultsReceived`]().
+Currently, semantic-processing supports code parsing tasks, so the result is returned with callback `OnParsedResultsReceived`.

@@ -3,16 +3,26 @@ layout: default-layout
 title: DictionaryCorrectionThresholds - Dynamsoft Label Recognizer Parameters
 description: The parameter DictionaryCorrectionThresholds of Dynamsoft Label Recognizer defines the threshold of dictionary error correction.
 keywords: user dictionary, text correction
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
 # DictionaryCorrectionThresholds
 
 Parameter `DictionaryCorrectionThresholds` sets the threshold of dictionary error correction.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_RECOGNIZE_RAW_TEXT_LINES")
+            └── DictionaryCorrectionThresholds
+```
+
+**Parent object:** [RecognizeRawTextLinesStage]({{ site.dcvb_parameters }}reference/label-recognizer-task-settings/stage-recognize-raw-text-lines.html)
+
+**Example:**
 
 ```json
 {
@@ -32,16 +42,22 @@ Parameter `DictionaryCorrectionThresholds` sets the threshold of dictionary erro
             "Threshold": 3
         }
     ]
-
 }
 ```
+
+> [!NOTE]
+> - This snippet shows only the `DictionaryCorrectionThresholds` parameter.
+> - To use it, embed this parameter within a [RecognizeRawTextLinesStage]({{ site.dcvb_parameters }}reference/label-recognizer-task-settings/stage-recognize-raw-text-lines.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json)
 
 **Remarks**
 
 - It supports segmentation threshold.
 - It works together with the [DictionaryPath](dictionary-path.md) parameter to perform error correction during the recognition process.
 
-## Parameter Summary
+## Parameter Details
 
 Parameter `DictionaryCorrectionThresholds` consist of a group of dictionary correction threshold objects. Each threshold object includes a series of child parameters.
 

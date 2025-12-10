@@ -3,17 +3,23 @@ layout: default-layout
 title: MaxParallelTasks - Dynamsoft Capture Vision Parameters
 description: The parameter MaxParallelTasks defines the maximum number of parallel tasks for the DCV runtime.
 keywords: Max parallel tasks, CaptureVisionTemplate
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 permalink: /parameters/reference/capture-vision-template/max-parallel-tasks.html
 ---
-
 # MaxParallelTasks
 
 Parameter `MaxParallelTasks` defines the maximum number of parallel tasks for the DCV runtime.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+CaptureVisionTemplates[i]
+    └── MaxParallelTasks
+```
+
+**Parent object:** [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,9 +27,16 @@ Parameter `MaxParallelTasks` defines the maximum number of parallel tasks for th
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `MaxParallelTasks` parameter.
+> - To use it, embed this parameter within a [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| MaxParallelTasks Parameter Summary |
+## Parameter Details
+
+| MaxParallelTasks Parameter Details |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>-1, 0, [1, 256] |

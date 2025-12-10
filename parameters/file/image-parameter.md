@@ -13,27 +13,29 @@ noTitleIndex: false
 The ImageParameter object is designed to configure and organize parameters for image processing stages, including but not limited to convert color-to-grayscale stage, enhance grayscale image stage, binarize image stage, detect text zone stage, and detect texture stage. You can configure detailed parameters for each stage.
 
 ```json
-"ImageParameterOptions": [
-    {
-        "Name" : "ip_default",
-        "BaseImageParameterName": "ip_base",
-        "ApplicableStages":[
-            { "Stage": "SST_SCALE_IMAGE", "ImageScaleSetting" : {} },
-            { "Stage": "SST_CONVERT_TO_GRAYSCALE", "ColourConversionModes" : [] },
-            { "Stage": "SST_TRANSFORM_GRAYSCALE", "GrayscaleTransformationModes" : [] },
-            { "Stage": "SST_ENHANCE_GRAYSCALE", "GrayscaleEnhancementModes" : [] },
-            { "Stage": "SST_BINARIZE_IMAGE", "BinarizationModes" : [] },
-            { "Stage": "SST_DETECT_TEXTURE", "TextureDetectionModes" : [] },
-            { "Stage": "SST_REMOVE_TEXTURE_FROM_GRAYSCALE" },
-            { "Stage": "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE" },
-            { "Stage": "SST_FIND_CONTOURS" },
-            { "Stage": "SST_DETECT_SHORTLINES", "ShortlineDetectionMode": {} },
-            { "Stage": "SST_ASSEMBLE_LINES", "LineAssemblyMode": {} },
-            { "Stage": "SST_DETECT_TEXT_ZONES", "TextDetectionMode": {} },
-            { "Stage": "SST_REMOVE_TEXT_ZONES_FROM_BINARY", "IfEraseTextZone": 0 }
-        ]
-    }
-],
+{
+    "ImageParameterOptions": [
+        {
+            "Name" : "ip_default",
+            "BaseImageParameterName": "ip_base",
+            "ApplicableStages":[
+                { "Stage": "SST_SCALE_IMAGE", "ImageScaleSetting" : {} },
+                { "Stage": "SST_CONVERT_TO_GRAYSCALE", "ColourConversionModes" : [] },
+                { "Stage": "SST_TRANSFORM_GRAYSCALE", "GrayscaleTransformationModes" : [] },
+                { "Stage": "SST_ENHANCE_GRAYSCALE", "GrayscaleEnhancementModes" : [] },
+                { "Stage": "SST_BINARIZE_IMAGE", "BinarizationModes" : [] },
+                { "Stage": "SST_DETECT_TEXTURE", "TextureDetectionModes" : [] },
+                { "Stage": "SST_REMOVE_TEXTURE_FROM_GRAYSCALE" },
+                { "Stage": "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE" },
+                { "Stage": "SST_FIND_CONTOURS" },
+                { "Stage": "SST_DETECT_SHORTLINES", "ShortlineDetectionMode": {} },
+                { "Stage": "SST_ASSEMBLE_LINES", "LineAssemblyMode": {} },
+                { "Stage": "SST_DETECT_TEXT_ZONES", "TextDetectionMode": {} },
+                { "Stage": "SST_REMOVE_TEXT_ZONES_FROM_BINARY", "IfEraseTextZone": 0 }
+            ]
+        }
+    ]
+}
 ```
 
 - [Name]({{ site.dcvb_parameters_reference }}image-parameter/name.html)

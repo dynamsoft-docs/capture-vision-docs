@@ -9,7 +9,17 @@ keywords: DataMatrixModuleIsotropic, parameter reference, parameter
 
 Parameter `DataMatrixModuleIsotropic` specifies whether the Data Matrix modules are isotropic, meaning they have equal scaling in all directions.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── DataMatrixModuleIsotropic
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -17,11 +27,18 @@ Parameter `DataMatrixModuleIsotropic` specifies whether the Data Matrix modules 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `DataMatrixModuleIsotropic` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the `DataMatrixModuleIsotropic` is shown as follow:
 
-| DataMatrixModuleIsotropic  Parameter Summary |
+| DataMatrixModuleIsotropic  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

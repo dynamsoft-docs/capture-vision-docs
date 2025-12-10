@@ -1,19 +1,27 @@
 ---
 layout: default-layout
 title: BarcodeComplementModes - Dynamsoft Barcode Reader Parameters
-description: The parameter BarcodeComplementModes of Dynamsoft Barcode Reader defines the barcode colour modes.
+description: The parameter BarcodeComplementModes of Dynamsoft Barcode Reader defines how to complement the missing parts of a barcode.
 keywords: Barcode complement modes
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/barcode-complement-modes.html
 ---
 
 # BarcodeComplementModes
 
 Parameter `BarcodeComplementModes` defines how to complement the missing parts of a barcode.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    ├── SectionArray[j]
+    │   └── StageArray[k] (Stage object)
+    │       └── BarcodeComplementModes
+```
+
+**Parent object:** [ComplementBarcodeStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-complement-barcode.html) object
+
+**Example:**
 
 ```json
 {
@@ -25,13 +33,19 @@ Parameter `BarcodeComplementModes` defines how to complement the missing parts o
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeComplementModes` parameter.
+> - To use it, embed this parameter within a complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Parameter `BarcodeComplementModes` consist of a group of barcode complement mode objects. Each barcode complement mode object includes a candidate mode and a series of auxiliary mode arguments.
+## Parameter Details
+
+Parameter `BarcodeComplementModes` consists of a group of barcode complement mode objects. Each barcode complement mode object includes a candidate mode and a series of auxiliary mode arguments.
 
 ### Mode Arguments
 
-The mode arguments of the barcode complement mode object are shown as follow:
+The mode arguments of the barcode complement mode object are shown as follows:
 
 <table style = "text-align:left">
     <thead>
@@ -41,7 +55,7 @@ The mode arguments of the barcode complement mode object are shown as follow:
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a barcode complement mode.
         </td>
     </tr>
@@ -55,80 +69,28 @@ The mode arguments of the barcode complement mode object are shown as follow:
             <br>BCM_SKIP
         </td>
     </tr>
-    <tr>
-        <td><b>Default Value</b><br>BCM_SKIP
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryFileName<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the file name of the library to load dynamically.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>A string value representing file name.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>""
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>All modes.
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">LibraryParameters<br>(Optional)</td>
-        <td><b>Description</b><br>The library must be in the same place with Dynamsoft Barcode Reader Library.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>A string value representing parameters.
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>""
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>All modes.
-        </td>
-    </tr>
 </table>
 
-### Default Settings
+### Default Setting
 
-Barcode complement mode is not implemented by default
+By default, barcode complement mode is not implemented.
 
 ```json
 {
-    "BarcodeComplementModes" : 
-    [
+    "BarcodeComplementModes": [
         {
-        "Mode" : "BCM_SKIP"
+            "Mode": "BCM_SKIP"
         }
-   ]
+    ]
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### BCM_GENERAL
 
-Complements the barcode using the general algorithm. This mode has the following arguments for further customizing.
-
-**Available Mode Arguments:**
-
-- LibraryFileName
-- LibraryParameters
+Complements the barcode using the general algorithm. This mode has the following arguments for further customization.
 
 ### BCM_AUTO
 
-Lets the library choose a mode automatically. Not supported yet
+Lets the library choose a mode automatically. Not supported yet.

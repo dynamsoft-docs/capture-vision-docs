@@ -1,30 +1,45 @@
 ---
 layout: default-layout
 title: CornerAngleRange - Dynamsoft Document Normalizer Parameters
-description: The parameter CornerAngleRange of Dynamsoft Document Normalizer is XXX.
-keywords:
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
+description: The parameter CornerAngleRange specifies the range of angles of the extracted corners.
+keywords: CornerAngleRange
 ---
 
 # CornerAngleRange
 
-Parameter `CornerAngleRange` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of a quad or document.
+`CornerAngleRange` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of a quad or document.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_DETECT_CORNERS")
+            └── CornerAngleRange
+```
+
+**Parent object:** [DetectCornersStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-detect-corners.html)
+
+**Example:**
 
 ```json
 {
-    "CornerAngleRange":
-        {
-            "MinValue": 80,
-            "MaxValue": 100
-        }
+    "CornerAngleRange": {
+        "MinValue": 80,
+        "MaxValue": 100
+    }
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `CornerAngleRange` parameter.
+> - To use it, embed this parameter within a [DetectCornersStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-detect-corners.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 `CornerAngleRange` The range of a maximum and a minimum value of the angles.
 

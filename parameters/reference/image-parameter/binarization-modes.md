@@ -3,9 +3,6 @@ layout: default-layout
 title: BinarizationModes - Dynamsoft Capture Vision Parameters
 description: The parameter BinarizationModes of Dynamsoft Capture Vision is for controlling the process of image binarization.
 keywords: BinarizationModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,30 +10,41 @@ noTitleIndex: true
 
 Parameter `BinarizationModes` helps control the process of binarization, i.e., converting a grayscale image to a binary image. A better binary image greatly helps the following processes. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. `BinarizationModes` consists of one or more modes, each mode representing a different binarization process.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_BINARIZE_IMAGE" or "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE")
+        └── BinarizationModes
+```
+
+**Parent object:** [BinarizeImageStage](stage-binarize-image.md) or [BinarizeTextureRemovedGrayscaleStage](stage-binarize-texture-removed-grayscale.md)
+
+**Example:**
 
 ```json
 {
-    "BinarizationModes" : 
-    [
+    "BinarizationModes": [
         {
-            "BinarizationThreshold" : -1,
-            "BlockSizeX" : 0,
-            "BlockSizeY" : 0,
-            "EnableFillBinaryVacancy" : 1,
-            "GrayscaleEnhancementModesIndex" : -1,
-            "Mode" : "BM_LOCAL_BLOCK",
-            "MorphOperation" : "None",
-            "MorphOperationKernelSizeX" : 0,
-            "MorphOperationKernelSizeY" : 0,
-            "MorphShape" : "Rectangle",
-            "ThresholdCompensation" : 10
+            "Mode": "BM_LOCAL_BLOCK",
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "ThresholdCompensation": 10
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BinarizationModes` parameter.
+> - To use it, embed this parameter within a Stage object (such as [BinarizeImageStage](stage-binarize-image.md)).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `BinarizationModes` consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of mode arguments. The available mode arguments of the binarization mode object is shown as follow.
 
@@ -350,7 +358,7 @@ If the `BinarizationModes` is not configured in your template file, the followin
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### BM_LOCAL_BLOCK
 

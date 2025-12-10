@@ -1,16 +1,26 @@
 ---
 layout: default-layout
 title: RecognizeRawTextLinesStage - Dynamsoft Label Recognizer Parameters
-description: The parameter defines Recognize Raw Text Lines Stage under the Text Line Recognition Section.
+description: The RecognizeRawTextLinesStage recognizes the raw values of text lines.
 keywords: Recognize Raw Text Lines Stage
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# RecognizeRawTextLinesStage Object
+# RecognizeRawTextLinesStage
 
-The `RecognizeRawTextLinesStage` is designed at the stage level to recognize the raw values of text-lines.
+`RecognizeRawTextLinesStage` recognizes the raw values of text lines. In JSON, it is represented as a Stage object with `"Stage": "SST_RECOGNIZE_RAW_TEXT_LINES"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_RECOGNIZE_RAW_TEXT_LINES")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html#stagearray) within [TextLinesRecognitionSection]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html)
+
+**Example:**
 
 ```json
 {
@@ -25,35 +35,50 @@ The `RecognizeRawTextLinesStage` is designed at the stage level to recognize the
     ],
     "ConfusableCharactersPath": "",
     "ClusterSamplesCountThreshold": 0,
-    "OverlappingCharactersPath": "OverlappingChars.data", 
+    "OverlappingCharactersPath": "OverlappingChars.data",
     "EnableRegexForceCorrection": 1
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for recognizing raw text lines.
+> - To use it, add this object to the `StageArray` within a [TextLinesRecognitionSection]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage is named `SST_RECOGNIZE_RAW_TEXT_LINES`.
+## Parameters
 
-## DictionaryPath
+### Stage
 
-Parameter [`DictionaryPath`](dictionary-path.md) sets the path of the dictionary file.
+Specifies the stage type. Fixed value: `SST_RECOGNIZE_RAW_TEXT_LINES`.
 
-## DictionaryCorrectionThresholds
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_RECOGNIZE_RAW_TEXT_LINES"` |
 
-Parameter [`DictionaryCorrectionThresholds`](dictionary-correction-thresholds.md) sets the threshold of dictionary error correction.
+### DictionaryPath
 
-## ConfusableCharactersPath
+Sets the path of the dictionary file. See [`DictionaryPath`](dictionary-path.md) for details.
 
-Parameter [`ConfusableCharactersPath`](confusable-characters-path.md) sets the path to the .data file containing characters features for confusable characters telling.
+### DictionaryCorrectionThresholds
 
-## ClusterSamplesCountThreshold
+Sets the threshold of dictionary error correction. See [`DictionaryCorrectionThresholds`](dictionary-correction-thresholds.md) for details.
 
-Parameter [`ClusterSamplesCountThreshold`](cluster-samples-count-threshold.md) sets the threshold of cluster samples count.
+### ConfusableCharactersPath
 
-## OverlappingCharactersPath
+Sets the path to the .data file containing characters features for confusable characters telling. See [`ConfusableCharactersPath`](confusable-characters-path.md) for details.
 
-Parameter [`OverlappingCharactersPath`](overlapping-characters-path.md) sets the path to the .data file containing characters features for overlapping matching.
+### ClusterSamplesCountThreshold
 
-## EnableRegexForceCorrection
+Sets the threshold of cluster samples count. See [`ClusterSamplesCountThreshold`](cluster-samples-count-threshold.md) for details.
 
-Parameter [`EnableRegexForceCorrection`](enable-regex-force-correction.md) sets whether to enable forced correction based on the RegexPattern.
+### OverlappingCharactersPath
+
+Sets the path to the .data file containing characters features for overlapping matching. See [`OverlappingCharactersPath`](overlapping-characters-path.md) for details.
+
+### EnableRegexForceCorrection
+
+Sets whether to enable forced correction based on the RegexPattern. See [`EnableRegexForceCorrection`](enable-regex-force-correction.md) for details.

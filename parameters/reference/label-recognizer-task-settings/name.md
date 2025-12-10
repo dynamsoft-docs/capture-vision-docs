@@ -1,26 +1,40 @@
 ---
 layout: default-layout
-title: LabelRecognizerTaskSetting Name - Dynamsoft Label Recognizer Parameter.
+title: Name - Dynamsoft Label Recognizer LabelRecognizerTaskSetting Parameters
 description: The parameter Name defines the unique identifier of a LabelRecognizerTaskSetting object.
 keywords: top-level object, name, unique identifier
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
 # Name
 
-Parameter `Name` represents the name of a `LabelRecognizerTaskSetting` object, which serves as its unique identifier.
+`Name` represents the name of a `LabelRecognizerTaskSetting` object, which serves as its unique identifier.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── Name
+```
+
+**Parent object:** [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html)
+
+**Example:**
 
 ```json
 {
-    "Name" : "lr_0"
+    "Name": "lr_0"
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `Name` parameter.
+> - To use it, embed this parameter within a [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

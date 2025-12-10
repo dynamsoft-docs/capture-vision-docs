@@ -1,31 +1,47 @@
 ---
 layout: default-layout
 title: QuadrilateralDetectionModes - Dynamsoft Document Normalizer Parameters
-description: The parameter QuadrilateralDetectionModes of Dynamsoft Document Normalizer.
+description: The parameter QuadrilateralDetectionModes controls the quadrilateral detection process on an image.
 keywords: Quadrilateral detection
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
 # QuadrilateralDetectionModes
 
-Parameter `QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
+`QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_DETECT_QUADS")
+            └── QuadrilateralDetectionModes
+```
+
+**Parent object:** [DetectQuadsStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-detect-quads.html)
+
+**Example:**
 
 ```json
 {
     "QuadrilateralDetectionModes": [
         {
             "Mode": "QDM_GENERAL",
-            "MinQuadrilateralAreaRatio" : 30
+            "MinQuadrilateralAreaRatio": 30
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `QuadrilateralDetectionModes` parameter.
+> - To use it, embed this parameter within a [DetectQuadsStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-detect-quads.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 `QuadrilateralDetectionModes` consist one or more mode objects. Each mode object contains a candidate mode and other mode arguments.
 
@@ -90,7 +106,7 @@ If the `QuadrilateralDetectionModes` is not configured in your template file, th
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### QDM_GENERAL
 

@@ -3,17 +3,23 @@ layout: default-layout
 title: ImageSourceName - Dynamsoft Capture Vision Parameters
 description: The parameter ImageSourceName of Dynamsoft Capture Vision defines the name of the ImageSource object.
 keywords: image source, CaptureVisionTemplate
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 permalink: /parameters/reference/capture-vision-template/image-source-name.html
 ---
-
 # ImageSourceName
 
 Parameter `ImageSourceName` indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+CaptureVisionTemplates[i]
+    └── ImageSourceName
+```
+
+**Parent object:** [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,9 +27,16 @@ Parameter `ImageSourceName` indicates the input source name, used to refer to th
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ImageSourceName` parameter.
+> - To use it, embed this parameter within a [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| ImageSourceName Parameter Summary |
+## Parameter Details
+
+| ImageSourceName Parameter Details |
 | :----------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>The name of the `ImageSource` object. |

@@ -13,7 +13,17 @@ Parameter `HasVerticalQuietZone` defines whether there is a sufficient vertical 
 
 - Introduced in version 11.2.1000.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── HasVerticalQuietzone
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,11 +31,18 @@ Parameter `HasVerticalQuietZone` defines whether there is a sufficient vertical 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `HasVerticalQuietzone` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the `HasVerticalQuietZone` is shown as follow:
 
-| HasVerticalQuietZone  Parameter Summary |
+| HasVerticalQuietZone  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

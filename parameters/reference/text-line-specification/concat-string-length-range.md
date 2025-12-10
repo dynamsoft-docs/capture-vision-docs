@@ -3,24 +3,39 @@ layout: default-layout
 title: ConcatStringLengthRange - Dynamsoft Label Recognizer Parameters
 description: The parameter ConcatStringLengthRange of text line specification is for specifying the length range of the text line strings.
 keywords: concat string length range, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 # ConcatStringLengthRange
 
 Sets the range of string length for the concated recognized text lines.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── ConcatStringLengthRange
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
-    "ConcatStringLengthRange" : [3,200]
+    "ConcatStringLengthRange": [3, 200]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ConcatStringLengthRange` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

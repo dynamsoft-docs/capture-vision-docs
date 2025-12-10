@@ -3,24 +3,39 @@ layout: default-layout
 title: StringRegExPattern - Dynamsoft Label Recognizer Parameters
 description: The parameter StringRegExPattern of text line specification is for specifying the regex pattern of the text line strings.
 keywords: string regex pattern, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 # StringRegExPattern
 
 Specifies the regular expression pattern of the string within a line. It is used to correct the recognized line text.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── StringRegexPattern
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
-    "StringRegExPattern":""
+    "StringRegExPattern": ""
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `StringRegexPattern` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

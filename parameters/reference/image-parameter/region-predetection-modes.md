@@ -1,17 +1,31 @@
 ---
 layout: default-layout
-title: RegionPredetectionModes * Dynamsoft Capture Vision Parameters
+title: RegionPredetectionModes - Dynamsoft Capture Vision Parameters
 description: The parameter RegionPredetectionModes of Dynamsoft Capture Vision is for detecting the region of interest(s) automatically.
 keywords: RegionPredetectionModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
 # RegionPredetectionModes
 
 Parameter `RegionPredetectionModes` controls how to find a region of interest (ROI) within the image or frame.
+
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i] / DocumentNormalizerTaskSettingOptions[i] / LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object where Section = "ST_REGION_PREDETECTION")
+        └── StageArray[k] (Stage object where Stage = "SST_PREDETECT_REGIONS")
+            └── RegionPredetectionModes
+```
+
+**Parent object:**
+- [PredetectRegionsStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-predetect-regions.html) object within [RegionPredetectionSection]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-region-predetection.html) of `BarcodeReaderTaskSettingOptions`
+- [PredetectRegionsStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-predetect-regions.html) object within [RegionPredetectionSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-regions-predetection.html) of `DocumentNormalizerTaskSettingOptions`
+- [PredetectRegionsStage]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/stage-predetect-regions.html) object within [RegionPredetectionSection]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-regions-predetection.html) of `LabelRecognizerTaskSettingOptions`
+
+**Example:**
 
 ```json
 {
@@ -21,23 +35,22 @@ Parameter `RegionPredetectionModes` controls how to find a region of interest (R
             "Sensitivity": 5
         },
         {
-            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
-            "Sensitivity": 5
-        },
-        {
             "Mode": "RPM_GENERAL_HSV_CONTRAST", 
             "ForeAndBackgroundColours":"[20,170,10]",
             "WidthRange": "[100, 200]"
-        },
-        {
-            "Mode": "RPM_NEURAL_NETWORK",
-            "DetectionModelName": ""
-        }        
+        }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `RegionPredetectionModes` parameter.
+> - To use it, embed this parameter within a Stage object in the `RegionPredetectionSection`.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 ### Mode Arguments
 
@@ -340,7 +353,7 @@ The default settings of RegionPredetectionModes is:
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### RPM_SKIP
 

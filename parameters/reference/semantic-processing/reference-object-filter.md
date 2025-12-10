@@ -3,64 +3,84 @@ layout: default-layout
 title: ReferenceObjectFilter - Dynamsoft Capture Vision Semantic Processing object
 description: The parameter ReferenceObjectFilter defines a group of filter conditions for figuring out the `reference objects`.
 keywords: referenceobjectfilter
-needAutoGenerateSidebar: true
-noTitleIndex: true
 needGenerateH3Content: true
 ---
-
 # ReferenceObjectFilter
 
 Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring out the `reference objects`.
 
+## JSON Structure
+
+**Location in template:**
+```
+SemanticProcessingOptions[i]
+    └── ReferenceObjectFilter
+```
+
+**Parent object:** [SemanticProcessing]({{ site.dcvb_parameters }}file/semantic-processing/index.html) object
+
+**Example:**
+
 ```json
-"ReferenceObjectFilter" :
 {
-    "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"],
-    "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME","ART_TABLE_CELL"],
-    "BarcodeFilteringCondition": 
+    "ReferenceObjectFilter":
     {
-        "BarcodeFormatIds": ["BF_CODE39"], 
-        "BarcodeTextRegExPattern": ".*b.*b.*b.*", 
-        "RegionState": "default", 
-    },
-    "FrameFilteringCondition": 
-    {
-        "ImageDimensionRange": [16384,0x7fffffff],
-        "AspectRatioRange": [1, 10000],
-        "WidthRange": [1, 0x7fffffff],
-        "HeightRange": [1, 0x7fffffff],
-        "RegionState": "default",
-    },
-    "TextLineFilteringCondition":
-    {
-        "LineNumbers": "1,3-5",
-        "LineStringRegExPattern": "Sodium[(\w| )]*",
-        "RegionState": "default", 
+        "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"],
+        "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME","ART_TABLE_CELL"],
+        "BarcodeFilteringCondition": 
+        {
+            "BarcodeFormatIds": ["BF_CODE39"], 
+            "BarcodeTextRegExPattern": ".*b.*b.*b.*", 
+            "RegionState": "default", 
+        },
+        "FrameFilteringCondition": 
+        {
+            "ImageDimensionRange": [16384,0x7fffffff],
+            "AspectRatioRange": [1, 10000],
+            "WidthRange": [1, 0x7fffffff],
+            "HeightRange": [1, 0x7fffffff],
+            "RegionState": "default",
+        },
+        "TextLineFilteringCondition":
+        {
+            "LineNumbers": "1,3-5",
+            "LineStringRegExPattern": "Sodium[(\w| )]*",
+            "RegionState": "default", 
+        }
     }
 }
 ```
 
-## ReferenceTargetROIDefNameArray
+> [!NOTE]
+> - This snippet shows only the `ReferenceObjectFilter` parameter.
+> - To use it, embed this parameter within a [SemanticProcessing]({{ site.dcvb_parameters }}file/semantic-processing/index.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
+
+### ReferenceTargetROIDefNameArray
 
 Filter the reference object by specifying `TargetROI` names.
 
-| ReferenceTargetROIDefNameArray Parameter Summary |
+| ReferenceTargetROIDefNameArray Parameter Details |
 | :------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each member should be a name of `TargetROI` that defined in `TargetROIDefOptions`. |
 | **Default Value**<br>null |
 
-## AtomicResultTypeArray
+### AtomicResultTypeArray
 
 Filter the reference object by specifying the type of atomic results. In the `TargetROIs` algorithm task can produce atomic results that can support the localization of the other `TargetROIs`.
 
-| AtomicResultTypeArray Parameter Summary |
+| AtomicResultTypeArray Parameter Details |
 | :------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each member should be one of the `AtomicResultType`, which are `ART_TEXT_LINE`, `ART_BARCODE`, `ART_FRAME`, `ART_TABLE_CELL`, `ART_GEOMETRY_LINE`, `ART_CORNER` and `ART_COLOUR_REGION` |
 | **Default Value**<br>["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"] |
 
-## BarcodeFilteringCondition
+### BarcodeFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the decoded barcode information. The parameter `BarcodeFilteringCondition` includes the following child parameters:
 
@@ -103,7 +123,7 @@ One of the filter conditions. Filter the reference objects with the decoded barc
     </tr>
 </table>
 
-## FrameFilteringCondition
+### FrameFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the frame information. The parameter `FrameFilteringCondition` includes the following child parameters:
 
@@ -169,7 +189,7 @@ One of the filter conditions. Filter the reference objects with the frame inform
     </tr>
 </table>
 
-## TextLineFilteringCondition
+### TextLineFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the text line content. The parameter `TextLineFilteringCondition` includes the following child parameters:
 

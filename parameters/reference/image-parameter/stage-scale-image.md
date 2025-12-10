@@ -1,33 +1,56 @@
 ---
 layout: default-layout
-title: Scale Image Stage Parameters - Dynamsoft Capture Vision Parameters
-description: The parameters that available under scale image stage of Dynamsoft Capture Vision.
-keywords: Stages, scale image, ImageScaleSetting, image scale setting
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
+title: ScaleImageStage - Dynamsoft Capture Vision Parameters
+description: The ScaleImageStage down/up scales the image.
+keywords: Scale Image Stage
 ---
 
-# Scale Image Stage Parameters
+# ScaleImageStage
 
-The parameters that available under the scale image stage.
+`ScaleImageStage` down/up scales the image. In JSON, it is represented as a Stage object with `"Stage": "SST_SCALE_IMAGE"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_SCALE_IMAGE")
+```
+
+**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+
+**Example:**
 
 ```json
 {
-    "Stage":"SST_SCALE_IMAGE",
-    "ImageScaleSetting" : {
+    "Stage": "SST_SCALE_IMAGE",
+    "ImageScaleSetting": {
+        "ScaleType": "ST_SCALE_DOWN",
+        "ReferenceEdge": "RE_SHORTER_EDGE",
+        "EdgeLengthThreshold": 2300
     }
-},
+}
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for scaling images.
+> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage name of scale image stage is `SST_SCALE_IMAGE`.
+## Parameters
 
-## ImageScaleSetting
+### Stage
 
-Defines how to scale image.
+Specifies the stage type. Fixed value: `SST_SCALE_IMAGE`.
 
-| Stage Parameter Summary |
-| :---------------------- |
-| **Type**<br>An *[ImageScaleSetting](image-scale-settings.md)* object. |
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_SCALE_IMAGE"` |
+
+### ImageScaleSetting
+
+Defines how to scale the image. See [`ImageScaleSetting`](image-scale-settings.md) for details.

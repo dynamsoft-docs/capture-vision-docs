@@ -3,17 +3,23 @@ layout: default-layout
 title: Name - Dynamsoft Capture Vision Parameter Reference BarcodeFormatSpecification Object.
 description: The parameter Name defines the unique identifier of BarcodeFormatSpecification object.
 keywords: top-level object, name, unique identifier
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/barcode-format-specification/name.html
 ---
 
 # Name
 
 Parameter `Name` represents the name of a `BarcodeFormatSpecification` object, which serves as its unique identifier.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── Name
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,7 +27,14 @@ Parameter `Name` represents the name of a `BarcodeFormatSpecification` object, w
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `Name` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

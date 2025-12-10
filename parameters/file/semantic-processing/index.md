@@ -34,59 +34,26 @@ Here is a sample:
 }
 ```
 
-### ReferenceObjectFilter
-
-A `ReferenceObjectFilter` object is defined as below:
-
-| Key Name | Value Type | Required or Optional | Description |
-|---|---|---|---|
-| ReferenceTargetROIDefNameArray | string array | Optional | A string array while each element is a string that represents the name of a `TargetROIDef` object. |
-| AtomicResultTypeArray | string array | Optional | A string array while each element is a string that represents a type of atomic result that needs to be filtered |
-| TextLineFilteringCondition | JSON object | Optional | An object used to specify the conditions for filtering text lines. |
-| BarcodeFilteringCondition | JSON object | Optional | An object used to specify the conditions for filtering barcodes. |
-
-Here is a sample:
-
-```json
-{
-    "ReferenceObjectFilter" :
-    {  
-        "ReferenceTargetROIDefNameArray": ["TR_0", "TR_1"], 
-        "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE"], 
-        "BarcodeFilteringCondition": 
-        {
-            "BarcodeFormatIds": ["BF_CODE39"], 
-            "BarcodeTextRegExPattern": ".*b.*b.*b.*"
-        },
-        "TextLineFilteringCondition":
-        {
-            "LineNumbers": "1,3-5",  
-            "LineStringRegExPattern": "P<CAN[A-Z<]{39}"
-        }
-    }
-}
-```
-
 ## Design of Semantic Processing
 
 The `SemanticProcessing` object is used to specify one or more tasks to analyze and extract information from image ROI processing results. The whole workflow typically involves following concepts.
 
-## Prerequisites
+### Prerequisites
 
 A `SemanticProcessing` object will take effect when its name is referenced in `CaptureVisionTemplate.SemanticProcessingNameArray`.
 
-## Launch Timing
+### Launch Timing
 
 The semantic process is triggered only after all the recognition tasks referenced in `CaptureVisionTemplate.ImageROIProcessingNameArray` have been completed.
 
-## Data Filtering
+### Data Filtering
 
 In many cases, the process may involve filtering data to select only the relevant sources, such as a label text meeting a specific regular expression or a barcode meeting a specific format. `ReferenceObjectFilter` is used to specify such data filtering criteria.
 
-## Task Execution
+### Task Execution
 
 This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object.
 
-## Results Reporting
+### Results Reporting
 
-Currently, semantic-processing supports code parsing tasks, so the result is returned with callback [`OnParsedResultsReceived`]().
+Currently, semantic-processing supports code parsing tasks, so the result is returned with callback `OnParsedResultsReceived`.

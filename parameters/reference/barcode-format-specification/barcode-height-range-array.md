@@ -2,21 +2,28 @@
 layout: default-layout
 title: BarcodeHeightRangeArray - Dynamsoft Barcode Reader Parameters
 description: The parameter BarcodeHeightRangeArray of Dynamsoft Barcode Reader defines the range of heights (in pixels) for barcodes searching and result filtering.
-keywords: BarcodeHeightRangeArray  , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
+keywords: BarcodeHeightRangeArray, parameter reference, parameter
 ---
 
 # BarcodeHeightRangeArray
 
 Parameter `BarcodeHeightRangeArray` defines the range of heights (in pixels) for barcodes searching and result filtering.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── BarcodeHeightRangeArray
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
-    "BarcodeHeightRangeArray": 
+    "BarcodeHeightRangeArray":
     [
         {
             "MinValue": 100,
@@ -26,7 +33,14 @@ Parameter `BarcodeHeightRangeArray` defines the range of heights (in pixels) for
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeHeightRangeArray` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `BarcodeHeightRangeArray` consist of a group of barcode height range objects. Each object includes the maximum and minimum value of the barcode height range.
 

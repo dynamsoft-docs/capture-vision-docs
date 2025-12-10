@@ -3,16 +3,23 @@ layout: default-layout
 title: ModuleSizeRangeArray - Dynamsoft Barcode Reader Parameters
 description: The parameter ModuleSizeRangeArray of Dynamsoft Barcode Reader defines the range of module size (in pixels) while barcode searching and result filtering.
 keywords: ModuleSizeRangeArray , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 ---
 
 # ModuleSizeRangeArray
 
 Parameter `ModuleSizeRangeArray` defines the range of module size (in pixels) while barcode searching and result filtering.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── ModuleSizeRangeArray
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -26,7 +33,14 @@ Parameter `ModuleSizeRangeArray` defines the range of module size (in pixels) wh
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ModuleSizeRangeArray` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `ModuleSizeRangeArray` consist of a group of barcode module size range objects. Each object includes the maximum and minimum value of the barcode module size range.
 

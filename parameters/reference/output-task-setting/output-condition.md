@@ -12,8 +12,17 @@ permalink: /parameters/reference/output-task-setting/output-condition.html
 # OutputCondition
 
 The parameter `OutputCondition` defines how the [`OutputTaskSetting`](../../file/task-settings/output-task-setting.md) object outputs results that satisfy multiple filter conditions across products.
+## JSON Structure
 
-## Example
+**Location in template:**
+```
+OutputTaskSettingOptions[i]
+    └── OutputCondition
+```
+
+**Parent object:** [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html) object
+
+**Example:**
 
 ```json
 {
@@ -23,7 +32,6 @@ The parameter `OutputCondition` defines how the [`OutputTaskSetting`](../../file
                 "TargetROIDefName": "B", 
                 "TaskSettingNameArray": ["B_task"],
                 "Operator": "AND",
-
                 "BackwardReferenceOutput": {
                     "ReferenceTaskNameArray": ["A_task"], 
                     "ReferenceResultTypeArray":[ "ART_TEXT_LINE","ART_BARCODE","ART_FRAME", "ART_TABLE_CELL", "ART_COLOUR_REGION" ]
@@ -35,27 +43,35 @@ The parameter `OutputCondition` defines how the [`OutputTaskSetting`](../../file
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `OutputCondition` parameter.
+> - To use it, embed this parameter within a [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-### TaskResultArray
 
-The parameter `TaskResultArray` configures multiple tasks of descendant `TargetROIDef` objects to filter out the results of the tasks of the reference `TargetROIDef`.
+## Parameter Details
 
 ### Operator
 
 The parameter `Operator` defines the type of filtered combination of results from multiple tasks within a `TargetROIDef` object or across multiple `TargetROIDef` objects.
 
-| Operator Parameter Summary |
+| Operator Parameter Details |
 | :------------------- |
 | **Type**<br>*String* |
 | **Range**<br>One of the following values: "OR", "AND" |
 | **Default Value**<br>"AND"|
 
+### TaskResultArray
+
+The parameter `TaskResultArray` configures multiple tasks of descendant `TargetROIDef` objects to filter out the results of the tasks of the reference `TargetROIDef`.
+
 #### TargetROIDefName
 
 The parameter `TargetROIDefName` configures the name of descendant `TargetROIDef` object.
 
-| TargetROIDefName Parameter Summary |
+| TargetROIDefName Parameter Details |
 | :------------------- |
 | **Type**<br>*String* |
 | **Range**<br>One of the names of descendant `TargetROIDef` object |
@@ -65,7 +81,7 @@ The parameter `TargetROIDefName` configures the name of descendant `TargetROIDef
 
 The parameter `TaskSettingNameArray` specifies the task name array on the descendant `TargetROIDef` object.
 
-| TaskSettingNameArray Parameter Summary |
+| TaskSettingNameArray Parameter Details |
 | :------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each member of the array should be one of the task in the descendant `TargetROIDef` object. |

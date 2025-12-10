@@ -1,19 +1,25 @@
 ---
 layout: default-layout
 title: BarcodeFormatIds - Dynamsoft Barcode Reader Parameters
-description: The parameter BarcodeFormatIds of Dynamsoft Barcode Reader defines the barcode formats to process.
+description: The parameter BarcodeFormatIds defines the barcode formats to read in a task.
 keywords: Barcode format IDs
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/barcode-format-ids.html
 ---
 
 # BarcodeFormatIds
 
-Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You can specify multiple barcode formats at one time. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
+`BarcodeFormatIds` defines which barcode formats to read in a barcode reader task. You can specify multiple barcode formats at one time.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── BarcodeFormatIds
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
@@ -21,10 +27,18 @@ Parameter `BarcodeFormatIds` defines the formats of the barcode to process. You 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeFormatIds` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| BarcodeFormatIds Parameter Summary |
+## Parameter Details
+
+| BarcodeFormatIds Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each member of the array should be one of the BarcodeFormat enumeration member as a string. |
-| **Default Value**<br>[ "BF_DEFAULT" ] |
+| **Range**<br>Each array element should be a string value from the [BarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html) enumeration. |
+| **Default Value**<br>`["BF_DEFAULT"]` |
+| **Remarks**<br>View the [BarcodeFormat enumeration]({{ site.dcvb_enums }}barcode-reader/barcode-format.html) for all supported barcode formats. |

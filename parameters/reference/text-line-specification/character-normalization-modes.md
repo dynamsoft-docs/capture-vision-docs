@@ -3,17 +3,23 @@ layout: default-layout
 title: CharacterNormalizationModes - Dynamsoft Label Recognizer Parameters
 description: The parameter CharacterNormalizationModes of Dynamsoft Label Recognizer defines how to normalize the characters.
 keywords: Character normalization
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/text-line-specification/character-normalization-modes.html
 ---
 
 # CharacterNormalizationModes
 
 Parameter `CharacterNormalizationMode` defines an array of character normalization mode to implement. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── CharacterNormalizationModes
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -31,7 +37,15 @@ Parameter `CharacterNormalizationMode` defines an array of character normalizati
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `CharacterNormalizationModes` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 Parameter `CharacterNormalizationModes` consist of a group of character normalization mode objects. Each character normalization mode object includes a candidate mode and a series of mode arguments. The mode arguments of the character normalization mode object is shown as follow:
 
@@ -118,7 +132,7 @@ Parameter `CharacterNormalizationModes` consist of a group of character normaliz
     </tr>
     <tr>
         <td><b>Remarks</b><br>
-            Only available for "DM_PERSPECTIVE_CORRECTION".<br>
+            Only available for "CNM_MORPH".<br>
             0: Direction unknown.<br>
             1: Vertical direction.<br>
             2: Horizontal direction.
@@ -128,7 +142,7 @@ Parameter `CharacterNormalizationModes` consist of a group of character normaliz
 
 ### Default Setting
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### CNM_MORPH
 

@@ -15,7 +15,6 @@ The `OutputTaskSetting` object is used to configure how to output the expected r
 ```json
 {
     "Name" : "output_task",
-
     "OutputCondition": {
         "TaskResultArray": [
             {
@@ -56,7 +55,7 @@ The following example shows how to set the `OutputCondition` object.
 
 ```json
 {
-    ......
+    //......
     "TargetROIDefOptions" : [
         {
             "Name" : "A_roi",  
@@ -114,7 +113,7 @@ The following example shows how to set the `OutputCondition` object.
             }
         }
     ]
-    ......
+    //......
 }
 ```
 

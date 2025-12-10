@@ -3,16 +3,23 @@ layout: default-layout
 title: Name - Dynamsoft Capture Vision Parameter Reference ImageSource Object.
 description: The parameter Name defines the unique identifier of ImageSource object.
 keywords: top-level object, name, unique identifier
-needAutoGenerateSidebar: true
-noTitleIndex: true
 needGenerateH3Content: true
 ---
-
 # Name
 
 Parameter `Name` represents the name of a `ImageSource` object, which serves as its unique identifier.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageSourceOptions
+    └── Name
+```
+
+**Parent object:** [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object
+
+**Example:**
 
 ```json
 {
@@ -20,7 +27,14 @@ Parameter `Name` represents the name of a `ImageSource` object, which serves as 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `Name` parameter.
+> - To use it, embed this parameter within a [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

@@ -2,17 +2,23 @@
 layout: default-layout
 title: ResourcesPath - Dynamsoft Capture Vision Parameter Reference
 description: The parameter ResourcesPath of Dynamsoft Capture Vision. 
-needAutoGenerateSidebar: true
-needGenerateH3Content: false
-noTitleIndex: true
 permalink: /parameters/reference/code-parser-task-settings/resources-path.html
 ---
-
 # ResourcesPath
 
 Parameter `ResourcesPath` specifies the directory path that contains the resources needed for code parsing.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+CodeParserTaskSettingOptions[i]
+    └── ResourcesPath
+```
+
+**Parent object:** [CodeParserTaskSetting]({{ site.dcvb_parameters }}file/task-settings/code-parser-task-settings.html) object
+
+**Example:**
 
 ```json
 {
@@ -20,9 +26,16 @@ Parameter `ResourcesPath` specifies the directory path that contains the resourc
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ResourcesPath` parameter.
+> - To use it, embed this parameter within a [CodeParserTaskSetting]({{ site.dcvb_parameters }}file/task-settings/code-parser-task-settings.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| Brightness Parameter Summary |
+## Parameter Details
+
+| Brightness Parameter Details |
 | :------------- |
 | **Type**<br>*String* |
 | **Range**<br>any valid string |

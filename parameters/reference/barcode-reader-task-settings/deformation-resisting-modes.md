@@ -2,37 +2,54 @@
 layout: default-layout
 title: DeformationResistingModes - Dynamsoft Barcode Reader Parameters
 description: The parameter DeformationResistingModes of Dynamsoft Barcode Reader defines how to handle distorted and deformed barcodes.
-keywords: Deblur modes
+keywords: Deformation resisting modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/deformation-resisting-modes.html
 ---
 
 # DeformationResistingModes
 
 Parameter `DeformationResistingModes` defines how to handle distorted and deformed barcodes.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    ├── SectionArray[j]
+    │   └── StageArray[k] (Stage object)
+    │       └── DeformationResistingModes
+```
+
+**Parent object:** [ResistDeformationStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-resist-deformation.html) object
+
+**Example:**
 
 ```json
 {
-    "DeformationResistingModes" :
-    [
+    "DeformationResistingModes": [
         {
-            "Mode" : "DRM_SKIP"
+            "Mode": "DRM_SKIP"
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `DeformationResistingModes` parameter.
+> - To use it, embed this parameter within a Stage object at the `SST_RESIST_DEFORMATION` stage.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Parameter `DeformationResistingModes` consist of a group of deformation resisting mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary mode arguments.
+## Parameter Details
+
+Parameter `DeformationResistingModes` consists of a group of deformation resisting mode objects. Each deformation resisting mode object includes a candidate mode and a series of auxiliary mode arguments.
 
 ### Mode Arguments
 
-The mode arguments of the deformation resisting mode object are shown as follow:
+The mode arguments of the deformation resisting mode object are shown as follows:
 
 <table style = "text-align:left">
     <thead>
@@ -42,7 +59,7 @@ The mode arguments of the deformation resisting mode object are shown as follow:
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Specifies a mode for deformation resisting.
         </td>
     </tr>
@@ -57,10 +74,6 @@ The mode arguments of the deformation resisting mode object are shown as follow:
             <br>DRM_DEWRINKLE
             <br>DRM_AUTO
             <br>DRM_SKIP
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>
         </td>
     </tr>
     <tr>
@@ -153,15 +166,16 @@ The mode arguments of the deformation resisting mode object are shown as follow:
 ### Default Settings
 
 ```json
-"DeformationResistingModes" : 
-[
-    {
-        "Mode" : "DRM_SKIP"
-    }
-]
+{
+    "DeformationResistingModes": [
+        {
+            "Mode" : "DRM_SKIP"
+        }
+    ]
+}
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### DRM_GENERAL
 

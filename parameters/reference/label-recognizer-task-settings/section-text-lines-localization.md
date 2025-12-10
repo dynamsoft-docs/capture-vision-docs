@@ -1,44 +1,71 @@
 ---
 layout: default-layout
-title: TextLinesLocalizationSection - Dynamsoft Label Recognizer Parameters
-description: The parameter defines text lines localization section under the Section Array.
-keywords: Text Lines Localization Section
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
+title: TextLineLocalizationSection - Dynamsoft Label Recognizer Parameters
+description: The TextLineLocalizationSection detects the exact locations of text-lines.
+keywords: TextLineLocalizationSection
 ---
 
-# TextLinesLocalizationSection Object
+# TextLineLocalizationSection
 
-The `TextLinesLocalizationSection` is designed to detect the exact locations of text-lines.
+`TextLineLocalizationSection` detects the exact locations of text-lines. In JSON, it is represented as a Section object with `"Section": "ST_TEXT_LINE_LOCALIZATION"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object where Section = "ST_TEXT_LINE_LOCALIZATION")
+```
+
+**Parent object:** [SectionArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-array.html)
+
+**Example:**
 
 ```json
 {
     "Section": "ST_TEXT_LINE_LOCALIZATION",
     "ImageParameterName": "ip_dlrDefault",
-    "StageArray": []
+    "StageArray": [
+        {
+            "Stage": "SST_LOCALIZE_TEXT_LINES"
+        }
+    ]
 }
 ```
 
-## Section
+> [!NOTE]
+> - This snippet shows a Section object configured for text line localization.
+> - To use it, add this object to the [SectionArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-array.html) of a [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The section is named `ST_TEXT_LINE_LOCALIZATION`.
+## Parameters
 
-## ImageParameterName
+### Section
 
-Specifies the `ImageParameter` to apply in the stages of this section.
+Specifies the section type. Fixed value: `ST_TEXT_LINE_LOCALIZATION`.
 
-| Parameter Summary |
+| Parameter Details |
 | :------------- |
 | **Type**<br>*string* |
-| **Range**<br>*It must be one of the name that defined under `ImageParameterOptions`* |
-| **Default Value**<br>*ip_dlrDefault* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"ST_TEXT_LINE_LOCALIZATION"` |
 
-## StageArray
+### ImageParameterName
 
-`StageArray` is a parameter that specifies the stages within the `TextLinesLocalizationSection`. A `Stage` is the smallest step significant enough to involve users in image processing.
+Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
 
-The `TextLinesLocalizationSection` consists of a single stage:
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Range**<br>Must be the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object defined under `ImageParameterOptions` |
+| **Default Value**<br>`""` |
 
-* [SST_LOCALIZE_TEXT_LINES](stage-localize-text-lines.md)
-  * It is designed at the stage level to detect the exact locations of text-lines.
+### StageArray
+
+Specifies the stage objects within this section. The `TextLineLocalizationSection` consists of the following stages:
+
+| Stage | Description |
+|-------|-------------|
+| [LocalizeTextLinesStage](stage-localize-text-lines.md) (`SST_LOCALIZE_TEXT_LINES`) | Detects the exact locations of text-lines. |

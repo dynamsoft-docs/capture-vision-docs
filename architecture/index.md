@@ -5,7 +5,6 @@ description: This is the main page of Dynamsoft Capture Vision Architecture.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/index.html
 ---
 
 # Architecture of Dynamsoft Capture Vision
@@ -42,16 +41,16 @@ In the DCV architecture, an **image source** refers to any object that implement
 
 At runtime, CVR accepts an image source and acts as the image input provider for functional products. Typically, this process is continuous and only ends when the image source is exhausted.
 
-### Coordinating Image-Processing Tasks
+### Coordinating Processing Tasks
 
-CVR accepts and maintains a list of image-processing settings known as [CaptureVisionTemplates](../parameters/file/capture-vision-template.md). Each template defines the tasks to be performed on an image. These tasks can be configured to run either in parallel or sequentially.
+CVR accepts and maintains a list of processing settings known as [parameter template](../parameters/file/index.md). Each template defines the tasks to be performed on an image. These tasks can be configured to run either in parallel or sequentially.
 
 At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to construct a task workflow, which then runs for all images acquired from the image source.
 
 - For tasks that can run in parallel, CVR processes the next image as long as there is an available working thread to create a *functional product* instance. Read more about [Parallel Image-Processing](#parallel-image-processing).
 - For tasks that must run in sequence, CVR ensures that each task follows the correct order of operations.
 
-> There are two types of tasks. Learn more about [Image-Processing Tasks](../parameters/file/task-settings/index.md) and [Semantic-Processing Tasks](semantic-processing.md).
+> There are two types of tasks. Learn more about [Image-Processing Tasks](./image-processing/index.md) and [Semantic-Processing Tasks](semantic-processing.md).
 
 ### Dispatching Results to Listening Objects
 
@@ -62,7 +61,7 @@ As CVR processes images, different types of results are generated. These results
 1. **Final results** (*Captured Results*): These are the outputs of a completed task. Read more about them [here](output.md#final-results).
 
 2. **Intermediate results**: These are results produced at various checkpoints during task execution.  
-   > These checkpoints are called *stages*. These stages are further grouped into seven categories known as *image-processing sections*. Learn more about [Image-Processing Tasks](../parameters/file/task-settings/index.md).
+   > These checkpoints are called *stages*. These stages are further grouped into seven categories known as *image-processing sections*. Learn more about [Image-Processing Tasks](./image-processing/index.md).
 
 The following diagram provides a simplified overview of the CVR workflow:
 
@@ -106,7 +105,7 @@ The required tasks for processing this image are:
 2. **Read the barcode** to retrieve the patient ID (*DBR Task*).  
 3. **Extract text above the barcode** to determine COVID-19 test results (*DLR Task*).  
 
-Here’s a simple representation of "task coordination":
+Here's a simple representation of "task coordination":
 
 ![CVR-Task-Coordination](assets/CVR-Tasks-Coordination.png)  
 ***Diagram 3: CVR Task Coordination***  
@@ -119,9 +118,9 @@ DCV optimizes performance through **Intermediate Results Sharing** and **Paralle
 
 #### **Intermediate Results Sharing**
 
-Previously, we discussed how [CVR dispatches results to listening objects](#dispatching-results-to-listening-objects) and [coordinates image-processing tasks](#coordinating-image-processing-tasks). Some tasks share "common image analysis stages", allowing **intermediate results** to be reused across tasks.  
+Previously, we discussed how [CVR dispatches results to listening objects](#dispatching-results-to-listening-objects) and [coordinates processing tasks](#coordinating-processing-tasks). Some tasks share "common image analysis stages", allowing **intermediate results** to be reused across tasks.  
 
-Here’s a demonstration of **intermediate result sharing**:
+Here's a demonstration of **intermediate result sharing**:
 
 ![Intermediate-Result-Sharing](assets/Intermediate-Result-Sharing.png)  
 ***Diagram 4: Intermediate Results Sharing***  
@@ -150,18 +149,18 @@ As shown in **Diagram 3** above, CVR maintains a pool of functional product inst
 
 One of the biggest advantages of the DCV architecture is its **simple outward-facing API**.  
 
-Let’s revisit the three core jobs of **CVR** (see [Capture Vision Router](#capture-vision-router) and *Diagram 2*):
+Let's revisit the three core jobs of **CVR** (see [Capture Vision Router](#capture-vision-router) and *Diagram 2*):
 
 | **Index** | **Description**                          | **Corresponding API of CVR**                                                                 |
 |:---------:|-----------------------------------------|---------------------------------------------------------------------------------------------|
 | **1**     | Retrieve images from the image source  | `SetInput()` accepts an image source.                                                      |
-| **2**     | Coordinate image-processing tasks      | `InitSettings()` loads a parameter file defining workflows, and `StartCapturing()` executes a workflow. |
+| **2**     | Coordinate processing tasks      | `InitSettings()` loads a parameter file defining workflows, and `StartCapturing()` executes a workflow. |
 | **3**     | Dispatch results to listening objects  | `AddResultReceiver()` registers one or more listeners.                                     |
 
 - Jobs 1 & 3 handle straightforward **input and output**.  
 - Job 2 determines the **actual workflow and application behavior**.  
 
-In some scenarios, workflows remain consistent, allowing predefined settings to be used. These settings are called ["CaptureVisionTemplates"](../parameters/file/capture-vision-template.md). Customers can simply select a template, reducing development effort. Read more about [common scenarios](../introduction/index.md#simplicity-with-packable-scenarios).
+In some scenarios, workflows remain consistent, allowing predefined settings to be used. These settings are called `preset template`. Customers can simply select a template, reducing development effort. Read more about [common scenarios](../introduction/index.md#simplicity-with-packable-scenarios).
 
 ### Bidirectional Interactivity with Intermediate Results
 
@@ -175,7 +174,7 @@ For example, during barcode reading, one stage may *detect* the barcode location
 
 To address this, we use a **listening object** with the [Intermediate Result Receiver (IRR) interface](output.md#intermediate-result-receiver). This object listens for localized barcodes and decoded barcodes, applying different visual cues.  
 
-Here’s a visual representation of how CVR dispatches intermediate results:
+Here's a visual representation of how CVR dispatches intermediate results:
 
 ![Intermediate-Result-Dispatch](assets/Intermediate-Result-Dispatch.png)  
 ***Diagram 5: Intermediate Results Dispatching***  
@@ -188,11 +187,11 @@ Here’s a visual representation of how CVR dispatches intermediate results:
 
 1. A specific type of *intermediate result* is generated.  
 2. CVR dispatches the result to a registered listener and pauses processing.  
-3. The customer’s code in the callback function receives the result.  
+3. The customer's code in the callback function receives the result.  
 4. The code examines, modifies, and returns the result to CVR.  
 5. CVR injects the updated data back into the workflow and resumes processing.  
 
-Here’s a visual demonstration of this process:
+Here's a visual demonstration of this process:
 
 ![Intermediate-Result-Intervention](assets/Intermediate-Result-Intervention.png)  
 ***Diagram 6: Intermediate Results Intervention***  

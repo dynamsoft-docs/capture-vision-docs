@@ -3,26 +3,39 @@ layout: default-layout
 title: ConcatResults - Dynamsoft Label Recognizer Parameters
 description: The parameter ConcatResults defines whether to concatenate the output results of the TextLineSpecification object.
 keywords: top-level object, ConcatResults
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/text-line-specification/concat-results.html
 ---
 
 # ConcatResults
 
 Parameter `ConcatResults` defines whether to concatenate multiple lines of text. For example, if two lines of text are recognized in a label, the results will be concatenated into one line using `ConcatSeparator` as the separator.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── ConcatResults
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
-    "Name": "tls_0",
-    "ConcatResults" : 0
+    "ConcatResults": 0
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ConcatResults` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

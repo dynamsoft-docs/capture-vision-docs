@@ -3,9 +3,6 @@ layout: default-layout
 title: GrayscaleEnhancementModes - Dynamsoft Label Recognizer Parameters
 description: The parameter GrayscaleEnhancementModes of text line specification is for enhancing the quality of grayscale image of the text line area.
 keywords: GrayscaleEnhancementModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,7 +10,17 @@ noTitleIndex: true
 
 Parameter `GrayscaleEnhancementModes` provides some image processing methods to enhance the grayscale quality of the text line area. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── GrayscaleEnhancementModes
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -38,7 +45,15 @@ Parameter `GrayscaleEnhancementModes` provides some image processing methods to 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `GrayscaleEnhancementModes` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancement mode objects. Each grayscale enhancement mode object includes a candidate mode and a series of mode arguments. The mode arguments of the grayscale enhancement mode object is shown as follow:
 
@@ -243,7 +258,7 @@ If the `GrayscaleEnhancementModes` is not configured in your template file, the 
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### GEM_GENERAL
 

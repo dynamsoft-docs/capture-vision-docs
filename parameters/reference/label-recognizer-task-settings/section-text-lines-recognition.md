@@ -1,46 +1,75 @@
 ---
 layout: default-layout
-title: TextLinesRecognitionSection - Dynamsoft Label Recognizer Parameters
-description: The parameter defines text lines recognition section under the Section Array.
-keywords: Text Lines Recognition  Section
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
+title: TextLineRecognitionSection - Dynamsoft Label Recognizer Parameters
+description: The TextLineRecognitionSection recognizes text from localized text-line regions.
+keywords: TextLineRecognitionSection
 ---
 
-# TextLinesRecognitionSection Object
+# TextLineRecognitionSection
 
-The `TextLinesRecognitionSection` is designed to detect the exact locations of text-lines.
+`TextLineRecognitionSection` recognizes text from localized text-line regions. In JSON, it is represented as a Section object with `"Section": "ST_TEXT_LINE_RECOGNITION"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object where Section = "ST_TEXT_LINE_RECOGNITION")
+```
+
+**Parent object:** [SectionArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-array.html)
+
+**Example:**
 
 ```json
 {
     "Section": "ST_TEXT_LINE_RECOGNITION",
     "ImageParameterName": "ip_dlrDefault",
-    "StageArray": []
+    "StageArray": [
+        {
+            "Stage": "SST_RECOGNIZE_RAW_TEXT_LINES"
+        },
+        {
+            "Stage": "SST_ASSEMBLE_TEXT_LINES"
+        }
+    ]
 }
 ```
 
-## Section
+> [!NOTE]
+> - This snippet shows a Section object configured for text line recognition.
+> - To use it, add this object to the [SectionArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-array.html) of a [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The section is named `ST_TEXT_LINE_RECOGNITION`.
+## Parameters
 
-## ImageParameterName
+### Section
 
-Specifies the `ImageParameter` to apply in the stages of this section.
+Specifies the section type. Fixed value: `ST_TEXT_LINE_RECOGNITION`.
 
-| Parameter Summary |
+| Parameter Details |
 | :------------- |
 | **Type**<br>*string* |
-| **Range**<br>*It must be one of the name that defined under `ImageParameterOptions`* |
-| **Default Value**<br>*ip_dlrDefault* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"ST_TEXT_LINE_RECOGNITION"` |
 
-## StageArray
+### ImageParameterName
 
-`StageArray` is a parameter that specifies the stages within the `TextLinesRecognitionSection`. A `Stage` is the smallest step significant enough to involve users in image processing.
+Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
 
-The `TextLinesRecognitionSection` consists of two stages:
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Range**<br>Must be the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object defined under `ImageParameterOptions` |
+| **Default Value**<br>`""` |
 
-* [SST_RECOGNIZE_RAW_TEXT_LINES](stage-recognize-raw-text-lines.md)
-  * It is designed at the stage level to recognize the raw values of text-lines.
-* [SST_ASSEMBLE_TEXT_LINES](stage-assemble-text-lines.md)
-  * It is designed at the stage level to assemble the grouped text-lines into a single text-line.
+### StageArray
+
+Specifies the stage objects within this section. The `TextLineRecognitionSection` consists of the following stages:
+
+| Stage | Description |
+|-------|-------------|
+| [RecognizeRawTextLinesStage](stage-recognize-raw-text-lines.md) (`SST_RECOGNIZE_RAW_TEXT_LINES`) | Recognizes the raw values of text-lines. |
+| [AssembleTextLinesStage](stage-assemble-text-lines.md) (`SST_ASSEMBLE_TEXT_LINES`) | Assembles grouped text-lines into a single text-line. |

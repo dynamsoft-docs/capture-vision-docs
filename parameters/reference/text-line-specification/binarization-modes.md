@@ -3,10 +3,6 @@ layout: default-layout
 title: BinarizationModes - Dynamsoft Label Recognizer Parameter
 description: The parameter BinarizationModes of text line specification controls the process of text line binarization.
 keywords: BinarizationModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
-permalink: /parameters/reference/text-line-specification/binarization-modes.html
 ---
 
 
@@ -14,7 +10,17 @@ permalink: /parameters/reference/text-line-specification/binarization-modes.html
 
 Parameter `BinarizationModes` helps control the process of binarization, i.e., converting a grayscale image to a binary image. A better binary image greatly helps the following processes. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. `BinarizationModes` consists of one or more modes, each mode representing a different binarization process.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── BinarizationModes
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -36,7 +42,15 @@ Parameter `BinarizationModes` helps control the process of binarization, i.e., c
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BinarizationModes` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 Parameter `BinarizationModes` consist of a group of binarization mode objects. Each binarization mode object includes a candidate mode and a series of mode arguments. The available mode arguments of the binarization mode object is shown as follow.
 
@@ -300,7 +314,7 @@ Parameter `BinarizationModes` consist of a group of binarization mode objects. E
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### BM_LOCAL_BLOCK
 

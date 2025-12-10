@@ -3,9 +3,6 @@ layout: default-layout
 title: GrayscaleEnhancementModes - Dynamsoft Capture Vision Parameters
 description: The parameter GrayscaleEnhancementModes of Dynamsoft Capture Vision is for enhancing the quality of grayscale image.
 keywords: GrayscaleEnhancementModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,32 +10,37 @@ noTitleIndex: true
 
 Parameter `GrayscaleEnhancementModes` provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_ENHANCE_GRAYSCALE")
+        └── GrayscaleEnhancementModes
+```
+
+**Parent object:** [EnhanceGrayscaleStage](stage-enhance-grayscale.md)
+
+**Example:**
 
 ```json
 {
     "GrayscaleEnhancementModes": [
         {
-            "Mode": "GEM_GRAY_EQUALIZE", 
-            "Sensitivity": 1
-        },
-        {
-            "Mode": "GEM_GRAY_SMOOTH", 
-            "SmoothBlockSizeX": 5,
-            "SmoothBlockSizeY": 5
-        },
-        {
-            "Mode": "GEM_SHARPEN_SMOOTH", 
-            "SmoothBlockSizeX": 5,
-            "SmoothBlockSizeY": 5,
-            "SharpenBlockSizeX": 5,
-            "SharpenBlockSizeY": 5
+            "Mode": "GEM_GENERAL"
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `GrayscaleEnhancementModes` parameter.
+> - To use it, embed this parameter within an [EnhanceGrayscaleStage](stage-enhance-grayscale.md) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `GrayscaleEnhancementModes` consist of a group of grayscale enhancement mode objects. Each grayscale enhancement mode object includes a candidate mode and a series of mode arguments. The mode arguments of the grayscale enhancement mode object is shown as follow:
 
@@ -243,7 +245,7 @@ If the `GrayscaleEnhancementModes` is not configured in your template file, the 
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### GEM_GENERAL
 

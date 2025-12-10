@@ -28,9 +28,6 @@ An `ImageSource` object defines an image source to be created and maintained by 
 }
 ```
 
-<div align="center">
-   <p>Example 1 – Parameters of ImageSource</p>
-</div>
 
 ## Summary of ImageSource top-level parameters
 
@@ -44,9 +41,6 @@ An `ImageSource` object defines an image source to be created and maintained by 
 | `PDFReadingMode` | Defines how to handle PDF files.                                                                         |
 | `Pages`          | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching.                                                                         |
 
-<div align="center">
-   <p>Table 1 – Parameters Summary of ImageSource</p>
-</div>
 
 ### Sub Parameters of PDFReadingMode 
 

@@ -12,12 +12,23 @@ noTitleIndex: true
 
 Parameter `DeblurModes` defines the mode and priority for deblurring.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    ├── SectionArray[j]
+    │   └── StageArray[k] (Stage object)
+    │       └── DeblurModes
+```
+
+**Parent object:** [DecodeBarcodesStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-decode-barcodes.html) object
+
+**Example:**
 
 ```json
 {
-    "DeblurModes":
-    [
+    "DeblurModes": [
         {
             "Mode": "DM_BASED_ON_LOC_BIN"
         },
@@ -28,13 +39,20 @@ Parameter `DeblurModes` defines the mode and priority for deblurring.
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `DeblurModes` parameter.
+> - To use it, embed this parameter within a Stage object at the `SST_DECODE_BARCODES` stage.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Parameter `DeblurModes` consist of a group of deblur mode objects. Each deblur mode object includes a candidate mode and a series of auxiliary mode arguments.
+## Parameter Details
+
+Parameter `DeblurModes` consists of a group of deblur mode objects. Each deblur mode object includes a candidate mode and a series of auxiliary mode arguments.
 
 ### Mode Arguments
 
-The mode arguments of the deblur mode object are shown as follow:
+The mode arguments of the deblur mode object are shown as follows:
 
 <table style = "text-align:left">
     <thead>
@@ -167,7 +185,7 @@ The mode arguments of the deblur mode object are shown as follow:
 
 ### Default Setting
 
-If the `DeblurModes` is not configured in your template file, the following settings will be used as the default settings.
+By default, deblur modes are not configured and set to null.
 
 ```json
 {
@@ -175,22 +193,21 @@ If the `DeblurModes` is not configured in your template file, the following sett
 }
 ```
 
-**Remarks**  
+**Remarks:**
 
-The actual deblur modes used are:
-- For Barcode Format PDF417
+When `DeblurModes` is null, the actual deblur modes used depend on the barcode format:
 
-[DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING,DM_DEEP_ANALYSIS]
+- **For PDF417 format:**  
+  [DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION, DM_SMOOTHING, DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]
 
-- For Barcode Format OneD  
+- **For OneD formats:**  
+  [DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION, **DM_NEURAL_NETWORK (with EAN13Decoder and Code128Decoder)**, DM_DEEP_ANALYSIS, DM_SMOOTHING, DM_GRAY_EQUALIZATION, DM_MORPHING]
 
-[DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,**DM_NEURAL_NETWORK(with EAN13Decoder and Code128Decoder)**,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING]
+- **For other formats**
 
-- For other formats
+  [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING]
 
-[DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING]
-
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### DM_DIRECT_BINARIZATION
 

@@ -1,27 +1,40 @@
 ---
 layout: default-layout
-title: BarcodeReaderTaskSetting Name - Dynamsoft Barcode Reader Parameters.
+title: Name - Dynamsoft Barcode Reader BarcodeReaderTaskSetting Parameters
 description: The parameter Name defines the unique identifier of BarcodeReaderTaskSetting object.
 keywords: top-level object, name, unique identifier
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/barcode-reader-task-settings/name.html
 ---
 
 # Name
 
-Parameter `Name` represents the name of a `BarcodeReaderTaskSetting` object, which serves as its unique identifier.
+`Name` represents the name of a `BarcodeReaderTaskSetting` object, which serves as its unique identifier.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── Name
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
-    "Name" : "br_0"
+    "Name": "br_0"
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `Name` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

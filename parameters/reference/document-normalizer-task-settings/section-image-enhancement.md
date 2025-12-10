@@ -1,44 +1,71 @@
 ---
 layout: default-layout
-title: Image Enhancement Section - Dynamsoft Document Normalizer Parameters
-description: The parameter defines Image Enhancement section under the DocumentNormalizerTask.
-keywords: Image Enhancement Section
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
+title: ImageEnhancementSection - Dynamsoft Document Normalizer Parameters
+description: The ImageEnhancementSection adjusts the image quality.
+keywords: ImageEnhancementSection
 ---
 
-# Image Enhancement Section
+# ImageEnhancementSection
 
-The Image Enhancement Section is designed to adjust the image quality.
+`ImageEnhancementSection` adjusts the image quality. In JSON, it is represented as a Section object with `"Section": "ST_IMAGE_ENHANCEMENT"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object where Section = "ST_IMAGE_ENHANCEMENT")
+```
+
+**Parent object:** [SectionArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-array.html)
+
+**Example:**
 
 ```json
 {
     "Section": "ST_IMAGE_ENHANCEMENT",
     "ImageParameterName": "ip_ddnDefault",
-    "StageArray": []
+    "StageArray": [
+        {
+            "Stage": "SST_ENHANCE_IMAGE"
+        }
+    ]
 }
 ```
 
-## Section
+> [!NOTE]
+> - This snippet shows a Section object configured for image enhancement.
+> - To use it, add this object to the [SectionArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-array.html) of a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The section is named `ST_IMAGE_ENHANCEMENT`.
+## Parameters
 
-## ImageParameterName
+### Section
 
-Specifies the `ImageParameter` to apply in the stages of this section.
+Specifies the section type. Fixed value: `ST_IMAGE_ENHANCEMENT`.
 
-| Parameter Summary |
+| Parameter Details |
 | :------------- |
 | **Type**<br>*string* |
-| **Range**<br>*It must be one of the name that defined under `ImageParameterOptions`* |
-| **Default Value**<br>*ip_ddnDefault* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"ST_IMAGE_ENHANCEMENT"` |
 
-## StageArray
+### ImageParameterName
 
-`StageArray` is a parameter that specifies the stages within the `Image Enhancement Section`. A `Stage` is the smallest step significant enough to involve users in image processing.
+Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
 
-The `Image Enhancement Section` consists of only one stage:
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Range**<br>Must be the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object defined under `ImageParameterOptions` |
+| **Default Value**<br>`""` |
 
-* [SST_ENHANCE_IMAGE](./stage-enhance-image.md)
-  * It is designed at the stage level to adjust the image quality, such as changing the brightness, contrast, and the color mode of the image.
+### StageArray
+
+Specifies the stage objects within this section. The `ImageEnhancementSection` consists of the following stages:
+
+| Stage | Description |
+|-------|-------------|
+| [EnhanceImageStage](./stage-enhance-image.md) (`SST_ENHANCE_IMAGE`) | Adjusts the image quality, such as changing the brightness, contrast, and color mode. |

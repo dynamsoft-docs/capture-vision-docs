@@ -9,7 +9,17 @@ keywords: File filter, ISA
 
 Parameter `FileFilter` specifies a file name filter string, which determines which files are fetched.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageSourceOptions
+    └── FileFilter
+```
+
+**Parent object:** [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object
+
+**Example:**
 
 ```json
 {
@@ -17,9 +27,16 @@ Parameter `FileFilter` specifies a file name filter string, which determines whi
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `FileFilter` parameter.
+> - To use it, embed this parameter within a [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| FileFilter Parameter Summary |
+## Parameter Details
+
+| FileFilter Parameter Details |
 | :----------------------------------- |
 | **Description**<br>A file name filter string |
 | **Type**<br>*String* |

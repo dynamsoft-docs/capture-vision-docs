@@ -3,16 +3,22 @@ layout: default-layout
 title: TailModuleRatio - Dynamsoft Barcode Reader Parameters
 description: The parameter TailModuleRatio of Dynamsoft Barcode Reader defines the module count and module size ratio of the barcode tail section.
 keywords: TailModuleRatio , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/tail-module-ratio.html
 ---
 
 # TailModuleRatio
 
 `TailModuleRatio` defines the module count and module size ratio of the barcode tail section.
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── TailModuleRatio
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -20,11 +26,18 @@ permalink: /parameters/reference/barcode-format-specification/tail-module-ratio.
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `TailModuleRatio` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the`TailModuleRatio` is shown as follow:
 
-| TailModuleRatio  Parameter Summary |
+| TailModuleRatio  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*string* |
 | **Range**<br>N/A |

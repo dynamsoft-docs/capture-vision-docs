@@ -3,17 +3,23 @@ layout: default-layout
 title: MinQuietZoneWidth - Dynamsoft Barcode Reader Parameters
 description: The parameter MinQuietZoneWidth of Dynamsoft Barcode Reader defines the minimum width (in moduleSize) of the barcode quiet zone.
 keywords: MinQuietZoneWidth , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/min-quiet-zone-width.html
 ---
 
 # MinQuietZoneWidth
 
 `MinQuietZoneWidth` defines the minimum width (in moduleSize) of the barcode quiet zone.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── MinQuietZoneWidth
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,11 +27,18 @@ permalink: /parameters/reference/barcode-format-specification/min-quiet-zone-wid
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `MinQuietZoneWidth` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the `MinQuietZoneWidth` is shown as follow:
 
-| MinQuietZoneWidth  Parameter Summary |
+| MinQuietZoneWidth  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 0x7fffffff] |

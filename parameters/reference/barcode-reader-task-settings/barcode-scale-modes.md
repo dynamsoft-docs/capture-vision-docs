@@ -1,33 +1,58 @@
 ---
 layout: default-layout
 title: BarcodeScaleModes - Dynamsoft Barcode Reader Parameters
-description: The parameter BarcodeScaleModes of Dynamsoft Barcode Reader defines scaling mode applied during barcode recognition.
-keywords: barcode scale
+description: The parameter BarcodeScaleModes of Dynamsoft Barcode Reader defines the scaling mode applied during barcode recognition.
+keywords: barcode scale modes
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # BarcodeScaleModes
 
 Parameter `BarcodeScaleModes` defines the scaling mode applied during barcode recognition.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    ├── SectionArray[j]
+    │   └── StageArray[k] (Stage object)
+    │       └── BarcodeScaleModes
+```
+
+**Parent object:** [ScaleBarcodeImageStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-scale-barcode-image.html) object
+
+**Example:**
 
 ```json
 {
-    "BarcodeScaleModes": 
-    [
+    "BarcodeScaleModes": [
         {
-            "Mode": "BSM_LINEAR_INTERPOLATION", 
-            "ModuleSizeThreshold": 4,
-            "TargetModuleSize": 8,
+            "Mode": "BSM_AUTO",
+            "ModuleSizeThreshold": 0,
+            "TargetModuleSize": 0,
             "AcuteAngleWithXThreshold": -1
-        },
+        }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeScaleModes` parameter.
+> - To use it, embed this parameter within a Stage object at the `SST_SCALE_BARCODE_IMAGE` stage.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Parameter `BarcodeScaleModes` consist of a group of scale mode objects. Each scale mode object includes a candidate mode and a series of mode arguments. The mode arguments of the scale mode object is shown as follow:
+## Parameter Details
+
+Parameter `BarcodeScaleModes` consists of a group of barcode scale mode objects. Each barcode scale mode object includes a candidate mode and a series of auxiliary mode arguments.
+
+### Mode Arguments
+
+The mode arguments of the barcode scale mode object are shown as follows:
 
 ### Mode Arguments
 
@@ -39,7 +64,7 @@ Parameter `BarcodeScaleModes` consist of a group of scale mode objects. Each sca
         </tr>
     </thead>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
+        <td rowspan = "3" style="vertical-align:text-top">Mode<br>(Required)</td>
         <td><b>Description</b><br>Any one in Candidate Mode List as string
         </td>
     </tr>
@@ -49,11 +74,7 @@ Parameter `BarcodeScaleModes` consist of a group of scale mode objects. Each sca
     </tr>
     <tr>
         <td><b>Candidate Mode List</b><br>BSM_LINEAR_INTERPOLATION
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>
-        <br>BSM_LINEAR_INTERPOLATION
+            <br>BSM_AUTO
         </td>
     </tr>
     <tr>
@@ -117,27 +138,36 @@ Parameter `BarcodeScaleModes` consist of a group of scale mode objects. Each sca
 
 ### Default Setting
 
-If the `BarcodeScaleModes` is not configured in your template file, the following setting will be used as the default setting.
-
 ```json
 {
-    "BarcodeScaleModes" : 
-    [
+    "BarcodeScaleModes": [
         {
-            "Mode" : "BSM_LINEAR_INTERPOLATION",
-            "ModuleSizeThreshold" : 0,
-            "TargetModuleSize" : 0,
-            "AcuteAngleWithXThreshold" : -1
+            "Mode": "BSM_AUTO",
+            "ModuleSizeThreshold": 0,
+            "TargetModuleSize": 0,
+            "AcuteAngleWithXThreshold": -1
         }
     ]
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
+
+### BSM_AUTO
+
+Lets the library choose a mode automatically. This mode has the following arguments for further customization:
+
+**Available Mode Arguments:**
+
+- AcuteAngleWithXThreshold
+- ModuleSizeThreshold
+- TargetModuleSize
 
 ### BSM_LINEAR_INTERPOLATION
 
-Scales image using the linear interpolation method. This mode has the following arguments for further customizing:
+Scales image using the linear interpolation method. This mode has the following arguments for further customization:
+
+**Available Mode Arguments:**
 
 - AcuteAngleWithXThreshold
 - ModuleSizeThreshold
