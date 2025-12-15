@@ -39,6 +39,11 @@ BarcodeReaderTaskSettingOptions[i]
 | BarcodeFormatIds Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each array element should be a string value from the [BarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html) enumeration. |
+| **Range**<br>Each array element should be a string value from the `BarcodeFormat` enumeration. |
 | **Default Value**<br>`["BF_DEFAULT"]` |
-| **Remarks**<br>View the [BarcodeFormat enumeration]({{ site.dcvb_enums }}barcode-reader/barcode-format.html) for all supported barcode formats. |
+
+**Remarks**
+
+`BarcodeFormat` enumeration for all supported barcode formats:
+
+{%- include barcode-format.md -%}

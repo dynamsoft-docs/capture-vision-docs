@@ -41,5 +41,11 @@ The structure of the`StandardFormat` is shown as follow:
 | StandardFormat  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*string* |
-| **Range**<br>[BarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html#barcodeformat) |
+| **Range**<br>A string value from the `BarcodeFormat` enumeration, excluding combined values (BF_ALL, BF_DEFAULT, BF_ONED, BF_GS1_DATABAR, BF_POSTALCODE, BF_PHARMACODE). |
 | **Default Value**<br> ""|
+
+**Remarks**
+
+`BarcodeFormat` enumeration for all supported barcode formats:
+
+{%- include barcode-format.md -%}

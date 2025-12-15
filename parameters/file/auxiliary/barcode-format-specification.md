@@ -101,7 +101,7 @@ noTitleIndex: true
 
 **Set target barcode format**
 
-Sets `BarcodeFormatIds` to specify which barcode format the current FormatSpecification configuration is applied to. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
+Sets `BarcodeFormatIds` to specify which barcode format the current FormatSpecification configuration is applied to.
 
 **Set special configurations for target format**
 
