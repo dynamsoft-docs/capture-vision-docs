@@ -26,6 +26,17 @@ In order to eliminate ambiguity, we first define several key terms.
 
 With the exception of `GlobalParameter`, all top-level keys in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` is an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` is an array of `TargetROIDef` objects, and so on.
 
+> [!NOTE]
+> **For Dynamsoft Barcode Reader SDK Users:**
+> 
+> When using Dynamsoft Barcode Reader SDK standalone (without other DCV functional products), the following objects and their parameters are not applicable:
+> - `LabelRecognizerTaskSettingOptions`
+> - `DocumentNormalizerTaskSettingOptions`
+> - `CodeParserTaskSettingOptions`
+> - `OutputTaskSettingOptions`
+> - `TextLineSpecificationOptions`
+> - `SemanticProcessingOptions`
+
 The following table list all the top-level keys.
 
 | Key Name                   | Description  |
