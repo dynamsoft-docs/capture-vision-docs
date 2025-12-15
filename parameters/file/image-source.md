@@ -33,19 +33,11 @@ An `ImageSource` object defines an image source to be created and maintained by 
 
 | Parameter Name   | Description                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------- |
-| `Name`           | Represents the name of the ImageSource object, which serves as its unique identifier.                    |
-| `Type`           | Indicates the type of the `ImageSource` object, which helps CVR create the correct type of image source. |
-| `DirectoryPath`  | Specifies a local directory, the files within which are fetched as images to process.                    |
-| `FileFilter`     | Specifies a file name filter string, which determines which files are fetched.                           |
-| `Recursive`      | Indicates whether to fetch files recursively.                                                            |
-| `PDFReadingMode` | Defines how to handle PDF files.                                                                         |
-| `Pages`          | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching.                                                                         |
+| [`Name`]({{ site.dcvb_parameters_reference }}image-source-options/name.html)           | Represents the name of the ImageSource object, which serves as its unique identifier.                    |
+| [`Type`]({{ site.dcvb_parameters_reference }}image-source-options/type.html)           | Indicates the type of the `ImageSource` object, which helps CVR create the correct type of image source. |
+| [`DirectoryPath`]({{ site.dcvb_parameters_reference }}image-source-options/directory-path.html)  | Specifies a local directory, the files within which are fetched as images to process.                    |
+| [`FileFilter`]({{ site.dcvb_parameters_reference }}image-source-options/file-filter.html)     | Specifies a file name filter string, which determines which files are fetched.                           |
+| [`Recursive`]({{ site.dcvb_parameters_reference }}image-source-options/recursive.html)      | Indicates whether to fetch files recursively.                                                            |
+| [`PDFReadingMode`]({{ site.dcvb_parameters_reference }}image-source-options/pdf-reading-mode.html) | Defines how to handle PDF files.                                                                         |
+| [`Pages`]({{ site.dcvb_parameters_reference }}image-source-options/pages.html)          | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching. |
 
-
-### Sub Parameters of PDFReadingMode 
-
-| Parameter Name | Description                                                                                           |
-| -------------- | ----------------------------------------------------------------------------------------------------- |
-| `Mode`         | Specifies the operation mode. Read more about [PDFReadingMode](../../enums/core/pdf-reading-mode.md). |
-| `DPI`          | Specifies the DPI used when rasterizing a PDF into images.                                            |
-| `TargetType`   | Specifies a the target type. Read more about [TargetType](../../enums/core/target-type.md).           |

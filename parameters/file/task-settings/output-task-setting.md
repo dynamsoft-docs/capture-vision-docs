@@ -2,29 +2,27 @@
 layout: default-layout
 title: OutputTaskSetting - Dynamsoft Capture Vision Parameter File
 description: The OutputTaskSetting object in the Dynamsoft Capture Vision Parameter File. 
-needAutoGenerateSidebar: true
-needGenerateH3Content: false
-noTitleIndex: true
-permalink: /parameters/file/task-settings/output-task-setting.html
+needAutoGenerateSidebar: false
 ---
 
 # OutputTaskSetting Object
 
-The `OutputTaskSetting` object is used to configure how to output the expected results of the ancestor `TargetROIDef` by filtering the results of the descendant `TargetROIDef` object.
+The `OutputTaskSetting` object is used to configure how to output the expected results of the ancestor `TargetROIDef` by filtering the results of the descendant `TargetROIDef` objects.
+
+## Example
 
 ```json
 {
-    "Name" : "output_task",
+    "Name": "output_task",
     "OutputCondition": {
         "TaskResultArray": [
             {
-                "TargetROIDefName": "B", 
+                "TargetROIDefName": "B",
                 "TaskSettingNameArray": ["B_task"],
                 "Operator": "AND",
-
                 "BackwardReferenceOutput": {
-                    "ReferenceTaskNameArray": ["A_task"], 
-                    "ReferenceResultTypeArray":[ "ART_TEXT_LINE","ART_BARCODE","ART_FRAME", "ART_TABLE_CELL", "ART_COLOUR_REGION" ]
+                    "ReferenceTaskNameArray": ["A_task"],
+                    "ReferenceResultTypeArray": ["ART_TEXT_LINE", "ART_BARCODE", "ART_FRAME", "ART_TABLE_CELL", "ART_COLOUR_REGION"]
                 }
             }
         ],
@@ -33,58 +31,48 @@ The `OutputTaskSetting` object is used to configure how to output the expected r
 }
 ```
 
-<div align="center">
-   <p>Example 1 – Parameters of OutputTaskSetting</p>
-</div>
+## Parameters
 
-## Summary of OutputTaskSetting top-level parameters
-
-| Parameter Name | Value Type | Required or Optional | Description |
+| Parameter Name | Type | Required/Optional | Description |
 |---|---|---|---|
-| Name | string | Mandatory | Sets the name of current `OutputTaskSetting` object. The value must be unique between all `task-setting` objects. |
-| [OutputCondition]({{site.dcvb_parameters_reference}}output-task-setting/output-condition.html) | JSON Object | Optional | Sets how the current `OutputTaskSetting` object outputs results that meet multiple filter conditions across products.|
+| [`Name`]({{site.dcvb_parameters_reference}}output-task-setting/name.html) | String | Required | The unique identifier for this `OutputTaskSetting` object. |
+| [`OutputCondition`]({{site.dcvb_parameters_reference}}output-task-setting/output-condition.html) | Object | Optional | Defines how to filter and output results based on multiple conditions across descendant ROIs. |
 
-## Design of the OutputCondition object
+## OutputCondition Design
 
-|Concept|Description|
-|:------|:----------|
-|**Reference TargetROIDef object**| Represents the `TargetROIDef` object where the output task is located. It may be the reference `TargetROIDef` of other descendant `TargetROIDef` objects.|
-|**Descendant TargetROIDef objects**| Represents descendant `TargetROIDef` objects. The task results of descendant `TargetROIDef` objects can be navigated to the task results of the reference `TargetROIDef` object through the reference item. |
+### Key Concepts
 
-The following example shows how to set the `OutputCondition` object.
+| Concept | Description |
+|:--------|:------------|
+| **Reference TargetROIDef** | The parent `TargetROIDef` object where the output task is located. It serves as the reference point for descendant ROIs. |
+| **Descendant TargetROIDef** | Child `TargetROIDef` objects whose task results can be linked back to the reference `TargetROIDef` for filtering. |
+
+### Complete Example
+
+The following example demonstrates a complete `OutputCondition` configuration:
 
 ```json
 {
-    //......
-    "TargetROIDefOptions" : [
+    "TargetROIDefOptions": [
         {
-            "Name" : "A_roi",  
-            "TaskSettingNameArray": [
-                "ddn_task",
-                "output_task"
-            ]
-        },        
+            "Name": "A_roi",
+            "TaskSettingNameArray": ["ddn_task", "output_task"]
+        },
         {
-            "Name" : "B_roi",  
-            "TaskSettingNameArray": [
-                "dbr_task"
-            ], 
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
+            "Name": "B_roi",
+            "TaskSettingNameArray": ["dbr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
                     "ReferenceTargetROIDefNameArray": ["A_roi"],
                     "ReferenceTaskNameArray": ["ddn_task"]
                 }
             }
         },
         {
-            "Name" : "C_roi",  
-            "TaskSettingNameArray": [
-                "dlr_task"
-            ], 
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
+            "Name": "C_roi",
+            "TaskSettingNameArray": ["dlr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
                     "ReferenceTargetROIDefNameArray": ["A_roi"],
                     "ReferenceTaskNameArray": ["ddn_task"]
                 }
@@ -93,7 +81,7 @@ The following example shows how to set the `OutputCondition` object.
     ],
     "OutputTaskSettingOptions": [
         {
-            "Name" : "output_task",
+            "Name": "output_task",
             "OutputCondition": {
                 "TaskResultArray": [
                     {
@@ -106,14 +94,13 @@ The following example shows how to set the `OutputCondition` object.
                         "TargetROIDefName": "C_roi",
                         "BackwardReferenceOutput": {
                             "ReferenceTaskNameArray": ["ddn_task"]
-                        }                        
+                        }
                     }
                 ],
                 "Operator": "AND"
             }
         }
     ]
-    //......
 }
 ```
 
@@ -121,6 +108,7 @@ The following example shows how to set the `OutputCondition` object.
    <p><img src="../assets/output-task-setting.png" alt="OutputTaskSetting example" width="80%" /></p>
 </div>
 
-There is a parent `TargetROIDef` object named `A_roi` which contains two tasks named `ddn_task` and `output_task`. There are two descendant `TargetROIDef` objects named `B_roi` and `C_roi`, and there is a task named `dbr_task` and `dlr_task` on each `TargetROIDef` respectively.
-
-The `output_task` works as follows: After processing `B_roi` and `C_roi`, retrieve the task results from `dbr_task` and `dlr_task`, navigate to the reference result generated by `ddn_task`, and execute logical AND combinations to obtain the filtered results.
+**In this example:**
+- **Parent ROI:** `A_roi` contains tasks `ddn_task` and `output_task`
+- **Descendant ROIs:** `B_roi` (with `dbr_task`) and `C_roi` (with `dlr_task`)
+- **Workflow:** `output_task` retrieves results from `B_roi` and `C_roi`, references `ddn_task` results, and applies AND logic for filtering

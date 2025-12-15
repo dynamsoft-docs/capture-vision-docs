@@ -3,71 +3,59 @@ layout: default-layout
 title: CaptureVisionTemplate - Dynamsoft Capture Vision Parameters
 description: The CaptureVisionTemplate object in the Dynamsoft Capture Vision.
 keywords: CaptureVisionTemplate
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# Design of the CaptureVisionTemplate Object
+# CaptureVisionTemplate Object
 
-A `CaptureVisionTemplate` object is the entry object of a parameter template in Dynamsoft Capture Vision (DCV) SDK.
+A `CaptureVisionTemplate` object is the entry point of a parameter template in Dynamsoft Capture Vision (DCV) SDK.
+
+## Example
 
 ```json
 {
-    "Name" : "CV_0",
+    "Name": "CV_0",
     "ImageSourceName": "ISA_0",
-    "ImageROIProcessingNameArray": ["TA_0" ],
+    "ImageROIProcessingNameArray": ["TA_0"],
     "SemanticProcessingNameArray": ["SP_0"],
     "OutputOriginalImage": 0,
-    "MaxParallelTasks" : 4,
-    "MinImageCaptureInterval" : 0,
-    "Timeout" : 500
+    "MaxParallelTasks": 4,
+    "MinImageCaptureInterval": 0,
+    "Timeout": 500
 }
 ```
 
-<div align="center">
-   <p>Example 1 – Parameters of CaptureVisionTemplate</p>
-</div>
+## Parameters
 
-## Summary of CaptureVisionTemplate top-level parameters
-
-| Parameter Name | Description |
-| -------------- | ----------- |
-| [`Name`](../reference/capture-vision-template/name.md) | Represents the name of the parameter template, which serves as its unique identifier. |
-| [`ImageSourceName`](../reference/capture-vision-template/image-source-name.md) | Indicates the input source name, used to refer to the `ImageSource` object. It is used to define the input image source of DCV. |
-| [`ImageROIProcessingNameArray`](../reference/capture-vision-template/image-roi-processing-name-array.md) | Represents the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. It is used to define recognition tasks performed on ROIs of an image, including reading barcodes, recognizing labels, or detecting document quadrilaterals. |
-| [`SemanticProcessingNameArray`](../reference/capture-vision-template/semantic-processing-name-array.md)| Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. It is used to define post-processing code parsing tasks performed on input text/bytes.|
-| [`OutputOriginalImage`](../reference/capture-vision-template/output-original-Image.md) | Indicates whether DCV finally outputs the original input image. |
-| [`MaxParallelTasks`](../reference/capture-vision-template/max-parallel-tasks.md) | Indicates the maximum number of parallel tasks for the DCV runtime. |
-| [`MinImageCaptureInterval`]({{ site.dcvb_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
-| [`Timeout`](../reference/capture-vision-template/timeout.md) | Indicates the maximum amount of time (in milliseconds) that the recognition tasks should take per page.|
-
-<div align="center">
-   <p>Table 1 – Parameters Summary of CaptureVisionTemplate</p>
-</div>
+| Parameter Name | Type | Required/Optional | Description |
+| -------------- | ---- | ----------------- | ----------- |
+| [`Name`]({{site.dcvb_parameters_reference}}capture-vision-template/name.html) | String | Required | The unique identifier for this template. |
+| [`ImageSourceName`]({{site.dcvb_parameters_reference}}capture-vision-template/image-source-name.html) | String | Optional | The name of the `ImageSource` object defining the input source. |
+| [`ImageROIProcessingNameArray`]({{site.dcvb_parameters_reference}}capture-vision-template/image-roi-processing-name-array.html) | String Array | Optional | Array of `TargetROIDef` object names defining recognition tasks on image ROIs. |
+| [`SemanticProcessingNameArray`]({{site.dcvb_parameters_reference}}capture-vision-template/semantic-processing-name-array.html) | String Array | Optional | Array of `SemanticProcessing` object names for post-processing tasks. |
+| [`OutputOriginalImage`]({{site.dcvb_parameters_reference}}capture-vision-template/output-original-image.html) | Integer | Optional | Whether to output the original input image (0 or 1). |
+| [`MaxParallelTasks`]({{site.dcvb_parameters_reference}}capture-vision-template/max-parallel-tasks.html) | Integer | Optional | Maximum number of parallel tasks for the DCV runtime. |
+| [`MinImageCaptureInterval`]({{site.dcvb_parameters_reference}}capture-vision-template/min-image-capture-interval.html) | Integer | Optional | Minimum time interval (in milliseconds) between consecutive image captures. |
+| [`Timeout`]({{site.dcvb_parameters_reference}}capture-vision-template/timeout.html) | Integer | Optional | Maximum processing time (in milliseconds) per image. |
 
 ## Input Source Configuration
 
-In the parameter template, the `ImageSourceName` parameter refers to the `ImageSource` object, which defines the image input source of DCV. When DCV starts capturing, it will parse the `ImageSource` parameter, convert it into an [Image Source Adapter (ISA)](../../architecture/input.md#image-source-adapter) object, and then continuously obtain images from it.
+The `ImageSourceName` parameter references an `ImageSource` object defining the image input source. When DCV starts capturing, it parses the `ImageSource` parameter, converts it into an [Image Source Adapter (ISA)]({{site.dcvb_architecture}}input.html#image-source-adapter) object, and continuously obtains images from it.
 
 ## Captured Output Configuration
 
-`OuputOriginalImage`, `ImageROIProcessingNameArray` and `SemanticProcessingNameArray` are three different parameters that control the captured output, organized as a `CapturedResult` interface in DCV. `CapturedResult` represents a set of all captured result items on an image. Each type of result Item represents the output of different task types. The following figure lists the rough relationship between DCV output parameters and output results.
+`OutputOriginalImage`, `ImageROIProcessingNameArray`, and `SemanticProcessingNameArray` control the captured output, organized as a `CapturedResult` interface in DCV. `CapturedResult` represents a set of all captured result items on an image. Each type of result item represents the output of different task types. The following figure lists the relationship between DCV output parameters and output results.
 
-<div align="center">
-   <p><img src="assets/dcv-parameters-result-relationship.png" alt="Relationship between DCV parameters and output results" width="100%" /></p>
-   <p>Figure 1 – Relationship between DCV parameters and output result item types</p>
-</div>
+![Relationship between DCV parameters and output result item types](assets/dcv-parameters-result-relationship.png)
 
-As illustrated in figure 1, the left column represents the DCV output parameters, while the right column indicates the type of DCV output result item types. The dashed line between the two displays the rough relationship between parameters and result items types.
-
-The `ImageROIProcessingNameArray` parameter can produce results such as `BarcodeResultItem`, `TextLineResultItem`, `DetectedQuadResultItem`, and `NormalizedImageResultItem`, while the `SemanticProcessingNameArray` parameter can produce the result of `ParsedResultItem`. This is because the `ImageROIProcessingNameArray` parameter refers to one or more `TargetROIDef` objects, and the `SemanticProcessingNameArray` parameter refers to one or more `SemanticProcessing` objects. 
-
-Next, we will focus on the core design of the `TargetROIDef` and `SemanticProcessing` object.
+**Parameter and result relationships:**
+- `ImageROIProcessingNameArray` produces `BarcodeResultItem`, `TextLineResultItem`, `DetectedQuadResultItem`, and `NormalizedImageResultItem`
+- `SemanticProcessingNameArray` produces `ParsedResultItem`
+- `ImageROIProcessingNameArray` references one or more `TargetROIDef` objects
+- `SemanticProcessingNameArray` references one or more `SemanticProcessing` objects
 
 ## Core Design of TargetROIDef Object
 
-The [`TargetROIDef`](./target-roi-definition/index.md) object is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image. In simple terms, [`TargetROIDef`](./target-roi-definition/index.md) can be expressed using the following formula:
+The [`TargetROIDef`]({{site.dcvb_parameters}}file/target-roi-definition/index.html) object specifies one or more recognition tasks to be performed on regions of interest (ROIs) within an image. In simple terms:
 
 ```
 TargetROIDef = Recognition Task Definition + Spatial Location Definition
@@ -75,83 +63,77 @@ TargetROIDef = Recognition Task Definition + Spatial Location Definition
 
 ### Key Concepts
 
-The following figure and table briefly illustrates some key concepts involved.
+![An example showing the key concepts](assets/roi-concept.png)
 
-<div align="center">
-   <p><img src="assets/roi-concept.png" alt="An example showing the key concepts" width="100%" /></p>
-   <p>Figure 2 – An example showing the key concepts</p>
-</div>
-
-|Concept|Description|Explanation with example|
-|:------|:----------|:-----------------------|
-|**Recognition Tasks**| The tasks include barcode recognition, label recognition, document boundary detection, etc.| `ROI1` and `ROI2` are two `TargetROIDef` objects. A task named `barcode_task` is configured on `ROI1` and a task named `label_task` is configured on `ROI2`.|
-|**Atomic Result**| Represents the atomic result of the recognition task output. It can be a color detection region, a barcode, a text line, a table cell, a detected quadrilateral etc.|`T1`, `T2`, `T3` are three atomic result objects of `TextLineResultItem` type, and B1 is one atomic object of `BarcodeResultItem` type.|
-|**Spatial Location**| A `Location` configured on a `TargetROIDef` may generate zero or more target regions on which to perform a specific recognition task.| `ROI1.Location` is defined as `null` which means generate only one target regions. `ROI2.Location` is defined as an upward offset relative to the output regions of `ROI1`.|
-|**Reference Region**|A reference region is a physical quadrilateral region. It includes two types: **entire image region** and **atomic result region**. The former refers to the quadrilateral extent of the original image, and the latter refers to the quadrilateral extent of each atomic result.| `ROI1` has only one reference region which is the entire image region. `ROI2` has three reference regions which generated from `T1`, `T2`, `T3`. |
-|**Target Region**| A target region is a physical quadrilateral region, which is calculated from a reference region and offset.| `ROI1` has only one target region, which is equal to the reference region. `ROI2` has three target regions, which are calculated by offsets from quadrilateral regions of `T1`, `T2`, `T3`.|
-
-<div align="center">
-   <p>Table 2 – Key Concepts of TargetROIDef</p>
-</div>
+| Concept | Description | Example Explanation |
+| :------ | :---------- | :------------------ |
+| **Recognition Tasks** | Tasks include barcode recognition, label recognition, document boundary detection, etc. | `ROI1` and `ROI2` are two `TargetROIDef` objects. Task `barcode_task` is configured on `ROI1` and task `label_task` is configured on `ROI2`. |
+| **Atomic Result** | Atomic result of recognition task output. Can be a color detection region, barcode, text line, table cell, detected quadrilateral, etc. | `T1`, `T2`, `T3` are three `TextLineResultItem` objects, and `B1` is one `BarcodeResultItem` object. |
+| **Spatial Location** | A `Location` configured on a `TargetROIDef` may generate zero or more target regions on which to perform recognition tasks. | `ROI1.Location` is `null`, generating one target region. `ROI2.Location` is an upward offset relative to `ROI1` output regions. |
+| **Reference Region** | A physical quadrilateral region. Two types: **entire image region** and **atomic result region**. The former is the quadrilateral extent of the original image; the latter is the quadrilateral extent of each atomic result. | `ROI1` has one reference region (entire image). `ROI2` has three reference regions generated from `T1`, `T2`, `T3`. |
+| **Target Region** | A physical quadrilateral region calculated from a reference region and offset. | `ROI1` has one target region equal to the reference region. `ROI2` has three target regions calculated by offsets from `T1`, `T2`, `T3` quadrilateral regions. |
 
 ### Workflow Design Based on Reference/Target Regions
 
-Using the recursive definition of the reference relationship between different `TargetROIDef` objects, a complex workflow can be constructed to meet the requirements of complex scenarios.
+Using recursive definition of reference relationships between `TargetROIDef` objects, complex workflows can be constructed for complex scenarios.
 
-Let's consider the following example: a user wants to read barcodes below `P/N` and above `L/N` in the image below. Upon analysis, we find the following positional dependencies:
+**Example:** Read barcodes below `P/N` and above `L/N` in the image. Positional dependencies:
+- Target barcode location (blue box) can be calculated from text line locations (`P/N` and `L/N`)
+- Text lines (`P/N` and `L/N`) are on the first and fifth lines inside the label border (green box)
 
-- The rough location of the target barcode (blue box) can be calculated separately from the location of the text lines (`P/N` and `L/N`).
-- The text lines (`P/N` and `L/N`) are on the first and fifth lines inside the label border (green box).
-
-<div align="center">
-   <p><img src="assets/example2.png" alt="Basic concepts of TargetROIDef" width="80%" /></p>
-   <p>Figure 3 – A sample image illustrating workflow design</p>
-</div>
+![Sample image illustrating workflow design](assets/example2.png)
 
 The following json is a parameter template fragment that configures ROI dependencies to solve the above problems.
 
 ```json
 {
-    "TargetROIDefOptions" : [
+    "TargetROIDefOptions": [
         {
-            "Name" : "ddn_roi", 
-            "TaskSettingNameArray": [ "ddn_task" ], 
-            "Location" : null
-        }, 
+            "Name": "ddn_roi",
+            "TaskSettingNameArray": ["ddn_task"],
+            "Location": null
+        },
         {
-            "Name" : "dlr_roi", 
-            "TaskSettingNameArray": [ "dlr_task" ], 
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["ddn_roi"], 
+            "Name": "dlr_roi",
+            "TaskSettingNameArray": ["dlr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
+                    "ReferenceTargetROIDefNameArray": ["ddn_roi"]
                 },
                 "Offset": null
             }
         },
         {
-            "Name" : "dbr_roi1", 
-            "TaskSettingNameArray": [ "dbr_task" ], 
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["dlr_roi"], 
+            "Name": "dbr_roi1",
+            "TaskSettingNameArray": ["dbr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
+                    "ReferenceTargetROIDefNameArray": ["dlr_roi"]
                 },
-                "Offset":{
-                    // offset downwards
+                "Offset": {
+                    "MeasuredByPercentage": 0,
+                    "ReferenceYAxis": {"AxisType": "AT_EDGE", "EdgeIndex": 2},
+                    "FirstPoint": [0, 10],
+                    "SecondPoint": [100, 10],
+                    "ThirdPoint": [100, 50],
+                    "FourthPoint": [0, 50]
                 }
             }
         },
         {
-            "Name" : "dbr_roi2", 
-            "TaskSettingNameArray": [ "dbr_task" ], 
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["dlr_roi"], 
+            "Name": "dbr_roi2",
+            "TaskSettingNameArray": ["dbr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
+                    "ReferenceTargetROIDefNameArray": ["dlr_roi"]
                 },
-                "Offset":{
-                    // offset upwards
+                "Offset": {
+                    "MeasuredByPercentage": 0,
+                    "ReferenceYAxis": {"AxisType": "AT_EDGE", "EdgeIndex": 0},
+                    "FirstPoint": [0, -50],
+                    "SecondPoint": [100, -50],
+                    "ThirdPoint": [100, -10],
+                    "FourthPoint": [0, -10]
                 }
             }
         }
@@ -159,96 +141,85 @@ The following json is a parameter template fragment that configures ROI dependen
 }
 ```
 
-<div align="center">
-   <p>Example 2 – DCV parameter template fragment illustrating workflow design</p>
-</div>
-
-- It configures four `TargetROIDef` objects: `ddn_roi`, `dlr_roi`, `dbr_roi1`, and `dbr_roi2`.
-- `ddn_roi` is configured to depend on the entire image region directly.
-- `dlr_roi` is configured to depend on `ddn_roi` and has a `null` offset, which means it uses the same region as the output region of `ddn_roi`.
-- `dbr_roi1` is configured to depend on `dlr_roi` and has an offset configured to be shifted downwards from the output region of `dlr_roi`.
-- `dbr_roi2` is also configured to depend on `dlr_roi` and has an offset configured to be shifted upwards from the output region of `dlr_roi`.
+**In this configuration:**
+- Four `TargetROIDef` objects: `ddn_roi`, `dlr_roi`, `dbr_roi1`, and `dbr_roi2`
+- `ddn_roi` depends on the entire image region
+- `dlr_roi` depends on `ddn_roi` with null offset (same region)
+- `dbr_roi1` depends on `dlr_roi` with downward offset
+- `dbr_roi2` depends on `dlr_roi` with upward offset
 
 ### Construct a Dependency Graph
 
-When DCV parses the `TargetROIDef` objects in the above parameter template, it constructs a directed dependency graph based on the configured dependencies between different `TargetROIDef` objects. During actual execution, the tasks are executed in the order specified by the dependency graph. The following figure illustrates the generated dependency graph after parsing the above template fragment.
+When DCV parses `TargetROIDef` objects, it constructs a directed dependency graph based on configured dependencies. Tasks execute in the order specified by the dependency graph.
 
-<div align="center">
-   <p><img src="assets/dependency-graph.png" alt="Dependency Graph" width="70%" /></p>
-   <p>Figure 4 – Dependency Graph</p>
-</div>
+![Dependency Graph](assets/dependency-graph.png)
 
 ### Filter Out the Desired Reference Regions
 
-In practical applications, if a `TargetROIDef` depends on another `TargetROIDef` object named `roi1`, it may not want to depend unconditionally on all the reference regions generated by `roi1`. Instead, it may want to depend only on those regions that meet certain filtering conditions, such as the text meeting a specific regular expression or the barcode type meeting specific formatting requirements.
+In practical applications, a `TargetROIDef` may want to depend only on reference regions from another `TargetROIDef` that meet specific filtering conditions, such as text matching a regular expression or barcodes meeting a specific format requirements.
 
-Based on `Example 2`, regular expression filtering conditions are added to `dbr_roi1` and `dbr_roi2`:
+Based on the previous example, regular expression filtering conditions can be added to `dbr_roi1` and `dbr_roi2`:
 
 ```json
 {
-    "TargetROIDefOptions" : [
-        //......
+    "TargetROIDefOptions": [
         {
-            "Name" : "roi_dbr1", 
-            //......
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["roi_dlr"], 
-                    "TextLineFilteringCondition":
-                    {
-                        "LineStringRegExPattern": "^P/N" 
+            "Name": "roi_dbr1",
+            "TaskSettingNameArray": ["dbr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
+                    "ReferenceTargetROIDefNameArray": ["roi_dlr"],
+                    "TextLineFilteringCondition": {
+                        "LineStringRegExPattern": "^P/N"
                     }
                 },
-                //......
+                "Offset": {}
             }
         },
         {
-            "Name" : "roi_dbr2", 
-            //......
-            "Location": 
-            {
-                "ReferenceObjectFilter" : {
-                    "ReferenceTargetROIDefNameArray": ["roi_dlr"], 
-                    "TextLineFilteringCondition":
-                    {
-                        "LineStringRegExPattern": "^L/N" 
+            "Name": "roi_dbr2",
+            "TaskSettingNameArray": ["dbr_task"],
+            "Location": {
+                "ReferenceObjectFilter": {
+                    "ReferenceTargetROIDefNameArray": ["roi_dlr"],
+                    "TextLineFilteringCondition": {
+                        "LineStringRegExPattern": "^L/N"
                     }
                 },
-                //......
+                "Offset": {}
             }
         }
     ]
 }
 ```
 
-- `roi_dbr1` is configured to only depend on the reference region generated by `roi_dlr` that meet the regular expression "^P/N".
-- `roi_dbr2` is configured to only depend on the reference region generated by `roi_dlr` that meet the regular expression "^L/N".
+**Filtering logic:**
+- `roi_dbr1` depends only on regions from `roi_dlr` where text matches pattern `^P/N`
+- `roi_dbr2` depends only on regions from `roi_dlr` where text matches pattern `^L/N`
+- Reference regions not meeting filter criteria are discarded
 
-At runtime, reference regions that do not meet the filtering conditions will be discarded and will not be passed as inputs to subsequent `TargetROIDef` for further processing.
-
-For more details about filtering reference objects, please refer to [`ReferenceObjectFilter`]({{site.dcvb_parameters}}reference/target-roi-def/location.html#referenceobjectfilter)
+For more details about filtering reference objects, refer to [`ReferenceObjectFilter`]({{site.dcvb_parameters_reference}}target-roi-def/location.html#referenceobjectfilter).
 
 ## Core Design of SemanticProcessing Object
 
-The [`SemanticProcessing`](./semantic-processing/index.md) object is used to specify one or more tasks to analyze and extract information from image ROI processing results. The whole workflow typically involves following concepts.
+The [`SemanticProcessing`]({{site.dcvb_parameters}}file/semantic-processing/index.html) object specifies tasks to analyze and extract information from image ROI processing results. The workflow involves the following concepts:
 
 ### Prerequisites
 
-A `SemanticProcessing` object will take effect when its name is referenced in `CaptureVisionTemplate.SemanticProcessingNameArray`.
+A `SemanticProcessing` object takes effect when its name is referenced in `CaptureVisionTemplate.SemanticProcessingNameArray`.
 
 ### Launch Timing
 
-The semantic process is triggered only after all the recognition tasks referenced in `CaptureVisionTemplate.ImageROIProcessingNameArray` have been completed.
+The semantic process triggers only after all recognition tasks referenced in `CaptureVisionTemplate.ImageROIProcessingNameArray` have been completed.
 
 ### Data Filtering
 
-In many cases, the process may involve filtering data to select only the relevant sources, such as a label text meeting a specific regular expression or a barcode meeting a specific format. `ReferenceObjectFilter` is used to specify such data filtering criteria.
+Data filtering selects relevant sources, such as label text matching a specific regular expression or barcodes meeting a specific format. Use `ReferenceObjectFilter` to specify data filtering criteria.
 
 ### Task Execution
 
-This is the main part of the workflow where the actual tasks are defined. `TaskSettingNameArray` is used to specify such tasks by referencing the name of a [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object.
+This is the main part of the workflow where actual tasks are defined. Use `TaskSettingNameArray` to specify tasks by referencing a [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object name.
 
 ### Results Reporting
 
-Currently, semantic-processing supports code parsing tasks, so the result is returned with callback `OnParsedResultsReceived`.
+Currently, semantic-processing supports code parsing tasks. Results are returned with the `OnParsedResultsReceived` callback.
