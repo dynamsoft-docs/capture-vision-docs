@@ -17,7 +17,7 @@ TargetROIDefOptions[i]
     └── Location
 ```
 
-**Parent object:** [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-def/index.html) object
+**Parent object:** [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) object
 
 **Example:**
 
@@ -33,16 +33,19 @@ TargetROIDefOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `Location` parameter.
-> - To use it, embed this parameter within a [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-def/index.html) object.
+> - To use it, embed this parameter within a [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) object.
 > - For the complete JSON structure, see:
 >   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
 >   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
-|  Name | Description |
+
+## Parameters
+
+| Name | Description |
 | ---- | ----------- |
 | [`ReferenceObjectFilter`](#referenceobjectfilter) | Filter the reference object by specifying `TargetROI` names. |
 | [`Offset`](#offset) | Defines how the location is offset from the `reference object` or the original image. |
 
-## ReferenceObjectFilter
+### ReferenceObjectFilter
 
 Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring out the `reference objects`.
 
@@ -50,7 +53,7 @@ Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring o
 | :------------------- |
 | **Type**<br>*[ReferenceObjectFilter](location/reference-object-filter/index.md)* Object |
 
-## Offset
+### Offset
 
 Parameter `Offset` is an object that defines how the location is offset from the `reference object` or the original image.
 
