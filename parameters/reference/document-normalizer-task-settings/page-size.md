@@ -1,28 +1,44 @@
 ---
 layout: default-layout
 title: PageSize - Dynamsoft Document Normalizer Parameters
-description: The parameter PageSize of Dynamsoft Document Normalizer is XXX.
+description: The parameter PageSize sets the page size of the target image.
 keywords: Page size
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
 # PageSize
 
-Parameter `PageSize` sets the page size (width by height in pixels) of the target image.
+`PageSize` sets the page size (width by height in pixels) of the target image.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_DESKEW_IMAGE")
+            └── PageSize
+```
+
+**Parent object:** [DeskewImageStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-deskew-image.html)
+
+**Example:**
 
 ```json
 {
-    "PageSize" : [ 210, 297 ]
+    "PageSize": [210, 297]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `PageSize` parameter.
+> - To use it, embed this parameter within a [DeskewImageStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-deskew-image.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| PageSize Parameter Summary |
+## Parameter Details
+
+| PageSize Parameter Details |
 | :--------------- |
 | **Type**<br><i>int[2]</i> |
 | **Range**<br>Each member should be a int value betweem [-1,0x7fffffff]. |

@@ -1,19 +1,25 @@
 ---
 layout: default-layout
 title: BaseBarcodeReaderTaskSettingName - Dynamsoft Barcode Reader Parameters
-description: The parameter BaseBarcodeReaderTaskSettingName of Dynamsoft Barcode Reader defines the name of base BarcodeReaderTaskSetting.
+description: The parameter BaseBarcodeReaderTaskSettingName defines the name of base BarcodeReaderTaskSetting.
 keywords: Base barcode reader task setting name
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/base-barcode-reader-task-setting-name.html
 ---
 
-#  BaseBarcodeReaderTaskSettingName
+# BaseBarcodeReaderTaskSettingName
 
-Parameter `BaseBarcodeReaderTaskSettingName` represents the name of another `BarcodeReaderTaskSetting` object. It is used to inherit the parameters defined in its parent `BarcodeReaderTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
+`BaseBarcodeReaderTaskSettingName` represents the name of another `BarcodeReaderTaskSetting` object. It is used to inherit the parameters defined in its parent `BarcodeReaderTaskSetting` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── BaseBarcodeReaderTaskSettingName
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
@@ -21,9 +27,16 @@ Parameter `BaseBarcodeReaderTaskSettingName` represents the name of another `Bar
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BaseBarcodeReaderTaskSettingName` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| BaseBarcodeReaderTaskSettingName Parameter Summary |
+## Parameter Details
+
+| BaseBarcodeReaderTaskSettingName Parameter Details |
 | :----------------------------------------- |
 | **Type**<br>*String* |
 | **Range**<br>One of the existing `BarcodeReaderTaskSetting` object name. |

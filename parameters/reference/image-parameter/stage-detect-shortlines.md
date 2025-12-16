@@ -1,35 +1,55 @@
 ---
 layout: default-layout
-title: Detect Short Lines Stage Parameters - Dynamsoft Capture Vision Parameters
-description: The parameters that available under detect short lines stage of Dynamsoft Capture Vision.
-keywords: Stages, detect short lines, ShortlineDetectionMode, short line detection modes
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
+title: DetectShortLinesStage - Dynamsoft Capture Vision Parameters
+description: The DetectShortLinesStage detects short lines for document boundary detection.
+keywords: Detect Short Lines Stage
 ---
 
-# Detect Short Lines Stage Parameters
+# DetectShortLinesStage
 
-The parameters that available under the detect short lines stage.
+`DetectShortLinesStage` detects short lines for document boundary detection. In JSON, it is represented as a Stage object with `"Stage": "SST_DETECT_SHORTLINES"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_DETECT_SHORTLINES")
+```
+
+**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+
+**Example:**
 
 ```json
 {
     "Stage": "SST_DETECT_SHORTLINES",
     "ShortlineDetectionMode": {
-        "Mode": "SDM_GENERAL", 
+        "Mode": "SDM_GENERAL",
         "Sensitivity": 3
     }
-},
+}
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for detecting short lines.
+> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage name of detect short lines stage is `SST_DETECT_SHORTLINES`.
+## Parameters
 
-## ShortlineDetectionMode
+### Stage
 
-Defines how to detect short lines.
+Specifies the stage type. Fixed value: `SST_DETECT_SHORTLINES`.
 
-| Stage Parameter Summary |
-| :---------------------- |
-| **Type**<br>A *[ShortlineDetectionMode](shortline-detection-mode.md)* object. |
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_DETECT_SHORTLINES"` |
+
+### ShortlineDetectionMode
+
+Defines how to detect short lines. See [`ShortlineDetectionMode`](shortline-detection-mode.md) for details.

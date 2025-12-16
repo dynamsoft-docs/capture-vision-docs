@@ -10,27 +10,51 @@ noTitleIndex: true
 
 # LocalizationModes
 
-Determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
+Parameter `LocalizationModes` determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
 
-## Example
+## JSON Structure
 
-```json
-"LocalizationModes" :
-[
-    {
-        "Mode" : "LM_CONNECTED_BLOCKS"
-    },
-    {
-        "Mode" : "LM_SCAN_DIRECTLY",
-        "ScanDirection" : 0,
-        "ScanStride" : 0
-    }
-]
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    ├── SectionArray[j]
+    │   └── StageArray[k] (Stage object)
+    │       └── LocalizationModes
 ```
 
-## Parameter Summary
+**Parent object:** [LocalizeCandidateBarcodesStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-localize-candidate-barcodes.html) object
 
-Parameter `LocalizationModes` consist of a group of localization mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
+**Example:**
+
+```json
+{
+    "LocalizationModes": [
+        {
+            "Mode": "LM_CONNECTED_BLOCKS"
+        },
+        {
+            "Mode": "LM_SCAN_DIRECTLY",
+            "ScanDirection": 0,
+            "ScanStride": 0
+        }
+    ]
+}
+```
+
+> [!NOTE]
+> - This snippet shows only the `LocalizationModes` parameter.
+> - To use it, embed this parameter within a Stage object at the `SST_LOCALIZE_CANDIDATE_BARCODES` stage.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
+
+Parameter `LocalizationModes` consists of a group of localization mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments.
+
+### Mode Arguments
+
+The mode arguments of the localization mode object are shown as follows:
 
 ### Mode Arguments
 
@@ -207,36 +231,35 @@ Parameter `LocalizationModes` consist of a group of localization mode objects. E
     </tr>
 </table>
 
-### Default Settings
+### Default Setting
 
 If the `LocalizationModes` is not configured in your template file, the following settings will be used as the default settings.
 
 ```json
 {
-    "LocalizationModes" : 
-    [
+    "LocalizationModes": [
         {
-            "Mode" : "LM_CONNECTED_BLOCKS"
+            "Mode": "LM_CONNECTED_BLOCKS"
         },
         {
-            "IsOneDStacked" : 0,
-            "Mode" : "LM_SCAN_DIRECTLY",
-            "ScanDirection" : 0,
-            "ScanStride" : 0
+            "Mode": "LM_SCAN_DIRECTLY",
+            "IsOneDStacked": 0,
+            "ScanDirection": 0,
+            "ScanStride": 0
         },
         {
-            "Mode" : "LM_STATISTICS",
+            "Mode": "LM_STATISTICS"
         },
         {
-            "Mode" : "LM_LINES",
+            "Mode": "LM_LINES"
         }
     ]
 }
 ```
 
-If you specified an localization mode object with Mode Argument "Mode" only, the default values of the other mode arguments will used.
+If you specify a localization mode object with the Mode Argument "Mode" only, the default values of the other mode arguments will be used.
 
-## Candidate Modes Descriptions
+## Candidate Mode Introductions
 
 ### LM_CONNECTED_BLOCKS
 

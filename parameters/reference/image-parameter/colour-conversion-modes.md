@@ -3,9 +3,6 @@ layout: default-layout
 title: ColourConversionModes - Dynamsoft Capture Vision Parameters
 description: The parameter ColourConversionModes of Dynamsoft Capture Vision is for controlling the converting of colour image to grayscale image.
 keywords: ColourConversionModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,7 +10,18 @@ noTitleIndex: true
 
 Parameter `ColourConversionModes` is a parameter for setting the mode for converting a colour image to a grayscale image. It consists of one or more `ColourConversionMode` items and each item has its own arguments.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_CONVERT_TO_GRAYSCALE")
+        └── ColourConversionModes
+```
+
+**Parent object:** [ConvertToGrayscaleStage](stage-convert-to-grayscale.md)
+
+**Example:**
 
 ```json
 {
@@ -25,7 +33,14 @@ Parameter `ColourConversionModes` is a parameter for setting the mode for conver
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ColourConversionModes` parameter.
+> - To use it, embed this parameter within a [ConvertToGrayscaleStage](stage-convert-to-grayscale.md) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `ColourConversionModes` consist of a group of colour conversion mode objects. Each colour conversion mode object includes a candidate mode and a series of mode arguments. The mode arguments of the colour conversion mode object is shown as follow:
 
@@ -232,7 +247,7 @@ In document detection tasks, various ColuorConversionModes will be tried as much
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### CICM_GENERAL
 

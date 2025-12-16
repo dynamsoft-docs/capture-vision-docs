@@ -2,16 +2,23 @@
 layout: default-layout
 title: CodeSpecifications - Dynamsoft Capture Vision Parameter Reference
 description: The parameter CodeSpecifications of Dynamsoft Capture Vision. 
-needAutoGenerateSidebar: true
-needGenerateH3Content: false
 noTitleIndex: true
 ---
-
 # CodeSpecifications
 
 Parameter `CodeSpecifications` specifies the names of `CodeSpecification` used for code parsing.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+CodeParserTaskSettingOptions[i]
+    └── CodeSpecifications
+```
+
+**Parent object:** [CodeParserTaskSetting]({{ site.dcvb_parameters }}file/task-settings/code-parser-task-settings.html) object
+
+**Example:**
 
 ```json
 {
@@ -19,9 +26,16 @@ Parameter `CodeSpecifications` specifies the names of `CodeSpecification` used f
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `CodeSpecifications` parameter.
+> - To use it, embed this parameter within a [CodeParserTaskSetting]({{ site.dcvb_parameters }}file/task-settings/code-parser-task-settings.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| Brightness Parameter Summary |
+## Parameter Details
+
+| Brightness Parameter Details |
 | :------------- |
 | **Type**<br>*string array* |
 | **Range**<br>Any valid string |

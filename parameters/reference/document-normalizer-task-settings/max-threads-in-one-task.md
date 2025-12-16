@@ -3,26 +3,40 @@ layout: default-layout
 title: MaxThreadsInOneTask - Dynamsoft Document Normalizer Parameters
 description: The parameter MaxThreadsInOneTask defines the maximum threads that can be consumed in one document normalizer task.
 keywords: Max threads
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
 # MaxThreadsInOneTask
 
-Parameter `MaxThreadsInOneTask` defines the maximum threads that can be consumed in one task.
+`MaxThreadsInOneTask` defines the maximum threads that can be consumed in one task.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── MaxThreadsInOneTask
+```
+
+**Parent object:** [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html)
+
+**Example:**
 
 ```json
 {
-    "MaxThreadsInOneTask":4
+    "MaxThreadsInOneTask": 4
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `MaxThreadsInOneTask` parameter.
+> - To use it, embed this parameter within a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| MaxThreadsInOneTask Parameter Summary |
+## Parameter Details
+
+| MaxThreadsInOneTask Parameter Details |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 256] |

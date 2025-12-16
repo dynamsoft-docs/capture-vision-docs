@@ -3,16 +3,23 @@ layout: default-layout
 title: BarcodeZoneBarCountRangeArray - Dynamsoft Barcode Reader Parameters
 description: The parameter BarcodeZoneBarCountRangeArray of Dynamsoft Barcode Reader defines the range of bar count of the barcode zone for barcodes searching.
 keywords: BarcodeZoneBarCountRangeArray , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 ---
 
 # BarcodeZoneBarCountRangeArray
 
 Parameter `BarcodeZoneBarCountRangeArray` defines the range of bar count of the barcode zone for barcodes searching.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── BarcodeZoneBarCountRangeArray
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -25,7 +32,14 @@ Parameter `BarcodeZoneBarCountRangeArray` defines the range of bar count of the 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeZoneBarCountRangeArray` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `BarcodeZoneBarCountRangeArray` consist of a group of barcode zone bar count range objects. Each object includes the maximum and minimum value of the barcode zone bar count range.
 

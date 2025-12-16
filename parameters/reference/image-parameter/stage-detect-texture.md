@@ -1,33 +1,56 @@
 ---
 layout: default-layout
-title: Detect Texture Stage Parameters - Dynamsoft Capture Vision Parameters
-description: The parameters that available under detect texture stage of Dynamsoft Capture Vision.
-keywords: Stages, detect texture, TextureDetectionModes, texture detection modes
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
+title: DetectTextureStage - Dynamsoft Capture Vision Parameters
+description: The DetectTextureStage detects texture on the image.
+keywords: Detect Texture Stage
 ---
 
-# Detect Texture Stage Parameters
+# DetectTextureStage
 
-The parameters that available under the detect texture stage.
+`DetectTextureStage` detects texture on the image. In JSON, it is represented as a Stage object with `"Stage": "SST_DETECT_TEXTURE"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_DETECT_TEXTURE")
+```
+
+**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+
+**Example:**
 
 ```json
 {
-    "Stage":"SST_DETECT_TEXTURE",
-    "TextureDetectionModes" : [
+    "Stage": "SST_DETECT_TEXTURE",
+    "TextureDetectionModes": [
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION"
+        }
     ]
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for detecting texture.
+> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage name of detect texture stage is `SST_DETECT_TEXTURE`.
+## Parameters
 
-## TextureDetectionModes
+### Stage
 
-Defines how to detect texture.
+Specifies the stage type. Fixed value: `SST_DETECT_TEXTURE`.
 
-| Stage Parameter Summary |
-| :---------------------- |
-| **Type**<br>An array of *[TextureDetectionModes](texture-detection-modes.md)* objects. |
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_DETECT_TEXTURE"` |
+
+### TextureDetectionModes
+
+Defines how to detect texture. See [`TextureDetectionModes`](texture-detection-modes.md) for details.

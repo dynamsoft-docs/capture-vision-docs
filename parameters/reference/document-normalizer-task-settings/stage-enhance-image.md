@@ -1,38 +1,63 @@
 ---
 layout: default-layout
-title: Enhance Image Stage - Dynamsoft Document Normalizer Parameters
-description: The parameter defines Enhance Image Stage under the Image Enhancement Section.
+title: EnhanceImageStage - Dynamsoft Document Normalizer Parameters
+description: The EnhanceImageStage adjusts the image quality.
 keywords: Enhance Image Stage
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# Enhance Image Stage
+# EnhanceImageStage
 
-The `Enhance Image Stage` is designed at the stage level to adjust the image quality, such as changing the brightness, contrast, and the color mode of the image.
+`EnhanceImageStage` adjusts the image quality, such as changing the brightness, contrast, and the color mode of the image. In JSON, it is represented as a Stage object with `"Stage": "SST_ENHANCE_IMAGE"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_ENHANCE_IMAGE")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html#stagearray) within [ImageEnhancementSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html)
+
+**Example:**
 
 ```json
 {
     "Stage": "SST_ENHANCE_IMAGE",
-	"ColourMode": "ICM_COLOUR",
-	"Brightness": 0,
-	"Contrast": 0
+    "ColourMode": "ICM_COLOUR",
+    "Brightness": 0,
+    "Contrast": 0
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for enhancing images.
+> - To use it, add this object to the `StageArray` within an [ImageEnhancementSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage is named `SST_ENHANCE_IMAGE`.
+## Parameters
 
-## ColourMode
+### Stage
 
-Parameter [`ColourMode`](./colour-mode.md) defines the output colour mode of the target image.
+Specifies the stage type. Fixed value: `SST_ENHANCE_IMAGE`.
 
-## Brightness
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_ENHANCE_IMAGE"` |
 
-Parameter [`Brightness`](./brightness.md) defines the brightness of the target image.
+### ColourMode
 
-## Contrast
+Defines the output colour mode of the target image. See [`ColourMode`](colour-mode.md) for details.
 
-Parameter [`Contrast`](./contrast.md) specifies the contrast of the target image.
+### Brightness
+
+Defines the brightness of the target image. See [`Brightness`](brightness.md) for details.
+
+### Contrast
+
+Specifies the contrast of the target image. See [`Contrast`](contrast.md) for details.

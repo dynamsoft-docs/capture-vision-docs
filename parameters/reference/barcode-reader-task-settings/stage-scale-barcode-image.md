@@ -1,29 +1,57 @@
 ---
 layout: default-layout
 title: ScaleBarcodeImageStage - Dynamsoft Barcode Reader Parameters
-description: This page defines ScaleBarcodeImageStage object under the BarcodeDecodingSection.
+description: The ScaleBarcodeImageStage scales barcode images to optimize recognition.
 keywords: ScaleBarcodeImageStage
 ---
 
 # ScaleBarcodeImageStage
 
-The `ScaleBarcodeImageStage` defines the stage where the barcode image is scaled according to the specified scaling mode to optimize recognition.
+`ScaleBarcodeImageStage` scales barcode images according to the specified scaling mode to optimize recognition. In JSON, it is represented as a Stage object with `"Stage": "SST_SCALE_BARCODE_IMAGE"`.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_SCALE_BARCODE_IMAGE")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-decoding.html#stagearray) within [BarcodeDecodingSection]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-decoding.html)
+
+**Example:**
 
 ```json
 {
     "Stage": "SST_SCALE_BARCODE_IMAGE",
-    "BarcodeScaleModes": []
+    "BarcodeScaleModes": [
+        {
+            "Mode": "BSM_AUTO"
+        }
+    ]
 }
 ```
 
-## Available Parameters
+> [!NOTE]
+> - This snippet shows a Stage object configured for barcode image scaling.
+> - To use it, add this object to the `StageArray` within a [BarcodeDecodingSection]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-decoding.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameters
 
 ### Stage
 
-The name of the current stage, whose value is a fixed value: `SST_SCALE_BARCODE_IMAGE`.
+Specifies the stage type. Fixed value: `SST_SCALE_BARCODE_IMAGE`.
+
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_SCALE_BARCODE_IMAGE"` |
 
 ### BarcodeScaleModes
 
-Parameter [`BarcodeScaleModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) defines the scaling mode applied during barcode recognition. 
+Defines the scaling mode applied during barcode recognition. See [`BarcodeScaleModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) for details. 

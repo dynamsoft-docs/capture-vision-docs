@@ -33,7 +33,7 @@ A `CaptureVisionModel` object defines how the library find Convolutional Neural 
 
 ### Name
 
-The name of the CaptureVisionModel object. It will be used as a unique identifier for the model.
+The name of the `CaptureVisionModel` object. It will be used as a unique identifier for the model.
 
 | Parameter Summary |
 | :------------------- |

@@ -63,7 +63,7 @@ noTitleIndex: true
     "BarcodeZoneMinDistanceToImageBorders" : 1,
     "Code128Subset" : "A",
     "DataMatrixSizeOptions": ["DMS_DEFAULT"],
-    "DataMatrixModuleIsotropic": 1
+    "DataMatrixModuleIsotropic": 1,
     "DeformationResistingModes" : [
         {
             "Mode": "DRM_GENERAL", 
@@ -101,7 +101,7 @@ noTitleIndex: true
 
 **Set target barcode format**
 
-Sets `BarcodeFormatIds` to specify which barcode format the current FormatSpecification configuration is applied to. View enumeration [BarcodeFormats]({{site.dcvb_enums}}barcode-reader/barcode-format.html) for all supported barcode formats.
+Sets `BarcodeFormatIds` to specify which barcode format the current FormatSpecification configuration is applied to.
 
 **Set special configurations for target format**
 

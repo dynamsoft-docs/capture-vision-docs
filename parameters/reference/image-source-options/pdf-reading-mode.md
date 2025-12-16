@@ -3,21 +3,27 @@ layout: default-layout
 title: PDFReadingMode - Dynamsoft Capture Vision Parameters
 description: The parameter PDFReadingMode of Dynamsoft Capture Vision defines .
 keywords: PDF reading mode, ISA
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 permalink: /parameters/reference/image-source-options/pdf-reading-mode.html
 ---
-
 # PDFReadingMode
 
 Parameter `PDFReadingMode` defines how to handle PDF files.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageSourceOptions
+    └── PdfReadingMode
+```
+
+**Parent object:** [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object
+
+**Example:**
 
 ```json
 {
-    "PDFReadingMode": 
+    "PDFReadingMode":
     {
         "Mode": "PDFRM_RASTER",
         "DPI": 300,
@@ -26,7 +32,14 @@ Parameter `PDFReadingMode` defines how to handle PDF files.
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `PdfReadingMode` parameter.
+> - To use it, embed this parameter within a [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF reading mode object includes a candidate mode and a series of mode arguments. The available mode arguments of the PDF reading mode object is shown as follow.
 

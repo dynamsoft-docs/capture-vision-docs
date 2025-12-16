@@ -3,11 +3,8 @@ layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
 description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
 keywords: Location
-needAutoGenerateSidebar: true
-noTitleIndex: true
 needGenerateH3Content: true
 ---
-
 # FrameFilteringCondition
 
 One of the filter conditions. Filter the reference objects with the frame information. The parameter `FrameFilteringCondition` includes the following child parameters:

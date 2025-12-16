@@ -3,17 +3,23 @@ layout: default-layout
 title: PatchCodeSearchingMargins - Dynamsoft Barcode Reader Parameters
 description: The parameter PatchCodeSearchingMargins of Dynamsoft Barcode Reader defines the patch code searching margins.
 keywords: PatchCodeSearchingMargins , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/patch-code-searching-margins.html
 ---
 
 # PatchCodeSearchingMargins
 
 Parameter `PatchCodeSearchingMargins` defines the patch code searching margins.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── PatchCodeSearchingMargins
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -28,7 +34,14 @@ Parameter `PatchCodeSearchingMargins` defines the patch code searching margins.
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `PatchCodeSearchingMargins` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `PatchCodeSearchingMargins` is set by a patch code searching margins object. The patch code searching margins object includes a series of child parameters to define the top, bottom, left, right margins and how they are measured.
 

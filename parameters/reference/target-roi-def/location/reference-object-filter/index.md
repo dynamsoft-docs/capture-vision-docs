@@ -3,25 +3,27 @@ layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
 description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
 keywords: Location
-needAutoGenerateSidebar: true
-noTitleIndex: true
 needGenerateH3Content: true
 ---
-
 # ReferenceObjectFilter
 
 Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring out the `reference objects`.
 
 ```json
-"ReferenceObjectFilter" :
-{  
-    "ReferenceTargetROIDefNameArray": [], 
-    "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"], 
-    "ReferenceTaskNameArray": ["DBR_task"], 
-    "BarcodeFilteringCondition": {},
-    "FrameFilteringCondition": {},
-    "TextLineFilteringCondition":{},
-    "RegionFilteringCondition": {}
+{
+    "ReferenceObjectFilter":
+    {
+        "ReferenceTargetROIDefNameArray": [], 
+        "AtomicResultTypeArray" : ["ART_TEXT_LINE","ART_BARCODE","ART_FRAME"], 
+        "ReferenceTaskNameArray": ["DBR_task"], 
+        "BarcodeFilteringCondition": {},
+        "FrameFilteringCondition": {},
+        "TextLineFilteringCondition":{},
+        "RegionFilteringCondition": {
+            "RegionPredetectionMode": "RPM_GENERAL",
+            "LabelIdArray": [0, 1, 2]
+        }
+    }
 }
 ```
 

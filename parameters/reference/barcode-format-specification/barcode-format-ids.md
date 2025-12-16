@@ -1,23 +1,23 @@
 ---
 layout: default-layout
 title: BarcodeFormatIds - Dynamsoft Barcode Reader Parameters
-description: The parameter BarcodeFormatIds defines the barcode formats to read in a task.
+description: The parameter BarcodeFormatIds defines which barcode formats a BarcodeFormatSpecification configuration applies to.
 keywords: Barcode format IDs
 ---
 
 # BarcodeFormatIds
 
-`BarcodeFormatIds` defines which barcode formats to read in a barcode reader task. You can specify multiple barcode formats at one time.
+Parameter `BarcodeFormatIds` specifies which barcode formats the current `BarcodeFormatSpecification` configuration applies to. You can specify multiple barcode formats at one time.
 
 ## JSON Structure
 
 **Location in template:**
 ```
-BarcodeReaderTaskSettingOptions[i]
+BarcodeFormatSpecificationOptions[i]
     └── BarcodeFormatIds
 ```
 
-**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
 
 **Example:**
 
@@ -29,7 +29,7 @@ BarcodeReaderTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `BarcodeFormatIds` parameter.
-> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
 > - For the complete JSON structure, see:
 >   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
 >   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
@@ -40,7 +40,7 @@ BarcodeReaderTaskSettingOptions[i]
 | :--------------------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each array element should be a string value from the `BarcodeFormat` enumeration. |
-| **Default Value**<br>`["BF_DEFAULT"]` |
+| **Default Value**<br>`["BF_ALL"]` |
 
 **Remarks**
 

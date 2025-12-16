@@ -3,26 +3,39 @@ layout: default-layout
 title: TextLinesCount - Dynamsoft Label Recognizer Parameters
 description: The parameter TextLinesCount defines the expected number of text lines for the TextLineSpecification object.
 keywords: TextLinesCount
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
-permalink: /parameters/reference/text-line-specification/text-lines-count.html
 ---
 
 # TextLinesCount
 
 Parameter `TextLinesCount` defines the expected number of text lines for the `TextLineSpecification` object.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+TextLineSpecificationOptions[i]
+    └── TextLinesCount
+```
+
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+
+**Example:**
 
 ```json
 {
-    "Name": "tls_0",
-    "TextLinesCount" : 3
+    "TextLinesCount": 3
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `TextLinesCount` parameter.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+
+## Parameter Details
 
 | Parameter Details |
 | :----------------------------------- |

@@ -1,36 +1,58 @@
 ---
 layout: default-layout
 title: AssembleTextLinesStage - Dynamsoft Label Recognizer Parameters
-description: The parameter defines Assemble Text Lines Stage under the Text Line Recognition Section.
+description: The AssembleTextLinesStage assembles the grouped text lines into a single text line.
 keywords: Assemble Text Lines Stage
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# AssembleTextLinesStage Object
+# AssembleTextLinesStage
 
-The `AssembleTextLinesStage` is designed at the stage level to assemble the grouped text-lines into a single text-line.
+`AssembleTextLinesStage` assembles the grouped text lines into a single text line. In JSON, it is represented as a Stage object with `"Stage": "SST_ASSEMBLE_TEXT_LINES"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_ASSEMBLE_TEXT_LINES")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html#stagearray) within [TextLinesRecognitionSection]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html)
+
+**Example:**
 
 ```json
 {
     "Stage": "SST_ASSEMBLE_TEXT_LINES",
-    "StringLengthRange": [
-        3,
-        200
-    ],
+    "StringLengthRange": [3, 200],
     "StringRegExPattern": ""
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for assembling text lines.
+> - To use it, add this object to the `StageArray` within a [TextLinesRecognitionSection]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage is named `SST_ASSEMBLE_TEXT_LINES`.
+## Parameters
 
-## StringLengthRange
+### Stage
 
-Parameter [`StringLengthRange`](string-length-range.md) sets the range of string lengths for concatenated strings of recognized text lines.
+Specifies the stage type. Fixed value: `SST_ASSEMBLE_TEXT_LINES`.
 
-## StringRegExPattern
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_ASSEMBLE_TEXT_LINES"` |
 
-Parameter [`StringRegExPattern`](string-regex-pattern.md) specifies the regular expression pattern for concatenated strings of recognized text lines.
+### StringLengthRange
+
+Sets the range of string lengths for concatenated strings of recognized text lines. See [`StringLengthRange`](string-length-range.md) for details.
+
+### StringRegExPattern
+
+Specifies the regular expression pattern for concatenated strings of recognized text lines. See [`StringRegExPattern`](string-regex-pattern.md) for details.

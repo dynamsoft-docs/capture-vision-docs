@@ -9,7 +9,17 @@ keywords: DataMatrixSizeOptions, parameter reference, parameter
 
 Parameter `DataMatrixSizeOptions` defines expected size of the DataMatrix to be decoded.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── DataMatrixSizeOptions
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -17,11 +27,18 @@ Parameter `DataMatrixSizeOptions` defines expected size of the DataMatrix to be 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `DataMatrixSizeOptions` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the `DataMatrixSizeOptions` is shown as follow:
 
-| DataMatrixSizeOptions  Parameter Summary |
+| DataMatrixSizeOptions  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*string[]* |
 | **Range**<br>["DMS_DEFAULT","DMS_ALL","DMS_SQUARE","DMS_RECTANGLE","DMS_DMRE","DMS_SQUARE_10_10","DMS_SQUARE_12_12","DMS_SQUARE_14_14","DMS_SQUARE_16_16","DMS_SQUARE_18_18","DMS_SQUARE_20_20","DMS_SQUARE_22_22","DMS_SQUARE_24_24","DMS_SQUARE_26_26","DMS_SQUARE_32_32","DMS_SQUARE_36_36","DMS_SQUARE_40_40","DMS_SQUARE_44_44","DMS_SQUARE_48_48","DMS_SQUARE_52_52","DMS_SQUARE_64_64","DMS_SQUARE_72_72","DMS_SQUARE_80_80","DMS_SQUARE_88_88","DMS_SQUARE_96_96","DMS_SQUARE_104_104","DMS_SQUARE_120_120","DMS_SQUARE_132_132","DMS_SQUARE_144_144","DMS_RECTANGLE_8_18","DMS_RECTANGLE_8_32","DMS_RECTANGLE_12_26","DMS_RECTANGLE_12_36","DMS_RECTANGLE_16_36","DMS_RECTANGLE_16_48","DMS_DMRE_8_48","DMS_DMRE_8_64","DMS_DMRE_8_80","DMS_DMRE_8_96","DMS_DMRE_8_120","DMS_DMRE_8_144","DMS_DMRE_12_64","DMS_DMRE_12_88","DMS_DMRE_16_64","DMS_DMRE_20_36","DMS_DMRE_20_44","DMS_DMRE_20_64","DMS_DMRE_22_48","DMS_DMRE_24_48","DMS_DMRE_24_64","DMS_DMRE_26_40","DMS_DMRE_26_48","DMS_DMRE_26_64"] |

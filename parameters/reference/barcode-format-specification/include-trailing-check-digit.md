@@ -9,7 +9,17 @@ keywords: IncludeTrailingCheckDigit, parameter reference, parameter
 
 Parameter `IncludeTrailingCheckDigit` defines whether to include the trailing check digit in the byte result.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── IncludeTrailingCheckDigit
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -17,11 +27,18 @@ Parameter `IncludeTrailingCheckDigit` defines whether to include the trailing ch
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `IncludeTrailingCheckDigit` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the `IncludeTrailingCheckDigit` is shown as follow:
 
-| IncludeTrailingCheckDigit  Parameter Summary |
+| IncludeTrailingCheckDigit  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

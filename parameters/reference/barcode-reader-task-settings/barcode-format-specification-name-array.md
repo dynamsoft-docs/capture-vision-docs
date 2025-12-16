@@ -1,18 +1,25 @@
 ---
 layout: default-layout
 title: BarcodeFormatSpecificationNameArray - Dynamsoft Barcode Reader Parameters
-description: The parameter BarcodeFormatSpecificationNameArray of Dynamsoft Barcode Reader defines the collection of BarcodeFormatSpecification object names
+description: The parameter BarcodeFormatSpecificationNameArray defines the collection of BarcodeFormatSpecification object names.
 keywords: BarcodeFormatSpecification, BarcodeReaderTaskSetting
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 ---
 
 # BarcodeFormatSpecificationNameArray
 
-Parameter `BarcodeFormatSpecificationNameArray` defines the collection of BarcodeFormatSpecification object names, used to refer to the `BarcodeFormatSpecification` objects
+`BarcodeFormatSpecificationNameArray` defines the collection of `BarcodeFormatSpecification` object names, used to refer to the `BarcodeFormatSpecification` objects.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── BarcodeFormatSpecificationNameArray
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
@@ -20,9 +27,16 @@ Parameter `BarcodeFormatSpecificationNameArray` defines the collection of Barcod
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeFormatSpecificationNameArray` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| BarcodeFormatSpecificationNameArray Parameter Summary |
+## Parameter Details
+
+| BarcodeFormatSpecificationNameArray Parameter Details |
 | :----------------------------------- |
 | **Type**<br>*String[]* |
 | **Range**<br>Each element is the name of a `BarcodeFormatSpecification` object. |

@@ -1,16 +1,26 @@
 ---
 layout: default-layout
-title: Detect Edges Stage - Dynamsoft Document Normalizer Parameters
-description: The parameter defines Detect Edges Stage under the Document Detection Section.
+title: DetectEdgesStage - Dynamsoft Document Normalizer Parameters
+description: The DetectEdgesStage detects edges of quadrilaterals that meet the specified conditions.
 keywords: Detect Edges Stage
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# Detect Edges Stage
+# DetectEdgesStage
 
-The `Detect Edges Stage` is designed at the stage level to detect edges of quadrilaterals that meet the specified conditions.
+`DetectEdgesStage` detects edges of quadrilaterals that meet the specified conditions. In JSON, it is represented as a Stage object with `"Stage": "SST_DETECT_EDGES"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_DETECT_EDGES")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-detection.html#stagearray) within [DocumentDetectionSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-detection.html)
+
+**Example:**
 
 ```json
 {
@@ -18,6 +28,21 @@ The `Detect Edges Stage` is designed at the stage level to detect edges of quadr
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for detecting edges.
+> - To use it, add this object to the `StageArray` within a [DocumentDetectionSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-detection.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage is named `SST_DETECT_EDGES`.
+## Parameters
+
+### Stage
+
+Specifies the stage type. Fixed value: `SST_DETECT_EDGES`.
+
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_DETECT_EDGES"` |

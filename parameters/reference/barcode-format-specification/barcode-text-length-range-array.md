@@ -3,16 +3,23 @@ layout: default-layout
 title: BarcodeTextLengthRangeArray - Dynamsoft Barcode Reader Parameters
 description: The parameter BarcodeTextLengthRangeArray of Dynamsoft Barcode Reader defines the range of barcode text length for barcodes searching and result filtering.
 keywords: BarcodeTextLengthRangeArray  , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 ---
 
 # BarcodeTextLengthRangeArray
 
 Parameter `BarcodeTextLengthRangeArray` defines the range of barcode text length for barcodes searching and result filtering.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── BarcodeTextLengthRangeArray
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -26,7 +33,14 @@ Parameter `BarcodeTextLengthRangeArray` defines the range of barcode text length
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeTextLengthRangeArray` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `BarcodeTextLengthRangeArray` consist of a group of barcode text length range objects. Each object includes the maximum and minimum value of the barcode text length range.
 

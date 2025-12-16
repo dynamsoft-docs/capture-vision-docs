@@ -1,32 +1,56 @@
 ---
 layout: default-layout
-title: Binarize texture removed grayscale image Stage Parameters - Dynamsoft Capture Vision Parameters
-description: The parameters that available under binarize texture removed grayscale image stage of Dynamsoft Capture Vision.
-keywords: Stages, binarize texture removed grayscale image
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
+title: BinarizeTextureRemovedGrayscaleStage - Dynamsoft Capture Vision Parameters
+description: The BinarizeTextureRemovedGrayscaleStage transfers a texture-removed grayscale image into a binary image.
+keywords: Binarize Texture Removed Grayscale Stage
 ---
 
-# Binarize texture removed grayscale image Stage Parameters
+# BinarizeTextureRemovedGrayscaleStage
 
-The parameters that available under the Binarize texture removed grayscale image Stage.
+`BinarizeTextureRemovedGrayscaleStage` transfers a texture-removed grayscale image into a binary image. In JSON, it is represented as a Stage object with `"Stage": "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE")
+```
+
+**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+
+**Example:**
 
 ```json
 {
-    "Stage":"SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE",
-    "BinarizationModes" : []
-},
+    "Stage": "SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE",
+    "BinarizationModes": [
+        {
+            "Mode": "BM_LOCAL_BLOCK"
+        }
+    ]
+}
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for binarizing texture-removed grayscale images.
+> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage name of binarize texture removed grayscale image stage is `SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE`.
+## Parameters
 
-## BinarizationModes
+### Stage
 
-Defines the binarization options with an array of [`BinarizationMode`](binarization-modes.md) objects. The modes in the array will be executed sequentially until the task is completed.
+Specifies the stage type. Fixed value: `SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE`.
 
-| Stage Parameter Summary |
-| :---------------------- |
-| **Type**<br>An array of [`BinarizationMode`](binarization-modes.md) objects |
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE"` |
+
+### BinarizationModes
+
+Defines the binarization options. See [`BinarizationModes`](binarization-modes.md) for details.

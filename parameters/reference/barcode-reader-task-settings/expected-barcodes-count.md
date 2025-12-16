@@ -1,19 +1,25 @@
 ---
 layout: default-layout
 title: ExpectedBarcodesCount - Dynamsoft Barcode Reader Parameters
-description: The parameter ExpectedBarcodesCount of Dynamsoft Barcode Reader defines the number of barcodes expected to be detected.
+description: The parameter ExpectedBarcodesCount defines the number of barcodes expected to be detected.
 keywords: Expected barcodes count
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-reader-task-settings/expected-barcodes-count.html
 ---
 
 # ExpectedBarcodesCount
 
-Parameter `ExpectedBarcodesCount` defines the number of barcodes expected to be detected.
+`ExpectedBarcodesCount` defines the number of barcodes expected to be detected.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── ExpectedBarcodesCount
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
@@ -21,9 +27,16 @@ Parameter `ExpectedBarcodesCount` defines the number of barcodes expected to be 
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `ExpectedBarcodesCount` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| ExpectedBarcodesCount Parameter Summary |
+## Parameter Details
+
+| ExpectedBarcodesCount Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 0x7fffffff] |

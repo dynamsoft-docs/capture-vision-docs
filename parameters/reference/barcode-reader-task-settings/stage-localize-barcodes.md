@@ -1,15 +1,26 @@
 ---
 layout: default-layout
 title: LocalizeBarcodesStage - Dynamsoft Barcode Reader Parameters
-description: This page defines LocalizeBarcodesStage object under the BarcodeLocalizationSection.
+description: The LocalizeBarcodesStage accurately determines the positions of barcodes within the identified candidate regions.
 keywords: LocalizeBarcodesStage
 ---
 
 # LocalizeBarcodesStage
 
-The `LocalizeBarcodesStage` defines the stage that accurately determines the positions of barcodes within the identified candidate regions.
+`LocalizeBarcodesStage` accurately determines the positions of barcodes within the identified candidate regions. In JSON, it is represented as a Stage object with `"Stage": "SST_LOCALIZE_BARCODES"`.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_LOCALIZE_BARCODES")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-localization.html#stagearray) within [BarcodeLocalizationSection]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-localization.html)
+
+**Example:**
 
 ```json
 {
@@ -17,8 +28,21 @@ The `LocalizeBarcodesStage` defines the stage that accurately determines the pos
 }
 ```
 
-## Available Parameters
+> [!NOTE]
+> - This snippet shows a Stage object configured for localizing barcodes.
+> - To use it, add this object to the `StageArray` within a [BarcodeLocalizationSection]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-localization.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameters
 
 ### Stage
 
-The name of the current stage, whose value is a fixed value: `SST_LOCALIZE_BARCODES`.
+Specifies the stage type. Fixed value: `SST_LOCALIZE_BARCODES`.
+
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_LOCALIZE_BARCODES"` |

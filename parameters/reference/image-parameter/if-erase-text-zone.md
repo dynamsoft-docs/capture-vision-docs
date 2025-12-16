@@ -3,9 +3,6 @@ layout: default-layout
 title: IfEraseTextZone - Dynamsoft Capture Vision Parameters
 description: The parameter IfEraseTextZone of Dynamsoft Capture Vision is for controlling whether to erase the detected text zone.
 keywords: IfEraseTextZone, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -21,9 +18,9 @@ Parameter `IfEraseTextZone` sets whether to erase the detected text zone. The de
 }
 ```
 
-## Parameter Summary
+## Parameter Details
 
-| IfEraseTextZone Parameter Summary |
+| IfEraseTextZone Parameter Details |
 | :---------------------------------- |
 | **Description**<br>0: Do not erase the text zone.<br>1: Erase the text zone. |
 | **Type**<br>*int* |

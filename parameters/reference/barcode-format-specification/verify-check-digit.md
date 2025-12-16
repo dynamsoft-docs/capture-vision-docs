@@ -3,17 +3,23 @@ layout: default-layout
 title: VerifyCheckDigit - Dynamsoft Barcode Reader Parameters
 description: The parameter VerifyCheckDigit of Dynamsoft Barcode Reader specifies whether to verify the check digit in barcodes where this check digit is optional.
 keywords: VerifyCheckDigit, parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/verify-check-digit.html
 ---
 
 # VerifyCheckDigit
 
 Parameter `VerifyCheckDigit` specifies whether to verify the check digit in barcodes where this check digit is optional.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── VerifyCheckDigit
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,11 +27,18 @@ Parameter `VerifyCheckDigit` specifies whether to verify the check digit in barc
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `VerifyCheckDigit` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the `VerifyCheckDigit` is shown as follow:
 
-| VerifyCheckDigit  Parameter Summary |
+| VerifyCheckDigit  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

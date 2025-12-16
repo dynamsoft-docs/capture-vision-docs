@@ -2,30 +2,29 @@
 layout: default-layout
 title: CodeParserTaskSetting - Dynamsoft Capture Vision Parameter File
 description: The CodeParserTaskSetting object in the Dynamsoft Capture Vision Parameter File. 
-needAutoGenerateSidebar: true
-needGenerateH3Content: false
-noTitleIndex: true
-permalink: /parameters/file/task-settings/code-parser-task-settings.html
+needAutoGenerateSidebar: false
 ---
 
 # CodeParserTaskSetting Object
 
-## Parameter Organization
+The `CodeParserTaskSetting` object defines configurations for parsing barcode text into structured data fields. It specifies which code specification files to use and where to find the parsing resources.
 
-A `CodeParserTaskSetting` object is defined as below:
-
-| Key Name | Value Type | Required or Optional | Description |
-|---|---|---|---|
-| Name | string | Mandatory | Sets the name of current `CodeParserTaskSetting` object. The value must be unique between all `task-setting` objects. |
-| CodeSpecifications | string array | Optional | Sets the value for parameter [CodeSpecifications]({{site.dcvb_parameters_reference}}code-parser-task-settings/code-specifications.html) to define an array of specification file name objects that determine how to parse the code string |
-| ResourcesPath | string | Optional | Sets the value for parameter [ResourcesPath]({{site.dcvb_parameters_reference}}code-parser-task-settings/resources-path.html) to define the directory path that contains the resources needed for the code parser. |
-
-Here is a sample:
+## Example
 
 ```json
 {
     "Name": "CPT1_PARSE_VIN",
-    "CodeSpecifications": ["VIN"], 
+    "CodeSpecifications": ["VIN"],
     "ResourcesPath": "../VIN/" 
 }
 ```
+
+## Parameters
+
+A `CodeParserTaskSetting` object contains the following parameters:
+
+| Parameter Name | Type | Required/Optional | Description |
+|---|---|---|---|
+| [`Name`]({{site.dcvb_parameters_reference}}code-parser-task-settings/name.html) | String | Required | The unique identifier for this `CodeParserTaskSetting` object. Must be unique among all task setting objects. |
+| [`CodeSpecifications`]({{site.dcvb_parameters_reference}}code-parser-task-settings/code-specifications.html) | String Array | Optional | An array of code specification file names that define how to parse the barcode text into structured fields. |
+| [`ResourcesPath`]({{site.dcvb_parameters_reference}}code-parser-task-settings/resources-path.html) | String | Optional | The directory path containing the resources needed for code parsing (e.g., specification files, models). |

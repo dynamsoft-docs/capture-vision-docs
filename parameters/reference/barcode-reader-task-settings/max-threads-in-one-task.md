@@ -7,19 +7,36 @@ keywords: Max threads
 
 # MaxThreadsInOneTask
 
-Parameter `MaxThreadsInOneTask` defines the maximum threads that can be consumed in one task.
+`MaxThreadsInOneTask` defines the maximum threads that can be consumed in one task.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── MaxThreadsInOneTask
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
-    "MaxThreadsInOneTask":4
+    "MaxThreadsInOneTask": 4
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `MaxThreadsInOneTask` parameter.
+> - To use it, embed this parameter within a [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html) object in the complete JSON structure.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| MaxThreadsInOneTask Parameter Summary |
+## Parameter Details
+
+| MaxThreadsInOneTask Parameter Details |
 | :------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 256] |

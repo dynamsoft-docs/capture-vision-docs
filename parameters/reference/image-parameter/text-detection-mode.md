@@ -3,9 +3,6 @@ layout: default-layout
 title: TextDetectionMode - Dynamsoft Capture Vision Parameters
 description: The parameter TextDetectionMode of Dynamsoft Capture Vision is for detecting texts on an image.
 keywords: TextDetectionMode, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,20 +10,35 @@ noTitleIndex: true
 
 Parameter `TextDetectionMode` determines how to detect the text area. For tasks like barcode reading or border detection, the text part is not important; while for the task of text recognition, the results of detected text zone are mandatory.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_DETECT_TEXT_ZONES")
+        └── TextDetectionMode
+```
+
+**Parent object:** [DetectTextZonesStage](stage-detect-text-zones.md)
+
+**Example:**
 
 ```json
 {
-    "TextDetectionMode":
-    {
-        "Mode": "TTDM_WORD",
-        "Direction": "HORIZONTAL",
-        "CharHeightRange": [1,1000,1]
+    "TextDetectionMode": {
+        "Mode": "TTDM_LINE"
     }
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `TextDetectionMode` parameter.
+> - To use it, embed this parameter within a [DetectTextZonesStage](stage-detect-text-zones.md) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `TextDetectionMode` consist of a group of text detection mode objects. Each text detection mode object includes a candidate mode and a series of mode arguments. The mode arguments of the text detection mode object is shown as follow:
 
@@ -249,7 +261,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### TTDM_WORD
 

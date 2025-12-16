@@ -1,44 +1,71 @@
 ---
 layout: default-layout
-title: RegionsPredetectionSection - Dynamsoft Label Recognizer Parameters
-description: The parameter defines regions predtection section under the Section Array.
-keywords: Regions Predetection Section
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
+title: RegionPredetectionSection - Dynamsoft Label Recognizer Parameters
+description: The RegionPredetectionSection identifies regions of interest (ROIs) for subsequent processing.
+keywords: RegionPredetectionSection
 ---
 
-# RegionsPredetectionSection Object
+# RegionPredetectionSection
 
-The `RegionsPredetectionSection` is designed to identify regions of interest (ROIs), allowing subsequent processing to ignore other parts of the image. The pre-detected region may be identified based on color features, grayscale features, or neural network localization.
+`RegionPredetectionSection` identifies regions of interest (ROIs), allowing subsequent processing to ignore other parts of the image. In JSON, it is represented as a Section object with `"Section": "ST_REGION_PREDETECTION"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object where Section = "ST_REGION_PREDETECTION")
+```
+
+**Parent object:** [SectionArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-array.html)
+
+**Example:**
 
 ```json
 {
     "Section": "ST_REGION_PREDETECTION",
     "ImageParameterName": "ip_dlrDefault",
-    "StageArray": []
+    "StageArray": [
+        {
+            "Stage": "SST_PREDETECT_REGIONS"
+        }
+    ]
 }
 ```
 
-## Section
+> [!NOTE]
+> - This snippet shows a Section object configured for region predetection.
+> - To use it, add this object to the [SectionArray]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/section-array.html) of a [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The section is named `ST_REGION_PREDETECTION`.
+## Parameters
 
-## ImageParameterName
+### Section
 
-Specifies the `ImageParameter` to apply in the stages of this section.
+Specifies the section type. Fixed value: `ST_REGION_PREDETECTION`.
 
-| Parameter Summary |
+| Parameter Details |
 | :------------- |
 | **Type**<br>*string* |
-| **Range**<br>*It must be one of the name that defined under `ImageParameterOptions`* |
-| **Default Value**<br>*ip_dlrDefault* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"ST_REGION_PREDETECTION"` |
 
-## StageArray
+### ImageParameterName
 
-`StageArray` is a parameter that specifies the stages within the `RegionsPredetectionSection`. A `Stage` is the smallest step significant enough to involve users in image processing.
+Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
 
-The `RegionsPredetectionSection` consists of a single stage:
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Range**<br>Must be the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object defined under `ImageParameterOptions` |
+| **Default Value**<br>`""` |
 
-* [SST_PREDETECT_REGIONS](stage-predetect-regions.md)
-  * It is designed at the stage level to identify regions of interest (ROIs).
+### StageArray
+
+Specifies the stage objects within this section. The `RegionPredetectionSection` consists of the following stages:
+
+| Stage | Description |
+|-------|-------------|
+| [PredetectRegionsStage](stage-predetect-regions.md) (`SST_PREDETECT_REGIONS`) | Identifies regions of interest (ROIs). |

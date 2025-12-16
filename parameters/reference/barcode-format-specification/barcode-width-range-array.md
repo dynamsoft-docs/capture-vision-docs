@@ -3,16 +3,23 @@ layout: default-layout
 title: BarcodeWidthRangeArray - Dynamsoft Barcode Reader Parameters
 description: The parameter BarcodeWidthRangeArray of Dynamsoft Barcode Reader defines the range of widths (in pixels) for barcodes searching and result filtering.
 keywords: BarcodeWidthRangeArray  , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 ---
 
 # BarcodeWidthRangeArray
 
 Parameter `BarcodeWidthRangeArray` defines the range of widths (in pixels) for barcodes searching and result filtering.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── BarcodeWidthRangeArray
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -26,7 +33,14 @@ Parameter `BarcodeWidthRangeArray` defines the range of widths (in pixels) for b
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BarcodeWidthRangeArray` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `BarcodeWidthRangeArray` consist of a group of barcode width range objects. Each object includes the maximum and minimum value of the barcode width range.
 

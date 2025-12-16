@@ -3,9 +3,6 @@ layout: default-layout
 title: GrayscaleTransformationModes - Dynamsoft Capture Vision Parameters
 description: The parameter GrayscaleTransformationModes of Dynamsoft Capture Vision is for controlling the inversion of colors in grayscale image.
 keywords: GrayscaleTransformationModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,22 +10,37 @@ noTitleIndex: true
 
 Parameter `GrayscaleTransformationModes` are used to control whether or not to invert the color of the grayscale image. Generally, we think of the lighter colors as the background and the darker colors as the target in a grayscale image. However in a few cases it is opposite.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_TRANSFORM_GRAYSCALE")
+        └── GrayscaleTransformationModes
+```
+
+**Parent object:** [TransformGrayscaleStage](stage-transform-grayscale.md)
+
+**Example:**
 
 ```json
 {
     "GrayscaleTransformationModes": [
         {
             "Mode": "GTM_ORIGINAL"
-        },
-        {
-            "Mode": "GTM_INVERTED" 
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `GrayscaleTransformationModes` parameter.
+> - To use it, embed this parameter within a [TransformGrayscaleStage](stage-transform-grayscale.md) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 ### Mode Arguments
 
@@ -100,7 +112,7 @@ If the `GrayscaleTransformationModes` is not configured in your template file, t
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### GTM_ORIGINAL
 

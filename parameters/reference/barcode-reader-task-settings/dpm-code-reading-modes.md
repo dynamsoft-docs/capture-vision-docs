@@ -12,26 +12,43 @@ noTitleIndex: true
 
 Parameter `DPMCodeReadingModes` defines how to read direct part mark (DPM) barcodes.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeReaderTaskSettingOptions[i]
+    └── DPMCodeReadingModes
+```
+
+**Parent object:** [BarcodeReaderTaskSetting]({{ site.dcvb_parameters }}file/task-settings/barcode-reader-task-settings.html)
+
+**Example:**
 
 ```json
 {
-    "DPMCodeReadingModes":
-    [
+    "DPMCodeReadingModes": [
         {
-            "Mode": "DPMCRM_GENERAL" 
+            "Mode": "DPMCRM_GENERAL",
+            "BarcodeFormat": "BF_DATAMATRIX"
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `DPMCodeReadingModes` parameter.
+> - To use it, embed this parameter within a `BarcodeReaderTaskSetting` object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Parameter `DPMCodeReadingModes` consist of a group of DPM code reading mode objects. Each object includes a candidate mode and a series of auxiliary mode arguments.
+## Parameter Details
+
+Parameter `DPMCodeReadingModes` consists of a group of DPM code reading mode objects. Each DPM code reading mode object includes a candidate mode and a series of auxiliary mode arguments.
 
 ### Mode Arguments
 
-The mode arguments of the DPM code reading mode object are shown as follow:
+The mode arguments of the DPM code reading mode object are shown as follows:
 
 <table style = "text-align:left">
     <thead>
@@ -116,14 +133,13 @@ The mode arguments of the DPM code reading mode object are shown as follow:
     </tr>
 </table>
 
-### Default Settings
+### Default Setting
 
 If the `DPMCodeReadingModes` is not configured in your template file, the following setting will be used as the default setting.
 
 ```json
 {
-    "DPMCodeReadingModes" : 
-    [
+    "DPMCodeReadingModes": [
         {
             "Mode" : "DPMCRM_SKIP"
         }
@@ -131,7 +147,7 @@ If the `DPMCodeReadingModes` is not configured in your template file, the follow
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### DPMCRM_GENERAL
 

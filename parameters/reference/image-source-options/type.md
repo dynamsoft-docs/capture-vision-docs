@@ -3,17 +3,23 @@ layout: default-layout
 title: Type - Dynamsoft Capture Vision Parameters
 description: The parameter Type of Dynamsoft Capture Vision defines .
 keywords: Type, ISA
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 permalink: /parameters/reference/image-source-options/type.html
 ---
-
 # Type
 
-Parameter `Type` indicates the type of the ImageSource object, which helps CVR create the correct type of image source.
+Parameter `Type` indicates the type of the `ImageSource` object, which helps CVR create the correct type of image source.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageSourceOptions
+    └── Type
+```
+
+**Parent object:** [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,9 +27,16 @@ Parameter `Type` indicates the type of the ImageSource object, which helps CVR c
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `Type` parameter.
+> - To use it, embed this parameter within a [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| Type Parameter Summary |
+## Parameter Details
+
+| Type Parameter Details |
 | :--------------------- |
 | **Description**<br>Define the type of ImageSource. |
 | **Type**<br>*String* |

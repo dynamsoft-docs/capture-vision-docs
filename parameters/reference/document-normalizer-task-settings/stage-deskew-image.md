@@ -1,39 +1,61 @@
 ---
 layout: default-layout
-title: Deskew Image Stage - Dynamsoft Document Normalizer Parameters
-description: The parameter defines Deskew Image Stage under the Document Deskewing Section.
+title: DeskewImageStage - Dynamsoft Document Normalizer Parameters
+description: The DeskewImageStage de-skews the quadrilateral to transform it into a rectangle.
 keywords: Deskew Image Stage
-needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# Deskew Image Stage
+# DeskewImageStage
 
-The `Deskew Image Stage` is designed at the stage level to de-skew the quadrilateral to transform it into a rectangle.
+`DeskewImageStage` de-skews the quadrilateral to transform it into a rectangle. In JSON, it is represented as a Stage object with `"Stage": "SST_DESKEW_IMAGE"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+DocumentNormalizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_DESKEW_IMAGE")
+```
+
+**Parent object:** [StageArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html#stagearray) within [DocumentDeskewingSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html)
+
+**Example:**
 
 ```json
 {
-	"Stage": "SST_DESKEW_IMAGE",
-	"DeskewMode": {
-		"ContentDirection": 0,
-		"Mode": "DSM_PERSPECTIVE_CORRECTION"
-	},
-	"PageSize": [
-		-1,
-		-1
-	]
+    "Stage": "SST_DESKEW_IMAGE",
+    "DeskewMode": {
+        "ContentDirection": 0,
+        "Mode": "DSM_PERSPECTIVE_CORRECTION"
+    },
+    "PageSize": [-1, -1]
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for deskewing images.
+> - To use it, add this object to the `StageArray` within a [DocumentDeskewingSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage is named `SST_DESKEW_IMAGE`.
+## Parameters
 
-## DeskewMode
+### Stage
 
-Parameter [`DeskewMode`](./deskew-mode.md) specifies the method in which the deskew process way used to apply the deskew process on the target image.
+Specifies the stage type. Fixed value: `SST_DESKEW_IMAGE`.
 
-## PageSize
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_DESKEW_IMAGE"` |
 
-Parameter [`PageSize`](./page-size.md) sets the page size (width by height in pixels) of the image after deskew process.
+### DeskewMode
+
+Specifies the method in which the deskew process is applied to the target image. See [`DeskewMode`](deskew-mode.md) for details.
+
+### PageSize
+
+Sets the page size (width by height in pixels) of the image after deskew process. See [`PageSize`](page-size.md) for details.

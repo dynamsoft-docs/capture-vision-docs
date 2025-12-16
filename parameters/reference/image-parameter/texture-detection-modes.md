@@ -3,9 +3,6 @@ layout: default-layout
 title: TextureDetectionModes - Dynamsoft Capture Vision Parameters
 description: The parameter TextureDetectionModes of Dynamsoft Capture Vision is for detecting texts on an image.
 keywords: TextureDetectionModes, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,25 +10,37 @@ noTitleIndex: true
 
 Parameter `TextureDetectionModes` controls how to detect texture on an image.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_DETECT_TEXTURE")
+        └── TextureDetectionModes
+```
+
+**Parent object:** [DetectTextureStage](stage-detect-texture.md)
+
+**Example:**
 
 ```json
 {
-    "TextureDetectionModes": 
-    [
+    "TextureDetectionModes": [
         {
-            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
-            "Sensitivity": 1
-        },
-        {
-            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
-            "Sensitivity": 9
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION"
         }
     ]
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `TextureDetectionModes` parameter.
+> - To use it, embed this parameter within a [DetectTextureStage](stage-detect-texture.md) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 Parameter `TextureDetectionModes` consist of a group of texture detection mode objects. Each texture detection mode object includes a candidate mode and a series of mode arguments. The mode arguments of the texture detection mode object is shown as follow:
 
@@ -143,7 +152,7 @@ If the `TextureDetectionModes` is not configured in your template file, the foll
 }
 ```
 
-## Candidate Modes Introduction
+## Candidate Mode Introductions
 
 ### TDM_GENERAL_WIDTH_CONCENTRATION
 

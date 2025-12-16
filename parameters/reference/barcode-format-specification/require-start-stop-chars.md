@@ -3,17 +3,23 @@ layout: default-layout
 title: RequireStartStopChars - Dynamsoft Barcode Reader Parameters
 description: The parameter RequireStartStopChars of Dynamsoft Barcode Reader defines whether the start and/or stop characters are required when searching for common 1D barcodes.
 keywords: RequireStartStopChars , parameter reference, parameter
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-permalink: /parameters/reference/barcode-format-specification/require-start-stop-chars.html
 ---
 
 # RequireStartStopChars
 
 Parameter `RequireStartStopChars` defines whether the start and/or stop characters are required when searching for common 1D barcodes.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+BarcodeFormatSpecificationOptions[i]
+    └── RequireStartStopChars
+```
+
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+
+**Example:**
 
 ```json
 {
@@ -21,11 +27,18 @@ Parameter `RequireStartStopChars` defines whether the start and/or stop characte
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `RequireStartStopChars` parameter.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+
+## Parameter Details
 
 The structure of the`RequireStartStopChars` is shown as follow:
 
-| RequireStartStopChars  Parameter Summary |
+| RequireStartStopChars  Parameter Details |
 | :--------------------------------- |
 | **Type**<br>*int* |
 | **Range**<br>[0, 1] |

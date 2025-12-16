@@ -3,35 +3,52 @@ layout: default-layout
 title: LocalizationModes - Dynamsoft Label Recognizer Parameters
 description: The parameter LocalizationModes of Dynamsoft Label Recognizer defines how to localize text lines.
 keywords: Localization modes
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
 ---
 
 # LocalizationModes
 
-Determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
+Determines how to localize text lines. It consists of one or more modes, each mode representing a different localization process.
 
 **Remarks**
 
 - Introduced in Dynamsoft Capture Vision version 3.2.1000.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+
+```
+LabelRecognizerTaskSettingOptions[i]
+    └── SectionArray[j] (Section object)
+        └── StageArray[k] (Stage object where Stage = "SST_LOCALIZE_TEXT_LINES")
+            └── LocalizationModes
+```
+
+**Parent object:** [LocalizeTextLinesStage]({{ site.dcvb_parameters }}reference/label-recognizer-task-settings/stage-localize-text-lines.html)
+
+**Example:**
 
 ```json
-"LocalizationModes" :
+"LocalizationModes":
 [
     {
-        "Mode" : "LM_NEURAL_NETWORK",
+        "Mode": "LM_NEURAL_NETWORK",
         "ModelNameArray": ["MRZLocalization"]
     },
     {
-        "Mode" : "LM_GENERAL"
+        "Mode": "LM_GENERAL"
     }
 ]
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `LocalizationModes` parameter.
+> - To use it, embed this parameter within a [LocalizeTextLinesStage]({{ site.dcvb_parameters }}reference/label-recognizer-task-settings/stage-localize-text-lines.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json)
+
+## Parameter Details
 
 Parameter `LocalizationModes` consist of a group of localization mode objects. Each localization mode object includes a candidate mode and a series of auxiliary mode arguments. The structure of the localization mode object is shown as follow:
 
@@ -92,10 +109,10 @@ If the `LocalizationModes` is not configured in your template file, the followin
 
 ```json
 {
-    "LocalizationModes" : 
+    "LocalizationModes":
     [
         {
-            "Mode" : "LM_GENERAL"
+            "Mode": "LM_GENERAL"
         }
     ]
 }

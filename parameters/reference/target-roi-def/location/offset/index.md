@@ -3,26 +3,25 @@ layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
 description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
 keywords: Location
-needAutoGenerateSidebar: true
-noTitleIndex: true
 needGenerateH3Content: true
 ---
-
 # Offset
 
 Parameter `Offset` is an object that defines how the location is offset from the `reference object` or the original image. It includes the following child parameters:
 
 ```json
-"Offset": {
-    "ReferenceObjectOriginIndex": 0,
-    "ReferenceObjectType": "ROT_ATOMIC_OBJECT",
-    "ReferenceXAxis": {},
-    "ReferenceYAxis": {},
-    "MeasuredByPercentage" : 1,
-    "FirstPoint" : [ 0, 0 ],
-    "SecondPoint" : [ 100, 0 ],
-    "ThirdPoint" : [ 100, 100 ],
-    "FourthPoint" : [ 0, 100 ]
+{
+    "Offset": {
+        "ReferenceObjectOriginIndex": 0,
+        "ReferenceObjectType": "ROT_ATOMIC_OBJECT",
+        "ReferenceXAxis": {},
+        "ReferenceYAxis": {},
+        "MeasuredByPercentage" : 1,
+        "FirstPoint" : [ 0, 0 ],
+        "SecondPoint" : [ 100, 0 ],
+        "ThirdPoint" : [ 100, 100 ],
+        "FourthPoint" : [ 0, 100 ]
+    }
 }
 ```
 

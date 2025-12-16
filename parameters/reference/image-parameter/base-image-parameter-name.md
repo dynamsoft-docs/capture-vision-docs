@@ -1,31 +1,44 @@
 ---
 layout: default-layout
 title: BaseImageParameterName - Dynamsoft Capture Vision Parameters
-description: The parameter BaseImageParameterName of Dynamsoft Capture Vision is for Inheritancing parameters from a ImageParameter object.
+description: The parameter BaseImageParameterName of Dynamsoft Capture Vision is for inheriting parameters from an ImageParameter object.
 keywords: BaseImageParameterName, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
-permalink: /parameters/reference/image-parameter/base-image-parameter-name.html
 ---
 
 # BaseImageParameterName
 
 Parameter `BaseImageParameterName` represents the name of another `ImageParameter` object. It is used to inherit the parameters defined in its parent `ImageParameter` object. If a parameter has already been defined in this object, the parameter with the same name will not be inherited from the parent object.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── BaseImageParameterName
+```
+
+**Parent object:** [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+
+**Example:**
 
 ```json
 {
-    "BaseImageParameterName": "IP_0"
+    "BaseImageParameterName": "ip_0"
 }
 ```
 
-## Parameter Summary
+> [!NOTE]
+> - This snippet shows only the `BaseImageParameterName` parameter.
+> - To use it, embed this parameter within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-| BaseImageParameterName Parameter Summary |
+## Parameter Details
+
+| Parameter Details |
 | :---------------------------------- |
-| **Description**<br>Name of the ImageParameter object to inherit. |
 | **Type**<br>*String* |
-| **Value range**<br>One of the ImageParameter name. |
-| **Default Value**<br>"" |
+| **Value Range**<br>One of the `ImageParameter` name. |
+| **Default Value**<br>`""` |
+| **Remarks**<br>The default value "" means this object don't inherit the settings of another object. |

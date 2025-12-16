@@ -1,32 +1,56 @@
 ---
 layout: default-layout
-title: Binarize Image Stage Parameters - Dynamsoft Capture Vision Parameters
-description: The parameters that available under binarize image stage of Dynamsoft Capture Vision.
-keywords: Stages, binarize image, binarization modes, BinarizationMode
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
+title: BinarizeImageStage - Dynamsoft Capture Vision Parameters
+description: The BinarizeImageStage transfers a grayscale image into a binary image.
+keywords: Binarize Image Stage
 ---
 
-# Binarize Image Stage Parameters
+# BinarizeImageStage
 
-The parameters that available under the Binarize Image Stage.
+`BinarizeImageStage` transfers a grayscale image into a binary image. In JSON, it is represented as a Stage object with `"Stage": "SST_BINARIZE_IMAGE"`.
+
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_BINARIZE_IMAGE")
+```
+
+**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+
+**Example:**
 
 ```json
 {
-    "Stage":"SST_BINARIZE_IMAGE",
-    "BinarizationModes" : []
+    "Stage": "SST_BINARIZE_IMAGE",
+    "BinarizationModes": [
+        {
+            "Mode": "BM_LOCAL_BLOCK"
+        }
+    ]
 }
 ```
 
-## Stage
+> [!NOTE]
+> - This snippet shows a Stage object configured for binarizing images.
+> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html).
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-The stage name of binarize image stage is `SST_BINARIZE_IMAGE`.
+## Parameters
 
-## BinarizationModes
+### Stage
 
-Defines the binarization options with an array of [`BinarizationMode`](binarization-modes.md) objects. The modes in the array will be executed sequentially until the task is completed.
+Specifies the stage type. Fixed value: `SST_BINARIZE_IMAGE`.
 
-| Stage Parameter Summary |
-| :---------------------- |
-| **Type**<br>An array of [`BinarizationMode`](binarization-modes.md) objects |
+| Parameter Details |
+| :------------- |
+| **Type**<br>*string* |
+| **Required**<br>Yes |
+| **Default Value**<br>`"SST_BINARIZE_IMAGE"` |
+
+### BinarizationModes
+
+Defines the binarization options. See [`BinarizationModes`](binarization-modes.md) for details.

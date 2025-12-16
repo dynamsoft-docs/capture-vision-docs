@@ -3,9 +3,6 @@ layout: default-layout
 title: ShortlineDetectionMode - Dynamsoft Capture Vision Parameters
 description: The parameter ShortlineDetectionMode of Dynamsoft Capture Vision is for controlling how to detect the shortlines.
 keywords: ShortlineDetectionMode, short lines, parameter reference, parameter
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
 ---
 
 
@@ -13,64 +10,56 @@ noTitleIndex: true
 
 Parameter `ShortlineDetectionMode` is for controlling how to detect the shortlines.
 
-## Example
+## JSON Structure
+
+**Location in template:**
+```
+ImageParameterOptions[i]
+    └── ApplicableStages[j] (Stage object where Stage = "SST_DETECT_SHORTLINES")
+        └── ShortlineDetectionMode
+```
+
+**Parent object:** [DetectShortLinesStage](stage-detect-shortlines.md)
+
+**Example:**
 
 ```json
 {
     "ShortlineDetectionMode": {
-        "Mode": "SDM_GENERAL", 
+        "Mode": "SDM_GENERAL",
         "Sensitivity": 3
     }
 }
 ```
 
-### Mode Arguments
+> [!NOTE]
+> - This snippet shows only the `ShortlineDetectionMode` parameter.
+> - To use it, embed this parameter within a [DetectShortLinesStage](stage-detect-shortlines.md) object.
+> - For the complete JSON structure, see:
+>   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
 
-Each `ShortlineDetectionMode` object consists a candidate mode name and a series of other mode arguments.
+## Parameter Details
 
-<table style = "text-align:left">
-    <thead>
-        <tr>
-            <th nowrap="nowrap">Mode Argument Name</th>
-            <th nowrap="nowrap">Mode Argument Summary</th>
-        </tr>
-    </thead>
-    <tr>
-        <td rowspan = "4" style="vertical-align:text-top">Mode<br>(Required)</td>
-        <td><b>Description</b><br>Any one in Candidate Mode List as string
-        </td>
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>String</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Candidate Mode List</b><br>"SDM_GENERAL"
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>
-        <br>"SDM_GENERAL"
-        </td>
-    </tr>
-    <tr>
-        <td rowspan = "5" style="vertical-align:text-top">Sensitivity<br>(Optional)</td>
-        <td><b>Description</b><br>The sensitivity level used for short line detection.
-    </tr>
-    <tr>
-        <td><b>Type</b><br><i>int</i>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Range</b><br>[1, 9]
-        </td>
-    </tr>
-    <tr>
-        <td><b>Default Value</b><br>3 for BarcodeReader Task.<br>6 for DocumentNormalizer Task
-        </td>
-    </tr>
-    <tr>
-        <td><b>Valid For</b><br>"SDM_GENERAL"
-        </td>
-    </tr>
-</table>
+The `ShortlineDetectionMode` object includes the following parameters:
+
+### Mode
+
+Specifies the shortline detection mode to use.
+
+| Mode Parameter Details |
+| :--------------------- |
+| **Type**<br>*String* |
+| **Value Range**<br>"SDM_GENERAL" |
+| **Default Value**<br>"SDM_GENERAL" |
+
+### Sensitivity
+
+Specifies the sensitivity level used for shortline detection. A higher value means the algorithm will be more sensitive when detecting short lines.
+
+| Sensitivity Parameter Details |
+| :---------------------------- |
+| **Type**<br>*int* |
+| **Value Range**<br>[1, 9] |
+| **Default Value**<br>3 for BarcodeReader Task<br>6 for DocumentNormalizer Task |
+| **Valid For**<br>"SDM_GENERAL" |
