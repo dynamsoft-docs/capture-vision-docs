@@ -41,4 +41,4 @@ CaptureVisionTemplates[i]
 | **Type**<br>*String[]* |
 | **Range**<br>Each element is the name of a `TargetROIDef` object. |
 | **Default Value**<br>['roi_default'] |
-| **Remarks**<br>If `ImageROIProcessingNameArray` is not specified, a default array ["roi_default"] will be created. The TargetROIDef object with the name "roi_default" will have a default configuration of tasks including one barcode reading task, one label recognition task, and one document normalizer task.|
+| **Remarks**<br>If `ImageROIProcessingNameArray` is not specified, a default array ["roi_default"] will be created. The `TargetROIDef` object with the name "roi_default" will have a default configuration of tasks including one barcode reading task, one label recognition task, and one document normalizer task.|

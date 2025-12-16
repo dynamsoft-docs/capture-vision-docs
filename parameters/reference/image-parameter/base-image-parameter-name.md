@@ -39,6 +39,6 @@ ImageParameterOptions[i]
 | Parameter Details |
 | :---------------------------------- |
 | **Type**<br>*String* |
-| **Value Range**<br>One of the ImageParameter name. |
+| **Value Range**<br>One of the `ImageParameter` name. |
 | **Default Value**<br>`""` |
 | **Remarks**<br>The default value "" means this object don't inherit the settings of another object. |

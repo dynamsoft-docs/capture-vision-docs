@@ -7,7 +7,7 @@ permalink: /parameters/reference/image-source-options/type.html
 ---
 # Type
 
-Parameter `Type` indicates the type of the ImageSource object, which helps CVR create the correct type of image source.
+Parameter `Type` indicates the type of the `ImageSource` object, which helps CVR create the correct type of image source.
 
 ## JSON Structure
 

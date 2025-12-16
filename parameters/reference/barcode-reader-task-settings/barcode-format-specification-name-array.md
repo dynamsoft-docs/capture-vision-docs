@@ -7,7 +7,7 @@ keywords: BarcodeFormatSpecification, BarcodeReaderTaskSetting
 
 # BarcodeFormatSpecificationNameArray
 
-`BarcodeFormatSpecificationNameArray` defines the collection of BarcodeFormatSpecification object names, used to refer to the `BarcodeFormatSpecification` objects.
+`BarcodeFormatSpecificationNameArray` defines the collection of `BarcodeFormatSpecification` object names, used to refer to the `BarcodeFormatSpecification` objects.
 
 ## JSON Structure
 

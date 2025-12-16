@@ -34,5 +34,5 @@ Filter the reference object by specifying the reference task name array.
 | AtomicResultTypeArray Parameter Details |
 | :------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each member should be one of the task in the reference TargetROIDef object array. |
+| **Range**<br>Each member should be one of the task in the reference `TargetROIDef` object array. |
 | **Default Value**<br>null |

@@ -41,4 +41,4 @@ LabelRecognizerTaskSettingOptions[i]
 | **Type**<br>*String[]* |
 | **Range**<br>Each element is the name of a `TextLineSpecification` object. |
 | **Default Value**<br>['tls_default'] |
-| **Remarks**<br>If `TextLineSpecificationNameArray` is not specified, a default array ["tls_default"] will be created. The TextLineSpecification object with the name "tls_default" will have a default configuration for all text lines.|
+| **Remarks**<br>If `TextLineSpecificationNameArray` is not specified, a default array ["tls_default"] will be created. The `TextLineSpecification` object with the name "tls_default" will have a default configuration for all text lines.|

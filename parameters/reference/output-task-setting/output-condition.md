@@ -98,7 +98,7 @@ The parameter `TaskSettingNameArray` specifies the task name array on the descen
     </thead>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceTaskNameArray</td>
-        <td><b>Description</b><br>Specifies the task name array on the TargetROIDef object.
+        <td><b>Description</b><br>Specifies the task name array on the `TargetROIDef` object.
         </td>
     </tr>
     <tr>
@@ -115,7 +115,7 @@ The parameter `TaskSettingNameArray` specifies the task name array on the descen
     </tr>
     <tr>
         <td rowspan = "4" style="vertical-align:text-top">ReferenceResultTypeArray</td>
-        <td><b>Description</b><br>Specifies the type of atomic results produced by tasks (except OutputTask) on the TargetROIDef object.
+        <td><b>Description</b><br>Specifies the type of atomic results produced by tasks (except OutputTask) on the `TargetROIDef` object.
         </td>
     </tr>
     <tr>

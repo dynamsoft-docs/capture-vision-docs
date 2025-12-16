@@ -33,7 +33,7 @@ An `ImageSource` object defines an image source to be created and maintained by 
 
 | Parameter Name   | Description                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------- |
-| [`Name`]({{ site.dcvb_parameters_reference }}image-source-options/name.html)           | Represents the name of the ImageSource object, which serves as its unique identifier.                    |
+| [`Name`]({{ site.dcvb_parameters_reference }}image-source-options/name.html)           | Represents the name of the `ImageSource` object, which serves as its unique identifier.                    |
 | [`Type`]({{ site.dcvb_parameters_reference }}image-source-options/type.html)           | Indicates the type of the `ImageSource` object, which helps CVR create the correct type of image source. |
 | [`DirectoryPath`]({{ site.dcvb_parameters_reference }}image-source-options/directory-path.html)  | Specifies a local directory, the files within which are fetched as images to process.                    |
 | [`FileFilter`]({{ site.dcvb_parameters_reference }}image-source-options/file-filter.html)     | Specifies a file name filter string, which determines which files are fetched.                           |

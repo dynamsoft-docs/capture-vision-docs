@@ -41,4 +41,4 @@ TargetROIDefOptions[i]
 | **Type**<br>*String[]* |
 | **Range**<br>Each element represents the name of a `BarcodeReaderTaskSetting` object, `LabelRecognizerTaskSetting` object, `DocumentNormalizerTaskSetting` object, or `OutputTaskSetting` object. |
 | **Default Value**<br>	["dbr_task_default", "dlr_task_default", "ddn_task_default"] |
-| **Remarks**<br>If `TaskSettingNameArray` is not specified, a default array ["dbr_task_default", "dlr_task_default", "ddn_task_default"] will be created. The TargetROIDef object will have a default configuration of tasks including one barcode reading task, one label recognition task, and one document normalizer task.|
+| **Remarks**<br>If `TaskSettingNameArray` is not specified, a default array ["dbr_task_default", "dlr_task_default", "ddn_task_default"] will be created. The `TargetROIDef` object will have a default configuration of tasks including one barcode reading task, one label recognition task, and one document normalizer task.|
