@@ -370,7 +370,6 @@ If an image has different lighting conditions in different areas, BM_LOCAL_BLOCK
 * BlockSizeY
 * EnableFillBinaryVacancy
 * ThresholdCompensation
-* BinarizationThreshold
 * GrayscaleEnhancementModesIndex
 * MorphOperation
 * MorphShape
