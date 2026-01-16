@@ -20,8 +20,8 @@ To explore the latest features and updates of `Dynamsoft Capture Vision`, please
   * ![Android Icon]({{site.assets}}img-icon/homepage/Android.svg){:class="android"} [Android]({{ site.dcvb_android }}){:target="_blank"}
   * ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.dcvb_ios }}){:target="_blank"}
   * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.dcvb_maui }}){:target="_blank"}
-  * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://github.com/Dynamsoft/capture-vision-react-native-samples/blob/main/README.md){:target="_blank"}
-  * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter](https://github.com/Dynamsoft/capture-vision-flutter-samples/blob/main/README.md){:target="_blank"}
+  * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native]({{  site.dcvb_react_native }}){:target="_blank"}
+  * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter]({{ site.dcvb_flutter }}){:target="_blank"}
 * Server / Desktop:
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.dcvb_python }}){:target="_blank"}
   * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dcvb_dotnet }}){:target="_blank"}
