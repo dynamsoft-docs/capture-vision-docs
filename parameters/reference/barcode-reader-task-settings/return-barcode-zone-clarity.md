@@ -7,7 +7,7 @@ keywords: Barcode zone clarity
 
 # ReturnBarcodeZoneClarity
 
-`ReturnBarcodeZoneClarity` defines whether to return the clarity of the barcode zone.
+`ReturnBarcodeZoneClarity` defines whether to return the clarity of the barcode zone. The SDK uses the gray gradient changes of adjacent pixels to measure the clarity of the code area. The result value range is 0~100, the larger the number, the clearer it is.
 
 ## JSON Structure
 

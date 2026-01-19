@@ -26,5 +26,4 @@ To explore the latest features and updates of `Dynamsoft Capture Vision`, please
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.dcvb_python }}){:target="_blank"}
   * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dcvb_dotnet }}){:target="_blank"}
   * ![C++ Icon]({{site.assets}}img-icon/homepage/cplusplus.svg){:class="cplusplus"} [C++]({{ site.dcvb_cpp }}){:target="_blank"}
-  * ![NodeJS Icon]({{site.assets}}img-icon/homepage/nodejs.svg){:class="nodejs"} [Node JS](https://github.com/Dynamsoft/capture-vision-nodejs-samples/){:target="_blank"}
   * ![Java Icon]({{site.assets}}img-icon/homepage/java.svg){:class="java"} [Java]({{ site.dcvb_java }}){:target="_blank"}
