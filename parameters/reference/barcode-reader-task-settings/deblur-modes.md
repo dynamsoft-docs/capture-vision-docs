@@ -120,7 +120,7 @@ The mode arguments of the deblur mode object are shown as follows:
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>Each element is the name of a `CaptureVisionModel` object.<br>Candidate values: "OneDDeblur", "EAN13Decoder", "Code128Decoder".
+        <td><b>Range</b><br>Each element is the name of a `CaptureVisionModel` object.<br>Candidate values: "OneDDeblur", "EAN13Decoder", "Code128Decoder", "Code39ITFDecoder", "DataMatrixQRCodeDeblur", "PDF417Deblur".<br>"OneDDeblur": for OneD barcodes.<br>"EAN13Decoder": for EAN13 barcodes.<br>"Code128Decoder": for Code128 barcodes.<br>"Code39ITFDecoder": for Code39 and ITF barcodes. Introduced in version 11.4.1000.<br>"DataMatrixQRCodeDeblur": for DataMatrix and QRCode barcodes. Introduced in version 11.4.1000.<br>"PDF417Deblur": for PDF417 barcodes. Introduced in version 11.4.1000.
         </td>
     </tr>
     <tr>
@@ -132,7 +132,7 @@ The mode arguments of the deblur mode object are shown as follows:
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>When set to null, all "OneDDeblur", "EAN13Decoder", "Code128Decoder" models will be used by default.
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>When set to null in version 11.2.1000, "OneDDeblur", "EAN13Decoder", "Code128Decoder" models will be used by default.<br>When set to null in version 11.4.1000, "OneDDeblur", "EAN13Decoder", "Code128Decoder", "Code39ITFDecoder", "DataMatrixQRCodeDeblur", "PDF417Deblur" models will be used by default.
         </td>
     </tr>
     <tr>

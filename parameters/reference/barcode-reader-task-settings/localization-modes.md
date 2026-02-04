@@ -214,7 +214,7 @@ The mode arguments of the localization mode object are shown as follows:
         </td>
     </tr>
     <tr>
-        <td><b>Range</b><br>Each element is the name of a model.<br>Candidate values: "OneDLocalization", "DataMatrixQRCodeLocalization".
+        <td><b>Range</b><br>Each element is the name of a model.<br>Candidate values: "OneDLocalization", "DataMatrixQRCodeLocalization", "PDF417Localization".<br>"OneDLocalization": for OneD barcodes.<br>"DataMatrixQRCodeLocalization": for DataMatrix and QRCode barcodes.<br>"PDF417Localization": for PDF417 barcodes. Introduced in version 11.4.1000.
         </td>
     </tr>
     <tr>
@@ -226,7 +226,7 @@ The mode arguments of the localization mode object are shown as follows:
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>When set to null, both "OneDLocalization" and "DataMatrixQRCodeLocalization" models will be used by default.
+        <td><b>Remarks</b><br>Introduced in version 11.2.1000.<br>When set to null in version 11.2.1000, "OneDLocalization", "DataMatrixQRCodeLocalization" models will be used by default.<br>When set to null in version 11.4.1000, "OneDLocalization", "DataMatrixQRCodeLocalization", "PDF417Localization" models will be used by default.
         </td>
     </tr>
 </table>
