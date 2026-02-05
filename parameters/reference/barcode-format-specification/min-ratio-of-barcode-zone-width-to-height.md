@@ -7,4 +7,4 @@ keywords: MinRatioOfBarcodeZoneWidthToHeight , parameter reference, parameter
 
 # MinRatioOfBarcodeZoneWidthToHeight
 
-Deprecated in version 11.4.1000 and will be removed in future versions. Please use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+Removed in version 11.4.1000. Please use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
