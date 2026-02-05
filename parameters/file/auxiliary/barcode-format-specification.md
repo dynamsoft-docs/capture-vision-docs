@@ -61,9 +61,14 @@ noTitleIndex: true
         }
     ],
     "BarcodeZoneMinDistanceToImageBorders" : 1,
+    "BarcodeZoneWidthToHeightRatioRangeArray": [
+        {
+            "MinValue": 100,
+            "MaxValue": 200
+        }
+    ],
     "Code128Subset" : "A",
     "DataMatrixSizeOptions": ["DMS_DEFAULT"],
-    "DataMatrixModuleIsotropic": 1,
     "DeformationResistingModes" : [
         {
             "Mode": "DRM_GENERAL", 
@@ -75,7 +80,6 @@ noTitleIndex: true
     "IncludeImpliedAI01": 0,
     "HeadModuleRatio" : "211412",
     "MinQuietZoneWidth" : 1,
-    "MinRatioOfBarcodeZoneWidthToHeight" : 100,
     "MinResultConfidence" : 30,
     "MirrorMode" : "MM_NORMAL",
     "ModuleSizeRangeArray" : [

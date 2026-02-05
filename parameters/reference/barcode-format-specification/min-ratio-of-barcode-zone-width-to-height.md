@@ -7,39 +7,4 @@ keywords: MinRatioOfBarcodeZoneWidthToHeight , parameter reference, parameter
 
 # MinRatioOfBarcodeZoneWidthToHeight
 
-Parameter `MinRatioOfBarcodeZoneWidthToHeight` defines the minimum ratio (width/height as a percentage) of the barcode zone.
-
-## JSON Structure
-
-**Location in template:**
-```
-BarcodeFormatSpecificationOptions[i]
-    └── MinRatioOfBarcodeZoneWidthToHeight
-```
-
-**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
-
-**Example:**
-
-```json
-{
-    "MinRatioOfBarcodeZoneWidthToHeight": 100
-}
-```
-
-> [!NOTE]
-> - This snippet shows only the `MinRatioOfBarcodeZoneWidthToHeight` parameter.
-> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
-> - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
-
-## Parameter Details
-
-The structure of the `MinRatioOfBarcodeZoneWidthToHeight` is shown as follow:
-
-| MinRatioOfBarcodeZoneWidthToHeight  Parameter Details |
-| :--------------------------------- |
-| **Type**<br>*int* |
-| **Range**<br>[0, 10000] |
-| **Default Value**<br> 0 |
+Removed in version 11.4.1000. Please use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
