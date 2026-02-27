@@ -52,3 +52,4 @@ The structure of the `HasVerticalQuietZone` is shown as follow:
 
 - 0: Do not require a sufficient vertical quiet zone above and below the barcode.
 - 1: Require a sufficient vertical quiet zone above and below the barcode.
+- Valid for linear barcodes.
