@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TextLineSpecification - Dynamsoft Capture Vision Parameter File
-description: The TextLineSpecification object in the Dynamsoft Capture Vision Parameter File defines how text lines will be processed.
+description: Reference for the TextLineSpecification object in Dynamsoft Capture Vision, which configures how individual text lines are recognized - including character model, text line recognition model, height range, string regex, binarization, grayscale enhancement, character normalization, and result concatenation settings.
 keywords: Text line specification, binarization, grayscale enhancement, character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true

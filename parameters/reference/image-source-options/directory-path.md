@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DirectoryPath - ImageSource - Dynamsoft Capture Vision Parameters
-description: The parameter DirectoryPath defines a path when the library have to read files.
+description: Reference for the DirectoryPath parameter in the Dynamsoft Capture Vision ImageSource object, which specifies the local directory path from which image files are fetched for processing.
 keywords: Directory path
 permalink: /parameters/reference/image-source-options/directory-path.html
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnableRegexForceCorrection - Dynamsoft Label Recognizer Parameters
-description: The parameter EnableRegexForceCorrection of Dynamsoft Label Recognizer defines the regular expression pattern for concatenated strings of recognized text lines.
+description: Reference for the EnableRegexForceCorrection parameter in the Dynamsoft Capture Vision LabelRecognizerTaskSetting, which controls whether the SDK forcibly corrects recognized text to match the configured regular expression pattern (1 = force correction enabled, 0 = disabled).
 keywords: text lines, concatenated strings, regular expression
 ---
 

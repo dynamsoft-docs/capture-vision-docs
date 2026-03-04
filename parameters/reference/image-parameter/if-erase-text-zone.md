@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: IfEraseTextZone - Dynamsoft Capture Vision Parameters
-description: The parameter IfEraseTextZone of Dynamsoft Capture Vision is for controlling whether to erase the detected text zone.
+description: Reference for the IfEraseTextZone parameter in Dynamsoft Capture Vision, which specifies whether detected text zones (found by TextDetectionMode) are erased from the binary image before barcode decoding or document detection (1 = erase, 0 = keep).
 keywords: IfEraseTextZone, parameter reference, parameter
 ---
 

@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title: CaptureVisionTemplate - Dynamsoft Capture Vision Parameters
-description: The CaptureVisionTemplate object in the Dynamsoft Capture Vision.
+description: Reference for the CaptureVisionTemplate object in Dynamsoft Capture Vision, which is the entry point of a parameter template and links an ImageSource, one or more TargetROIDef objects, and optional SemanticProcessing objects into a complete capture workflow.
 keywords: CaptureVisionTemplate
 ---
 

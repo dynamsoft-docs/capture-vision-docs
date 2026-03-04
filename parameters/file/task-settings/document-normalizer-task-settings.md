@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DocumentNormalizerTaskSetting - Dynamsoft Capture Vision Parameter File
-description: The DocumentNormalizerTaskSetting object in the Dynamsoft Capture Vision Parameter File. 
+description: Reference for the DocumentNormalizerTaskSetting object in Dynamsoft Capture Vision, which configures a document normalization task including region pre-detection, document detection (edge/corner/quad detection), and image enhancement (deskewing, brightness, colour mode, page size) sections.
 needAutoGenerateSidebar: false
 ---
 

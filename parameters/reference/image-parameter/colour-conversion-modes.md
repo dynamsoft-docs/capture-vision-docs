@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ColourConversionModes - Dynamsoft Capture Vision Parameters
-description: The parameter ColourConversionModes of Dynamsoft Capture Vision is for controlling the converting of colour image to grayscale image.
+description: Reference for the ColourConversionModes parameter in Dynamsoft Capture Vision, which controls how a colour image is converted to grayscale - including channel weighting (RGB) via CICM_GENERAL and other modes, each with configurable arguments.
 keywords: ColourConversionModes, parameter reference, parameter
 ---
 

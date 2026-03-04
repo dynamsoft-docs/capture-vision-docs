@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: SemanticProcessingNameArray - Dynamsoft Capture Vision Parameters
-description: The parameter SemanticProcessingNameArray of Dynamsoft Capture Vision defines the collection of semantic-processing object names.
+description: Reference for the SemanticProcessingNameArray parameter in the Dynamsoft Capture Vision CaptureVisionTemplate object, which lists the names of SemanticProcessing objects to execute - enabling post-processing code parsing tasks (e.g. VIN or MRZ parsing) after image ROI processing.
 keywords: sematic processing, CaptureVisionTemplate
 permalink: /parameters/reference/capture-vision-template/semantic-processing-name-array.html
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TextureDetectionModes - Dynamsoft Capture Vision Parameters
-description: The parameter TextureDetectionModes of Dynamsoft Capture Vision is for detecting texts on an image.
+description: Reference for the TextureDetectionModes parameter in Dynamsoft Capture Vision, which controls how texture patterns are detected in an image so they can be removed from the grayscale image before binarization to improve recognition accuracy.
 keywords: TextureDetectionModes, parameter reference, parameter
 ---
 

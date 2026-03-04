@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: HasVerticalQuietZone - Dynamsoft Barcode Reader Parameters
-description: The parameter Code128Subset of Dynamsoft Barcode Reader defines whether there is a sufficient vertical quiet zone above and below the barcode.
+description: Reference for the HasVerticalQuietZone parameter in Dynamsoft Barcode Reader (introduced in v11.2.1000), which specifies whether a sufficient vertical quiet zone above and below the barcode is required for decoding (0 = not required, 1 = required, default).
 keywords: HasVerticalQuietZone , parameter reference, parameter
 ---
 

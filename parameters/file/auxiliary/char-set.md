@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CharSet - CharacterModel - Dynamsoft Capture Vision Parameters
-description: The parameter CharSet defines a path of character models.
+description: Reference for the CharSet parameter in Dynamsoft Capture Vision, which configures character recognition scope for a CharacterModel by specifying additional special characters to include and characters to exclude.
 keywords: Directory path
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TaskSettingNameArray - Dynamsoft Capture Vision Parameters
-description: The parameter TaskSettingNameArray of Dynamsoft Capture Vision defines the collection of image ROI processing object names.
+description: Reference for the TaskSettingNameArray parameter in the Dynamsoft Capture Vision TargetROIDef object, which lists the names of task setting objects (BarcodeReaderTaskSetting, LabelRecognizerTaskSetting, DocumentNormalizerTaskSetting, or OutputTaskSetting) to execute on the target ROI.
 keywords: task settings, TargetROIDef
 permalink: /parameters/reference/target-roi-def/task-setting-name-array.html
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BaseImageParameterName - Dynamsoft Capture Vision Parameters
-description: The parameter BaseImageParameterName of Dynamsoft Capture Vision is for inheriting parameters from an ImageParameter object.
+description: Reference for the BaseImageParameterName parameter in Dynamsoft Capture Vision, which specifies the name of a parent ImageParameter object from which settings are inherited, with locally defined parameters taking precedence over inherited ones.
 keywords: BaseImageParameterName, parameter reference, parameter
 ---
 

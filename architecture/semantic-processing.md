@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Semantic Processing - Dynamsoft Capture Vision Architecture
-description: This article introduces Semantic Processing Section in the Dynamsoft Capture Vision architecture.
+description: An explanation of Semantic Processing in the Dynamsoft Capture Vision architecture, which parses raw barcode or text line results into structured, human-readable fields - for example, extracting passport number, name, and date of birth from an MRZ text result.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

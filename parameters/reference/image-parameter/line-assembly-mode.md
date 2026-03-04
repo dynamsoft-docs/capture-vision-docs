@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: LineAssemblyMode - Dynamsoft Capture Vision Parameters
-description: The parameter LineAssemblyMode of Dynamsoft Capture Vision is for controlling how to assemble the lines.
+description: Reference for the LineAssemblyMode parameter in Dynamsoft Capture Vision, which controls how detected short line segments are assembled into longer lines, with a configurable mode (LAM_GENERAL) and sensitivity level (1–9).
 keywords: LineAssemblyMode, assemble lines, parameter reference, parameter
 ---
 

@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title: Overview of Dynamsoft Capture Vision Parameters
-description: Introduce the overview parameters design of Dynamsoft Capture Vision.
+description: An overview of the Dynamsoft Capture Vision parameter file, explaining key terms (parameter, template, template file) and listing all top-level objects such as CaptureVisionTemplates, TargetROIDefOptions, and task setting arrays.
 keywords: Parameter, Parameter Template, Parameter Template File
 needAutoGenerateSidebar: true
 noTitleIndex: true

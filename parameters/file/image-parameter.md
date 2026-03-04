@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ImageParameter - Dynamsoft Capture Vision Parameter File
-description: ImageParameter in the Dynamsoft Capture Vision Parameter File is an object for configuring common image processing steps.
+description: Reference for the ImageParameter object in Dynamsoft Capture Vision, which groups image processing stage parameters - including color-to-grayscale conversion, grayscale enhancement, binarization, texture detection, and text zone detection - applied during capture tasks.
 keywords: image parameter, image processing, setting
 ---
 

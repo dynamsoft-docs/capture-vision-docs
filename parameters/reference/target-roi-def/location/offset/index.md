@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
-description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+description: Reference for the Offset object in the Dynamsoft Capture Vision TargetROIDef Location parameter, which defines ROI coordinates as four corner points offset from a reference object, with optional percentage-based measurement and configurable axes.
 keywords: Location
 needGenerateH3Content: true
 ---

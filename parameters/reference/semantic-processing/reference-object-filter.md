@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ReferenceObjectFilter - Dynamsoft Capture Vision Semantic Processing object
-description: The parameter ReferenceObjectFilter defines a group of filter conditions for figuring out the `reference objects`.
+description: Reference for the ReferenceObjectFilter parameter in the Dynamsoft Capture Vision SemanticProcessing object, which filters which atomic results (barcodes, text lines, frames, etc.) from specified TargetROIDef objects are passed to the code parsing task.
 keywords: referenceobjectfilter
 needGenerateH3Content: true
 ---

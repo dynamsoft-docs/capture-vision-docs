@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ShortlineDetectionMode - Dynamsoft Capture Vision Parameters
-description: The parameter ShortlineDetectionMode of Dynamsoft Capture Vision is for controlling how to detect the shortlines.
+description: Reference for the ShortlineDetectionMode parameter in Dynamsoft Capture Vision, which controls how short line segments are detected in an image using mode SDM_GENERAL and a configurable sensitivity level (1–9, default 3 for barcode tasks, 6 for document normalizer tasks).
 keywords: ShortlineDetectionMode, short lines, parameter reference, parameter
 ---
 

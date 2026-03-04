@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TextResultOrderModes - Dynamsoft Barcode Reader Parameters
-description: The parameter TextResultOrderModes of Dynamsoft Barcode Reader defines the order of the returned text results.
+description: Reference for the TextResultOrderModes parameter in Dynamsoft Barcode Reader, which defines the ordering priority of returned barcode results - supporting ordering by confidence (TROM_CONFIDENCE), position (TROM_POSITION), or barcode format (TROM_FORMAT).
 keywords: Text result order modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

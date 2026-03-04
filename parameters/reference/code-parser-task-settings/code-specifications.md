@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CodeSpecifications - Dynamsoft Capture Vision Parameter Reference
-description: The parameter CodeSpecifications of Dynamsoft Capture Vision. 
+description: Reference for the CodeSpecifications parameter in the Dynamsoft Capture Vision CodeParserTaskSetting object, which specifies the names of CodeSpecification files (e.g. "VIN", "MRTD_TD1_ID") to use for parsing recognized codes.
 noTitleIndex: true
 ---
 # CodeSpecifications

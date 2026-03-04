@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title:  CaptureVisionModel - Dynamsoft Capture Vision Parameter File
-description: The CaptureVisionModel object in the Dynamsoft Capture Vision Parameter File defines how the models are found and works.
+description: Reference for the CaptureVisionModel object in Dynamsoft Capture Vision, which tells the library where to find CNN model files (for barcode decoding, character recognition, and text line recognition) and how many model instances to run concurrently.
 keywords: CaptureVisionModel
 needAutoGenerateSidebar: true
 noTitleIndex: true

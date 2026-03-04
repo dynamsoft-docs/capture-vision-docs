@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: PDFReadingMode - Dynamsoft Capture Vision Parameters
-description: The parameter PDFReadingMode of Dynamsoft Capture Vision defines .
+description: Reference for the PDFReadingMode parameter in the Dynamsoft Capture Vision ImageSource object, which controls how PDF files are rendered into images, including the reading mode (raster/vector/auto), DPI, and raster data source.
 keywords: PDF reading mode, ISA
 permalink: /parameters/reference/image-source-options/pdf-reading-mode.html
 ---

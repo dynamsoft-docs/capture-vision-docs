@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TaskSettingNameArray - Dynamsoft Capture Vision Semantic Processing Parameters
-description: The parameter TaskSettingNameArray defines the collection of CodeParserTaskSetting object names.
+description: Reference for the TaskSettingNameArray parameter in the Dynamsoft Capture Vision SemanticProcessing object, which lists the names of CodeParserTaskSetting objects to apply for parsing the filtered reference results (e.g. barcodes or MRZ text lines).
 keywords: task settings, semantic processing
 needGenerateH3Content: true
 ---

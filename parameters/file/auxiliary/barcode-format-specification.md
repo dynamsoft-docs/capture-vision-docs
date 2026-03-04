@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeFormatSpecification - Dynamsoft Capture Vision Parameter File
-description: The BarcodeFormatSpecification object in the Dynamsoft Capture Vision Parameter File defines how barcodes will be processed.
+description: Reference for the BarcodeFormatSpecification object in Dynamsoft Capture Vision, which sets format-specific barcode reading configurations such as angle range, size filters, check digit verification, quiet zone requirements, and decoding options for a specified set of barcode formats.
 keywords: Barcode format specification, binarization, grayscale enhancement, character normalization
 needAutoGenerateSidebar: true
 noTitleIndex: true

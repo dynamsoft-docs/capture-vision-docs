@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Text Line Area Points - Dynamsoft Label Recognizer Parameters
-description: The parameter Text Line Area Points of Dynamsoft Label Recognizer defines how to normalize the characters.
+description: Reference for the Text Line Area Points parameters (FirstPoint, SecondPoint, ThirdPoint, FourthPoint) in the Dynamsoft Capture Vision TextLineSpecification object, which define the quadrilateral area (as percentage-based coordinates within the TargetROI) within which text lines are processed.
 keywords: Character normalization
 ---
 

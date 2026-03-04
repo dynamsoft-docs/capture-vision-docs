@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Capture Vision Introduction  - Main Page
-description: This is the main page of Dynamsoft Capture Vision Introduction. 
+description: An introduction to Dynamsoft Capture Vision (DCV), explaining how it aggregates Dynamsoft Barcode Reader, Label Recognizer, Document Normalizer, Code Parser, and Camera Enhancer into a unified SDK with shared computation and flexible workflow configuration.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

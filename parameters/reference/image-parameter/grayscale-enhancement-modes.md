@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: GrayscaleEnhancementModes - Dynamsoft Capture Vision Parameters
-description: The parameter GrayscaleEnhancementModes of Dynamsoft Capture Vision is for enhancing the quality of grayscale image.
+description: Reference for the GrayscaleEnhancementModes parameter in Dynamsoft Capture Vision, which applies preprocessing to improve grayscale image quality - supporting histogram equalization (GEM_GRAY_EQUALIZE), smoothing (GEM_GRAY_SMOOTH), sharpening (GEM_SHARPEN_SMOOTH), and other modes.
 keywords: GrayscaleEnhancementModes, parameter reference, parameter
 ---
 

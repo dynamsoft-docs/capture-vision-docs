@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Standard Output - Dynamsoft Capture Vision Architecture
-description: This article is about the standard output in the Dynamsoft Capture Vision architecture.
+description: An explanation of the output mechanism in the Dynamsoft Capture Vision architecture, covering the Captured Result Receiver (CRR) interface for final results (barcodes, text lines, document boundaries, normalized images, parsed tables) and the Intermediate Result Receiver (IRR) interface for in-process data.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
