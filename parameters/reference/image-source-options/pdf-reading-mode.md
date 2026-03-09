@@ -66,7 +66,7 @@ Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF 
         </td>
     </tr>
     <tr>
-        <td rowspan = "4" style="vertical-align:text-top">DPI</td>
+        <td rowspan = "5" style="vertical-align:text-top">DPI</td>
         <td><b>Description</b><br>Specifies the DPI used when rasterizing a PDF into images.
         </td>
     </tr>
@@ -80,6 +80,10 @@ Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF 
     </tr>
     <tr>
         <td><b>Default Value</b><br>300
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>The resolution of the rendered image is calculated as follows:<br>Set PDF page height to h and page width to w,<br>Final rendered image height  ImgHeight = h / 72 * DPI<br>Final rendered image width  ImgWidth = w / 72 * DPI<br>DPI is the number of pixels per inch of the image.<br>The page width and height unit defined in PDF is pt (length unit, 1 inch = 72 pt), so in the above formula we first divide the width and height by 72 to get the inch length of the page, and then multiply by DPI to get the final image pixel width and height.
         </td>
     </tr>
     <tr>
@@ -120,8 +124,8 @@ If the `PDFReadingMode` is not configured in your template file, the following s
 
 ### PDFRM_RASTER
 
-Converts the PDF file to image(s) first, then detects barcode
+Renders each page of the PDF as an image, which will be processed later. This reading mode can be used for all PDF files, but the drawback is that you need to choose the appropriate value of PDFRasterDPI to render the image. Otherwise, if the image is too large, the processing speed of DBR may be slowed, and if the image is too small, the barcode region may be distorted and cannot be decoded.
 
 ### PDFRM_VECTOR
 
-Detects barcode from vector data in PDF file.
+This mode will not render PDF data into images, but directly extract PDF vector data for barcode region positioning and decoding. This mode can offer faster speed and higher accuracy, but it is only suitable for PDF composed of vector data.

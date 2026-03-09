@@ -89,8 +89,8 @@ The mode arguments of the localization mode object are shown as follows:
         </td>
     </tr>
     <tr>
-        <td rowspan = "5" style="vertical-align:text-top">ScanStride<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the stride in pixels between scans when searching for barcodes.
+        <td rowspan = "6" style="vertical-align:text-top">ScanStride<br>(Optional)</td>
+        <td><b>Description</b><br>Sets the interval (in pixels) between adjacent scan lines when searching for barcodes.
         </td>
     </tr>
     <tr>
@@ -103,6 +103,10 @@ The mode arguments of the localization mode object are shown as follows:
     </tr>
     <tr>
         <td><b>Default Value</b><br>0
+        </td>
+    </tr>
+    <tr>
+        <td><b>Remarks</b><br>0: Let the library automatically calculates the interval.<br>The smaller the value is, the more likely it is to locate the code area, but it will also increase the time.
         </td>
     </tr>
     <tr>
@@ -263,7 +267,7 @@ If you specify a localization mode object with the Mode Argument "Mode" only, th
 
 ### LM_CONNECTED_BLOCKS
 
-Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further cuztomization.
+Localizes barcodes by searching for connected blocks. It is optimized for clear images with obvious connected blocks. This algorithm usually gives best result and it is recommended to set as highest priority.
 
 **Available Mode Arguments:**
 
@@ -271,7 +275,7 @@ Localizes barcodes by searching for connected blocks. This algorithm usually giv
 
 ### LM_STATISTICS
 
-Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. This mode has the following arguments for further cuztomization.
+Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix.
 
 **Available Mode Arguments:**
 
@@ -279,7 +283,7 @@ Localizes barcodes by groups of contiguous black-white regions. This is optimize
 
 ### LM_LINES
 
-Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. This mode has the following arguments for further cuztomization.
+Localizes barcodes by searching for groups of lines. It is optimized for 1D and PDF417 barcodes which are with obvious straight lines. Compared with the LM_CONNECTED_BLOCKS mode, it can handle the situation where some bars (or lines) of the barcode stick to each other.
 
 **Available Mode Arguments:**
 
@@ -287,7 +291,7 @@ Localizes barcodes by searching for groups of lines. This is optimized for 1D an
 
 ### LM_SCAN_DIRECTLY
 
-Localizes barcodes quickly. This mode is recommended in interactive scenario. This mode has the following arguments for further cuztomization.
+Localizes barcodes based on the direct scanning mode. It is the fastest among all localization modes, but it requires high barcode image quality, and the direction of the barcode must be horizontal or vertical. This mode is recommended in the real-time video scanning scenarios.
 
 **Available Mode Arguments:**
 
@@ -298,7 +302,7 @@ Localizes barcodes quickly. This mode is recommended in interactive scenario. Th
 
 ### LM_STATISTICS_MARKS
 
-Localizes barcodes by groups of marks. This is optimized for DPM codes. This mode has the following arguments for further cuztomization.
+Localizes barcodes by dot matrix information. This mode is only applicable to DPM Code and DotCode.
 
 **Available Mode Arguments:**
 
@@ -306,7 +310,7 @@ Localizes barcodes by groups of marks. This is optimized for DPM codes. This mod
 
 ### LM_STATISTICS_POSTAL_CODE
 
-Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. This mode has the following arguments for further cuztomization.
+Localizes barcodes by statistics, connected blocks and straight lines. This is optimized for postal codes.
 
 **Available Mode Arguments:**
 
@@ -314,7 +318,7 @@ Localizes barcodes by groups of connected blocks and lines.This is optimized for
 
 ### LM_CENTRE
 
-Localizes barcodes from the centre of the image. This mode has the following arguments for further cuztomization.
+Localizes barcodes from the centre of the image. This mode uses the central area of the image as the suspected code area and then try to localize and decode.
 
 **Available Mode Arguments:**
 
@@ -323,7 +327,7 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 
 ### LM_ONED_FAST_SCAN
 
-Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode. This mode has the following arguments for further cuztomization.
+Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode.
 
 **Available Mode Arguments:**
 
@@ -334,7 +338,7 @@ Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barco
 
 ### LM_NEURAL_NETWORK
 
-Localizes barcodes by utilizing a neural network model. This mode has the following arguments for further cuztomization.
+Localizes barcodes by utilizing a neural network model.
 
 **Available Mode Arguments:**
 
