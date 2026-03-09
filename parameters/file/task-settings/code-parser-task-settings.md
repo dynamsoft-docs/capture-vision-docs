@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CodeParserTaskSetting - Dynamsoft Capture Vision Parameter File
-description: The CodeParserTaskSetting object in the Dynamsoft Capture Vision Parameter File. 
+description: Reference for the CodeParserTaskSetting object in Dynamsoft Capture Vision, which configures a code parsing task by specifying the CodeSpecification files to apply (e.g. VIN, MRTD_TD1_ID) and the directory path to the required parsing resources.
 needAutoGenerateSidebar: false
 ---
 

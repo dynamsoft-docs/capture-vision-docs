@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ApplicableStages - Dynamsoft Capture Vision Parameters
-description: The parameter ApplicableStages of Dynamsoft Capture Vision is for configuring the applicable stages parameters.
+description: Reference for the ApplicableStages parameter in the Dynamsoft Capture Vision ImageParameter object, which defines an array of stage objects - each containing a stage name (e.g. SST_BINARIZE_IMAGE, SST_ENHANCE_GRAYSCALE) and its associated configuration parameters.
 keywords: ApplicableStages
 ---
 

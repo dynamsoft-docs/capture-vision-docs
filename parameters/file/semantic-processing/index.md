@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: SemanticProcessing - Dynamsoft Capture Vision Parameter File
-description: This page shows the SemanticProcessing object in the Dynamsoft Capture Vision Parameter File. 
+description: Reference for the SemanticProcessing object in the Dynamsoft Capture Vision parameter file, which specifies code-parsing tasks to run against image ROI processing results such as decoded barcodes or recognized text lines.
 ---
 
 # SemanticProcessing Object

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Standard Input - Dynamsoft Capture Vision Architecture
-description: This article is about the standard input in the Dynamsoft Capture Vision architecture.
+description: An explanation of the image input mechanism in the Dynamsoft Capture Vision architecture, detailing the Image Source Adapter (ISA) interface - its image-request methods, buffer management, and built-in implementations such as DirectoryFetcher and Camera Enhancer.
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Capture Vision Architecture
-description: This is the main page of Dynamsoft Capture Vision Architecture. 
+description: An in-depth look at the Dynamsoft Capture Vision architecture, explaining the role of the Capture Vision Router (CVR) as the active coordinator that retrieves images from an ImageSource and dispatches tasks to passive functional products (DBR, DLR, DDN, DCP).
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeAngleRangeArray - Dynamsoft Barcode Reader Parameters
-description: The parameter BarcodeAngleRangeArray of Dynamsoft Barcode Reader helps specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode.
+description: Reference for the BarcodeAngleRangeArray parameter in Dynamsoft Barcode Reader, which defines one or more min/max rotation angle ranges (in degrees) to filter barcodes during searching and result output.
 keywords: BarcodeAngleRangeArray , parameter reference, parameter
 ---
 

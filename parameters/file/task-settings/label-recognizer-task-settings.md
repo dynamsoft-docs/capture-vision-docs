@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: LabelRecognizerTaskSetting - Dynamsoft Capture Vision Parameter File
-description: The LabelRecognizerTaskSetting object in the Dynamsoft Capture Vision Parameter File. 
+description: Reference for the LabelRecognizerTaskSetting object in Dynamsoft Capture Vision, which configures a label recognition task including region pre-detection, text line localization, and text line recognition sections, along with TextLineSpecification references.
 keywords: label recognition, task, setting
 needAutoGenerateSidebar: false
 ---

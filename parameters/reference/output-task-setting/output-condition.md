@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: OutputCondition - Dynamsoft Capture Vision OutputSetting Object
-description: The parameter OutputCondition of OutputSetting object defines the OutputCondition information of the ROIs.
+description: Reference for the OutputCondition parameter in the Dynamsoft Capture Vision OutputTaskSetting object, which defines complex result filtering logic using TaskResultArray entries - each specifying a TargetROIDef, task names, atomic result types, and AND/OR operators to control which results are output.
 keywords: OutputCondition
 ---
 

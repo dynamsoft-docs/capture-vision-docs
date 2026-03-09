@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
-description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+description: Reference for the BarcodeFilteringCondition parameter in Dynamsoft Capture Vision, which filters reference objects to those decoded barcodes matching specified barcode format IDs and/or a barcode text regular expression pattern.
 keywords: Location
 needGenerateH3Content: true
 ---

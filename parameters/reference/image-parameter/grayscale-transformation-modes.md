@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: GrayscaleTransformationModes - Dynamsoft Capture Vision Parameters
-description: The parameter GrayscaleTransformationModes of Dynamsoft Capture Vision is for controlling the inversion of colors in grayscale image.
+description: Reference for the GrayscaleTransformationModes parameter in Dynamsoft Capture Vision, which controls whether the grayscale image is used as-is (GTM_ORIGINAL) or colour-inverted (GTM_INVERTED) to handle barcodes or text on dark backgrounds.
 keywords: GrayscaleTransformationModes, parameter reference, parameter
 ---
 

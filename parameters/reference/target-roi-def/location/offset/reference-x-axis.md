@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
-description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+description: Reference for the ReferenceXAxis parameter in the Dynamsoft Capture Vision Offset object, which defines the x-axis of the offset coordinate system using AxisType (midpoint edge, edge, or rotated axis) and related child parameters.
 keywords: Location
 needGenerateH3Content: true
 ---

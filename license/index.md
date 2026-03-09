@@ -2,7 +2,7 @@
 layout: default-layout
 title: License Initialization - Dynamsoft SDKs
 keywords: license
-description: License Initialization Page
+description: A guide to license initialization for Dynamsoft SDKs, covering how to obtain a trial or full license and how to activate it by calling initLicense() in JavaScript, C++, Android, iOS, C#, and Python.
 ---
 
 # License Initialization

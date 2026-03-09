@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ReferenceObjectFilter Parameter Details - Dynamsoft Capture Vision Parameters
-description: Details of several ReferenceObjectFilter parameters in Dynamsoft Capture Vision defines the location information of the ROIs.
+description: Detailed reference for the ReferenceObjectFilter sub-parameters in Dynamsoft Capture Vision, covering ReferenceTargetROIDefNameArray, AtomicResultTypeArray (barcode, text line, frame, etc.), and ReferenceTaskNameArray.
 keywords: Location
 needGenerateH3Content: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: GlobalParameters - Dynamsoft Capture Vision Parameter File
-description: The GlobalParameters object in the Dynamsoft Capture Vision Parameter File defines the global parameters.
+description: Reference for the GlobalParameter object in Dynamsoft Capture Vision, which sets SDK-wide constraints including the maximum total image dimension that can be processed concurrently and the number of threads used for model execution (IntraOpNumThreads).
 keywords: image dimension, global parameters
 needAutoGenerateSidebar: true
 noTitleIndex: true

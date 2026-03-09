@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnableResultsDeduplication - Dynamsoft Capture Vision Parameters
-description: The parameter EnableResultsDeduplication of Dynamsoft Capture Vision defines whether to enable the result deduplication.
+description: Reference for the EnableResultsDeduplication parameter in the Dynamsoft Capture Vision TargetROIDef object, which controls whether duplicate barcodes and text lines detected across frames are filtered out (1 = enabled by default, 0 = disabled).
 keywords: inheritance, deduplication, EnableResultsDeduplication
 needGenerateH3Content: true
 ---

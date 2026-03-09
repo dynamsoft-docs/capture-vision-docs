@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Type - Dynamsoft Capture Vision Parameters
-description: The parameter Type of Dynamsoft Capture Vision defines .
+description: Reference for the Type parameter in the Dynamsoft Capture Vision ImageSource object, which specifies the image source type (IST_DIRECTORY_FETCHER, IST_CAMERA_ENHANCER, or IST_SCANNER_CONNECTOR) so CVR can create the correct image source instance.
 keywords: Type, ISA
 permalink: /parameters/reference/image-source-options/type.html
 ---

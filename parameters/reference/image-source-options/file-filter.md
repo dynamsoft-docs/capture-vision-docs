@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: FileFilter - Dynamsoft Capture Vision Parameters
-description: The parameter FileFilter of Dynamsoft Capture Vision defines .
+description: Reference for the FileFilter parameter in the Dynamsoft Capture Vision ImageSource object, which specifies a file name filter string (e.g. "*.JPG") to control which files are fetched from the directory.
 keywords: File filter, ISA
 ---
 

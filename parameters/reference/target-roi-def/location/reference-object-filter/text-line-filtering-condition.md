@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
-description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+description: Reference for the TextLineFilteringCondition parameter in Dynamsoft Capture Vision, which filters reference objects to those recognized text lines matching specified line numbers and/or a text content regular expression pattern.
 keywords: Location
 needGenerateH3Content: true
 ---

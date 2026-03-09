@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: MinRatioOfBarcodeZoneWidthToHeight - Dynamsoft Barcode Reader Parameters
-description: The parameter MinQuietZoneWidth of Dynamsoft Barcode Reader defines the minimum ratio (width/height as a percentage) of the barcode zone.
+description: The parameter MinRatioOfBarcodeZoneWidthToHeight was removed in Dynamsoft Barcode Reader v11.4.1000. Use BarcodeZoneWidthToHeightRatioRangeArray instead.
 keywords: MinRatioOfBarcodeZoneWidthToHeight , parameter reference, parameter
 ---
 

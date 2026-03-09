@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title: ImageSource - Dynamsoft Capture Vision Parameters
-description: The ImageSource object in the Dynamsoft Capture Vision Settings File.
+description: Reference for the ImageSource object in Dynamsoft Capture Vision, which defines the image source to be created and managed by the Capture Vision Router - including its type (DirectoryFetcher, Camera Enhancer, or Scanner), directory path, file filter, recursion, PDF reading mode, and page selection.
 keywords: ImageSource
 needAutoGenerateSidebar: true
 noTitleIndex: true

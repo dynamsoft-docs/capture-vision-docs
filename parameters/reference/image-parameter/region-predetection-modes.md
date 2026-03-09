@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: RegionPredetectionModes - Dynamsoft Capture Vision Parameters
-description: The parameter RegionPredetectionModes of Dynamsoft Capture Vision is for detecting the region of interest(s) automatically.
+description: Reference for the RegionPredetectionModes parameter in Dynamsoft Capture Vision, which controls how regions of interest are automatically identified within an image - supporting RGB contrast (RPM_GENERAL_RGB_CONTRAST), grayscale contrast (RPM_GENERAL_GRAY_CONTRAST), HSV contrast (RPM_GENERAL_HSV_CONTRAST), and other modes.
 keywords: RegionPredetectionModes, parameter reference, parameter
 ---
 

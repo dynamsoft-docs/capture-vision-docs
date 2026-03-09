@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: TextDetectionMode - Dynamsoft Capture Vision Parameters
-description: The parameter TextDetectionMode of Dynamsoft Capture Vision is for detecting texts on an image.
+description: Reference for the TextDetectionMode parameter in Dynamsoft Capture Vision, which controls how text zones are detected in an image - with results used either to erase text areas before barcode/document processing (via IfEraseTextZone) or as mandatory input for text recognition tasks.
 keywords: TextDetectionMode, parameter reference, parameter
 ---
 

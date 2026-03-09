@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Pages - Dynamsoft Capture Vision Parameters
-description: The parameter Pages of Dynamsoft Capture Vision defines .
+description: Reference for the Pages parameter in the Dynamsoft Capture Vision ImageSource object, which sets the 0-based page indexes of a multi-page file (PDF or TIFF) to be processed.
 keywords: Pages, ISA
 needGenerateH3Content: true
 ---

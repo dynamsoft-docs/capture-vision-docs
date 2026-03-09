@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ResourcesPath - Dynamsoft Capture Vision Parameter Reference
-description: The parameter ResourcesPath of Dynamsoft Capture Vision. 
+description: Reference for the ResourcesPath parameter in the Dynamsoft Capture Vision CodeParserTaskSetting object, which specifies the directory (absolute or relative) containing the .dcpres resource files needed for code parsing.
 permalink: /parameters/reference/code-parser-task-settings/resources-path.html
 ---
 # ResourcesPath

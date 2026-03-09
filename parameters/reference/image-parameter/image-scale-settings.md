@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ImageScaleSetting - Dynamsoft Capture Vision Parameters
-description: The parameter ImageScaleSetting of Dynamsoft Capture Vision is for controlling how to up or down scale the image.
+description: Reference for the ImageScaleSetting parameter in Dynamsoft Capture Vision, which controls whether to scale images up or down - specifying the scale type (ST_SCALE_UP or ST_SCALE_DOWN), the reference edge (longer or shorter), and the pixel threshold at which scaling stops.
 keywords: scale-up, scale down, parameter reference, parameter
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DictionaryCorrectionThresholds - Dynamsoft Label Recognizer Parameters
-description: The parameter DictionaryCorrectionThresholds of Dynamsoft Label Recognizer defines the threshold of dictionary error correction.
+description: Reference for the DictionaryCorrectionThresholds parameter in Dynamsoft Label Recognizer, which defines an array of word-length ranges (MinWordLength, MaxWordLength) each with a maximum allowed error count (Threshold) for dictionary-based spell correction of recognized text.
 keywords: user dictionary, text correction
 ---
 

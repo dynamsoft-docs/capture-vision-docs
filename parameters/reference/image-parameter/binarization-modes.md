@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BinarizationModes - Dynamsoft Capture Vision Parameters
-description: The parameter BinarizationModes of Dynamsoft Capture Vision is for controlling the process of image binarization.
+description: Reference for the BinarizationModes parameter in Dynamsoft Capture Vision, which controls how a grayscale image is converted to a binary image - supporting global threshold, local adaptive threshold (BM_LOCAL_BLOCK), and other modes, each with configurable arguments.
 keywords: BinarizationModes, parameter reference, parameter
 ---
 

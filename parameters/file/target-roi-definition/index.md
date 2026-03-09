@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title:  TargetROIDef Object Introduction
-description: Introduced the TargetROIDef definition for Dynamsoft Capture Vision.
+description: Reference for the TargetROIDef object in the Dynamsoft Capture Vision parameter file, which specifies one or more recognition tasks (barcode, text line, document) to perform on defined regions of interest within an image.
 keywords: TargetROIDef
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ImageROIProcessingNameArray - Dynamsoft Capture Vision Parameters
-description: The parameter ImageROIProcessingNameArray of Dynamsoft Capture Vision defines the collection of image ROI processing object names.
+description: Reference for the ImageROIProcessingNameArray parameter in the Dynamsoft Capture Vision CaptureVisionTemplate object, which lists the names of TargetROIDef objects that define the recognition tasks (barcode reading, label recognition, document detection) to run on image regions of interest.
 keywords: image ROI processing, TargetROIDef, CaptureVisionTemplate
 permalink: /parameters/reference/capture-vision-template/image-roi-processing-name-array.html
 ---

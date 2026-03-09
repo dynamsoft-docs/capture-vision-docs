@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: OutputTaskSetting - Dynamsoft Capture Vision Parameter File
-description: The OutputTaskSetting object in the Dynamsoft Capture Vision Parameter File. 
+description: Reference for the OutputTaskSetting object in Dynamsoft Capture Vision, which filters and outputs results from an ancestor TargetROIDef based on conditions applied to descendant TargetROIDef results, supporting AND/OR operators and backward reference output.
 needAutoGenerateSidebar: false
 ---
 

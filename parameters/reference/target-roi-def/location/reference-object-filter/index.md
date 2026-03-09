@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title:  Dynamsoft Capture Vision Parameters
-description: The parameter Location of Dynamsoft Capture Vision defines the location information of the ROIs.
+description: Reference for the ReferenceObjectFilter object in the Dynamsoft Capture Vision TargetROIDef Location parameter, which selects reference objects by ROI name, atomic result type, task name, and type-specific filtering conditions (barcode, text line, region, or frame).
 keywords: Location
 needGenerateH3Content: true
 ---
