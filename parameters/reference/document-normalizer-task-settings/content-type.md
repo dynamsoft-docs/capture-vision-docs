@@ -24,7 +24,7 @@ DocumentNormalizerTaskSettingOptions[i]
 
 ```json
 {
-    "ContentType": "CT_TABLE"
+    "ContentType": "CT_DOCUMENT"
 }
 ```
 
@@ -40,5 +40,5 @@ DocumentNormalizerTaskSettingOptions[i]
 | ContentType Parameter Details |
 | :---------------------------- |
 | **Type**<br>*String* |
-| **Available Content Type**<br><br>CT_DOCUMENT<br>CT_TABLE<br>CT_UNKNOWN |
+| **Available Content Type**<br><br>CT_DOCUMENT<br>CT_TABLE(not supported yet)<br>CT_UNKNOWN |
 | **Default Value**<br>"CT_DOCUMENT" |
