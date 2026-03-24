@@ -1,0 +1,53 @@
+---
+layout: null
+sitemap: false
+---
+
+# Core Concepts & Parameter Layer - Parameter & Architecture Reference (v11.x)
+
+> Root Documentation: https://www.dynamsoft.com/barcode-reader/docs/llms.txt
+> This Layer URL: https://www.dynamsoft.com/capture-vision/docs/core/
+
+This documentation covers Dynamsoft Barcode Reader SDK v11.x. It provides SDK-wide foundational documentation and the authoritative source for all JSON parameter definitions.
+
+This sub-site covers product introduction, SDK architecture, license activation, and 150+ individual parameter references used across all Workflow and Feature layer editions. For barcode-specific how-to guides, feature tutorials, performance tuning, and FAQ, see the companion Barcode Knowledge Base.
+
+## Includes
+
+- SDK introduction: overview of DCV and its functional products (DBR, DLR, DDN, DCP, DCE)
+- Architecture documentation: CVR orchestration model, ImageSourceAdapter interface, image processing pipeline (sections and stages), semantic processing, and result output interfaces
+- License activation guide: how to obtain and initialize a license with initLicense()
+- JSON parameter file structure: CaptureVisionTemplate, ImageParameter, ImageSource, task setting objects (BarcodeReader / LabelRecognizer / DocumentNormalizer / CodeParser / Output), and auxiliary objects (BarcodeFormatSpecification, TextLineSpecification, CaptureVisionModel, GlobalParameter)
+- 150+ individual parameter references: each with value type, range, default, JSON location, and usage details
+
+**Authoritative Rule:** If parameter descriptions conflict with API documentation in other layers, this layer takes precedence.
+
+## LLM Guidance
+
+- This layer is the authoritative source for all JSON parameter definitions. If descriptions conflict with API documentation, this layer takes precedence.
+- Parameters are organized in a template hierarchy: CaptureVisionTemplate -> TargetROIDef -> TaskSettings (Barcode / Label / Document / CodeParser) -> Sections -> Stages -> processing mode parameters.
+- Each parameter page specifies: JSON location in template, parent object, value type, range, default value, and usage remarks.
+- The architecture and introduction sections provide essential context for understanding how parameters relate to the SDK's processing pipeline (sections and stages).
+- License activation documentation here applies to all language editions.
+- When explaining parameter usage, cross-reference with the Workflow Layer (for CaptureVisionRouter settings APIs) and the Feature Layer (for SimplifiedBarcodeReaderSettings).
+- For practical "how to read X barcode" guidance, refer users to the companion Barcode Knowledge Base (https://www.dynamsoft.com/barcode-reader/docs/core/llms.txt).
+
+## Related Layers
+
+**Companion - Barcode Knowledge Base (same layer):**
+- https://www.dynamsoft.com/barcode-reader/docs/core/llms.txt
+
+**Workflow Layer:**
+- Server Editions: https://www.dynamsoft.com/capture-vision/docs/server/llms.txt
+- Web Editions: https://www.dynamsoft.com/capture-vision/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/capture-vision/docs/mobile/llms.txt
+
+**Barcode Recognition Feature Layer:**
+- Server Editions: https://www.dynamsoft.com/barcode-reader/docs/server/llms.txt
+- Web Editions: https://www.dynamsoft.com/barcode-reader/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/barcode-reader/docs/mobile/llms.txt
+
+## Pages
+
+{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}{% endif %}
+{% endfor %}
