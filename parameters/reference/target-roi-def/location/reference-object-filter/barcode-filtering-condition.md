@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:  Dynamsoft Capture Vision Parameters
+title: BarcodeFilteringCondition – Capture Vision TargetROIDef Ref
 description: Reference for the BarcodeFilteringCondition parameter in Dynamsoft Capture Vision, which filters reference objects to those decoded barcodes matching specified barcode format IDs and/or a barcode text regular expression pattern.
 keywords: Location
 needGenerateH3Content: true

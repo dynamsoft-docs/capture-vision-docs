@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: PredetectRegionsStage - Dynamsoft Document Normalizer Parameters
-description: The PredetectRegionsStage identifies regions of interest (ROIs).
+description: "Learn about Stage Predetect Regions in Dynamsoft Capture Vision and how it supports document capture, barcode scanning, or recognition workflows for modern web."
 keywords: Predetect Regions Stage
 ---
 

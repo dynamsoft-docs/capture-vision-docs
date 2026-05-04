@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:  Dynamsoft Capture Vision Parameters
+title: Offset Parameter Details – Capture Vision TargetROIDef Guide
 description: Detailed reference for the Offset sub-parameters in Dynamsoft Capture Vision, covering ReferenceObjectOriginIndex, ReferenceObjectType, MeasuredByPercentage, and the four corner point parameters (FirstPoint through FourthPoint) that define the ROI quadrilateral.
 keywords: Location
 needGenerateH3Content: true

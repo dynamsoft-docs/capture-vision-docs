@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:  Dynamsoft Capture Vision Parameters
+title: RegionFilteringCondition – Capture Vision TargetROIDef Params
 description: Reference for the RegionFilteringCondition parameter in Dynamsoft Capture Vision, which filters reference objects to those predetected regions matching a specified RegionPredetectionMode and label ID array.
 keywords: Location
 needGenerateH3Content: true

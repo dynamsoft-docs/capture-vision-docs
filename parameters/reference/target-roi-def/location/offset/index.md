@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:  Dynamsoft Capture Vision Parameters
+title: Offset Parameter – Capture Vision TargetROIDef Location Guide
 description: Reference for the Offset object in the Dynamsoft Capture Vision TargetROIDef Location parameter, which defines ROI coordinates as four corner points offset from a reference object, with optional percentage-based measurement and configurable axes.
 keywords: Location
 needGenerateH3Content: true
