@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:  Dynamsoft Capture Vision Parameters
+title: ReferenceYAxis Offset – Capture Vision TargetROIDef Reference
 description: Reference for the ReferenceYAxis parameter in the Dynamsoft Capture Vision Offset object, which defines the y-axis of the offset coordinate system using AxisType (midpoint edge, edge, or rotated axis) and related child parameters.
 keywords: Location
 needGenerateH3Content: true

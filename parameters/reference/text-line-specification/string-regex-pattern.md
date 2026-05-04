@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: StringRegExPattern - Dynamsoft Label Recognizer Parameters
+title: StringRegExPattern – Label Recognizer Param Guide
 description: The parameter StringRegExPattern of text line specification is for specifying the regex pattern of the text line strings.
 keywords: string regex pattern, parameter reference, parameter
 ---

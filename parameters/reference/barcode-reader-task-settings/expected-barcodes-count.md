@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ExpectedBarcodesCount - Dynamsoft Barcode Reader Parameters
+title: ExpectedBarcodesCount – BarcodeReaderTask Settings
 description: The parameter ExpectedBarcodesCount defines the number of barcodes expected to be detected.
 keywords: Expected barcodes count
 ---

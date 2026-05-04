@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: StringLengthRange - Dynamsoft Label Recognizer Parameters
+title: StringLengthRange – Label Recognizer Parameter Ref
 description: The parameter StringLengthRange of text line specification is for specifying the length range of the text line strings.
 keywords: string length range, parameter reference, parameter
 ---

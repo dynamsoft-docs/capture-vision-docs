@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: RegionPredetectionSection - Dynamsoft Label Recognizer Parameters
-description: The RegionPredetectionSection identifies regions of interest (ROIs) for subsequent processing.
+description: "Learn about Section Regions Predetection in Dynamsoft Capture Vision and how it supports document capture, barcode scanning, or recognition workflows."
 keywords: RegionPredetectionSection
 ---
 

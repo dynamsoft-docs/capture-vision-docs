@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:  Dynamsoft Capture Vision Parameters
+title: FrameFilteringCondition – Capture Vision TargetROIDef Params
 description: Reference for the FrameFilteringCondition parameter in Dynamsoft Capture Vision, which filters reference objects to those frames matching specified image dimension range and aspect ratio range criteria.
 keywords: Location
 needGenerateH3Content: true
