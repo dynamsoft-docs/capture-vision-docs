@@ -59,6 +59,7 @@ The `ImageParameter` includes the following stages:
 | [DetectTextZonesStage](stage-detect-text-zones.md) (`SST_DETECT_TEXT_ZONES`) | The stage that detects text zones on the image. |
 | [EnhanceGrayscaleStage](stage-enhance-grayscale.md) (`SST_ENHANCE_GRAYSCALE`) | The stage that improves the quality of the grayscale image. |
 | [FindContoursStage](stage-find-contours.md) (`SST_FIND_CONTOURS`) | The stage that finds contours in the image. |
+| [InputColorImageStage](stage-input-color-image.md) (`SST_INPUT_COLOR_IMAGE`) | The stage that represents the starting stage of each section, serving as a placeholder for the input color image. |
 | [RemoveTextureFromGrayscaleStage](stage-remove-texture-from-grayscale.md) (`SST_REMOVE_TEXTURE_FROM_GRAYSCALE`) | The stage that removes texture from the grayscale image. |
 | [RemoveTextZonesFromBinaryStage](stage-remove-text-zones-from-binary.md) (`SST_REMOVE_TEXT_ZONES_FROM_BINARY`) | The stage that removes text zones from the binary image. |
 | [ScaleImageStage](stage-scale-image.md) (`SST_SCALE_IMAGE`) | The stage that down/up scales the image. |
