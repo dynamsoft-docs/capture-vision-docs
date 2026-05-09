@@ -63,7 +63,7 @@ Parameter `TextDetectionMode` consist of a group of text detection mode objects.
     <tr>
         <td><b>Candidate Mode List</b><br>TTDM_WORD
             <br>TTDM_LINE
-            <br>TTDM_LAYOUT
+            <br>TTDM_LAYOUT (Not supported yet)
             <br>TTDM_SKIP
         </td>
     </tr>

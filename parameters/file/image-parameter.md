@@ -18,6 +18,7 @@ The `ImageParameter` object is designed to configure and organize parameters for
             "Name": "ip_default",
             "BaseImageParameterName": "ip_base",
             "ApplicableStages": [
+                {"Stage": "SST_INPUT_COLOR_IMAGE"},
                 {"Stage": "SST_SCALE_IMAGE", "ImageScaleSetting": {}},
                 {"Stage": "SST_CONVERT_TO_GRAYSCALE", "ColourConversionModes": []},
                 {"Stage": "SST_TRANSFORM_GRAYSCALE", "GrayscaleTransformationModes": []},
@@ -109,6 +110,7 @@ Reference `ImageParameter` objects in task settings by name:
 
 | Stage Name | Description |
 | ---------- | ----------- |
+| [`SST_INPUT_COLOR_IMAGE`]({{site.dcvb_parameters_reference}}image-parameter/stage-input-color-image.html) | Represents the starting stage of each section, serving as a placeholder for the input color image. |
 | [`SST_SCALE_IMAGE`]({{site.dcvb_parameters_reference}}image-parameter/stage-scale-image.html) | Scales the image up or down. |
 | [`SST_CONVERT_TO_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-convert-to-grayscale.html) | Converts a color image to grayscale. |
 | [`SST_TRANSFORM_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-transform-grayscale.html) | Transforms the grayscale image (e.g., for inverted barcodes). |

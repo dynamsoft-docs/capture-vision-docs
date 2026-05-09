@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DataMatrixModuleIsotropic - Dynamsoft Barcode Reader Parameters
-description: The parameter DataMatrixModuleIsotropic specifies whether the Data Matrix modules are isotropic, meaning they have equal scaling in all directions.
+description: The parameter DataMatrixModuleIsotropic was removed in Dynamsoft Barcode Reader v11.4.1000. Use BarcodeZoneWidthToHeightRatioRangeArray instead.
 keywords: DataMatrixModuleIsotropic, parameter reference, parameter
 ---
 

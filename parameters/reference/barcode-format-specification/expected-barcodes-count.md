@@ -12,6 +12,7 @@ Parameter `ExpectedBarcodesCount` of `BarcodeFormatSpecification` defines the ex
 **Remarks**
 
 - Introduced in version 11.2.1000.
+- Once the number of decoded barcodes for this format reaches `ExpectedBarcodesCount`, decoding for this format will stop. However, if the total result count has not yet reached the task-level [ExpectedBarcodesCount]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html), decoding will continue for other barcode formats.
 
 ## JSON Structure
 
