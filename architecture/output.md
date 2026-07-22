@@ -5,7 +5,6 @@ description: An explanation of the output mechanism in the Dynamsoft Capture Vis
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/output.html
 ---
 
 # Output

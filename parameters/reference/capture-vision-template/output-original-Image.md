@@ -3,7 +3,6 @@ layout: default-layout
 title: OutputOriginalImage - Dynamsoft Capture Vision Parameters
 description: The parameter OutputOriginalImage indicates whether DCV finally outputs the original input image.
 keywords: original image, captured results, CaptureVisionTemplate
-permalink: /parameters/reference/capture-vision-template/output-original-image.html
 ---
 # OutputOriginalImage
 

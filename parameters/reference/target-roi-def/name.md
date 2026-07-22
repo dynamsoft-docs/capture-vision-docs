@@ -3,7 +3,6 @@ layout: default-layout
 title: Name - Dynamsoft Capture Vision TargetROIDef object
 description: The parameter Name defines the unique identifier of TargetROIDef object.
 keywords: top-level object, name, unique identifier
-permalink: /parameters/reference/target-roi-def/name.html
 ---
 # Name
 

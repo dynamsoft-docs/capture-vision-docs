@@ -3,7 +3,6 @@ layout: default-layout
 title: Timeout - Dynamsoft Capture Vision Parameters
 description: The parameter Timeout defines the maximum amount of time (in milliseconds) that the recognition tasks should take per page.
 keywords: timeout, CaptureVisionTemplate
-permalink: /parameters/reference/capture-vision-template/timeout.html
 ---
 # Timeout
 

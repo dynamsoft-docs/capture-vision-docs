@@ -125,3 +125,7 @@ Transforms the image to inverted grayscale.
 ### GTM_AUTO
 
 Let the library choose automatically for grayscale transformation.
+
+## See Also
+
+- [`AutoDetectColorInversion`]({{ site.dcvb_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) - A lighter-weight alternative that detects inverted colors per barcode candidate region during decoding, rather than inverting the entire image. It is configured per barcode format in `BarcodeFormatSpecification` and is more efficient when only certain barcode formats may be inverted.
