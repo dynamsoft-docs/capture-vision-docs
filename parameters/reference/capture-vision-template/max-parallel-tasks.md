@@ -3,7 +3,6 @@ layout: default-layout
 title: MaxParallelTasks - Dynamsoft Capture Vision Parameters
 description: The parameter MaxParallelTasks defines the maximum number of parallel tasks for the DCV runtime.
 keywords: Max parallel tasks, CaptureVisionTemplate
-permalink: /parameters/reference/capture-vision-template/max-parallel-tasks.html
 ---
 # MaxParallelTasks
 
@@ -41,4 +40,21 @@ CaptureVisionTemplates[i]
 | **Type**<br>*int* |
 | **Range**<br>-1, 0, [1, 256] |
 | **Default Value**<br>4 |
-| **Remarks** <br>1) 0: Only open the management thread, the execution task thread and the management thread are the same thread.<br>2) -1: Do not open the management thread or the task thread, that is, run in the thread that calls StartCapturing. |
+| **Remarks** <br>Controls the total number of concurrent thread slots used by the CVR thread pool. |
+
+## Behavior
+
+- Each DLR/DDN task occupies one thread slot.
+- For DBR tasks, each localization work and each decoding work occupies one thread slot.
+- When `MaxParallelTasks <= 1`, DBR runs in single-threaded mode.
+
+In single-threaded mode for DBR, processing is executed in sequence:
+
+1. Complete one `LocalizationMode` and produce localized barcode regions.
+2. Apply all configured `DeblurMode`s to each localized barcode region.
+3. Continue with the next `LocalizationMode`.
+
+
+**Remarks**
+
+- Updated semantic definition from "maximum parallel tasks" to "maximum concurrent thread slots in the CVR thread pool" in version 3.6.1000.

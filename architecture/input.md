@@ -5,7 +5,6 @@ description: An explanation of the image input mechanism in the Dynamsoft Captur
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /architecture/input.html
 ---
 
 # Input

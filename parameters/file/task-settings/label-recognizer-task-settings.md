@@ -34,7 +34,25 @@ The `LabelRecognizerTaskSetting` object is used to configure settings for a labe
             "ImageParameterName": "ip_default",
             "StageArray": [
                 {
-                    "Stage": "SST_LOCALIZE_TEXT_LINES"
+                    "Stage": "SST_LOCALIZE_TEXT_LINES",
+                    "LocalizationModes": [
+                        {
+                            "Mode": "LM_NEURAL_NETWORK",
+                            "ModelNameArray": ["MRZLocalization"]
+                        },
+                        {
+                            "Mode": "LM_GENERAL"
+                        }
+                    ],
+                    "OrientationDetectionModes": [
+                        {
+                            "Mode": "ODM_SPATIAL_REFERENCES"
+                        },
+                        {
+                            "Mode": "ODM_CHARS_ORIENTATION_NEURAL_NETWORK",
+                            "ModelNameArray": ["TextLineOrientationCls"]
+                        }
+                    ]
                 }
             ]
         },

@@ -16,6 +16,7 @@ noTitleIndex: true
     "Name":"BFS_1",
     "AllModuleDeviation" : 0,
     "AustralianPostEncodingTable" : "C",
+    "AutoDetectColorInversion": 0,
     "EnableAddOnCode": 0, 
     "BarcodeAngleRangeArray" : [
         {

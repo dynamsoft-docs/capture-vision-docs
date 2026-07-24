@@ -24,7 +24,25 @@ LabelRecognizerTaskSettingOptions[i]
 
 ```json
 {
-    "Stage": "SST_LOCALIZE_TEXT_LINES"
+    "Stage": "SST_LOCALIZE_TEXT_LINES",
+    "LocalizationModes": [
+        {
+            "Mode": "LM_NEURAL_NETWORK",
+            "ModelNameArray": ["MRZLocalization"]
+        },
+        {
+            "Mode": "LM_GENERAL"
+        }
+    ],
+    "OrientationDetectionModes": [
+        {
+            "Mode": "ODM_SPATIAL_REFERENCES"
+        },
+        {
+            "Mode": "ODM_CHARS_ORIENTATION_NEURAL_NETWORK",
+            "ModelNameArray": ["TextLineOrientationCls"]
+        }
+    ]
 }
 ```
 
@@ -46,3 +64,11 @@ Specifies the stage type. Fixed value: `SST_LOCALIZE_TEXT_LINES`.
 | **Type**<br>*string* |
 | **Required**<br>Yes |
 | **Default Value**<br>`"SST_LOCALIZE_TEXT_LINES"` |
+
+### LocalizationModes
+
+Determines how to localize text lines. See [LocalizationModes](localization-modes.md) for details.
+
+### OrientationDetectionModes
+
+Specifies the method for determining the orientation of detected text lines. See [OrientationDetectionModes](orientation-detection-modes.md) for details.

@@ -5,7 +5,6 @@ description: An explanation of Semantic Processing in the Dynamsoft Capture Visi
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /architecture/semantic-processing.html
 ---
 
 # Semantic Processing

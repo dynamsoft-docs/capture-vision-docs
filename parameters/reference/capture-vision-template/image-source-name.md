@@ -3,7 +3,6 @@ layout: default-layout
 title: ImageSourceName - Dynamsoft Capture Vision Parameters
 description: The parameter ImageSourceName of Dynamsoft Capture Vision defines the name of the ImageSource object.
 keywords: image source, CaptureVisionTemplate
-permalink: /parameters/reference/capture-vision-template/image-source-name.html
 ---
 # ImageSourceName
 

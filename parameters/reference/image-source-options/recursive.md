@@ -3,7 +3,6 @@ layout: default-layout
 title: Recursive - Dynamsoft Capture Vision Parameters
 description: Reference for the Recursive parameter in the Dynamsoft Capture Vision ImageSource object, which indicates whether image files are fetched from subdirectories recursively (1) or only from the top-level directory (0).
 keywords: Recursive, ISA
-permalink: /parameters/reference/image-source-options/recursive.html
 ---
 # Recursive
 
