@@ -12,6 +12,7 @@ Parameter `OrientationDetectionModes` is an array of orientation detection mode 
 **Remarks**
 
 - Introduced in Dynamsoft Capture Vision version 3.6.1000.
+- **Current limitations** - This capability is currently effective only in MRZ scenarios and supports only upright and upside-down text lines (0 degrees and 180 degrees). It does not yet handle 90 degrees, 270 degrees, or arbitrary rotation angles.
 
 ## JSON Structure
 
