@@ -12,6 +12,17 @@ needGenerateH3Content: true
 
 Parameter `CharSet` is an object that defines specific configurations for character recognition. It allows for the inclusion of special characters and the exclusion of certain characters, providing more control over which characters are recognized or ignored during processing.
 
+## JSON Structure
+
+**Location in template:**
+```
+CaptureVisionModelOptions[i]
+    └── ModelArgs
+        └── CharSet
+```
+
+**Parent object:** [ModelArgs]({{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html#modelargs) object
+
 ## Example
 
 ```json
