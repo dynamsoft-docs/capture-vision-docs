@@ -16,17 +16,20 @@ A `CaptureVisionModel` object defines how the library find Convolutional Neural 
    <p>Supported CaptureVisionModel files</p>
 </div>
 
+
 ## Example
 
 ```json
-{
-    "Name": "NumberLetterCharRecognition",
-    "DirectoryPath": "D:\\CaptureVisionModel\\",
-    "MaxModelInstances": 1,
-    "ModelArgs": {
-        "CharSet": {}
+"CaptureVisionModelOptions": [
+    {
+        "Name": "NumberLetterCharRecognition",
+        "DirectoryPath": "D:\\CaptureVisionModel\\",
+        "MaxModelInstances": 1,
+        "ModelArgs": {
+            "CharSet": {}
+        }
     }
-}
+]
 ```
 
 ## Available Parameters

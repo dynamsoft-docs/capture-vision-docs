@@ -14,7 +14,7 @@ Filter the reference object by specifying `TargetROI` names.
 | ReferenceTargetROIDefNameArray Parameter Details |
 | :------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each member should be a name of `TargetROI` that defined in `TargetROIDefOptions`. |
+| **Range**<br>Each member should be the name of a `TargetROIDef` object that is defined in `TargetROIDefOptions`. |
 | **Default Value**<br>null |
 
 ## AtomicResultTypeArray
@@ -29,10 +29,11 @@ Filter the reference object by specifying the type of atomic results. In the `Ta
 
 ## ReferenceTaskNameArray
 
-Filter the reference object by specifying the reference task name array.
+Filter the reference object by specifying `TaskSetting` names.
 
-| AtomicResultTypeArray Parameter Details |
+| ReferenceTaskNameArray Parameter Details |
 | :------------------- |
 | **Type**<br>*String[]* |
-| **Range**<br>Each member should be one of the task in the reference `TargetROIDef` object array. |
+| **Range**<br>Each member should be the name of a `TaskSetting` object. |
 | **Default Value**<br>null |
+| **Remarks**<br>`ReferenceTargetROIDefNameArray` must be specified and the task must be referenced in these `TargetROIDef` objects.|
