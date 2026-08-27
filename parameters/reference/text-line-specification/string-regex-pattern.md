@@ -69,4 +69,4 @@ Supported regular expressions pattern syntax:
 | {(,`max`)}    | The preceding atom matches at least 0 characters, but not more than `max`. |
 | {(`min`,`max`)} | The preceding atom matches at least `min` characters, but not more than `max`. |
 | [(`string1`,`string2`,...)] | any case insensitive string that is one of the listed strings separated by commas (,). For example: [(CAN,USA)] matches CAN, USA or can. |
-| [(`minnumericstring`-`maxnumericstring`)] | a numeric string that is between `minnumericstring` and `maxnumericstring`. For example: [(01-12)] matches 01, 02, 03, ... until 12). |
+| [(`minnumericstring`-`maxnumericstring`)] | a numeric string that is between `minnumericstring` and `maxnumericstring`. For example: [(01-12)] matches 01, 02, 03, ... until 12. |
