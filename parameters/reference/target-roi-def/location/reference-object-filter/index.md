@@ -27,7 +27,7 @@ Parameter `ReferenceObjectFilter` is a group of filter conditions for figuring o
 }
 ```
 
-| Name | Description |
+| Parameter Name | Description |
 | ---- | ----------- |
 | [`ReferenceTargetROIDefNameArray`](reference-object-filter-parameter-details.md#referencetargetroidefnamearray) | Filter the reference object by specifying `TargetROI` names. |
 | [`AtomicResultTypeArray`](reference-object-filter-parameter-details.md#atomicresulttypearray) | Filter the reference object by specifying the type of atomic results. |
