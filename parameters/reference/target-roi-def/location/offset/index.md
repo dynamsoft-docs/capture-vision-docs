@@ -25,7 +25,7 @@ Parameter `Offset` is an object that defines how the location is offset from the
 }
 ```
 
-| Name | Description |
+| Parameter Name | Description |
 | ---- | ----------- |
 | [`ReferenceObjectOriginIndex`](offset-parameter-details.md#referenceobjectoriginindex) | Defines which point of the reference object will be set as the origin of the coordinate system. |
 | [`ReferenceObjectType`](offset-parameter-details.md#referenceobjecttype) | Defines which coordinate system to use when configuring offset parameters basd on the reference objects. |
