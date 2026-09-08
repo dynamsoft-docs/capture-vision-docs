@@ -46,12 +46,7 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_LOCALIZE_CANDIDATE_BARCODES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_LOCALIZE_CANDIDATE_BARCODES"` |
-
 ### LocalizationModes
 
 Controls how to localize barcodes. See [`LocalizationModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html) for details. 
+

@@ -40,9 +40,3 @@ DocumentNormalizerTaskSettingOptions[i]
 ### Stage
 
 Specifies the stage type. Fixed value: `SST_DETECT_EDGES`.
-
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DETECT_EDGES"` |

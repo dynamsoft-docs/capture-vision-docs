@@ -46,12 +46,7 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_SCALE_BARCODE_IMAGE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_SCALE_BARCODE_IMAGE"` |
-
 ### BarcodeScaleModes
 
 Defines the scaling mode applied during barcode recognition. See [`BarcodeScaleModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) for details. 
+

@@ -43,12 +43,6 @@ LabelRecognizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_ASSEMBLE_TEXT_LINES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_ASSEMBLE_TEXT_LINES"` |
-
 ### StringLengthRange
 
 Sets the range of string lengths for concatenated strings of recognized text lines. See [`StringLengthRange`](string-length-range.md) for details.
@@ -56,3 +50,4 @@ Sets the range of string lengths for concatenated strings of recognized text lin
 ### StringRegExPattern
 
 Specifies the regular expression pattern for concatenated strings of recognized text lines. See [`StringRegExPattern`](string-regex-pattern.md) for details.
+

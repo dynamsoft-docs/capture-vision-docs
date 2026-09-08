@@ -40,8 +40,3 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_INPUT_COLOR_IMAGE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_INPUT_COLOR_IMAGE"` |

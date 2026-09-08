@@ -46,12 +46,7 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_RESIST_DEFORMATION`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_RESIST_DEFORMATION"` |
-
 ### DeformationResistingModes
 
 Defines how to handle distorted and deformed barcodes. See [`DeformationResistingModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html) for details. 
+

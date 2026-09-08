@@ -46,12 +46,6 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_REGION_PREDETECTION`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_REGION_PREDETECTION"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
@@ -69,3 +63,4 @@ Specifies the stage objects within this section. The `RegionPredetectionSection`
 | Stage | Description |
 |-------|-------------|
 | [PredetectRegionsStage]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/stage-predetect-regions.html) (`SST_PREDETECT_REGIONS`) | Identifies potential barcode regions before the main detection process. |
+

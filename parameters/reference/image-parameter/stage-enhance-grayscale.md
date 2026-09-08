@@ -45,12 +45,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_ENHANCE_GRAYSCALE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_ENHANCE_GRAYSCALE"` |
-
 ### GrayscaleEnhancementModes
 
 Defines how to enhance the grayscale image. See [`GrayscaleEnhancementModes`](grayscale-enhancement-modes.md) for details.
+

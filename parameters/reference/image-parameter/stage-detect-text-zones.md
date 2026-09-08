@@ -43,12 +43,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_DETECT_TEXT_ZONES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DETECT_TEXT_ZONES"` |
-
 ### TextDetectionMode
 
 Defines how to detect text zones. See [`TextDetectionMode`](text-detection-mode.md) for details.
+

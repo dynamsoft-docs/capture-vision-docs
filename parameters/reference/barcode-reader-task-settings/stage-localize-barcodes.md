@@ -41,8 +41,3 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_LOCALIZE_BARCODES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_LOCALIZE_BARCODES"` |

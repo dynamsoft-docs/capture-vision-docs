@@ -46,12 +46,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_REGION_PREDETECTION`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_REGION_PREDETECTION"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
@@ -69,3 +63,4 @@ Specifies the stage objects within this section. The `RegionPredetectionSection`
 | Stage | Description |
 |-------|-------------|
 | [PredetectRegionsStage](./stage-predetect-regions.md) (`SST_PREDETECT_REGIONS`) | Identifies regions of interest (ROIs). |
+

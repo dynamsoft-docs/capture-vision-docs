@@ -44,12 +44,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_ENHANCE_IMAGE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_ENHANCE_IMAGE"` |
-
 ### ColourMode
 
 Defines the output colour mode of the target image. See [`ColourMode`](colour-mode.md) for details.

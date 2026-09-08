@@ -59,12 +59,6 @@ LabelRecognizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_LOCALIZE_TEXT_LINES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_LOCALIZE_TEXT_LINES"` |
-
 ### LocalizationModes
 
 Determines how to localize text lines. See [LocalizationModes](localization-modes.md) for details.
@@ -72,3 +66,4 @@ Determines how to localize text lines. See [LocalizationModes](localization-mode
 ### OrientationDetectionModes
 
 Specifies the method for determining the orientation of detected text lines. See [OrientationDetectionModes](orientation-detection-modes.md) for details.
+

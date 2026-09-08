@@ -45,12 +45,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_CONVERT_TO_GRAYSCALE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_CONVERT_TO_GRAYSCALE"` |
-
 ### ColourConversionModes
 
 Defines how to convert a colour image to a grayscale image. See [`ColourConversionModes`](colour-conversion-modes.md) for details.
+

@@ -44,12 +44,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_DETECT_SHORTLINES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DETECT_SHORTLINES"` |
-
 ### ShortlineDetectionMode
 
 Defines how to detect short lines. See [`ShortlineDetectionMode`](shortline-detection-mode.md) for details.
+

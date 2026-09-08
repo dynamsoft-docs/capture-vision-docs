@@ -49,12 +49,6 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_BARCODE_DECODING`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_BARCODE_DECODING"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.

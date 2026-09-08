@@ -46,12 +46,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_DOCUMENT_DETECTION`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_DOCUMENT_DETECTION"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
@@ -73,3 +67,4 @@ Specifies the stage objects within this section. The `DocumentDetectionSection` 
 | [DetectCornersStage](./stage-detect-corners.md) (`SST_DETECT_CORNERS`) | Detects corners of quadrilaterals that meet the specified conditions. |
 | [DetectEdgesStage](./stage-detect-edges.md) (`SST_DETECT_EDGES`) | Detects edges of quadrilaterals that meet the specified conditions. |
 | [DetectQuadsStage](./stage-detect-quads.md) (`SST_DETECT_QUADS`) | Detects complete quadrilaterals. |
+

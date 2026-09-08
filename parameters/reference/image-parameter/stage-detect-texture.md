@@ -45,12 +45,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_DETECT_TEXTURE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DETECT_TEXTURE"` |
-
 ### TextureDetectionModes
 
 Defines how to detect texture. See [`TextureDetectionModes`](texture-detection-modes.md) for details.
+

@@ -46,12 +46,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_IMAGE_ENHANCEMENT`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_IMAGE_ENHANCEMENT"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
@@ -69,3 +63,4 @@ Specifies the stage objects within this section. The `ImageEnhancementSection` c
 | Stage | Description |
 |-------|-------------|
 | [EnhanceImageStage](./stage-enhance-image.md) (`SST_ENHANCE_IMAGE`) | Adjusts the image quality, such as changing the brightness, contrast, and color mode. |
+

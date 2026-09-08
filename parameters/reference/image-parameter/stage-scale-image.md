@@ -45,12 +45,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_SCALE_IMAGE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_SCALE_IMAGE"` |
-
 ### ImageScaleSetting
 
 Defines how to scale the image. See [`ImageScaleSetting`](image-scale-settings.md) for details.
+

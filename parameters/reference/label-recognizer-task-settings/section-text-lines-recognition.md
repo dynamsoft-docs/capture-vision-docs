@@ -49,12 +49,6 @@ LabelRecognizerTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_TEXT_LINE_RECOGNITION`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_TEXT_LINE_RECOGNITION"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
@@ -73,3 +67,4 @@ Specifies the stage objects within this section. The `TextLineRecognitionSection
 |-------|-------------|
 | [RecognizeRawTextLinesStage](stage-recognize-raw-text-lines.md) (`SST_RECOGNIZE_RAW_TEXT_LINES`) | Recognizes the raw values of text-lines. |
 | [AssembleTextLinesStage](stage-assemble-text-lines.md) (`SST_ASSEMBLE_TEXT_LINES`) | Assembles grouped text-lines into a single text-line. |
+

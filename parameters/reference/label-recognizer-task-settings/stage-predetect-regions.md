@@ -46,12 +46,7 @@ LabelRecognizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_PREDETECT_REGIONS`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_PREDETECT_REGIONS"` |
-
 ### RegionPredetectionModes
 
 Controls how to find a region of interest (ROI) within the image or frame. See [`RegionPredetectionModes`]({{ site.dcvb_parameters_reference }}image-parameter/region-predetection-modes.html) for details.
+

@@ -46,12 +46,6 @@ LabelRecognizerTaskSettingOptions[i]
 
 Specifies the section type. Fixed value: `ST_TEXT_LINE_LOCALIZATION`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"ST_TEXT_LINE_LOCALIZATION"` |
-
 ### ImageParameterName
 
 Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
@@ -69,3 +63,4 @@ Specifies the stage objects within this section. The `TextLineLocalizationSectio
 | Stage | Description |
 |-------|-------------|
 | [LocalizeTextLinesStage](stage-localize-text-lines.md) (`SST_LOCALIZE_TEXT_LINES`) | Detects the exact locations of text-lines. |
+

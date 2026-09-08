@@ -45,12 +45,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_DETECT_CORNERS`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DETECT_CORNERS"` |
-
 ### CornerAngleRange
 
 Specifies the range of angles (in degrees) of the extracted corners. See [`CornerAngleRange`](corner-angle-range.md) for details.

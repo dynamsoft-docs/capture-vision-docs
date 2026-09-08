@@ -43,12 +43,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_ASSEMBLE_LINES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_ASSEMBLE_LINES"` |
-
 ### LineAssemblyMode
 
 Defines how to assemble lines. See [`LineAssemblyMode`](line-assembly-mode.md) for details.
+

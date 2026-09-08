@@ -53,12 +53,6 @@ LabelRecognizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_RECOGNIZE_RAW_TEXT_LINES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_RECOGNIZE_RAW_TEXT_LINES"` |
-
 ### DictionaryPath
 
 Sets the path of the dictionary file. See [`DictionaryPath`](dictionary-path.md) for details.
@@ -82,3 +76,4 @@ Sets the path to the .data file containing characters features for overlapping m
 ### EnableRegexForceCorrection
 
 Sets whether to enable forced correction based on the RegexPattern. See [`EnableRegexForceCorrection`](enable-regex-force-correction.md) for details.
+

@@ -45,12 +45,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE"` |
-
 ### BinarizationModes
 
 Defines the binarization options. See [`BinarizationModes`](binarization-modes.md) for details.
+

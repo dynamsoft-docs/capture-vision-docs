@@ -41,12 +41,6 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_REMOVE_TEXTURE_FROM_GRAYSCALE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_REMOVE_TEXTURE_FROM_GRAYSCALE"` |
-
 ### TextureRemovalStrength
 
 Defines the strength for removing texture from the grayscale image.
@@ -56,3 +50,4 @@ Defines the strength for removing texture from the grayscale image.
 | **Type**<br>*int* |
 | **Value Range**<br>[1, 9] |
 | **Default Value**<br>2 for BarcodeReaderTask & DocumentNormalizerTask<br>1 for LabelRecognizerTask |
+

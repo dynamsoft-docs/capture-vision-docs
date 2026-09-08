@@ -46,12 +46,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_DETECT_QUADS`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DETECT_QUADS"` |
-
 ### QuadrilateralDetectionModes
 
 Controls the quadrilateral detection process on an image. See [`QuadrilateralDetectionModes`](quadrilateral-detection-modes.md) for details.

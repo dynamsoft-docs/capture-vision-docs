@@ -41,12 +41,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_REMOVE_TEXT_ZONES_FROM_BINARY`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_REMOVE_TEXT_ZONES_FROM_BINARY"` |
-
 ### IfEraseTextZone
 
 Defines whether to erase text zones from the binary image. See [`IfEraseTextZone`](if-erase-text-zone.md) for details.
+

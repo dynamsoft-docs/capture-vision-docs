@@ -46,12 +46,6 @@ DocumentNormalizerTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_DESKEW_IMAGE`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DESKEW_IMAGE"` |
-
 ### DeskewMode
 
 Specifies the method in which the deskew process is applied to the target image. See [`DeskewMode`](deskew-mode.md) for details.
