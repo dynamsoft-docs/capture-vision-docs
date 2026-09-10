@@ -17,7 +17,7 @@ TextLineSpecificationOptions[i]
     └── BaseTextLineSpecificationName
 ```
 
-**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object
+**Parent object:** [TextLineSpecification]({{ site.dcvb_parameters_reference }}text-line-specification/index.html) object
 
 **Example:**
 
@@ -29,7 +29,7 @@ TextLineSpecificationOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `BaseTextLineSpecificationName` parameter.
-> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters }}file/auxiliary/text-line-specification.html) object.
+> - To use it, embed this parameter within a [TextLineSpecification]({{ site.dcvb_parameters_reference }}text-line-specification/index.html) object.
 > - For the complete JSON structure, see:
 >   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
 >   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
