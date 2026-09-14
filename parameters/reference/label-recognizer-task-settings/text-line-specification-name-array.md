@@ -17,7 +17,7 @@ LabelRecognizerTaskSettingOptions[i]
     └── TextLineSpecificationNameArray
 ```
 
-**Parent object:** [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html)
+**Parent object:** [LabelRecognizerTaskSetting]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/index.html)
 
 **Example:**
 
@@ -29,10 +29,10 @@ LabelRecognizerTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `TextLineSpecificationNameArray` parameter.
-> - To use it, embed this parameter within a [LabelRecognizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/label-recognizer-task-settings.html) object in the complete JSON structure.
+> - To use it, embed this parameter within a [LabelRecognizerTaskSetting]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/index.html) object in the complete JSON structure.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

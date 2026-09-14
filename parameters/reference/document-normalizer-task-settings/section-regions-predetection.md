@@ -35,10 +35,10 @@ DocumentNormalizerTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows a Section object configured for region predetection.
-> - To use it, add this object to the [SectionArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-array.html) of a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html).
+> - To use it, add this object to the [SectionArray]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-array.html) of a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/index.html).
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameters
 
@@ -48,12 +48,12 @@ Specifies the section type. Fixed value: `ST_REGION_PREDETECTION`.
 
 ### ImageParameterName
 
-Specifies the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object to apply in the stages of this section.
+Specifies the name of an [ImageParameter]({{ site.dcvb_parameters_reference }}image-parameter/index.html) object to apply in the stages of this section.
 
 | Parameter Details |
 | :------------- |
 | **Type**<br>*string* |
-| **Range**<br>Must be the name of an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html) object defined under `ImageParameterOptions` |
+| **Range**<br>Must be the name of an [ImageParameter]({{ site.dcvb_parameters_reference }}image-parameter/index.html) object defined under `ImageParameterOptions` |
 | **Default Value**<br>`""` |
 
 ### StageArray

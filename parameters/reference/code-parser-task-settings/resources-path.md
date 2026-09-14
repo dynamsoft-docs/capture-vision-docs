@@ -15,7 +15,7 @@ CodeParserTaskSettingOptions[i]
     └── ResourcesPath
 ```
 
-**Parent object:** [CodeParserTaskSetting]({{ site.dcvb_parameters }}file/task-settings/code-parser-task-settings.html) object
+**Parent object:** [CodeParserTaskSetting]({{ site.dcvb_parameters_reference }}code-parser-task-settings/index.html) object
 
 **Example:**
 
@@ -27,10 +27,10 @@ CodeParserTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `ResourcesPath` parameter.
-> - To use it, embed this parameter within a [CodeParserTaskSetting]({{ site.dcvb_parameters }}file/task-settings/code-parser-task-settings.html) object.
+> - To use it, embed this parameter within a [CodeParserTaskSetting]({{ site.dcvb_parameters_reference }}code-parser-task-settings/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

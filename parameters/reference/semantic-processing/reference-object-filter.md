@@ -17,7 +17,7 @@ SemanticProcessingOptions[i]
     └── ReferenceObjectFilter
 ```
 
-**Parent object:** [SemanticProcessing]({{ site.dcvb_parameters }}file/semantic-processing/index.html) object
+**Parent object:** [SemanticProcessing]({{ site.dcvb_parameters_reference }}semantic-processing/index.html) object
 
 **Example:**
 
@@ -53,10 +53,10 @@ SemanticProcessingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `ReferenceObjectFilter` parameter.
-> - To use it, embed this parameter within a [SemanticProcessing]({{ site.dcvb_parameters }}file/semantic-processing/index.html) object.
+> - To use it, embed this parameter within a [SemanticProcessing]({{ site.dcvb_parameters_reference }}semantic-processing/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

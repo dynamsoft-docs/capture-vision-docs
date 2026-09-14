@@ -21,7 +21,7 @@ BarcodeFormatSpecificationOptions[i]
     └── AutoDetectColorInversion
 ```
 
-**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) object
 
 **Example:**
 
@@ -34,11 +34,11 @@ BarcodeFormatSpecificationOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `AutoDetectColorInversion` parameter.
-> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) object.
 > - The `BarcodeFormatIds` in the same `BarcodeFormatSpecification` determines which barcode formats this setting applies to.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

@@ -42,9 +42,9 @@ The `ImageParameter` object is designed to configure and organize parameters for
 
 | Parameter Name | Type | Required/Optional | Description |
 | -------------- | ---- | ----------------- | ----------- |
-| [`Name`]({{site.dcvb_parameters_reference}}image-parameter/name.html) | String | Required | The unique identifier for this `ImageParameter` object. |
-| [`BaseImageParameterName`]({{site.dcvb_parameters_reference}}image-parameter/base-image-parameter-name.html) | String | Optional | The name of another `ImageParameter` object to inherit settings from. |
-| [`ApplicableStages`]({{site.dcvb_parameters_reference}}image-parameter/applicable-stages.html) | Array | Optional | An array of stage objects defining the image processing pipeline. |
+| [`Name`]({{ site.dcvb_parameters_reference }}image-parameter/name.html) | String | Required | The unique identifier for this `ImageParameter` object. |
+| [`BaseImageParameterName`]({{ site.dcvb_parameters_reference }}image-parameter/base-image-parameter-name.html) | String | Optional | The name of another `ImageParameter` object to inherit settings from. |
+| [`ApplicableStages`]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) | Array | Optional | An array of stage objects defining the image processing pipeline. |
 
 ## Usage
 
@@ -110,32 +110,32 @@ Reference `ImageParameter` objects in task settings by name:
 
 | Stage Name | Description |
 | ---------- | ----------- |
-| [`SST_INPUT_COLOR_IMAGE`]({{site.dcvb_parameters_reference}}image-parameter/stage-input-color-image.html) | Represents the starting stage of each section, serving as a placeholder for the input color image. |
-| [`SST_SCALE_IMAGE`]({{site.dcvb_parameters_reference}}image-parameter/stage-scale-image.html) | Scales the image up or down. |
-| [`SST_CONVERT_TO_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-convert-to-grayscale.html) | Converts a color image to grayscale. |
-| [`SST_TRANSFORM_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-transform-grayscale.html) | Transforms the grayscale image (e.g., for inverted barcodes). |
-| [`SST_ENHANCE_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-enhance-grayscale.html) | Enhances grayscale image quality. |
-| [`SST_BINARIZE_IMAGE`]({{site.dcvb_parameters_reference}}image-parameter/stage-binarize-image.html) | Converts grayscale to binary image. |
-| [`SST_DETECT_TEXTURE`]({{site.dcvb_parameters_reference}}image-parameter/stage-detect-texture.html) | Detects texture patterns in the image. |
-| [`SST_REMOVE_TEXTURE_FROM_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-remove-texture-from-grayscale.html) | Removes texture from grayscale image. |
-| [`SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE`]({{site.dcvb_parameters_reference}}image-parameter/stage-binarize-texture-removed-grayscale.html) | Binarizes the texture-removed grayscale image. |
-| [`SST_FIND_CONTOURS`]({{site.dcvb_parameters_reference}}image-parameter/stage-find-contours.html) | Finds contours in the image. |
-| [`SST_DETECT_SHORTLINES`]({{site.dcvb_parameters_reference}}image-parameter/stage-detect-shortlines.html) | Detects short lines for document boundary detection. |
-| [`SST_ASSEMBLE_LINES`]({{site.dcvb_parameters_reference}}image-parameter/stage-assemble-lines.html) | Assembles detected lines. |
-| [`SST_DETECT_TEXT_ZONES`]({{site.dcvb_parameters_reference}}image-parameter/stage-detect-text-zones.html) | Detects text zones in the image. |
-| [`SST_REMOVE_TEXT_ZONES_FROM_BINARY`]({{site.dcvb_parameters_reference}}image-parameter/stage-remove-text-zones-from-binary.html) | Removes text zones from binary image. |
+| [`SST_INPUT_COLOR_IMAGE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-input-color-image.html) | Represents the starting stage of each section, serving as a placeholder for the input color image. |
+| [`SST_SCALE_IMAGE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-scale-image.html) | Scales the image up or down. |
+| [`SST_CONVERT_TO_GRAYSCALE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-convert-to-grayscale.html) | Converts a color image to grayscale. |
+| [`SST_TRANSFORM_GRAYSCALE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-transform-grayscale.html) | Transforms the grayscale image (e.g., for inverted barcodes). |
+| [`SST_ENHANCE_GRAYSCALE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-enhance-grayscale.html) | Enhances grayscale image quality. |
+| [`SST_BINARIZE_IMAGE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-binarize-image.html) | Converts grayscale to binary image. |
+| [`SST_DETECT_TEXTURE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-detect-texture.html) | Detects texture patterns in the image. |
+| [`SST_REMOVE_TEXTURE_FROM_GRAYSCALE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-remove-texture-from-grayscale.html) | Removes texture from grayscale image. |
+| [`SST_BINARIZE_TEXTURE_REMOVED_GRAYSCALE`]({{ site.dcvb_parameters_reference }}image-parameter/stage-binarize-texture-removed-grayscale.html) | Binarizes the texture-removed grayscale image. |
+| [`SST_FIND_CONTOURS`]({{ site.dcvb_parameters_reference }}image-parameter/stage-find-contours.html) | Finds contours in the image. |
+| [`SST_DETECT_SHORTLINES`]({{ site.dcvb_parameters_reference }}image-parameter/stage-detect-shortlines.html) | Detects short lines for document boundary detection. |
+| [`SST_ASSEMBLE_LINES`]({{ site.dcvb_parameters_reference }}image-parameter/stage-assemble-lines.html) | Assembles detected lines. |
+| [`SST_DETECT_TEXT_ZONES`]({{ site.dcvb_parameters_reference }}image-parameter/stage-detect-text-zones.html) | Detects text zones in the image. |
+| [`SST_REMOVE_TEXT_ZONES_FROM_BINARY`]({{ site.dcvb_parameters_reference }}image-parameter/stage-remove-text-zones-from-binary.html) | Removes text zones from binary image. |
 
 ## Stage Parameters
 
 Each stage can have associated parameters for fine-tuning:
 
-- **SST_SCALE_IMAGE**: [`ImageScaleSetting`]({{site.dcvb_parameters_reference}}image-parameter/image-scale-settings.html)
-- **SST_CONVERT_TO_GRAYSCALE**: [`ColourConversionModes`]({{site.dcvb_parameters_reference}}image-parameter/colour-conversion-modes.html)
-- **SST_TRANSFORM_GRAYSCALE**: [`GrayscaleTransformationModes`]({{site.dcvb_parameters_reference}}image-parameter/grayscale-transformation-modes.html)
-- **SST_ENHANCE_GRAYSCALE**: [`GrayscaleEnhancementModes`]({{site.dcvb_parameters_reference}}image-parameter/grayscale-enhancement-modes.html)
-- **SST_BINARIZE_IMAGE**: [`BinarizationModes`]({{site.dcvb_parameters_reference}}image-parameter/binarization-modes.html)
-- **SST_DETECT_TEXTURE**: [`TextureDetectionModes`]({{site.dcvb_parameters_reference}}image-parameter/texture-detection-modes.html)
-- **SST_DETECT_SHORTLINES**: [`ShortlineDetectionMode`]({{site.dcvb_parameters_reference}}image-parameter/shortline-detection-mode.html)
-- **SST_ASSEMBLE_LINES**: [`LineAssemblyMode`]({{site.dcvb_parameters_reference}}image-parameter/line-assembly-mode.html)
-- **SST_DETECT_TEXT_ZONES**: [`TextDetectionMode`]({{site.dcvb_parameters_reference}}image-parameter/text-detection-mode.html)
-- **SST_REMOVE_TEXT_ZONES_FROM_BINARY**: [`IfEraseTextZone`]({{site.dcvb_parameters_reference}}image-parameter/if-erase-text-zone.html)
+- **SST_SCALE_IMAGE**: [`ImageScaleSetting`]({{ site.dcvb_parameters_reference }}image-parameter/image-scale-settings.html)
+- **SST_CONVERT_TO_GRAYSCALE**: [`ColourConversionModes`]({{ site.dcvb_parameters_reference }}image-parameter/colour-conversion-modes.html)
+- **SST_TRANSFORM_GRAYSCALE**: [`GrayscaleTransformationModes`]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-transformation-modes.html)
+- **SST_ENHANCE_GRAYSCALE**: [`GrayscaleEnhancementModes`]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html)
+- **SST_BINARIZE_IMAGE**: [`BinarizationModes`]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html)
+- **SST_DETECT_TEXTURE**: [`TextureDetectionModes`]({{ site.dcvb_parameters_reference }}image-parameter/texture-detection-modes.html)
+- **SST_DETECT_SHORTLINES**: [`ShortlineDetectionMode`]({{ site.dcvb_parameters_reference }}image-parameter/shortline-detection-mode.html)
+- **SST_ASSEMBLE_LINES**: [`LineAssemblyMode`]({{ site.dcvb_parameters_reference }}image-parameter/line-assembly-mode.html)
+- **SST_DETECT_TEXT_ZONES**: [`TextDetectionMode`]({{ site.dcvb_parameters_reference }}image-parameter/text-detection-mode.html)
+- **SST_REMOVE_TEXT_ZONES_FROM_BINARY**: [`IfEraseTextZone`]({{ site.dcvb_parameters_reference }}image-parameter/if-erase-text-zone.html)

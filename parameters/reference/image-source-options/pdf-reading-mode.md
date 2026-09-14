@@ -16,7 +16,7 @@ ImageSourceOptions
     └── PdfReadingMode
 ```
 
-**Parent object:** [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object
+**Parent object:** [ImageSource]({{ site.dcvb_parameters_reference }}image-source-options/index.html) object
 
 **Example:**
 
@@ -33,10 +33,10 @@ ImageSourceOptions
 
 > [!NOTE]
 > - This snippet shows only the `PdfReadingMode` parameter.
-> - To use it, embed this parameter within a [ImageSource]({{ site.dcvb_parameters }}file/image-source.html) object.
+> - To use it, embed this parameter within a [ImageSource]({{ site.dcvb_parameters_reference }}image-source-options/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

@@ -17,7 +17,7 @@ DocumentNormalizerTaskSettingOptions[i]
     └── SectionArray
 ```
 
-**Parent object:** [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html) object
+**Parent object:** [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/index.html) object
 
 **Example:**
 
@@ -42,10 +42,10 @@ DocumentNormalizerTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `SectionArray` parameter.
-> - To use it, embed this parameter within a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html) object.
+> - To use it, embed this parameter within a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 
