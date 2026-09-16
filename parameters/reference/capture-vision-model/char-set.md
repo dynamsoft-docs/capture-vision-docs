@@ -63,7 +63,7 @@ CaptureVisionModelOptions[i]
         </td>
     </tr>
 	<tr>
-        <td><b>Default Value</b><br>null</b>: It means no extra special characters are recognized unless explicitly added.
+        <td><b>Default Value</b><br><b>null</b>: It means no extra special characters are recognized unless explicitly added.
         </td>
     </tr>
     <tr>
