@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: TextLineSpecification Parameters - Dynamsoft Capture Vision
 description: Reference index for TextLineSpecification object in Dynamsoft Capture Vision parameters, which define configurations for specified text lines including character models, regex patterns, and recognition settings.

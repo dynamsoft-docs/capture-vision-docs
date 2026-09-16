@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: CaptureVisionTemplate Parameters - Dynamsoft Capture Vision
 description: Reference index for CaptureVisionTemplate object in Dynamsoft Capture Vision parameters, the entry object of a parameter template that coordinates image sources, ROI processing, and semantic processing.

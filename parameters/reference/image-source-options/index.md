@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: ImageSourceOptions Parameters - Dynamsoft Capture Vision
 description: Reference index for ImageSourceOption object in Dynamsoft Capture Vision parameters, which configure image input sources such as directories, scanners, and cameras.

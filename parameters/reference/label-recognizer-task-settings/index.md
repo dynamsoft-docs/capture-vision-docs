@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: LabelRecognizerTaskSetting Parameters - Dynamsoft Capture Vision
 description: Reference index for LabelRecognizerTaskSetting object in Dynamsoft Capture Vision parameters, including text line localization, recognition, dictionary correction, and confusable characters settings.

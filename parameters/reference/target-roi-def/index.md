@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: TargetROIDef Parameters - Dynamsoft Capture Vision
 description: Reference index for TargetROIDef object in Dynamsoft Capture Vision parameters, which specify regions of interest (ROIs) within an image and the recognition tasks to perform on them.

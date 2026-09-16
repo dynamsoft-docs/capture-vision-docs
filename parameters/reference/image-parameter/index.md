@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: ImageParameter Parameters - Dynamsoft Capture Vision
 description: Reference index for ImageParameter object in Dynamsoft Capture Vision parameters, covering image processing stages including grayscale conversion, binarization, texture detection, text zone detection, and shortline detection.

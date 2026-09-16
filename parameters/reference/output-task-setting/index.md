@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: OutputTaskSetting Parameters - Dynamsoft Capture Vision
 description: Reference index for OutputTaskSetting object in Dynamsoft Capture Vision parameters, which configure how to output expected results by filtering descendant TargetROIDef results.
