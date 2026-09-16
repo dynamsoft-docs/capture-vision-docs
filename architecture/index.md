@@ -43,7 +43,7 @@ At runtime, CVR accepts an image source and acts as the image input provider for
 
 ### Coordinating Processing Tasks
 
-CVR accepts and maintains a list of processing settings known as [parameter template](../parameters/file/index.md). Each template defines the tasks to be performed on an image. These tasks can be configured to run either in parallel or sequentially.
+CVR accepts and maintains a list of processing settings known as [parameter template]({{ site.dcvb_parameters_reference }}index.html). Each template defines the tasks to be performed on an image. These tasks can be configured to run either in parallel or sequentially.
 
 At runtime, CVR selects a *CaptureVisionTemplate* and analyzes it to construct a task workflow, which then runs for all images acquired from the image source.
 

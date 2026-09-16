@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: CodeParserTaskSetting Parameters - Dynamsoft Capture Vision
 description: Reference index for CodeParserTaskSetting object in Dynamsoft Capture Vision parameters, which configure code parsing tasks such as passport MRZ, driving license, and other structured data.

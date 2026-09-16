@@ -70,4 +70,4 @@ Sets advanced arguments of the model.
 | Parameter Summary |
 | :------------------- |
 | **Type**<br>*JSON object* |
-| **Remarks**<br>Currently, [CharSet]({{ site.dcvb_parameters }}file/auxiliary/char-set.html) is supported |
+| **Remarks**<br>Currently, [CharSet]({{ site.dcvb_parameters_reference }}capture-vision-model/char-set.html) is supported |

@@ -20,7 +20,7 @@ OutputTaskSettingOptions[i]
     └── Name
 ```
 
-**Parent object:** [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html) object
+**Parent object:** [OutputTaskSetting]({{ site.dcvb_parameters_reference }}output-task-setting/index.html) object
 
 **Example:**
 
@@ -32,10 +32,10 @@ OutputTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `Name` parameter.
-> - To use it, embed this parameter within a [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html) object.
+> - To use it, embed this parameter within a [OutputTaskSetting]({{ site.dcvb_parameters_reference }}output-task-setting/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 
 ## Parameter Details

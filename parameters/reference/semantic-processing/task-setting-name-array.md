@@ -7,7 +7,7 @@ needGenerateH3Content: true
 ---
 # TaskSettingNameArray
 
-Parameter `TaskSettingNameArray` represents the collection of task setting object names, used to refer to the [`CodeParserTaskSetting`](../../file/task-settings/code-parser-task-settings.md) objects.
+Parameter `TaskSettingNameArray` represents the collection of task setting object names, used to refer to the [`CodeParserTaskSetting`]({{ site.dcvb_parameters_reference }}code-parser-task-settings/index.html) objects.
 
 ## JSON Structure
 
@@ -17,7 +17,7 @@ SemanticProcessingOptions[i]
     └── TaskSettingNameArray
 ```
 
-**Parent object:** [SemanticProcessing]({{ site.dcvb_parameters }}file/semantic-processing.html) object
+**Parent object:** [SemanticProcessing]({{ site.dcvb_parameters_reference }}semantic-processing/index.html) object
 
 **Example:**
 
@@ -29,10 +29,10 @@ SemanticProcessingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `TaskSettingNameArray` parameter.
-> - To use it, embed this parameter within a [SemanticProcessing]({{ site.dcvb_parameters }}file/semantic-processing.html) object.
+> - To use it, embed this parameter within a [SemanticProcessing]({{ site.dcvb_parameters_reference }}semantic-processing/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

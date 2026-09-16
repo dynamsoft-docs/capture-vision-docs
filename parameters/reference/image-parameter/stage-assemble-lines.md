@@ -17,7 +17,7 @@ ImageParameterOptions[i]
     └── ApplicableStages[j] (Stage object where Stage = "SST_ASSEMBLE_LINES")
 ```
 
-**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html)
+**Parent object:** [ApplicableStages]({{ site.dcvb_parameters_reference }}image-parameter/applicable-stages.html) within [ImageParameter]({{ site.dcvb_parameters_reference }}image-parameter/index.html)
 
 **Example:**
 
@@ -32,10 +32,10 @@ ImageParameterOptions[i]
 
 > [!NOTE]
 > - This snippet shows a Stage object configured for assembling lines.
-> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters }}file/image-parameter.html).
+> - To use it, add this object to the `ApplicableStages` array within an [ImageParameter]({{ site.dcvb_parameters_reference }}image-parameter/index.html).
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameters
 
@@ -43,12 +43,7 @@ ImageParameterOptions[i]
 
 Specifies the stage type. Fixed value: `SST_ASSEMBLE_LINES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_ASSEMBLE_LINES"` |
-
 ### LineAssemblyMode
 
 Defines how to assemble lines. See [`LineAssemblyMode`](line-assembly-mode.md) for details.
+

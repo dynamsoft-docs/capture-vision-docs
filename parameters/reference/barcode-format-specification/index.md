@@ -82,3 +82,62 @@ BarcodeFormatSpecification
 | [`ModuleSizeRangeArray`](module-size-range-array.md) | Acceptable module-size range(s). |
 | [`PatchCodeSearchingMargins`](patch-code-searching-margins.md) | Search margins for Patch Code localization. |
 | [`AllModuleDeviation`](all-module-deviation.md) | Allowed deviation threshold for module consistency checks. |
+
+## Usage Instructions
+
+### Format-Specific Behavior Design
+
+The design purpose of `BarcodeFormatSpecification` is to customize decoding behavior for specific barcode format(s) without affecting other formats.
+
+`BarcodeFormatIds` defines which format(s) the current configuration applies to, and the other parameters in the same object define how those matched format(s) should be processed.
+
+When a setting in `BarcodeFormatSpecification` conflicts with a broader/global setting, the format-specific setting takes priority for the matched formats. For example:
+
+<div align="center">
+   <p><img src="assets/example-barcode-format-specification.png" alt="barcode-format-specification" width="60%" /></p>
+</div>
+
+Sometimes the captured image is mirrored relative to the real scene. For 2D barcodes, this can cause decoding failures. If only QR Codes are affected, you can set `MirrorMode` specifically for QR Codes:
+
+```json
+{
+        "Name": "BFS_mirror", 
+        "BarcodeFormatIds": ["BF_QR_CODE"], 
+        "MirrorMode":"MM_MIRROR"
+}
+```
+
+### Quick Settings
+
+Based on an existing `BarcodeFormatSpecification` object, you can set `BaseBarcodeFormatSpecificationName` and override only the fields you want to change. For example:
+
+```json
+{
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name": "BFS_0",
+            "BarcodeFormatIds": ["BF_DATAMATRIX"],
+            "BinarizationModes": [
+                {
+                    "Mode": "BM_LOCAL_BLOCK",
+                    "BlockSizeX": 5,
+                    "BlockSizeY": 5
+                }
+            ]
+        },
+        {
+            "Name": "BFS_1",
+            "BaseBarcodeFormatSpecificationName": "BFS_0",
+            "MinResultConfidence": 20
+        }
+    ]
+}
+```
+
+In this example, `BFS_1` inherits settings from `BFS_0` and only overrides `MinResultConfidence`.
+
+### Additional Annotations
+
+`BarcodeReaderTaskSetting` defines how a barcode-reading task runs from initialization to finalization. Within it, `BarcodeFormatSpecification` controls format-level decoding behaviors after barcodes are detected.
+
+Default settings are provided for `BarcodeFormatSpecification`, so `BarcodeReaderTaskSetting` can still work even if you do not explicitly configure `BarcodeFormatSpecification` parameters.

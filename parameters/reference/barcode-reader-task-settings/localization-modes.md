@@ -45,8 +45,8 @@ BarcodeReaderTaskSettingOptions[i]
 > - This snippet shows only the `LocalizationModes` parameter.
 > - To use it, embed this parameter within a Stage object at the `SST_LOCALIZE_CANDIDATE_BARCODES` stage.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

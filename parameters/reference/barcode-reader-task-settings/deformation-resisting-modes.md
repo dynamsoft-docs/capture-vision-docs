@@ -40,8 +40,8 @@ BarcodeReaderTaskSettingOptions[i]
 > - This snippet shows only the `DeformationResistingModes` parameter.
 > - To use it, embed this parameter within a Stage object at the `SST_RESIST_DEFORMATION` stage.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 
@@ -103,7 +103,7 @@ The mode arguments of the deformation resisting mode object are shown as follows
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>View <a href="{{site.dcvb_parameters_reference}}image-parameter/grayscale-enhancement-modes.html">GrayScaleEnhancementModes</a> page for how to set this mode.
+        <td><b>Remarks</b><br>View <a href="{{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html">GrayScaleEnhancementModes</a> page for how to set this mode.
         </td>
     </tr>
     <tr>
@@ -116,7 +116,7 @@ The mode arguments of the deformation resisting mode object are shown as follows
         </td>
     </tr>
     <tr>
-        <td><b>Remarks</b><br>View <a href="{{site.dcvb_parameters_reference}}image-parameter/binarization-modes.html">BinarizationMode</a> page for how to set this parameter.
+        <td><b>Remarks</b><br>View <a href="{{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html">BinarizationMode</a> page for how to set this parameter.
         </td>
     </tr>
     <tr>

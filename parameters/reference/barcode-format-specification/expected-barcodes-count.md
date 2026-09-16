@@ -12,7 +12,7 @@ Parameter `ExpectedBarcodesCount` of `BarcodeFormatSpecification` defines the ex
 **Remarks**
 
 - Introduced in version 11.2.1000.
-- Once the number of decoded barcodes for this format reaches `ExpectedBarcodesCount`, decoding for this format will stop. However, if the total result count has not yet reached the task-level [ExpectedBarcodesCount]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html), decoding will continue for other barcode formats.
+- Once the number of decoded barcodes for this format reaches `ExpectedBarcodesCount`, decoding for this format will stop. However, if the total result count has not yet reached the task-level [ExpectedBarcodesCount]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html), decoding will continue for other barcode formats.
 
 ## JSON Structure
 
@@ -22,7 +22,7 @@ BarcodeFormatSpecificationOptions[i]
     └── ExpectedBarcodesCount
 ```
 
-**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) object
 
 **Example:**
 
@@ -34,10 +34,10 @@ BarcodeFormatSpecificationOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `ExpectedBarcodesCount` parameter.
-> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

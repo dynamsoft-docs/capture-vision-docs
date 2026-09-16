@@ -16,7 +16,7 @@ CaptureVisionTemplates[i]
     └── MaxParallelTasks
 ```
 
-**Parent object:** [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object
+**Parent object:** [CaptureVisionTemplate]({{ site.dcvb_parameters_reference }}capture-vision-template/index.html) object
 
 **Example:**
 
@@ -28,10 +28,10 @@ CaptureVisionTemplates[i]
 
 > [!NOTE]
 > - This snippet shows only the `MaxParallelTasks` parameter.
-> - To use it, embed this parameter within a [CaptureVisionTemplate]({{ site.dcvb_parameters }}file/capture-vision-template.html) object.
+> - To use it, embed this parameter within a [CaptureVisionTemplate]({{ site.dcvb_parameters_reference }}capture-vision-template/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

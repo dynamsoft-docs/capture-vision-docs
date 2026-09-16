@@ -32,8 +32,8 @@ BarcodeReaderTaskSettingOptions[i]
 > - This snippet shows a Stage object configured for localizing barcodes.
 > - To use it, add this object to the `StageArray` within a [BarcodeLocalizationSection]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-barcode-localization.html).
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameters
 
@@ -41,8 +41,3 @@ BarcodeReaderTaskSettingOptions[i]
 
 Specifies the stage type. Fixed value: `SST_LOCALIZE_BARCODES`.
 
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_LOCALIZE_BARCODES"` |

@@ -21,7 +21,7 @@ CaptureVisionModelOptions[i]
         └── CharSet
 ```
 
-**Parent object:** [ModelArgs]({{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html#modelargs) object
+**Parent object:** [ModelArgs]({{ site.dcvb_parameters_reference }}capture-vision-model/index.html#modelargs) object
 
 ## Example
 

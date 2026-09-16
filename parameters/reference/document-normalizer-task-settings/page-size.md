@@ -33,8 +33,8 @@ DocumentNormalizerTaskSettingOptions[i]
 > - This snippet shows only the `PageSize` parameter.
 > - To use it, embed this parameter within a [DeskewImageStage]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/stage-deskew-image.html) object in the complete JSON structure.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

@@ -9,9 +9,9 @@ searchNeedFilter: true
 dcvb_introduction: /capture-vision/docs/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
 dcvb_parameters: /capture-vision/docs/core/parameters/
-dcvb_enums: /capture-vision/docs/core/enums/
 dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
 dcvb_license_activation: /capture-vision/docs/core/license/
+dcvb_code_types: /capture-vision/docs/core/code-types/
 
 dcvb_js: /capture-vision/docs/web/programming/javascript/
 dcvb_cpp: /capture-vision/docs/server/programming/cplusplus/
@@ -22,16 +22,7 @@ dcvb_android: /capture-vision/docs/mobile/programming/android/
 dcvb_ios: /capture-vision/docs/mobile/programming/ios/
 dcvb_maui: /capture-vision/docs/mobile/programming/maui/
 dcvb_react_native: /capture-vision/docs/mobile/programming/react-native/
-dcvb_cordova: /capture-vision/docs/mobile/programming/cordova/
 dcvb_flutter: /capture-vision/docs/mobile/programming/flutter/
-dcvb_xamarin: /capture-vision/docs/mobile/programming/xamarin/
-dcv_archive_react_native: /capture-vision/docs-archive/mobile/programming/react-native/
-dcv_archive_flutter: /capture-vision/docs-archive/mobile/programming/flutter/
-
-dlr_archived_introduction: /label-recognition/docs-archive/core/introduction/
-ddn_archived_introduction: /document-normalizer/docs-archive/core/introduction/
-dcp_archived_introduction: /code-parser/docs-archive/core/introduction/
-dce_archived_introduction: /camera-enhancer/docs-archive/core/introduction/
 
 
 assets: /capture-vision/docs/core/assets/

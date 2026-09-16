@@ -37,20 +37,14 @@ DocumentNormalizerTaskSettingOptions[i]
 > - This snippet shows a Stage object configured for deskewing images.
 > - To use it, add this object to the `StageArray` within a [DocumentDeskewingSection]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html).
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameters
 
 ### Stage
 
 Specifies the stage type. Fixed value: `SST_DESKEW_IMAGE`.
-
-| Parameter Details |
-| :------------- |
-| **Type**<br>*string* |
-| **Required**<br>Yes |
-| **Default Value**<br>`"SST_DESKEW_IMAGE"` |
 
 ### DeskewMode
 

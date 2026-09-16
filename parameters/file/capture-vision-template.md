@@ -28,18 +28,18 @@ A `CaptureVisionTemplate` object is the entry point of a parameter template in D
 
 | Parameter Name | Type | Required/Optional | Description |
 | -------------- | ---- | ----------------- | ----------- |
-| [`Name`]({{site.dcvb_parameters_reference}}capture-vision-template/name.html) | String | Required | The unique identifier for this template. |
-| [`ImageSourceName`]({{site.dcvb_parameters_reference}}capture-vision-template/image-source-name.html) | String | Optional | The name of the `ImageSource` object defining the input source. |
-| [`ImageROIProcessingNameArray`]({{site.dcvb_parameters_reference}}capture-vision-template/image-roi-processing-name-array.html) | String Array | Optional | Array of `TargetROIDef` object names defining recognition tasks on image ROIs. |
-| [`SemanticProcessingNameArray`]({{site.dcvb_parameters_reference}}capture-vision-template/semantic-processing-name-array.html) | String Array | Optional | Array of `SemanticProcessing` object names for post-processing tasks. |
-| [`OutputOriginalImage`]({{site.dcvb_parameters_reference}}capture-vision-template/output-original-image.html) | Integer | Optional | Whether to output the original input image (0 or 1). |
-| [`MaxParallelTasks`]({{site.dcvb_parameters_reference}}capture-vision-template/max-parallel-tasks.html) | Integer | Optional | Maximum number of parallel tasks for the DCV runtime. |
-| [`MinImageCaptureInterval`]({{site.dcvb_parameters_reference}}capture-vision-template/min-image-capture-interval.html) | Integer | Optional | Minimum time interval (in milliseconds) between consecutive image captures. |
-| [`Timeout`]({{site.dcvb_parameters_reference}}capture-vision-template/timeout.html) | Integer | Optional | Maximum processing time (in milliseconds) per image. |
+| [`Name`]({{ site.dcvb_parameters_reference }}capture-vision-template/name.html) | String | Required | The unique identifier for this template. |
+| [`ImageSourceName`]({{ site.dcvb_parameters_reference }}capture-vision-template/image-source-name.html) | String | Optional | The name of the `ImageSource` object defining the input source. |
+| [`ImageROIProcessingNameArray`]({{ site.dcvb_parameters_reference }}capture-vision-template/image-roi-processing-name-array.html) | String Array | Optional | Array of `TargetROIDef` object names defining recognition tasks on image ROIs. |
+| [`SemanticProcessingNameArray`]({{ site.dcvb_parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | String Array | Optional | Array of `SemanticProcessing` object names for post-processing tasks. |
+| [`OutputOriginalImage`]({{ site.dcvb_parameters_reference }}capture-vision-template/output-original-image.html) | Integer | Optional | Whether to output the original input image (0 or 1). |
+| [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Integer | Optional | Maximum number of parallel tasks for the DCV runtime. |
+| [`MinImageCaptureInterval`]({{ site.dcvb_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Integer | Optional | Minimum time interval (in milliseconds) between consecutive image captures. |
+| [`Timeout`]({{ site.dcvb_parameters_reference }}capture-vision-template/timeout.html) | Integer | Optional | Maximum processing time (in milliseconds) per image. |
 
 ## Input Source Configuration
 
-The `ImageSourceName` parameter references an `ImageSource` object defining the image input source. When DCV starts capturing, it parses the `ImageSource` parameter, converts it into an [Image Source Adapter (ISA)]({{site.dcvb_architecture}}input.html#image-source-adapter) object, and continuously obtains images from it.
+The `ImageSourceName` parameter references an `ImageSource` object defining the image input source. When DCV starts capturing, it parses the `ImageSource` parameter, converts it into an [Image Source Adapter (ISA)]({{ site.dcvb_architecture }}input.html#image-source-adapter) object, and continuously obtains images from it.
 
 ## Captured Output Configuration
 
@@ -55,7 +55,7 @@ The `ImageSourceName` parameter references an `ImageSource` object defining the 
 
 ## Core Design of TargetROIDef Object
 
-The [`TargetROIDef`]({{site.dcvb_parameters}}file/target-roi-definition/index.html) object specifies one or more recognition tasks to be performed on regions of interest (ROIs) within an image. In simple terms:
+The [`TargetROIDef`]({{ site.dcvb_parameters_reference }}target-roi-def/index.html) object specifies one or more recognition tasks to be performed on regions of interest (ROIs) within an image. In simple terms:
 
 ```
 TargetROIDef = Recognition Task Definition + Spatial Location Definition
@@ -198,11 +198,11 @@ Based on the previous example, regular expression filtering conditions can be ad
 - `roi_dbr2` depends only on regions from `roi_dlr` where text matches pattern `^L/N`
 - Reference regions not meeting filter criteria are discarded
 
-For more details about filtering reference objects, refer to [`ReferenceObjectFilter`]({{site.dcvb_parameters_reference}}target-roi-def/location.html#referenceobjectfilter).
+For more details about filtering reference objects, refer to [`ReferenceObjectFilter`]({{ site.dcvb_parameters_reference }}target-roi-def/location.html#referenceobjectfilter).
 
 ## Core Design of SemanticProcessing Object
 
-The [`SemanticProcessing`]({{site.dcvb_parameters}}file/semantic-processing/index.html) object specifies tasks to analyze and extract information from image ROI processing results. The workflow involves the following concepts:
+The [`SemanticProcessing`]({{ site.dcvb_parameters_reference }}semantic-processing/index.html) object specifies tasks to analyze and extract information from image ROI processing results. The workflow involves the following concepts:
 
 ### Prerequisites
 
@@ -218,7 +218,7 @@ Data filtering selects relevant sources, such as label text matching a specific 
 
 ### Task Execution
 
-This is the main part of the workflow where actual tasks are defined. Use `TaskSettingNameArray` to specify tasks by referencing a [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object name.
+This is the main part of the workflow where actual tasks are defined. Use `TaskSettingNameArray` to specify tasks by referencing a [`CodeParserTaskSetting`]({{ site.dcvb_parameters_reference }}code-parser-task-settings/index.html) object name.
 
 ### Results Reporting
 

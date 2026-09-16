@@ -20,7 +20,7 @@ LabelRecognizerTaskSettingOptions[i]
             └── StringRegExPattern
 ```
 
-**Parent object:** [AssembleTextLinesStage]({{ site.dcvb_parameters }}reference/label-recognizer-task-settings/stage-assemble-text-lines.html)
+**Parent object:** [AssembleTextLinesStage]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/stage-assemble-text-lines.html)
 
 **Example:**
 
@@ -32,10 +32,10 @@ LabelRecognizerTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `StringRegExPattern` parameter.
-> - To use it, embed this parameter within a [AssembleTextLinesStage]({{ site.dcvb_parameters }}reference/label-recognizer-task-settings/stage-assemble-text-lines.html) object.
+> - To use it, embed this parameter within a [AssembleTextLinesStage]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/stage-assemble-text-lines.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json)
 
 ## Parameter Details
 

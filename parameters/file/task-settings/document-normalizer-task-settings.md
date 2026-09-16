@@ -93,8 +93,8 @@ The `DocumentNormalizerTaskSetting` object is used to configure settings for a d
 
 | Parameter Name | Type | Required/Optional | Description |
 | -------------- | ---- | ----------------- | ----------- |
-| [`Name`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/name.html) | String | Required | The unique identifier for this `DocumentNormalizerTaskSetting` object. |
-| [`BaseDocumentNormalizerTaskSettingName`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) | String | Optional | The name of another `DocumentNormalizerTaskSetting` object to inherit settings from. |
-| [`MaxThreadsInOneTask`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/max-threads-in-one-task.html) | Integer | Optional | The maximum number of threads that can be used for this task. |
-| [`ExpectedDocumentsCount`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/expected-documents-count.html) | Integer | Optional | The expected number of documents to be detected in the image. |
-| [`SectionArray`]({{site.dcvb_parameters_reference}}document-normalizer-task-settings/section-array.html) | Array | Optional | An array of section objects that define the processing workflow for document normalization. |
+| [`Name`]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/name.html) | String | Required | The unique identifier for this `DocumentNormalizerTaskSetting` object. |
+| [`BaseDocumentNormalizerTaskSettingName`]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html) | String | Optional | The name of another `DocumentNormalizerTaskSetting` object to inherit settings from. |
+| [`MaxThreadsInOneTask`]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/max-threads-in-one-task.html) | Integer | Optional | The maximum number of threads that can be used for this task. |
+| [`ExpectedDocumentsCount`]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/expected-documents-count.html) | Integer | Optional | The expected number of documents to be detected in the image. |
+| [`SectionArray`]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/section-array.html) | Array | Optional | An array of section objects that define the processing workflow for document normalization. |

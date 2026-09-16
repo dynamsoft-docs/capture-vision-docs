@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default-layout
 title: DocumentNormalizerTaskSetting Parameters - Dynamsoft Capture Vision
 description: Reference index for DocumentNormalizerTaskSetting object in Dynamsoft Capture Vision parameters, including document detection, deskewing, image enhancement, and normalization settings.

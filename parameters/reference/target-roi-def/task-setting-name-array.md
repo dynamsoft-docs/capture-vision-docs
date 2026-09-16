@@ -6,7 +6,7 @@ keywords: task settings, TargetROIDef
 ---
 # TaskSettingNameArray
 
-Parameter `TaskSettingNameArray` represents the collection of task setting object names, used to refer to the [`BarcodeReaderTaskSetting`](../../file/task-settings/barcode-reader-task-settings.md),[`LabelRecognizerTaskSetting`](../../file/task-settings/label-recognizer-task-settings.md),[`DocumentNormalizerTaskSetting`](../../file/task-settings/document-normalizer-task-settings.md), [`OutputTaskSetting`](../../file/task-settings/output-task-setting.md) objects. It is used to define recognition tasks such as reading barcodes, recognizing labels, or detecting document quads.
+Parameter `TaskSettingNameArray` represents the collection of task setting object names, used to refer to the [`BarcodeReaderTaskSetting`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/index.html),[`LabelRecognizerTaskSetting`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/index.html),[`DocumentNormalizerTaskSetting`]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/index.html), [`OutputTaskSetting`]({{ site.dcvb_parameters_reference }}output-task-setting/index.html) objects. It is used to define recognition tasks such as reading barcodes, recognizing labels, or detecting document quads.
 
 ## JSON Structure
 
@@ -16,7 +16,7 @@ TargetROIDefOptions[i]
     └── TaskSettingNameArray
 ```
 
-**Parent object:** [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) object
+**Parent object:** [TargetROIDef]({{ site.dcvb_parameters_reference }}target-roi-def/index.html) object
 
 **Example:**
 
@@ -28,10 +28,10 @@ TargetROIDefOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `TaskSettingNameArray` parameter.
-> - To use it, embed this parameter within a [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) object.
+> - To use it, embed this parameter within a [TargetROIDef]({{ site.dcvb_parameters_reference }}target-roi-def/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

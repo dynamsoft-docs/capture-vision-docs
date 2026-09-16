@@ -43,8 +43,8 @@ BarcodeReaderTaskSettingOptions[i]
 > - This snippet shows only the `DeblurModes` parameter.
 > - To use it, embed this parameter within a Stage object at the `SST_DECODE_BARCODES` stage.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 
@@ -87,7 +87,7 @@ The mode arguments of the deblur mode object are shown as follows:
     </tr>
     <tr>
         <td rowspan = "6" style="vertical-align:text-top">DeblurModelNameArray<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html" target="_blank">CaptureVisionModel</a> objects.
+        <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters_reference }}capture-vision-model/index.html" target="_blank">CaptureVisionModel</a> objects.
         </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ The mode arguments of the deblur mode object are shown as follows:
     </tr>
     <tr>
         <td rowspan = "6" style="vertical-align:text-top" id="modelnamearray">ModelNameArray<br>(Optional)</td>
-        <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html" target="_blank">CaptureVisionModel</a> objects.
+        <td><b>Description</b><br>Sets the Convolutional Neural Networks (CNN) model files used for barcode decoding. It references the names of <a href="{{ site.dcvb_parameters_reference }}capture-vision-model/index.html" target="_blank">CaptureVisionModel</a> objects.
         </td>
     </tr>
     <tr>

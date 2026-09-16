@@ -17,7 +17,7 @@ BarcodeFormatSpecificationOptions[i]
     └── BarcodeAngleRangeArray
 ```
 
-**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object
+**Parent object:** [BarcodeFormatSpecification]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) object
 
 **Example:**
 
@@ -35,10 +35,10 @@ BarcodeFormatSpecificationOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `BarcodeAngleRangeArray` parameter.
-> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/barcode-format-specification.html) object.
+> - To use it, embed this parameter within a [BarcodeFormatSpecification]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

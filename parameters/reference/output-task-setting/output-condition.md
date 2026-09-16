@@ -9,7 +9,7 @@ keywords: OutputCondition
 
 ## Overview
 
-The parameter `OutputCondition` defines how the [`OutputTaskSetting`](../../file/task-settings/output-task-setting.md) object outputs results that satisfy multiple filter conditions across products. It allows you to configure complex filtering logic by combining results from multiple tasks and TargetROIDef objects using logical operators (AND/OR).
+The parameter `OutputCondition` defines how the [`OutputTaskSetting`]({{ site.dcvb_parameters_reference }}output-task-setting/index.html) object outputs results that satisfy multiple filter conditions across products. It allows you to configure complex filtering logic by combining results from multiple tasks and TargetROIDef objects using logical operators (AND/OR).
 
 **Use Cases:**
 - Filter outputs based on conditions from descendant TargetROIDef tasks
@@ -24,7 +24,7 @@ OutputTaskSettingOptions[i]
     └── OutputCondition
 ```
 
-**Parent object:** [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html) object
+**Parent object:** [OutputTaskSetting]({{ site.dcvb_parameters_reference }}output-task-setting/index.html) object
 
 **Example:**
 
@@ -57,10 +57,10 @@ This configuration filters output results where:
 
 > [!NOTE]
 > - This snippet shows only the `OutputCondition` parameter.
-> - To use it, embed this parameter within a [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html) object.
+> - To use it, embed this parameter within a [OutputTaskSetting]({{ site.dcvb_parameters_reference }}output-task-setting/index.html) object.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 
 ## Parameter Details
@@ -158,6 +158,6 @@ Specifies which types of atomic results to accept from the referenced tasks.
 
 ## See Also
 
-- [OutputTaskSetting]({{ site.dcvb_parameters }}file/task-settings/output-task-setting.html)
-- [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html)
-- [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
+- [OutputTaskSetting]({{ site.dcvb_parameters_reference }}output-task-setting/index.html)
+- [TargetROIDef]({{ site.dcvb_parameters_reference }}target-roi-def/index.html)
+- [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)

@@ -17,7 +17,7 @@ DocumentNormalizerTaskSettingOptions[i]
     └── BaseDocumentNormalizerTaskSettingName
 ```
 
-**Parent object:** [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html)
+**Parent object:** [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/index.html)
 
 **Example:**
 
@@ -29,10 +29,10 @@ DocumentNormalizerTaskSettingOptions[i]
 
 > [!NOTE]
 > - This snippet shows only the `BaseDocumentNormalizerTaskSettingName` parameter.
-> - To use it, embed this parameter within a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters }}file/task-settings/document-normalizer-task-settings.html) object in the complete JSON structure.
+> - To use it, embed this parameter within a [DocumentNormalizerTaskSetting]({{ site.dcvb_parameters_reference }}document-normalizer-task-settings/index.html) object in the complete JSON structure.
 > - For the complete JSON structure, see:
->   - [Full JSON Structure]({{ site.dcvb_parameters }}file/index.html#full-json-structure)
->   - [Minimal Valid JSON]({{ site.dcvb_parameters }}file/index.html#minimal-valid-json-example)
+>   - [Full JSON Structure]({{ site.dcvb_parameters_reference }}index.html#full-json-structure)
+>   - [Minimal Valid JSON]({{ site.dcvb_parameters_reference }}index.html#minimal-valid-json-example)
 
 ## Parameter Details
 

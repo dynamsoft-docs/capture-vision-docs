@@ -35,8 +35,8 @@ The `OutputTaskSetting` object is used to configure how to output the expected r
 
 | Parameter Name | Type | Required/Optional | Description |
 |---|---|---|---|
-| [`Name`]({{site.dcvb_parameters_reference}}output-task-setting/name.html) | String | Required | The unique identifier for this `OutputTaskSetting` object. |
-| [`OutputCondition`]({{site.dcvb_parameters_reference}}output-task-setting/output-condition.html) | Object | Optional | Defines how to filter and output results based on multiple conditions across descendant ROIs. |
+| [`Name`]({{ site.dcvb_parameters_reference }}output-task-setting/name.html) | String | Required | The unique identifier for this `OutputTaskSetting` object. |
+| [`OutputCondition`]({{ site.dcvb_parameters_reference }}output-task-setting/output-condition.html) | Object | Optional | Defines how to filter and output results based on multiple conditions across descendant ROIs. |
 
 ## OutputCondition Design
 

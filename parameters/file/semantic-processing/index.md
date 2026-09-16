@@ -26,9 +26,9 @@ The `SemanticProcessing` object specifies tasks to analyze and extract informati
 
 | Parameter Name | Type | Required/Optional | Description |
 | -------------- | ---- | ----------------- | ----------- |
-| [`Name`]({{site.dcvb_parameters_reference}}semantic-processing/name.html) | String | Required | The unique identifier for this `SemanticProcessing` object. |
-| [`ReferenceObjectFilter`]({{site.dcvb_parameters_reference}}semantic-processing/reference-object-filter.html) | Object | Optional | Defines filter conditions to select relevant data sources for processing. |
-| [`TaskSettingNameArray`]({{site.dcvb_parameters_reference}}semantic-processing/task-setting-name-array.html) | String Array | Optional | Array of `CodeParserTaskSetting` object names defining the parsing tasks to execute. |
+| [`Name`]({{ site.dcvb_parameters_reference }}semantic-processing/name.html) | String | Required | The unique identifier for this `SemanticProcessing` object. |
+| [`ReferenceObjectFilter`]({{ site.dcvb_parameters_reference }}semantic-processing/reference-object-filter.html) | Object | Optional | Defines filter conditions to select relevant data sources for processing. |
+| [`TaskSettingNameArray`]({{ site.dcvb_parameters_reference }}semantic-processing/task-setting-name-array.html) | String Array | Optional | Array of `CodeParserTaskSetting` object names defining the parsing tasks to execute. |
 
 ## Workflow
 
@@ -48,7 +48,7 @@ The process may involve filtering data to select relevant sources, such as label
 
 ### Task Execution
 
-This is where actual tasks are defined. Use `TaskSettingNameArray` to specify tasks by referencing [`CodeParserTaskSetting`]({{site.dcvb_parameters}}file/task-settings/code-parser-task-settings.html) object names.
+This is where actual tasks are defined. Use `TaskSettingNameArray` to specify tasks by referencing [`CodeParserTaskSetting`]({{ site.dcvb_parameters_reference }}code-parser-task-settings/index.html) object names.
 
 ### Results Reporting
 
