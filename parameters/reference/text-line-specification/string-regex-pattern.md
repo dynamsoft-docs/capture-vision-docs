@@ -61,8 +61,6 @@ Supported regular expressions pattern syntax:
 | ?          | The preceding atom is optional (matched either 0 times or once). |
 | (subpattern) | Groups a sequence of subpatterns as a matching atom. |
 | {`n`}        | The preceding atom is matched exactly `n` times. |
-| {`min`,}     | The preceding atom is matched `min` or more times. |
-| {,`max`}     | The preceding atom is matched at least 0 times, but not more than `max`. |
 | {`min`,`max`}  | The preceding atom is matched at least `min` times, but not more than `max`. |
 | {(`n`)}       | The preceding atom matches exactly `n` characters. |
 | {(`min`,)}    | The preceding atom matches `min` or more characters. |
