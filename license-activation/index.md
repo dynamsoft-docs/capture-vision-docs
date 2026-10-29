@@ -55,7 +55,7 @@ else
     // add further process
 }
 ```
-> 
+>
 ```java
 LicenseManager.initLicense("--Enter Your License Key Here--", MainActivity.this, new LicenseVerificationListener() {
    @Override
