@@ -10,7 +10,7 @@ dcvb_introduction: /capture-vision/docs/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
 dcvb_parameters: /capture-vision/docs/core/parameters/
 dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
-dcvb_license_activation: /capture-vision/docs/core/license/
+dcvb_license_activation: /capture-vision/docs/core/license-activation/
 dcvb_code_types: /capture-vision/docs/core/code-types/
 
 dcvb_js: /capture-vision/docs/web/programming/javascript/
