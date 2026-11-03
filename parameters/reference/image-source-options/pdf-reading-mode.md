@@ -61,7 +61,7 @@ Parameter `PDFReadingMode` is configured by a PDF reading mode objects. The PDF 
         </td>
     </tr>
     <tr>
-        <td><b>Candidate Mode List</b><br>PDFRM_VECTOR<br>PDFRM_RASTER
+        <td><b>Candidate Mode List</b><br>PDFRM_MULTIMODAL<br>PDFRM_VECTOR<br>PDFRM_RASTER
         </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ If the `PDFReadingMode` is not configured in your template file, the following s
 {
     "PDFReadingMode": 
     {
-        "Mode": "PDFRM_RASTER",
+        "Mode": "PDFRM_MULTIMODAL",
         "DPI": 300,
         "RasterDataSource": "RDS_RASTERIZED_PAGES"
     }
@@ -120,6 +120,10 @@ If the `PDFReadingMode` is not configured in your template file, the following s
 ```
 
 ## Candidate Mode Introduction
+
+### PDFRM_MULTIMODAL
+
+Extracts multimodal information from a PDF, including vector graphics, text content, and embedded images, which can be used for subsequent tasks such as barcode reading, text recognition, and document analysis.
 
 ### PDFRM_RASTER
 
